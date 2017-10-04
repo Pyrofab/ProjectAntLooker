@@ -14,16 +14,21 @@ buildscript {
 
 apply plugin: 'java'
 apply plugin: 'kotlin'
+apply plugin: 'eclipse'
 
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    maven { url "https://raw.github.com/JavaOpenCVBook/code/maven2/" }
+    maven { url "http://repo.maven.apache.org/maven2" }
 }
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.javaopencvbook', name: 'opencvjar-runtime', version:'3.0.0', classifier:'natives-windows-x86'
+    compile files("libs/openccv-330.jar")
 }
 
 compileKotlin {
