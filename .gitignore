@@ -52,8 +52,6 @@ local.properties
 .worksheet
 ### Java template
 # Compiled class file
-*.class
-
 # Log file
 *.log
 
