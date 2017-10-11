@@ -27,8 +27,7 @@ repositories {
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile group: 'org.javaopencvbook', name: 'opencvjar-runtime', version:'3.0.0', classifier:'natives-windows-x86'
-    compile files("libs/openccv-330.jar")
+    compile "org.bytedeco:javacv-platform:1.3.3"
 }
 
 compileKotlin {
