@@ -4,17 +4,12 @@ import static org.bytedeco.javacpp.opencv_core.*;
 import static org.bytedeco.javacpp.opencv_highgui.cvShowImage;
 import static org.bytedeco.javacpp.opencv_highgui.cvWaitKey;
 import static org.bytedeco.javacpp.opencv_imgcodecs.cvLoadImage;
-import static org.bytedeco.javacpp.opencv_imgcodecs.cvSaveImage;
 import static org.bytedeco.javacpp.opencv_imgproc.*;
-import static org.opencv.imgproc.Imgproc.CV_GAUSSIAN;
-import org.opencv.core.Core;
-import org.opencv.core.Scalar;
-import org.opencv.imgproc.Imgproc;
 
 public class Fun {
 
     public static void main(String[] args){
-        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+//        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 
         opencv_core.IplImage image = cvLoadImage("fraise.jpg");
         opencv_core.IplImage image2 = cvLoadImage("fraise.jpg");
