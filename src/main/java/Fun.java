@@ -1,6 +1,3 @@
-import org.bytedeco.javacpp.opencv_core;
-import org.opencv.core.Core;
-
 import static org.bytedeco.javacpp.opencv_core.*;
 import static org.bytedeco.javacpp.opencv_highgui.cvShowImage;
 import static org.bytedeco.javacpp.opencv_highgui.cvWaitKey;
@@ -10,14 +7,13 @@ import static org.bytedeco.javacpp.opencv_imgproc.*;
 public class Fun {
 
     public static void main(String[] args){
-//        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 
-        opencv_core.IplImage image = cvLoadImage("petri_1.jpg");
-        opencv_core.IplImage image2 = cvLoadImage("petri_1.jpg");
-        opencv_core.IplImage image3 = cvLoadImage("petri_1.jpg");
-        opencv_core.IplImage image4 = cvLoadImage("petri_1.jpg");
-        opencv_core.IplImage image5 = cvLoadImage("petri_1.jpg");
-        opencv_core.IplImage image6 = cvLoadImage("petri_1.jpg");
+        IplImage image = cvLoadImage("fraise.jpg");
+        IplImage image2 = cvLoadImage("fraise.jpg");
+        IplImage image3 = cvLoadImage("fraise.jpg");
+        IplImage image4 = cvLoadImage("fraise.jpg");
+        IplImage image5 = cvLoadImage("fraise.jpg");
+        IplImage image6 = cvLoadImage("fraise.jpg");
 
 
         //Toutes les différentes matrice par lesquelles on doit passer
@@ -55,7 +51,7 @@ public class Fun {
         //Filtrage couleur
         inRange(matrice4,mask1,mask2,matrice5);
         //Filtrage luminosité
-//        inRange(matrice5,mask12,mask22,matrice6);
+        //inRange(matrice5,mask12,mask22,matrice6);
         //AFFICHAGE *-*-*-*-*-**-*
 
         IplImage matriceImage = new IplImage(matrice);
