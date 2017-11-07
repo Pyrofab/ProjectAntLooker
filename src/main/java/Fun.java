@@ -7,13 +7,13 @@ import static org.bytedeco.javacpp.opencv_imgproc.*;
 public class Fun {
 
     public static void main(String[] args){
-
-        IplImage image = cvLoadImage("fraise.jpg");
-        IplImage image2 = cvLoadImage("fraise.jpg");
-        IplImage image3 = cvLoadImage("fraise.jpg");
-        IplImage image4 = cvLoadImage("fraise.jpg");
-        IplImage image5 = cvLoadImage("fraise.jpg");
-        IplImage image6 = cvLoadImage("fraise.jpg");
+        String file = "fraise.jpg";
+        IplImage image = cvLoadImage(file);
+        IplImage image2 = cvLoadImage(file);
+        IplImage image3 = cvLoadImage(file);
+        IplImage image4 = cvLoadImage(file);
+        IplImage image5 = cvLoadImage(file);
+        IplImage image6 = cvLoadImage(file);
 
 
         //Toutes les différentes matrice par lesquelles on doit passer
