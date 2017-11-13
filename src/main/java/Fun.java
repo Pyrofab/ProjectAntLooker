@@ -1,3 +1,5 @@
+import org.bytedeco.javacpp.opencv_core;
+
 import static org.bytedeco.javacpp.opencv_core.*;
 import static org.bytedeco.javacpp.opencv_highgui.cvShowImage;
 import static org.bytedeco.javacpp.opencv_highgui.cvWaitKey;
@@ -7,13 +9,14 @@ import static org.bytedeco.javacpp.opencv_imgproc.*;
 public class Fun {
 
     public static void main(String[] args){
-        String file = "fraise.jpg";
+        String file = "petri_petit.png";
         IplImage image = cvLoadImage(file);
         IplImage image2 = cvLoadImage(file);
         IplImage image3 = cvLoadImage(file);
         IplImage image4 = cvLoadImage(file);
         IplImage image5 = cvLoadImage(file);
         IplImage image6 = cvLoadImage(file);
+        IplImage imageTest = cvLoadImage(file);
 
 
         //Toutes les différentes matrice par lesquelles on doit passer
@@ -23,6 +26,7 @@ public class Fun {
         Mat matrice4= new Mat(image4);
         Mat matrice5= new Mat(image5);
         Mat matrice6= new Mat(image6);
+        Mat matriceTest = new Mat(imageTest);
 
         //Matrices pour le masque 1 FILTRE COLOR
         double[] mincolor = {0,100,80};
@@ -39,6 +43,10 @@ public class Fun {
         cvtColor(matrice,matrice2,CV_BGR2RGB);
         GaussianBlur(matrice2,matrice3,new Size(7,7),0);
         cvtColor(matrice3,matrice4,CV_RGB2HSV);
+
+        blur(matriceTest,matriceTest, new Size(3,3));
+        cvtColor(matriceTest,matriceTest,CV_BGR2GRAY);
+        Canny(matriceTest,matriceTest,100,600);
 
         System.out.println(mask1.toString());
         System.out.println(mask2.toString());
@@ -60,17 +68,20 @@ public class Fun {
         IplImage matriceImag4 = new IplImage(matrice4);
         IplImage matriceImag5 = new IplImage(matrice5);
         IplImage matriceImag6 = new IplImage(matrice6);
+        IplImage matriceImagTest = new IplImage(matriceTest);
 
         //cvShowImage("0.jpg",image);
-        cvShowImage("1.jpg",matriceImage);
+    /*  cvShowImage("1.jpg",matriceImage);
         cvShowImage("2.jpg",matriceImag2);
         cvShowImage("3.jpg",matriceImag3);
         cvShowImage("4.jpg",matriceImag4);
         cvShowImage("5.jpg",matriceImag5);
         cvShowImage("6.jpg",matriceImag6);
+     */
+        cvShowImage("Test.jpg",matriceImagTest);
         cvWaitKey();
 
-/*        System.out.println("Here1");
+    /*    System.out.println("Here1");
         cvReleaseImage(image);
         cvReleaseImage(image2);
         cvReleaseImage(image3);
@@ -83,8 +94,7 @@ public class Fun {
         cvReleaseImage(matriceImag4);
         cvReleaseImage(matriceImag5);
         System.out.println("Here3");
-
-*/
+    */
 
 
 
