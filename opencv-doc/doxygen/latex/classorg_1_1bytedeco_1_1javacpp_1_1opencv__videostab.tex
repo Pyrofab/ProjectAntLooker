@@ -1,0 +1,148 @@
+\hypertarget{classorg_1_1bytedeco_1_1javacpp_1_1opencv__videostab}{}\section{org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab Class Reference}
+\label{classorg_1_1bytedeco_1_1javacpp_1_1opencv__videostab}\index{org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab@{org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab}}
+Inheritance diagram for org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classorg_1_1bytedeco_1_1javacpp_1_1opencv__videostab}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Color\+Average\+Inpainter}
+\item 
+class {\bfseries Color\+Inpainter}
+\item 
+class {\bfseries Consistent\+Mosaic\+Inpainter}
+\item 
+class {\bfseries Deblurer\+Base}
+\item 
+class {\bfseries Fast\+Marching\+Method}
+\item 
+class {\bfseries From\+File\+Motion\+Reader}
+\item 
+class {\bfseries Gaussian\+Motion\+Filter}
+\item 
+class {\bfseries I\+Dense\+Opt\+Flow\+Estimator}
+\item 
+class {\bfseries I\+Frame\+Source}
+\item 
+class {\bfseries I\+Log}
+\item 
+class {\bfseries Image\+Motion\+Estimator\+Base}
+\begin{DoxyCompactList}\small\item\em Base class for global 2D motion estimation methods which take frames as input. \end{DoxyCompactList}\item 
+class {\bfseries I\+Motion\+Stabilizer}
+\item 
+class {\bfseries Inpainter\+Base}
+\item 
+class {\bfseries Inpainting\+Pipeline}
+\item 
+class {\bfseries I\+Outlier\+Rejector}
+\item 
+class {\bfseries I\+Sparse\+Opt\+Flow\+Estimator}
+\item 
+class {\bfseries Keypoint\+Based\+Motion\+Estimator}
+\begin{DoxyCompactList}\small\item\em Describes a global 2D motion estimation method which uses keypoints detection and optical flow for matching. \end{DoxyCompactList}\item 
+class {\bfseries Log\+To\+Stdout}
+\item 
+class {\bfseries Lp\+Motion\+Stabilizer}
+\item 
+class {\bfseries More\+Accurate\+Motion\+Wobble\+Suppressor}
+\item 
+class {\bfseries More\+Accurate\+Motion\+Wobble\+Suppressor\+Base}
+\item 
+class {\bfseries Motion\+Estimator\+Base}
+\begin{DoxyCompactList}\small\item\em Base class for all global motion estimation methods. \end{DoxyCompactList}\item 
+class {\bfseries Motion\+Estimator\+L1}
+\begin{DoxyCompactList}\small\item\em Describes a global 2D motion estimation method which minimizes L1 error. \end{DoxyCompactList}\item 
+class {\bfseries Motion\+Estimator\+Ransac\+L2}
+\begin{DoxyCompactList}\small\item\em Describes a robust R\+A\+N\+S\+A\+C-\/based global 2D motion estimation method which minimizes L2 error. \end{DoxyCompactList}\item 
+class {\bfseries Motion\+Filter\+Base}
+\item 
+class {\bfseries Motion\+Inpainter}
+\item 
+class {\bfseries Motion\+Stabilization\+Pipeline}
+\item 
+class {\bfseries Null\+Deblurer}
+\item 
+class {\bfseries Null\+Frame\+Source}
+\item 
+class {\bfseries Null\+Inpainter}
+\item 
+class {\bfseries Null\+Log}
+\item 
+class {\bfseries Null\+Outlier\+Rejector}
+\item 
+class {\bfseries Null\+Wobble\+Suppressor}
+\item 
+class {\bfseries One\+Pass\+Stabilizer}
+\item 
+class {\bfseries Pyr\+Lk\+Opt\+Flow\+Estimator\+Base}
+\item 
+class {\bfseries Ransac\+Params}
+\begin{DoxyCompactList}\small\item\em Describes R\+A\+N\+S\+AC method parameters. \end{DoxyCompactList}\item 
+class {\bfseries Sparse\+Pyr\+Lk\+Opt\+Flow\+Estimator}
+\item 
+class {\bfseries Stabilizer\+Base}
+\item 
+class {\bfseries To\+File\+Motion\+Writer}
+\item 
+class {\bfseries Translation\+Based\+Local\+Outlier\+Rejector}
+\item 
+class {\bfseries Two\+Pass\+Stabilizer}
+\item 
+class {\bfseries Video\+File\+Source}
+\item 
+class {\bfseries Weighting\+Deblurer}
+\item 
+class {\bfseries Wobble\+Suppressor\+Base}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static native Mat {\bfseries estimate\+Global\+Motion\+Least\+Squares} ( @By\+Val Mat points0, @By\+Val Mat points1, int model, Float\+Pointer rmse)
+\item 
+static native Mat {\bfseries estimate\+Global\+Motion\+Least\+Squares} ( @By\+Val Mat points0, @By\+Val Mat points1)
+\item 
+static native Mat {\bfseries estimate\+Global\+Motion\+Least\+Squares} ( @By\+Val Mat points0, @By\+Val Mat points1, int model, Float\+Buffer rmse)
+\item 
+static native Mat {\bfseries estimate\+Global\+Motion\+Least\+Squares} ( @By\+Val U\+Mat points0, @By\+Val U\+Mat points1, int model, float\mbox{[}$\,$\mbox{]} rmse)
+\item 
+static native Mat {\bfseries estimate\+Global\+Motion\+Least\+Squares} ( @By\+Val U\+Mat points0, @By\+Val U\+Mat points1)
+\item 
+static native Mat {\bfseries estimate\+Global\+Motion\+Least\+Squares} ( @By\+Val U\+Mat points0, @By\+Val U\+Mat points1, int model, Float\+Pointer rmse)
+\item 
+static native Mat \hyperlink{group__videostab__motion_gab1399e69e37b80626504e158be509601}{estimate\+Global\+Motion\+Ransac} ( @By\+Val Mat points0, @By\+Val Mat points1, int model, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::videostab\+::\+Ransac\+Params\+::default2d\+Motion(cv\+::videostab\+::\+M\+M\+\_\+\+A\+F\+F\+I\+NE)\char`\"{}) Ransac\+Params params, Float\+Pointer rmse, Int\+Pointer ninliers)
+\begin{DoxyCompactList}\small\item\em Estimates best global motion between two 2D point clouds robustly (using R\+A\+N\+S\+AC method). \end{DoxyCompactList}\item 
+static native Mat {\bfseries estimate\+Global\+Motion\+Ransac} ( @By\+Val Mat points0, @By\+Val Mat points1)
+\item 
+static native Mat {\bfseries estimate\+Global\+Motion\+Ransac} ( @By\+Val Mat points0, @By\+Val Mat points1, int model, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::videostab\+::\+Ransac\+Params\+::default2d\+Motion(cv\+::videostab\+::\+M\+M\+\_\+\+A\+F\+F\+I\+NE)\char`\"{}) Ransac\+Params params, Float\+Buffer rmse, Int\+Buffer ninliers)
+\item 
+static native Mat {\bfseries estimate\+Global\+Motion\+Ransac} ( @By\+Val U\+Mat points0, @By\+Val U\+Mat points1, int model, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::videostab\+::\+Ransac\+Params\+::default2d\+Motion(cv\+::videostab\+::\+M\+M\+\_\+\+A\+F\+F\+I\+NE)\char`\"{}) Ransac\+Params params, float\mbox{[}$\,$\mbox{]} rmse, int\mbox{[}$\,$\mbox{]} ninliers)
+\item 
+static native Mat {\bfseries estimate\+Global\+Motion\+Ransac} ( @By\+Val U\+Mat points0, @By\+Val U\+Mat points1)
+\item 
+static native Mat {\bfseries estimate\+Global\+Motion\+Ransac} ( @By\+Val U\+Mat points0, @By\+Val U\+Mat points1, int model, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::videostab\+::\+Ransac\+Params\+::default2d\+Motion(cv\+::videostab\+::\+M\+M\+\_\+\+A\+F\+F\+I\+NE)\char`\"{}) Ransac\+Params params, Float\+Pointer rmse, Int\+Pointer ninliers)
+\item 
+static native Mat \hyperlink{group__videostab__motion_ga1e73edce6a2ac4dee3f6a1ae7ec06d26}{get\+Motion} (int from, int to, @Const @By\+Ref Mat\+Vector motions)
+\begin{DoxyCompactList}\small\item\em Computes motion between two frames assuming that all the intermediate motions are known. \end{DoxyCompactList}\item 
+static native Mat {\bfseries ensure\+Inclusion\+Constraint} (@Const @By\+Ref Mat M, @By\+Val Size size, float trim\+Ratio)
+\item 
+static native float {\bfseries estimate\+Optimal\+Trim\+Ratio} (@Const @By\+Ref Mat M, @By\+Val Size size)
+\item 
+static native void {\bfseries calc\+Flow\+Mask} ( @Const @By\+Ref Mat flowX, @Const @By\+Ref Mat flowY, @Const @By\+Ref Mat errors, float max\+Error, @Const @By\+Ref Mat mask0, @Const @By\+Ref Mat mask1, @By\+Ref Mat flow\+Mask)
+\item 
+static native void {\bfseries complete\+Frame\+According\+To\+Flow} ( @Const @By\+Ref Mat flow\+Mask, @Const @By\+Ref Mat flowX, @Const @By\+Ref Mat flowY, @Const @By\+Ref Mat frame1, @Const @By\+Ref Mat mask1, float dist\+Thresh, @By\+Ref Mat frame0, @By\+Ref Mat mask0)
+\item 
+static native float {\bfseries calc\+Blurriness} (@Const @By\+Ref Mat frame)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{group__videostab__motion_ga1dfde997ecf6b23eb737a2b7461597cf}{M\+M\+\_\+\+T\+R\+A\+N\+S\+L\+A\+T\+I\+ON} = 0
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+opencv\+\_\+videostab.\+java\end{DoxyCompactItemize}

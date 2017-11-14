@@ -1,0 +1,126 @@
+\hypertarget{group__shape}{}\section{Shape Distance and Matching}
+\label{group__shape}\index{Shape Distance and Matching@{Shape Distance and Matching}}
+
+
+Computes the \char`\"{}minimal work\char`\"{} distance between two weighted point configurations base on the papers \char`\"{}\+E\+M\+D-\/\+L1\+: An efficient and Robust Algorithm for comparing histogram-\/based descriptors\char`\"{}, by Haibin Ling and Kazunori Okuda; and \char`\"{}\+The Earth Mover\textquotesingle{}s Distance is the Mallows Distance\+: Some Insights from
+\+Statistics\char`\"{}, by Elizaveta Levina and Peter Bickel.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+Shape\+Transformer}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+Thin\+Plate\+Spline\+Shape\+Transformer}
+\begin{DoxyCompactList}\small\item\em Definition of the transformation. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+Affine\+Transformer}
+\begin{DoxyCompactList}\small\item\em Wrapper class for the Open\+CV Affine Transformation algorithm. \+: \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+Histogram\+Cost\+Extractor}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+Norm\+Histogram\+Cost\+Extractor}
+\begin{DoxyCompactList}\small\item\em A norm based cost extraction. \+: \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+E\+M\+D\+Histogram\+Cost\+Extractor}
+\begin{DoxyCompactList}\small\item\em An E\+MD based cost extraction. \+: \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+Chi\+Histogram\+Cost\+Extractor}
+\begin{DoxyCompactList}\small\item\em An Chi based cost extraction. \+: \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+E\+M\+D\+L1\+Histogram\+Cost\+Extractor}
+\begin{DoxyCompactList}\small\item\em An E\+M\+D-\/\+L1 based cost extraction. \+: \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+Shape\+Distance\+Extractor}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+Shape\+Context\+Distance\+Extractor}
+\begin{DoxyCompactList}\small\item\em Implementation of the Shape Context descriptor and matching algorithm. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+Hausdorff\+Distance\+Extractor}
+\begin{DoxyCompactList}\small\item\em A simple Hausdorff distance measure between shapes defined by contours. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__shape_ga24080e2f6dd6ce97e090cd942d26e5bd}\label{group__shape_ga24080e2f6dd6ce97e090cd942d26e5bd}} 
+static native float {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+E\+M\+D\+L1} (@By\+Val Mat signature1, @By\+Val Mat signature2)
+\item 
+\mbox{\Hypertarget{group__shape_ga10fb6abffe2809f8e22fde70122256da}\label{group__shape_ga10fb6abffe2809f8e22fde70122256da}} 
+static native float {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+E\+M\+D\+L1} (@By\+Val U\+Mat signature1, @By\+Val U\+Mat signature2)
+\item 
+static native Thin\+Plate\+Spline\+Shape\+Transformer \hyperlink{group__shape_ga409dbca0ecf803197cc29ec102f593fd}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+create\+Thin\+Plate\+Spline\+Shape\+Transformer} (double regularization\+Parameter)
+\item 
+\mbox{\Hypertarget{group__shape_ga9f89fda10806d5f98d65b1a0a82d7bba}\label{group__shape_ga9f89fda10806d5f98d65b1a0a82d7bba}} 
+static native Thin\+Plate\+Spline\+Shape\+Transformer {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+create\+Thin\+Plate\+Spline\+Shape\+Transformer} ()
+\item 
+static native Affine\+Transformer \hyperlink{group__shape_gaf6ba7c375194bc18e7f3212dfadfa68f}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+create\+Affine\+Transformer} (@Cast(\char`\"{}bool\char`\"{}) boolean full\+Affine)
+\item 
+\mbox{\Hypertarget{group__shape_ga9faadffc8c27c6ac18d645eadf7ed086}\label{group__shape_ga9faadffc8c27c6ac18d645eadf7ed086}} 
+static native Histogram\+Cost\+Extractor {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+create\+Norm\+Histogram\+Cost\+Extractor} (int flag, int n\+Dummies, float default\+Cost)
+\item 
+\mbox{\Hypertarget{group__shape_ga50f2a464bc9171701a3386a986bb5d0f}\label{group__shape_ga50f2a464bc9171701a3386a986bb5d0f}} 
+static native Histogram\+Cost\+Extractor {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+create\+Norm\+Histogram\+Cost\+Extractor} ()
+\item 
+\mbox{\Hypertarget{group__shape_gaa4e869f0f953440a5fef1690fb0ce578}\label{group__shape_gaa4e869f0f953440a5fef1690fb0ce578}} 
+static native Histogram\+Cost\+Extractor {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+create\+E\+M\+D\+Histogram\+Cost\+Extractor} (int flag, int n\+Dummies, float default\+Cost)
+\item 
+\mbox{\Hypertarget{group__shape_gad66f3042ff3e80ed3d3a98fccfba611f}\label{group__shape_gad66f3042ff3e80ed3d3a98fccfba611f}} 
+static native Histogram\+Cost\+Extractor {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+create\+E\+M\+D\+Histogram\+Cost\+Extractor} ()
+\item 
+\mbox{\Hypertarget{group__shape_gac7f253325365590ab0014a96003a81b9}\label{group__shape_gac7f253325365590ab0014a96003a81b9}} 
+static native Histogram\+Cost\+Extractor {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+create\+Chi\+Histogram\+Cost\+Extractor} (int n\+Dummies, float default\+Cost)
+\item 
+\mbox{\Hypertarget{group__shape_ga015bf3d4bc5b1fb515f3a3d1d036f4c6}\label{group__shape_ga015bf3d4bc5b1fb515f3a3d1d036f4c6}} 
+static native Histogram\+Cost\+Extractor {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+create\+Chi\+Histogram\+Cost\+Extractor} ()
+\item 
+\mbox{\Hypertarget{group__shape_ga01b32427cada320b1c99bb1dfaa20f8d}\label{group__shape_ga01b32427cada320b1c99bb1dfaa20f8d}} 
+static native Histogram\+Cost\+Extractor {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+create\+E\+M\+D\+L1\+Histogram\+Cost\+Extractor} (int n\+Dummies, float default\+Cost)
+\item 
+\mbox{\Hypertarget{group__shape_ga41c4a387619bfa3aed91ab940f91f8dd}\label{group__shape_ga41c4a387619bfa3aed91ab940f91f8dd}} 
+static native Histogram\+Cost\+Extractor {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+create\+E\+M\+D\+L1\+Histogram\+Cost\+Extractor} ()
+\item 
+\mbox{\Hypertarget{group__shape_ga6057d400ec1dd9475b9fef637018e97c}\label{group__shape_ga6057d400ec1dd9475b9fef637018e97c}} 
+static native Shape\+Context\+Distance\+Extractor {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+create\+Shape\+Context\+Distance\+Extractor} (int n\+Angular\+Bins, int n\+Radial\+Bins, float inner\+Radius, float outer\+Radius, int iterations, @Ptr Histogram\+Cost\+Extractor comparer, @Ptr Shape\+Transformer transformer)
+\item 
+\mbox{\Hypertarget{group__shape_ga459cb340a130806d0db0f13094055cf3}\label{group__shape_ga459cb340a130806d0db0f13094055cf3}} 
+static native Shape\+Context\+Distance\+Extractor {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+create\+Shape\+Context\+Distance\+Extractor} ()
+\item 
+\mbox{\Hypertarget{group__shape_gaef3f481ee41d6d7e46b2c82d55194db9}\label{group__shape_gaef3f481ee41d6d7e46b2c82d55194db9}} 
+static native Hausdorff\+Distance\+Extractor {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+create\+Hausdorff\+Distance\+Extractor} (int distance\+Flag, float rank\+Prop)
+\item 
+\mbox{\Hypertarget{group__shape_gaf680073bab30d3e0d72516c2d4614f70}\label{group__shape_gaf680073bab30d3e0d72516c2d4614f70}} 
+static native Hausdorff\+Distance\+Extractor {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+create\+Hausdorff\+Distance\+Extractor} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Computes the \char`\"{}minimal work\char`\"{} distance between two weighted point configurations base on the papers \char`\"{}\+E\+M\+D-\/\+L1\+: An efficient and Robust Algorithm for comparing histogram-\/based descriptors\char`\"{}, by Haibin Ling and Kazunori Okuda; and \char`\"{}\+The Earth Mover\textquotesingle{}s Distance is the Mallows Distance\+: Some Insights from
+\+Statistics\char`\"{}, by Elizaveta Levina and Peter Bickel. 
+
+Abstract base class for shape distance algorithms.
+
+Abstract base class for histogram cost algorithms.
+
+Abstract base class for shape transformation algorithms.
+
+/$\ast$$\ast$ 
+
+/$\ast$$\ast$
+
+
+\begin{DoxyParams}{Parameters}
+{\em signature1} & First signature, a single column floating-\/point matrix. Each row is the value of the histogram in each bin. \\
+\hline
+{\em signature2} & Second signature of the same format and size as signature1.\\
+\hline
+\end{DoxyParams}
+
+
+/$\ast$$\ast$ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__shape_gaf6ba7c375194bc18e7f3212dfadfa68f}\label{group__shape_gaf6ba7c375194bc18e7f3212dfadfa68f}} 
+\index{Shape Distance and Matching@{Shape Distance and Matching}!create\+Affine\+Transformer@{create\+Affine\+Transformer}}
+\index{create\+Affine\+Transformer@{create\+Affine\+Transformer}!Shape Distance and Matching@{Shape Distance and Matching}}
+\subsubsection{\texorpdfstring{create\+Affine\+Transformer()}{createAffineTransformer()}}
+{\footnotesize\ttfamily static native Affine\+Transformer org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+create\+Affine\+Transformer (\begin{DoxyParamCaption}\item[{@Cast(\char`\"{}bool\char`\"{}) boolean}]{full\+Affine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Complete constructor \mbox{\Hypertarget{group__shape_ga409dbca0ecf803197cc29ec102f593fd}\label{group__shape_ga409dbca0ecf803197cc29ec102f593fd}} 
+\index{Shape Distance and Matching@{Shape Distance and Matching}!create\+Thin\+Plate\+Spline\+Shape\+Transformer@{create\+Thin\+Plate\+Spline\+Shape\+Transformer}}
+\index{create\+Thin\+Plate\+Spline\+Shape\+Transformer@{create\+Thin\+Plate\+Spline\+Shape\+Transformer}!Shape Distance and Matching@{Shape Distance and Matching}}
+\subsubsection{\texorpdfstring{create\+Thin\+Plate\+Spline\+Shape\+Transformer()}{createThinPlateSplineShapeTransformer()}}
+{\footnotesize\ttfamily static native Thin\+Plate\+Spline\+Shape\+Transformer org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape.\+create\+Thin\+Plate\+Spline\+Shape\+Transformer (\begin{DoxyParamCaption}\item[{double}]{regularization\+Parameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Complete constructor 

@@ -1,0 +1,49 @@
+\hypertarget{group__xfeatures2d__experiment}{}\section{Experimental 2D Features Algorithms}
+\label{group__xfeatures2d__experiment}\index{Experimental 2\+D Features Algorithms@{Experimental 2\+D Features Algorithms}}
+
+
+Class implementing the F\+R\+E\+AK ({\itshape Fast Retina Keypoint}) keypoint descriptor, described in {\bfseries [A\+O\+V12]} .  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+xfeatures2d.\+F\+R\+E\+AK}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+xfeatures2d.\+Star\+Detector}
+\begin{DoxyCompactList}\small\item\em The class implements the keypoint detector introduced by {\bfseries [Agrawal08]}, synonym of Star\+Detector. \+: \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+xfeatures2d.\+Brief\+Descriptor\+Extractor}
+\begin{DoxyCompactList}\small\item\em Class for computing B\+R\+I\+EF descriptors described in {\bfseries [calon2010]} . \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+xfeatures2d.\+L\+U\+C\+ID}
+\begin{DoxyCompactList}\small\item\em Class implementing the locally uniform comparison image descriptor, described in {\bfseries [L\+U\+C\+ID]}. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+xfeatures2d.\+L\+A\+T\+CH}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+xfeatures2d.\+D\+A\+I\+SY}
+\begin{DoxyCompactList}\small\item\em Class implementing D\+A\+I\+SY descriptor, described in {\bfseries [Tola10]}. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+xfeatures2d.\+M\+S\+D\+Detector}
+\begin{DoxyCompactList}\small\item\em Class implementing the M\+SD ({\itshape Maximal Self-\/\+Dissimilarity}) keypoint detector, described in {\bfseries [Tombari14]}. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+xfeatures2d.\+V\+GG}
+\begin{DoxyCompactList}\small\item\em Class implementing V\+GG (Oxford Visual Geometry Group) descriptor trained end to end using \char`\"{}\+Descriptor Learning Using Convex Optimisation\char`\"{} (D\+L\+CO) aparatus described in {\bfseries [Simonyan14]}. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+xfeatures2d.\+Boost\+Desc}
+\begin{DoxyCompactList}\small\item\em Class implementing Boost\+Desc (Learning Image Descriptors with Boosting), described in {\bfseries [Trzcinski13a]} and {\bfseries [Trzcinski13b]}. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+xfeatures2d.\+P\+C\+T\+Signatures}
+\begin{DoxyCompactList}\small\item\em Class implementing P\+CT (position-\/color-\/texture) signature extraction as described in {\bfseries [Krulis\+L\+S16]}. The algorithm is divided to a feature sampler and a clusterizer. Feature sampler produces samples at given set of coordinates. Clusterizer then produces clusters of these samples using k-\/means algorithm. Resulting set of clusters is the signature of the input image. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+xfeatures2d.\+P\+C\+T\+Signatures\+S\+Q\+FD}
+\begin{DoxyCompactList}\small\item\em Class implementing Signature Quadratic Form Distance (S\+Q\+FD). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class implementing the F\+R\+E\+AK ({\itshape Fast Retina Keypoint}) keypoint descriptor, described in {\bfseries [A\+O\+V12]} . 
+
+This section describes experimental algorithms for 2d feature detection. 
+
+/$\ast$$\ast$
+
+The algorithm propose a novel keypoint descriptor inspired by the human visual system and more precisely the retina, coined Fast Retina Key-\/ point (F\+R\+E\+AK). A cascade of binary strings is computed by efficiently comparing image intensities over a retinal sampling pattern. F\+R\+E\+A\+Ks are in general faster to compute with lower memory load and also more robust than S\+I\+FT, S\+U\+RF or B\+R\+I\+SK. They are competitive alternatives to existing keypoints in particular for embedded applications. 
+
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item An example on how to use the F\+R\+E\+AK descriptor can be found at opencv\+\_\+source\+\_\+code/samples/cpp/freak\+\_\+demo.\+cpp 
+\end{DoxyItemize}
+\end{DoxyNote}

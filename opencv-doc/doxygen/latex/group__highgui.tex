@@ -1,0 +1,670 @@
+\hypertarget{group__highgui}{}\section{High-\/level G\+UI}
+\label{group__highgui}\index{High-\/level G\+UI@{High-\/level G\+UI}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__highgui__opengl}{Open\+G\+L support}
+\begin{DoxyCompactList}\small\item\em Displays Open\+GL 2D texture in the specified window. \end{DoxyCompactList}\item 
+\hyperlink{group__highgui__qt}{Qt New Functions}
+\begin{DoxyCompactList}\small\item\em Qt\+Font available only for Qt. See cv\+::font\+Qt. \end{DoxyCompactList}\item 
+\hyperlink{group__highgui__winrt}{Win\+R\+T support}
+\item 
+\hyperlink{group__highgui__c}{C A\+PI}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+Mouse\+Callback}
+\begin{DoxyCompactList}\small\item\em Callback function for mouse events. see cv\+::set\+Mouse\+Callback. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+Trackbar\+Callback}
+\begin{DoxyCompactList}\small\item\em Callback function for Trackbar see cv\+::create\+Trackbar. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+Open\+Gl\+Draw\+Callback}
+\begin{DoxyCompactList}\small\item\em Callback function defined to be called every frame. See cv\+::set\+Open\+Gl\+Draw\+Callback. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+Button\+Callback}
+\begin{DoxyCompactList}\small\item\em Callback function for a button created by cv\+::create\+Button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static native void \hyperlink{group__highgui_gad8dcfc13dd30b1339b3fc7fb3fb19603}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+named\+Window} (@Str Byte\+Pointer winname, int flags)
+\begin{DoxyCompactList}\small\item\em Creates a window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__highgui_gaf852752225836fd4c3f46a3d81c99bca}\label{group__highgui_gaf852752225836fd4c3f46a3d81c99bca}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+named\+Window} (@Str Byte\+Pointer winname)
+\item 
+\mbox{\Hypertarget{group__highgui_gada2840bb3f4c9130254bf7a3a10a778a}\label{group__highgui_gada2840bb3f4c9130254bf7a3a10a778a}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+named\+Window} (@Str String winname, int flags)
+\item 
+\mbox{\Hypertarget{group__highgui_gae812da89b4f775e07322dc846d112bd8}\label{group__highgui_gae812da89b4f775e07322dc846d112bd8}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+named\+Window} (@Str String winname)
+\item 
+static native void \hyperlink{group__highgui_ga3fd651e0fd7a9c3d290d4217cdcebbcf}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+destroy\+Window} (@Str Byte\+Pointer winname)
+\begin{DoxyCompactList}\small\item\em Destroys the specified window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__highgui_ga63e73d97cd533b9f11473db651404144}\label{group__highgui_ga63e73d97cd533b9f11473db651404144}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+destroy\+Window} (@Str String winname)
+\item 
+static native void \hyperlink{group__highgui_gaff06efa4a5f234c304b6f498075abd1a}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+destroy\+All\+Windows} ()
+\begin{DoxyCompactList}\small\item\em Destroys all of the High\+G\+UI windows. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__highgui_ga9aa287f051c0090aefba35969af09464}\label{group__highgui_ga9aa287f051c0090aefba35969af09464}} 
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+start\+Window\+Thread} ()
+\item 
+static native int \hyperlink{group__highgui_ga6a23d9d2816fcc0c96c3445b5969f5ac}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+wait\+Key\+Ex} (int delay)
+\begin{DoxyCompactList}\small\item\em Similar to \hyperlink{group__highgui_gaf924607bac022bb3603e459e3f2f3239}{wait\+Key}, but returns full key code. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__highgui_ga309b6a92c0ee657dcee70e5b3d8b082a}\label{group__highgui_ga309b6a92c0ee657dcee70e5b3d8b082a}} 
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+wait\+Key\+Ex} ()
+\item 
+static native int \hyperlink{group__highgui_gaf924607bac022bb3603e459e3f2f3239}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+wait\+Key} (int delay)
+\begin{DoxyCompactList}\small\item\em Waits for a pressed key. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__highgui_gad7a6623c0d3aa6fcca43fc0685f708a4}\label{group__highgui_gad7a6623c0d3aa6fcca43fc0685f708a4}} 
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+wait\+Key} ()
+\item 
+static native void \hyperlink{group__highgui_gaf05d46739d8a87edb7405e79c7207975}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+imshow} (@Str Byte\+Pointer winname, @By\+Val Mat mat)
+\begin{DoxyCompactList}\small\item\em Displays an image in the specified window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__highgui_gac5b1ce207244bb6bb126e0777819f709}\label{group__highgui_gac5b1ce207244bb6bb126e0777819f709}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+imshow} (@Str String winname, @By\+Val Mat mat)
+\item 
+\mbox{\Hypertarget{group__highgui_ga3c9916bae38bb1e210a631929ba26cce}\label{group__highgui_ga3c9916bae38bb1e210a631929ba26cce}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+imshow} (@Str Byte\+Pointer winname, @By\+Val U\+Mat mat)
+\item 
+\mbox{\Hypertarget{group__highgui_gabdd78f5e2e26ddbc85af2d2a1eead0af}\label{group__highgui_gabdd78f5e2e26ddbc85af2d2a1eead0af}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+imshow} (@Str String winname, @By\+Val U\+Mat mat)
+\item 
+static native void \hyperlink{group__highgui_ga4e805fd30f0df6fd2b5715cf89f4f80e}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+resize\+Window} (@Str Byte\+Pointer winname, int width, int height)
+\begin{DoxyCompactList}\small\item\em Resizes window to the specified size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__highgui_gaf05876a5e8af8a3c1be4e01f1803e599}\label{group__highgui_gaf05876a5e8af8a3c1be4e01f1803e599}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+resize\+Window} (@Str String winname, int width, int height)
+\item 
+static native void \hyperlink{group__highgui_ga7731f7680d8bb28a3e069616f3395907}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+move\+Window} (@Str Byte\+Pointer winname, int x, int y)
+\begin{DoxyCompactList}\small\item\em Moves window to the specified position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__highgui_ga85bbed8fb73817ab7d744f9ddf2f42f7}\label{group__highgui_ga85bbed8fb73817ab7d744f9ddf2f42f7}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+move\+Window} (@Str String winname, int x, int y)
+\item 
+static native void \hyperlink{group__highgui_ga0c820fdf7575d2e62d3aed900aa534cd}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+set\+Window\+Property} (@Str Byte\+Pointer winname, int prop\+\_\+id, double prop\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Changes parameters of a window dynamically. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__highgui_gac198e5bd280f5c0ccab754b8ddbeb1cd}\label{group__highgui_gac198e5bd280f5c0ccab754b8ddbeb1cd}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+set\+Window\+Property} (@Str String winname, int prop\+\_\+id, double prop\+\_\+value)
+\item 
+static native void \hyperlink{group__highgui_gaf4453988c16611eed72c58d647d6e31d}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+set\+Window\+Title} (@Str Byte\+Pointer winname, @Str Byte\+Pointer title)
+\begin{DoxyCompactList}\small\item\em Updates window title. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__highgui_ga669c6553b904bed20d14fdb6d3539ad6}\label{group__highgui_ga669c6553b904bed20d14fdb6d3539ad6}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+set\+Window\+Title} (@Str String winname, @Str String title)
+\item 
+static native double \hyperlink{group__highgui_gabedecb2109425cb553d605080ad980a9}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+get\+Window\+Property} (@Str Byte\+Pointer winname, int prop\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Provides parameters of a window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__highgui_ga3d5796e2f9c9284e62e35a2333e04203}\label{group__highgui_ga3d5796e2f9c9284e62e35a2333e04203}} 
+static native double {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+get\+Window\+Property} (@Str String winname, int prop\+\_\+id)
+\item 
+static native void \hyperlink{group__highgui_gae53ffbc47967af79b35268d57575d6b4}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+set\+Mouse\+Callback} (@Str Byte\+Pointer winname, Mouse\+Callback on\+Mouse, Pointer userdata)
+\begin{DoxyCompactList}\small\item\em Sets mouse handler for the specified window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__highgui_gae9abe00b2e4bff3bca4549040695e9d0}\label{group__highgui_gae9abe00b2e4bff3bca4549040695e9d0}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+set\+Mouse\+Callback} (@Str Byte\+Pointer winname, Mouse\+Callback on\+Mouse)
+\item 
+\mbox{\Hypertarget{group__highgui_gad3fe1d57b8a0596f8a767033e113c2f4}\label{group__highgui_gad3fe1d57b8a0596f8a767033e113c2f4}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+set\+Mouse\+Callback} (@Str String winname, Mouse\+Callback on\+Mouse, Pointer userdata)
+\item 
+\mbox{\Hypertarget{group__highgui_gaf02a913c87f5a02429d836be5d58e2cf}\label{group__highgui_gaf02a913c87f5a02429d836be5d58e2cf}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+set\+Mouse\+Callback} (@Str String winname, Mouse\+Callback on\+Mouse)
+\item 
+static native int \hyperlink{group__highgui_gaf78c2cffa388987b42b78f0c122e5ef9}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+get\+Mouse\+Wheel\+Delta} (int flags)
+\begin{DoxyCompactList}\small\item\em Gets the mouse-\/wheel motion delta, when handling mouse-\/wheel events cv\+::\+E\+V\+E\+N\+T\+\_\+\+M\+O\+U\+S\+E\+W\+H\+E\+EL and cv\+::\+E\+V\+E\+N\+T\+\_\+\+M\+O\+U\+S\+E\+H\+W\+H\+E\+EL. \end{DoxyCompactList}\item 
+static native int \hyperlink{group__highgui_ga727bcca32e6bc9d52ae86894538318fa}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+create\+Trackbar} (@Str Byte\+Pointer trackbarname, @Str Byte\+Pointer winname, Int\+Pointer value, int count, Trackbar\+Callback on\+Change, Pointer userdata)
+\begin{DoxyCompactList}\small\item\em Creates a trackbar and attaches it to the specified window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__highgui_gab173b8a8c312e944882a4179f9520172}\label{group__highgui_gab173b8a8c312e944882a4179f9520172}} 
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+create\+Trackbar} (@Str Byte\+Pointer trackbarname, @Str Byte\+Pointer winname, Int\+Pointer value, int count)
+\item 
+\mbox{\Hypertarget{group__highgui_gaf9156030114d1488db0f4995adbd35a5}\label{group__highgui_gaf9156030114d1488db0f4995adbd35a5}} 
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+create\+Trackbar} (@Str String trackbarname, @Str String winname, Int\+Buffer value, int count, Trackbar\+Callback on\+Change, Pointer userdata)
+\item 
+\mbox{\Hypertarget{group__highgui_ga74eef9d5d6eab77f3602ecc2fa8b635d}\label{group__highgui_ga74eef9d5d6eab77f3602ecc2fa8b635d}} 
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+create\+Trackbar} (@Str String trackbarname, @Str String winname, Int\+Buffer value, int count)
+\item 
+\mbox{\Hypertarget{group__highgui_gae273f460335ea0788cca879da6701d93}\label{group__highgui_gae273f460335ea0788cca879da6701d93}} 
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+create\+Trackbar} (@Str Byte\+Pointer trackbarname, @Str Byte\+Pointer winname, int\mbox{[}$\,$\mbox{]} value, int count, Trackbar\+Callback on\+Change, Pointer userdata)
+\item 
+\mbox{\Hypertarget{group__highgui_ga610bf1cdbaefe9bef6214cb5944e555f}\label{group__highgui_ga610bf1cdbaefe9bef6214cb5944e555f}} 
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+create\+Trackbar} (@Str Byte\+Pointer trackbarname, @Str Byte\+Pointer winname, int\mbox{[}$\,$\mbox{]} value, int count)
+\item 
+\mbox{\Hypertarget{group__highgui_ga8cf754e33b33d1b9c3d6ce02a7280875}\label{group__highgui_ga8cf754e33b33d1b9c3d6ce02a7280875}} 
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+create\+Trackbar} (@Str String trackbarname, @Str String winname, Int\+Pointer value, int count, Trackbar\+Callback on\+Change, Pointer userdata)
+\item 
+\mbox{\Hypertarget{group__highgui_gae692304c8f86f9171895d0cf231d2a4a}\label{group__highgui_gae692304c8f86f9171895d0cf231d2a4a}} 
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+create\+Trackbar} (@Str String trackbarname, @Str String winname, Int\+Pointer value, int count)
+\item 
+\mbox{\Hypertarget{group__highgui_ga9bc22dafeea22e40e1c4581fd252af22}\label{group__highgui_ga9bc22dafeea22e40e1c4581fd252af22}} 
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+create\+Trackbar} (@Str Byte\+Pointer trackbarname, @Str Byte\+Pointer winname, Int\+Buffer value, int count, Trackbar\+Callback on\+Change, Pointer userdata)
+\item 
+\mbox{\Hypertarget{group__highgui_ga6e1768545c8b966211db2d9c18cbc6f1}\label{group__highgui_ga6e1768545c8b966211db2d9c18cbc6f1}} 
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+create\+Trackbar} (@Str Byte\+Pointer trackbarname, @Str Byte\+Pointer winname, Int\+Buffer value, int count)
+\item 
+\mbox{\Hypertarget{group__highgui_ga89bc486d1fb5602ffab8beba664107ab}\label{group__highgui_ga89bc486d1fb5602ffab8beba664107ab}} 
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+create\+Trackbar} (@Str String trackbarname, @Str String winname, int\mbox{[}$\,$\mbox{]} value, int count, Trackbar\+Callback on\+Change, Pointer userdata)
+\item 
+\mbox{\Hypertarget{group__highgui_gabff60622e60e3ebd873277db5aff5501}\label{group__highgui_gabff60622e60e3ebd873277db5aff5501}} 
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+create\+Trackbar} (@Str String trackbarname, @Str String winname, int\mbox{[}$\,$\mbox{]} value, int count)
+\item 
+static native int \hyperlink{group__highgui_gad91f649b98c33cbfdbf3c995935facdc}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+get\+Trackbar\+Pos} (@Str Byte\+Pointer trackbarname, @Str Byte\+Pointer winname)
+\begin{DoxyCompactList}\small\item\em Returns the trackbar position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__highgui_ga718b4a954ab80d53a30d3d9780a63f4b}\label{group__highgui_ga718b4a954ab80d53a30d3d9780a63f4b}} 
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+get\+Trackbar\+Pos} (@Str String trackbarname, @Str String winname)
+\item 
+static native void \hyperlink{group__highgui_ga53b09172763cf63873f5ac01fef0154d}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+set\+Trackbar\+Pos} (@Str Byte\+Pointer trackbarname, @Str Byte\+Pointer winname, int pos)
+\begin{DoxyCompactList}\small\item\em Sets the trackbar position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__highgui_ga03572f946805f6f78eb6c13999a6a4d1}\label{group__highgui_ga03572f946805f6f78eb6c13999a6a4d1}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+set\+Trackbar\+Pos} (@Str String trackbarname, @Str String winname, int pos)
+\item 
+static native void \hyperlink{group__highgui_ga7f8973f0842fd2c01aad396250da751a}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+set\+Trackbar\+Max} (@Str Byte\+Pointer trackbarname, @Str Byte\+Pointer winname, int maxval)
+\begin{DoxyCompactList}\small\item\em Sets the trackbar maximum position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__highgui_ga07ec99934bd3e81d729b67589d50078f}\label{group__highgui_ga07ec99934bd3e81d729b67589d50078f}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+set\+Trackbar\+Max} (@Str String trackbarname, @Str String winname, int maxval)
+\item 
+static native void \hyperlink{group__highgui_gaf177a5a7400badc50be0ce11d404c74f}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+set\+Trackbar\+Min} (@Str Byte\+Pointer trackbarname, @Str Byte\+Pointer winname, int minval)
+\begin{DoxyCompactList}\small\item\em Sets the trackbar minimum position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__highgui_ga0493c87b0a728ca9972039017a6ab3e9}\label{group__highgui_ga0493c87b0a728ca9972039017a6ab3e9}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+set\+Trackbar\+Min} (@Str String trackbarname, @Str String winname, int minval)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{group__highgui_ga2afebfdebe6ea3696f89b4a7628e72e3}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+W\+I\+N\+D\+O\+W\+\_\+\+N\+O\+R\+M\+AL} = 0x00000000
+\item 
+static final int \hyperlink{group__highgui_ga600b654f3be9263c511b1588f7ea735d}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+W\+N\+D\+\_\+\+P\+R\+O\+P\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+EN} = 0
+\item 
+static final int \hyperlink{group__highgui_ga6d55d280d31ae69d883e955f615fda29}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+E\+V\+E\+N\+T\+\_\+\+M\+O\+U\+S\+E\+M\+O\+VE} = 0
+\item 
+static final int \hyperlink{group__highgui_gac433101d8b17471ae4cc5161be63c257}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+E\+V\+E\+N\+T\+\_\+\+F\+L\+A\+G\+\_\+\+L\+B\+U\+T\+T\+ON} = 1
+\item 
+static final int \hyperlink{group__highgui_gae35aa28b68ea30b61b8b4b740ceca6e3}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+Q\+T\+\_\+\+F\+O\+N\+T\+\_\+\+L\+I\+G\+HT} = 25
+\item 
+static final int \hyperlink{group__highgui_ga7818f5f33d8fac97fbdba68143ec8bb7}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+Q\+T\+\_\+\+S\+T\+Y\+L\+E\+\_\+\+N\+O\+R\+M\+AL} = 0
+\item 
+static final int \hyperlink{group__highgui_gaae4d93a303a93e9c2ecece3adad55dc4}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+Q\+T\+\_\+\+P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+ON} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+While Open\+CV was designed for use in full-\/scale applications and can be used within functionally rich UI frameworks (such as Qt$\ast$, Win\+Forms$\ast$, or Cocoa$\ast$) or without any UI at all, sometimes there it is required to try functionality quickly and visualize the results. This is what the High\+G\+UI module has been designed for. 
+
+It provides easy interface to\+: 
+
+
+\begin{DoxyItemize}
+\item Create and manipulate windows that can display images and \char`\"{}remember\char`\"{} their content (no need to handle repaint events from OS).
+\item Add trackbars to the windows, handle simple mouse events as well as keyboard commands. 
+\end{DoxyItemize}
+
+Flags for cv\+::named\+Window 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__highgui_ga727bcca32e6bc9d52ae86894538318fa}\label{group__highgui_ga727bcca32e6bc9d52ae86894538318fa}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!create\+Trackbar@{create\+Trackbar}}
+\index{create\+Trackbar@{create\+Trackbar}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{create\+Trackbar()}{createTrackbar()}}
+{\footnotesize\ttfamily static native int org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+create\+Trackbar (\begin{DoxyParamCaption}\item[{@Str Byte\+Pointer}]{trackbarname,  }\item[{@Str Byte\+Pointer}]{winname,  }\item[{Int\+Pointer}]{value,  }\item[{int}]{count,  }\item[{Trackbar\+Callback}]{on\+Change,  }\item[{Pointer}]{userdata }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a trackbar and attaches it to the specified window. 
+
+The function create\+Trackbar creates a trackbar (a slider or range control) with the specified name and range, assigns a variable value to be a position synchronized with the trackbar and specifies the callback function on\+Change to be called on the trackbar position change. The created trackbar is displayed in the specified window winname. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\mbox{[}{\bfseries Qt Backend Only}\mbox{]} winname can be empty (or N\+U\+LL) if the trackbar should be attached to the control panel. 
+
+Clicking the label of each trackbar enables editing the trackbar values manually. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trackbarname} & Name of the created trackbar. \\
+\hline
+{\em winname} & Name of the window that will be used as a parent of the created trackbar. \\
+\hline
+{\em value} & Optional pointer to an integer variable whose value reflects the position of the slider. Upon creation, the slider position is defined by this variable. \\
+\hline
+{\em count} & Maximal position of the slider. The minimal position is always 0. \\
+\hline
+{\em on\+Change} & Pointer to the function to be called every time the slider changes position. This function should be prototyped as void Foo(int,void$\ast$); , where the first parameter is the trackbar position and the second parameter is the user data (see the next parameter). If the callback is the N\+U\+LL pointer, no callbacks are called, but only value is updated. \\
+\hline
+{\em userdata} & User data that is passed as is to the callback. It can be used to handle trackbar events without using global variables. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__highgui_gaff06efa4a5f234c304b6f498075abd1a}\label{group__highgui_gaff06efa4a5f234c304b6f498075abd1a}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!destroy\+All\+Windows@{destroy\+All\+Windows}}
+\index{destroy\+All\+Windows@{destroy\+All\+Windows}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{destroy\+All\+Windows()}{destroyAllWindows()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+destroy\+All\+Windows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Destroys all of the High\+G\+UI windows. 
+
+The function destroy\+All\+Windows destroys all of the opened High\+G\+UI windows. \mbox{\Hypertarget{group__highgui_ga3fd651e0fd7a9c3d290d4217cdcebbcf}\label{group__highgui_ga3fd651e0fd7a9c3d290d4217cdcebbcf}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!destroy\+Window@{destroy\+Window}}
+\index{destroy\+Window@{destroy\+Window}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{destroy\+Window()}{destroyWindow()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+destroy\+Window (\begin{DoxyParamCaption}\item[{@Str Byte\+Pointer}]{winname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Destroys the specified window. 
+
+The function destroy\+Window destroys the window with the given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em winname} & Name of the window to be destroyed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__highgui_gaf78c2cffa388987b42b78f0c122e5ef9}\label{group__highgui_gaf78c2cffa388987b42b78f0c122e5ef9}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!get\+Mouse\+Wheel\+Delta@{get\+Mouse\+Wheel\+Delta}}
+\index{get\+Mouse\+Wheel\+Delta@{get\+Mouse\+Wheel\+Delta}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{get\+Mouse\+Wheel\+Delta()}{getMouseWheelDelta()}}
+{\footnotesize\ttfamily static native int org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+get\+Mouse\+Wheel\+Delta (\begin{DoxyParamCaption}\item[{int}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the mouse-\/wheel motion delta, when handling mouse-\/wheel events cv\+::\+E\+V\+E\+N\+T\+\_\+\+M\+O\+U\+S\+E\+W\+H\+E\+EL and cv\+::\+E\+V\+E\+N\+T\+\_\+\+M\+O\+U\+S\+E\+H\+W\+H\+E\+EL. 
+
+For regular mice with a scroll-\/wheel, delta will be a multiple of 120. The value 120 corresponds to a one notch rotation of the wheel or the threshold for action to be taken and one such action should occur for each delta. Some high-\/precision mice with higher-\/resolution freely-\/rotating wheels may generate smaller values. 
+
+For cv\+::\+E\+V\+E\+N\+T\+\_\+\+M\+O\+U\+S\+E\+W\+H\+E\+EL positive and negative values mean forward and backward scrolling, respectively. For cv\+::\+E\+V\+E\+N\+T\+\_\+\+M\+O\+U\+S\+E\+H\+W\+H\+E\+EL, where available, positive and negative values mean right and left scrolling, respectively. 
+
+With the C A\+PI, the macro C\+V\+\_\+\+G\+E\+T\+\_\+\+W\+H\+E\+E\+L\+\_\+\+D\+E\+L\+T\+A(flags) can be used alternatively. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+Mouse-\/wheel events are currently supported only on Windows. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flags} & The mouse callback flags parameter. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__highgui_gad91f649b98c33cbfdbf3c995935facdc}\label{group__highgui_gad91f649b98c33cbfdbf3c995935facdc}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!get\+Trackbar\+Pos@{get\+Trackbar\+Pos}}
+\index{get\+Trackbar\+Pos@{get\+Trackbar\+Pos}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{get\+Trackbar\+Pos()}{getTrackbarPos()}}
+{\footnotesize\ttfamily static native int org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+get\+Trackbar\+Pos (\begin{DoxyParamCaption}\item[{@Str Byte\+Pointer}]{trackbarname,  }\item[{@Str Byte\+Pointer}]{winname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the trackbar position. 
+
+The function returns the current position of the specified trackbar. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\mbox{[}{\bfseries Qt Backend Only}\mbox{]} winname can be empty (or N\+U\+LL) if the trackbar is attached to the control panel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trackbarname} & Name of the trackbar. \\
+\hline
+{\em winname} & Name of the window that is the parent of the trackbar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__highgui_gabedecb2109425cb553d605080ad980a9}\label{group__highgui_gabedecb2109425cb553d605080ad980a9}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!get\+Window\+Property@{get\+Window\+Property}}
+\index{get\+Window\+Property@{get\+Window\+Property}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{get\+Window\+Property()}{getWindowProperty()}}
+{\footnotesize\ttfamily static native double org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+get\+Window\+Property (\begin{DoxyParamCaption}\item[{@Str Byte\+Pointer}]{winname,  }\item[{int}]{prop\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Provides parameters of a window. 
+
+The function get\+Window\+Property returns properties of a window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em winname} & Name of the window. \\
+\hline
+{\em prop\+\_\+id} & Window property to retrieve. The following operation flags are available\+: (cv\+::\+Window\+Property\+Flags) \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__highgui_ga0c820fdf7575d2e62d3aed900aa534cd}{set\+Window\+Property} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__highgui_gaf05d46739d8a87edb7405e79c7207975}\label{group__highgui_gaf05d46739d8a87edb7405e79c7207975}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!imshow@{imshow}}
+\index{imshow@{imshow}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{imshow()}{imshow()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+imshow (\begin{DoxyParamCaption}\item[{@Str Byte\+Pointer}]{winname,  }\item[{@By\+Val Mat}]{mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Displays an image in the specified window. 
+
+The function imshow displays an image in the specified window. If the window was created with the cv\+::\+W\+I\+N\+D\+O\+W\+\_\+\+A\+U\+T\+O\+S\+I\+ZE flag, the image is shown with its original size, however it is still limited by the screen resolution. Otherwise, the image is scaled to fit the window. The function may scale the image, depending on its depth\+: 
+
+
+\begin{DoxyItemize}
+\item If the image is 8-\/bit unsigned, it is displayed as is.
+\item If the image is 16-\/bit unsigned or 32-\/bit integer, the pixels are divided by 256. That is, the value range \mbox{[}0,255$\ast$256\mbox{]} is mapped to \mbox{[}0,255\mbox{]}.
+\item If the image is 32-\/bit floating-\/point, the pixel values are multiplied by 255. That is, the value range \mbox{[}0,1\mbox{]} is mapped to \mbox{[}0,255\mbox{]}. 
+\end{DoxyItemize}
+
+If window was created with Open\+GL support, cv\+::imshow also support ogl\+::\+Buffer , ogl\+::\+Texture2D and cuda\+::\+Gpu\+Mat as input. 
+
+If the window was not created before this function, it is assumed creating a window with cv\+::\+W\+I\+N\+D\+O\+W\+\_\+\+A\+U\+T\+O\+S\+I\+ZE. 
+
+If you need to show an image that is bigger than the screen resolution, you will need to call named\+Window(\char`\"{}\char`\"{}, W\+I\+N\+D\+O\+W\+\_\+\+N\+O\+R\+M\+AL) before the imshow. 
+
+\begin{DoxyNote}{Note}
+This function should be followed by cv\+::wait\+Key function which displays the image for specified milliseconds. Otherwise, it won\textquotesingle{}t display the image. For example, {\bfseries wait\+Key(0)} will display the window infinitely until any keypress (it is suitable for image display). {\bfseries wait\+Key(25)} will display a frame for 25 ms, after which display will be automatically closed. (If you put it in a loop to read videos, it will display the video frame-\/by-\/frame) 
+
+
+\end{DoxyNote}
+\mbox{[}{\bfseries Windows Backend Only}\mbox{]} Pressing Ctrl+C will copy the image to the clipboard. 
+
+\mbox{[}{\bfseries Windows Backend Only}\mbox{]} Pressing Ctrl+S will show a dialog to save the image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em winname} & Name of the window. \\
+\hline
+{\em mat} & Image to be shown. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__highgui_ga7731f7680d8bb28a3e069616f3395907}\label{group__highgui_ga7731f7680d8bb28a3e069616f3395907}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!move\+Window@{move\+Window}}
+\index{move\+Window@{move\+Window}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{move\+Window()}{moveWindow()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+move\+Window (\begin{DoxyParamCaption}\item[{@Str Byte\+Pointer}]{winname,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Moves window to the specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em winname} & Name of the window. \\
+\hline
+{\em x} & The new x-\/coordinate of the window. \\
+\hline
+{\em y} & The new y-\/coordinate of the window. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__highgui_gad8dcfc13dd30b1339b3fc7fb3fb19603}\label{group__highgui_gad8dcfc13dd30b1339b3fc7fb3fb19603}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!named\+Window@{named\+Window}}
+\index{named\+Window@{named\+Window}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{named\+Window()}{namedWindow()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+named\+Window (\begin{DoxyParamCaption}\item[{@Str Byte\+Pointer}]{winname,  }\item[{int}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a window. 
+
+The function named\+Window creates a window that can be used as a placeholder for images and trackbars. Created windows are referred to by their names. 
+
+If a window with the same name already exists, the function does nothing. 
+
+You can call cv\+::destroy\+Window or cv\+::destroy\+All\+Windows to close the window and de-\/allocate any associated memory usage. For a simple program, you do not really have to call these functions because all the resources and windows of the application are closed automatically by the operating system upon exit. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+Qt backend supports additional flags\+:
+\begin{DoxyItemize}
+\item {\bfseries W\+I\+N\+D\+O\+W\+\_\+\+N\+O\+R\+M\+AL or W\+I\+N\+D\+O\+W\+\_\+\+A\+U\+T\+O\+S\+I\+ZE\+:} W\+I\+N\+D\+O\+W\+\_\+\+N\+O\+R\+M\+AL enables you to resize the window, whereas W\+I\+N\+D\+O\+W\+\_\+\+A\+U\+T\+O\+S\+I\+ZE adjusts automatically the window size to fit the displayed image (see imshow ), and you cannot change the window size manually.
+\item {\bfseries W\+I\+N\+D\+O\+W\+\_\+\+F\+R\+E\+E\+R\+A\+T\+IO or W\+I\+N\+D\+O\+W\+\_\+\+K\+E\+E\+P\+R\+A\+T\+IO\+:} W\+I\+N\+D\+O\+W\+\_\+\+F\+R\+E\+E\+R\+A\+T\+IO adjusts the image with no respect to its ratio, whereas W\+I\+N\+D\+O\+W\+\_\+\+K\+E\+E\+P\+R\+A\+T\+IO keeps the image ratio.
+\item {\bfseries W\+I\+N\+D\+O\+W\+\_\+\+G\+U\+I\+\_\+\+N\+O\+R\+M\+AL or W\+I\+N\+D\+O\+W\+\_\+\+G\+U\+I\+\_\+\+E\+X\+P\+A\+N\+D\+ED\+:} W\+I\+N\+D\+O\+W\+\_\+\+G\+U\+I\+\_\+\+N\+O\+R\+M\+AL is the old way to draw the window without statusbar and toolbar, whereas W\+I\+N\+D\+O\+W\+\_\+\+G\+U\+I\+\_\+\+E\+X\+P\+A\+N\+D\+ED is a new enhanced G\+UI. By default, flags == W\+I\+N\+D\+O\+W\+\_\+\+A\+U\+T\+O\+S\+I\+ZE $\vert$ W\+I\+N\+D\+O\+W\+\_\+\+K\+E\+E\+P\+R\+A\+T\+IO $\vert$ W\+I\+N\+D\+O\+W\+\_\+\+G\+U\+I\+\_\+\+E\+X\+P\+A\+N\+D\+ED 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em winname} & Name of the window in the window caption that may be used as a window identifier. \\
+\hline
+{\em flags} & Flags of the window. The supported flags are\+: (cv\+::\+Window\+Flags) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__highgui_ga4e805fd30f0df6fd2b5715cf89f4f80e}\label{group__highgui_ga4e805fd30f0df6fd2b5715cf89f4f80e}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!resize\+Window@{resize\+Window}}
+\index{resize\+Window@{resize\+Window}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{resize\+Window()}{resizeWindow()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+resize\+Window (\begin{DoxyParamCaption}\item[{@Str Byte\+Pointer}]{winname,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Resizes window to the specified size. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+\begin{DoxyItemize}
+\item The specified window size is for the image area. Toolbars are not counted.
+\item Only windows created without cv\+::\+W\+I\+N\+D\+O\+W\+\_\+\+A\+U\+T\+O\+S\+I\+ZE flag can be resized. 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em winname} & Window name. \\
+\hline
+{\em width} & The new window width. \\
+\hline
+{\em height} & The new window height. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__highgui_gae53ffbc47967af79b35268d57575d6b4}\label{group__highgui_gae53ffbc47967af79b35268d57575d6b4}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!set\+Mouse\+Callback@{set\+Mouse\+Callback}}
+\index{set\+Mouse\+Callback@{set\+Mouse\+Callback}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{set\+Mouse\+Callback()}{setMouseCallback()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+set\+Mouse\+Callback (\begin{DoxyParamCaption}\item[{@Str Byte\+Pointer}]{winname,  }\item[{Mouse\+Callback}]{on\+Mouse,  }\item[{Pointer}]{userdata }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets mouse handler for the specified window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em winname} & Name of the window. \\
+\hline
+{\em on\+Mouse} & Mouse callback. See Open\+CV samples, such as \href{https://github.com/opencv/opencv/tree/master/samples/cpp/ffilldemo.cpp}{\tt https\+://github.\+com/opencv/opencv/tree/master/samples/cpp/ffilldemo.\+cpp}, on how to specify and use the callback. \\
+\hline
+{\em userdata} & The optional parameter passed to the callback. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__highgui_ga7f8973f0842fd2c01aad396250da751a}\label{group__highgui_ga7f8973f0842fd2c01aad396250da751a}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!set\+Trackbar\+Max@{set\+Trackbar\+Max}}
+\index{set\+Trackbar\+Max@{set\+Trackbar\+Max}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{set\+Trackbar\+Max()}{setTrackbarMax()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+set\+Trackbar\+Max (\begin{DoxyParamCaption}\item[{@Str Byte\+Pointer}]{trackbarname,  }\item[{@Str Byte\+Pointer}]{winname,  }\item[{int}]{maxval }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the trackbar maximum position. 
+
+The function sets the maximum position of the specified trackbar in the specified window. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\mbox{[}{\bfseries Qt Backend Only}\mbox{]} winname can be empty (or N\+U\+LL) if the trackbar is attached to the control panel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trackbarname} & Name of the trackbar. \\
+\hline
+{\em winname} & Name of the window that is the parent of trackbar. \\
+\hline
+{\em maxval} & New maximum position. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__highgui_gaf177a5a7400badc50be0ce11d404c74f}\label{group__highgui_gaf177a5a7400badc50be0ce11d404c74f}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!set\+Trackbar\+Min@{set\+Trackbar\+Min}}
+\index{set\+Trackbar\+Min@{set\+Trackbar\+Min}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{set\+Trackbar\+Min()}{setTrackbarMin()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+set\+Trackbar\+Min (\begin{DoxyParamCaption}\item[{@Str Byte\+Pointer}]{trackbarname,  }\item[{@Str Byte\+Pointer}]{winname,  }\item[{int}]{minval }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the trackbar minimum position. 
+
+The function sets the minimum position of the specified trackbar in the specified window. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\mbox{[}{\bfseries Qt Backend Only}\mbox{]} winname can be empty (or N\+U\+LL) if the trackbar is attached to the control panel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trackbarname} & Name of the trackbar. \\
+\hline
+{\em winname} & Name of the window that is the parent of trackbar. \\
+\hline
+{\em minval} & New maximum position. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__highgui_ga53b09172763cf63873f5ac01fef0154d}\label{group__highgui_ga53b09172763cf63873f5ac01fef0154d}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!set\+Trackbar\+Pos@{set\+Trackbar\+Pos}}
+\index{set\+Trackbar\+Pos@{set\+Trackbar\+Pos}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{set\+Trackbar\+Pos()}{setTrackbarPos()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+set\+Trackbar\+Pos (\begin{DoxyParamCaption}\item[{@Str Byte\+Pointer}]{trackbarname,  }\item[{@Str Byte\+Pointer}]{winname,  }\item[{int}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the trackbar position. 
+
+The function sets the position of the specified trackbar in the specified window. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\mbox{[}{\bfseries Qt Backend Only}\mbox{]} winname can be empty (or N\+U\+LL) if the trackbar is attached to the control panel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trackbarname} & Name of the trackbar. \\
+\hline
+{\em winname} & Name of the window that is the parent of trackbar. \\
+\hline
+{\em pos} & New position. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__highgui_ga0c820fdf7575d2e62d3aed900aa534cd}\label{group__highgui_ga0c820fdf7575d2e62d3aed900aa534cd}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!set\+Window\+Property@{set\+Window\+Property}}
+\index{set\+Window\+Property@{set\+Window\+Property}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{set\+Window\+Property()}{setWindowProperty()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+set\+Window\+Property (\begin{DoxyParamCaption}\item[{@Str Byte\+Pointer}]{winname,  }\item[{int}]{prop\+\_\+id,  }\item[{double}]{prop\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Changes parameters of a window dynamically. 
+
+The function set\+Window\+Property enables changing properties of a window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em winname} & Name of the window. \\
+\hline
+{\em prop\+\_\+id} & Window property to edit. The supported operation flags are\+: (cv\+::\+Window\+Property\+Flags) \\
+\hline
+{\em prop\+\_\+value} & New value of the window property. The supported flags are\+: (cv\+::\+Window\+Flags) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__highgui_gaf4453988c16611eed72c58d647d6e31d}\label{group__highgui_gaf4453988c16611eed72c58d647d6e31d}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!set\+Window\+Title@{set\+Window\+Title}}
+\index{set\+Window\+Title@{set\+Window\+Title}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{set\+Window\+Title()}{setWindowTitle()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+set\+Window\+Title (\begin{DoxyParamCaption}\item[{@Str Byte\+Pointer}]{winname,  }\item[{@Str Byte\+Pointer}]{title }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Updates window title. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em winname} & Name of the window. \\
+\hline
+{\em title} & New title. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__highgui_gaf924607bac022bb3603e459e3f2f3239}\label{group__highgui_gaf924607bac022bb3603e459e3f2f3239}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!wait\+Key@{wait\+Key}}
+\index{wait\+Key@{wait\+Key}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{wait\+Key()}{waitKey()}}
+{\footnotesize\ttfamily static native int org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+wait\+Key (\begin{DoxyParamCaption}\item[{int}]{delay }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Waits for a pressed key. 
+
+The function wait\+Key waits for a key event infinitely (when $\texttt{delay}\leq 0$ ) or for delay milliseconds, when it is positive. Since the OS has a minimum time between switching threads, the function will not wait exactly delay ms, it will wait at least delay ms, depending on what else is running on your computer at that time. It returns the code of the pressed key or -\/1 if no key was pressed before the specified time had elapsed. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+This function is the only method in High\+G\+UI that can fetch and handle events, so it needs to be called periodically for normal event processing unless High\+G\+UI is used within an environment that takes care of event processing. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+The function only works if there is at least one High\+G\+UI window created and the window is active. If there are several High\+G\+UI windows, any of them can be active. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delay} & Delay in milliseconds. 0 is the special value that means \char`\"{}forever\char`\"{}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__highgui_ga6a23d9d2816fcc0c96c3445b5969f5ac}\label{group__highgui_ga6a23d9d2816fcc0c96c3445b5969f5ac}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!wait\+Key\+Ex@{wait\+Key\+Ex}}
+\index{wait\+Key\+Ex@{wait\+Key\+Ex}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{wait\+Key\+Ex()}{waitKeyEx()}}
+{\footnotesize\ttfamily static native int org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+wait\+Key\+Ex (\begin{DoxyParamCaption}\item[{int}]{delay }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Similar to \hyperlink{group__highgui_gaf924607bac022bb3603e459e3f2f3239}{wait\+Key}, but returns full key code. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+Key code is implementation specific and depends on used backend\+: Q\+T/\+G\+T\+K/\+Win32/etc 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__highgui_gac433101d8b17471ae4cc5161be63c257}\label{group__highgui_gac433101d8b17471ae4cc5161be63c257}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!E\+V\+E\+N\+T\+\_\+\+F\+L\+A\+G\+\_\+\+L\+B\+U\+T\+T\+ON@{E\+V\+E\+N\+T\+\_\+\+F\+L\+A\+G\+\_\+\+L\+B\+U\+T\+T\+ON}}
+\index{E\+V\+E\+N\+T\+\_\+\+F\+L\+A\+G\+\_\+\+L\+B\+U\+T\+T\+ON@{E\+V\+E\+N\+T\+\_\+\+F\+L\+A\+G\+\_\+\+L\+B\+U\+T\+T\+ON}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{E\+V\+E\+N\+T\+\_\+\+F\+L\+A\+G\+\_\+\+L\+B\+U\+T\+T\+ON}{EVENT\_FLAG\_LBUTTON}}
+{\footnotesize\ttfamily final int org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+E\+V\+E\+N\+T\+\_\+\+F\+L\+A\+G\+\_\+\+L\+B\+U\+T\+T\+ON = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+Mouse Event Flags see cv\+::\+Mouse\+Callback enum cv\+::\+Mouse\+Event\+Flags indicates that the left mouse button is down. \mbox{\Hypertarget{group__highgui_ga6d55d280d31ae69d883e955f615fda29}\label{group__highgui_ga6d55d280d31ae69d883e955f615fda29}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!E\+V\+E\+N\+T\+\_\+\+M\+O\+U\+S\+E\+M\+O\+VE@{E\+V\+E\+N\+T\+\_\+\+M\+O\+U\+S\+E\+M\+O\+VE}}
+\index{E\+V\+E\+N\+T\+\_\+\+M\+O\+U\+S\+E\+M\+O\+VE@{E\+V\+E\+N\+T\+\_\+\+M\+O\+U\+S\+E\+M\+O\+VE}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{E\+V\+E\+N\+T\+\_\+\+M\+O\+U\+S\+E\+M\+O\+VE}{EVENT\_MOUSEMOVE}}
+{\footnotesize\ttfamily final int org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+E\+V\+E\+N\+T\+\_\+\+M\+O\+U\+S\+E\+M\+O\+VE = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+Mouse Events see cv\+::\+Mouse\+Callback enum cv\+::\+Mouse\+Event\+Types indicates that the mouse pointer has moved over the window. \mbox{\Hypertarget{group__highgui_gae35aa28b68ea30b61b8b4b740ceca6e3}\label{group__highgui_gae35aa28b68ea30b61b8b4b740ceca6e3}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!Q\+T\+\_\+\+F\+O\+N\+T\+\_\+\+L\+I\+G\+HT@{Q\+T\+\_\+\+F\+O\+N\+T\+\_\+\+L\+I\+G\+HT}}
+\index{Q\+T\+\_\+\+F\+O\+N\+T\+\_\+\+L\+I\+G\+HT@{Q\+T\+\_\+\+F\+O\+N\+T\+\_\+\+L\+I\+G\+HT}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{Q\+T\+\_\+\+F\+O\+N\+T\+\_\+\+L\+I\+G\+HT}{QT\_FONT\_LIGHT}}
+{\footnotesize\ttfamily final int org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+Q\+T\+\_\+\+F\+O\+N\+T\+\_\+\+L\+I\+G\+HT = 25\hspace{0.3cm}{\ttfamily [static]}}
+
+Qt font weight enum cv\+::\+Qt\+Font\+Weights Weight of 25 \mbox{\Hypertarget{group__highgui_gaae4d93a303a93e9c2ecece3adad55dc4}\label{group__highgui_gaae4d93a303a93e9c2ecece3adad55dc4}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!Q\+T\+\_\+\+P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+ON@{Q\+T\+\_\+\+P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+ON}}
+\index{Q\+T\+\_\+\+P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+ON@{Q\+T\+\_\+\+P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+ON}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{Q\+T\+\_\+\+P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+ON}{QT\_PUSH\_BUTTON}}
+{\footnotesize\ttfamily final int org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+Q\+T\+\_\+\+P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+ON = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+Qt \char`\"{}button\char`\"{} type enum cv\+::\+Qt\+Button\+Types Push button. \mbox{\Hypertarget{group__highgui_ga7818f5f33d8fac97fbdba68143ec8bb7}\label{group__highgui_ga7818f5f33d8fac97fbdba68143ec8bb7}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!Q\+T\+\_\+\+S\+T\+Y\+L\+E\+\_\+\+N\+O\+R\+M\+AL@{Q\+T\+\_\+\+S\+T\+Y\+L\+E\+\_\+\+N\+O\+R\+M\+AL}}
+\index{Q\+T\+\_\+\+S\+T\+Y\+L\+E\+\_\+\+N\+O\+R\+M\+AL@{Q\+T\+\_\+\+S\+T\+Y\+L\+E\+\_\+\+N\+O\+R\+M\+AL}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{Q\+T\+\_\+\+S\+T\+Y\+L\+E\+\_\+\+N\+O\+R\+M\+AL}{QT\_STYLE\_NORMAL}}
+{\footnotesize\ttfamily final int org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+Q\+T\+\_\+\+S\+T\+Y\+L\+E\+\_\+\+N\+O\+R\+M\+AL = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+Qt font style enum cv\+::\+Qt\+Font\+Styles Normal font. \mbox{\Hypertarget{group__highgui_ga2afebfdebe6ea3696f89b4a7628e72e3}\label{group__highgui_ga2afebfdebe6ea3696f89b4a7628e72e3}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!W\+I\+N\+D\+O\+W\+\_\+\+N\+O\+R\+M\+AL@{W\+I\+N\+D\+O\+W\+\_\+\+N\+O\+R\+M\+AL}}
+\index{W\+I\+N\+D\+O\+W\+\_\+\+N\+O\+R\+M\+AL@{W\+I\+N\+D\+O\+W\+\_\+\+N\+O\+R\+M\+AL}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{W\+I\+N\+D\+O\+W\+\_\+\+N\+O\+R\+M\+AL}{WINDOW\_NORMAL}}
+{\footnotesize\ttfamily final int org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+W\+I\+N\+D\+O\+W\+\_\+\+N\+O\+R\+M\+AL = 0x00000000\hspace{0.3cm}{\ttfamily [static]}}
+
+enum cv\+::\+Window\+Flags the user can resize the window (no constraint) / also use to switch a fullscreen window to a normal size. \mbox{\Hypertarget{group__highgui_ga600b654f3be9263c511b1588f7ea735d}\label{group__highgui_ga600b654f3be9263c511b1588f7ea735d}} 
+\index{High-\/level G\+UI@{High-\/level G\+UI}!W\+N\+D\+\_\+\+P\+R\+O\+P\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+EN@{W\+N\+D\+\_\+\+P\+R\+O\+P\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+EN}}
+\index{W\+N\+D\+\_\+\+P\+R\+O\+P\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+EN@{W\+N\+D\+\_\+\+P\+R\+O\+P\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+EN}!High-\/level G\+UI@{High-\/level G\+UI}}
+\subsubsection{\texorpdfstring{W\+N\+D\+\_\+\+P\+R\+O\+P\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+EN}{WND\_PROP\_FULLSCREEN}}
+{\footnotesize\ttfamily final int org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui.\+W\+N\+D\+\_\+\+P\+R\+O\+P\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+EN = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+Flags for cv\+::set\+Window\+Property / cv\+::get\+Window\+Property enum cv\+::\+Window\+Property\+Flags fullscreen property (can be W\+I\+N\+D\+O\+W\+\_\+\+N\+O\+R\+M\+AL or W\+I\+N\+D\+O\+W\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+EN). 

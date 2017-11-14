@@ -1,0 +1,127 @@
+\hypertarget{group__stitching}{}\section{Images stitching}
+\label{group__stitching}\index{Images stitching@{Images stitching}}
+
+
+Describes camera parameters.  
+
+
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__stitching__match}{Features Finding and Images Matching}
+\begin{DoxyCompactList}\small\item\em Structure containing image keypoints and descriptors. \end{DoxyCompactList}\item 
+\hyperlink{group__stitching__rotation}{Rotation Estimation}
+\begin{DoxyCompactList}\small\item\em Rotation estimator base class. \end{DoxyCompactList}\item 
+\hyperlink{group__stitching__autocalib}{Autocalibration}
+\begin{DoxyCompactList}\small\item\em Tries to estimate focal lengths from the given homography under the assumption that the camera undergoes rotations around its centre only. \end{DoxyCompactList}\item 
+\hyperlink{group__stitching__warp}{Images Warping}
+\begin{DoxyCompactList}\small\item\em Rotation-\/only model image warper interface. \end{DoxyCompactList}\item 
+\hyperlink{group__stitching__seam}{Seam Estimation}
+\begin{DoxyCompactList}\small\item\em Base class for a seam estimator. \end{DoxyCompactList}\item 
+\hyperlink{group__stitching__exposure}{Exposure Compensation}
+\begin{DoxyCompactList}\small\item\em Base class for all exposure compensators. \end{DoxyCompactList}\item 
+\hyperlink{group__stitching__blend}{Image Blenders}
+\begin{DoxyCompactList}\small\item\em Base class for all blenders. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Disjoint\+Sets}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Graph\+Edge}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Graph}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Camera\+Params}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Timelapser}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Timelapser\+Crop}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Stitcher}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__stitching_gacf4ed576f958ddf1bc53f06ef4d33df6}\label{group__stitching_gacf4ed576f958ddf1bc53f06ef4d33df6}} 
+static native boolean {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+overlap\+Roi} (@By\+Val Point tl1, @By\+Val Point tl2, @By\+Val Size sz1, @By\+Val Size sz2, @By\+Ref Rect roi)
+\item 
+\mbox{\Hypertarget{group__stitching_ga859ea44005cd9edc8317630a7334e1b6}\label{group__stitching_ga859ea44005cd9edc8317630a7334e1b6}} 
+static native Rect {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+result\+Roi} (@Const @By\+Ref Point\+Vector corners, @Const @By\+Ref U\+Mat\+Vector images)
+\item 
+\mbox{\Hypertarget{group__stitching_gad2b343099d0b16c7ba33993e922eed86}\label{group__stitching_gad2b343099d0b16c7ba33993e922eed86}} 
+static native Rect {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+result\+Roi} (@Const @By\+Ref Point\+Vector corners, @Const @By\+Ref Size\+Vector sizes)
+\item 
+\mbox{\Hypertarget{group__stitching_gaa882d01ddd9b9cfa030cf3436340973f}\label{group__stitching_gaa882d01ddd9b9cfa030cf3436340973f}} 
+static native Rect {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+result\+Roi\+Intersection} (@Const @By\+Ref Point\+Vector corners, @Const @By\+Ref Size\+Vector sizes)
+\item 
+\mbox{\Hypertarget{group__stitching_gaa820d4f157eabdece019843e7334f493}\label{group__stitching_gaa820d4f157eabdece019843e7334f493}} 
+static native Point {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+result\+Tl} (@Const @By\+Ref Point\+Vector corners)
+\item 
+\mbox{\Hypertarget{group__stitching_ga8e152fb5af89a56c5ffc2eb169f19162}\label{group__stitching_ga8e152fb5af89a56c5ffc2eb169f19162}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+select\+Random\+Subset} (int count, int size, @Std\+Vector Int\+Pointer subset)
+\item 
+\mbox{\Hypertarget{group__stitching_gae2a83ff8768a6a4016b4f365943ad96f}\label{group__stitching_gae2a83ff8768a6a4016b4f365943ad96f}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+select\+Random\+Subset} (int count, int size, @Std\+Vector Int\+Buffer subset)
+\item 
+\mbox{\Hypertarget{group__stitching_gabeab870f5610bf0e4f79cdcf9e0a4b6d}\label{group__stitching_gabeab870f5610bf0e4f79cdcf9e0a4b6d}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+select\+Random\+Subset} (int count, int size, @Std\+Vector int\mbox{[}$\,$\mbox{]} subset)
+\item 
+\mbox{\Hypertarget{group__stitching_ga986597ffca49e8fe31dfbf9ead6da54a}\label{group__stitching_ga986597ffca49e8fe31dfbf9ead6da54a}} 
+static native Int\+Pointer {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+stitching\+Log\+Level} ()
+\item 
+\mbox{\Hypertarget{group__stitching_gaef4d75a2140cded1c24c78e5fe93363e}\label{group__stitching_gaef4d75a2140cded1c24c78e5fe93363e}} 
+static native Stitcher {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+create\+Stitcher} (@Cast(\char`\"{}bool\char`\"{}) boolean try\+\_\+use\+\_\+gpu)
+\item 
+\mbox{\Hypertarget{group__stitching_ga58b64c2423052839107c67b767241fae}\label{group__stitching_ga58b64c2423052839107c67b767241fae}} 
+static native Stitcher {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+create\+Stitcher} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Describes camera parameters. 
+
+High level image stitcher.
+
+This figure illustrates the stitching module pipeline implemented in the Stitcher class. Using that class it\textquotesingle{}s possible to configure/remove some steps, i.\+e. adjust the stitching pipeline according to the particular needs. All building blocks from the pipeline are available in the detail namespace, one can combine and use them separately. 
+
+The implemented stitching pipeline is very similar to the one proposed in {\bfseries [B\+L07]} . 
+
+ 
+
+\subsubsection*{Camera models }
+
+There are currently 2 camera models implemented in stitching pipeline. 
+
+
+\begin{DoxyItemize}
+\item {\itshape Homography model} expecting perspective transformations between images implemented in cv\+::detail\+::\+Best\+Of2\+Nearest\+Matcher cv\+::detail\+::\+Homography\+Based\+Estimator cv\+::detail\+::\+Bundle\+Adjuster\+Reproj cv\+::detail\+::\+Bundle\+Adjuster\+Ray
+\item {\itshape Affine model} expecting affine transformation with 6 D\+OF or 4 D\+OF implemented in cv\+::detail\+::\+Affine\+Best\+Of2\+Nearest\+Matcher cv\+::detail\+::\+Affine\+Based\+Estimator cv\+::detail\+::\+Bundle\+Adjuster\+Affine cv\+::detail\+::\+Bundle\+Adjuster\+Affine\+Partial cv\+::\+Affine\+Warper 
+\end{DoxyItemize}
+
+Homography model is useful for creating photo panoramas captured by camera, while affine-\/based model can be used to stitch scans and object captured by specialized devices. Use cv\+::\+Stitcher\+::create to get preconfigured pipeline for one of those models. 
+
+\begin{DoxyNote}{Note}
+Certain detailed settings of cv\+::\+Stitcher might not make sense. Especially you should not mix classes implementing affine model and classes implementing Homography model, as they work with different transformations. 
+\end{DoxyNote}
+
+
+/$\ast$$\ast$
+
+\begin{DoxyNote}{Note}
+Translation is assumed to be zero during the whole stitching pipeline. \+:
+\end{DoxyNote}
+
+
+/$\ast$$\ast$
+
+It\textquotesingle{}s possible to use this class without being aware of the entire stitching pipeline. However, to be able to achieve higher stitching stability and quality of the final images at least being familiar with the theory is recommended. 
+
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item A basic example on image stitching can be found at opencv\+\_\+source\+\_\+code/samples/cpp/stitching.\+cpp
+\begin{DoxyItemize}
+\item A detailed example on image stitching can be found at opencv\+\_\+source\+\_\+code/samples/cpp/stitching\+\_\+detailed.\+cpp 
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyNote}

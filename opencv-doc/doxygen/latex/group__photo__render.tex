@@ -1,0 +1,151 @@
+\hypertarget{group__photo__render}{}\section{Non-\/\+Photorealistic Rendering}
+\label{group__photo__render}\index{Non-\/\+Photorealistic Rendering@{Non-\/\+Photorealistic Rendering}}
+
+
+Filtering is the fundamental operation in image and video processing. Edge-\/preserving smoothing filters are used in many different applications {\bfseries [E\+M11]} .  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__photo__render_ga33fce11fb461a3ac34deef5040c0acbb}\label{group__photo__render_ga33fce11fb461a3ac34deef5040c0acbb}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+edge\+Preserving\+Filter} (@By\+Val Mat src, @By\+Val Mat dst, int flags, float sigma\+\_\+s, float sigma\+\_\+r)
+\item 
+\mbox{\Hypertarget{group__photo__render_gabdae971c961a79e5809e82eff458d164}\label{group__photo__render_gabdae971c961a79e5809e82eff458d164}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+edge\+Preserving\+Filter} (@By\+Val Mat src, @By\+Val Mat dst)
+\item 
+\mbox{\Hypertarget{group__photo__render_ga6492df501861bfa238689abe8ef1e856}\label{group__photo__render_ga6492df501861bfa238689abe8ef1e856}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+edge\+Preserving\+Filter} (@By\+Val U\+Mat src, @By\+Val U\+Mat dst, int flags, float sigma\+\_\+s, float sigma\+\_\+r)
+\item 
+\mbox{\Hypertarget{group__photo__render_ga5932b231ba4e335c0bb50123c1c4c162}\label{group__photo__render_ga5932b231ba4e335c0bb50123c1c4c162}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+edge\+Preserving\+Filter} (@By\+Val U\+Mat src, @By\+Val U\+Mat dst)
+\item 
+static native void \hyperlink{group__photo__render_ga136c4678616b50ca67bb53ea951385fe}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+detail\+Enhance} (@By\+Val Mat src, @By\+Val Mat dst, float sigma\+\_\+s, float sigma\+\_\+r)
+\begin{DoxyCompactList}\small\item\em This filter enhances the details of a particular image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__photo__render_ga9cc427e95b443b908ba43d788fdd4e16}\label{group__photo__render_ga9cc427e95b443b908ba43d788fdd4e16}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+detail\+Enhance} (@By\+Val Mat src, @By\+Val Mat dst)
+\item 
+\mbox{\Hypertarget{group__photo__render_ga4cdb911a3ef86b9c4cb5d3d989ad9e98}\label{group__photo__render_ga4cdb911a3ef86b9c4cb5d3d989ad9e98}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+detail\+Enhance} (@By\+Val U\+Mat src, @By\+Val U\+Mat dst, float sigma\+\_\+s, float sigma\+\_\+r)
+\item 
+\mbox{\Hypertarget{group__photo__render_gac1fbe57bf2fd633a8ed33b10b6ba8f42}\label{group__photo__render_gac1fbe57bf2fd633a8ed33b10b6ba8f42}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+detail\+Enhance} (@By\+Val U\+Mat src, @By\+Val U\+Mat dst)
+\item 
+static native void \hyperlink{group__photo__render_gafec8b96cb1b707bb2a5b2b2d3957f92d}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+pencil\+Sketch} (@By\+Val Mat src, @By\+Val Mat dst1, @By\+Val Mat dst2, float sigma\+\_\+s, float sigma\+\_\+r, float shade\+\_\+factor)
+\begin{DoxyCompactList}\small\item\em Pencil-\/like non-\/photorealistic line drawing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__photo__render_gac6f08041379b7ae605137563072422f4}\label{group__photo__render_gac6f08041379b7ae605137563072422f4}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+pencil\+Sketch} (@By\+Val Mat src, @By\+Val Mat dst1, @By\+Val Mat dst2)
+\item 
+\mbox{\Hypertarget{group__photo__render_ga1d8434c367be086e44d67bcd5faf117c}\label{group__photo__render_ga1d8434c367be086e44d67bcd5faf117c}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+pencil\+Sketch} (@By\+Val U\+Mat src, @By\+Val U\+Mat dst1, @By\+Val U\+Mat dst2, float sigma\+\_\+s, float sigma\+\_\+r, float shade\+\_\+factor)
+\item 
+\mbox{\Hypertarget{group__photo__render_gafa61da423d64c53bbe572b2d53fdda0a}\label{group__photo__render_gafa61da423d64c53bbe572b2d53fdda0a}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+pencil\+Sketch} (@By\+Val U\+Mat src, @By\+Val U\+Mat dst1, @By\+Val U\+Mat dst2)
+\item 
+static native void \hyperlink{group__photo__render_ga2dc38eeaea6cfc1c83ed2bcc4236a830}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+stylization} (@By\+Val Mat src, @By\+Val Mat dst, float sigma\+\_\+s, float sigma\+\_\+r)
+\begin{DoxyCompactList}\small\item\em Stylization aims to produce digital imagery with a wide variety of effects not focused on photorealism. Edge-\/aware filters are ideal for stylization, as they can abstract regions of low contrast while preserving, or enhancing, high-\/contrast features. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__photo__render_ga1cc7bf64bfcf4fab5cd23b0ec0b89852}\label{group__photo__render_ga1cc7bf64bfcf4fab5cd23b0ec0b89852}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+stylization} (@By\+Val Mat src, @By\+Val Mat dst)
+\item 
+\mbox{\Hypertarget{group__photo__render_gaa471a85b5c9c4494a568be8e2936c0e8}\label{group__photo__render_gaa471a85b5c9c4494a568be8e2936c0e8}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+stylization} (@By\+Val U\+Mat src, @By\+Val U\+Mat dst, float sigma\+\_\+s, float sigma\+\_\+r)
+\item 
+\mbox{\Hypertarget{group__photo__render_ga65def2fe7cc1f0a7b57eb89ed74192ed}\label{group__photo__render_ga65def2fe7cc1f0a7b57eb89ed74192ed}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+stylization} (@By\+Val U\+Mat src, @By\+Val U\+Mat dst)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Filtering is the fundamental operation in image and video processing. Edge-\/preserving smoothing filters are used in many different applications {\bfseries [E\+M11]} . 
+
+photo\+\_\+clone 
+
+/$\ast$$\ast$
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Input 8-\/bit 3-\/channel image. \\
+\hline
+{\em dst} & Output 8-\/bit 3-\/channel image. \\
+\hline
+{\em flags} & Edge preserving filters\+:
+\begin{DoxyItemize}
+\item {\bfseries R\+E\+C\+U\+R\+S\+\_\+\+F\+I\+L\+T\+ER} = 1
+\item {\bfseries N\+O\+R\+M\+C\+O\+N\+V\+\_\+\+F\+I\+L\+T\+ER} = 2 
+\end{DoxyItemize}\\
+\hline
+{\em sigma\+\_\+s} & Range between 0 to 200. \\
+\hline
+{\em sigma\+\_\+r} & Range between 0 to 1. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__photo__render_ga136c4678616b50ca67bb53ea951385fe}\label{group__photo__render_ga136c4678616b50ca67bb53ea951385fe}} 
+\index{Non-\/\+Photorealistic Rendering@{Non-\/\+Photorealistic Rendering}!detail\+Enhance@{detail\+Enhance}}
+\index{detail\+Enhance@{detail\+Enhance}!Non-\/\+Photorealistic Rendering@{Non-\/\+Photorealistic Rendering}}
+\subsubsection{\texorpdfstring{detail\+Enhance()}{detailEnhance()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+detail\+Enhance (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{float}]{sigma\+\_\+s,  }\item[{float}]{sigma\+\_\+r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This filter enhances the details of a particular image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Input 8-\/bit 3-\/channel image. \\
+\hline
+{\em dst} & Output image with the same size and type as src. \\
+\hline
+{\em sigma\+\_\+s} & Range between 0 to 200. \\
+\hline
+{\em sigma\+\_\+r} & Range between 0 to 1. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__photo__render_gafec8b96cb1b707bb2a5b2b2d3957f92d}\label{group__photo__render_gafec8b96cb1b707bb2a5b2b2d3957f92d}} 
+\index{Non-\/\+Photorealistic Rendering@{Non-\/\+Photorealistic Rendering}!pencil\+Sketch@{pencil\+Sketch}}
+\index{pencil\+Sketch@{pencil\+Sketch}!Non-\/\+Photorealistic Rendering@{Non-\/\+Photorealistic Rendering}}
+\subsubsection{\texorpdfstring{pencil\+Sketch()}{pencilSketch()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+pencil\+Sketch (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst1,  }\item[{@By\+Val Mat}]{dst2,  }\item[{float}]{sigma\+\_\+s,  }\item[{float}]{sigma\+\_\+r,  }\item[{float}]{shade\+\_\+factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pencil-\/like non-\/photorealistic line drawing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Input 8-\/bit 3-\/channel image. \\
+\hline
+{\em dst1} & Output 8-\/bit 1-\/channel image. \\
+\hline
+{\em dst2} & Output image with the same size and type as src. \\
+\hline
+{\em sigma\+\_\+s} & Range between 0 to 200. \\
+\hline
+{\em sigma\+\_\+r} & Range between 0 to 1. \\
+\hline
+{\em shade\+\_\+factor} & Range between 0 to 0.\+1. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__photo__render_ga2dc38eeaea6cfc1c83ed2bcc4236a830}\label{group__photo__render_ga2dc38eeaea6cfc1c83ed2bcc4236a830}} 
+\index{Non-\/\+Photorealistic Rendering@{Non-\/\+Photorealistic Rendering}!stylization@{stylization}}
+\index{stylization@{stylization}!Non-\/\+Photorealistic Rendering@{Non-\/\+Photorealistic Rendering}}
+\subsubsection{\texorpdfstring{stylization()}{stylization()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+stylization (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{float}]{sigma\+\_\+s,  }\item[{float}]{sigma\+\_\+r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Stylization aims to produce digital imagery with a wide variety of effects not focused on photorealism. Edge-\/aware filters are ideal for stylization, as they can abstract regions of low contrast while preserving, or enhancing, high-\/contrast features. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Input 8-\/bit 3-\/channel image. \\
+\hline
+{\em dst} & Output image with the same size and type as src. \\
+\hline
+{\em sigma\+\_\+s} & Range between 0 to 200. \\
+\hline
+{\em sigma\+\_\+r} & Range between 0 to 1. \\
+\hline
+\end{DoxyParams}

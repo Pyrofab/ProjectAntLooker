@@ -1,0 +1,96 @@
+\hypertarget{group__videostab}{}\section{Video Stabilization}
+\label{group__videostab}\index{Video Stabilization@{Video Stabilization}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__videostab__motion}{Global Motion Estimation}
+\begin{DoxyCompactList}\small\item\em Describes motion model between two point clouds. \end{DoxyCompactList}\item 
+\hyperlink{group__videostab__marching}{Fast Marching Method}
+\begin{DoxyCompactList}\small\item\em Describes the Fast Marching Method implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+I\+Frame\+Source}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+Null\+Frame\+Source}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+Video\+File\+Source}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+I\+Log}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+Null\+Log}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+Log\+To\+Stdout}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+I\+Sparse\+Opt\+Flow\+Estimator}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+I\+Dense\+Opt\+Flow\+Estimator}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+Pyr\+Lk\+Opt\+Flow\+Estimator\+Base}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+Sparse\+Pyr\+Lk\+Opt\+Flow\+Estimator}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+I\+Outlier\+Rejector}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+Null\+Outlier\+Rejector}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+Translation\+Based\+Local\+Outlier\+Rejector}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+Inpainter\+Base}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+Null\+Inpainter}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+Inpainting\+Pipeline}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+Consistent\+Mosaic\+Inpainter}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+Motion\+Inpainter}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+Color\+Average\+Inpainter}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+Color\+Inpainter}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+Deblurer\+Base}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+Null\+Deblurer}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+Weighting\+Deblurer}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+Wobble\+Suppressor\+Base}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+Null\+Wobble\+Suppressor}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+More\+Accurate\+Motion\+Wobble\+Suppressor\+Base}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+More\+Accurate\+Motion\+Wobble\+Suppressor}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+Stabilizer\+Base}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+One\+Pass\+Stabilizer}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+Two\+Pass\+Stabilizer}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__videostab_ga766ce71cb1644c17d7bce3a0662d1e4e}\label{group__videostab_ga766ce71cb1644c17d7bce3a0662d1e4e}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+calc\+Flow\+Mask} ( @Const @By\+Ref Mat flowX, @Const @By\+Ref Mat flowY, @Const @By\+Ref Mat errors, float max\+Error, @Const @By\+Ref Mat mask0, @Const @By\+Ref Mat mask1, @By\+Ref Mat flow\+Mask)
+\item 
+\mbox{\Hypertarget{group__videostab_gab29b48a5da43cb1bd65c66ce5103c12c}\label{group__videostab_gab29b48a5da43cb1bd65c66ce5103c12c}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+complete\+Frame\+According\+To\+Flow} ( @Const @By\+Ref Mat flow\+Mask, @Const @By\+Ref Mat flowX, @Const @By\+Ref Mat flowY, @Const @By\+Ref Mat frame1, @Const @By\+Ref Mat mask1, float dist\+Thresh, @By\+Ref Mat frame0, @By\+Ref Mat mask0)
+\item 
+\mbox{\Hypertarget{group__videostab_ga71be1ef830031ec5e131c15176a93b42}\label{group__videostab_ga71be1ef830031ec5e131c15176a93b42}} 
+static native float {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+videostab.\+calc\+Blurriness} (@Const @By\+Ref Mat frame)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The video stabilization module contains a set of functions and classes that can be used to solve the problem of video stabilization. There are a few methods implemented, most of them are described in the papers {\bfseries [O\+F06]} and {\bfseries [G11]} . However, there are some extensions and deviations from the original paper methods. 
+
+\paragraph*{References}
+
+
+\begin{DoxyEnumerate}
+\item \char`\"{}\+Full-\/\+Frame Video Stabilization with Motion Inpainting\char`\"{} Yasuyuki Matsushita, Eyal Ofek, Weina Ge, Xiaoou Tang, Senior Member, and Heung-\/\+Yeung Shum
+\item \char`\"{}\+Auto-\/\+Directed Video Stabilization with Robust L1 Optimal Camera Paths\char`\"{} Matthias Grundmann, Vivek Kwatra, Irfan Essa 
+\end{DoxyEnumerate}

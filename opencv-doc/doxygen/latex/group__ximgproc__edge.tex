@@ -1,0 +1,49 @@
+\hypertarget{group__ximgproc__edge}{}\section{Structured forests for fast edge detection}
+\label{group__ximgproc__edge}\index{Structured forests for fast edge detection@{Structured forests for fast edge detection}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+R\+F\+Feature\+Getter}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+Structured\+Edge\+Detection}
+\begin{DoxyCompactList}\small\item\em Class implementing edge detection algorithm from {\bfseries [Dollar2013]} \+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__ximgproc__edge_gab13b294f2007e612136d9145b9b6e17f}\label{group__ximgproc__edge_gab13b294f2007e612136d9145b9b6e17f}} 
+static native R\+F\+Feature\+Getter {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+R\+F\+Feature\+Getter} ()
+\item 
+static native Structured\+Edge\+Detection \hyperlink{group__ximgproc__edge_gafcb7c834ebdb82e5b362789a94b9e034}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Structured\+Edge\+Detection} (@Str Byte\+Pointer model, @Const @Ptr R\+F\+Feature\+Getter how\+To\+Get\+Features)
+\item 
+\mbox{\Hypertarget{group__ximgproc__edge_ga6b4f3884b1b089f3354f7e2aee639280}\label{group__ximgproc__edge_ga6b4f3884b1b089f3354f7e2aee639280}} 
+static native Structured\+Edge\+Detection {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Structured\+Edge\+Detection} (@Str Byte\+Pointer model)
+\item 
+\mbox{\Hypertarget{group__ximgproc__edge_ga281a53b59598a99db10a7c2838c4448c}\label{group__ximgproc__edge_ga281a53b59598a99db10a7c2838c4448c}} 
+static native Structured\+Edge\+Detection {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Structured\+Edge\+Detection} (@Str String model, @Const @Ptr R\+F\+Feature\+Getter how\+To\+Get\+Features)
+\item 
+\mbox{\Hypertarget{group__ximgproc__edge_ga76320db1e540ade1930be1bcd71c2fc1}\label{group__ximgproc__edge_ga76320db1e540ade1930be1bcd71c2fc1}} 
+static native Structured\+Edge\+Detection {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Structured\+Edge\+Detection} (@Str String model)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This module contains implementations of modern structured edge detection algorithms, i.\+e. algorithms which somehow takes into account pixel affinities in natural images. 
+
+/$\ast$$\ast$ Helper class for training part of \mbox{[}P. Dollar and C. L. Zitnick. Structured Forests for Fast Edge Detection, 2013\mbox{]}. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__ximgproc__edge_gafcb7c834ebdb82e5b362789a94b9e034}\label{group__ximgproc__edge_gafcb7c834ebdb82e5b362789a94b9e034}} 
+\index{Structured forests for fast edge detection@{Structured forests for fast edge detection}!create\+Structured\+Edge\+Detection@{create\+Structured\+Edge\+Detection}}
+\index{create\+Structured\+Edge\+Detection@{create\+Structured\+Edge\+Detection}!Structured forests for fast edge detection@{Structured forests for fast edge detection}}
+\subsubsection{\texorpdfstring{create\+Structured\+Edge\+Detection()}{createStructuredEdgeDetection()}}
+{\footnotesize\ttfamily static native Structured\+Edge\+Detection org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Structured\+Edge\+Detection (\begin{DoxyParamCaption}\item[{@Str Byte\+Pointer}]{model,  }\item[{@Const @Ptr R\+F\+Feature\+Getter}]{how\+To\+Get\+Features }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+The only constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & \+: name of the file where the model is stored \\
+\hline
+{\em how\+To\+Get\+Features} & \+: optional object inheriting from R\+F\+Feature\+Getter. You need it only if you would like to train your own forest, pass N\+U\+LL otherwise \\
+\hline
+\end{DoxyParams}

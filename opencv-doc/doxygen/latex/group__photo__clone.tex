@@ -1,0 +1,155 @@
+\hypertarget{group__photo__clone}{}\section{Seamless Cloning}
+\label{group__photo__clone}\index{Seamless Cloning@{Seamless Cloning}}
+
+
+Image editing tasks concern either global changes (color/intensity corrections, filters, deformations) or local changes concerned to a selection. Here we are interested in achieving local changes, ones that are restricted to a region manually selected (R\+OI), in a seamless and effortless manner. The extent of the changes ranges from slight distortions to complete replacement by novel content {\bfseries [P\+M03]} .  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__photo__clone_ga38e8a5ac80ca104670989b92ccd186d0}\label{group__photo__clone_ga38e8a5ac80ca104670989b92ccd186d0}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+seamless\+Clone} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Mat mask, @By\+Val Point p, @By\+Val Mat blend, int flags)
+\item 
+\mbox{\Hypertarget{group__photo__clone_gaab8f80a1d64b87472f8b1ef27a00f6c3}\label{group__photo__clone_gaab8f80a1d64b87472f8b1ef27a00f6c3}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+seamless\+Clone} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val U\+Mat mask, @By\+Val Point p, @By\+Val U\+Mat blend, int flags)
+\item 
+static native void \hyperlink{group__photo__clone_ga3560d162cd540795fe14ae7e98a7a9a2}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+color\+Change} (@By\+Val Mat src, @By\+Val Mat mask, @By\+Val Mat dst, float red\+\_\+mul, float green\+\_\+mul, float blue\+\_\+mul)
+\begin{DoxyCompactList}\small\item\em Given an original color image, two differently colored versions of this image can be mixed seamlessly. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__photo__clone_gaa4b91919bc9f1d3fb46484378c671177}\label{group__photo__clone_gaa4b91919bc9f1d3fb46484378c671177}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+color\+Change} (@By\+Val Mat src, @By\+Val Mat mask, @By\+Val Mat dst)
+\item 
+\mbox{\Hypertarget{group__photo__clone_gad63db0b17e85ef38d4ba96a4a3b7b445}\label{group__photo__clone_gad63db0b17e85ef38d4ba96a4a3b7b445}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+color\+Change} (@By\+Val U\+Mat src, @By\+Val U\+Mat mask, @By\+Val U\+Mat dst, float red\+\_\+mul, float green\+\_\+mul, float blue\+\_\+mul)
+\item 
+\mbox{\Hypertarget{group__photo__clone_ga7e00877486ea530a45652426586f47d7}\label{group__photo__clone_ga7e00877486ea530a45652426586f47d7}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+color\+Change} (@By\+Val U\+Mat src, @By\+Val U\+Mat mask, @By\+Val U\+Mat dst)
+\item 
+static native void \hyperlink{group__photo__clone_gab7df287c3db8bb77269a05cb1e758591}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+illumination\+Change} (@By\+Val Mat src, @By\+Val Mat mask, @By\+Val Mat dst, float alpha, float beta)
+\begin{DoxyCompactList}\small\item\em Applying an appropriate non-\/linear transformation to the gradient field inside the selection and then integrating back with a Poisson solver, modifies locally the apparent illumination of an image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__photo__clone_gab3e52ed0c9f389ac9a17955a2cbff3b6}\label{group__photo__clone_gab3e52ed0c9f389ac9a17955a2cbff3b6}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+illumination\+Change} (@By\+Val Mat src, @By\+Val Mat mask, @By\+Val Mat dst)
+\item 
+\mbox{\Hypertarget{group__photo__clone_ga09b1569af074d9111f0b13c03da3f5dd}\label{group__photo__clone_ga09b1569af074d9111f0b13c03da3f5dd}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+illumination\+Change} (@By\+Val U\+Mat src, @By\+Val U\+Mat mask, @By\+Val U\+Mat dst, float alpha, float beta)
+\item 
+\mbox{\Hypertarget{group__photo__clone_ga3923642ffb0eae09d7d9926c8b91dbed}\label{group__photo__clone_ga3923642ffb0eae09d7d9926c8b91dbed}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+illumination\+Change} (@By\+Val U\+Mat src, @By\+Val U\+Mat mask, @By\+Val U\+Mat dst)
+\item 
+static native void \hyperlink{group__photo__clone_ga8d42433222e7742e59e275e148c3d4a5}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+texture\+Flattening} (@By\+Val Mat src, @By\+Val Mat mask, @By\+Val Mat dst, float low\+\_\+threshold, float high\+\_\+threshold, int kernel\+\_\+size)
+\begin{DoxyCompactList}\small\item\em By retaining only the gradients at edge locations, before integrating with the Poisson solver, one washes out the texture of the selected region, giving its contents a flat aspect. Here Canny Edge Detector is used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__photo__clone_gac122bd4168012e6d0c3fc44d3fa71811}\label{group__photo__clone_gac122bd4168012e6d0c3fc44d3fa71811}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+texture\+Flattening} (@By\+Val Mat src, @By\+Val Mat mask, @By\+Val Mat dst)
+\item 
+\mbox{\Hypertarget{group__photo__clone_gacf724a2ceb10e438d8944e43f003bba6}\label{group__photo__clone_gacf724a2ceb10e438d8944e43f003bba6}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+texture\+Flattening} (@By\+Val U\+Mat src, @By\+Val U\+Mat mask, @By\+Val U\+Mat dst, float low\+\_\+threshold, float high\+\_\+threshold, int kernel\+\_\+size)
+\item 
+\mbox{\Hypertarget{group__photo__clone_ga2a2550084b65b902ccd13d98370b43b7}\label{group__photo__clone_ga2a2550084b65b902ccd13d98370b43b7}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+texture\+Flattening} (@By\+Val U\+Mat src, @By\+Val U\+Mat mask, @By\+Val U\+Mat dst)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Image editing tasks concern either global changes (color/intensity corrections, filters, deformations) or local changes concerned to a selection. Here we are interested in achieving local changes, ones that are restricted to a region manually selected (R\+OI), in a seamless and effortless manner. The extent of the changes ranges from slight distortions to complete replacement by novel content {\bfseries [P\+M03]} . 
+
+/$\ast$$\ast$
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Input 8-\/bit 3-\/channel image. \\
+\hline
+{\em dst} & Input 8-\/bit 3-\/channel image. \\
+\hline
+{\em mask} & Input 8-\/bit 1 or 3-\/channel image. \\
+\hline
+{\em p} & Point in dst image where object is placed. \\
+\hline
+{\em blend} & Output image with the same size and type as dst. \\
+\hline
+{\em flags} & Cloning method that could be one of the following\+:
+\begin{DoxyItemize}
+\item {\bfseries N\+O\+R\+M\+A\+L\+\_\+\+C\+L\+O\+NE} The power of the method is fully expressed when inserting objects with complex outlines into a new background
+\item {\bfseries M\+I\+X\+E\+D\+\_\+\+C\+L\+O\+NE} The classic method, color-\/based selection and alpha masking might be time consuming and often leaves an undesirable halo. Seamless cloning, even averaged with the original image, is not effective. Mixed seamless cloning based on a loose selection proves effective.
+\item {\bfseries F\+E\+A\+T\+U\+R\+E\+\_\+\+E\+X\+C\+H\+A\+N\+GE} Feature exchange allows the user to easily replace certain features of one object by alternative features. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__photo__clone_ga3560d162cd540795fe14ae7e98a7a9a2}\label{group__photo__clone_ga3560d162cd540795fe14ae7e98a7a9a2}} 
+\index{Seamless Cloning@{Seamless Cloning}!color\+Change@{color\+Change}}
+\index{color\+Change@{color\+Change}!Seamless Cloning@{Seamless Cloning}}
+\subsubsection{\texorpdfstring{color\+Change()}{colorChange()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+color\+Change (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{mask,  }\item[{@By\+Val Mat}]{dst,  }\item[{float}]{red\+\_\+mul,  }\item[{float}]{green\+\_\+mul,  }\item[{float}]{blue\+\_\+mul }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Given an original color image, two differently colored versions of this image can be mixed seamlessly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Input 8-\/bit 3-\/channel image. \\
+\hline
+{\em mask} & Input 8-\/bit 1 or 3-\/channel image. \\
+\hline
+{\em dst} & Output image with the same size and type as src . \\
+\hline
+{\em red\+\_\+mul} & R-\/channel multiply factor. \\
+\hline
+{\em green\+\_\+mul} & G-\/channel multiply factor. \\
+\hline
+{\em blue\+\_\+mul} & B-\/channel multiply factor. \\
+\hline
+\end{DoxyParams}
+Multiplication factor is between .5 to 2.\+5. \mbox{\Hypertarget{group__photo__clone_gab7df287c3db8bb77269a05cb1e758591}\label{group__photo__clone_gab7df287c3db8bb77269a05cb1e758591}} 
+\index{Seamless Cloning@{Seamless Cloning}!illumination\+Change@{illumination\+Change}}
+\index{illumination\+Change@{illumination\+Change}!Seamless Cloning@{Seamless Cloning}}
+\subsubsection{\texorpdfstring{illumination\+Change()}{illuminationChange()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+illumination\+Change (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{mask,  }\item[{@By\+Val Mat}]{dst,  }\item[{float}]{alpha,  }\item[{float}]{beta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Applying an appropriate non-\/linear transformation to the gradient field inside the selection and then integrating back with a Poisson solver, modifies locally the apparent illumination of an image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Input 8-\/bit 3-\/channel image. \\
+\hline
+{\em mask} & Input 8-\/bit 1 or 3-\/channel image. \\
+\hline
+{\em dst} & Output image with the same size and type as src. \\
+\hline
+{\em alpha} & Value ranges between 0-\/2. \\
+\hline
+{\em beta} & Value ranges between 0-\/2. \\
+\hline
+\end{DoxyParams}
+This is useful to highlight under-\/exposed foreground objects or to reduce specular reflections. \mbox{\Hypertarget{group__photo__clone_ga8d42433222e7742e59e275e148c3d4a5}\label{group__photo__clone_ga8d42433222e7742e59e275e148c3d4a5}} 
+\index{Seamless Cloning@{Seamless Cloning}!texture\+Flattening@{texture\+Flattening}}
+\index{texture\+Flattening@{texture\+Flattening}!Seamless Cloning@{Seamless Cloning}}
+\subsubsection{\texorpdfstring{texture\+Flattening()}{textureFlattening()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+texture\+Flattening (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{mask,  }\item[{@By\+Val Mat}]{dst,  }\item[{float}]{low\+\_\+threshold,  }\item[{float}]{high\+\_\+threshold,  }\item[{int}]{kernel\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+By retaining only the gradients at edge locations, before integrating with the Poisson solver, one washes out the texture of the selected region, giving its contents a flat aspect. Here Canny Edge Detector is used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Input 8-\/bit 3-\/channel image. \\
+\hline
+{\em mask} & Input 8-\/bit 1 or 3-\/channel image. \\
+\hline
+{\em dst} & Output image with the same size and type as src. \\
+\hline
+{\em low\+\_\+threshold} & Range from 0 to 100. \\
+\hline
+{\em high\+\_\+threshold} & Value $>$ 100. \\
+\hline
+{\em kernel\+\_\+size} & The size of the Sobel kernel to be used. \\
+\hline
+\end{DoxyParams}
+N\+O\+TE\+:$\ast$$\ast$ 
+
+The algorithm assumes that the color of the source image is close to that of the destination. This assumption means that when the colors don\textquotesingle{}t match, the source image color gets tinted toward the color of the destination image. 

@@ -1,0 +1,110 @@
+\hypertarget{group__stitching__warp}{}\section{Images Warping}
+\label{group__stitching__warp}\index{Images Warping@{Images Warping}}
+
+
+Rotation-\/only model image warper interface.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Rotation\+Warper}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Projector\+Base}
+\begin{DoxyCompactList}\small\item\em Base class for warping logic implementation. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Plane\+Projector}
+\begin{DoxyCompactList}\small\item\em Base class for rotation-\/based warper using a detail\+::\+Projector\+Base\+\_\+ derived class. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Detail\+Plane\+Warper}
+\begin{DoxyCompactList}\small\item\em Warper that maps an image onto the z = 1 plane. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Affine\+Warper}
+\begin{DoxyCompactList}\small\item\em Affine warper that uses rotations and translations. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Spherical\+Projector}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Detail\+Spherical\+Warper}
+\begin{DoxyCompactList}\small\item\em Warper that maps an image onto the unit sphere located at the origin. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Cylindrical\+Projector}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Detail\+Cylindrical\+Warper}
+\begin{DoxyCompactList}\small\item\em Warper that maps an image onto the x$\ast$x + z$\ast$z = 1 cylinder. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Fisheye\+Projector}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Detail\+Fisheye\+Warper}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Stereographic\+Projector}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Detail\+Stereographic\+Warper}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Compressed\+Rectilinear\+Projector}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Detail\+Compressed\+Rectilinear\+Warper}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Compressed\+Rectilinear\+Portrait\+Projector}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Detail\+Compressed\+Rectilinear\+Portrait\+Warper}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Panini\+Projector}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Detail\+Panini\+Warper}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Panini\+Portrait\+Projector}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Detail\+Panini\+Portrait\+Warper}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Mercator\+Projector}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Detail\+Mercator\+Warper}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Transverse\+Mercator\+Projector}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Detail\+Transverse\+Mercator\+Warper}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Detail\+Plane\+Warper\+Gpu}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Detail\+Spherical\+Warper\+Gpu}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Detail\+Cylindrical\+Warper\+Gpu}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Spherical\+Portrait\+Projector}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Spherical\+Portrait\+Warper}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Cylindrical\+Portrait\+Projector}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Cylindrical\+Portrait\+Warper}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Plane\+Portrait\+Projector}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Plane\+Portrait\+Warper}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Warper\+Creator}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Plane\+Warper}
+\begin{DoxyCompactList}\small\item\em Plane warper factory class. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Cylindrical\+Warper}
+\begin{DoxyCompactList}\small\item\em Affine warper factory class. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Spherical\+Warper}
+\begin{DoxyCompactList}\small\item\em Spherical warper factory class. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Fisheye\+Warper}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Stereographic\+Warper}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Compressed\+Rectilinear\+Warper}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Compressed\+Rectilinear\+Portrait\+Warper}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Panini\+Warper}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Panini\+Portrait\+Warper}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Mercator\+Warper}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching.\+Transverse\+Mercator\+Warper}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Rotation-\/only model image warper interface. 
+
+Image warper factories base class.
+
+/$\ast$$\ast$ 

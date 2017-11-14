@@ -1,0 +1,15 @@
+\hypertarget{group__imgproc__subdiv2d}{}\section{Planar Subdivision}
+\label{group__imgproc__subdiv2d}\index{Planar Subdivision@{Planar Subdivision}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Subdiv2D}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Subdiv2D class described in this section is used to perform various planar subdivision on a set of 2D points (represented as vector of Point2f). Open\+CV subdivides a plane into triangles using the Delaunay’s algorithm, which corresponds to the dual graph of the Voronoi diagram. In the figure below, the Delaunay’s triangulation is marked with black lines and the Voronoi diagram with red lines. 
+
+ 
+
+The subdivisions can be used for the 3D piece-\/wise transformation of a plane, morphing, fast location of points on the plane, building special graphs (such as N\+NG,R\+NG), and so forth. 

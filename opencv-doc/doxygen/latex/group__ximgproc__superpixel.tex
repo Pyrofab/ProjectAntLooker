@@ -1,0 +1,157 @@
+\hypertarget{group__ximgproc__superpixel}{}\section{Superpixels}
+\label{group__ximgproc__superpixel}\index{Superpixels@{Superpixels}}
+
+
+Class implementing the S\+E\+E\+DS (Superpixels Extracted via Energy-\/\+Driven Sampling) superpixels algorithm described in {\bfseries [V\+B\+R\+V14]} .  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+Superpixel\+S\+E\+E\+DS}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+Superpixel\+S\+L\+IC}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+Superpixel\+L\+SC}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static native Superpixel\+S\+E\+E\+DS \hyperlink{group__ximgproc__superpixel_ga16f41a6ddd22daf4d1f1851a6f689466}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Superpixel\+S\+E\+E\+DS} (int image\+\_\+width, int image\+\_\+height, int image\+\_\+channels, int num\+\_\+superpixels, int num\+\_\+levels, int prior, int histogram\+\_\+bins, @Cast(\char`\"{}bool\char`\"{}) boolean double\+\_\+step)
+\begin{DoxyCompactList}\small\item\em Initializes a Superpixel\+S\+E\+E\+DS object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ximgproc__superpixel_ga119e78e73ef65f8b2e9268d85fe8ea90}\label{group__ximgproc__superpixel_ga119e78e73ef65f8b2e9268d85fe8ea90}} 
+static native Superpixel\+S\+E\+E\+DS {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Superpixel\+S\+E\+E\+DS} (int image\+\_\+width, int image\+\_\+height, int image\+\_\+channels, int num\+\_\+superpixels, int num\+\_\+levels)
+\item 
+\mbox{\Hypertarget{group__ximgproc__superpixel_gadf285656f6d547291ca62b7cd41e65ff}\label{group__ximgproc__superpixel_gadf285656f6d547291ca62b7cd41e65ff}} 
+static native Superpixel\+S\+L\+IC {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Superpixel\+S\+L\+IC} ( @By\+Val Mat image, int algorithm, int region\+\_\+size, float ruler)
+\item 
+\mbox{\Hypertarget{group__ximgproc__superpixel_ga66105720ce89d3021bf932fbf1b17594}\label{group__ximgproc__superpixel_ga66105720ce89d3021bf932fbf1b17594}} 
+static native Superpixel\+S\+L\+IC {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Superpixel\+S\+L\+IC} ( @By\+Val Mat image)
+\item 
+\mbox{\Hypertarget{group__ximgproc__superpixel_ga8d99f0667e24d2e4cbc5b04b114db516}\label{group__ximgproc__superpixel_ga8d99f0667e24d2e4cbc5b04b114db516}} 
+static native Superpixel\+S\+L\+IC {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Superpixel\+S\+L\+IC} ( @By\+Val U\+Mat image, int algorithm, int region\+\_\+size, float ruler)
+\item 
+\mbox{\Hypertarget{group__ximgproc__superpixel_ga1b8417959af24cd2822a6a9f17419a0f}\label{group__ximgproc__superpixel_ga1b8417959af24cd2822a6a9f17419a0f}} 
+static native Superpixel\+S\+L\+IC {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Superpixel\+S\+L\+IC} ( @By\+Val U\+Mat image)
+\item 
+static native Superpixel\+L\+SC \hyperlink{group__ximgproc__superpixel_ga8bf6750a423a7f806993324e9b1a2276}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Superpixel\+L\+SC} ( @By\+Val Mat image, int region\+\_\+size, float ratio)
+\begin{DoxyCompactList}\small\item\em Class implementing the L\+SC (Linear Spectral Clustering) superpixels. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ximgproc__superpixel_ga6e95daf111854a1c9815418c1f457c6f}\label{group__ximgproc__superpixel_ga6e95daf111854a1c9815418c1f457c6f}} 
+static native Superpixel\+L\+SC {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Superpixel\+L\+SC} ( @By\+Val Mat image)
+\item 
+\mbox{\Hypertarget{group__ximgproc__superpixel_ga6725dc25b2729f2588d51d6a424af122}\label{group__ximgproc__superpixel_ga6725dc25b2729f2588d51d6a424af122}} 
+static native Superpixel\+L\+SC {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Superpixel\+L\+SC} ( @By\+Val U\+Mat image, int region\+\_\+size, float ratio)
+\item 
+\mbox{\Hypertarget{group__ximgproc__superpixel_ga6d60a343281c3d9676cd8367f5b3a33d}\label{group__ximgproc__superpixel_ga6d60a343281c3d9676cd8367f5b3a33d}} 
+static native Superpixel\+L\+SC {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Superpixel\+L\+SC} ( @By\+Val U\+Mat image)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{group__ximgproc__superpixel_gad6647d487c2dfbf08f2a26f408f020c3}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+S\+L\+IC} = 100
+\begin{DoxyCompactList}\small\item\em Class implementing the S\+L\+IC (Simple Linear Iterative Clustering) superpixels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class implementing the S\+E\+E\+DS (Superpixels Extracted via Energy-\/\+Driven Sampling) superpixels algorithm described in {\bfseries [V\+B\+R\+V14]} . 
+
+Class implementing the L\+SC (Linear Spectral Clustering) superpixels algorithm described in {\bfseries [Li\+C\+V\+P\+R2015\+L\+SC]}.
+
+Class implementing the S\+L\+IC (Simple Linear Iterative Clustering) superpixels algorithm described in {\bfseries [Achanta2012]}.
+
+/$\ast$$\ast$
+
+The algorithm uses an efficient hill-\/climbing algorithm to optimize the superpixels\textquotesingle{} energy function that is based on color histograms and a boundary term, which is optional. The energy function encourages superpixels to be of the same color, and if the boundary term is activated, the superpixels have smooth boundaries and are of similar shape. In practice it starts from a regular grid of superpixels and moves the pixels or blocks of pixels at the boundaries to refine the solution. The algorithm runs in real-\/time using a single C\+PU.
+
+/$\ast$$\ast$
+
+S\+L\+IC (Simple Linear Iterative Clustering) clusters pixels using pixel channels and image plane space to efficiently generate compact, nearly uniform superpixels. The simplicity of approach makes it extremely easy to use a lone parameter specifies the number of superpixels and the efficiency of the algorithm makes it very practical. 
+
+/$\ast$$\ast$
+
+L\+SC (Linear Spectral Clustering) produces compact and uniform superpixels with low computational costs. Basically, a normalized cuts formulation of the superpixel segmentation is adopted based on a similarity metric that measures the color similarity and space proximity between image pixels. L\+SC is of linear computational complexity and high memory efficiency and is able to preserve global properties of images 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__ximgproc__superpixel_ga8bf6750a423a7f806993324e9b1a2276}\label{group__ximgproc__superpixel_ga8bf6750a423a7f806993324e9b1a2276}} 
+\index{Superpixels@{Superpixels}!create\+Superpixel\+L\+SC@{create\+Superpixel\+L\+SC}}
+\index{create\+Superpixel\+L\+SC@{create\+Superpixel\+L\+SC}!Superpixels@{Superpixels}}
+\subsubsection{\texorpdfstring{create\+Superpixel\+L\+S\+C()}{createSuperpixelLSC()}}
+{\footnotesize\ttfamily static native Superpixel\+L\+SC org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Superpixel\+L\+SC (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{image,  }\item[{int}]{region\+\_\+size,  }\item[{float}]{ratio }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Class implementing the L\+SC (Linear Spectral Clustering) superpixels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & Image to segment \\
+\hline
+{\em region\+\_\+size} & Chooses an average superpixel size measured in pixels \\
+\hline
+{\em ratio} & Chooses the enforcement of superpixel compactness factor of superpixel \\
+\hline
+\end{DoxyParams}
+The function initializes a Superpixel\+L\+SC object for the input image. It sets the parameters of superpixel algorithm, which are\+: region\+\_\+size and ruler. It preallocate some buffers for future computing iterations over the given image. An example of L\+SC is ilustrated in the following picture. For enanched results it is recommended for color images to preprocess image with little gaussian blur with a small 3 x 3 kernel and additional conversion into Cie\+L\+AB color space. 
+
+ \mbox{\Hypertarget{group__ximgproc__superpixel_ga16f41a6ddd22daf4d1f1851a6f689466}\label{group__ximgproc__superpixel_ga16f41a6ddd22daf4d1f1851a6f689466}} 
+\index{Superpixels@{Superpixels}!create\+Superpixel\+S\+E\+E\+DS@{create\+Superpixel\+S\+E\+E\+DS}}
+\index{create\+Superpixel\+S\+E\+E\+DS@{create\+Superpixel\+S\+E\+E\+DS}!Superpixels@{Superpixels}}
+\subsubsection{\texorpdfstring{create\+Superpixel\+S\+E\+E\+D\+S()}{createSuperpixelSEEDS()}}
+{\footnotesize\ttfamily static native Superpixel\+S\+E\+E\+DS org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Superpixel\+S\+E\+E\+DS (\begin{DoxyParamCaption}\item[{int}]{image\+\_\+width,  }\item[{int}]{image\+\_\+height,  }\item[{int}]{image\+\_\+channels,  }\item[{int}]{num\+\_\+superpixels,  }\item[{int}]{num\+\_\+levels,  }\item[{int}]{prior,  }\item[{int}]{histogram\+\_\+bins,  }\item[{@Cast(\char`\"{}bool\char`\"{}) boolean}]{double\+\_\+step }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Initializes a Superpixel\+S\+E\+E\+DS object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+\_\+width} & Image width. \\
+\hline
+{\em image\+\_\+height} & Image height. \\
+\hline
+{\em image\+\_\+channels} & Number of channels of the image. \\
+\hline
+{\em num\+\_\+superpixels} & Desired number of superpixels. Note that the actual number may be smaller due to restrictions (depending on the image size and num\+\_\+levels). Use get\+Number\+Of\+Superpixels() to get the actual number. \\
+\hline
+{\em num\+\_\+levels} & Number of block levels. The more levels, the more accurate is the segmentation, but needs more memory and C\+PU time. \\
+\hline
+{\em prior} & enable 3x3 shape smoothing term if $>$0. A larger value leads to smoother shapes. prior must be in the range \mbox{[}0, 5\mbox{]}. \\
+\hline
+{\em histogram\+\_\+bins} & Number of histogram bins. \\
+\hline
+{\em double\+\_\+step} & If true, iterate each block level twice for higher accuracy. \\
+\hline
+\end{DoxyParams}
+The function initializes a Superpixel\+S\+E\+E\+DS object for the input image. It stores the parameters of the image\+: image\+\_\+width, image\+\_\+height and image\+\_\+channels. It also sets the parameters of the S\+E\+E\+DS superpixel algorithm, which are\+: num\+\_\+superpixels, num\+\_\+levels, use\+\_\+prior, histogram\+\_\+bins and double\+\_\+step. 
+
+The number of levels in num\+\_\+levels defines the amount of block levels that the algorithm use in the optimization. The initialization is a grid, in which the superpixels are equally distributed through the width and the height of the image. The larger blocks correspond to the superpixel size, and the levels with smaller blocks are formed by dividing the larger blocks into 2 x 2 blocks of pixels, recursively until the smaller block level. An example of initialization of 4 block levels is illustrated in the following figure. 
+
+ 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__ximgproc__superpixel_gad6647d487c2dfbf08f2a26f408f020c3}\label{group__ximgproc__superpixel_gad6647d487c2dfbf08f2a26f408f020c3}} 
+\index{Superpixels@{Superpixels}!S\+L\+IC@{S\+L\+IC}}
+\index{S\+L\+IC@{S\+L\+IC}!Superpixels@{Superpixels}}
+\subsubsection{\texorpdfstring{S\+L\+IC}{SLIC}}
+{\footnotesize\ttfamily final int org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+S\+L\+IC = 100\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Class implementing the S\+L\+IC (Simple Linear Iterative Clustering) superpixels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & Image to segment \\
+\hline
+{\em algorithm} & Chooses the algorithm variant to use\+: S\+L\+IC segments image using a desired region\+\_\+size, and in addition S\+L\+I\+CO will choose an adaptive compactness factor. \\
+\hline
+{\em region\+\_\+size} & Chooses an average superpixel size measured in pixels \\
+\hline
+{\em ruler} & Chooses the enforcement of superpixel smoothness factor of superpixel \\
+\hline
+\end{DoxyParams}
+The function initializes a Superpixel\+S\+L\+IC object for the input image. It sets the parameters of choosed superpixel algorithm, which are\+: region\+\_\+size and ruler. It preallocate some buffers for future computing iterations over the given image. An example of S\+L\+IC versus S\+L\+I\+CO is ilustrated in the following picture. 
+
+ 
+
+enum cv\+::ximgproc\+::\+S\+L\+IC 

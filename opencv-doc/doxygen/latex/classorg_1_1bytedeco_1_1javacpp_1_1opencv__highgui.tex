@@ -1,0 +1,516 @@
+\hypertarget{classorg_1_1bytedeco_1_1javacpp_1_1opencv__highgui}{}\section{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui Class Reference}
+\label{classorg_1_1bytedeco_1_1javacpp_1_1opencv__highgui}\index{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui@{org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui}}
+Inheritance diagram for org.\+bytedeco.\+javacpp.\+opencv\+\_\+highgui\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classorg_1_1bytedeco_1_1javacpp_1_1opencv__highgui}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Button\+Callback}
+\begin{DoxyCompactList}\small\item\em Callback function for a button created by cv\+::create\+Button. \end{DoxyCompactList}\item 
+class {\bfseries Cv\+Button\+Callback}
+\item 
+class {\bfseries Cv\+Mouse\+Callback}
+\item 
+class {\bfseries Cv\+Open\+Gl\+Draw\+Callback}
+\item 
+class {\bfseries Cv\+Trackbar\+Callback}
+\item 
+class {\bfseries Cv\+Trackbar\+Callback2}
+\item 
+class {\bfseries Mouse\+Callback}
+\begin{DoxyCompactList}\small\item\em Callback function for mouse events. see cv\+::set\+Mouse\+Callback. \end{DoxyCompactList}\item 
+class {\bfseries Open\+Gl\+Draw\+Callback}
+\begin{DoxyCompactList}\small\item\em Callback function defined to be called every frame. See cv\+::set\+Open\+Gl\+Draw\+Callback. \end{DoxyCompactList}\item 
+class {\bfseries Pt2\+Func\+\_\+int\+\_\+byte\+\_\+\+\_\+}
+\item 
+class {\bfseries Pt2\+Func\+\_\+int\+\_\+\+Byte\+Buffer}
+\item 
+class {\bfseries Pt2\+Func\+\_\+int\+\_\+\+Byte\+Pointer}
+\item 
+class {\bfseries Pt2\+Func\+\_\+int\+\_\+\+Pointer\+Pointer}
+\item 
+class {\bfseries Qt\+Font}
+\item 
+class {\bfseries Trackbar\+Callback}
+\begin{DoxyCompactList}\small\item\em Callback function for Trackbar see cv\+::create\+Trackbar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static native Cv\+Font {\bfseries cv\+Font\+Qt} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer name\+Font, int point\+Size, @By\+Val(null\+Value=\char`\"{}Cv\+Scalar(cv\+Scalar\+All(0))\char`\"{}) Cv\+Scalar color, int weight, int style, int spacing)
+\item 
+static native Cv\+Font {\bfseries cv\+Font\+Qt} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer name\+Font)
+\item 
+static native Cv\+Font {\bfseries cv\+Font\+Qt} (String name\+Font, int point\+Size, @By\+Val(null\+Value=\char`\"{}Cv\+Scalar(cv\+Scalar\+All(0))\char`\"{}) Cv\+Scalar color, int weight, int style, int spacing)
+\item 
+static native Cv\+Font {\bfseries cv\+Font\+Qt} (String name\+Font)
+\item 
+static native void {\bfseries cv\+Add\+Text} (@Const Cv\+Arr img, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer text, @By\+Val Cv\+Point org, Cv\+Font arg2)
+\item 
+static native void {\bfseries cv\+Add\+Text} (@Const Cv\+Arr img, String text, @By\+Val @Cast(\char`\"{}Cv\+Point$\ast$\char`\"{}) Int\+Buffer org, Cv\+Font arg2)
+\item 
+static native void {\bfseries cv\+Add\+Text} (@Const Cv\+Arr img, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer text, @By\+Val @Cast(\char`\"{}Cv\+Point$\ast$\char`\"{}) int\mbox{[}$\,$\mbox{]} org, Cv\+Font arg2)
+\item 
+static native void {\bfseries cv\+Add\+Text} (@Const Cv\+Arr img, String text, @By\+Val Cv\+Point org, Cv\+Font arg2)
+\item 
+static native void {\bfseries cv\+Add\+Text} (@Const Cv\+Arr img, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer text, @By\+Val @Cast(\char`\"{}Cv\+Point$\ast$\char`\"{}) Int\+Buffer org, Cv\+Font arg2)
+\item 
+static native void {\bfseries cv\+Add\+Text} (@Const Cv\+Arr img, String text, @By\+Val @Cast(\char`\"{}Cv\+Point$\ast$\char`\"{}) int\mbox{[}$\,$\mbox{]} org, Cv\+Font arg2)
+\item 
+static native void {\bfseries cv\+Display\+Overlay} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer name, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer text, int delayms)
+\item 
+static native void {\bfseries cv\+Display\+Overlay} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer name, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer text)
+\item 
+static native void {\bfseries cv\+Display\+Overlay} (String name, String text, int delayms)
+\item 
+static native void {\bfseries cv\+Display\+Overlay} (String name, String text)
+\item 
+static native void {\bfseries cv\+Display\+Status\+Bar} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer name, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer text, int delayms)
+\item 
+static native void {\bfseries cv\+Display\+Status\+Bar} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer name, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer text)
+\item 
+static native void {\bfseries cv\+Display\+Status\+Bar} (String name, String text, int delayms)
+\item 
+static native void {\bfseries cv\+Display\+Status\+Bar} (String name, String text)
+\item 
+static native void {\bfseries cv\+Save\+Window\+Parameters} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer name)
+\item 
+static native void {\bfseries cv\+Save\+Window\+Parameters} (String name)
+\item 
+static native void {\bfseries cv\+Load\+Window\+Parameters} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer name)
+\item 
+static native void {\bfseries cv\+Load\+Window\+Parameters} (String name)
+\item 
+static native int {\bfseries cv\+Start\+Loop} (Pt2\+Func\+\_\+int\+\_\+\+Pointer\+Pointer pt2\+Func, int argc, @Cast(\char`\"{}char$\ast$$\ast$\char`\"{}) Pointer\+Pointer argv)
+\item 
+static native int {\bfseries cv\+Start\+Loop} (Pt2\+Func\+\_\+int\+\_\+\+Byte\+Pointer pt2\+Func, int argc, @Cast(\char`\"{}char$\ast$$\ast$\char`\"{}) @By\+Ptr\+Ptr Byte\+Pointer argv)
+\item 
+static native int {\bfseries cv\+Start\+Loop} (Pt2\+Func\+\_\+int\+\_\+\+Byte\+Buffer pt2\+Func, int argc, @Cast(\char`\"{}char$\ast$$\ast$\char`\"{}) @By\+Ptr\+Ptr Byte\+Buffer argv)
+\item 
+static native int {\bfseries cv\+Start\+Loop} (Pt2\+Func\+\_\+int\+\_\+byte\+\_\+\+\_\+ pt2\+Func, int argc, @Cast(\char`\"{}char$\ast$$\ast$\char`\"{}) @By\+Ptr\+Ptr byte\mbox{[}$\,$\mbox{]} argv)
+\item 
+static native void {\bfseries cv\+Stop\+Loop} ()
+\item 
+static native int {\bfseries cv\+Create\+Button} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer button\+\_\+name, Cv\+Button\+Callback on\+\_\+change, Pointer userdata, int button\+\_\+type, int initial\+\_\+button\+\_\+state)
+\item 
+static native int {\bfseries cv\+Create\+Button} ()
+\item 
+static native int {\bfseries cv\+Create\+Button} (String button\+\_\+name, Cv\+Button\+Callback on\+\_\+change, Pointer userdata, int button\+\_\+type, int initial\+\_\+button\+\_\+state)
+\item 
+static native int {\bfseries cv\+Init\+System} (int argc, @Cast(\char`\"{}char$\ast$$\ast$\char`\"{}) Pointer\+Pointer argv)
+\item 
+static native int {\bfseries cv\+Init\+System} (int argc, @Cast(\char`\"{}char$\ast$$\ast$\char`\"{}) @By\+Ptr\+Ptr Byte\+Pointer argv)
+\item 
+static native int {\bfseries cv\+Init\+System} (int argc, @Cast(\char`\"{}char$\ast$$\ast$\char`\"{}) @By\+Ptr\+Ptr Byte\+Buffer argv)
+\item 
+static native int {\bfseries cv\+Init\+System} (int argc, @Cast(\char`\"{}char$\ast$$\ast$\char`\"{}) @By\+Ptr\+Ptr byte\mbox{[}$\,$\mbox{]} argv)
+\item 
+static native int {\bfseries cv\+Start\+Window\+Thread} ()
+\item 
+static native int {\bfseries cv\+Named\+Window} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer name, int flags)
+\item 
+static native int {\bfseries cv\+Named\+Window} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer name)
+\item 
+static native int {\bfseries cv\+Named\+Window} (String name, int flags)
+\item 
+static native int {\bfseries cv\+Named\+Window} (String name)
+\item 
+static native void {\bfseries cv\+Set\+Window\+Property} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer name, int prop\+\_\+id, double prop\+\_\+value)
+\item 
+static native void {\bfseries cv\+Set\+Window\+Property} (String name, int prop\+\_\+id, double prop\+\_\+value)
+\item 
+static native double {\bfseries cv\+Get\+Window\+Property} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer name, int prop\+\_\+id)
+\item 
+static native double {\bfseries cv\+Get\+Window\+Property} (String name, int prop\+\_\+id)
+\item 
+static native void {\bfseries cv\+Show\+Image} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer name, @Const Cv\+Arr image)
+\item 
+static native void {\bfseries cv\+Show\+Image} (String name, @Const Cv\+Arr image)
+\item 
+static native void {\bfseries cv\+Resize\+Window} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer name, int width, int height)
+\item 
+static native void {\bfseries cv\+Resize\+Window} (String name, int width, int height)
+\item 
+static native void {\bfseries cv\+Move\+Window} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer name, int x, int y)
+\item 
+static native void {\bfseries cv\+Move\+Window} (String name, int x, int y)
+\item 
+static native void {\bfseries cv\+Destroy\+Window} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer name)
+\item 
+static native void {\bfseries cv\+Destroy\+Window} (String name)
+\item 
+static native void {\bfseries cv\+Destroy\+All\+Windows} ()
+\item 
+static native Pointer {\bfseries cv\+Get\+Window\+Handle} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer name)
+\item 
+static native Pointer {\bfseries cv\+Get\+Window\+Handle} (String name)
+\item 
+static native Byte\+Pointer {\bfseries cv\+Get\+Window\+Name} (Pointer window\+\_\+handle)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer trackbar\+\_\+name, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer window\+\_\+name, Int\+Pointer value, int count, Cv\+Trackbar\+Callback on\+\_\+change)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer trackbar\+\_\+name, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer window\+\_\+name, Int\+Pointer value, int count)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar} (String trackbar\+\_\+name, String window\+\_\+name, Int\+Buffer value, int count, Cv\+Trackbar\+Callback on\+\_\+change)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar} (String trackbar\+\_\+name, String window\+\_\+name, Int\+Buffer value, int count)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer trackbar\+\_\+name, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer window\+\_\+name, int\mbox{[}$\,$\mbox{]} value, int count, Cv\+Trackbar\+Callback on\+\_\+change)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer trackbar\+\_\+name, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer window\+\_\+name, int\mbox{[}$\,$\mbox{]} value, int count)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar} (String trackbar\+\_\+name, String window\+\_\+name, Int\+Pointer value, int count, Cv\+Trackbar\+Callback on\+\_\+change)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar} (String trackbar\+\_\+name, String window\+\_\+name, Int\+Pointer value, int count)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer trackbar\+\_\+name, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer window\+\_\+name, Int\+Buffer value, int count, Cv\+Trackbar\+Callback on\+\_\+change)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer trackbar\+\_\+name, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer window\+\_\+name, Int\+Buffer value, int count)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar} (String trackbar\+\_\+name, String window\+\_\+name, int\mbox{[}$\,$\mbox{]} value, int count, Cv\+Trackbar\+Callback on\+\_\+change)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar} (String trackbar\+\_\+name, String window\+\_\+name, int\mbox{[}$\,$\mbox{]} value, int count)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar2} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer trackbar\+\_\+name, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer window\+\_\+name, Int\+Pointer value, int count, Cv\+Trackbar\+Callback2 on\+\_\+change, Pointer userdata)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar2} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer trackbar\+\_\+name, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer window\+\_\+name, Int\+Pointer value, int count, Cv\+Trackbar\+Callback2 on\+\_\+change)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar2} (String trackbar\+\_\+name, String window\+\_\+name, Int\+Buffer value, int count, Cv\+Trackbar\+Callback2 on\+\_\+change, Pointer userdata)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar2} (String trackbar\+\_\+name, String window\+\_\+name, Int\+Buffer value, int count, Cv\+Trackbar\+Callback2 on\+\_\+change)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar2} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer trackbar\+\_\+name, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer window\+\_\+name, int\mbox{[}$\,$\mbox{]} value, int count, Cv\+Trackbar\+Callback2 on\+\_\+change, Pointer userdata)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar2} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer trackbar\+\_\+name, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer window\+\_\+name, int\mbox{[}$\,$\mbox{]} value, int count, Cv\+Trackbar\+Callback2 on\+\_\+change)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar2} (String trackbar\+\_\+name, String window\+\_\+name, Int\+Pointer value, int count, Cv\+Trackbar\+Callback2 on\+\_\+change, Pointer userdata)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar2} (String trackbar\+\_\+name, String window\+\_\+name, Int\+Pointer value, int count, Cv\+Trackbar\+Callback2 on\+\_\+change)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar2} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer trackbar\+\_\+name, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer window\+\_\+name, Int\+Buffer value, int count, Cv\+Trackbar\+Callback2 on\+\_\+change, Pointer userdata)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar2} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer trackbar\+\_\+name, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer window\+\_\+name, Int\+Buffer value, int count, Cv\+Trackbar\+Callback2 on\+\_\+change)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar2} (String trackbar\+\_\+name, String window\+\_\+name, int\mbox{[}$\,$\mbox{]} value, int count, Cv\+Trackbar\+Callback2 on\+\_\+change, Pointer userdata)
+\item 
+static native int {\bfseries cv\+Create\+Trackbar2} (String trackbar\+\_\+name, String window\+\_\+name, int\mbox{[}$\,$\mbox{]} value, int count, Cv\+Trackbar\+Callback2 on\+\_\+change)
+\item 
+static native int {\bfseries cv\+Get\+Trackbar\+Pos} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer trackbar\+\_\+name, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer window\+\_\+name)
+\item 
+static native int {\bfseries cv\+Get\+Trackbar\+Pos} (String trackbar\+\_\+name, String window\+\_\+name)
+\item 
+static native void {\bfseries cv\+Set\+Trackbar\+Pos} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer trackbar\+\_\+name, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer window\+\_\+name, int pos)
+\item 
+static native void {\bfseries cv\+Set\+Trackbar\+Pos} (String trackbar\+\_\+name, String window\+\_\+name, int pos)
+\item 
+static native void {\bfseries cv\+Set\+Trackbar\+Max} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer trackbar\+\_\+name, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer window\+\_\+name, int maxval)
+\item 
+static native void {\bfseries cv\+Set\+Trackbar\+Max} (String trackbar\+\_\+name, String window\+\_\+name, int maxval)
+\item 
+static native void {\bfseries cv\+Set\+Trackbar\+Min} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer trackbar\+\_\+name, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer window\+\_\+name, int minval)
+\item 
+static native void {\bfseries cv\+Set\+Trackbar\+Min} (String trackbar\+\_\+name, String window\+\_\+name, int minval)
+\item 
+static native void {\bfseries cv\+Set\+Mouse\+Callback} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer window\+\_\+name, Cv\+Mouse\+Callback on\+\_\+mouse, Pointer param)
+\item 
+static native void {\bfseries cv\+Set\+Mouse\+Callback} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer window\+\_\+name, Cv\+Mouse\+Callback on\+\_\+mouse)
+\item 
+static native void {\bfseries cv\+Set\+Mouse\+Callback} (String window\+\_\+name, Cv\+Mouse\+Callback on\+\_\+mouse, Pointer param)
+\item 
+static native void {\bfseries cv\+Set\+Mouse\+Callback} (String window\+\_\+name, Cv\+Mouse\+Callback on\+\_\+mouse)
+\item 
+static native int {\bfseries cv\+Wait\+Key} (int delay)
+\item 
+static native int {\bfseries cv\+Wait\+Key} ()
+\item 
+static native void {\bfseries cv\+Set\+Open\+Gl\+Draw\+Callback} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer window\+\_\+name, Cv\+Open\+Gl\+Draw\+Callback callback, Pointer userdata)
+\item 
+static native void {\bfseries cv\+Set\+Open\+Gl\+Draw\+Callback} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer window\+\_\+name, Cv\+Open\+Gl\+Draw\+Callback callback)
+\item 
+static native void {\bfseries cv\+Set\+Open\+Gl\+Draw\+Callback} (String window\+\_\+name, Cv\+Open\+Gl\+Draw\+Callback callback, Pointer userdata)
+\item 
+static native void {\bfseries cv\+Set\+Open\+Gl\+Draw\+Callback} (String window\+\_\+name, Cv\+Open\+Gl\+Draw\+Callback callback)
+\item 
+static native void {\bfseries cv\+Set\+Open\+Gl\+Context} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer window\+\_\+name)
+\item 
+static native void {\bfseries cv\+Set\+Open\+Gl\+Context} (String window\+\_\+name)
+\item 
+static native void {\bfseries cv\+Update\+Window} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer window\+\_\+name)
+\item 
+static native void {\bfseries cv\+Update\+Window} (String window\+\_\+name)
+\item 
+static native void {\bfseries cv\+Add\+Search\+Path} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer path)
+\item 
+static native void {\bfseries cv\+Add\+Search\+Path} (String path)
+\item 
+static native int {\bfseries cvv\+Init\+System} (int arg1, @Cast(\char`\"{}char$\ast$$\ast$\char`\"{}) Pointer\+Pointer arg2)
+\item 
+static native int {\bfseries cvv\+Init\+System} (int arg1, @Cast(\char`\"{}char$\ast$$\ast$\char`\"{}) @By\+Ptr\+Ptr Byte\+Pointer arg2)
+\item 
+static native int {\bfseries cvv\+Init\+System} (int arg1, @Cast(\char`\"{}char$\ast$$\ast$\char`\"{}) @By\+Ptr\+Ptr Byte\+Buffer arg2)
+\item 
+static native int {\bfseries cvv\+Init\+System} (int arg1, @Cast(\char`\"{}char$\ast$$\ast$\char`\"{}) @By\+Ptr\+Ptr byte\mbox{[}$\,$\mbox{]} arg2)
+\item 
+static native void {\bfseries cvv\+Named\+Window} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer arg1, int arg2)
+\item 
+static native void {\bfseries cvv\+Named\+Window} (String arg1, int arg2)
+\item 
+static native void {\bfseries cvv\+Show\+Image} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer arg1, Cv\+Arr arg2)
+\item 
+static native void {\bfseries cvv\+Show\+Image} (String arg1, Cv\+Arr arg2)
+\item 
+static native void {\bfseries cvv\+Resize\+Window} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer arg1, int arg2, int arg3)
+\item 
+static native void {\bfseries cvv\+Resize\+Window} (String arg1, int arg2, int arg3)
+\item 
+static native void {\bfseries cvv\+Destroy\+Window} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer arg1)
+\item 
+static native void {\bfseries cvv\+Destroy\+Window} (String arg1)
+\item 
+static native int {\bfseries cvv\+Create\+Trackbar} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer arg1, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer arg2, Int\+Pointer arg3, int arg4, Cv\+Trackbar\+Callback arg5)
+\item 
+static native int {\bfseries cvv\+Create\+Trackbar} (String arg1, String arg2, Int\+Buffer arg3, int arg4, Cv\+Trackbar\+Callback arg5)
+\item 
+static native int {\bfseries cvv\+Create\+Trackbar} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer arg1, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer arg2, int\mbox{[}$\,$\mbox{]} arg3, int arg4, Cv\+Trackbar\+Callback arg5)
+\item 
+static native int {\bfseries cvv\+Create\+Trackbar} (String arg1, String arg2, Int\+Pointer arg3, int arg4, Cv\+Trackbar\+Callback arg5)
+\item 
+static native int {\bfseries cvv\+Create\+Trackbar} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer arg1, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer arg2, Int\+Buffer arg3, int arg4, Cv\+Trackbar\+Callback arg5)
+\item 
+static native int {\bfseries cvv\+Create\+Trackbar} (String arg1, String arg2, int\mbox{[}$\,$\mbox{]} arg3, int arg4, Cv\+Trackbar\+Callback arg5)
+\item 
+static native void {\bfseries cvv\+Add\+Search\+Path} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer arg1)
+\item 
+static native void {\bfseries cvv\+Add\+Search\+Path} (String arg1)
+\item 
+static native int {\bfseries cvv\+Wait\+Key} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer name)
+\item 
+static native int {\bfseries cvv\+Wait\+Key} (String name)
+\item 
+static native int {\bfseries cvv\+Wait\+Key\+Ex} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer name, int delay)
+\item 
+static native int {\bfseries cvv\+Wait\+Key\+Ex} (String name, int delay)
+\item 
+static native void \hyperlink{group__highgui_gad8dcfc13dd30b1339b3fc7fb3fb19603}{named\+Window} (@Str Byte\+Pointer winname, int flags)
+\begin{DoxyCompactList}\small\item\em Creates a window. \end{DoxyCompactList}\item 
+static native void {\bfseries named\+Window} (@Str Byte\+Pointer winname)
+\item 
+static native void {\bfseries named\+Window} (@Str String winname, int flags)
+\item 
+static native void {\bfseries named\+Window} (@Str String winname)
+\item 
+static native void \hyperlink{group__highgui_ga3fd651e0fd7a9c3d290d4217cdcebbcf}{destroy\+Window} (@Str Byte\+Pointer winname)
+\begin{DoxyCompactList}\small\item\em Destroys the specified window. \end{DoxyCompactList}\item 
+static native void {\bfseries destroy\+Window} (@Str String winname)
+\item 
+static native void \hyperlink{group__highgui_gaff06efa4a5f234c304b6f498075abd1a}{destroy\+All\+Windows} ()
+\begin{DoxyCompactList}\small\item\em Destroys all of the High\+G\+UI windows. \end{DoxyCompactList}\item 
+static native int {\bfseries start\+Window\+Thread} ()
+\item 
+static native int \hyperlink{group__highgui_ga6a23d9d2816fcc0c96c3445b5969f5ac}{wait\+Key\+Ex} (int delay)
+\begin{DoxyCompactList}\small\item\em Similar to \hyperlink{group__highgui_gaf924607bac022bb3603e459e3f2f3239}{wait\+Key}, but returns full key code. \end{DoxyCompactList}\item 
+static native int {\bfseries wait\+Key\+Ex} ()
+\item 
+static native int \hyperlink{group__highgui_gaf924607bac022bb3603e459e3f2f3239}{wait\+Key} (int delay)
+\begin{DoxyCompactList}\small\item\em Waits for a pressed key. \end{DoxyCompactList}\item 
+static native int {\bfseries wait\+Key} ()
+\item 
+static native void \hyperlink{group__highgui_gaf05d46739d8a87edb7405e79c7207975}{imshow} (@Str Byte\+Pointer winname, @By\+Val Mat mat)
+\begin{DoxyCompactList}\small\item\em Displays an image in the specified window. \end{DoxyCompactList}\item 
+static native void {\bfseries imshow} (@Str String winname, @By\+Val Mat mat)
+\item 
+static native void {\bfseries imshow} (@Str Byte\+Pointer winname, @By\+Val U\+Mat mat)
+\item 
+static native void {\bfseries imshow} (@Str String winname, @By\+Val U\+Mat mat)
+\item 
+static native void \hyperlink{group__highgui_ga4e805fd30f0df6fd2b5715cf89f4f80e}{resize\+Window} (@Str Byte\+Pointer winname, int width, int height)
+\begin{DoxyCompactList}\small\item\em Resizes window to the specified size. \end{DoxyCompactList}\item 
+static native void {\bfseries resize\+Window} (@Str String winname, int width, int height)
+\item 
+static native void \hyperlink{group__highgui_ga7731f7680d8bb28a3e069616f3395907}{move\+Window} (@Str Byte\+Pointer winname, int x, int y)
+\begin{DoxyCompactList}\small\item\em Moves window to the specified position. \end{DoxyCompactList}\item 
+static native void {\bfseries move\+Window} (@Str String winname, int x, int y)
+\item 
+static native void \hyperlink{group__highgui_ga0c820fdf7575d2e62d3aed900aa534cd}{set\+Window\+Property} (@Str Byte\+Pointer winname, int prop\+\_\+id, double prop\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Changes parameters of a window dynamically. \end{DoxyCompactList}\item 
+static native void {\bfseries set\+Window\+Property} (@Str String winname, int prop\+\_\+id, double prop\+\_\+value)
+\item 
+static native void \hyperlink{group__highgui_gaf4453988c16611eed72c58d647d6e31d}{set\+Window\+Title} (@Str Byte\+Pointer winname, @Str Byte\+Pointer title)
+\begin{DoxyCompactList}\small\item\em Updates window title. \end{DoxyCompactList}\item 
+static native void {\bfseries set\+Window\+Title} (@Str String winname, @Str String title)
+\item 
+static native double \hyperlink{group__highgui_gabedecb2109425cb553d605080ad980a9}{get\+Window\+Property} (@Str Byte\+Pointer winname, int prop\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Provides parameters of a window. \end{DoxyCompactList}\item 
+static native double {\bfseries get\+Window\+Property} (@Str String winname, int prop\+\_\+id)
+\item 
+static native void \hyperlink{group__highgui_gae53ffbc47967af79b35268d57575d6b4}{set\+Mouse\+Callback} (@Str Byte\+Pointer winname, Mouse\+Callback on\+Mouse, Pointer userdata)
+\begin{DoxyCompactList}\small\item\em Sets mouse handler for the specified window. \end{DoxyCompactList}\item 
+static native void {\bfseries set\+Mouse\+Callback} (@Str Byte\+Pointer winname, Mouse\+Callback on\+Mouse)
+\item 
+static native void {\bfseries set\+Mouse\+Callback} (@Str String winname, Mouse\+Callback on\+Mouse, Pointer userdata)
+\item 
+static native void {\bfseries set\+Mouse\+Callback} (@Str String winname, Mouse\+Callback on\+Mouse)
+\item 
+static native int \hyperlink{group__highgui_gaf78c2cffa388987b42b78f0c122e5ef9}{get\+Mouse\+Wheel\+Delta} (int flags)
+\begin{DoxyCompactList}\small\item\em Gets the mouse-\/wheel motion delta, when handling mouse-\/wheel events cv\+::\+E\+V\+E\+N\+T\+\_\+\+M\+O\+U\+S\+E\+W\+H\+E\+EL and cv\+::\+E\+V\+E\+N\+T\+\_\+\+M\+O\+U\+S\+E\+H\+W\+H\+E\+EL. \end{DoxyCompactList}\item 
+static native int \hyperlink{group__highgui_ga727bcca32e6bc9d52ae86894538318fa}{create\+Trackbar} (@Str Byte\+Pointer trackbarname, @Str Byte\+Pointer winname, Int\+Pointer value, int count, Trackbar\+Callback on\+Change, Pointer userdata)
+\begin{DoxyCompactList}\small\item\em Creates a trackbar and attaches it to the specified window. \end{DoxyCompactList}\item 
+static native int {\bfseries create\+Trackbar} (@Str Byte\+Pointer trackbarname, @Str Byte\+Pointer winname, Int\+Pointer value, int count)
+\item 
+static native int {\bfseries create\+Trackbar} (@Str String trackbarname, @Str String winname, Int\+Buffer value, int count, Trackbar\+Callback on\+Change, Pointer userdata)
+\item 
+static native int {\bfseries create\+Trackbar} (@Str String trackbarname, @Str String winname, Int\+Buffer value, int count)
+\item 
+static native int {\bfseries create\+Trackbar} (@Str Byte\+Pointer trackbarname, @Str Byte\+Pointer winname, int\mbox{[}$\,$\mbox{]} value, int count, Trackbar\+Callback on\+Change, Pointer userdata)
+\item 
+static native int {\bfseries create\+Trackbar} (@Str Byte\+Pointer trackbarname, @Str Byte\+Pointer winname, int\mbox{[}$\,$\mbox{]} value, int count)
+\item 
+static native int {\bfseries create\+Trackbar} (@Str String trackbarname, @Str String winname, Int\+Pointer value, int count, Trackbar\+Callback on\+Change, Pointer userdata)
+\item 
+static native int {\bfseries create\+Trackbar} (@Str String trackbarname, @Str String winname, Int\+Pointer value, int count)
+\item 
+static native int {\bfseries create\+Trackbar} (@Str Byte\+Pointer trackbarname, @Str Byte\+Pointer winname, Int\+Buffer value, int count, Trackbar\+Callback on\+Change, Pointer userdata)
+\item 
+static native int {\bfseries create\+Trackbar} (@Str Byte\+Pointer trackbarname, @Str Byte\+Pointer winname, Int\+Buffer value, int count)
+\item 
+static native int {\bfseries create\+Trackbar} (@Str String trackbarname, @Str String winname, int\mbox{[}$\,$\mbox{]} value, int count, Trackbar\+Callback on\+Change, Pointer userdata)
+\item 
+static native int {\bfseries create\+Trackbar} (@Str String trackbarname, @Str String winname, int\mbox{[}$\,$\mbox{]} value, int count)
+\item 
+static native int \hyperlink{group__highgui_gad91f649b98c33cbfdbf3c995935facdc}{get\+Trackbar\+Pos} (@Str Byte\+Pointer trackbarname, @Str Byte\+Pointer winname)
+\begin{DoxyCompactList}\small\item\em Returns the trackbar position. \end{DoxyCompactList}\item 
+static native int {\bfseries get\+Trackbar\+Pos} (@Str String trackbarname, @Str String winname)
+\item 
+static native void \hyperlink{group__highgui_ga53b09172763cf63873f5ac01fef0154d}{set\+Trackbar\+Pos} (@Str Byte\+Pointer trackbarname, @Str Byte\+Pointer winname, int pos)
+\begin{DoxyCompactList}\small\item\em Sets the trackbar position. \end{DoxyCompactList}\item 
+static native void {\bfseries set\+Trackbar\+Pos} (@Str String trackbarname, @Str String winname, int pos)
+\item 
+static native void \hyperlink{group__highgui_ga7f8973f0842fd2c01aad396250da751a}{set\+Trackbar\+Max} (@Str Byte\+Pointer trackbarname, @Str Byte\+Pointer winname, int maxval)
+\begin{DoxyCompactList}\small\item\em Sets the trackbar maximum position. \end{DoxyCompactList}\item 
+static native void {\bfseries set\+Trackbar\+Max} (@Str String trackbarname, @Str String winname, int maxval)
+\item 
+static native void \hyperlink{group__highgui_gaf177a5a7400badc50be0ce11d404c74f}{set\+Trackbar\+Min} (@Str Byte\+Pointer trackbarname, @Str Byte\+Pointer winname, int minval)
+\begin{DoxyCompactList}\small\item\em Sets the trackbar minimum position. \end{DoxyCompactList}\item 
+static native void {\bfseries set\+Trackbar\+Min} (@Str String trackbarname, @Str String winname, int minval)
+\item 
+static native void {\bfseries imshow} (@Str Byte\+Pointer winname, @Const @By\+Ref Texture2D tex)
+\item 
+static native void {\bfseries imshow} (@Str String winname, @Const @By\+Ref Texture2D tex)
+\item 
+static native void \hyperlink{group__highgui__opengl_ga4a0f34ee4ef2378ca514ab2190004a9c}{set\+Open\+Gl\+Draw\+Callback} (@Str Byte\+Pointer winname, Open\+Gl\+Draw\+Callback on\+Open\+Gl\+Draw, Pointer userdata)
+\begin{DoxyCompactList}\small\item\em Sets a callback function to be called to draw on top of displayed image. \end{DoxyCompactList}\item 
+static native void {\bfseries set\+Open\+Gl\+Draw\+Callback} (@Str Byte\+Pointer winname, Open\+Gl\+Draw\+Callback on\+Open\+Gl\+Draw)
+\item 
+static native void {\bfseries set\+Open\+Gl\+Draw\+Callback} (@Str String winname, Open\+Gl\+Draw\+Callback on\+Open\+Gl\+Draw, Pointer userdata)
+\item 
+static native void {\bfseries set\+Open\+Gl\+Draw\+Callback} (@Str String winname, Open\+Gl\+Draw\+Callback on\+Open\+Gl\+Draw)
+\item 
+static native void \hyperlink{group__highgui__opengl_ga14e8539bd809672c266a0dc6c11e4b91}{set\+Open\+Gl\+Context} (@Str Byte\+Pointer winname)
+\begin{DoxyCompactList}\small\item\em Sets the specified window as current Open\+GL context. \end{DoxyCompactList}\item 
+static native void {\bfseries set\+Open\+Gl\+Context} (@Str String winname)
+\item 
+static native void \hyperlink{group__highgui__opengl_ga71eba7e13ffedf80c0d621ae9acacfb8}{update\+Window} (@Str Byte\+Pointer winname)
+\begin{DoxyCompactList}\small\item\em Force window to redraw its context and call draw callback ( See cv\+::set\+Open\+Gl\+Draw\+Callback ). \end{DoxyCompactList}\item 
+static native void {\bfseries update\+Window} (@Str String winname)
+\item 
+static native Qt\+Font \hyperlink{group__highgui__qt_gaee437fe91204f6d6d9016c6a7b78850d}{font\+Qt} (@Str Byte\+Pointer name\+Font, int point\+Size, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar\+::all(0)\char`\"{}) Scalar color, int weight, int style, int spacing)
+\begin{DoxyCompactList}\small\item\em Creates the font to draw a text on an image. \end{DoxyCompactList}\item 
+static native Qt\+Font {\bfseries font\+Qt} (@Str Byte\+Pointer name\+Font)
+\item 
+static native Qt\+Font {\bfseries font\+Qt} (@Str String name\+Font, int point\+Size, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar\+::all(0)\char`\"{}) Scalar color, int weight, int style, int spacing)
+\item 
+static native Qt\+Font {\bfseries font\+Qt} (@Str String name\+Font)
+\item 
+static native void \hyperlink{group__highgui__qt_gaccc5f5d89abe18bc7adfd650dccb265f}{add\+Text} ( @Const @By\+Ref Mat img, @Str Byte\+Pointer text, @By\+Val Point org, @Const @By\+Ref Qt\+Font font)
+\begin{DoxyCompactList}\small\item\em Draws a text on the image. \end{DoxyCompactList}\item 
+static native void {\bfseries add\+Text} ( @Const @By\+Ref Mat img, @Str String text, @By\+Val Point org, @Const @By\+Ref Qt\+Font font)
+\item 
+static native void \hyperlink{group__highgui__qt_ga7595781df35faa10eff729ed3e41b5fd}{add\+Text} (@Const @By\+Ref Mat img, @Str Byte\+Pointer text, @By\+Val Point org, @Str Byte\+Pointer name\+Font, int point\+Size, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar\+::all(0)\char`\"{}) Scalar color, int weight, int style, int spacing)
+\begin{DoxyCompactList}\small\item\em Draws a text on the image. \end{DoxyCompactList}\item 
+static native void {\bfseries add\+Text} (@Const @By\+Ref Mat img, @Str Byte\+Pointer text, @By\+Val Point org, @Str Byte\+Pointer name\+Font)
+\item 
+static native void {\bfseries add\+Text} (@Const @By\+Ref Mat img, @Str String text, @By\+Val Point org, @Str String name\+Font, int point\+Size, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar\+::all(0)\char`\"{}) Scalar color, int weight, int style, int spacing)
+\item 
+static native void {\bfseries add\+Text} (@Const @By\+Ref Mat img, @Str String text, @By\+Val Point org, @Str String name\+Font)
+\item 
+static native void \hyperlink{group__highgui__qt_ga70784449604551e57ffd968370f887a8}{display\+Overlay} (@Str Byte\+Pointer winname, @Str Byte\+Pointer text, int delayms)
+\begin{DoxyCompactList}\small\item\em Displays a text on a window image as an overlay for a specified duration. \end{DoxyCompactList}\item 
+static native void {\bfseries display\+Overlay} (@Str Byte\+Pointer winname, @Str Byte\+Pointer text)
+\item 
+static native void {\bfseries display\+Overlay} (@Str String winname, @Str String text, int delayms)
+\item 
+static native void {\bfseries display\+Overlay} (@Str String winname, @Str String text)
+\item 
+static native void \hyperlink{group__highgui__qt_ga50de3d06722cc9fbc0054f3c83902f1f}{display\+Status\+Bar} (@Str Byte\+Pointer winname, @Str Byte\+Pointer text, int delayms)
+\begin{DoxyCompactList}\small\item\em Displays a text on the window statusbar during the specified period of time. \end{DoxyCompactList}\item 
+static native void {\bfseries display\+Status\+Bar} (@Str Byte\+Pointer winname, @Str Byte\+Pointer text)
+\item 
+static native void {\bfseries display\+Status\+Bar} (@Str String winname, @Str String text, int delayms)
+\item 
+static native void {\bfseries display\+Status\+Bar} (@Str String winname, @Str String text)
+\item 
+static native void \hyperlink{group__highgui__qt_gac1ea25caaa8647ae67972ac417776344}{save\+Window\+Parameters} (@Str Byte\+Pointer window\+Name)
+\begin{DoxyCompactList}\small\item\em Saves parameters of the specified window. \end{DoxyCompactList}\item 
+static native void {\bfseries save\+Window\+Parameters} (@Str String window\+Name)
+\item 
+static native void \hyperlink{group__highgui__qt_gacabd2c2030cc1e76d6537ecf12821fbf}{load\+Window\+Parameters} (@Str Byte\+Pointer window\+Name)
+\begin{DoxyCompactList}\small\item\em Loads parameters of the specified window. \end{DoxyCompactList}\item 
+static native void {\bfseries load\+Window\+Parameters} (@Str String window\+Name)
+\item 
+static native int {\bfseries start\+Loop} (Pt2\+Func\+\_\+int\+\_\+\+Pointer\+Pointer pt2\+Func, int argc, @Cast(\char`\"{}char$\ast$$\ast$\char`\"{}) Pointer\+Pointer argv)
+\item 
+static native int {\bfseries start\+Loop} (Pt2\+Func\+\_\+int\+\_\+\+Byte\+Pointer pt2\+Func, int argc, @Cast(\char`\"{}char$\ast$$\ast$\char`\"{}) @By\+Ptr\+Ptr Byte\+Pointer argv)
+\item 
+static native int {\bfseries start\+Loop} (Pt2\+Func\+\_\+int\+\_\+\+Byte\+Buffer pt2\+Func, int argc, @Cast(\char`\"{}char$\ast$$\ast$\char`\"{}) @By\+Ptr\+Ptr Byte\+Buffer argv)
+\item 
+static native int {\bfseries start\+Loop} (Pt2\+Func\+\_\+int\+\_\+byte\+\_\+\+\_\+ pt2\+Func, int argc, @Cast(\char`\"{}char$\ast$$\ast$\char`\"{}) @By\+Ptr\+Ptr byte\mbox{[}$\,$\mbox{]} argv)
+\item 
+static native void {\bfseries stop\+Loop} ()
+\item 
+static native int \hyperlink{group__highgui__qt_ga5dc4aba06e0c07797e0dcc3dc0920d4c}{create\+Button} ( @Str Byte\+Pointer bar\+\_\+name, Button\+Callback on\+\_\+change, Pointer userdata, int type, @Cast(\char`\"{}bool\char`\"{}) boolean initial\+\_\+button\+\_\+state)
+\begin{DoxyCompactList}\small\item\em Attaches a button to the control panel. \end{DoxyCompactList}\item 
+static native int {\bfseries create\+Button} ( @Str Byte\+Pointer bar\+\_\+name, Button\+Callback on\+\_\+change)
+\item 
+static native int {\bfseries create\+Button} ( @Str String bar\+\_\+name, Button\+Callback on\+\_\+change, Pointer userdata, int type, @Cast(\char`\"{}bool\char`\"{}) boolean initial\+\_\+button\+\_\+state)
+\item 
+static native int {\bfseries create\+Button} ( @Str String bar\+\_\+name, Button\+Callback on\+\_\+change)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{group__highgui__c_ga997b89fc958011c83e9b4cc4d4ad4325}{C\+V\+\_\+\+F\+O\+N\+T\+\_\+\+L\+I\+G\+HT} = 25
+\item 
+static final int \hyperlink{group__highgui__c_ga56cd33d4cb9f9b515efedaead4248259}{C\+V\+\_\+\+S\+T\+Y\+L\+E\+\_\+\+N\+O\+R\+M\+AL} = 0
+\item 
+static final int \hyperlink{group__highgui__c_ga4a134d3b4944f55e83c58bc64ad00a74}{C\+V\+\_\+\+P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+ON} = 0
+\item 
+static final int \hyperlink{group__highgui__c_ga831b812c11a02daadd9eb33d3254e2a1}{C\+V\+\_\+\+W\+N\+D\+\_\+\+P\+R\+O\+P\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+EN} = 0
+\item 
+static final int \hyperlink{group__highgui__c_gaacb100056c747de1e17b2c216dc0c495}{C\+V\+\_\+\+E\+V\+E\+N\+T\+\_\+\+M\+O\+U\+S\+E\+M\+O\+VE} = 0
+\item 
+static final int \hyperlink{group__highgui__c_ga1d9ec028c68ce5bc18849288ec24ae36}{C\+V\+\_\+\+E\+V\+E\+N\+T\+\_\+\+F\+L\+A\+G\+\_\+\+L\+B\+U\+T\+T\+ON} = 1
+\item 
+static final int {\bfseries H\+G\+\_\+\+A\+U\+T\+O\+S\+I\+ZE} = C\+V\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+A\+U\+T\+O\+S\+I\+ZE
+\item 
+static final int \hyperlink{group__highgui_ga2afebfdebe6ea3696f89b4a7628e72e3}{W\+I\+N\+D\+O\+W\+\_\+\+N\+O\+R\+M\+AL} = 0x00000000
+\item 
+static final int \hyperlink{group__highgui_ga600b654f3be9263c511b1588f7ea735d}{W\+N\+D\+\_\+\+P\+R\+O\+P\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+EN} = 0
+\item 
+static final int \hyperlink{group__highgui_ga6d55d280d31ae69d883e955f615fda29}{E\+V\+E\+N\+T\+\_\+\+M\+O\+U\+S\+E\+M\+O\+VE} = 0
+\item 
+static final int \hyperlink{group__highgui_gac433101d8b17471ae4cc5161be63c257}{E\+V\+E\+N\+T\+\_\+\+F\+L\+A\+G\+\_\+\+L\+B\+U\+T\+T\+ON} = 1
+\item 
+static final int \hyperlink{group__highgui_gae35aa28b68ea30b61b8b4b740ceca6e3}{Q\+T\+\_\+\+F\+O\+N\+T\+\_\+\+L\+I\+G\+HT} = 25
+\item 
+static final int \hyperlink{group__highgui_ga7818f5f33d8fac97fbdba68143ec8bb7}{Q\+T\+\_\+\+S\+T\+Y\+L\+E\+\_\+\+N\+O\+R\+M\+AL} = 0
+\item 
+static final int \hyperlink{group__highgui_gaae4d93a303a93e9c2ecece3adad55dc4}{Q\+T\+\_\+\+P\+U\+S\+H\+\_\+\+B\+U\+T\+T\+ON} = 0
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+opencv\+\_\+highgui.\+java\end{DoxyCompactItemize}

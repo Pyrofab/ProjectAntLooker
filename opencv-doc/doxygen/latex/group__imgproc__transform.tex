@@ -1,0 +1,832 @@
+\hypertarget{group__imgproc__transform}{}\section{Geometric Image Transformations}
+\label{group__imgproc__transform}\index{Geometric Image Transformations@{Geometric Image Transformations}}
+
+
+Dilates an image by using a specific structuring element.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_gaf6e6a7904dfb1520bdbe0026635d6dcb}\label{group__imgproc__transform_gaf6e6a7904dfb1520bdbe0026635d6dcb}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+resize} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Size dsize, double fx, double fy, int interpolation)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga0a829b34ea8a113115aef6a34873c869}\label{group__imgproc__transform_ga0a829b34ea8a113115aef6a34873c869}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+resize} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Size dsize)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga875fbff2d2c09dd9f1cf364396a950c9}\label{group__imgproc__transform_ga875fbff2d2c09dd9f1cf364396a950c9}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+resize} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val Size dsize, double fx, double fy, int interpolation)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_gadd9b4cfaff5be01de283dca4fd493e3d}\label{group__imgproc__transform_gadd9b4cfaff5be01de283dca4fd493e3d}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+resize} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val Size dsize)
+\item 
+static native void \hyperlink{group__imgproc__transform_ga0f7c28988998c3ae473a6708bdeef114}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+warp\+Affine} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Mat M, @By\+Val Size dsize, int flags, int border\+Mode, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar border\+Value)
+\begin{DoxyCompactList}\small\item\em Applies an affine transformation to an image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga7dd11efdfcdaaee49b3a69cdf099f9ac}\label{group__imgproc__transform_ga7dd11efdfcdaaee49b3a69cdf099f9ac}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+warp\+Affine} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Mat M, @By\+Val Size dsize)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_gac8f616b00342b8ef18d3d7e184499f98}\label{group__imgproc__transform_gac8f616b00342b8ef18d3d7e184499f98}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+warp\+Affine} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val U\+Mat M, @By\+Val Size dsize, int flags, int border\+Mode, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar border\+Value)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga947de0abed0cf920fd4ff696b89e66ed}\label{group__imgproc__transform_ga947de0abed0cf920fd4ff696b89e66ed}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+warp\+Affine} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val U\+Mat M, @By\+Val Size dsize)
+\item 
+static native void \hyperlink{group__imgproc__transform_ga75e1d893d7bf652cd99d608259c00c24}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+warp\+Perspective} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Mat M, @By\+Val Size dsize, int flags, int border\+Mode, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar border\+Value)
+\begin{DoxyCompactList}\small\item\em Applies a perspective transformation to an image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__imgproc__transform_gaac20223cd81fd0b404970922c5a20da8}\label{group__imgproc__transform_gaac20223cd81fd0b404970922c5a20da8}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+warp\+Perspective} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Mat M, @By\+Val Size dsize)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga7e99b9efc66c95a5252b47d24e5d0997}\label{group__imgproc__transform_ga7e99b9efc66c95a5252b47d24e5d0997}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+warp\+Perspective} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val U\+Mat M, @By\+Val Size dsize, int flags, int border\+Mode, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar border\+Value)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga4bc0592720ed8c466f44042bcbb65481}\label{group__imgproc__transform_ga4bc0592720ed8c466f44042bcbb65481}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+warp\+Perspective} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val U\+Mat M, @By\+Val Size dsize)
+\item 
+static native void \hyperlink{group__imgproc__transform_gaa9d03105d426e5424af34452bee91554}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+remap} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Mat map1, @By\+Val Mat map2, int interpolation, int border\+Mode, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar border\+Value)
+\begin{DoxyCompactList}\small\item\em Applies a generic geometrical transformation to an image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__imgproc__transform_gaa5e9525556ee101aa0334219cf196c0e}\label{group__imgproc__transform_gaa5e9525556ee101aa0334219cf196c0e}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+remap} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Mat map1, @By\+Val Mat map2, int interpolation)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga6a314f42962610c53fd9e6d9fce39990}\label{group__imgproc__transform_ga6a314f42962610c53fd9e6d9fce39990}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+remap} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val U\+Mat map1, @By\+Val U\+Mat map2, int interpolation, int border\+Mode, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar border\+Value)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_gae40e2fd211c9fd18d046eff7840b5181}\label{group__imgproc__transform_gae40e2fd211c9fd18d046eff7840b5181}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+remap} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val U\+Mat map1, @By\+Val U\+Mat map2, int interpolation)
+\item 
+static native void \hyperlink{group__imgproc__transform_ga5c40c7a1051387a05e1e30b6aaa6dbfd}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+convert\+Maps} ( @By\+Val Mat map1, @By\+Val Mat map2, @By\+Val Mat dstmap1, @By\+Val Mat dstmap2, int dstmap1type, @Cast(\char`\"{}bool\char`\"{}) boolean nninterpolation)
+\begin{DoxyCompactList}\small\item\em Converts image transformation maps from one representation to another. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga38edfd4eb9350c8624f9ac8d6c5a2105}\label{group__imgproc__transform_ga38edfd4eb9350c8624f9ac8d6c5a2105}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+convert\+Maps} ( @By\+Val Mat map1, @By\+Val Mat map2, @By\+Val Mat dstmap1, @By\+Val Mat dstmap2, int dstmap1type)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_gacc7ce32b309a532e190b87698e607bc5}\label{group__imgproc__transform_gacc7ce32b309a532e190b87698e607bc5}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+convert\+Maps} ( @By\+Val U\+Mat map1, @By\+Val U\+Mat map2, @By\+Val U\+Mat dstmap1, @By\+Val U\+Mat dstmap2, int dstmap1type, @Cast(\char`\"{}bool\char`\"{}) boolean nninterpolation)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga4116bc34873bc0b9ceaf283ac1ef5b0f}\label{group__imgproc__transform_ga4116bc34873bc0b9ceaf283ac1ef5b0f}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+convert\+Maps} ( @By\+Val U\+Mat map1, @By\+Val U\+Mat map2, @By\+Val U\+Mat dstmap1, @By\+Val U\+Mat dstmap2, int dstmap1type)
+\item 
+static native Mat \hyperlink{group__imgproc__transform_gab3d97da00a90c299d2899587dc60c4cd}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Rotation\+Matrix2D} ( @By\+Val Point2f center, double angle, double scale)
+\begin{DoxyCompactList}\small\item\em Calculates an affine matrix of 2D rotation. \end{DoxyCompactList}\item 
+static native Mat \hyperlink{group__imgproc__transform_ga9c65e08c8634d7f7d24ab403dac41b26}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Perspective\+Transform} ( @Const Point2f src, @Const Point2f dst)
+\item 
+static native Mat \hyperlink{group__imgproc__transform_ga6aff4eb184828799fb795a52309aa8e6}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Affine\+Transform} ( @Const Point2f src, @Const Point2f dst)
+\begin{DoxyCompactList}\small\item\em Calculates an affine transform from three pairs of the corresponding points. \end{DoxyCompactList}\item 
+static native void \hyperlink{group__imgproc__transform_ga4905a785b488db4f1dbb485efa98356c}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+invert\+Affine\+Transform} ( @By\+Val Mat M, @By\+Val Mat iM)
+\begin{DoxyCompactList}\small\item\em Inverts an affine transformation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__imgproc__transform_gad6e485924dd64cc649424d787d8fab29}\label{group__imgproc__transform_gad6e485924dd64cc649424d787d8fab29}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+invert\+Affine\+Transform} ( @By\+Val U\+Mat M, @By\+Val U\+Mat iM)
+\item 
+static native Mat \hyperlink{group__imgproc__transform_gaf64ca469bb365e0b906e40ecde6eefe5}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Perspective\+Transform} ( @By\+Val Mat src, @By\+Val Mat dst)
+\begin{DoxyCompactList}\small\item\em Calculates a perspective transform from four pairs of the corresponding points. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__imgproc__transform_gacef8fadffa20fc154ff81e2e7fe40d67}\label{group__imgproc__transform_gacef8fadffa20fc154ff81e2e7fe40d67}} 
+static native Mat {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Perspective\+Transform} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_gaf9fc15e742da3e7e69078fc070877489}\label{group__imgproc__transform_gaf9fc15e742da3e7e69078fc070877489}} 
+static native Mat {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Affine\+Transform} ( @By\+Val Mat src, @By\+Val Mat dst)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_gaeade0f6305705ef5abd54be6250e6114}\label{group__imgproc__transform_gaeade0f6305705ef5abd54be6250e6114}} 
+static native Mat {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Affine\+Transform} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst)
+\item 
+static native void \hyperlink{group__imgproc__transform_gae176a226575415412c0b6ea67126e54e}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Rect\+Sub\+Pix} ( @By\+Val Mat image, @By\+Val Size patch\+Size, @By\+Val Point2f center, @By\+Val Mat patch, int patch\+Type)
+\begin{DoxyCompactList}\small\item\em Retrieves a pixel rectangle from an image with sub-\/pixel accuracy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga3e5ee330e4723639ed6c777fe5e159f2}\label{group__imgproc__transform_ga3e5ee330e4723639ed6c777fe5e159f2}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Rect\+Sub\+Pix} ( @By\+Val Mat image, @By\+Val Size patch\+Size, @By\+Val Point2f center, @By\+Val Mat patch)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga18f0f876cc01e3fbc483fdabfb3ab4ba}\label{group__imgproc__transform_ga18f0f876cc01e3fbc483fdabfb3ab4ba}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Rect\+Sub\+Pix} ( @By\+Val U\+Mat image, @By\+Val Size patch\+Size, @By\+Val Point2f center, @By\+Val U\+Mat patch, int patch\+Type)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga877ca823666059b211ff727b90a85290}\label{group__imgproc__transform_ga877ca823666059b211ff727b90a85290}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Rect\+Sub\+Pix} ( @By\+Val U\+Mat image, @By\+Val Size patch\+Size, @By\+Val Point2f center, @By\+Val U\+Mat patch)
+\item 
+static native void \hyperlink{group__imgproc__transform_ga525e11d8b35ba086ca22b5ea9307c6a7}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+log\+Polar} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Point2f center, double M, int flags)
+\begin{DoxyCompactList}\small\item\em Remaps an image to semilog-\/polar coordinates space. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga4d25419504c465efa8ec059ffa4b71ba}\label{group__imgproc__transform_ga4d25419504c465efa8ec059ffa4b71ba}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+log\+Polar} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val Point2f center, double M, int flags)
+\item 
+static native void \hyperlink{group__imgproc__transform_ga46939c6aff509b593336b89237a563d3}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+linear\+Polar} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Point2f center, double max\+Radius, int flags)
+\begin{DoxyCompactList}\small\item\em Remaps an image to polar coordinates space. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga3ed1a74dc7f5ba30d970b0d15630a743}\label{group__imgproc__transform_ga3ed1a74dc7f5ba30d970b0d15630a743}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+linear\+Polar} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val Point2f center, double max\+Radius, int flags)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga375e610285062a3a1180615b79a8ee94}\label{group__imgproc__transform_ga375e610285062a3a1180615b79a8ee94}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+undistort} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) Mat new\+Camera\+Matrix)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga3d825d65865c08b96997a987ee8811ce}\label{group__imgproc__transform_ga3d825d65865c08b96997a987ee8811ce}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+undistort} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga4ff2e21ddf10fb824ac7ee240ed14dc9}\label{group__imgproc__transform_ga4ff2e21ddf10fb824ac7ee240ed14dc9}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+undistort} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat new\+Camera\+Matrix)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga44c9df70a2d7536c2db561663fdf27ce}\label{group__imgproc__transform_ga44c9df70a2d7536c2db561663fdf27ce}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+undistort} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs)
+\item 
+static native void \hyperlink{group__imgproc__transform_gaf3c4192c811a2204d996dacf82f23564}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+init\+Undistort\+Rectify\+Map} ( @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val Mat R, @By\+Val Mat new\+Camera\+Matrix, @By\+Val Size size, int m1type, @By\+Val Mat map1, @By\+Val Mat map2)
+\begin{DoxyCompactList}\small\item\em Computes the undistortion and rectification transformation map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga8a0564b5e37ec7d4c346fbad28d9760d}\label{group__imgproc__transform_ga8a0564b5e37ec7d4c346fbad28d9760d}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+init\+Undistort\+Rectify\+Map} ( @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val U\+Mat R, @By\+Val U\+Mat new\+Camera\+Matrix, @By\+Val Size size, int m1type, @By\+Val U\+Mat map1, @By\+Val U\+Mat map2)
+\item 
+static native float \hyperlink{group__imgproc__transform_ga797a671a89ffc5375a87366fbbb86c13}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+init\+Wide\+Angle\+Proj\+Map} ( @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val Size image\+Size, int dest\+Image\+Width, int m1type, @By\+Val Mat map1, @By\+Val Mat map2, int proj\+Type, double alpha)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga6e408a41a589ec2bf508f17af2286c7c}\label{group__imgproc__transform_ga6e408a41a589ec2bf508f17af2286c7c}} 
+static native float {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+init\+Wide\+Angle\+Proj\+Map} ( @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val Size image\+Size, int dest\+Image\+Width, int m1type, @By\+Val Mat map1, @By\+Val Mat map2)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga5bcc1506c8b48bb2a0c8c7c44f63b70c}\label{group__imgproc__transform_ga5bcc1506c8b48bb2a0c8c7c44f63b70c}} 
+static native float {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+init\+Wide\+Angle\+Proj\+Map} ( @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val Size image\+Size, int dest\+Image\+Width, int m1type, @By\+Val U\+Mat map1, @By\+Val U\+Mat map2, int proj\+Type, double alpha)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_gabd59413d81a2a999b9437f22d27a24fc}\label{group__imgproc__transform_gabd59413d81a2a999b9437f22d27a24fc}} 
+static native float {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+init\+Wide\+Angle\+Proj\+Map} ( @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val Size image\+Size, int dest\+Image\+Width, int m1type, @By\+Val U\+Mat map1, @By\+Val U\+Mat map2)
+\item 
+static native Mat \hyperlink{group__imgproc__transform_gadf9fb3deefd512a073b449832fe60679}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Default\+New\+Camera\+Matrix} ( @By\+Val Mat camera\+Matrix, @By\+Val(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size imgsize, @Cast(\char`\"{}bool\char`\"{}) boolean center\+Principal\+Point)
+\begin{DoxyCompactList}\small\item\em Returns the default new camera matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__imgproc__transform_gaedb64877b79e75f7e81d5f11a07e17ac}\label{group__imgproc__transform_gaedb64877b79e75f7e81d5f11a07e17ac}} 
+static native Mat {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Default\+New\+Camera\+Matrix} ( @By\+Val Mat camera\+Matrix)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga92946780977d683b3185be16382896c0}\label{group__imgproc__transform_ga92946780977d683b3185be16382896c0}} 
+static native Mat {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Default\+New\+Camera\+Matrix} ( @By\+Val U\+Mat camera\+Matrix, @By\+Val(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size imgsize, @Cast(\char`\"{}bool\char`\"{}) boolean center\+Principal\+Point)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga8c2618a6f671b8cd211b32d88cc19426}\label{group__imgproc__transform_ga8c2618a6f671b8cd211b32d88cc19426}} 
+static native Mat {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Default\+New\+Camera\+Matrix} ( @By\+Val U\+Mat camera\+Matrix)
+\item 
+static native void \hyperlink{group__imgproc__transform_gaacf4ed74dd09b28d673cc4b0f0257aa8}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+undistort\+Points} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) Mat R, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) Mat P)
+\begin{DoxyCompactList}\small\item\em Computes the ideal point coordinates from the observed point coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga643d90bd3869339b2e1a72640791859d}\label{group__imgproc__transform_ga643d90bd3869339b2e1a72640791859d}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+undistort\+Points} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga7105e7a0bb64b7cd322241162fe27e1f}\label{group__imgproc__transform_ga7105e7a0bb64b7cd322241162fe27e1f}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+undistort\+Points} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat R, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat P)
+\item 
+\mbox{\Hypertarget{group__imgproc__transform_ga40062a82e0bac148d8b183c5e2d6eaec}\label{group__imgproc__transform_ga40062a82e0bac148d8b183c5e2d6eaec}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+undistort\+Points} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{group__imgproc__transform_ga6d084cc56ec2d2c46a7df1a2c0dad300}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+I\+N\+T\+E\+R\+\_\+\+N\+E\+A\+R\+E\+ST} = 0
+\item 
+static final int \hyperlink{group__imgproc__transform_ga076a64e7bcb513b6ff755fccecf7d4bf}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+I\+N\+T\+E\+R\+\_\+\+B\+I\+TS} = 5
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Dilates an image by using a specific structuring element. 
+
+Transforms an image to compensate for lens distortion.
+
+The functions in this section perform various geometrical transformations of 2D images. They do not change the image content but deform the pixel grid and map this deformed grid to the destination image. In fact, to avoid sampling artifacts, the mapping is done in the reverse order, from destination to the source. That is, for each pixel $(x, y)$ of the destination image, the functions compute coordinates of the corresponding \char`\"{}donor\char`\"{} pixel in the source image and copy the pixel value\+: 
+
+\[\texttt{dst} (x,y)= \texttt{src} (f_x(x,y), f_y(x,y))\] 
+
+In case when you specify the forward mapping $\left<g_x, g_y\right>: \texttt{src} \rightarrow \texttt{dst}$, the Open\+CV functions first compute the corresponding inverse mapping $\left<f_x, f_y\right>: \texttt{dst} \rightarrow \texttt{src}$ and then use the above formula. 
+
+The actual implementations of the geometrical transformations, from the most generic remap and to the simplest and the fastest resize, need to solve two main problems with the above formula\+: 
+
+
+\begin{DoxyItemize}
+\item Extrapolation of non-\/existing pixels. Similarly to the filtering functions described in the previous section, for some $(x,y)$, either one of $f_x(x,y)$, or $f_y(x,y)$, or both of them may fall outside of the image. In this case, an extrapolation method needs to be used. Open\+CV provides the same selection of extrapolation methods as in the filtering functions. In addition, it provides the method B\+O\+R\+D\+E\+R\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT. This means that the corresponding pixels in the destination image will not be modified at all. 
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item Interpolation of pixel values. Usually $f_x(x,y)$ and $f_y(x,y)$ are floating-\/point numbers. This means that $\left<f_x, f_y\right>$ can be either an affine or perspective transformation, or radial lens distortion correction, and so on. So, a pixel value at fractional coordinates needs to be retrieved. In the simplest case, the coordinates can be just rounded to the nearest integer coordinates and the corresponding pixel can be used. This is called a nearest-\/neighbor interpolation. However, a better result can be achieved by using more sophisticated \href{http://en.wikipedia.org/wiki/Multivariate_interpolation}{\tt interpolation methods} , where a polynomial function is fit into some neighborhood of the computed pixel $(f_x(x,y), f_y(x,y))$, and then the value of the polynomial at $(f_x(x,y), f_y(x,y))$ is taken as the interpolated pixel value. In Open\+CV, you can choose between several interpolation methods. See resize for details. 
+\end{DoxyItemize}
+
+imgproc\+\_\+filter 
+
+interpolation algorithm
+
+The function dilates the source image using the specified structuring element that determines the shape of a pixel neighborhood over which the maximum is taken\+: \[\texttt{dst} (x,y) = \max _{(x',y'): \, \texttt{element} (x',y') \ne0 } \texttt{src} (x+x',y+y')\] 
+
+The function supports the in-\/place mode. Dilation can be applied several ( iterations ) times. In case of multi-\/channel images, each channel is processed independently. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & input image; the number of channels can be arbitrary, but the depth should be one of C\+V\+\_\+8U, C\+V\+\_\+16U, C\+V\+\_\+16S, C\+V\+\_\+32F or C\+V\+\_\+64F. \\
+\hline
+{\em dst} & output image of the same size and type as src@code . \\
+\hline
+{\em kernel} & structuring element used for dilation; if elemenat=Mat(), a 3 x 3 rectangular structuring element is used. Kernel can be created using get\+Structuring\+Element \\
+\hline
+{\em anchor} & position of the anchor within the element; default value (-\/1, -\/1) means that the anchor is at the element center. \\
+\hline
+{\em iterations} & number of times dilation is applied. \\
+\hline
+{\em border\+Type} & pixel extrapolation method, see cv\+::\+Border\+Types \\
+\hline
+{\em border\+Value} & border value in case of a constant border \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__imgproc__filter_ga8c0cbcc8dd271aada560698924d19cb2}{erode}, morphology\+Ex, \hyperlink{group__imgproc__filter_ga18af407581ba537b9095d14090cce31a}{get\+Structuring\+Element} / (\char`\"{}cv\char`\"{}) public static native void dilate(  Mat src,  Mat dst,  Mat kernel, (null\+Value = \char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point anchor, int iterations/$\ast$=1$\ast$/, int border\+Type/$\ast$=cv\+::\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+N\+S\+T\+A\+NT$\ast$/,  (null\+Value = \char`\"{}cv\+::\+Scalar(cv\+::morphology\+Default\+Border\+Value())\char`\"{}) Scalar border\+Value ); (\char`\"{}cv\char`\"{}) public static native void dilate(  Mat src,  Mat dst,  Mat kernel ); (\char`\"{}cv\char`\"{}) public static native void dilate(  U\+Mat src,  U\+Mat dst,  U\+Mat kernel, (null\+Value = \char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point anchor, int iterations/$\ast$=1$\ast$/, int border\+Type/$\ast$=cv\+::\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+N\+S\+T\+A\+NT$\ast$/,  (null\+Value = \char`\"{}cv\+::\+Scalar(cv\+::morphology\+Default\+Border\+Value())\char`\"{}) Scalar border\+Value ); (\char`\"{}cv\char`\"{}) public static native void dilate(  U\+Mat src,  U\+Mat dst,  U\+Mat kernel );
+\end{DoxySeeAlso}
+/$\ast$$\ast$\+Performs advanced morphological transformations. 
+
+The function morphology\+Ex can perform advanced morphological transformations using an erosion and dilation as basic operations. 
+
+Any of the operations can be done in-\/place. In case of multi-\/channel images, each channel is processed independently. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Source image. The number of channels can be arbitrary. The depth should be one of C\+V\+\_\+8U, C\+V\+\_\+16U, C\+V\+\_\+16S, C\+V\+\_\+32F or C\+V\+\_\+64F. \\
+\hline
+{\em dst} & Destination image of the same size and type as source image. \\
+\hline
+{\em op} & Type of a morphological operation, see cv\+::\+Morph\+Types \\
+\hline
+{\em kernel} & Structuring element. It can be created using cv\+::get\+Structuring\+Element. \\
+\hline
+{\em anchor} & Anchor position with the kernel. Negative values mean that the anchor is at the kernel center. \\
+\hline
+{\em iterations} & Number of times erosion and dilation are applied. \\
+\hline
+{\em border\+Type} & Pixel extrapolation method, see cv\+::\+Border\+Types \\
+\hline
+{\em border\+Value} & Border value in case of a constant border. The default value has a special meaning. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+dilate, \hyperlink{group__imgproc__filter_ga8c0cbcc8dd271aada560698924d19cb2}{erode}, \hyperlink{group__imgproc__filter_ga18af407581ba537b9095d14090cce31a}{get\+Structuring\+Element} $\ast$/ (\char`\"{}cv\char`\"{}) public static native void morphology\+Ex(  Mat src,  Mat dst, int op,  Mat kernel, (null\+Value = \char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point anchor, int iterations/$\ast$=1$\ast$/, int border\+Type/$\ast$=cv\+::\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+N\+S\+T\+A\+NT$\ast$/,  (null\+Value = \char`\"{}cv\+::\+Scalar(cv\+::morphology\+Default\+Border\+Value())\char`\"{}) Scalar border\+Value ); (\char`\"{}cv\char`\"{}) public static native void morphology\+Ex(  Mat src,  Mat dst, int op,  Mat kernel ); (\char`\"{}cv\char`\"{}) public static native void morphology\+Ex(  U\+Mat src,  U\+Mat dst, int op,  U\+Mat kernel, (null\+Value = \char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point anchor, int iterations/$\ast$=1$\ast$/, int border\+Type/$\ast$=cv\+::\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+N\+S\+T\+A\+NT$\ast$/,  (null\+Value = \char`\"{}cv\+::\+Scalar(cv\+::morphology\+Default\+Border\+Value())\char`\"{}) Scalar border\+Value ); (\char`\"{}cv\char`\"{}) public static native void morphology\+Ex(  U\+Mat src,  U\+Mat dst, int op,  U\+Mat kernel );
+\end{DoxySeeAlso}
+/$\ast$$\ast$ \textbackslash{}  imgproc\+\_\+filter 
+
+/$\ast$$\ast$\+Resizes an image. 
+
+The function resize resizes the image src down to or up to the specified size. Note that the initial dst type or size are not taken into account. Instead, the size and type are derived from the
+\begin{DoxyCode}
+src 
+\end{DoxyCode}
+ ,
+\begin{DoxyCode}
+dsize 
+\end{DoxyCode}
+ ,
+\begin{DoxyCode}
+fx 
+\end{DoxyCode}
+ , and
+\begin{DoxyCode}
+fy 
+\end{DoxyCode}
+ . If you want to resize src so that it fits the pre-\/created dst, you may call the function as follows\+: 
+\begin{DoxyPre}
+\begin{DoxyCode}
+\textcolor{comment}{// explicitly specify dsize=dst.size(); fx and fy will be computed from that.}
+resize(src, dst, dst.size(), 0, 0, interpolation);
+\end{DoxyCode}
+ \end{DoxyPre}
+ If you want to decimate the image by factor of 2 in each direction, you can call the function this way\+: 
+\begin{DoxyPre}
+\begin{DoxyCode}
+\textcolor{comment}{// specify fx and fy and let the function compute the destination image size.}
+resize(src, dst, Size(), 0.5, 0.5, interpolation);
+\end{DoxyCode}
+ \end{DoxyPre}
+ To shrink an image, it will generally look best with cv\+::\+I\+N\+T\+E\+R\+\_\+\+A\+R\+EA interpolation, whereas to enlarge an image, it will generally look best with cv\+::\+I\+N\+T\+E\+R\+\_\+\+C\+U\+B\+IC (slow) or cv\+::\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+AR (faster but still looks OK). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & input image. \\
+\hline
+{\em dst} & output image; it has the size dsize (when it is non-\/zero) or the size computed from src.\+size(), fx, and fy; the type of dst is the same as of src. \\
+\hline
+{\em dsize} & output image size; if it equals zero, it is computed as\+: \[\texttt{dsize = Size(round(fx*src.cols), round(fy*src.rows))}\] Either dsize or both fx and fy must be non-\/zero. \\
+\hline
+{\em fx} & scale factor along the horizontal axis; when it equals 0, it is computed as \[\texttt{(double)dsize.width/src.cols}\] \\
+\hline
+{\em fy} & scale factor along the vertical axis; when it equals 0, it is computed as \[\texttt{(double)dsize.height/src.rows}\] \\
+\hline
+{\em interpolation} & interpolation method, see cv\+::\+Interpolation\+Flags \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__imgproc__transform_ga0f7c28988998c3ae473a6708bdeef114}{warp\+Affine}, \hyperlink{group__imgproc__transform_ga75e1d893d7bf652cd99d608259c00c24}{warp\+Perspective}, \hyperlink{group__imgproc__transform_gaa9d03105d426e5424af34452bee91554}{remap}
+\end{DoxySeeAlso}
+imgproc\+\_\+filter 
+
+/$\ast$$\ast$
+
+The function transforms an image to compensate radial and tangential lens distortion. 
+
+The function is simply a combination of cv\+::init\+Undistort\+Rectify\+Map (with unity R ) and cv\+::remap (with bilinear interpolation). See the former function for details of the transformation being performed. 
+
+Those pixels in the destination image, for which there is no correspondent pixels in the source image, are filled with zeros (black color). 
+
+A particular subset of the source image that will be visible in the corrected image can be regulated by new\+Camera\+Matrix. You can use cv\+::get\+Optimal\+New\+Camera\+Matrix to compute the appropriate new\+Camera\+Matrix depending on your requirements. 
+
+The camera matrix and the distortion parameters can be determined using cv\+::calibrate\+Camera. If the resolution of images is different from the resolution used at the calibration stage, $f_x, f_y, c_x$ and $c_y$ need to be scaled accordingly, while the distortion coefficients remain the same. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Input (distorted) image. \\
+\hline
+{\em dst} & Output (corrected) image that has the same size and type as src . \\
+\hline
+{\em camera\+Matrix} & Input camera matrix $A = \vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}$ . \\
+\hline
+{\em dist\+Coeffs} & Input vector of distortion coefficients $(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6[, s_1, s_2, s_3, s_4[, \tau_x, \tau_y]]]])$ of 4, 5, 8, 12 or 14 elements. If the vector is N\+U\+L\+L/empty, the zero distortion coefficients are assumed. \\
+\hline
+{\em new\+Camera\+Matrix} & Camera matrix of the distorted image. By default, it is the same as camera\+Matrix but you may additionally scale and shift the result by using a different matrix. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__imgproc__transform_ga5c40c7a1051387a05e1e30b6aaa6dbfd}\label{group__imgproc__transform_ga5c40c7a1051387a05e1e30b6aaa6dbfd}} 
+\index{Geometric Image Transformations@{Geometric Image Transformations}!convert\+Maps@{convert\+Maps}}
+\index{convert\+Maps@{convert\+Maps}!Geometric Image Transformations@{Geometric Image Transformations}}
+\subsubsection{\texorpdfstring{convert\+Maps()}{convertMaps()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+convert\+Maps (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{map1,  }\item[{@By\+Val Mat}]{map2,  }\item[{@By\+Val Mat}]{dstmap1,  }\item[{@By\+Val Mat}]{dstmap2,  }\item[{int}]{dstmap1type,  }\item[{@Cast(\char`\"{}bool\char`\"{}) boolean}]{nninterpolation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts image transformation maps from one representation to another. 
+
+The function converts a pair of maps for remap from one representation to another. The following options ( (map1.\+type(), map2.\+type()) $\rightarrow$ (dstmap1.\+type(), dstmap2.\+type()) ) are supported\+: 
+
+
+\begin{DoxyItemize}
+\item $\texttt{(CV_32FC1, CV_32FC1)} \rightarrow \texttt{(CV_16SC2, CV_16UC1)}$. This is the most frequently used conversion operation, in which the original floating-\/point maps (see remap ) are converted to a more compact and much faster fixed-\/point representation. The first output array contains the rounded coordinates and the second array (created only when nninterpolation=false ) contains indices in the interpolation tables. 
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item $\texttt{(CV_32FC2)} \rightarrow \texttt{(CV_16SC2, CV_16UC1)}$. The same as above but the original maps are stored in one 2-\/channel matrix. 
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item Reverse conversion. Obviously, the reconstructed floating-\/point maps will not be exactly the same as the originals. 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em map1} & The first input map of type C\+V\+\_\+16\+S\+C2, C\+V\+\_\+32\+F\+C1, or C\+V\+\_\+32\+F\+C2 . \\
+\hline
+{\em map2} & The second input map of type C\+V\+\_\+16\+U\+C1, C\+V\+\_\+32\+F\+C1, or none (empty matrix), respectively. \\
+\hline
+{\em dstmap1} & The first output map that has the type dstmap1type and the same size as src . \\
+\hline
+{\em dstmap2} & The second output map. \\
+\hline
+{\em dstmap1type} & Type of the first output map that should be C\+V\+\_\+16\+S\+C2, C\+V\+\_\+32\+F\+C1, or C\+V\+\_\+32\+F\+C2 . \\
+\hline
+{\em nninterpolation} & Flag indicating whether the fixed-\/point maps are used for the nearest-\/neighbor or for a more complex interpolation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__imgproc__transform_gaa9d03105d426e5424af34452bee91554}{remap}, undistort, \hyperlink{group__imgproc__transform_gaf3c4192c811a2204d996dacf82f23564}{init\+Undistort\+Rectify\+Map} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__imgproc__transform_ga6aff4eb184828799fb795a52309aa8e6}\label{group__imgproc__transform_ga6aff4eb184828799fb795a52309aa8e6}} 
+\index{Geometric Image Transformations@{Geometric Image Transformations}!get\+Affine\+Transform@{get\+Affine\+Transform}}
+\index{get\+Affine\+Transform@{get\+Affine\+Transform}!Geometric Image Transformations@{Geometric Image Transformations}}
+\subsubsection{\texorpdfstring{get\+Affine\+Transform()}{getAffineTransform()}}
+{\footnotesize\ttfamily static native Mat org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Affine\+Transform (\begin{DoxyParamCaption}\item[{@Const Point2f}]{src,  }\item[{@Const Point2f}]{dst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calculates an affine transform from three pairs of the corresponding points. 
+
+The function calculates the $2 \times 3$ matrix of an affine transform so that\+: 
+
+\[\begin{bmatrix} x'_i \\ y'_i \end{bmatrix} = \texttt{map_matrix} \cdot \begin{bmatrix} x_i \\ y_i \\ 1 \end{bmatrix}\] 
+
+where 
+
+\[dst(i)=(x'_i,y'_i), src(i)=(x_i, y_i), i=0,1,2\] 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Coordinates of triangle vertices in the source image. \\
+\hline
+{\em dst} & Coordinates of the corresponding triangle vertices in the destination image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__imgproc__transform_ga0f7c28988998c3ae473a6708bdeef114}{warp\+Affine}, transform 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__imgproc__transform_gadf9fb3deefd512a073b449832fe60679}\label{group__imgproc__transform_gadf9fb3deefd512a073b449832fe60679}} 
+\index{Geometric Image Transformations@{Geometric Image Transformations}!get\+Default\+New\+Camera\+Matrix@{get\+Default\+New\+Camera\+Matrix}}
+\index{get\+Default\+New\+Camera\+Matrix@{get\+Default\+New\+Camera\+Matrix}!Geometric Image Transformations@{Geometric Image Transformations}}
+\subsubsection{\texorpdfstring{get\+Default\+New\+Camera\+Matrix()}{getDefaultNewCameraMatrix()}}
+{\footnotesize\ttfamily static native Mat org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Default\+New\+Camera\+Matrix (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{camera\+Matrix,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size}]{imgsize,  }\item[{@Cast(\char`\"{}bool\char`\"{}) boolean}]{center\+Principal\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the default new camera matrix. 
+
+The function returns the camera matrix that is either an exact copy of the input camera\+Matrix (when center\+Prinicipal\+Point=false ), or the modified one (when center\+Principal\+Point=true). 
+
+In the latter case, the new camera matrix will be\+: 
+
+\[\begin{bmatrix} f_x && 0 && ( \texttt{imgSize.width} -1)*0.5 \\ 0 && f_y && ( \texttt{imgSize.height} -1)*0.5 \\ 0 && 0 && 1 \end{bmatrix} ,\] 
+
+where $f_x$ and $f_y$ are $(0,0)$ and $(1,1)$ elements of camera\+Matrix, respectively. 
+
+By default, the undistortion functions in Open\+CV (see init\+Undistort\+Rectify\+Map, undistort) do not move the principal point. However, when you work with stereo, it is important to move the principal points in both views to the same y-\/coordinate (which is required by most of stereo correspondence algorithms), and may be to the same x-\/coordinate too. So, you can form the new camera matrix for each view where the principal points are located at the center. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Matrix} & Input camera matrix. \\
+\hline
+{\em imgsize} & Camera view image size in pixels. \\
+\hline
+{\em center\+Principal\+Point} & Location of the principal point in the new camera matrix. The parameter indicates whether this location should be at the image center or not. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__imgproc__transform_ga9c65e08c8634d7f7d24ab403dac41b26}\label{group__imgproc__transform_ga9c65e08c8634d7f7d24ab403dac41b26}} 
+\index{Geometric Image Transformations@{Geometric Image Transformations}!get\+Perspective\+Transform@{get\+Perspective\+Transform}}
+\index{get\+Perspective\+Transform@{get\+Perspective\+Transform}!Geometric Image Transformations@{Geometric Image Transformations}}
+\subsubsection{\texorpdfstring{get\+Perspective\+Transform()}{getPerspectiveTransform()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static native Mat org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Perspective\+Transform (\begin{DoxyParamCaption}\item[{@Const Point2f}]{src,  }\item[{@Const Point2f}]{dst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+returns 3x3 perspective transformation for the corresponding 4 point pairs. \mbox{\Hypertarget{group__imgproc__transform_gaf64ca469bb365e0b906e40ecde6eefe5}\label{group__imgproc__transform_gaf64ca469bb365e0b906e40ecde6eefe5}} 
+\index{Geometric Image Transformations@{Geometric Image Transformations}!get\+Perspective\+Transform@{get\+Perspective\+Transform}}
+\index{get\+Perspective\+Transform@{get\+Perspective\+Transform}!Geometric Image Transformations@{Geometric Image Transformations}}
+\subsubsection{\texorpdfstring{get\+Perspective\+Transform()}{getPerspectiveTransform()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static native Mat org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Perspective\+Transform (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calculates a perspective transform from four pairs of the corresponding points. 
+
+The function calculates the $3 \times 3$ matrix of a perspective transform so that\+: 
+
+\[\begin{bmatrix} t_i x'_i \\ t_i y'_i \\ t_i \end{bmatrix} = \texttt{map_matrix} \cdot \begin{bmatrix} x_i \\ y_i \\ 1 \end{bmatrix}\] 
+
+where 
+
+\[dst(i)=(x'_i,y'_i), src(i)=(x_i, y_i), i=0,1,2,3\] 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Coordinates of quadrangle vertices in the source image. \\
+\hline
+{\em dst} & Coordinates of the corresponding quadrangle vertices in the destination image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+find\+Homography, \hyperlink{group__imgproc__transform_ga75e1d893d7bf652cd99d608259c00c24}{warp\+Perspective}, perspective\+Transform 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__imgproc__transform_gae176a226575415412c0b6ea67126e54e}\label{group__imgproc__transform_gae176a226575415412c0b6ea67126e54e}} 
+\index{Geometric Image Transformations@{Geometric Image Transformations}!get\+Rect\+Sub\+Pix@{get\+Rect\+Sub\+Pix}}
+\index{get\+Rect\+Sub\+Pix@{get\+Rect\+Sub\+Pix}!Geometric Image Transformations@{Geometric Image Transformations}}
+\subsubsection{\texorpdfstring{get\+Rect\+Sub\+Pix()}{getRectSubPix()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Rect\+Sub\+Pix (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{image,  }\item[{@By\+Val Size}]{patch\+Size,  }\item[{@By\+Val Point2f}]{center,  }\item[{@By\+Val Mat}]{patch,  }\item[{int}]{patch\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retrieves a pixel rectangle from an image with sub-\/pixel accuracy. 
+
+The function get\+Rect\+Sub\+Pix extracts pixels from src\+: 
+
+\[dst(x, y) = src(x + \texttt{center.x} - ( \texttt{dst.cols} -1)*0.5, y + \texttt{center.y} - ( \texttt{dst.rows} -1)*0.5)\] 
+
+where the values of the pixels at non-\/integer coordinates are retrieved using bilinear interpolation. Every channel of multi-\/channel images is processed independently. While the center of the rectangle must be inside the image, parts of the rectangle may be outside. In this case, the replication border mode (see cv\+::\+Border\+Types) is used to extrapolate the pixel values outside of the image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & Source image. \\
+\hline
+{\em patch\+Size} & Size of the extracted patch. \\
+\hline
+{\em center} & Floating point coordinates of the center of the extracted rectangle within the source image. The center must be inside the image. \\
+\hline
+{\em patch} & Extracted patch that has the size patch\+Size and the same number of channels as src . \\
+\hline
+{\em patch\+Type} & Depth of the extracted pixels. By default, they have the same depth as src . \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__imgproc__transform_ga0f7c28988998c3ae473a6708bdeef114}{warp\+Affine}, \hyperlink{group__imgproc__transform_ga75e1d893d7bf652cd99d608259c00c24}{warp\+Perspective} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__imgproc__transform_gab3d97da00a90c299d2899587dc60c4cd}\label{group__imgproc__transform_gab3d97da00a90c299d2899587dc60c4cd}} 
+\index{Geometric Image Transformations@{Geometric Image Transformations}!get\+Rotation\+Matrix2D@{get\+Rotation\+Matrix2D}}
+\index{get\+Rotation\+Matrix2D@{get\+Rotation\+Matrix2D}!Geometric Image Transformations@{Geometric Image Transformations}}
+\subsubsection{\texorpdfstring{get\+Rotation\+Matrix2\+D()}{getRotationMatrix2D()}}
+{\footnotesize\ttfamily static native Mat org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Rotation\+Matrix2D (\begin{DoxyParamCaption}\item[{@By\+Val Point2f}]{center,  }\item[{double}]{angle,  }\item[{double}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calculates an affine matrix of 2D rotation. 
+
+The function calculates the following matrix\+: 
+
+\[\begin{bmatrix} \alpha & \beta & (1- \alpha ) \cdot \texttt{center.x} - \beta \cdot \texttt{center.y} \\ - \beta & \alpha & \beta \cdot \texttt{center.x} + (1- \alpha ) \cdot \texttt{center.y} \end{bmatrix}\] 
+
+where 
+
+\[\begin{array}{l} \alpha = \texttt{scale} \cdot \cos \texttt{angle} , \\ \beta = \texttt{scale} \cdot \sin \texttt{angle} \end{array}\] 
+
+The transformation maps the rotation center to itself. If this is not the target, adjust the shift. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center} & Center of the rotation in the source image. \\
+\hline
+{\em angle} & Rotation angle in degrees. Positive values mean counter-\/clockwise rotation (the coordinate origin is assumed to be the top-\/left corner). \\
+\hline
+{\em scale} & Isotropic scale factor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__imgproc__transform_ga6aff4eb184828799fb795a52309aa8e6}{get\+Affine\+Transform}, \hyperlink{group__imgproc__transform_ga0f7c28988998c3ae473a6708bdeef114}{warp\+Affine}, transform 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__imgproc__transform_gaf3c4192c811a2204d996dacf82f23564}\label{group__imgproc__transform_gaf3c4192c811a2204d996dacf82f23564}} 
+\index{Geometric Image Transformations@{Geometric Image Transformations}!init\+Undistort\+Rectify\+Map@{init\+Undistort\+Rectify\+Map}}
+\index{init\+Undistort\+Rectify\+Map@{init\+Undistort\+Rectify\+Map}!Geometric Image Transformations@{Geometric Image Transformations}}
+\subsubsection{\texorpdfstring{init\+Undistort\+Rectify\+Map()}{initUndistortRectifyMap()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+init\+Undistort\+Rectify\+Map (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{camera\+Matrix,  }\item[{@By\+Val Mat}]{dist\+Coeffs,  }\item[{@By\+Val Mat}]{R,  }\item[{@By\+Val Mat}]{new\+Camera\+Matrix,  }\item[{@By\+Val Size}]{size,  }\item[{int}]{m1type,  }\item[{@By\+Val Mat}]{map1,  }\item[{@By\+Val Mat}]{map2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Computes the undistortion and rectification transformation map. 
+
+The function computes the joint undistortion and rectification transformation and represents the result in the form of maps for remap. The undistorted image looks like original, as if it is captured with a camera using the camera matrix =new\+Camera\+Matrix and zero distortion. In case of a monocular camera, new\+Camera\+Matrix is usually equal to camera\+Matrix, or it can be computed by cv\+::get\+Optimal\+New\+Camera\+Matrix for a better control over scaling. In case of a stereo camera, new\+Camera\+Matrix is normally set to P1 or P2 computed by cv\+::stereo\+Rectify . 
+
+Also, this new camera is oriented differently in the coordinate space, according to R. That, for example, helps to align two heads of a stereo camera so that the epipolar lines on both images become horizontal and have the same y-\/ coordinate (in case of a horizontally aligned stereo camera). 
+
+The function actually builds the maps for the inverse mapping algorithm that is used by remap. That is, for each pixel $(u, v)$ in the destination (corrected and rectified) image, the function computes the corresponding coordinates in the source image (that is, in the original image from camera). The following process is applied\+: \[ \begin{array}{l} x \leftarrow (u - {c'}_x)/{f'}_x \\ y \leftarrow (v - {c'}_y)/{f'}_y \\ {[X\,Y\,W]} ^T \leftarrow R^{-1}*[x \, y \, 1]^T \\ x' \leftarrow X/W \\ y' \leftarrow Y/W \\ r^2 \leftarrow x'^2 + y'^2 \\ x'' \leftarrow x' \frac{1 + k_1 r^2 + k_2 r^4 + k_3 r^6}{1 + k_4 r^2 + k_5 r^4 + k_6 r^6} + 2p_1 x' y' + p_2(r^2 + 2 x'^2) + s_1 r^2 + s_2 r^4\\ y'' \leftarrow y' \frac{1 + k_1 r^2 + k_2 r^4 + k_3 r^6}{1 + k_4 r^2 + k_5 r^4 + k_6 r^6} + p_1 (r^2 + 2 y'^2) + 2 p_2 x' y' + s_3 r^2 + s_4 r^4 \\ s\vecthree{x'''}{y'''}{1} = \vecthreethree{R_{33}(\tau_x, \tau_y)}{0}{-R_{13}((\tau_x, \tau_y)} {0}{R_{33}(\tau_x, \tau_y)}{-R_{23}(\tau_x, \tau_y)} {0}{0}{1} R(\tau_x, \tau_y) \vecthree{x''}{y''}{1}\\ map_x(u,v) \leftarrow x''' f_x + c_x \\ map_y(u,v) \leftarrow y''' f_y + c_y \end{array} \] where $(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6[, s_1, s_2, s_3, s_4[, \tau_x, \tau_y]]]])$ are the distortion coefficients. 
+
+In case of a stereo camera, this function is called twice\+: once for each camera head, after stereo\+Rectify, which in its turn is called after cv\+::stereo\+Calibrate. But if the stereo camera was not calibrated, it is still possible to compute the rectification transformations directly from the fundamental matrix using cv\+::stereo\+Rectify\+Uncalibrated. For each camera, the function computes homography H as the rectification transformation in a pixel domain, not a rotation matrix R in 3D space. R can be computed from H as \[\texttt{R} = \texttt{cameraMatrix} ^{-1} \cdot \texttt{H} \cdot \texttt{cameraMatrix}\] where camera\+Matrix can be chosen arbitrarily. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Matrix} & Input camera matrix $A=\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}$ . \\
+\hline
+{\em dist\+Coeffs} & Input vector of distortion coefficients $(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6[, s_1, s_2, s_3, s_4[, \tau_x, \tau_y]]]])$ of 4, 5, 8, 12 or 14 elements. If the vector is N\+U\+L\+L/empty, the zero distortion coefficients are assumed. \\
+\hline
+{\em R} & Optional rectification transformation in the object space (3x3 matrix). R1 or R2 , computed by stereo\+Rectify can be passed here. If the matrix is empty, the identity transformation is assumed. In cv\+Init\+Undistort\+Map R assumed to be an identity matrix. \\
+\hline
+{\em new\+Camera\+Matrix} & New camera matrix $A'=\vecthreethree{f_x'}{0}{c_x'}{0}{f_y'}{c_y'}{0}{0}{1}$. \\
+\hline
+{\em size} & Undistorted image size. \\
+\hline
+{\em m1type} & Type of the first output map that can be C\+V\+\_\+32\+F\+C1 or C\+V\+\_\+16\+S\+C2, see cv\+::convert\+Maps \\
+\hline
+{\em map1} & The first output map. \\
+\hline
+{\em map2} & The second output map. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__imgproc__transform_ga797a671a89ffc5375a87366fbbb86c13}\label{group__imgproc__transform_ga797a671a89ffc5375a87366fbbb86c13}} 
+\index{Geometric Image Transformations@{Geometric Image Transformations}!init\+Wide\+Angle\+Proj\+Map@{init\+Wide\+Angle\+Proj\+Map}}
+\index{init\+Wide\+Angle\+Proj\+Map@{init\+Wide\+Angle\+Proj\+Map}!Geometric Image Transformations@{Geometric Image Transformations}}
+\subsubsection{\texorpdfstring{init\+Wide\+Angle\+Proj\+Map()}{initWideAngleProjMap()}}
+{\footnotesize\ttfamily static native float org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+init\+Wide\+Angle\+Proj\+Map (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{camera\+Matrix,  }\item[{@By\+Val Mat}]{dist\+Coeffs,  }\item[{@By\+Val Size}]{image\+Size,  }\item[{int}]{dest\+Image\+Width,  }\item[{int}]{m1type,  }\item[{@By\+Val Mat}]{map1,  }\item[{@By\+Val Mat}]{map2,  }\item[{int}]{proj\+Type,  }\item[{double}]{alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+initializes maps for cv\+::remap() for wide-\/angle \mbox{\Hypertarget{group__imgproc__transform_ga4905a785b488db4f1dbb485efa98356c}\label{group__imgproc__transform_ga4905a785b488db4f1dbb485efa98356c}} 
+\index{Geometric Image Transformations@{Geometric Image Transformations}!invert\+Affine\+Transform@{invert\+Affine\+Transform}}
+\index{invert\+Affine\+Transform@{invert\+Affine\+Transform}!Geometric Image Transformations@{Geometric Image Transformations}}
+\subsubsection{\texorpdfstring{invert\+Affine\+Transform()}{invertAffineTransform()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+invert\+Affine\+Transform (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{M,  }\item[{@By\+Val Mat}]{iM }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Inverts an affine transformation. 
+
+The function computes an inverse affine transformation represented by $2 \times 3$ matrix M\+: 
+
+\[\begin{bmatrix} a_{11} & a_{12} & b_1 \\ a_{21} & a_{22} & b_2 \end{bmatrix}\] 
+
+The result is also a $2 \times 3$ matrix of the same type as M. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em M} & Original affine transformation. \\
+\hline
+{\em iM} & Output reverse affine transformation. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__imgproc__transform_ga46939c6aff509b593336b89237a563d3}\label{group__imgproc__transform_ga46939c6aff509b593336b89237a563d3}} 
+\index{Geometric Image Transformations@{Geometric Image Transformations}!linear\+Polar@{linear\+Polar}}
+\index{linear\+Polar@{linear\+Polar}!Geometric Image Transformations@{Geometric Image Transformations}}
+\subsubsection{\texorpdfstring{linear\+Polar()}{linearPolar()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+linear\+Polar (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{@By\+Val Point2f}]{center,  }\item[{double}]{max\+Radius,  }\item[{int}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Remaps an image to polar coordinates space. 
+
+\label{group__imgproc__transform_polar_remaps_reference_image}%
+\Hypertarget{group__imgproc__transform_polar_remaps_reference_image}%
+ 
+
+Transform the source image using the following transformation\+: \[\begin{array}{l} dst( \rho , \phi ) = src(x,y) \\ dst.size() \leftarrow src.size() \end{array}\] 
+
+where \[\begin{array}{l} I = (dx,dy) = (x - center.x,y - center.y) \\ \rho = Kx \cdot \texttt{magnitude} (I) ,\\ \phi = Ky \cdot \texttt{angle} (I)_{0..360 deg} \end{array}\] 
+
+and \[\begin{array}{l} Kx = src.cols / maxRadius \\ Ky = src.rows / 360 \end{array}\] 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Source image \\
+\hline
+{\em dst} & Destination image. It will have same size and type as src. \\
+\hline
+{\em center} & The transformation center; \\
+\hline
+{\em max\+Radius} & The radius of the bounding circle to transform. It determines the inverse magnitude scale parameter too. \\
+\hline
+{\em flags} & A combination of interpolation methods, see cv\+::\+Interpolation\+Flags \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item The function can not operate in-\/place.
+\item To calculate magnitude and angle in degrees cv\+::cart\+To\+Polar is used internally thus angles are measured from 0 to 360 with accuracy about 0.\+3 degrees. 
+\end{DoxyItemize}
+\end{DoxyNote}
+\mbox{\Hypertarget{group__imgproc__transform_ga525e11d8b35ba086ca22b5ea9307c6a7}\label{group__imgproc__transform_ga525e11d8b35ba086ca22b5ea9307c6a7}} 
+\index{Geometric Image Transformations@{Geometric Image Transformations}!log\+Polar@{log\+Polar}}
+\index{log\+Polar@{log\+Polar}!Geometric Image Transformations@{Geometric Image Transformations}}
+\subsubsection{\texorpdfstring{log\+Polar()}{logPolar()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+log\+Polar (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{@By\+Val Point2f}]{center,  }\item[{double}]{M,  }\item[{int}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Remaps an image to semilog-\/polar coordinates space. 
+
+Transform the source image using the following transformation (See \hyperlink{group__imgproc__transform_polar_remaps_reference_image}{Polar remaps reference image})\+: \[\begin{array}{l} dst( \rho , \phi ) = src(x,y) \\ dst.size() \leftarrow src.size() \end{array}\] 
+
+where \[\begin{array}{l} I = (dx,dy) = (x - center.x,y - center.y) \\ \rho = M \cdot log_e(\texttt{magnitude} (I)) ,\\ \phi = Ky \cdot \texttt{angle} (I)_{0..360 deg} \\ \end{array}\] 
+
+and \[\begin{array}{l} M = src.cols / log_e(maxRadius) \\ Ky = src.rows / 360 \\ \end{array}\] 
+
+The function emulates the human \char`\"{}foveal\char`\"{} vision and can be used for fast scale and rotation-\/invariant template matching, for object tracking and so forth. 
+\begin{DoxyParams}{Parameters}
+{\em src} & Source image \\
+\hline
+{\em dst} & Destination image. It will have same size and type as src. \\
+\hline
+{\em center} & The transformation center; where the output precision is maximal \\
+\hline
+{\em M} & Magnitude scale parameter. It determines the radius of the bounding circle to transform too. \\
+\hline
+{\em flags} & A combination of interpolation methods, see cv\+::\+Interpolation\+Flags \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item The function can not operate in-\/place.
+\item To calculate magnitude and angle in degrees cv\+::cart\+To\+Polar is used internally thus angles are measured from 0 to 360 with accuracy about 0.\+3 degrees. 
+\end{DoxyItemize}
+\end{DoxyNote}
+\mbox{\Hypertarget{group__imgproc__transform_gaa9d03105d426e5424af34452bee91554}\label{group__imgproc__transform_gaa9d03105d426e5424af34452bee91554}} 
+\index{Geometric Image Transformations@{Geometric Image Transformations}!remap@{remap}}
+\index{remap@{remap}!Geometric Image Transformations@{Geometric Image Transformations}}
+\subsubsection{\texorpdfstring{remap()}{remap()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+remap (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{@By\+Val Mat}]{map1,  }\item[{@By\+Val Mat}]{map2,  }\item[{int}]{interpolation,  }\item[{int}]{border\+Mode,  }\item[{@Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar}]{border\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Applies a generic geometrical transformation to an image. 
+
+The function remap transforms the source image using the specified map\+: 
+
+\[\texttt{dst} (x,y) = \texttt{src} (map_x(x,y),map_y(x,y))\] 
+
+where values of pixels with non-\/integer coordinates are computed using one of available interpolation methods. $map_x$ and $map_y$ can be encoded as separate floating-\/point maps in $map_1$ and $map_2$ respectively, or interleaved floating-\/point maps of $(x,y)$ in $map_1$, or fixed-\/point maps created by using convert\+Maps. The reason you might want to convert from floating to fixed-\/point representations of a map is that they can yield much faster (2x) remapping operations. In the converted case, $map_1$ contains pairs (cv\+Floor(x), cv\+Floor(y)) and $map_2$ contains indices in a table of interpolation coefficients. 
+
+This function cannot operate in-\/place. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Source image. \\
+\hline
+{\em dst} & Destination image. It has the same size as map1 and the same type as src . \\
+\hline
+{\em map1} & The first map of either (x,y) points or just x values having the type C\+V\+\_\+16\+S\+C2 , C\+V\+\_\+32\+F\+C1, or C\+V\+\_\+32\+F\+C2. See convert\+Maps for details on converting a floating point representation to fixed-\/point for speed. \\
+\hline
+{\em map2} & The second map of y values having the type C\+V\+\_\+16\+U\+C1, C\+V\+\_\+32\+F\+C1, or none (empty map if map1 is (x,y) points), respectively. \\
+\hline
+{\em interpolation} & Interpolation method (see cv\+::\+Interpolation\+Flags). The method I\+N\+T\+E\+R\+\_\+\+A\+R\+EA is not supported by this function. \\
+\hline
+{\em border\+Mode} & Pixel extrapolation method (see cv\+::\+Border\+Types). When border\+Mode=B\+O\+R\+D\+E\+R\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT, it means that the pixels in the destination image that corresponds to the \char`\"{}outliers\char`\"{} in the source image are not modified by the function. \\
+\hline
+{\em border\+Value} & Value used in case of a constant border. By default, it is 0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Due to current implementaion limitations the size of an input and output images should be less than 32767x32767. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__imgproc__transform_gaacf4ed74dd09b28d673cc4b0f0257aa8}\label{group__imgproc__transform_gaacf4ed74dd09b28d673cc4b0f0257aa8}} 
+\index{Geometric Image Transformations@{Geometric Image Transformations}!undistort\+Points@{undistort\+Points}}
+\index{undistort\+Points@{undistort\+Points}!Geometric Image Transformations@{Geometric Image Transformations}}
+\subsubsection{\texorpdfstring{undistort\+Points()}{undistortPoints()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+undistort\+Points (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{@By\+Val Mat}]{camera\+Matrix,  }\item[{@By\+Val Mat}]{dist\+Coeffs,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) Mat}]{R,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) Mat}]{P }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Computes the ideal point coordinates from the observed point coordinates. 
+
+The function is similar to cv\+::undistort and cv\+::init\+Undistort\+Rectify\+Map but it operates on a sparse set of points instead of a raster image. Also the function performs a reverse transformation to project\+Points. In case of a 3D object, it does not reconstruct its 3D coordinates, but for a planar object, it does, up to a translation vector, if the proper R is specified. 
+
+For each observed point coordinate $(u, v)$ the function computes\+: \[ \begin{array}{l} x^{"} \leftarrow (u - c_x)/f_x \\ y^{"} \leftarrow (v - c_y)/f_y \\ (x',y') = undistort(x^{"},y^{"}, \texttt{distCoeffs}) \\ {[X\,Y\,W]} ^T \leftarrow R*[x' \, y' \, 1]^T \\ x \leftarrow X/W \\ y \leftarrow Y/W \\ \text{only performed if P is specified:} \\ u' \leftarrow x {f'}_x + {c'}_x \\ v' \leftarrow y {f'}_y + {c'}_y \end{array} \] 
+
+where {\itshape undistort} is an approximate iterative algorithm that estimates the normalized original point coordinates out of the normalized distorted point coordinates (\char`\"{}normalized\char`\"{} means that the coordinates do not depend on the camera matrix). 
+
+The function can be used for both a stereo camera head or a monocular camera (when R is empty). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Observed point coordinates, 1xN or Nx1 2-\/channel (C\+V\+\_\+32\+F\+C2 or C\+V\+\_\+64\+F\+C2). \\
+\hline
+{\em dst} & Output ideal point coordinates after undistortion and reverse perspective transformation. If matrix P is identity or omitted, dst will contain normalized point coordinates. \\
+\hline
+{\em camera\+Matrix} & Camera matrix $\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}$ . \\
+\hline
+{\em dist\+Coeffs} & Input vector of distortion coefficients $(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6[, s_1, s_2, s_3, s_4[, \tau_x, \tau_y]]]])$ of 4, 5, 8, 12 or 14 elements. If the vector is N\+U\+L\+L/empty, the zero distortion coefficients are assumed. \\
+\hline
+{\em R} & Rectification transformation in the object space (3x3 matrix). R1 or R2 computed by cv\+::stereo\+Rectify can be passed here. If the matrix is empty, the identity transformation is used. \\
+\hline
+{\em P} & New camera matrix (3x3) or new projection matrix (3x4) $\begin{bmatrix} {f'}_x & 0 & {c'}_x & t_x \\ 0 & {f'}_y & {c'}_y & t_y \\ 0 & 0 & 1 & t_z \end{bmatrix}$. P1 or P2 computed by cv\+::stereo\+Rectify can be passed here. If the matrix is empty, the identity new camera matrix is used. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__imgproc__transform_ga0f7c28988998c3ae473a6708bdeef114}\label{group__imgproc__transform_ga0f7c28988998c3ae473a6708bdeef114}} 
+\index{Geometric Image Transformations@{Geometric Image Transformations}!warp\+Affine@{warp\+Affine}}
+\index{warp\+Affine@{warp\+Affine}!Geometric Image Transformations@{Geometric Image Transformations}}
+\subsubsection{\texorpdfstring{warp\+Affine()}{warpAffine()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+warp\+Affine (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{@By\+Val Mat}]{M,  }\item[{@By\+Val Size}]{dsize,  }\item[{int}]{flags,  }\item[{int}]{border\+Mode,  }\item[{@Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar}]{border\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Applies an affine transformation to an image. 
+
+The function warp\+Affine transforms the source image using the specified matrix\+: 
+
+\[\texttt{dst} (x,y) = \texttt{src} ( \texttt{M} _{11} x + \texttt{M} _{12} y + \texttt{M} _{13}, \texttt{M} _{21} x + \texttt{M} _{22} y + \texttt{M} _{23})\] 
+
+when the flag W\+A\+R\+P\+\_\+\+I\+N\+V\+E\+R\+S\+E\+\_\+\+M\+AP is set. Otherwise, the transformation is first inverted with cv\+::invert\+Affine\+Transform and then put in the formula above instead of M. The function cannot operate in-\/place. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & input image. \\
+\hline
+{\em dst} & output image that has the size dsize and the same type as src . \\
+\hline
+{\em M} & $2\times 3$ transformation matrix. \\
+\hline
+{\em dsize} & size of the output image. \\
+\hline
+{\em flags} & combination of interpolation methods (see cv\+::\+Interpolation\+Flags) and the optional flag W\+A\+R\+P\+\_\+\+I\+N\+V\+E\+R\+S\+E\+\_\+\+M\+AP that means that M is the inverse transformation ( $\texttt{dst}\rightarrow\texttt{src}$ ). \\
+\hline
+{\em border\+Mode} & pixel extrapolation method (see cv\+::\+Border\+Types); when border\+Mode=B\+O\+R\+D\+E\+R\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT, it means that the pixels in the destination image corresponding to the \char`\"{}outliers\char`\"{} in the source image are not modified by the function. \\
+\hline
+{\em border\+Value} & value used in case of a constant border; by default, it is 0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__imgproc__transform_ga75e1d893d7bf652cd99d608259c00c24}{warp\+Perspective}, resize, \hyperlink{group__imgproc__transform_gaa9d03105d426e5424af34452bee91554}{remap}, \hyperlink{group__imgproc__transform_gae176a226575415412c0b6ea67126e54e}{get\+Rect\+Sub\+Pix}, transform 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__imgproc__transform_ga75e1d893d7bf652cd99d608259c00c24}\label{group__imgproc__transform_ga75e1d893d7bf652cd99d608259c00c24}} 
+\index{Geometric Image Transformations@{Geometric Image Transformations}!warp\+Perspective@{warp\+Perspective}}
+\index{warp\+Perspective@{warp\+Perspective}!Geometric Image Transformations@{Geometric Image Transformations}}
+\subsubsection{\texorpdfstring{warp\+Perspective()}{warpPerspective()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+warp\+Perspective (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{@By\+Val Mat}]{M,  }\item[{@By\+Val Size}]{dsize,  }\item[{int}]{flags,  }\item[{int}]{border\+Mode,  }\item[{@Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar}]{border\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Applies a perspective transformation to an image. 
+
+The function warp\+Perspective transforms the source image using the specified matrix\+: 
+
+\[\texttt{dst} (x,y) = \texttt{src} \left ( \frac{M_{11} x + M_{12} y + M_{13}}{M_{31} x + M_{32} y + M_{33}} , \frac{M_{21} x + M_{22} y + M_{23}}{M_{31} x + M_{32} y + M_{33}} \right )\] 
+
+when the flag W\+A\+R\+P\+\_\+\+I\+N\+V\+E\+R\+S\+E\+\_\+\+M\+AP is set. Otherwise, the transformation is first inverted with invert and then put in the formula above instead of M. The function cannot operate in-\/place. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & input image. \\
+\hline
+{\em dst} & output image that has the size dsize and the same type as src . \\
+\hline
+{\em M} & $3\times 3$ transformation matrix. \\
+\hline
+{\em dsize} & size of the output image. \\
+\hline
+{\em flags} & combination of interpolation methods (I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+AR or I\+N\+T\+E\+R\+\_\+\+N\+E\+A\+R\+E\+ST) and the optional flag W\+A\+R\+P\+\_\+\+I\+N\+V\+E\+R\+S\+E\+\_\+\+M\+AP, that sets M as the inverse transformation ( $\texttt{dst}\rightarrow\texttt{src}$ ). \\
+\hline
+{\em border\+Mode} & pixel extrapolation method (B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+N\+S\+T\+A\+NT or B\+O\+R\+D\+E\+R\+\_\+\+R\+E\+P\+L\+I\+C\+A\+TE). \\
+\hline
+{\em border\+Value} & value used in case of a constant border; by default, it equals 0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__imgproc__transform_ga0f7c28988998c3ae473a6708bdeef114}{warp\+Affine}, resize, \hyperlink{group__imgproc__transform_gaa9d03105d426e5424af34452bee91554}{remap}, \hyperlink{group__imgproc__transform_gae176a226575415412c0b6ea67126e54e}{get\+Rect\+Sub\+Pix}, perspective\+Transform 
+\end{DoxySeeAlso}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__imgproc__transform_ga076a64e7bcb513b6ff755fccecf7d4bf}\label{group__imgproc__transform_ga076a64e7bcb513b6ff755fccecf7d4bf}} 
+\index{Geometric Image Transformations@{Geometric Image Transformations}!I\+N\+T\+E\+R\+\_\+\+B\+I\+TS@{I\+N\+T\+E\+R\+\_\+\+B\+I\+TS}}
+\index{I\+N\+T\+E\+R\+\_\+\+B\+I\+TS@{I\+N\+T\+E\+R\+\_\+\+B\+I\+TS}!Geometric Image Transformations@{Geometric Image Transformations}}
+\subsubsection{\texorpdfstring{I\+N\+T\+E\+R\+\_\+\+B\+I\+TS}{INTER\_BITS}}
+{\footnotesize\ttfamily final int org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+I\+N\+T\+E\+R\+\_\+\+B\+I\+TS = 5\hspace{0.3cm}{\ttfamily [static]}}
+
+enum cv\+::\+Interpolation\+Masks \mbox{\Hypertarget{group__imgproc__transform_ga6d084cc56ec2d2c46a7df1a2c0dad300}\label{group__imgproc__transform_ga6d084cc56ec2d2c46a7df1a2c0dad300}} 
+\index{Geometric Image Transformations@{Geometric Image Transformations}!I\+N\+T\+E\+R\+\_\+\+N\+E\+A\+R\+E\+ST@{I\+N\+T\+E\+R\+\_\+\+N\+E\+A\+R\+E\+ST}}
+\index{I\+N\+T\+E\+R\+\_\+\+N\+E\+A\+R\+E\+ST@{I\+N\+T\+E\+R\+\_\+\+N\+E\+A\+R\+E\+ST}!Geometric Image Transformations@{Geometric Image Transformations}}
+\subsubsection{\texorpdfstring{I\+N\+T\+E\+R\+\_\+\+N\+E\+A\+R\+E\+ST}{INTER\_NEAREST}}
+{\footnotesize\ttfamily final int org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+I\+N\+T\+E\+R\+\_\+\+N\+E\+A\+R\+E\+ST = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+enum cv\+::\+Interpolation\+Flags nearest neighbor interpolation 

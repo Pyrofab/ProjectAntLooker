@@ -1,0 +1,675 @@
+\hypertarget{group__imgproc__feature}{}\section{Feature Detection}
+\label{group__imgproc__feature}\index{Feature Detection@{Feature Detection}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Line\+Segment\+Detector}
+\begin{DoxyCompactList}\small\item\em Line segment detector class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static native Line\+Segment\+Detector \hyperlink{group__imgproc__feature_ga19a371ab2269ddf309820d928394498d}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+create\+Line\+Segment\+Detector} (int \+\_\+refine, double \+\_\+scale, double \+\_\+sigma\+\_\+scale, double \+\_\+quant, double \+\_\+ang\+\_\+th, double \+\_\+log\+\_\+eps, double \+\_\+density\+\_\+th, int \+\_\+n\+\_\+bins)
+\begin{DoxyCompactList}\small\item\em Creates a smart pointer to a Line\+Segment\+Detector object and initializes it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__imgproc__feature_gad70c4ef3abb03e4760dac81420f4ab48}\label{group__imgproc__feature_gad70c4ef3abb03e4760dac81420f4ab48}} 
+static native Line\+Segment\+Detector {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+create\+Line\+Segment\+Detector} ()
+\item 
+static native void \hyperlink{group__imgproc__feature_gae85c4c5d2fd8006e4194e3ee73d2277d}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Canny} ( @By\+Val Mat image, @By\+Val Mat edges, double threshold1, double threshold2, int aperture\+Size, @Cast(\char`\"{}bool\char`\"{}) boolean L2gradient)
+\begin{DoxyCompactList}\small\item\em Finds edges in an image using the Canny algorithm {\bfseries [Canny86]} . \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__imgproc__feature_ga26772144cdf60d6f4d66e3aab52e6707}\label{group__imgproc__feature_ga26772144cdf60d6f4d66e3aab52e6707}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Canny} ( @By\+Val Mat image, @By\+Val Mat edges, double threshold1, double threshold2)
+\item 
+\mbox{\Hypertarget{group__imgproc__feature_gaf8f39f1926eb8a0a1b4bc7d5ee2cbdb9}\label{group__imgproc__feature_gaf8f39f1926eb8a0a1b4bc7d5ee2cbdb9}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Canny} ( @By\+Val U\+Mat image, @By\+Val U\+Mat edges, double threshold1, double threshold2, int aperture\+Size, @Cast(\char`\"{}bool\char`\"{}) boolean L2gradient)
+\item 
+\mbox{\Hypertarget{group__imgproc__feature_gae66224d795c6ccea52a286dfc0697003}\label{group__imgproc__feature_gae66224d795c6ccea52a286dfc0697003}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Canny} ( @By\+Val U\+Mat image, @By\+Val U\+Mat edges, double threshold1, double threshold2)
+\item 
+static native void \hyperlink{group__imgproc__feature_ga64af31e287f8de7a4fd3ee87c522add9}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Canny} ( @By\+Val Mat dx, @By\+Val Mat dy, @By\+Val Mat edges, double threshold1, double threshold2, @Cast(\char`\"{}bool\char`\"{}) boolean L2gradient)
+\item 
+\mbox{\Hypertarget{group__imgproc__feature_ga16f0dfc24199cf24e69fdf76cc3a3b97}\label{group__imgproc__feature_ga16f0dfc24199cf24e69fdf76cc3a3b97}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Canny} ( @By\+Val Mat dx, @By\+Val Mat dy, @By\+Val Mat edges, double threshold1, double threshold2)
+\item 
+\mbox{\Hypertarget{group__imgproc__feature_gac2c44d4cb3ef966505b14da6c37ac6e1}\label{group__imgproc__feature_gac2c44d4cb3ef966505b14da6c37ac6e1}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Canny} ( @By\+Val U\+Mat dx, @By\+Val U\+Mat dy, @By\+Val U\+Mat edges, double threshold1, double threshold2, @Cast(\char`\"{}bool\char`\"{}) boolean L2gradient)
+\item 
+\mbox{\Hypertarget{group__imgproc__feature_ga7b620e9806b07bf5264eec9b3bce0a28}\label{group__imgproc__feature_ga7b620e9806b07bf5264eec9b3bce0a28}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Canny} ( @By\+Val U\+Mat dx, @By\+Val U\+Mat dy, @By\+Val U\+Mat edges, double threshold1, double threshold2)
+\item 
+static native void \hyperlink{group__imgproc__feature_gac03777715e9e2aa616d310aa504b86c1}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+corner\+Min\+Eigen\+Val} ( @By\+Val Mat src, @By\+Val Mat dst, int block\+Size, int ksize, int border\+Type)
+\begin{DoxyCompactList}\small\item\em Calculates the minimal eigenvalue of gradient matrices for corner detection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__imgproc__feature_ga19cb37c0bd38334d96f002fd261ac70d}\label{group__imgproc__feature_ga19cb37c0bd38334d96f002fd261ac70d}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+corner\+Min\+Eigen\+Val} ( @By\+Val Mat src, @By\+Val Mat dst, int block\+Size)
+\item 
+\mbox{\Hypertarget{group__imgproc__feature_ga6bcf83fd8a90939a6d0c56770bffd5cb}\label{group__imgproc__feature_ga6bcf83fd8a90939a6d0c56770bffd5cb}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+corner\+Min\+Eigen\+Val} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, int block\+Size, int ksize, int border\+Type)
+\item 
+\mbox{\Hypertarget{group__imgproc__feature_ga1f6a5a4d16340bf0296a92b6f62b4fa6}\label{group__imgproc__feature_ga1f6a5a4d16340bf0296a92b6f62b4fa6}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+corner\+Min\+Eigen\+Val} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, int block\+Size)
+\item 
+static native void \hyperlink{group__imgproc__feature_ga33bee1c8b89d7d1963fe5212170ab77b}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+corner\+Harris} ( @By\+Val Mat src, @By\+Val Mat dst, int block\+Size, int ksize, double k, int border\+Type)
+\begin{DoxyCompactList}\small\item\em Harris corner detector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__imgproc__feature_ga91ba396858c3ff82711b2f07a7fdec37}\label{group__imgproc__feature_ga91ba396858c3ff82711b2f07a7fdec37}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+corner\+Harris} ( @By\+Val Mat src, @By\+Val Mat dst, int block\+Size, int ksize, double k)
+\item 
+\mbox{\Hypertarget{group__imgproc__feature_gae4b385be2c8566d92ab23a08e0623817}\label{group__imgproc__feature_gae4b385be2c8566d92ab23a08e0623817}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+corner\+Harris} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, int block\+Size, int ksize, double k, int border\+Type)
+\item 
+\mbox{\Hypertarget{group__imgproc__feature_ga47b99ed00eec5337b6fd08f3337017d5}\label{group__imgproc__feature_ga47b99ed00eec5337b6fd08f3337017d5}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+corner\+Harris} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, int block\+Size, int ksize, double k)
+\item 
+static native void \hyperlink{group__imgproc__feature_gaf0aa40bf8a841f8e468c41bb2d2583b4}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+corner\+Eigen\+Vals\+And\+Vecs} ( @By\+Val Mat src, @By\+Val Mat dst, int block\+Size, int ksize, int border\+Type)
+\begin{DoxyCompactList}\small\item\em Calculates eigenvalues and eigenvectors of image blocks for corner detection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__imgproc__feature_gaa024005c471f202ddf35658167c16413}\label{group__imgproc__feature_gaa024005c471f202ddf35658167c16413}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+corner\+Eigen\+Vals\+And\+Vecs} ( @By\+Val Mat src, @By\+Val Mat dst, int block\+Size, int ksize)
+\item 
+\mbox{\Hypertarget{group__imgproc__feature_ga021abd4c0466ae11974d9e3f46dcd20e}\label{group__imgproc__feature_ga021abd4c0466ae11974d9e3f46dcd20e}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+corner\+Eigen\+Vals\+And\+Vecs} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, int block\+Size, int ksize, int border\+Type)
+\item 
+\mbox{\Hypertarget{group__imgproc__feature_ga59360224c0236e57dbecc974e0c023a7}\label{group__imgproc__feature_ga59360224c0236e57dbecc974e0c023a7}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+corner\+Eigen\+Vals\+And\+Vecs} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, int block\+Size, int ksize)
+\item 
+static native void \hyperlink{group__imgproc__feature_ga1c51e6cab3684b202f45967edc555f5c}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+pre\+Corner\+Detect} ( @By\+Val Mat src, @By\+Val Mat dst, int ksize, int border\+Type)
+\begin{DoxyCompactList}\small\item\em Calculates a feature map for corner detection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__imgproc__feature_gaa253d96bdbd43bc3c7b8338df8daaeb1}\label{group__imgproc__feature_gaa253d96bdbd43bc3c7b8338df8daaeb1}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+pre\+Corner\+Detect} ( @By\+Val Mat src, @By\+Val Mat dst, int ksize)
+\item 
+\mbox{\Hypertarget{group__imgproc__feature_ga28c9141a0e8f3cbe17e40c533d8fb446}\label{group__imgproc__feature_ga28c9141a0e8f3cbe17e40c533d8fb446}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+pre\+Corner\+Detect} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, int ksize, int border\+Type)
+\item 
+\mbox{\Hypertarget{group__imgproc__feature_ga3366cf2bc64fdfa8d85d143c2ed3e428}\label{group__imgproc__feature_ga3366cf2bc64fdfa8d85d143c2ed3e428}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+pre\+Corner\+Detect} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, int ksize)
+\item 
+static native void \hyperlink{group__imgproc__feature_ga45fec6a2998978719aaedb9aad2cbae6}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+corner\+Sub\+Pix} ( @By\+Val Mat image, @By\+Val Mat corners, @By\+Val Size win\+Size, @By\+Val Size zero\+Zone, @By\+Val Term\+Criteria criteria)
+\begin{DoxyCompactList}\small\item\em Refines the corner locations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__imgproc__feature_ga5aeeb78f004f05e49f77d7f2e12f9b6e}\label{group__imgproc__feature_ga5aeeb78f004f05e49f77d7f2e12f9b6e}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+corner\+Sub\+Pix} ( @By\+Val U\+Mat image, @By\+Val U\+Mat corners, @By\+Val Size win\+Size, @By\+Val Size zero\+Zone, @By\+Val Term\+Criteria criteria)
+\item 
+static native void \hyperlink{group__imgproc__feature_gac59ef9f79071cae35c509e388d80e4f5}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+good\+Features\+To\+Track} ( @By\+Val Mat image, @By\+Val Mat corners, int max\+Corners, double quality\+Level, double min\+Distance, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) Mat mask, int block\+Size, @Cast(\char`\"{}bool\char`\"{}) boolean use\+Harris\+Detector, double k)
+\begin{DoxyCompactList}\small\item\em Determines strong corners on an image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__imgproc__feature_ga02fc9b1a1eb2dce3ddf7df025babc96b}\label{group__imgproc__feature_ga02fc9b1a1eb2dce3ddf7df025babc96b}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+good\+Features\+To\+Track} ( @By\+Val Mat image, @By\+Val Mat corners, int max\+Corners, double quality\+Level, double min\+Distance)
+\item 
+\mbox{\Hypertarget{group__imgproc__feature_ga91f0cf3b02909488de7edd9e03f38bda}\label{group__imgproc__feature_ga91f0cf3b02909488de7edd9e03f38bda}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+good\+Features\+To\+Track} ( @By\+Val U\+Mat image, @By\+Val U\+Mat corners, int max\+Corners, double quality\+Level, double min\+Distance, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat mask, int block\+Size, @Cast(\char`\"{}bool\char`\"{}) boolean use\+Harris\+Detector, double k)
+\item 
+\mbox{\Hypertarget{group__imgproc__feature_ga5ef00a173eab10aa524cee009daf35fa}\label{group__imgproc__feature_ga5ef00a173eab10aa524cee009daf35fa}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+good\+Features\+To\+Track} ( @By\+Val U\+Mat image, @By\+Val U\+Mat corners, int max\+Corners, double quality\+Level, double min\+Distance)
+\item 
+static native void \hyperlink{group__imgproc__feature_ga304555e089d6883caf9ac96ebef50718}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Hough\+Lines} ( @By\+Val Mat image, @By\+Val Mat lines, double rho, double theta, int threshold, double srn, double stn, double min\+\_\+theta, double max\+\_\+theta)
+\begin{DoxyCompactList}\small\item\em Finds lines in a binary image using the standard Hough transform. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__imgproc__feature_ga5e579ff99d29a922ebc5398e1b50d508}\label{group__imgproc__feature_ga5e579ff99d29a922ebc5398e1b50d508}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Hough\+Lines} ( @By\+Val Mat image, @By\+Val Mat lines, double rho, double theta, int threshold)
+\item 
+\mbox{\Hypertarget{group__imgproc__feature_gad5ec1da6fe31a01920f24db535e379f9}\label{group__imgproc__feature_gad5ec1da6fe31a01920f24db535e379f9}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Hough\+Lines} ( @By\+Val U\+Mat image, @By\+Val U\+Mat lines, double rho, double theta, int threshold, double srn, double stn, double min\+\_\+theta, double max\+\_\+theta)
+\item 
+\mbox{\Hypertarget{group__imgproc__feature_ga190a7b3beae6372ac6fa6ae1f5324928}\label{group__imgproc__feature_ga190a7b3beae6372ac6fa6ae1f5324928}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Hough\+Lines} ( @By\+Val U\+Mat image, @By\+Val U\+Mat lines, double rho, double theta, int threshold)
+\item 
+static native void \hyperlink{group__imgproc__feature_gaac39ae22179f4396e7034f6d2a4cce1e}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Hough\+LinesP} ( @By\+Val Mat image, @By\+Val Mat lines, double rho, double theta, int threshold, double min\+Line\+Length, double max\+Line\+Gap)
+\begin{DoxyCompactList}\small\item\em Finds line segments in a binary image using the probabilistic Hough transform. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__imgproc__feature_ga8ae382715260ab4425f1ce1a63b121d0}\label{group__imgproc__feature_ga8ae382715260ab4425f1ce1a63b121d0}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Hough\+LinesP} ( @By\+Val Mat image, @By\+Val Mat lines, double rho, double theta, int threshold)
+\item 
+\mbox{\Hypertarget{group__imgproc__feature_ga57014edb8289247a7afc3a944a144656}\label{group__imgproc__feature_ga57014edb8289247a7afc3a944a144656}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Hough\+LinesP} ( @By\+Val U\+Mat image, @By\+Val U\+Mat lines, double rho, double theta, int threshold, double min\+Line\+Length, double max\+Line\+Gap)
+\item 
+\mbox{\Hypertarget{group__imgproc__feature_gada7af245d4c89baddda852e114d53588}\label{group__imgproc__feature_gada7af245d4c89baddda852e114d53588}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Hough\+LinesP} ( @By\+Val U\+Mat image, @By\+Val U\+Mat lines, double rho, double theta, int threshold)
+\item 
+static native void \hyperlink{group__imgproc__feature_ga600228eea1d6673137492fb0d0c1b8d5}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Hough\+Circles} ( @By\+Val Mat image, @By\+Val Mat circles, int method, double dp, double min\+Dist, double param1, double param2, int min\+Radius, int max\+Radius)
+\begin{DoxyCompactList}\small\item\em Finds circles in a grayscale image using the Hough transform. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__imgproc__feature_gad95610778f296561275a932b70bcbf4d}\label{group__imgproc__feature_gad95610778f296561275a932b70bcbf4d}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Hough\+Circles} ( @By\+Val Mat image, @By\+Val Mat circles, int method, double dp, double min\+Dist)
+\item 
+\mbox{\Hypertarget{group__imgproc__feature_ga85e35e4b6c0b17ee201ef0f6b8256062}\label{group__imgproc__feature_ga85e35e4b6c0b17ee201ef0f6b8256062}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Hough\+Circles} ( @By\+Val U\+Mat image, @By\+Val U\+Mat circles, int method, double dp, double min\+Dist, double param1, double param2, int min\+Radius, int max\+Radius)
+\item 
+\mbox{\Hypertarget{group__imgproc__feature_ga56ed820c9d4ac68762d0826e1212b3f6}\label{group__imgproc__feature_ga56ed820c9d4ac68762d0826e1212b3f6}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Hough\+Circles} ( @By\+Val U\+Mat image, @By\+Val U\+Mat circles, int method, double dp, double min\+Dist)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{group__imgproc__feature_ga878ecf12ede1cbc57e30e4e700c8385d}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+L\+S\+D\+\_\+\+R\+E\+F\+I\+N\+E\+\_\+\+N\+O\+NE} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+imgproc\+\_\+subdiv2d 
+
+/$\ast$$\ast$
+
+imgproc\+\_\+filter 
+
+/$\ast$$\ast$ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__imgproc__feature_gae85c4c5d2fd8006e4194e3ee73d2277d}\label{group__imgproc__feature_gae85c4c5d2fd8006e4194e3ee73d2277d}} 
+\index{Feature Detection@{Feature Detection}!Canny@{Canny}}
+\index{Canny@{Canny}!Feature Detection@{Feature Detection}}
+\subsubsection{\texorpdfstring{Canny()}{Canny()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Canny (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{image,  }\item[{@By\+Val Mat}]{edges,  }\item[{double}]{threshold1,  }\item[{double}]{threshold2,  }\item[{int}]{aperture\+Size,  }\item[{@Cast(\char`\"{}bool\char`\"{}) boolean}]{L2gradient }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Finds edges in an image using the Canny algorithm {\bfseries [Canny86]} . 
+
+The function finds edges in the input image image and marks them in the output map edges using the Canny algorithm. The smallest value between threshold1 and threshold2 is used for edge linking. The largest value is used to find initial segments of strong edges. See \href{http://en.wikipedia.org/wiki/Canny_edge_detector}{\tt http\+://en.\+wikipedia.\+org/wiki/\+Canny\+\_\+edge\+\_\+detector} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & 8-\/bit input image. \\
+\hline
+{\em edges} & output edge map; single channels 8-\/bit image, which has the same size as image . \\
+\hline
+{\em threshold1} & first threshold for the hysteresis procedure. \\
+\hline
+{\em threshold2} & second threshold for the hysteresis procedure. \\
+\hline
+{\em aperture\+Size} & aperture size for the Sobel operator. \\
+\hline
+{\em L2gradient} & a flag, indicating whether a more accurate $L_2$ norm $=\sqrt{(dI/dx)^2 + (dI/dy)^2}$ should be used to calculate the image gradient magnitude ( L2gradient=true ), or whether the default $L_1$ norm $=|dI/dx|+|dI/dy|$ is enough ( L2gradient=false ). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__imgproc__feature_ga64af31e287f8de7a4fd3ee87c522add9}\label{group__imgproc__feature_ga64af31e287f8de7a4fd3ee87c522add9}} 
+\index{Feature Detection@{Feature Detection}!Canny@{Canny}}
+\index{Canny@{Canny}!Feature Detection@{Feature Detection}}
+\subsubsection{\texorpdfstring{Canny()}{Canny()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Canny (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{dx,  }\item[{@By\+Val Mat}]{dy,  }\item[{@By\+Val Mat}]{edges,  }\item[{double}]{threshold1,  }\item[{double}]{threshold2,  }\item[{@Cast(\char`\"{}bool\char`\"{}) boolean}]{L2gradient }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
+
+Finds edges in an image using the Canny algorithm with custom image gradient. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dx} & 16-\/bit x derivative of input image (C\+V\+\_\+16\+S\+C1 or C\+V\+\_\+16\+S\+C3). \\
+\hline
+{\em dy} & 16-\/bit y derivative of input image (same type as dx). \\
+\hline
+{\em edges,threshold1,threshold2,L2gradient} & See cv\+::\+Canny \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__imgproc__feature_gaf0aa40bf8a841f8e468c41bb2d2583b4}\label{group__imgproc__feature_gaf0aa40bf8a841f8e468c41bb2d2583b4}} 
+\index{Feature Detection@{Feature Detection}!corner\+Eigen\+Vals\+And\+Vecs@{corner\+Eigen\+Vals\+And\+Vecs}}
+\index{corner\+Eigen\+Vals\+And\+Vecs@{corner\+Eigen\+Vals\+And\+Vecs}!Feature Detection@{Feature Detection}}
+\subsubsection{\texorpdfstring{corner\+Eigen\+Vals\+And\+Vecs()}{cornerEigenValsAndVecs()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+corner\+Eigen\+Vals\+And\+Vecs (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{int}]{block\+Size,  }\item[{int}]{ksize,  }\item[{int}]{border\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calculates eigenvalues and eigenvectors of image blocks for corner detection. 
+
+For every pixel $p$ , the function corner\+Eigen\+Vals\+And\+Vecs considers a block\+Size $\times$ block\+Size neighborhood $S(p)$ . It calculates the covariation matrix of derivatives over the neighborhood as\+: 
+
+\[M = \begin{bmatrix} \sum _{S(p)}(dI/dx)^2 & \sum _{S(p)}dI/dx dI/dy \\ \sum _{S(p)}dI/dx dI/dy & \sum _{S(p)}(dI/dy)^2 \end{bmatrix}\] 
+
+where the derivatives are computed using the Sobel operator. 
+
+After that, it finds eigenvectors and eigenvalues of $M$ and stores them in the destination image as $(\lambda_1, \lambda_2, x_1, y_1, x_2, y_2)$ where 
+
+
+\begin{DoxyItemize}
+\item $\lambda_1, \lambda_2$ are the non-\/sorted eigenvalues of $M$
+\item $x_1, y_1$ are the eigenvectors corresponding to $\lambda_1$
+\item $x_2, y_2$ are the eigenvectors corresponding to $\lambda_2$ 
+\end{DoxyItemize}
+
+The output of the function can be used for robust edge or corner detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Input single-\/channel 8-\/bit or floating-\/point image. \\
+\hline
+{\em dst} & Image to store the results. It has the same size as src and the type C\+V\+\_\+32\+F\+C(6) . \\
+\hline
+{\em block\+Size} & Neighborhood size (see details below). \\
+\hline
+{\em ksize} & Aperture parameter for the Sobel operator. \\
+\hline
+{\em border\+Type} & Pixel extrapolation method. See cv\+::\+Border\+Types. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__imgproc__feature_gac03777715e9e2aa616d310aa504b86c1}{corner\+Min\+Eigen\+Val}, \hyperlink{group__imgproc__feature_ga33bee1c8b89d7d1963fe5212170ab77b}{corner\+Harris}, \hyperlink{group__imgproc__feature_ga1c51e6cab3684b202f45967edc555f5c}{pre\+Corner\+Detect} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__imgproc__feature_ga33bee1c8b89d7d1963fe5212170ab77b}\label{group__imgproc__feature_ga33bee1c8b89d7d1963fe5212170ab77b}} 
+\index{Feature Detection@{Feature Detection}!corner\+Harris@{corner\+Harris}}
+\index{corner\+Harris@{corner\+Harris}!Feature Detection@{Feature Detection}}
+\subsubsection{\texorpdfstring{corner\+Harris()}{cornerHarris()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+corner\+Harris (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{int}]{block\+Size,  }\item[{int}]{ksize,  }\item[{double}]{k,  }\item[{int}]{border\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Harris corner detector. 
+
+The function runs the Harris corner detector on the image. Similarly to corner\+Min\+Eigen\+Val and corner\+Eigen\+Vals\+And\+Vecs , for each pixel $(x, y)$ it calculates a $2\times2$ gradient covariance matrix $M^{(x,y)}$ over a $\texttt{blockSize} \times \texttt{blockSize}$ neighborhood. Then, it computes the following characteristic\+: 
+
+\[\texttt{dst} (x,y) = \mathrm{det} M^{(x,y)} - k \cdot \left ( \mathrm{tr} M^{(x,y)} \right )^2\] 
+
+Corners in the image can be found as the local maxima of this response map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Input single-\/channel 8-\/bit or floating-\/point image. \\
+\hline
+{\em dst} & Image to store the Harris detector responses. It has the type C\+V\+\_\+32\+F\+C1 and the same size as src . \\
+\hline
+{\em block\+Size} & Neighborhood size (see the details on corner\+Eigen\+Vals\+And\+Vecs ). \\
+\hline
+{\em ksize} & Aperture parameter for the Sobel operator. \\
+\hline
+{\em k} & Harris detector free parameter. See the formula below. \\
+\hline
+{\em border\+Type} & Pixel extrapolation method. See cv\+::\+Border\+Types. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__imgproc__feature_gac03777715e9e2aa616d310aa504b86c1}\label{group__imgproc__feature_gac03777715e9e2aa616d310aa504b86c1}} 
+\index{Feature Detection@{Feature Detection}!corner\+Min\+Eigen\+Val@{corner\+Min\+Eigen\+Val}}
+\index{corner\+Min\+Eigen\+Val@{corner\+Min\+Eigen\+Val}!Feature Detection@{Feature Detection}}
+\subsubsection{\texorpdfstring{corner\+Min\+Eigen\+Val()}{cornerMinEigenVal()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+corner\+Min\+Eigen\+Val (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{int}]{block\+Size,  }\item[{int}]{ksize,  }\item[{int}]{border\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calculates the minimal eigenvalue of gradient matrices for corner detection. 
+
+The function is similar to corner\+Eigen\+Vals\+And\+Vecs but it calculates and stores only the minimal eigenvalue of the covariance matrix of derivatives, that is, $\min(\lambda_1, \lambda_2)$ in terms of the formulae in the corner\+Eigen\+Vals\+And\+Vecs description. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Input single-\/channel 8-\/bit or floating-\/point image. \\
+\hline
+{\em dst} & Image to store the minimal eigenvalues. It has the type C\+V\+\_\+32\+F\+C1 and the same size as src . \\
+\hline
+{\em block\+Size} & Neighborhood size (see the details on corner\+Eigen\+Vals\+And\+Vecs ). \\
+\hline
+{\em ksize} & Aperture parameter for the Sobel operator. \\
+\hline
+{\em border\+Type} & Pixel extrapolation method. See cv\+::\+Border\+Types. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__imgproc__feature_ga45fec6a2998978719aaedb9aad2cbae6}\label{group__imgproc__feature_ga45fec6a2998978719aaedb9aad2cbae6}} 
+\index{Feature Detection@{Feature Detection}!corner\+Sub\+Pix@{corner\+Sub\+Pix}}
+\index{corner\+Sub\+Pix@{corner\+Sub\+Pix}!Feature Detection@{Feature Detection}}
+\subsubsection{\texorpdfstring{corner\+Sub\+Pix()}{cornerSubPix()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+corner\+Sub\+Pix (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{image,  }\item[{@By\+Val Mat}]{corners,  }\item[{@By\+Val Size}]{win\+Size,  }\item[{@By\+Val Size}]{zero\+Zone,  }\item[{@By\+Val Term\+Criteria}]{criteria }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Refines the corner locations. 
+
+The function iterates to find the sub-\/pixel accurate location of corners or radial saddle points, as shown on the figure below. 
+
+ 
+
+Sub-\/pixel accurate corner locator is based on the observation that every vector from the center $q$ to a point $p$ located within a neighborhood of $q$ is orthogonal to the image gradient at $p$ subject to image and measurement noise. Consider the expression\+: 
+
+\[\epsilon _i = {DI_{p_i}}^T \cdot (q - p_i)\] 
+
+where ${DI_{p_i}}$ is an image gradient at one of the points $p_i$ in a neighborhood of $q$ . The value of $q$ is to be found so that $\epsilon_i$ is minimized. A system of equations may be set up with $\epsilon_i$ set to zero\+: 
+
+\[\sum _i(DI_{p_i} \cdot {DI_{p_i}}^T) - \sum _i(DI_{p_i} \cdot {DI_{p_i}}^T \cdot p_i)\] 
+
+where the gradients are summed within a neighborhood (\char`\"{}search window\char`\"{}) of $q$ . Calling the first gradient term $G$ and the second gradient term $b$ gives\+: 
+
+\[q = G^{-1} \cdot b\] 
+
+The algorithm sets the center of the neighborhood window at this new center $q$ and then iterates until the center stays within a set threshold. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & Input image. \\
+\hline
+{\em corners} & Initial coordinates of the input corners and refined coordinates provided for output. \\
+\hline
+{\em win\+Size} & Half of the side length of the search window. For example, if win\+Size=Size(5,5) , then a $5*2+1 \times 5*2+1 = 11 \times 11$ search window is used. \\
+\hline
+{\em zero\+Zone} & Half of the size of the dead region in the middle of the search zone over which the summation in the formula below is not done. It is used sometimes to avoid possible singularities of the autocorrelation matrix. The value of (-\/1,-\/1) indicates that there is no such a size. \\
+\hline
+{\em criteria} & Criteria for termination of the iterative process of corner refinement. That is, the process of corner position refinement stops either after criteria.\+max\+Count iterations or when the corner position moves by less than criteria.\+epsilon on some iteration. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__imgproc__feature_ga19a371ab2269ddf309820d928394498d}\label{group__imgproc__feature_ga19a371ab2269ddf309820d928394498d}} 
+\index{Feature Detection@{Feature Detection}!create\+Line\+Segment\+Detector@{create\+Line\+Segment\+Detector}}
+\index{create\+Line\+Segment\+Detector@{create\+Line\+Segment\+Detector}!Feature Detection@{Feature Detection}}
+\subsubsection{\texorpdfstring{create\+Line\+Segment\+Detector()}{createLineSegmentDetector()}}
+{\footnotesize\ttfamily static native Line\+Segment\+Detector org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+create\+Line\+Segment\+Detector (\begin{DoxyParamCaption}\item[{int}]{\+\_\+refine,  }\item[{double}]{\+\_\+scale,  }\item[{double}]{\+\_\+sigma\+\_\+scale,  }\item[{double}]{\+\_\+quant,  }\item[{double}]{\+\_\+ang\+\_\+th,  }\item[{double}]{\+\_\+log\+\_\+eps,  }\item[{double}]{\+\_\+density\+\_\+th,  }\item[{int}]{\+\_\+n\+\_\+bins }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a smart pointer to a Line\+Segment\+Detector object and initializes it. 
+
+The Line\+Segment\+Detector algorithm is defined using the standard values. Only advanced users may want to edit those, as to tailor it for their own application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+refine} & The way found lines will be refined, see cv\+::\+Line\+Segment\+Detector\+Modes \\
+\hline
+{\em \+\_\+scale} & The scale of the image that will be used to find the lines. Range (0..1\mbox{]}. \\
+\hline
+{\em \+\_\+sigma\+\_\+scale} & Sigma for Gaussian filter. It is computed as sigma = \+\_\+sigma\+\_\+scale/\+\_\+scale. \\
+\hline
+{\em \+\_\+quant} & Bound to the quantization error on the gradient norm. \\
+\hline
+{\em \+\_\+ang\+\_\+th} & Gradient angle tolerance in degrees. \\
+\hline
+{\em \+\_\+log\+\_\+eps} & Detection threshold\+: -\/log10(N\+FA) $>$ log\+\_\+eps. Used only when advancent refinement is chosen. \\
+\hline
+{\em \+\_\+density\+\_\+th} & Minimal density of aligned region points in the enclosing rectangle. \\
+\hline
+{\em \+\_\+n\+\_\+bins} & Number of bins in pseudo-\/ordering of gradient modulus. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__imgproc__feature_gac59ef9f79071cae35c509e388d80e4f5}\label{group__imgproc__feature_gac59ef9f79071cae35c509e388d80e4f5}} 
+\index{Feature Detection@{Feature Detection}!good\+Features\+To\+Track@{good\+Features\+To\+Track}}
+\index{good\+Features\+To\+Track@{good\+Features\+To\+Track}!Feature Detection@{Feature Detection}}
+\subsubsection{\texorpdfstring{good\+Features\+To\+Track()}{goodFeaturesToTrack()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+good\+Features\+To\+Track (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{image,  }\item[{@By\+Val Mat}]{corners,  }\item[{int}]{max\+Corners,  }\item[{double}]{quality\+Level,  }\item[{double}]{min\+Distance,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) Mat}]{mask,  }\item[{int}]{block\+Size,  }\item[{@Cast(\char`\"{}bool\char`\"{}) boolean}]{use\+Harris\+Detector,  }\item[{double}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Determines strong corners on an image. 
+
+The function finds the most prominent corners in the image or in the specified image region, as described in {\bfseries [Shi94]} 
+
+
+\begin{DoxyItemize}
+\item Function calculates the corner quality measure at every source image pixel using the corner\+Min\+Eigen\+Val or corner\+Harris .
+\item Function performs a non-\/maximum suppression (the local maximums in {\itshape 3 x 3} neighborhood are retained).
+\item The corners with the minimal eigenvalue less than $\texttt{qualityLevel} \cdot \max_{x,y} qualityMeasureMap(x,y)$ are rejected.
+\item The remaining corners are sorted by the quality measure in the descending order.
+\item Function throws away each corner for which there is a stronger corner at a distance less than max\+Distance. 
+\end{DoxyItemize}
+
+The function can be used to initialize a point-\/based tracker of an object. 
+
+\begin{DoxyNote}{Note}
+If the function is called with different values A and B of the parameter quality\+Level , and A $>$ B, the vector of returned corners with quality\+Level=A will be the prefix of the output vector with quality\+Level=B . 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em image} & Input 8-\/bit or floating-\/point 32-\/bit, single-\/channel image. \\
+\hline
+{\em corners} & Output vector of detected corners. \\
+\hline
+{\em max\+Corners} & Maximum number of corners to return. If there are more corners than are found, the strongest of them is returned.
+\begin{DoxyCode}
+maxCorners <= 0 
+\end{DoxyCode}
+ implies that no limit on the maximum is set and all detected corners are returned. \\
+\hline
+{\em quality\+Level} & Parameter characterizing the minimal accepted quality of image corners. The parameter value is multiplied by the best corner quality measure, which is the minimal eigenvalue (see corner\+Min\+Eigen\+Val ) or the Harris function response (see corner\+Harris ). The corners with the quality measure less than the product are rejected. For example, if the best corner has the quality measure = 1500, and the quality\+Level=0.\+01 , then all the corners with the quality measure less than 15 are rejected. \\
+\hline
+{\em min\+Distance} & Minimum possible Euclidean distance between the returned corners. \\
+\hline
+{\em mask} & Optional region of interest. If the image is not empty (it needs to have the type C\+V\+\_\+8\+U\+C1 and the same size as image ), it specifies the region in which the corners are detected. \\
+\hline
+{\em block\+Size} & Size of an average block for computing a derivative covariation matrix over each pixel neighborhood. See corner\+Eigen\+Vals\+And\+Vecs . \\
+\hline
+{\em use\+Harris\+Detector} & Parameter indicating whether to use a Harris detector (see corner\+Harris) or corner\+Min\+Eigen\+Val. \\
+\hline
+{\em k} & Free parameter of the Harris detector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__imgproc__feature_gac03777715e9e2aa616d310aa504b86c1}{corner\+Min\+Eigen\+Val}, \hyperlink{group__imgproc__feature_ga33bee1c8b89d7d1963fe5212170ab77b}{corner\+Harris}, calc\+Optical\+Flow\+Pyr\+LK, estimate\+Rigid\+Transform, 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__imgproc__feature_ga600228eea1d6673137492fb0d0c1b8d5}\label{group__imgproc__feature_ga600228eea1d6673137492fb0d0c1b8d5}} 
+\index{Feature Detection@{Feature Detection}!Hough\+Circles@{Hough\+Circles}}
+\index{Hough\+Circles@{Hough\+Circles}!Feature Detection@{Feature Detection}}
+\subsubsection{\texorpdfstring{Hough\+Circles()}{HoughCircles()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Hough\+Circles (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{image,  }\item[{@By\+Val Mat}]{circles,  }\item[{int}]{method,  }\item[{double}]{dp,  }\item[{double}]{min\+Dist,  }\item[{double}]{param1,  }\item[{double}]{param2,  }\item[{int}]{min\+Radius,  }\item[{int}]{max\+Radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Finds circles in a grayscale image using the Hough transform. 
+
+The function finds circles in a grayscale image using a modification of the Hough transform. 
+
+Example\+: \+: 
+\begin{DoxyPre}
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include <opencv2/imgproc.hpp>}
+\textcolor{preprocessor}{#include <opencv2/highgui.hpp>}
+\textcolor{preprocessor}{#include <math.h>}
+
+\textcolor{keyword}{using namespace }cv;
+\textcolor{keyword}{using namespace }std;
+
+\textcolor{keywordtype}{int} main(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}** argv)
+\{
+    Mat img, gray;
+    \textcolor{keywordflow}{if}( argc != 2 || !(img=imread(argv[1], 1)).data)
+        \textcolor{keywordflow}{return} -1;
+    \hyperlink{group__imgproc__misc_gaab99985581c43cce9df680e6586cb9ef}{cvtColor}(img, gray, COLOR\_BGR2GRAY);
+    \textcolor{comment}{// smooth it, otherwise a lot of false circles may be detected}
+    \hyperlink{group__imgproc__filter_gaf8f0c37e9b9c420a8edfc2753c8fe966}{GaussianBlur}( gray, gray, Size(9, 9), 2, 2 );
+    vector<Vec3f> circles;
+    \hyperlink{group__imgproc__feature_ga600228eea1d6673137492fb0d0c1b8d5}{HoughCircles}(gray, circles, HOUGH\_GRADIENT,
+                 2, gray.rows/4, 200, 100 );
+    \textcolor{keywordflow}{for}( \textcolor{keywordtype}{size\_t} i = 0; i < circles.size(); i++ )
+    \{
+         Point center(cvRound(circles[i][0]), cvRound(circles[i][1]));
+         \textcolor{keywordtype}{int} radius = cvRound(circles[i][2]);
+         \textcolor{comment}{// draw the circle center}
+         \hyperlink{group__imgproc__draw_ga6f8e5000cb25b63d5885b12d46f52e39}{circle}( img, center, 3, Scalar(0,255,0), -1, 8, 0 );
+         \textcolor{comment}{// draw the circle outline}
+         \hyperlink{group__imgproc__draw_ga6f8e5000cb25b63d5885b12d46f52e39}{circle}( img, center, radius, Scalar(0,0,255), 3, 8, 0 );
+    \}
+    namedWindow( \textcolor{stringliteral}{"circles"}, 1 );
+    imshow( \textcolor{stringliteral}{"circles"}, img );
+
+    waitKey(0);
+    \textcolor{keywordflow}{return} 0;
+\}
+\end{DoxyCode}
+ \end{DoxyPre}
+ 
+
+\begin{DoxyNote}{Note}
+Usually the function detects the centers of circles well. However, it may fail to find correct radii. You can assist to the function by specifying the radius range ( min\+Radius and max\+Radius ) if you know it. Or, you may ignore the returned radius, use only the center, and find the correct radius using an additional procedure. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em image} & 8-\/bit, single-\/channel, grayscale input image. \\
+\hline
+{\em circles} & Output vector of found circles. Each vector is encoded as a 3-\/element floating-\/point vector $(x, y, radius)$ . \\
+\hline
+{\em method} & Detection method, see cv\+::\+Hough\+Modes. Currently, the only implemented method is H\+O\+U\+G\+H\+\_\+\+G\+R\+A\+D\+I\+E\+NT \\
+\hline
+{\em dp} & Inverse ratio of the accumulator resolution to the image resolution. For example, if dp=1 , the accumulator has the same resolution as the input image. If dp=2 , the accumulator has half as big width and height. \\
+\hline
+{\em min\+Dist} & Minimum distance between the centers of the detected circles. If the parameter is too small, multiple neighbor circles may be falsely detected in addition to a true one. If it is too large, some circles may be missed. \\
+\hline
+{\em param1} & First method-\/specific parameter. In case of C\+V\+\_\+\+H\+O\+U\+G\+H\+\_\+\+G\+R\+A\+D\+I\+E\+NT , it is the higher threshold of the two passed to the Canny edge detector (the lower one is twice smaller). \\
+\hline
+{\em param2} & Second method-\/specific parameter. In case of C\+V\+\_\+\+H\+O\+U\+G\+H\+\_\+\+G\+R\+A\+D\+I\+E\+NT , it is the accumulator threshold for the circle centers at the detection stage. The smaller it is, the more false circles may be detected. Circles, corresponding to the larger accumulator values, will be returned first. \\
+\hline
+{\em min\+Radius} & Minimum circle radius. \\
+\hline
+{\em max\+Radius} & Maximum circle radius. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__imgproc__shape_ga4e705f42eefa1224c87285653b6fb44d}{fit\+Ellipse}, \hyperlink{group__imgproc__shape_ga6247e734952a578322d69260230c4a41}{min\+Enclosing\+Circle} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__imgproc__feature_ga304555e089d6883caf9ac96ebef50718}\label{group__imgproc__feature_ga304555e089d6883caf9ac96ebef50718}} 
+\index{Feature Detection@{Feature Detection}!Hough\+Lines@{Hough\+Lines}}
+\index{Hough\+Lines@{Hough\+Lines}!Feature Detection@{Feature Detection}}
+\subsubsection{\texorpdfstring{Hough\+Lines()}{HoughLines()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Hough\+Lines (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{image,  }\item[{@By\+Val Mat}]{lines,  }\item[{double}]{rho,  }\item[{double}]{theta,  }\item[{int}]{threshold,  }\item[{double}]{srn,  }\item[{double}]{stn,  }\item[{double}]{min\+\_\+theta,  }\item[{double}]{max\+\_\+theta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Finds lines in a binary image using the standard Hough transform. 
+
+The function implements the standard or standard multi-\/scale Hough transform algorithm for line detection. See \href{http://homepages.inf.ed.ac.uk/rbf/HIPR2/hough.htm}{\tt http\+://homepages.\+inf.\+ed.\+ac.\+uk/rbf/\+H\+I\+P\+R2/hough.\+htm} for a good explanation of Hough transform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & 8-\/bit, single-\/channel binary source image. The image may be modified by the function. \\
+\hline
+{\em lines} & Output vector of lines. Each line is represented by a two-\/element vector $(\rho, \theta)$ . $\rho$ is the distance from the coordinate origin $(0,0)$ (top-\/left corner of the image). $\theta$ is the line rotation angle in radians ( $0 \sim \textrm{vertical line}, \pi/2 \sim \textrm{horizontal line}$ ). \\
+\hline
+{\em rho} & Distance resolution of the accumulator in pixels. \\
+\hline
+{\em theta} & Angle resolution of the accumulator in radians. \\
+\hline
+{\em threshold} & Accumulator threshold parameter. Only those lines are returned that get enough votes ( $>\texttt{threshold}$ ). \\
+\hline
+{\em srn} & For the multi-\/scale Hough transform, it is a divisor for the distance resolution rho . The coarse accumulator distance resolution is rho and the accurate accumulator resolution is rho/srn . If both srn=0 and stn=0 , the classical Hough transform is used. Otherwise, both these parameters should be positive. \\
+\hline
+{\em stn} & For the multi-\/scale Hough transform, it is a divisor for the distance resolution theta. \\
+\hline
+{\em min\+\_\+theta} & For standard and multi-\/scale Hough transform, minimum angle to check for lines. Must fall between 0 and max\+\_\+theta. \\
+\hline
+{\em max\+\_\+theta} & For standard and multi-\/scale Hough transform, maximum angle to check for lines. Must fall between min\+\_\+theta and C\+V\+\_\+\+PI. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__imgproc__feature_gaac39ae22179f4396e7034f6d2a4cce1e}\label{group__imgproc__feature_gaac39ae22179f4396e7034f6d2a4cce1e}} 
+\index{Feature Detection@{Feature Detection}!Hough\+LinesP@{Hough\+LinesP}}
+\index{Hough\+LinesP@{Hough\+LinesP}!Feature Detection@{Feature Detection}}
+\subsubsection{\texorpdfstring{Hough\+Lines\+P()}{HoughLinesP()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Hough\+LinesP (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{image,  }\item[{@By\+Val Mat}]{lines,  }\item[{double}]{rho,  }\item[{double}]{theta,  }\item[{int}]{threshold,  }\item[{double}]{min\+Line\+Length,  }\item[{double}]{max\+Line\+Gap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Finds line segments in a binary image using the probabilistic Hough transform. 
+
+The function implements the probabilistic Hough transform algorithm for line detection, described in {\bfseries [Matas00]} 
+
+See the line detection example below\+: 
+
+
+\begin{DoxyPre}
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include <opencv2/imgproc.hpp>}
+\textcolor{preprocessor}{#include <opencv2/highgui.hpp>}
+
+\textcolor{keyword}{using namespace }cv;
+\textcolor{keyword}{using namespace }std;
+
+\textcolor{keywordtype}{int} main(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}** argv)
+\{
+    Mat src, dst, color\_dst;
+    \textcolor{keywordflow}{if}( argc != 2 || !(src=imread(argv[1], 0)).data)
+        \textcolor{keywordflow}{return} -1;
+
+    \hyperlink{group__imgproc__feature_gae85c4c5d2fd8006e4194e3ee73d2277d}{Canny}( src, dst, 50, 200, 3 );
+    \hyperlink{group__imgproc__misc_gaab99985581c43cce9df680e6586cb9ef}{cvtColor}( dst, color\_dst, COLOR\_GRAY2BGR );
+
+\textcolor{preprocessor}{#if 0}
+    vector<Vec2f> lines;
+    \hyperlink{group__imgproc__feature_ga304555e089d6883caf9ac96ebef50718}{HoughLines}( dst, lines, 1, CV\_PI/180, 100 );
+
+    \textcolor{keywordflow}{for}( \textcolor{keywordtype}{size\_t} i = 0; i < lines.size(); i++ )
+    \{
+        \textcolor{keywordtype}{float} rho = lines[i][0];
+        \textcolor{keywordtype}{float} theta = lines[i][1];
+        \textcolor{keywordtype}{double} a = cos(theta), b = sin(theta);
+        \textcolor{keywordtype}{double} x0 = a*rho, y0 = b*rho;
+        Point pt1(cvRound(x0 + 1000*(-b)),
+                  cvRound(y0 + 1000*(a)));
+        Point pt2(cvRound(x0 - 1000*(-b)),
+                  cvRound(y0 - 1000*(a)));
+        line( color\_dst, pt1, pt2, Scalar(0,0,255), 3, 8 );
+    \}
+\textcolor{preprocessor}{#else}
+    vector<Vec4i> lines;
+    \hyperlink{group__imgproc__feature_gaac39ae22179f4396e7034f6d2a4cce1e}{HoughLinesP}( dst, lines, 1, CV\_PI/180, 80, 30, 10 );
+    \textcolor{keywordflow}{for}( \textcolor{keywordtype}{size\_t} i = 0; i < lines.size(); i++ )
+    \{
+        line( color\_dst, Point(lines[i][0], lines[i][1]),
+            Point(lines[i][2], lines[i][3]), Scalar(0,0,255), 3, 8 );
+    \}
+\textcolor{preprocessor}{#endif}
+    namedWindow( \textcolor{stringliteral}{"Source"}, 1 );
+    imshow( \textcolor{stringliteral}{"Source"}, src );
+
+    namedWindow( \textcolor{stringliteral}{"Detected Lines"}, 1 );
+    imshow( \textcolor{stringliteral}{"Detected Lines"}, color\_dst );
+
+    waitKey(0);
+    \textcolor{keywordflow}{return} 0;
+\}
+\end{DoxyCode}
+ \end{DoxyPre}
+ This is a sample picture the function parameters have been tuned for\+: 
+
+ 
+
+And this is the output of the above program in case of the probabilistic Hough transform\+: 
+
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & 8-\/bit, single-\/channel binary source image. The image may be modified by the function. \\
+\hline
+{\em lines} & Output vector of lines. Each line is represented by a 4-\/element vector $(x_1, y_1, x_2, y_2)$ , where $(x_1,y_1)$ and $(x_2, y_2)$ are the ending points of each detected line segment. \\
+\hline
+{\em rho} & Distance resolution of the accumulator in pixels. \\
+\hline
+{\em theta} & Angle resolution of the accumulator in radians. \\
+\hline
+{\em threshold} & Accumulator threshold parameter. Only those lines are returned that get enough votes ( $>\texttt{threshold}$ ). \\
+\hline
+{\em min\+Line\+Length} & Minimum line length. Line segments shorter than that are rejected. \\
+\hline
+{\em max\+Line\+Gap} & Maximum allowed gap between points on the same line to link them. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Line\+Segment\+Detector 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__imgproc__feature_ga1c51e6cab3684b202f45967edc555f5c}\label{group__imgproc__feature_ga1c51e6cab3684b202f45967edc555f5c}} 
+\index{Feature Detection@{Feature Detection}!pre\+Corner\+Detect@{pre\+Corner\+Detect}}
+\index{pre\+Corner\+Detect@{pre\+Corner\+Detect}!Feature Detection@{Feature Detection}}
+\subsubsection{\texorpdfstring{pre\+Corner\+Detect()}{preCornerDetect()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+pre\+Corner\+Detect (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{int}]{ksize,  }\item[{int}]{border\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calculates a feature map for corner detection. 
+
+The function calculates the complex spatial derivative-\/based function of the source image 
+
+\[\texttt{dst} = (D_x \texttt{src} )^2 \cdot D_{yy} \texttt{src} + (D_y \texttt{src} )^2 \cdot D_{xx} \texttt{src} - 2 D_x \texttt{src} \cdot D_y \texttt{src} \cdot D_{xy} \texttt{src}\] 
+
+where $D_x$, $D_y$ are the first image derivatives, $D_{xx}$, $D_{yy}$ are the second image derivatives, and $D_{xy}$ is the mixed derivative. 
+
+The corners can be found as local maximums of the functions, as shown below\+: 
+\begin{DoxyPre}
+\begin{DoxyCode}
+Mat corners, dilated\_corners;
+\hyperlink{group__imgproc__feature_ga1c51e6cab3684b202f45967edc555f5c}{preCornerDetect}(image, corners, 3);
+\textcolor{comment}{// dilation with 3x3 rectangular structuring element}
+dilate(corners, dilated\_corners, Mat(), 1);
+Mat corner\_mask = corners == dilated\_corners;
+\end{DoxyCode}
+ \end{DoxyPre}
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Source single-\/channel 8-\/bit of floating-\/point image. \\
+\hline
+{\em dst} & Output image that has the type C\+V\+\_\+32F and the same size as src . \\
+\hline
+{\em ksize} & Aperture size of the Sobel . \\
+\hline
+{\em border\+Type} & Pixel extrapolation method. See cv\+::\+Border\+Types. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__imgproc__feature_ga878ecf12ede1cbc57e30e4e700c8385d}\label{group__imgproc__feature_ga878ecf12ede1cbc57e30e4e700c8385d}} 
+\index{Feature Detection@{Feature Detection}!L\+S\+D\+\_\+\+R\+E\+F\+I\+N\+E\+\_\+\+N\+O\+NE@{L\+S\+D\+\_\+\+R\+E\+F\+I\+N\+E\+\_\+\+N\+O\+NE}}
+\index{L\+S\+D\+\_\+\+R\+E\+F\+I\+N\+E\+\_\+\+N\+O\+NE@{L\+S\+D\+\_\+\+R\+E\+F\+I\+N\+E\+\_\+\+N\+O\+NE}!Feature Detection@{Feature Detection}}
+\subsubsection{\texorpdfstring{L\+S\+D\+\_\+\+R\+E\+F\+I\+N\+E\+\_\+\+N\+O\+NE}{LSD\_REFINE\_NONE}}
+{\footnotesize\ttfamily final int org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+L\+S\+D\+\_\+\+R\+E\+F\+I\+N\+E\+\_\+\+N\+O\+NE = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+Variants of Line Segment Detectorenum cv\+::\+Line\+Segment\+Detector\+Modes No refinement applied 

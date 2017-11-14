@@ -1,0 +1,223 @@
+\hypertarget{classorg_1_1bytedeco_1_1javacpp_1_1opencv__imgcodecs}{}\section{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgcodecs Class Reference}
+\label{classorg_1_1bytedeco_1_1javacpp_1_1opencv__imgcodecs}\index{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgcodecs@{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgcodecs}}
+Inheritance diagram for org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgcodecs\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classorg_1_1bytedeco_1_1javacpp_1_1opencv__imgcodecs}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static native Ipl\+Image {\bfseries cv\+Load\+Image} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer filename, int iscolor)
+\item 
+static native Ipl\+Image {\bfseries cv\+Load\+Image} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer filename)
+\item 
+static native Ipl\+Image {\bfseries cv\+Load\+Image} (String filename, int iscolor)
+\item 
+static native Ipl\+Image {\bfseries cv\+Load\+Image} (String filename)
+\item 
+static native Cv\+Mat {\bfseries cv\+Load\+ImageM} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer filename, int iscolor)
+\item 
+static native Cv\+Mat {\bfseries cv\+Load\+ImageM} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer filename)
+\item 
+static native Cv\+Mat {\bfseries cv\+Load\+ImageM} (String filename, int iscolor)
+\item 
+static native Cv\+Mat {\bfseries cv\+Load\+ImageM} (String filename)
+\item 
+static native int {\bfseries cv\+Save\+Image} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer filename, @Const Cv\+Arr image, @Const Int\+Pointer params)
+\item 
+static native int {\bfseries cv\+Save\+Image} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer filename, @Const Cv\+Arr image)
+\item 
+static native int {\bfseries cv\+Save\+Image} (String filename, @Const Cv\+Arr image, @Const Int\+Buffer params)
+\item 
+static native int {\bfseries cv\+Save\+Image} (String filename, @Const Cv\+Arr image)
+\item 
+static native int {\bfseries cv\+Save\+Image} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer filename, @Const Cv\+Arr image, @Const int\mbox{[}$\,$\mbox{]} params)
+\item 
+static native int {\bfseries cv\+Save\+Image} (String filename, @Const Cv\+Arr image, @Const Int\+Pointer params)
+\item 
+static native int {\bfseries cv\+Save\+Image} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer filename, @Const Cv\+Arr image, @Const Int\+Buffer params)
+\item 
+static native int {\bfseries cv\+Save\+Image} (String filename, @Const Cv\+Arr image, @Const int\mbox{[}$\,$\mbox{]} params)
+\item 
+static native Ipl\+Image {\bfseries cv\+Decode\+Image} ( @Const Cv\+Mat buf, int iscolor)
+\item 
+static native Ipl\+Image {\bfseries cv\+Decode\+Image} ( @Const Cv\+Mat buf)
+\item 
+static native Cv\+Mat {\bfseries cv\+Decode\+ImageM} ( @Const Cv\+Mat buf, int iscolor)
+\item 
+static native Cv\+Mat {\bfseries cv\+Decode\+ImageM} ( @Const Cv\+Mat buf)
+\item 
+static native Cv\+Mat {\bfseries cv\+Encode\+Image} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer ext, @Const Cv\+Arr image, @Const Int\+Pointer params)
+\item 
+static native Cv\+Mat {\bfseries cv\+Encode\+Image} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer ext, @Const Cv\+Arr image)
+\item 
+static native Cv\+Mat {\bfseries cv\+Encode\+Image} (String ext, @Const Cv\+Arr image, @Const Int\+Buffer params)
+\item 
+static native Cv\+Mat {\bfseries cv\+Encode\+Image} (String ext, @Const Cv\+Arr image)
+\item 
+static native Cv\+Mat {\bfseries cv\+Encode\+Image} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer ext, @Const Cv\+Arr image, @Const int\mbox{[}$\,$\mbox{]} params)
+\item 
+static native Cv\+Mat {\bfseries cv\+Encode\+Image} (String ext, @Const Cv\+Arr image, @Const Int\+Pointer params)
+\item 
+static native Cv\+Mat {\bfseries cv\+Encode\+Image} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer ext, @Const Cv\+Arr image, @Const Int\+Buffer params)
+\item 
+static native Cv\+Mat {\bfseries cv\+Encode\+Image} (String ext, @Const Cv\+Arr image, @Const int\mbox{[}$\,$\mbox{]} params)
+\item 
+static native void {\bfseries cv\+Convert\+Image} ( @Const Cv\+Arr src, Cv\+Arr dst, int flags)
+\item 
+static native void {\bfseries cv\+Convert\+Image} ( @Const Cv\+Arr src, Cv\+Arr dst)
+\item 
+static native int {\bfseries cv\+Have\+Image\+Reader} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer filename)
+\item 
+static native int {\bfseries cv\+Have\+Image\+Reader} (String filename)
+\item 
+static native int {\bfseries cv\+Have\+Image\+Writer} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer filename)
+\item 
+static native int {\bfseries cv\+Have\+Image\+Writer} (String filename)
+\item 
+static native Ipl\+Image {\bfseries cvv\+Load\+Image} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer name)
+\item 
+static native Ipl\+Image {\bfseries cvv\+Load\+Image} (String name)
+\item 
+static native int {\bfseries cvv\+Save\+Image} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer arg1, Cv\+Arr arg2, Int\+Pointer arg3)
+\item 
+static native int {\bfseries cvv\+Save\+Image} (String arg1, Cv\+Arr arg2, Int\+Buffer arg3)
+\item 
+static native int {\bfseries cvv\+Save\+Image} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer arg1, Cv\+Arr arg2, int\mbox{[}$\,$\mbox{]} arg3)
+\item 
+static native int {\bfseries cvv\+Save\+Image} (String arg1, Cv\+Arr arg2, Int\+Pointer arg3)
+\item 
+static native int {\bfseries cvv\+Save\+Image} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer arg1, Cv\+Arr arg2, Int\+Buffer arg3)
+\item 
+static native int {\bfseries cvv\+Save\+Image} (String arg1, Cv\+Arr arg2, int\mbox{[}$\,$\mbox{]} arg3)
+\item 
+static native void {\bfseries cvv\+Convert\+Image} (Cv\+Arr arg1, Cv\+Arr arg2, int arg3)
+\item 
+static native Mat \hyperlink{group__imgcodecs_gab0d3350cc2fd1d26eaae6aeb9df1f14e}{imread} ( @Str Byte\+Pointer filename, int flags)
+\begin{DoxyCompactList}\small\item\em Loads an image from a file. \end{DoxyCompactList}\item 
+static native Mat {\bfseries imread} ( @Str Byte\+Pointer filename)
+\item 
+static native Mat {\bfseries imread} ( @Str String filename, int flags)
+\item 
+static native Mat {\bfseries imread} ( @Str String filename)
+\item 
+static native boolean \hyperlink{group__imgcodecs_ga4e94bb9f788558a0b9eb892cc7a33bb9}{imreadmulti} (@Str Byte\+Pointer filename, @By\+Ref Mat\+Vector mats, int flags)
+\begin{DoxyCompactList}\small\item\em Loads a multi-\/page image from a file. \end{DoxyCompactList}\item 
+static native boolean {\bfseries imreadmulti} (@Str Byte\+Pointer filename, @By\+Ref Mat\+Vector mats)
+\item 
+static native boolean {\bfseries imreadmulti} (@Str String filename, @By\+Ref Mat\+Vector mats, int flags)
+\item 
+static native boolean {\bfseries imreadmulti} (@Str String filename, @By\+Ref Mat\+Vector mats)
+\item 
+static native boolean \hyperlink{group__imgcodecs_ga6a41cdd78ff2dd6fff47515e6d60212c}{imwrite} ( @Str Byte\+Pointer filename, @By\+Val Mat img, @Std\+Vector Int\+Pointer params)
+\begin{DoxyCompactList}\small\item\em Saves an image to a specified file. \end{DoxyCompactList}\item 
+static native boolean {\bfseries imwrite} ( @Str Byte\+Pointer filename, @By\+Val Mat img)
+\item 
+static native boolean {\bfseries imwrite} ( @Str String filename, @By\+Val Mat img, @Std\+Vector Int\+Buffer params)
+\item 
+static native boolean {\bfseries imwrite} ( @Str String filename, @By\+Val Mat img)
+\item 
+static native boolean {\bfseries imwrite} ( @Str Byte\+Pointer filename, @By\+Val U\+Mat img, @Std\+Vector int\mbox{[}$\,$\mbox{]} params)
+\item 
+static native boolean {\bfseries imwrite} ( @Str Byte\+Pointer filename, @By\+Val U\+Mat img)
+\item 
+static native boolean {\bfseries imwrite} ( @Str String filename, @By\+Val U\+Mat img, @Std\+Vector Int\+Pointer params)
+\item 
+static native boolean {\bfseries imwrite} ( @Str String filename, @By\+Val U\+Mat img)
+\item 
+static native boolean {\bfseries imwrite} ( @Str Byte\+Pointer filename, @By\+Val Mat img, @Std\+Vector Int\+Buffer params)
+\item 
+static native boolean {\bfseries imwrite} ( @Str String filename, @By\+Val Mat img, @Std\+Vector int\mbox{[}$\,$\mbox{]} params)
+\item 
+static native boolean {\bfseries imwrite} ( @Str Byte\+Pointer filename, @By\+Val U\+Mat img, @Std\+Vector Int\+Pointer params)
+\item 
+static native boolean {\bfseries imwrite} ( @Str String filename, @By\+Val U\+Mat img, @Std\+Vector Int\+Buffer params)
+\item 
+static native boolean {\bfseries imwrite} ( @Str Byte\+Pointer filename, @By\+Val Mat img, @Std\+Vector int\mbox{[}$\,$\mbox{]} params)
+\item 
+static native boolean {\bfseries imwrite} ( @Str String filename, @By\+Val Mat img, @Std\+Vector Int\+Pointer params)
+\item 
+static native boolean {\bfseries imwrite} ( @Str Byte\+Pointer filename, @By\+Val U\+Mat img, @Std\+Vector Int\+Buffer params)
+\item 
+static native boolean {\bfseries imwrite} ( @Str String filename, @By\+Val U\+Mat img, @Std\+Vector int\mbox{[}$\,$\mbox{]} params)
+\item 
+static native Mat \hyperlink{group__imgcodecs_gac13b3cea648e84cd2ead3c4849023497}{imdecode} ( @By\+Val Mat buf, int flags)
+\begin{DoxyCompactList}\small\item\em Reads an image from a buffer in memory. \end{DoxyCompactList}\item 
+static native Mat {\bfseries imdecode} ( @By\+Val U\+Mat buf, int flags)
+\item 
+static native Mat \hyperlink{group__imgcodecs_gaf794fdf6c3f9d68b53c283bc7ee3d8ef}{imdecode} ( @By\+Val Mat buf, int flags, Mat dst)
+\item 
+static native Mat {\bfseries imdecode} ( @By\+Val U\+Mat buf, int flags, Mat dst)
+\item 
+static native boolean \hyperlink{group__imgcodecs_ga99b838a1ddfa3318e2ba7d2dd5ef42cc}{imencode} ( @Str Byte\+Pointer ext, @By\+Val Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector Byte\+Pointer buf, @Std\+Vector Int\+Pointer params)
+\begin{DoxyCompactList}\small\item\em Encodes an image into a memory buffer. \end{DoxyCompactList}\item 
+static native boolean {\bfseries imencode} ( @Str Byte\+Pointer ext, @By\+Val Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector Byte\+Pointer buf)
+\item 
+static native boolean {\bfseries imencode} ( @Str String ext, @By\+Val Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector Byte\+Buffer buf, @Std\+Vector Int\+Buffer params)
+\item 
+static native boolean {\bfseries imencode} ( @Str String ext, @By\+Val Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector Byte\+Buffer buf)
+\item 
+static native boolean {\bfseries imencode} ( @Str Byte\+Pointer ext, @By\+Val U\+Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector byte\mbox{[}$\,$\mbox{]} buf, @Std\+Vector int\mbox{[}$\,$\mbox{]} params)
+\item 
+static native boolean {\bfseries imencode} ( @Str Byte\+Pointer ext, @By\+Val U\+Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector byte\mbox{[}$\,$\mbox{]} buf)
+\item 
+static native boolean {\bfseries imencode} ( @Str String ext, @By\+Val U\+Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector Byte\+Pointer buf, @Std\+Vector Int\+Pointer params)
+\item 
+static native boolean {\bfseries imencode} ( @Str String ext, @By\+Val U\+Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector Byte\+Pointer buf)
+\item 
+static native boolean {\bfseries imencode} ( @Str Byte\+Pointer ext, @By\+Val Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector Byte\+Buffer buf, @Std\+Vector Int\+Buffer params)
+\item 
+static native boolean {\bfseries imencode} ( @Str Byte\+Pointer ext, @By\+Val Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector Byte\+Buffer buf)
+\item 
+static native boolean {\bfseries imencode} ( @Str String ext, @By\+Val Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector byte\mbox{[}$\,$\mbox{]} buf, @Std\+Vector int\mbox{[}$\,$\mbox{]} params)
+\item 
+static native boolean {\bfseries imencode} ( @Str String ext, @By\+Val Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector byte\mbox{[}$\,$\mbox{]} buf)
+\item 
+static native boolean {\bfseries imencode} ( @Str Byte\+Pointer ext, @By\+Val U\+Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector Byte\+Pointer buf, @Std\+Vector Int\+Pointer params)
+\item 
+static native boolean {\bfseries imencode} ( @Str Byte\+Pointer ext, @By\+Val U\+Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector Byte\+Pointer buf)
+\item 
+static native boolean {\bfseries imencode} ( @Str String ext, @By\+Val U\+Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector Byte\+Buffer buf, @Std\+Vector Int\+Buffer params)
+\item 
+static native boolean {\bfseries imencode} ( @Str String ext, @By\+Val U\+Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector Byte\+Buffer buf)
+\item 
+static native boolean {\bfseries imencode} ( @Str Byte\+Pointer ext, @By\+Val Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector byte\mbox{[}$\,$\mbox{]} buf, @Std\+Vector int\mbox{[}$\,$\mbox{]} params)
+\item 
+static native boolean {\bfseries imencode} ( @Str Byte\+Pointer ext, @By\+Val Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector byte\mbox{[}$\,$\mbox{]} buf)
+\item 
+static native boolean {\bfseries imencode} ( @Str String ext, @By\+Val Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector Byte\+Pointer buf, @Std\+Vector Int\+Pointer params)
+\item 
+static native boolean {\bfseries imencode} ( @Str String ext, @By\+Val Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector Byte\+Pointer buf)
+\item 
+static native boolean {\bfseries imencode} ( @Str Byte\+Pointer ext, @By\+Val U\+Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector Byte\+Buffer buf, @Std\+Vector Int\+Buffer params)
+\item 
+static native boolean {\bfseries imencode} ( @Str Byte\+Pointer ext, @By\+Val U\+Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector Byte\+Buffer buf)
+\item 
+static native boolean {\bfseries imencode} ( @Str String ext, @By\+Val U\+Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector byte\mbox{[}$\,$\mbox{]} buf, @Std\+Vector int\mbox{[}$\,$\mbox{]} params)
+\item 
+static native boolean {\bfseries imencode} ( @Str String ext, @By\+Val U\+Mat img, @Cast(\char`\"{}uchar$\ast$\char`\"{}) @Std\+Vector byte\mbox{[}$\,$\mbox{]} buf)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{group__imgcodecs__c_ga98f1d87118e743ffeec57c7f3a10afd6}{C\+V\+\_\+\+L\+O\+A\+D\+\_\+\+I\+M\+A\+G\+E\+\_\+\+U\+N\+C\+H\+A\+N\+G\+ED} = -\/1
+\item 
+static final int \hyperlink{group__imgcodecs__c_ga6359737e32478705e367f06a0a4d14b1}{C\+V\+\_\+\+I\+M\+W\+R\+I\+T\+E\+\_\+\+J\+P\+E\+G\+\_\+\+Q\+U\+A\+L\+I\+TY} = 1
+\item 
+static final int \hyperlink{group__imgcodecs__c_ga9e58aa60c2a368479b56debeae227525}{C\+V\+\_\+\+C\+V\+T\+I\+M\+G\+\_\+\+F\+L\+IP} = 1
+\item 
+static final int \hyperlink{group__imgcodecs_gaba8d68ffadfa415aec1a51ee480143a7}{I\+M\+R\+E\+A\+D\+\_\+\+U\+N\+C\+H\+A\+N\+G\+ED} = -\/1
+\item 
+static final int \hyperlink{group__imgcodecs_gacc5cde2ea5764c3a523832a3d5c6c7e4}{I\+M\+W\+R\+I\+T\+E\+\_\+\+J\+P\+E\+G\+\_\+\+Q\+U\+A\+L\+I\+TY} = 1
+\item 
+static final int \hyperlink{group__imgcodecs_gabb28172fadcb5118b62c1e96ce65d7bd}{I\+M\+W\+R\+I\+T\+E\+\_\+\+P\+N\+G\+\_\+\+S\+T\+R\+A\+T\+E\+G\+Y\+\_\+\+D\+E\+F\+A\+U\+LT} = 0
+\item 
+static final int \hyperlink{group__imgcodecs_ga90aabdcbe963846b2645af3285b410b8}{I\+M\+W\+R\+I\+T\+E\+\_\+\+P\+A\+M\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+N\+U\+LL} = 0
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+opencv\+\_\+imgcodecs.\+java\end{DoxyCompactItemize}

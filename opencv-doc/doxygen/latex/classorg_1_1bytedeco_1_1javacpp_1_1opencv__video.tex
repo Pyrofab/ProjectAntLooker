@@ -1,0 +1,146 @@
+\hypertarget{classorg_1_1bytedeco_1_1javacpp_1_1opencv__video}{}\section{org.\+bytedeco.\+javacpp.\+opencv\+\_\+video Class Reference}
+\label{classorg_1_1bytedeco_1_1javacpp_1_1opencv__video}\index{org.\+bytedeco.\+javacpp.\+opencv\+\_\+video@{org.\+bytedeco.\+javacpp.\+opencv\+\_\+video}}
+Inheritance diagram for org.\+bytedeco.\+javacpp.\+opencv\+\_\+video\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classorg_1_1bytedeco_1_1javacpp_1_1opencv__video}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Background\+Subtractor}
+\item 
+class {\bfseries Background\+Subtractor\+K\+NN}
+\begin{DoxyCompactList}\small\item\em K-\/nearest neigbours -\/ based Background/\+Foreground Segmentation Algorithm. \end{DoxyCompactList}\item 
+class {\bfseries Background\+Subtractor\+M\+O\+G2}
+\begin{DoxyCompactList}\small\item\em Gaussian Mixture-\/based Background/\+Foreground Segmentation Algorithm. \end{DoxyCompactList}\item 
+class {\bfseries Cv\+Kalman}
+\item 
+class {\bfseries Dense\+Optical\+Flow}
+\item 
+class {\bfseries Dual\+T\+V\+L1\+Optical\+Flow}
+\begin{DoxyCompactList}\small\item\em \char`\"{}\+Dual T\+V L1\char`\"{} Optical Flow Algorithm. \end{DoxyCompactList}\item 
+class {\bfseries Farneback\+Optical\+Flow}
+\begin{DoxyCompactList}\small\item\em Class computing a dense optical flow using the Gunnar Farneback’s algorithm. \end{DoxyCompactList}\item 
+class {\bfseries Kalman\+Filter}
+\begin{DoxyCompactList}\small\item\em Kalman filter class. \end{DoxyCompactList}\item 
+class {\bfseries Sparse\+Optical\+Flow}
+\begin{DoxyCompactList}\small\item\em Base interface for sparse optical flow algorithms. \end{DoxyCompactList}\item 
+class {\bfseries Sparse\+Pyr\+L\+K\+Optical\+Flow}
+\begin{DoxyCompactList}\small\item\em Class used for calculating a sparse optical flow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static native void {\bfseries cv\+Calc\+Optical\+Flow\+Pyr\+LK} ( @Const Cv\+Arr prev, @Const Cv\+Arr curr, Cv\+Arr prev\+\_\+pyr, Cv\+Arr curr\+\_\+pyr, @Const Cv\+Point2\+D32f prev\+\_\+features, Cv\+Point2\+D32f curr\+\_\+features, int count, @By\+Val Cv\+Size win\+\_\+size, int level, @Cast(\char`\"{}char$\ast$\char`\"{}) Byte\+Pointer status, Float\+Pointer track\+\_\+error, @By\+Val Cv\+Term\+Criteria criteria, int flags)
+\item 
+static native void {\bfseries cv\+Calc\+Optical\+Flow\+Pyr\+LK} ( @Const Cv\+Arr prev, @Const Cv\+Arr curr, Cv\+Arr prev\+\_\+pyr, Cv\+Arr curr\+\_\+pyr, @Cast(\char`\"{}const Cv\+Point2\+D32f$\ast$\char`\"{}) Float\+Buffer prev\+\_\+features, @Cast(\char`\"{}Cv\+Point2\+D32f$\ast$\char`\"{}) Float\+Buffer curr\+\_\+features, int count, @By\+Val Cv\+Size win\+\_\+size, int level, @Cast(\char`\"{}char$\ast$\char`\"{}) Byte\+Buffer status, Float\+Buffer track\+\_\+error, @By\+Val Cv\+Term\+Criteria criteria, int flags)
+\item 
+static native void {\bfseries cv\+Calc\+Optical\+Flow\+Pyr\+LK} ( @Const Cv\+Arr prev, @Const Cv\+Arr curr, Cv\+Arr prev\+\_\+pyr, Cv\+Arr curr\+\_\+pyr, @Cast(\char`\"{}const Cv\+Point2\+D32f$\ast$\char`\"{}) float\mbox{[}$\,$\mbox{]} prev\+\_\+features, @Cast(\char`\"{}Cv\+Point2\+D32f$\ast$\char`\"{}) float\mbox{[}$\,$\mbox{]} curr\+\_\+features, int count, @By\+Val Cv\+Size win\+\_\+size, int level, @Cast(\char`\"{}char$\ast$\char`\"{}) byte\mbox{[}$\,$\mbox{]} status, float\mbox{[}$\,$\mbox{]} track\+\_\+error, @By\+Val Cv\+Term\+Criteria criteria, int flags)
+\item 
+static native int {\bfseries cv\+Estimate\+Rigid\+Transform} ( @Const Cv\+Arr A, @Const Cv\+Arr B, Cv\+Mat M, int full\+\_\+affine)
+\item 
+static native void {\bfseries cv\+Calc\+Optical\+Flow\+Farneback} ( @Const Cv\+Arr prev, @Const Cv\+Arr next, Cv\+Arr flow, double pyr\+\_\+scale, int levels, int winsize, int iterations, int poly\+\_\+n, double poly\+\_\+sigma, int flags)
+\item 
+static native int {\bfseries cv\+Cam\+Shift} ( @Const Cv\+Arr prob\+\_\+image, @By\+Val Cv\+Rect window, @By\+Val Cv\+Term\+Criteria criteria, Cv\+Connected\+Comp comp, Cv\+Box2D box)
+\item 
+static native int {\bfseries cv\+Cam\+Shift} ( @Const Cv\+Arr prob\+\_\+image, @By\+Val Cv\+Rect window, @By\+Val Cv\+Term\+Criteria criteria, Cv\+Connected\+Comp comp)
+\item 
+static native int {\bfseries cv\+Mean\+Shift} ( @Const Cv\+Arr prob\+\_\+image, @By\+Val Cv\+Rect window, @By\+Val Cv\+Term\+Criteria criteria, Cv\+Connected\+Comp comp)
+\item 
+static native Cv\+Kalman {\bfseries cv\+Create\+Kalman} (int dynam\+\_\+params, int measure\+\_\+params, int control\+\_\+params)
+\item 
+static native Cv\+Kalman {\bfseries cv\+Create\+Kalman} (int dynam\+\_\+params, int measure\+\_\+params)
+\item 
+static native void {\bfseries cv\+Release\+Kalman} ( @Cast(\char`\"{}Cv\+Kalman$\ast$$\ast$\char`\"{}) Pointer\+Pointer kalman)
+\item 
+static native void {\bfseries cv\+Release\+Kalman} ( @By\+Ptr\+Ptr Cv\+Kalman kalman)
+\item 
+static native Cv\+Mat {\bfseries cv\+Kalman\+Predict} (Cv\+Kalman kalman, @Const Cv\+Mat control)
+\item 
+static native Cv\+Mat {\bfseries cv\+Kalman\+Predict} (Cv\+Kalman kalman)
+\item 
+static native Cv\+Mat {\bfseries cv\+Kalman\+Correct} (Cv\+Kalman kalman, @Const Cv\+Mat measurement)
+\item 
+static native Cv\+Mat {\bfseries cv\+Kalman\+Update\+By\+Time} (Cv\+Kalman arg1, Cv\+Mat arg2)
+\item 
+static native Cv\+Mat {\bfseries cv\+Kalman\+Update\+By\+Measurement} (Cv\+Kalman arg1, Cv\+Mat arg2)
+\item 
+static native Rotated\+Rect \hyperlink{group__video__track_ga813283f225d7c4ce103da8b37981c69e}{Cam\+Shift} ( @By\+Val Mat prob\+Image, @By\+Ref Rect window, @By\+Val Term\+Criteria criteria)
+\begin{DoxyCompactList}\small\item\em Finds an object center, size, and orientation. \end{DoxyCompactList}\item 
+static native Rotated\+Rect {\bfseries Cam\+Shift} ( @By\+Val U\+Mat prob\+Image, @By\+Ref Rect window, @By\+Val Term\+Criteria criteria)
+\item 
+static native int \hyperlink{group__video__track_gad3336224aac304be4ee36ef146ec40d8}{mean\+Shift} ( @By\+Val Mat prob\+Image, @By\+Ref Rect window, @By\+Val Term\+Criteria criteria)
+\begin{DoxyCompactList}\small\item\em Finds an object on a back projection image. \end{DoxyCompactList}\item 
+static native int {\bfseries mean\+Shift} ( @By\+Val U\+Mat prob\+Image, @By\+Ref Rect window, @By\+Val Term\+Criteria criteria)
+\item 
+static native int \hyperlink{group__video__track_gafca5a72a408befa96e624e9d9704303b}{build\+Optical\+Flow\+Pyramid} ( @By\+Val Mat img, @By\+Val Mat\+Vector pyramid, @By\+Val Size win\+Size, int max\+Level, @Cast(\char`\"{}bool\char`\"{}) boolean with\+Derivatives, int pyr\+Border, int deriv\+Border, @Cast(\char`\"{}bool\char`\"{}) boolean try\+Reuse\+Input\+Image)
+\begin{DoxyCompactList}\small\item\em Constructs the image pyramid which can be passed to calc\+Optical\+Flow\+Pyr\+LK. \end{DoxyCompactList}\item 
+static native int {\bfseries build\+Optical\+Flow\+Pyramid} ( @By\+Val Mat img, @By\+Val Mat\+Vector pyramid, @By\+Val Size win\+Size, int max\+Level)
+\item 
+static native int {\bfseries build\+Optical\+Flow\+Pyramid} ( @By\+Val Mat img, @By\+Val U\+Mat\+Vector pyramid, @By\+Val Size win\+Size, int max\+Level, @Cast(\char`\"{}bool\char`\"{}) boolean with\+Derivatives, int pyr\+Border, int deriv\+Border, @Cast(\char`\"{}bool\char`\"{}) boolean try\+Reuse\+Input\+Image)
+\item 
+static native int {\bfseries build\+Optical\+Flow\+Pyramid} ( @By\+Val Mat img, @By\+Val U\+Mat\+Vector pyramid, @By\+Val Size win\+Size, int max\+Level)
+\item 
+static native int {\bfseries build\+Optical\+Flow\+Pyramid} ( @By\+Val U\+Mat img, @By\+Val Mat\+Vector pyramid, @By\+Val Size win\+Size, int max\+Level, @Cast(\char`\"{}bool\char`\"{}) boolean with\+Derivatives, int pyr\+Border, int deriv\+Border, @Cast(\char`\"{}bool\char`\"{}) boolean try\+Reuse\+Input\+Image)
+\item 
+static native int {\bfseries build\+Optical\+Flow\+Pyramid} ( @By\+Val U\+Mat img, @By\+Val Mat\+Vector pyramid, @By\+Val Size win\+Size, int max\+Level)
+\item 
+static native int {\bfseries build\+Optical\+Flow\+Pyramid} ( @By\+Val U\+Mat img, @By\+Val U\+Mat\+Vector pyramid, @By\+Val Size win\+Size, int max\+Level, @Cast(\char`\"{}bool\char`\"{}) boolean with\+Derivatives, int pyr\+Border, int deriv\+Border, @Cast(\char`\"{}bool\char`\"{}) boolean try\+Reuse\+Input\+Image)
+\item 
+static native int {\bfseries build\+Optical\+Flow\+Pyramid} ( @By\+Val U\+Mat img, @By\+Val U\+Mat\+Vector pyramid, @By\+Val Size win\+Size, int max\+Level)
+\item 
+static native void \hyperlink{group__video__track_ga5336cf64b4b2f82bf7c08551017fda66}{calc\+Optical\+Flow\+Pyr\+LK} ( @By\+Val Mat prev\+Img, @By\+Val Mat next\+Img, @By\+Val Mat prev\+Pts, @By\+Val Mat next\+Pts, @By\+Val Mat status, @By\+Val Mat err, @By\+Val(null\+Value=\char`\"{}cv\+::\+Size(21,21)\char`\"{}) Size win\+Size, int max\+Level, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT+cv\+::\+Term\+Criteria\+::\+E\+PS, 30, 0.\+01)\char`\"{}) Term\+Criteria criteria, int flags, double min\+Eig\+Threshold)
+\begin{DoxyCompactList}\small\item\em Calculates an optical flow for a sparse feature set using the iterative Lucas-\/\+Kanade method with pyramids. \end{DoxyCompactList}\item 
+static native void {\bfseries calc\+Optical\+Flow\+Pyr\+LK} ( @By\+Val Mat prev\+Img, @By\+Val Mat next\+Img, @By\+Val Mat prev\+Pts, @By\+Val Mat next\+Pts, @By\+Val Mat status, @By\+Val Mat err)
+\item 
+static native void {\bfseries calc\+Optical\+Flow\+Pyr\+LK} ( @By\+Val U\+Mat prev\+Img, @By\+Val U\+Mat next\+Img, @By\+Val U\+Mat prev\+Pts, @By\+Val U\+Mat next\+Pts, @By\+Val U\+Mat status, @By\+Val U\+Mat err, @By\+Val(null\+Value=\char`\"{}cv\+::\+Size(21,21)\char`\"{}) Size win\+Size, int max\+Level, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT+cv\+::\+Term\+Criteria\+::\+E\+PS, 30, 0.\+01)\char`\"{}) Term\+Criteria criteria, int flags, double min\+Eig\+Threshold)
+\item 
+static native void {\bfseries calc\+Optical\+Flow\+Pyr\+LK} ( @By\+Val U\+Mat prev\+Img, @By\+Val U\+Mat next\+Img, @By\+Val U\+Mat prev\+Pts, @By\+Val U\+Mat next\+Pts, @By\+Val U\+Mat status, @By\+Val U\+Mat err)
+\item 
+static native void \hyperlink{group__video__track_ga8296f2eaf7aa279b0c54a72350493258}{calc\+Optical\+Flow\+Farneback} ( @By\+Val Mat prev, @By\+Val Mat next, @By\+Val Mat flow, double pyr\+\_\+scale, int levels, int winsize, int iterations, int poly\+\_\+n, double poly\+\_\+sigma, int flags)
+\begin{DoxyCompactList}\small\item\em Computes a dense optical flow using the Gunnar Farneback\textquotesingle{}s algorithm. \end{DoxyCompactList}\item 
+static native void {\bfseries calc\+Optical\+Flow\+Farneback} ( @By\+Val U\+Mat prev, @By\+Val U\+Mat next, @By\+Val U\+Mat flow, double pyr\+\_\+scale, int levels, int winsize, int iterations, int poly\+\_\+n, double poly\+\_\+sigma, int flags)
+\item 
+static native Mat \hyperlink{group__video__track_ga2c14f71afdf82824dbdf781bbc041aa1}{estimate\+Rigid\+Transform} ( @By\+Val Mat src, @By\+Val Mat dst, @Cast(\char`\"{}bool\char`\"{}) boolean full\+Affine)
+\begin{DoxyCompactList}\small\item\em Computes an optimal affine transformation between two 2D point sets. \end{DoxyCompactList}\item 
+static native Mat {\bfseries estimate\+Rigid\+Transform} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @Cast(\char`\"{}bool\char`\"{}) boolean full\+Affine)
+\item 
+static native double \hyperlink{group__video__track_ga2438ed3ebc7ea014e11c93797e2aae7b}{find\+Transform\+E\+CC} ( @By\+Val Mat template\+Image, @By\+Val Mat input\+Image, @By\+Val Mat warp\+Matrix, int motion\+Type, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT+cv\+::\+Term\+Criteria\+::\+E\+PS, 50, 0.\+001)\char`\"{}) Term\+Criteria criteria, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) Mat input\+Mask)
+\begin{DoxyCompactList}\small\item\em Finds the geometric transform (warp) between two images in terms of the E\+CC criterion {\bfseries [E\+P08]} . \end{DoxyCompactList}\item 
+static native double {\bfseries find\+Transform\+E\+CC} ( @By\+Val Mat template\+Image, @By\+Val Mat input\+Image, @By\+Val Mat warp\+Matrix)
+\item 
+static native double {\bfseries find\+Transform\+E\+CC} ( @By\+Val U\+Mat template\+Image, @By\+Val U\+Mat input\+Image, @By\+Val U\+Mat warp\+Matrix, int motion\+Type, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT+cv\+::\+Term\+Criteria\+::\+E\+PS, 50, 0.\+001)\char`\"{}) Term\+Criteria criteria, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat input\+Mask)
+\item 
+static native double {\bfseries find\+Transform\+E\+CC} ( @By\+Val U\+Mat template\+Image, @By\+Val U\+Mat input\+Image, @By\+Val U\+Mat warp\+Matrix)
+\item 
+static native Dual\+T\+V\+L1\+Optical\+Flow \hyperlink{group__video__track_ga02df311817502c4c088084195093be2e}{create\+Opt\+Flow\+\_\+\+Dual\+T\+V\+L1} ()
+\begin{DoxyCompactList}\small\item\em Creates instance of cv\+::\+Dense\+Optical\+Flow. \end{DoxyCompactList}\item 
+static native Background\+Subtractor\+M\+O\+G2 \hyperlink{group__video__motion_ga0820edc51bf6a34fb6ec60e0bfa47770}{create\+Background\+Subtractor\+M\+O\+G2} (int history, double var\+Threshold, @Cast(\char`\"{}bool\char`\"{}) boolean detect\+Shadows)
+\begin{DoxyCompactList}\small\item\em Creates M\+O\+G2 Background Subtractor. \end{DoxyCompactList}\item 
+static native Background\+Subtractor\+M\+O\+G2 {\bfseries create\+Background\+Subtractor\+M\+O\+G2} ()
+\item 
+static native Background\+Subtractor\+K\+NN \hyperlink{group__video__motion_ga1376788db4935dd8798d7e087e7697c9}{create\+Background\+Subtractor\+K\+NN} (int history, double dist2\+Threshold, @Cast(\char`\"{}bool\char`\"{}) boolean detect\+Shadows)
+\begin{DoxyCompactList}\small\item\em Creates K\+NN Background Subtractor. \end{DoxyCompactList}\item 
+static native Background\+Subtractor\+K\+NN {\bfseries create\+Background\+Subtractor\+K\+NN} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final int {\bfseries C\+V\+\_\+\+L\+K\+F\+L\+O\+W\+\_\+\+P\+Y\+R\+\_\+\+A\+\_\+\+R\+E\+A\+DY} = 1
+\item 
+static final int {\bfseries C\+V\+\_\+\+L\+K\+F\+L\+O\+W\+\_\+\+P\+Y\+R\+\_\+\+B\+\_\+\+R\+E\+A\+DY} = 2
+\item 
+static final int {\bfseries C\+V\+\_\+\+L\+K\+F\+L\+O\+W\+\_\+\+I\+N\+I\+T\+I\+A\+L\+\_\+\+G\+U\+E\+S\+S\+ES} = 4
+\item 
+static final int {\bfseries C\+V\+\_\+\+L\+K\+F\+L\+O\+W\+\_\+\+G\+E\+T\+\_\+\+M\+I\+N\+\_\+\+E\+I\+G\+E\+N\+V\+A\+LS} = 8
+\item 
+static final int \hyperlink{group__video__track_ga7544170e893b4e8835522881418d396d}{O\+P\+T\+F\+L\+O\+W\+\_\+\+U\+S\+E\+\_\+\+I\+N\+I\+T\+I\+A\+L\+\_\+\+F\+L\+OW} = 4
+\item 
+static final int \hyperlink{group__video__track_gaf37f7c8ec20fc62ff4ba2f00de67f1b3}{M\+O\+T\+I\+O\+N\+\_\+\+T\+R\+A\+N\+S\+L\+A\+T\+I\+ON} = 0
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+opencv\+\_\+video.\+java\end{DoxyCompactItemize}

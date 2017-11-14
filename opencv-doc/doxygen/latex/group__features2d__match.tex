@@ -1,0 +1,38 @@
+\hypertarget{group__features2d__match}{}\section{Descriptor Matchers}
+\label{group__features2d__match}\index{Descriptor Matchers@{Descriptor Matchers}}
+
+
+Abstract base class for matching keypoint descriptors.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+features2d.\+Descriptor\+Matcher}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+features2d.\+B\+F\+Matcher}
+\begin{DoxyCompactList}\small\item\em Brute-\/force descriptor matcher. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+features2d.\+Flann\+Based\+Matcher}
+\begin{DoxyCompactList}\small\item\em Flann-\/based descriptor matcher. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract base class for matching keypoint descriptors. 
+
+Matchers of keypoint descriptors in Open\+CV have wrappers with a common interface that enables you to easily switch between different algorithms solving the same problem. This section is devoted to matching descriptors that are represented as vectors in a multidimensional space. All objects that implement vector descriptor matchers inherit the Descriptor\+Matcher interface. 
+
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item An example explaining keypoint matching can be found at opencv\+\_\+source\+\_\+code/samples/cpp/descriptor\+\_\+extractor\+\_\+matcher.\+cpp
+\begin{DoxyItemize}
+\item An example on descriptor matching evaluation can be found at opencv\+\_\+source\+\_\+code/samples/cpp/detector\+\_\+descriptor\+\_\+matcher\+\_\+evaluation.\+cpp
+\item An example on one to many image matching can be found at opencv\+\_\+source\+\_\+code/samples/cpp/matching\+\_\+to\+\_\+many\+\_\+images.\+cpp 
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyNote}
+/$\ast$$\ast$ 
+
+/$\ast$$\ast$
+
+It has two groups of match methods\+: for matching descriptors of an image with another image or with an image set. 

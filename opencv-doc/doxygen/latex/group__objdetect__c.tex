@@ -1,0 +1,86 @@
+\hypertarget{group__objdetect__c}{}\section{C A\+PI}
+\label{group__objdetect__c}\index{C A\+PI@{C A\+PI}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+Cv\+Haar\+Feature}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+Cv\+Haar\+Classifier}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+Cv\+Haar\+Stage\+Classifier}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+Cv\+Hid\+Haar\+Classifier\+Cascade}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+Cv\+Haar\+Classifier\+Cascade}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+Cv\+Avg\+Comp}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__objdetect__c_ga64819768c63830b9a105f22ce78c41cc}\label{group__objdetect__c_ga64819768c63830b9a105f22ce78c41cc}} 
+static native Cv\+Haar\+Classifier\+Cascade {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+cv\+Load\+Haar\+Classifier\+Cascade} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer directory, @By\+Val Cv\+Size orig\+\_\+window\+\_\+size)
+\item 
+\mbox{\Hypertarget{group__objdetect__c_gae9a75b053261c839ec2b0d341e5755a7}\label{group__objdetect__c_gae9a75b053261c839ec2b0d341e5755a7}} 
+static native Cv\+Haar\+Classifier\+Cascade {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+cv\+Load\+Haar\+Classifier\+Cascade} (String directory, @By\+Val Cv\+Size orig\+\_\+window\+\_\+size)
+\item 
+\mbox{\Hypertarget{group__objdetect__c_gad1ed7db6364d731f9745caff91c9848f}\label{group__objdetect__c_gad1ed7db6364d731f9745caff91c9848f}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+cv\+Release\+Haar\+Classifier\+Cascade} ( @Cast(\char`\"{}Cv\+Haar\+Classifier\+Cascade$\ast$$\ast$\char`\"{}) Pointer\+Pointer cascade)
+\item 
+\mbox{\Hypertarget{group__objdetect__c_ga99d479c954b266239e00892f0d7accf7}\label{group__objdetect__c_ga99d479c954b266239e00892f0d7accf7}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+cv\+Release\+Haar\+Classifier\+Cascade} ( @By\+Ptr\+Ptr Cv\+Haar\+Classifier\+Cascade cascade)
+\item 
+\mbox{\Hypertarget{group__objdetect__c_gaf5ecaf5cf5901aa5f37f1f3c2652318d}\label{group__objdetect__c_gaf5ecaf5cf5901aa5f37f1f3c2652318d}} 
+static native Cv\+Seq {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+cv\+Haar\+Detect\+Objects} ( @Const Cv\+Arr image, Cv\+Haar\+Classifier\+Cascade cascade, Cv\+Mem\+Storage storage, double scale\+\_\+factor, int min\+\_\+neighbors, int flags, @By\+Val(null\+Value=\char`\"{}Cv\+Size(cv\+Size(0,0))\char`\"{}) Cv\+Size min\+\_\+size, @By\+Val(null\+Value=\char`\"{}Cv\+Size(cv\+Size(0,0))\char`\"{}) Cv\+Size max\+\_\+size)
+\item 
+\mbox{\Hypertarget{group__objdetect__c_gac859f3d24cac2e7d99415c5ebabae807}\label{group__objdetect__c_gac859f3d24cac2e7d99415c5ebabae807}} 
+static native Cv\+Seq {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+cv\+Haar\+Detect\+Objects} ( @Const Cv\+Arr image, Cv\+Haar\+Classifier\+Cascade cascade, Cv\+Mem\+Storage storage)
+\item 
+\mbox{\Hypertarget{group__objdetect__c_ga4a4c732d018e761593a788bb3ddfc0f5}\label{group__objdetect__c_ga4a4c732d018e761593a788bb3ddfc0f5}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+cv\+Set\+Images\+For\+Haar\+Classifier\+Cascade} (Cv\+Haar\+Classifier\+Cascade cascade, @Const Cv\+Arr sum, @Const Cv\+Arr sqsum, @Const Cv\+Arr tilted\+\_\+sum, double scale)
+\item 
+\mbox{\Hypertarget{group__objdetect__c_ga7f86d9a96ef5a982137eaf3e897b7710}\label{group__objdetect__c_ga7f86d9a96ef5a982137eaf3e897b7710}} 
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+cv\+Run\+Haar\+Classifier\+Cascade} ( @Const Cv\+Haar\+Classifier\+Cascade cascade, @By\+Val Cv\+Point pt, int start\+\_\+stage)
+\item 
+\mbox{\Hypertarget{group__objdetect__c_gae410634584d5146694a528e1d9ea15d3}\label{group__objdetect__c_gae410634584d5146694a528e1d9ea15d3}} 
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+cv\+Run\+Haar\+Classifier\+Cascade} ( @Const Cv\+Haar\+Classifier\+Cascade cascade, @By\+Val Cv\+Point pt)
+\item 
+\mbox{\Hypertarget{group__objdetect__c_gaf73ffb3a1da8f0ce78bbb2b35e7886b0}\label{group__objdetect__c_gaf73ffb3a1da8f0ce78bbb2b35e7886b0}} 
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+cv\+Run\+Haar\+Classifier\+Cascade} ( @Const Cv\+Haar\+Classifier\+Cascade cascade, @By\+Val @Cast(\char`\"{}Cv\+Point$\ast$\char`\"{}) Int\+Buffer pt, int start\+\_\+stage)
+\item 
+\mbox{\Hypertarget{group__objdetect__c_gac85d6e363e526676f569010cf638736b}\label{group__objdetect__c_gac85d6e363e526676f569010cf638736b}} 
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+cv\+Run\+Haar\+Classifier\+Cascade} ( @Const Cv\+Haar\+Classifier\+Cascade cascade, @By\+Val @Cast(\char`\"{}Cv\+Point$\ast$\char`\"{}) Int\+Buffer pt)
+\item 
+\mbox{\Hypertarget{group__objdetect__c_gaabbb0f870bcc046ebdd825893a3414cf}\label{group__objdetect__c_gaabbb0f870bcc046ebdd825893a3414cf}} 
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+cv\+Run\+Haar\+Classifier\+Cascade} ( @Const Cv\+Haar\+Classifier\+Cascade cascade, @By\+Val @Cast(\char`\"{}Cv\+Point$\ast$\char`\"{}) int\mbox{[}$\,$\mbox{]} pt, int start\+\_\+stage)
+\item 
+\mbox{\Hypertarget{group__objdetect__c_gae9c331bcedc873261e9b49d21397851b}\label{group__objdetect__c_gae9c331bcedc873261e9b49d21397851b}} 
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+cv\+Run\+Haar\+Classifier\+Cascade} ( @Const Cv\+Haar\+Classifier\+Cascade cascade, @By\+Val @Cast(\char`\"{}Cv\+Point$\ast$\char`\"{}) int\mbox{[}$\,$\mbox{]} pt)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__objdetect__c_gaadc9ca812f6376a98af1fe575a5726f7}\label{group__objdetect__c_gaadc9ca812f6376a98af1fe575a5726f7}} 
+static final int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+C\+V\+\_\+\+H\+A\+A\+R\+\_\+\+M\+A\+G\+I\+C\+\_\+\+V\+AL} = 0x42500000
+\item 
+\mbox{\Hypertarget{group__objdetect__c_gab4c6556e0238167fdd3d7727abadbb9a}\label{group__objdetect__c_gab4c6556e0238167fdd3d7727abadbb9a}} 
+static final String {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+C\+V\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+A\+M\+E\+\_\+\+H\+A\+AR} = \char`\"{}opencv-\/haar-\/classifier\char`\"{}
+\item 
+\mbox{\Hypertarget{group__objdetect__c_gace767d4d14dd82212ecdf70861179c8c}\label{group__objdetect__c_gace767d4d14dd82212ecdf70861179c8c}} 
+static final int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+C\+V\+\_\+\+H\+A\+A\+R\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+M\+AX} = 3
+\item 
+\mbox{\Hypertarget{group__objdetect__c_gadb275d207b671ced1dda214395da67e1}\label{group__objdetect__c_gadb275d207b671ced1dda214395da67e1}} 
+static final int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+C\+V\+\_\+\+H\+A\+A\+R\+\_\+\+D\+O\+\_\+\+C\+A\+N\+N\+Y\+\_\+\+P\+R\+U\+N\+I\+NG} = 1
+\item 
+\mbox{\Hypertarget{group__objdetect__c_ga4c3f1323b7fba0dc6ad9e9a452d832a6}\label{group__objdetect__c_ga4c3f1323b7fba0dc6ad9e9a452d832a6}} 
+static final int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+C\+V\+\_\+\+H\+A\+A\+R\+\_\+\+S\+C\+A\+L\+E\+\_\+\+I\+M\+A\+GE} = 2
+\item 
+\mbox{\Hypertarget{group__objdetect__c_ga321b27446217a7f8035b390ea7216a6c}\label{group__objdetect__c_ga321b27446217a7f8035b390ea7216a6c}} 
+static final int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+C\+V\+\_\+\+H\+A\+A\+R\+\_\+\+F\+I\+N\+D\+\_\+\+B\+I\+G\+G\+E\+S\+T\+\_\+\+O\+B\+J\+E\+CT} = 4
+\item 
+\mbox{\Hypertarget{group__objdetect__c_gad698ad95aeb09722b57c4be5f3a4d2cd}\label{group__objdetect__c_gad698ad95aeb09722b57c4be5f3a4d2cd}} 
+static final int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect.\+C\+V\+\_\+\+H\+A\+A\+R\+\_\+\+D\+O\+\_\+\+R\+O\+U\+G\+H\+\_\+\+S\+E\+A\+R\+CH} = 8
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}

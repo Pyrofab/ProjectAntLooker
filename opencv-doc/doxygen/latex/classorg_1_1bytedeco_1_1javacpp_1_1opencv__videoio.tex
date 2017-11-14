@@ -1,0 +1,218 @@
+\hypertarget{classorg_1_1bytedeco_1_1javacpp_1_1opencv__videoio}{}\section{org.\+bytedeco.\+javacpp.\+opencv\+\_\+videoio Class Reference}
+\label{classorg_1_1bytedeco_1_1javacpp_1_1opencv__videoio}\index{org.\+bytedeco.\+javacpp.\+opencv\+\_\+videoio@{org.\+bytedeco.\+javacpp.\+opencv\+\_\+videoio}}
+Inheritance diagram for org.\+bytedeco.\+javacpp.\+opencv\+\_\+videoio\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classorg_1_1bytedeco_1_1javacpp_1_1opencv__videoio}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Cv\+Capture}
+\begin{DoxyCompactList}\small\item\em \char`\"{}black box\char`\"{} capture structure \end{DoxyCompactList}\item 
+class {\bfseries Cv\+Video\+Writer}
+\begin{DoxyCompactList}\small\item\em \char`\"{}black box\char`\"{} video file writer structure \end{DoxyCompactList}\item 
+class {\bfseries I\+Video\+Capture}
+\item 
+class {\bfseries I\+Video\+Writer}
+\item 
+class {\bfseries Video\+Capture}
+\begin{DoxyCompactList}\small\item\em Class for video capturing from video files, image sequences or cameras. \end{DoxyCompactList}\item 
+class {\bfseries Video\+Writer}
+\begin{DoxyCompactList}\small\item\em Video writer class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static native Cv\+Capture \hyperlink{group__videoio__c_gaf71dcb88fc0c7476076b298ed762ddca}{cv\+Create\+File\+Capture} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer filename)
+\begin{DoxyCompactList}\small\item\em start capturing frames from video file \end{DoxyCompactList}\item 
+static native Cv\+Capture {\bfseries cv\+Create\+File\+Capture} (String filename)
+\item 
+static native Cv\+Capture \hyperlink{group__videoio__c_ga11789f0474ae978b9ec17590706f9901}{cv\+Create\+File\+Capture\+With\+Preference} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer filename, int api\+Preference)
+\begin{DoxyCompactList}\small\item\em start capturing frames from video file. allows specifying a preferred A\+PI to use \end{DoxyCompactList}\item 
+static native Cv\+Capture {\bfseries cv\+Create\+File\+Capture\+With\+Preference} (String filename, int api\+Preference)
+\item 
+static native Cv\+Capture \hyperlink{group__videoio__c_ga43844b7ee876e73697163ae51ec617db}{cv\+Create\+Camera\+Capture} (int index)
+\begin{DoxyCompactList}\small\item\em start capturing frames from camera\+: index = camera\+\_\+index + domain\+\_\+offset (C\+V\+\_\+\+C\+A\+P\+\_\+$\ast$) \end{DoxyCompactList}\item 
+static native int \hyperlink{group__videoio__c_ga630e4d9ab3ff9f05ab4bc5ba1eb1d787}{cv\+Grab\+Frame} (Cv\+Capture capture)
+\begin{DoxyCompactList}\small\item\em grab a frame, return 1 on success, 0 on fail. \end{DoxyCompactList}\item 
+static native Ipl\+Image \hyperlink{group__videoio__c_ga0bb2a83d7a4cd242fae9561742b4af37}{cv\+Retrieve\+Frame} (Cv\+Capture capture, int stream\+Idx)
+\begin{DoxyCompactList}\small\item\em get the frame grabbed with cv\+Grab\+Frame(..) \end{DoxyCompactList}\item 
+static native Ipl\+Image {\bfseries cv\+Retrieve\+Frame} (Cv\+Capture capture)
+\item 
+static native Ipl\+Image \hyperlink{group__videoio__c_ga5c8fd8eb6b93a72085abecae04eebb12}{cv\+Query\+Frame} (Cv\+Capture capture)
+\begin{DoxyCompactList}\small\item\em Just a combination of cv\+Grab\+Frame and cv\+Retrieve\+Frame. \end{DoxyCompactList}\item 
+static native void \hyperlink{group__videoio__c_ga74708c3e2dd50838b8626b75a7ceaf1d}{cv\+Release\+Capture} ( @Cast(\char`\"{}Cv\+Capture$\ast$$\ast$\char`\"{}) Pointer\+Pointer capture)
+\begin{DoxyCompactList}\small\item\em stop capturing/reading and free resources \end{DoxyCompactList}\item 
+static native void {\bfseries cv\+Release\+Capture} ( @By\+Ptr\+Ptr Cv\+Capture capture)
+\item 
+static native double \hyperlink{group__videoio__c_ga98ef6dab996d6b3189fc3f18046d2a44}{cv\+Get\+Capture\+Property} (Cv\+Capture capture, int property\+\_\+id)
+\begin{DoxyCompactList}\small\item\em retrieve capture properties \end{DoxyCompactList}\item 
+static native int \hyperlink{group__videoio__c_ga1165012821c4296388a11df431414950}{cv\+Set\+Capture\+Property} (Cv\+Capture capture, int property\+\_\+id, double value)
+\begin{DoxyCompactList}\small\item\em set capture properties \end{DoxyCompactList}\item 
+static native int \hyperlink{group__videoio__c_ga907965e3aedaeeb293f6b781590fa8a9}{cv\+Get\+Capture\+Domain} (Cv\+Capture capture)
+\begin{DoxyCompactList}\small\item\em Return the type of the capturer (eg, \+::\+C\+V\+\_\+\+C\+A\+P\+\_\+\+V\+FW, \+::\+C\+V\+\_\+\+C\+A\+P\+\_\+\+U\+N\+I\+C\+AP) \end{DoxyCompactList}\item 
+static native int \hyperlink{group__videoio__c_ga30de218d6d68e6d7ede1b476f71f45db}{C\+V\+\_\+\+F\+O\+U\+R\+CC} (@Cast(\char`\"{}char\char`\"{}) byte c1, @Cast(\char`\"{}char\char`\"{}) byte c2, @Cast(\char`\"{}char\char`\"{}) byte c3, @Cast(\char`\"{}char\char`\"{}) byte c4)
+\begin{DoxyCompactList}\small\item\em Constructs the fourcc code of the codec function. \end{DoxyCompactList}\item 
+static native int \hyperlink{group__videoio__c_gaade4fde0859691fd56cdb50fd9bf62db}{C\+V\+\_\+\+F\+O\+U\+R\+C\+C\+\_\+\+D\+E\+F\+A\+U\+LT} ()
+\item 
+static native Cv\+Video\+Writer \hyperlink{group__videoio__c_ga707349ac4c6f16cecf119295374d1ef8}{cv\+Create\+Video\+Writer} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer filename, int fourcc, double fps, @By\+Val Cv\+Size frame\+\_\+size, int is\+\_\+color)
+\begin{DoxyCompactList}\small\item\em initialize video file writer \end{DoxyCompactList}\item 
+static native Cv\+Video\+Writer {\bfseries cv\+Create\+Video\+Writer} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer filename, int fourcc, double fps, @By\+Val Cv\+Size frame\+\_\+size)
+\item 
+static native Cv\+Video\+Writer {\bfseries cv\+Create\+Video\+Writer} (String filename, int fourcc, double fps, @By\+Val Cv\+Size frame\+\_\+size, int is\+\_\+color)
+\item 
+static native Cv\+Video\+Writer {\bfseries cv\+Create\+Video\+Writer} (String filename, int fourcc, double fps, @By\+Val Cv\+Size frame\+\_\+size)
+\item 
+static native int \hyperlink{group__videoio__c_ga167c75eb3f3ce8ddde13d364bb6fa69d}{cv\+Write\+Frame} (Cv\+Video\+Writer writer, @Const Ipl\+Image image)
+\begin{DoxyCompactList}\small\item\em write frame to video file \end{DoxyCompactList}\item 
+static native void \hyperlink{group__videoio__c_ga70d8b768ab059ff65f019d05036a7806}{cv\+Release\+Video\+Writer} ( @Cast(\char`\"{}Cv\+Video\+Writer$\ast$$\ast$\char`\"{}) Pointer\+Pointer writer)
+\begin{DoxyCompactList}\small\item\em close video file writer \end{DoxyCompactList}\item 
+static native void {\bfseries cv\+Release\+Video\+Writer} ( @By\+Ptr\+Ptr Cv\+Video\+Writer writer)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Obsolete functions/synonyms}\par
+\begin{DoxyCompactItemize}
+\item 
+static native Cv\+Capture \hyperlink{group__videoio__c_gafab92effdc81a1a2eb305dc69eb84bfd}{cv\+Capture\+From\+C\+AM} (int arg1)
+\item 
+static native Cv\+Capture \hyperlink{group__videoio__c_ga5fccc51ced33519e61c5687ca7b17fdb}{cv\+Capture\+From\+File} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer arg1)
+\item 
+static native Cv\+Capture {\bfseries cv\+Capture\+From\+File} (String arg1)
+\item 
+static native Cv\+Capture \hyperlink{group__videoio__c_ga153463bfe93115b2ff7783a8c504d2a7}{cv\+Capture\+From\+A\+VI} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer arg1)
+\item 
+static native Cv\+Capture {\bfseries cv\+Capture\+From\+A\+VI} (String arg1)
+\item 
+static native Cv\+Video\+Writer \hyperlink{group__videoio__c_ga7ac706f58e712a321ff4ed14d9c98dfc}{cv\+Create\+A\+V\+I\+Writer} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer arg1, int arg2, double arg3, @By\+Val Cv\+Size arg4, int arg5)
+\item 
+static native Cv\+Video\+Writer {\bfseries cv\+Create\+A\+V\+I\+Writer} (String arg1, int arg2, double arg3, @By\+Val Cv\+Size arg4, int arg5)
+\item 
+static native int \hyperlink{group__videoio__c_ga3f795024cbed8966f3b006b1ccd99acc}{cv\+Write\+To\+A\+VI} (Cv\+Video\+Writer arg1, Ipl\+Image arg2)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{group__videoio__c_gab170df7f9f17e64c3642fbc2036c9d89}{C\+V\+\_\+\+C\+A\+P\+\_\+\+A\+NY} = 0
+\item 
+static final int \hyperlink{group__videoio__c_gab93e06d5b7823b93b958bffc1d6c5220}{C\+V\+\_\+\+C\+A\+P\+\_\+\+P\+R\+O\+P\+\_\+\+D\+C1394\+\_\+\+O\+FF} = -\/4
+\item 
+static final int \hyperlink{group__videoio__c_ga857b3fa265775f5d402c1e0a65ef254d}{C\+V\+\_\+\+C\+A\+P\+\_\+\+M\+O\+D\+E\+\_\+\+B\+GR} = 0
+\item 
+static final int \hyperlink{group__videoio__c_ga0614006f7159a4f38a5536d9afc6c841}{C\+V\+\_\+\+C\+A\+P\+\_\+\+O\+P\+E\+N\+N\+I\+\_\+\+D\+E\+P\+T\+H\+\_\+\+M\+AP} = 0
+\item 
+static final int \hyperlink{group__videoio__c_ga21913880c4cae25d1ff392c5fa2bb30f}{C\+V\+\_\+\+C\+A\+P\+\_\+\+O\+P\+E\+N\+N\+I\+\_\+\+V\+G\+A\+\_\+30\+HZ} = 0
+\item 
+static final int \hyperlink{group__videoio__c_ga24a1e5be05c39075c7d1f8564521f733}{C\+V\+\_\+\+C\+A\+P\+\_\+\+I\+N\+T\+E\+L\+P\+E\+R\+C\+\_\+\+D\+E\+P\+T\+H\+\_\+\+M\+AP} = 0
+\item 
+static final int \hyperlink{group__videoio__c_ga6e1f35a3b8dc5ab0fc4b7363821533d8}{C\+V\+\_\+\+C\+A\+P\+\_\+\+P\+R\+O\+P\+\_\+\+G\+P\+H\+O\+T\+O2\+\_\+\+P\+R\+E\+V\+I\+EW} = 17001
+\item 
+static final int \hyperlink{group__videoio__c_gaa801d0075e64846c5f858fafb7f7ba26}{C\+V\+\_\+\+F\+O\+U\+R\+C\+C\+\_\+\+P\+R\+O\+M\+PT} = -\/1
+\item 
+static final int {\bfseries C\+V\+\_\+\+F\+O\+U\+R\+C\+C\+\_\+\+D\+E\+F\+A\+U\+LT} = C\+V\+\_\+\+F\+O\+U\+R\+C\+C\+\_\+\+D\+E\+F\+A\+U\+LT()
+\item 
+static final int \hyperlink{group__videoio__flags__base_ga5919f622200581e7cc68b521cd528f3f}{C\+A\+P\+\_\+\+A\+NY} = 0
+\item 
+static final int \hyperlink{group__videoio__flags__base_ga0d261205f5852e23c0987e9a838e9f91}{C\+A\+P\+\_\+\+P\+R\+O\+P\+\_\+\+P\+O\+S\+\_\+\+M\+S\+EC} = 0
+\begin{DoxyCompactList}\small\item\em Video\+Capture generic properties identifier. \end{DoxyCompactList}\item 
+static final int \hyperlink{group__videoio__flags__base_gaadf3dff0251965990b45d02868b90b23}{C\+A\+P\+\_\+\+M\+O\+D\+E\+\_\+\+B\+GR} = 0
+\begin{DoxyCompactList}\small\item\em Generic camera output modes identifier. \end{DoxyCompactList}\item 
+static final int \hyperlink{group__videoio__flags__base_gac45c570604a0024fe45239139e0d4e5b}{V\+I\+D\+E\+O\+W\+R\+I\+T\+E\+R\+\_\+\+P\+R\+O\+P\+\_\+\+Q\+U\+A\+L\+I\+TY} = 1
+\begin{DoxyCompactList}\small\item\em Video\+Writer generic properties identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ G\+Streamer}\par
+{\em Open\+NI 
+
+/$\ast$$\ast$ }\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{group__videoio__flags__others_gafbbac7fafc3f6386e3234a007d25b25d}{C\+A\+P\+\_\+\+P\+R\+O\+P\+\_\+\+G\+S\+T\+R\+E\+A\+M\+E\+R\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+L\+E\+N\+G\+TH} = 200
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{I\+E\+EE 1394 drivers}
+\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{group__videoio__flags__others_gad6592d7bfce8b9138f5a334ae87a5ff9}{C\+A\+P\+\_\+\+P\+R\+O\+P\+\_\+\+D\+C1394\+\_\+\+O\+FF} = -\/4
+\begin{DoxyCompactList}\small\item\em Modes of the I\+E\+EE 1394 controlling registers (can be\+: auto, manual, auto single push, absolute Latter allowed with any other mode) every feature can have only one mode turned on at a time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Open\+NI (for Kinect)}
+\label{_amgrp848bd3907cdb4b9cd483b8d19dbc52c3}%
+ I\+E\+EE 1394 drivers 
+
+/$\ast$$\ast$ \begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{group__videoio__flags__others_gae3c0e63f05b21774fe01e3e9f737e8a0}{C\+A\+P\+\_\+\+O\+P\+E\+N\+N\+I\+\_\+\+D\+E\+P\+T\+H\+\_\+\+G\+E\+N\+E\+R\+A\+T\+OR} = 1 $<$$<$ 31
+\item 
+static final int \hyperlink{group__videoio__flags__others_gac9fa35868d2fa304aee7d72f50bc9dae}{C\+A\+P\+\_\+\+P\+R\+O\+P\+\_\+\+O\+P\+E\+N\+N\+I\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+O\+DE} = 100
+\item 
+static final int \hyperlink{group__videoio__flags__others_ga94fffc0304ea99800662b4a89e79898e}{C\+A\+P\+\_\+\+O\+P\+E\+N\+N\+I\+\_\+\+I\+M\+A\+G\+E\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+\_\+\+P\+R\+E\+S\+E\+NT} = C\+A\+P\+\_\+\+O\+P\+E\+N\+N\+I\+\_\+\+I\+M\+A\+G\+E\+\_\+\+G\+E\+N\+E\+R\+A\+T\+OR + C\+A\+P\+\_\+\+P\+R\+O\+P\+\_\+\+O\+P\+E\+N\+N\+I\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+\_\+\+P\+R\+E\+S\+E\+NT
+\item 
+static final int \hyperlink{group__videoio__flags__others_ga34a12b8e99e76dfa25af8fed3c199d46}{C\+A\+P\+\_\+\+O\+P\+E\+N\+N\+I\+\_\+\+D\+E\+P\+T\+H\+\_\+\+M\+AP} = 0
+\item 
+static final int \hyperlink{group__videoio__flags__others_gab75d47d5fe56c9248b689bf463a5c96b}{C\+A\+P\+\_\+\+O\+P\+E\+N\+N\+I\+\_\+\+V\+G\+A\+\_\+30\+HZ} = 0
+\end{DoxyCompactItemize}
+\subsection*{Pv\+A\+PI, Prosilica GigE S\+DK}
+\label{_amgrpad73e9ceb7c1dc02527eb584e89bd615}%
+ G\+Streamer 
+
+/$\ast$$\ast$ \begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{group__videoio__flags__others_gae525c9cc0da137af131406ca12fd92d7}{C\+A\+P\+\_\+\+P\+R\+O\+P\+\_\+\+P\+V\+A\+P\+I\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+IP} = 300
+\item 
+static final int \hyperlink{group__videoio__flags__others_ga013dd4a15cafb63c7a4934abce8aaeb7}{C\+A\+P\+\_\+\+P\+V\+A\+P\+I\+\_\+\+F\+S\+T\+R\+I\+G\+M\+O\+D\+E\+\_\+\+F\+R\+E\+E\+R\+UN} = 0
+\item 
+static final int \hyperlink{group__videoio__flags__others_gadc78e206f0eea9da651ff0c67a8d4f4c}{C\+A\+P\+\_\+\+P\+V\+A\+P\+I\+\_\+\+D\+E\+C\+I\+M\+A\+T\+I\+O\+N\+\_\+\+O\+FF} = 1
+\item 
+static final int \hyperlink{group__videoio__flags__others_ga1dfffd05aca0c220f753ce014bdeea0f}{C\+A\+P\+\_\+\+P\+V\+A\+P\+I\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+M\+O\+N\+O8} = 1
+\end{DoxyCompactItemize}
+\subsection*{X\+I\+M\+EA Camera A\+PI}
+\label{_amgrp27700f107007c227ac22f266c008393b}%
+ Pv\+A\+PI 
+
+/$\ast$$\ast$ \begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{group__videoio__flags__others_ga8cffe0305b23ba68e84c3948d29ed9d7}{C\+A\+P\+\_\+\+P\+R\+O\+P\+\_\+\+X\+I\+\_\+\+D\+O\+W\+N\+S\+A\+M\+P\+L\+I\+NG} = 400
+\end{DoxyCompactItemize}
+\subsection*{A\+V\+Foundation framework for i\+OS}
+\label{_amgrpa29adce7291c258c56920a735b90577a}%
+ X\+I\+M\+EA 
+
+/$\ast$$\ast$ OS X Lion will have the same A\+PI \begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{group__videoio__flags__others_gaf0a40895d86f9a304aefc2b1293ada0b}{C\+A\+P\+\_\+\+P\+R\+O\+P\+\_\+\+I\+O\+S\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+O\+C\+US} = 9001
+\end{DoxyCompactItemize}
+\subsection*{Smartek Giganetix Gig\+E\+Vision\+S\+DK}
+\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{group__videoio__flags__others_gab4ddba80d08c7d12c1cf05ad5f3182a0}{C\+A\+P\+\_\+\+P\+R\+O\+P\+\_\+\+G\+I\+G\+A\+\_\+\+F\+R\+A\+M\+E\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+X} = 10001
+\end{DoxyCompactItemize}
+\subsection*{Intel Perceptual Computing S\+DK}
+\label{_amgrpfb2ec7d2cacf22b3dd4fcd13264794c9}%
+ Smartek 
+
+/$\ast$$\ast$ \begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{group__videoio__flags__others_gaa9b3af0c8f28aea91749058639e286f7}{C\+A\+P\+\_\+\+P\+R\+O\+P\+\_\+\+I\+N\+T\+E\+L\+P\+E\+R\+C\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+C\+O\+U\+NT} = 11001
+\item 
+static final int \hyperlink{group__videoio__flags__others_gab66c209bfa351264f55727db980328f2}{C\+A\+P\+\_\+\+I\+N\+T\+E\+L\+P\+E\+R\+C\+\_\+\+D\+E\+P\+T\+H\+\_\+\+G\+E\+N\+E\+R\+A\+T\+OR} = 1 $<$$<$ 29
+\item 
+static final int \hyperlink{group__videoio__flags__others_ga81daac9eadb7d66e1f26c0d984b68c82}{C\+A\+P\+\_\+\+I\+N\+T\+E\+L\+P\+E\+R\+C\+\_\+\+D\+E\+P\+T\+H\+\_\+\+M\+AP} = 0
+\end{DoxyCompactItemize}
+\subsection*{g\+Photo2 connection}
+\label{_amgrp190de4ba27ec870ae1edac91cdcae582}%
+ Intel Perceptual 
+
+/$\ast$$\ast$ \begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{group__videoio__flags__others_ga2d0e0d7cb640eb1dc635b6351fc64c42}{C\+A\+P\+\_\+\+P\+R\+O\+P\+\_\+\+G\+P\+H\+O\+T\+O2\+\_\+\+P\+R\+E\+V\+I\+EW} = 17001
+\begin{DoxyCompactList}\small\item\em g\+Photo2 properties \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Images backend}
+\label{_amgrpf4bcbe1ab751845a9b3aa892849e1b20}%
+ g\+Photo2 
+
+/$\ast$$\ast$ \begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{group__videoio__flags__others_ga6a4667b5803848ad28674572fabd3557}{C\+A\+P\+\_\+\+P\+R\+O\+P\+\_\+\+I\+M\+A\+G\+E\+S\+\_\+\+B\+A\+SE} = 18000
+\begin{DoxyCompactList}\small\item\em Images backend properties. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+opencv\+\_\+videoio.\+java\end{DoxyCompactItemize}

@@ -1,0 +1,75 @@
+\hypertarget{classorg_1_1bytedeco_1_1javacpp_1_1opencv__shape}{}\section{org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape Class Reference}
+\label{classorg_1_1bytedeco_1_1javacpp_1_1opencv__shape}\index{org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape@{org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape}}
+Inheritance diagram for org.\+bytedeco.\+javacpp.\+opencv\+\_\+shape\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classorg_1_1bytedeco_1_1javacpp_1_1opencv__shape}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Affine\+Transformer}
+\begin{DoxyCompactList}\small\item\em Wrapper class for the Open\+CV Affine Transformation algorithm. \+: \end{DoxyCompactList}\item 
+class {\bfseries Chi\+Histogram\+Cost\+Extractor}
+\begin{DoxyCompactList}\small\item\em An Chi based cost extraction. \+: \end{DoxyCompactList}\item 
+class {\bfseries E\+M\+D\+Histogram\+Cost\+Extractor}
+\begin{DoxyCompactList}\small\item\em An E\+MD based cost extraction. \+: \end{DoxyCompactList}\item 
+class {\bfseries E\+M\+D\+L1\+Histogram\+Cost\+Extractor}
+\begin{DoxyCompactList}\small\item\em An E\+M\+D-\/\+L1 based cost extraction. \+: \end{DoxyCompactList}\item 
+class {\bfseries Hausdorff\+Distance\+Extractor}
+\begin{DoxyCompactList}\small\item\em A simple Hausdorff distance measure between shapes defined by contours. \end{DoxyCompactList}\item 
+class {\bfseries Histogram\+Cost\+Extractor}
+\item 
+class {\bfseries Norm\+Histogram\+Cost\+Extractor}
+\begin{DoxyCompactList}\small\item\em A norm based cost extraction. \+: \end{DoxyCompactList}\item 
+class {\bfseries Shape\+Context\+Distance\+Extractor}
+\begin{DoxyCompactList}\small\item\em Implementation of the Shape Context descriptor and matching algorithm. \end{DoxyCompactList}\item 
+class {\bfseries Shape\+Distance\+Extractor}
+\item 
+class {\bfseries Shape\+Transformer}
+\item 
+class {\bfseries Thin\+Plate\+Spline\+Shape\+Transformer}
+\begin{DoxyCompactList}\small\item\em Definition of the transformation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static native float {\bfseries E\+M\+D\+L1} (@By\+Val Mat signature1, @By\+Val Mat signature2)
+\item 
+static native float {\bfseries E\+M\+D\+L1} (@By\+Val U\+Mat signature1, @By\+Val U\+Mat signature2)
+\item 
+static native Thin\+Plate\+Spline\+Shape\+Transformer \hyperlink{group__shape_ga409dbca0ecf803197cc29ec102f593fd}{create\+Thin\+Plate\+Spline\+Shape\+Transformer} (double regularization\+Parameter)
+\item 
+static native Thin\+Plate\+Spline\+Shape\+Transformer {\bfseries create\+Thin\+Plate\+Spline\+Shape\+Transformer} ()
+\item 
+static native Affine\+Transformer \hyperlink{group__shape_gaf6ba7c375194bc18e7f3212dfadfa68f}{create\+Affine\+Transformer} (@Cast(\char`\"{}bool\char`\"{}) boolean full\+Affine)
+\item 
+static native Histogram\+Cost\+Extractor {\bfseries create\+Norm\+Histogram\+Cost\+Extractor} (int flag, int n\+Dummies, float default\+Cost)
+\item 
+static native Histogram\+Cost\+Extractor {\bfseries create\+Norm\+Histogram\+Cost\+Extractor} ()
+\item 
+static native Histogram\+Cost\+Extractor {\bfseries create\+E\+M\+D\+Histogram\+Cost\+Extractor} (int flag, int n\+Dummies, float default\+Cost)
+\item 
+static native Histogram\+Cost\+Extractor {\bfseries create\+E\+M\+D\+Histogram\+Cost\+Extractor} ()
+\item 
+static native Histogram\+Cost\+Extractor {\bfseries create\+Chi\+Histogram\+Cost\+Extractor} (int n\+Dummies, float default\+Cost)
+\item 
+static native Histogram\+Cost\+Extractor {\bfseries create\+Chi\+Histogram\+Cost\+Extractor} ()
+\item 
+static native Histogram\+Cost\+Extractor {\bfseries create\+E\+M\+D\+L1\+Histogram\+Cost\+Extractor} (int n\+Dummies, float default\+Cost)
+\item 
+static native Histogram\+Cost\+Extractor {\bfseries create\+E\+M\+D\+L1\+Histogram\+Cost\+Extractor} ()
+\item 
+static native Shape\+Context\+Distance\+Extractor {\bfseries create\+Shape\+Context\+Distance\+Extractor} (int n\+Angular\+Bins, int n\+Radial\+Bins, float inner\+Radius, float outer\+Radius, int iterations, @Ptr Histogram\+Cost\+Extractor comparer, @Ptr Shape\+Transformer transformer)
+\item 
+static native Shape\+Context\+Distance\+Extractor {\bfseries create\+Shape\+Context\+Distance\+Extractor} ()
+\item 
+static native Hausdorff\+Distance\+Extractor {\bfseries create\+Hausdorff\+Distance\+Extractor} (int distance\+Flag, float rank\+Prop)
+\item 
+static native Hausdorff\+Distance\+Extractor {\bfseries create\+Hausdorff\+Distance\+Extractor} ()
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+opencv\+\_\+shape.\+java\end{DoxyCompactItemize}

@@ -1,0 +1,154 @@
+\hypertarget{classorg_1_1bytedeco_1_1javacpp_1_1opencv__objdetect}{}\section{org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect Class Reference}
+\label{classorg_1_1bytedeco_1_1javacpp_1_1opencv__objdetect}\index{org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect@{org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect}}
+Inheritance diagram for org.\+bytedeco.\+javacpp.\+opencv\+\_\+objdetect\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classorg_1_1bytedeco_1_1javacpp_1_1opencv__objdetect}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Base\+Cascade\+Classifier}
+\item 
+class {\bfseries Cascade\+Classifier}
+\begin{DoxyCompactList}\small\item\em Cascade classifier class for object detection. \end{DoxyCompactList}\item 
+class {\bfseries Cv\+Avg\+Comp}
+\item 
+class {\bfseries Cv\+Haar\+Classifier}
+\item 
+class {\bfseries Cv\+Haar\+Classifier\+Cascade}
+\item 
+class {\bfseries Cv\+Haar\+Feature}
+\item 
+class {\bfseries Cv\+Haar\+Stage\+Classifier}
+\item 
+class {\bfseries Cv\+Hid\+Haar\+Classifier\+Cascade}
+\item 
+class {\bfseries Detection\+Based\+Tracker}
+\item 
+class {\bfseries Detection\+R\+OI}
+\item 
+class {\bfseries H\+O\+G\+Descriptor}
+\item 
+class {\bfseries Similar\+Rects}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static native Cv\+Haar\+Classifier\+Cascade {\bfseries cv\+Load\+Haar\+Classifier\+Cascade} ( @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer directory, @By\+Val Cv\+Size orig\+\_\+window\+\_\+size)
+\item 
+static native Cv\+Haar\+Classifier\+Cascade {\bfseries cv\+Load\+Haar\+Classifier\+Cascade} (String directory, @By\+Val Cv\+Size orig\+\_\+window\+\_\+size)
+\item 
+static native void {\bfseries cv\+Release\+Haar\+Classifier\+Cascade} ( @Cast(\char`\"{}Cv\+Haar\+Classifier\+Cascade$\ast$$\ast$\char`\"{}) Pointer\+Pointer cascade)
+\item 
+static native void {\bfseries cv\+Release\+Haar\+Classifier\+Cascade} ( @By\+Ptr\+Ptr Cv\+Haar\+Classifier\+Cascade cascade)
+\item 
+static native Cv\+Seq {\bfseries cv\+Haar\+Detect\+Objects} ( @Const Cv\+Arr image, Cv\+Haar\+Classifier\+Cascade cascade, Cv\+Mem\+Storage storage, double scale\+\_\+factor, int min\+\_\+neighbors, int flags, @By\+Val(null\+Value=\char`\"{}Cv\+Size(cv\+Size(0,0))\char`\"{}) Cv\+Size min\+\_\+size, @By\+Val(null\+Value=\char`\"{}Cv\+Size(cv\+Size(0,0))\char`\"{}) Cv\+Size max\+\_\+size)
+\item 
+static native Cv\+Seq {\bfseries cv\+Haar\+Detect\+Objects} ( @Const Cv\+Arr image, Cv\+Haar\+Classifier\+Cascade cascade, Cv\+Mem\+Storage storage)
+\item 
+static native void {\bfseries cv\+Set\+Images\+For\+Haar\+Classifier\+Cascade} (Cv\+Haar\+Classifier\+Cascade cascade, @Const Cv\+Arr sum, @Const Cv\+Arr sqsum, @Const Cv\+Arr tilted\+\_\+sum, double scale)
+\item 
+static native int {\bfseries cv\+Run\+Haar\+Classifier\+Cascade} ( @Const Cv\+Haar\+Classifier\+Cascade cascade, @By\+Val Cv\+Point pt, int start\+\_\+stage)
+\item 
+static native int {\bfseries cv\+Run\+Haar\+Classifier\+Cascade} ( @Const Cv\+Haar\+Classifier\+Cascade cascade, @By\+Val Cv\+Point pt)
+\item 
+static native int {\bfseries cv\+Run\+Haar\+Classifier\+Cascade} ( @Const Cv\+Haar\+Classifier\+Cascade cascade, @By\+Val @Cast(\char`\"{}Cv\+Point$\ast$\char`\"{}) Int\+Buffer pt, int start\+\_\+stage)
+\item 
+static native int {\bfseries cv\+Run\+Haar\+Classifier\+Cascade} ( @Const Cv\+Haar\+Classifier\+Cascade cascade, @By\+Val @Cast(\char`\"{}Cv\+Point$\ast$\char`\"{}) Int\+Buffer pt)
+\item 
+static native int {\bfseries cv\+Run\+Haar\+Classifier\+Cascade} ( @Const Cv\+Haar\+Classifier\+Cascade cascade, @By\+Val @Cast(\char`\"{}Cv\+Point$\ast$\char`\"{}) int\mbox{[}$\,$\mbox{]} pt, int start\+\_\+stage)
+\item 
+static native int {\bfseries cv\+Run\+Haar\+Classifier\+Cascade} ( @Const Cv\+Haar\+Classifier\+Cascade cascade, @By\+Val @Cast(\char`\"{}Cv\+Point$\ast$\char`\"{}) int\mbox{[}$\,$\mbox{]} pt)
+\item 
+\mbox{\Hypertarget{classorg_1_1bytedeco_1_1javacpp_1_1opencv__objdetect_a3f396019471198065ca4c2adcf8d7578}\label{classorg_1_1bytedeco_1_1javacpp_1_1opencv__objdetect_a3f396019471198065ca4c2adcf8d7578}} 
+static native Cv\+Seq {\bfseries cv\+Haar\+Detect\+Objects\+For\+R\+OC} ( @Const Cv\+Arr image, Cv\+Haar\+Classifier\+Cascade cascade, Cv\+Mem\+Storage storage, @Std\+Vector Int\+Pointer reject\+Levels, @Std\+Vector Double\+Pointer level\+Weightds, double scale\+\_\+factor, int min\+\_\+neighbors, int flags, @By\+Val(null\+Value=\char`\"{}Cv\+Size(cv\+Size(0, 0))\char`\"{}) Cv\+Size min\+\_\+size, @By\+Val(null\+Value=\char`\"{}Cv\+Size(cv\+Size(0, 0))\char`\"{}) Cv\+Size max\+\_\+size, @Cast(\char`\"{}bool\char`\"{}) boolean output\+Reject\+Levels)
+\item 
+\mbox{\Hypertarget{classorg_1_1bytedeco_1_1javacpp_1_1opencv__objdetect_a5738c8863bb77cdbc3a80b65ec84477a}\label{classorg_1_1bytedeco_1_1javacpp_1_1opencv__objdetect_a5738c8863bb77cdbc3a80b65ec84477a}} 
+static native Cv\+Seq {\bfseries cv\+Haar\+Detect\+Objects\+For\+R\+OC} ( @Const Cv\+Arr image, Cv\+Haar\+Classifier\+Cascade cascade, Cv\+Mem\+Storage storage, @Std\+Vector Int\+Pointer reject\+Levels, @Std\+Vector Double\+Pointer level\+Weightds)
+\item 
+\mbox{\Hypertarget{classorg_1_1bytedeco_1_1javacpp_1_1opencv__objdetect_abf70d5cee36ee3c19d24d4d96e1450a2}\label{classorg_1_1bytedeco_1_1javacpp_1_1opencv__objdetect_abf70d5cee36ee3c19d24d4d96e1450a2}} 
+static native Cv\+Seq {\bfseries cv\+Haar\+Detect\+Objects\+For\+R\+OC} ( @Const Cv\+Arr image, Cv\+Haar\+Classifier\+Cascade cascade, Cv\+Mem\+Storage storage, @Std\+Vector Int\+Buffer reject\+Levels, @Std\+Vector Double\+Buffer level\+Weightds, double scale\+\_\+factor, int min\+\_\+neighbors, int flags, @By\+Val(null\+Value=\char`\"{}Cv\+Size(cv\+Size(0, 0))\char`\"{}) Cv\+Size min\+\_\+size, @By\+Val(null\+Value=\char`\"{}Cv\+Size(cv\+Size(0, 0))\char`\"{}) Cv\+Size max\+\_\+size, @Cast(\char`\"{}bool\char`\"{}) boolean output\+Reject\+Levels)
+\item 
+\mbox{\Hypertarget{classorg_1_1bytedeco_1_1javacpp_1_1opencv__objdetect_adcb451c7c152174cb18e52ae5bbc588d}\label{classorg_1_1bytedeco_1_1javacpp_1_1opencv__objdetect_adcb451c7c152174cb18e52ae5bbc588d}} 
+static native Cv\+Seq {\bfseries cv\+Haar\+Detect\+Objects\+For\+R\+OC} ( @Const Cv\+Arr image, Cv\+Haar\+Classifier\+Cascade cascade, Cv\+Mem\+Storage storage, @Std\+Vector Int\+Buffer reject\+Levels, @Std\+Vector Double\+Buffer level\+Weightds)
+\item 
+\mbox{\Hypertarget{classorg_1_1bytedeco_1_1javacpp_1_1opencv__objdetect_accdbeae0c6f6c2cff705f49706f84865}\label{classorg_1_1bytedeco_1_1javacpp_1_1opencv__objdetect_accdbeae0c6f6c2cff705f49706f84865}} 
+static native Cv\+Seq {\bfseries cv\+Haar\+Detect\+Objects\+For\+R\+OC} ( @Const Cv\+Arr image, Cv\+Haar\+Classifier\+Cascade cascade, Cv\+Mem\+Storage storage, @Std\+Vector int\mbox{[}$\,$\mbox{]} reject\+Levels, @Std\+Vector double\mbox{[}$\,$\mbox{]} level\+Weightds, double scale\+\_\+factor, int min\+\_\+neighbors, int flags, @By\+Val(null\+Value=\char`\"{}Cv\+Size(cv\+Size(0, 0))\char`\"{}) Cv\+Size min\+\_\+size, @By\+Val(null\+Value=\char`\"{}Cv\+Size(cv\+Size(0, 0))\char`\"{}) Cv\+Size max\+\_\+size, @Cast(\char`\"{}bool\char`\"{}) boolean output\+Reject\+Levels)
+\item 
+\mbox{\Hypertarget{classorg_1_1bytedeco_1_1javacpp_1_1opencv__objdetect_ad8eb86b6bc373468a5924701c0cb1a66}\label{classorg_1_1bytedeco_1_1javacpp_1_1opencv__objdetect_ad8eb86b6bc373468a5924701c0cb1a66}} 
+static native Cv\+Seq {\bfseries cv\+Haar\+Detect\+Objects\+For\+R\+OC} ( @Const Cv\+Arr image, Cv\+Haar\+Classifier\+Cascade cascade, Cv\+Mem\+Storage storage, @Std\+Vector int\mbox{[}$\,$\mbox{]} reject\+Levels, @Std\+Vector double\mbox{[}$\,$\mbox{]} level\+Weightds)
+\item 
+static native void \hyperlink{group__objdetect_ga3036d2996cee06be22e0eccda95a671b}{group\+Rectangles} (@By\+Ref Rect\+Vector rect\+List, int group\+Threshold, double eps)
+\begin{DoxyCompactList}\small\item\em Groups the object candidate rectangles. \end{DoxyCompactList}\item 
+static native void {\bfseries group\+Rectangles} (@By\+Ref Rect\+Vector rect\+List, int group\+Threshold)
+\item 
+static native void \hyperlink{group__objdetect_gae1a108c813468189afc6756fdc5f4d33}{group\+Rectangles} (@By\+Ref Rect\+Vector rect\+List, @Std\+Vector Int\+Pointer weights, int group\+Threshold, double eps)
+\item 
+static native void {\bfseries group\+Rectangles} (@By\+Ref Rect\+Vector rect\+List, @Std\+Vector Int\+Pointer weights, int group\+Threshold)
+\item 
+static native void {\bfseries group\+Rectangles} (@By\+Ref Rect\+Vector rect\+List, @Std\+Vector Int\+Buffer weights, int group\+Threshold, double eps)
+\item 
+static native void {\bfseries group\+Rectangles} (@By\+Ref Rect\+Vector rect\+List, @Std\+Vector Int\+Buffer weights, int group\+Threshold)
+\item 
+static native void {\bfseries group\+Rectangles} (@By\+Ref Rect\+Vector rect\+List, @Std\+Vector int\mbox{[}$\,$\mbox{]} weights, int group\+Threshold, double eps)
+\item 
+static native void {\bfseries group\+Rectangles} (@By\+Ref Rect\+Vector rect\+List, @Std\+Vector int\mbox{[}$\,$\mbox{]} weights, int group\+Threshold)
+\item 
+static native void \hyperlink{group__objdetect_ga48da69f02f512561ce6524dfe4508d0d}{group\+Rectangles} (@By\+Ref Rect\+Vector rect\+List, int group\+Threshold, double eps, @Std\+Vector Int\+Pointer weights, @Std\+Vector Double\+Pointer level\+Weights)
+\item 
+static native void {\bfseries group\+Rectangles} (@By\+Ref Rect\+Vector rect\+List, int group\+Threshold, double eps, @Std\+Vector Int\+Buffer weights, @Std\+Vector Double\+Buffer level\+Weights)
+\item 
+static native void {\bfseries group\+Rectangles} (@By\+Ref Rect\+Vector rect\+List, int group\+Threshold, double eps, @Std\+Vector int\mbox{[}$\,$\mbox{]} weights, @Std\+Vector double\mbox{[}$\,$\mbox{]} level\+Weights)
+\item 
+static native void \hyperlink{group__objdetect_ga0a844bdf309e1f0b6a11e2622edf3548}{group\+Rectangles} (@By\+Ref Rect\+Vector rect\+List, @Std\+Vector Int\+Pointer reject\+Levels, @Std\+Vector Double\+Pointer level\+Weights, int group\+Threshold, double eps)
+\item 
+static native void {\bfseries group\+Rectangles} (@By\+Ref Rect\+Vector rect\+List, @Std\+Vector Int\+Pointer reject\+Levels, @Std\+Vector Double\+Pointer level\+Weights, int group\+Threshold)
+\item 
+static native void {\bfseries group\+Rectangles} (@By\+Ref Rect\+Vector rect\+List, @Std\+Vector Int\+Buffer reject\+Levels, @Std\+Vector Double\+Buffer level\+Weights, int group\+Threshold, double eps)
+\item 
+static native void {\bfseries group\+Rectangles} (@By\+Ref Rect\+Vector rect\+List, @Std\+Vector Int\+Buffer reject\+Levels, @Std\+Vector Double\+Buffer level\+Weights, int group\+Threshold)
+\item 
+static native void {\bfseries group\+Rectangles} (@By\+Ref Rect\+Vector rect\+List, @Std\+Vector int\mbox{[}$\,$\mbox{]} reject\+Levels, @Std\+Vector double\mbox{[}$\,$\mbox{]} level\+Weights, int group\+Threshold, double eps)
+\item 
+static native void {\bfseries group\+Rectangles} (@By\+Ref Rect\+Vector rect\+List, @Std\+Vector int\mbox{[}$\,$\mbox{]} reject\+Levels, @Std\+Vector double\mbox{[}$\,$\mbox{]} level\+Weights, int group\+Threshold)
+\item 
+static native void \hyperlink{group__objdetect_ga4dcd81c59aa342c781c93522088dc6be}{group\+Rectangles\+\_\+meanshift} (@By\+Ref Rect\+Vector rect\+List, @Std\+Vector Double\+Pointer found\+Weights, @Std\+Vector Double\+Pointer found\+Scales, double detect\+Threshold, @By\+Val(null\+Value=\char`\"{}cv\+::\+Size(64, 128)\char`\"{}) Size win\+Det\+Size)
+\item 
+static native void {\bfseries group\+Rectangles\+\_\+meanshift} (@By\+Ref Rect\+Vector rect\+List, @Std\+Vector Double\+Pointer found\+Weights, @Std\+Vector Double\+Pointer found\+Scales)
+\item 
+static native void {\bfseries group\+Rectangles\+\_\+meanshift} (@By\+Ref Rect\+Vector rect\+List, @Std\+Vector Double\+Buffer found\+Weights, @Std\+Vector Double\+Buffer found\+Scales, double detect\+Threshold, @By\+Val(null\+Value=\char`\"{}cv\+::\+Size(64, 128)\char`\"{}) Size win\+Det\+Size)
+\item 
+static native void {\bfseries group\+Rectangles\+\_\+meanshift} (@By\+Ref Rect\+Vector rect\+List, @Std\+Vector Double\+Buffer found\+Weights, @Std\+Vector Double\+Buffer found\+Scales)
+\item 
+static native void {\bfseries group\+Rectangles\+\_\+meanshift} (@By\+Ref Rect\+Vector rect\+List, @Std\+Vector double\mbox{[}$\,$\mbox{]} found\+Weights, @Std\+Vector double\mbox{[}$\,$\mbox{]} found\+Scales, double detect\+Threshold, @By\+Val(null\+Value=\char`\"{}cv\+::\+Size(64, 128)\char`\"{}) Size win\+Det\+Size)
+\item 
+static native void {\bfseries group\+Rectangles\+\_\+meanshift} (@By\+Ref Rect\+Vector rect\+List, @Std\+Vector double\mbox{[}$\,$\mbox{]} found\+Weights, @Std\+Vector double\mbox{[}$\,$\mbox{]} found\+Scales)
+\item 
+static native Base\+Cascade\+Classifier.\+Mask\+Generator {\bfseries create\+Face\+Detection\+Mask\+Generator} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final int {\bfseries C\+V\+\_\+\+H\+A\+A\+R\+\_\+\+M\+A\+G\+I\+C\+\_\+\+V\+AL} = 0x42500000
+\item 
+static final String {\bfseries C\+V\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+A\+M\+E\+\_\+\+H\+A\+AR} = \char`\"{}opencv-\/haar-\/classifier\char`\"{}
+\item 
+static final int {\bfseries C\+V\+\_\+\+H\+A\+A\+R\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+M\+AX} = 3
+\item 
+static final int {\bfseries C\+V\+\_\+\+H\+A\+A\+R\+\_\+\+D\+O\+\_\+\+C\+A\+N\+N\+Y\+\_\+\+P\+R\+U\+N\+I\+NG} = 1
+\item 
+static final int {\bfseries C\+V\+\_\+\+H\+A\+A\+R\+\_\+\+S\+C\+A\+L\+E\+\_\+\+I\+M\+A\+GE} = 2
+\item 
+static final int {\bfseries C\+V\+\_\+\+H\+A\+A\+R\+\_\+\+F\+I\+N\+D\+\_\+\+B\+I\+G\+G\+E\+S\+T\+\_\+\+O\+B\+J\+E\+CT} = 4
+\item 
+static final int {\bfseries C\+V\+\_\+\+H\+A\+A\+R\+\_\+\+D\+O\+\_\+\+R\+O\+U\+G\+H\+\_\+\+S\+E\+A\+R\+CH} = 8
+\item 
+static final int \hyperlink{group__objdetect_ga470401e5de188ad94a16d0026658f405}{C\+A\+S\+C\+A\+D\+E\+\_\+\+D\+O\+\_\+\+C\+A\+N\+N\+Y\+\_\+\+P\+R\+U\+N\+I\+NG} = 1
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+opencv\+\_\+objdetect.\+java\end{DoxyCompactItemize}

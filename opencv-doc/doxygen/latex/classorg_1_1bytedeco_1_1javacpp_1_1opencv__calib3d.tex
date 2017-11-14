@@ -1,0 +1,686 @@
+\hypertarget{classorg_1_1bytedeco_1_1javacpp_1_1opencv__calib3d}{}\section{org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d Class Reference}
+\label{classorg_1_1bytedeco_1_1javacpp_1_1opencv__calib3d}\index{org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d@{org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d}}
+Inheritance diagram for org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classorg_1_1bytedeco_1_1javacpp_1_1opencv__calib3d}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Cv\+Lev\+Marq}
+\item 
+class {\bfseries Cv\+P\+O\+S\+I\+T\+Object}
+\item 
+class {\bfseries Cv\+Stereo\+B\+M\+State}
+\item 
+class {\bfseries Stereo\+BM}
+\begin{DoxyCompactList}\small\item\em Class for computing stereo correspondence using the block matching algorithm, introduced and contributed to Open\+CV by K. Konolige. \end{DoxyCompactList}\item 
+class {\bfseries Stereo\+Matcher}
+\begin{DoxyCompactList}\small\item\em The base class for stereo correspondence algorithms. \end{DoxyCompactList}\item 
+class {\bfseries Stereo\+S\+G\+BM}
+\begin{DoxyCompactList}\small\item\em The class implements the modified H. Hirschmuller algorithm {\bfseries [H\+H08]} that differs from the original one as follows\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static native Cv\+P\+O\+S\+I\+T\+Object {\bfseries cv\+Create\+P\+O\+S\+I\+T\+Object} (Cv\+Point3\+D32f points, int point\+\_\+count)
+\item 
+static native Cv\+P\+O\+S\+I\+T\+Object {\bfseries cv\+Create\+P\+O\+S\+I\+T\+Object} ( @Cast(\char`\"{}Cv\+Point3\+D32f$\ast$\char`\"{}) Float\+Buffer points, int point\+\_\+count)
+\item 
+static native Cv\+P\+O\+S\+I\+T\+Object {\bfseries cv\+Create\+P\+O\+S\+I\+T\+Object} ( @Cast(\char`\"{}Cv\+Point3\+D32f$\ast$\char`\"{}) float\mbox{[}$\,$\mbox{]} points, int point\+\_\+count)
+\item 
+static native void {\bfseries cv\+P\+O\+S\+IT} (Cv\+P\+O\+S\+I\+T\+Object posit\+\_\+object, Cv\+Point2\+D32f image\+\_\+points, double focal\+\_\+length, @By\+Val Cv\+Term\+Criteria criteria, Float\+Pointer rotation\+\_\+matrix, Float\+Pointer translation\+\_\+vector)
+\item 
+static native void {\bfseries cv\+P\+O\+S\+IT} (Cv\+P\+O\+S\+I\+T\+Object posit\+\_\+object, @Cast(\char`\"{}Cv\+Point2\+D32f$\ast$\char`\"{}) Float\+Buffer image\+\_\+points, double focal\+\_\+length, @By\+Val Cv\+Term\+Criteria criteria, Float\+Buffer rotation\+\_\+matrix, Float\+Buffer translation\+\_\+vector)
+\item 
+static native void {\bfseries cv\+P\+O\+S\+IT} (Cv\+P\+O\+S\+I\+T\+Object posit\+\_\+object, @Cast(\char`\"{}Cv\+Point2\+D32f$\ast$\char`\"{}) float\mbox{[}$\,$\mbox{]} image\+\_\+points, double focal\+\_\+length, @By\+Val Cv\+Term\+Criteria criteria, float\mbox{[}$\,$\mbox{]} rotation\+\_\+matrix, float\mbox{[}$\,$\mbox{]} translation\+\_\+vector)
+\item 
+static native void {\bfseries cv\+Release\+P\+O\+S\+I\+T\+Object} ( @Cast(\char`\"{}Cv\+P\+O\+S\+I\+T\+Object$\ast$$\ast$\char`\"{}) Pointer\+Pointer posit\+\_\+object)
+\item 
+static native void {\bfseries cv\+Release\+P\+O\+S\+I\+T\+Object} ( @By\+Ptr\+Ptr Cv\+P\+O\+S\+I\+T\+Object posit\+\_\+object)
+\item 
+static native int {\bfseries cv\+R\+A\+N\+S\+A\+C\+Update\+Num\+Iters} (double p, double err\+\_\+prob, int model\+\_\+points, int max\+\_\+iters)
+\item 
+static native void {\bfseries cv\+Convert\+Points\+Homogeneous} ( @Const Cv\+Mat src, Cv\+Mat dst)
+\item 
+static native int {\bfseries cv\+Find\+Fundamental\+Mat} ( @Const Cv\+Mat points1, @Const Cv\+Mat points2, Cv\+Mat fundamental\+\_\+matrix, int method, double param1, double param2, Cv\+Mat status)
+\item 
+static native int {\bfseries cv\+Find\+Fundamental\+Mat} ( @Const Cv\+Mat points1, @Const Cv\+Mat points2, Cv\+Mat fundamental\+\_\+matrix)
+\item 
+static native void {\bfseries cv\+Compute\+Correspond\+Epilines} ( @Const Cv\+Mat points, int which\+\_\+image, @Const Cv\+Mat fundamental\+\_\+matrix, Cv\+Mat correspondent\+\_\+lines)
+\item 
+static native void {\bfseries cv\+Triangulate\+Points} (Cv\+Mat proj\+Matr1, Cv\+Mat proj\+Matr2, Cv\+Mat proj\+Points1, Cv\+Mat proj\+Points2, Cv\+Mat points4D)
+\item 
+static native void {\bfseries cv\+Correct\+Matches} (Cv\+Mat F, Cv\+Mat points1, Cv\+Mat points2, Cv\+Mat new\+\_\+points1, Cv\+Mat new\+\_\+points2)
+\item 
+static native void {\bfseries cv\+Get\+Optimal\+New\+Camera\+Matrix} ( @Const Cv\+Mat camera\+\_\+matrix, @Const Cv\+Mat dist\+\_\+coeffs, @By\+Val Cv\+Size image\+\_\+size, double alpha, Cv\+Mat new\+\_\+camera\+\_\+matrix, @By\+Val(null\+Value=\char`\"{}Cv\+Size(cv\+Size(0,0))\char`\"{}) Cv\+Size new\+\_\+imag\+\_\+size, Cv\+Rect valid\+\_\+pixel\+\_\+\+R\+OI, int center\+\_\+principal\+\_\+point)
+\item 
+static native void {\bfseries cv\+Get\+Optimal\+New\+Camera\+Matrix} ( @Const Cv\+Mat camera\+\_\+matrix, @Const Cv\+Mat dist\+\_\+coeffs, @By\+Val Cv\+Size image\+\_\+size, double alpha, Cv\+Mat new\+\_\+camera\+\_\+matrix)
+\item 
+static native int {\bfseries cv\+Rodrigues2} ( @Const Cv\+Mat src, Cv\+Mat dst, Cv\+Mat jacobian)
+\item 
+static native int {\bfseries cv\+Rodrigues2} ( @Const Cv\+Mat src, Cv\+Mat dst)
+\item 
+static native int {\bfseries cv\+Find\+Homography} ( @Const Cv\+Mat src\+\_\+points, @Const Cv\+Mat dst\+\_\+points, Cv\+Mat homography, int method, double ransac\+Reproj\+Threshold, Cv\+Mat mask, int max\+Iters, double confidence)
+\item 
+static native int {\bfseries cv\+Find\+Homography} ( @Const Cv\+Mat src\+\_\+points, @Const Cv\+Mat dst\+\_\+points, Cv\+Mat homography)
+\item 
+static native void {\bfseries cv\+R\+Q\+Decomp3x3} ( @Const Cv\+Mat matrixM, Cv\+Mat matrixR, Cv\+Mat matrixQ, Cv\+Mat matrix\+Qx, Cv\+Mat matrix\+Qy, Cv\+Mat matrix\+Qz, Cv\+Point3\+D64f euler\+Angles)
+\item 
+static native void {\bfseries cv\+R\+Q\+Decomp3x3} ( @Const Cv\+Mat matrixM, Cv\+Mat matrixR, Cv\+Mat matrixQ)
+\item 
+static native void {\bfseries cv\+R\+Q\+Decomp3x3} ( @Const Cv\+Mat matrixM, Cv\+Mat matrixR, Cv\+Mat matrixQ, Cv\+Mat matrix\+Qx, Cv\+Mat matrix\+Qy, Cv\+Mat matrix\+Qz, @Cast(\char`\"{}Cv\+Point3\+D64f$\ast$\char`\"{}) Double\+Buffer euler\+Angles)
+\item 
+static native void {\bfseries cv\+R\+Q\+Decomp3x3} ( @Const Cv\+Mat matrixM, Cv\+Mat matrixR, Cv\+Mat matrixQ, Cv\+Mat matrix\+Qx, Cv\+Mat matrix\+Qy, Cv\+Mat matrix\+Qz, @Cast(\char`\"{}Cv\+Point3\+D64f$\ast$\char`\"{}) double\mbox{[}$\,$\mbox{]} euler\+Angles)
+\item 
+static native void {\bfseries cv\+Decompose\+Projection\+Matrix} ( @Const Cv\+Mat proj\+Matr, Cv\+Mat calib\+Matr, Cv\+Mat rot\+Matr, Cv\+Mat pos\+Vect, Cv\+Mat rot\+MatrX, Cv\+Mat rot\+MatrY, Cv\+Mat rot\+MatrZ, Cv\+Point3\+D64f euler\+Angles)
+\item 
+static native void {\bfseries cv\+Decompose\+Projection\+Matrix} ( @Const Cv\+Mat proj\+Matr, Cv\+Mat calib\+Matr, Cv\+Mat rot\+Matr, Cv\+Mat pos\+Vect)
+\item 
+static native void {\bfseries cv\+Decompose\+Projection\+Matrix} ( @Const Cv\+Mat proj\+Matr, Cv\+Mat calib\+Matr, Cv\+Mat rot\+Matr, Cv\+Mat pos\+Vect, Cv\+Mat rot\+MatrX, Cv\+Mat rot\+MatrY, Cv\+Mat rot\+MatrZ, @Cast(\char`\"{}Cv\+Point3\+D64f$\ast$\char`\"{}) Double\+Buffer euler\+Angles)
+\item 
+static native void {\bfseries cv\+Decompose\+Projection\+Matrix} ( @Const Cv\+Mat proj\+Matr, Cv\+Mat calib\+Matr, Cv\+Mat rot\+Matr, Cv\+Mat pos\+Vect, Cv\+Mat rot\+MatrX, Cv\+Mat rot\+MatrY, Cv\+Mat rot\+MatrZ, @Cast(\char`\"{}Cv\+Point3\+D64f$\ast$\char`\"{}) double\mbox{[}$\,$\mbox{]} euler\+Angles)
+\item 
+static native void {\bfseries cv\+Calc\+Mat\+Mul\+Deriv} ( @Const Cv\+Mat A, @Const Cv\+Mat B, Cv\+Mat d\+A\+BdA, Cv\+Mat d\+A\+BdB)
+\item 
+static native void {\bfseries cv\+Compose\+RT} ( @Const Cv\+Mat \+\_\+rvec1, @Const Cv\+Mat \+\_\+tvec1, @Const Cv\+Mat \+\_\+rvec2, @Const Cv\+Mat \+\_\+tvec2, Cv\+Mat \+\_\+rvec3, Cv\+Mat \+\_\+tvec3, Cv\+Mat dr3dr1, Cv\+Mat dr3dt1, Cv\+Mat dr3dr2, Cv\+Mat dr3dt2, Cv\+Mat dt3dr1, Cv\+Mat dt3dt1, Cv\+Mat dt3dr2, Cv\+Mat dt3dt2)
+\item 
+static native void {\bfseries cv\+Compose\+RT} ( @Const Cv\+Mat \+\_\+rvec1, @Const Cv\+Mat \+\_\+tvec1, @Const Cv\+Mat \+\_\+rvec2, @Const Cv\+Mat \+\_\+tvec2, Cv\+Mat \+\_\+rvec3, Cv\+Mat \+\_\+tvec3)
+\item 
+static native void {\bfseries cv\+Project\+Points2} ( @Const Cv\+Mat object\+\_\+points, @Const Cv\+Mat rotation\+\_\+vector, @Const Cv\+Mat translation\+\_\+vector, @Const Cv\+Mat camera\+\_\+matrix, @Const Cv\+Mat distortion\+\_\+coeffs, Cv\+Mat image\+\_\+points, Cv\+Mat dpdrot, Cv\+Mat dpdt, Cv\+Mat dpdf, Cv\+Mat dpdc, Cv\+Mat dpddist, double aspect\+\_\+ratio)
+\item 
+static native void {\bfseries cv\+Project\+Points2} ( @Const Cv\+Mat object\+\_\+points, @Const Cv\+Mat rotation\+\_\+vector, @Const Cv\+Mat translation\+\_\+vector, @Const Cv\+Mat camera\+\_\+matrix, @Const Cv\+Mat distortion\+\_\+coeffs, Cv\+Mat image\+\_\+points)
+\item 
+static native void {\bfseries cv\+Find\+Extrinsic\+Camera\+Params2} ( @Const Cv\+Mat object\+\_\+points, @Const Cv\+Mat image\+\_\+points, @Const Cv\+Mat camera\+\_\+matrix, @Const Cv\+Mat distortion\+\_\+coeffs, Cv\+Mat rotation\+\_\+vector, Cv\+Mat translation\+\_\+vector, int use\+\_\+extrinsic\+\_\+guess)
+\item 
+static native void {\bfseries cv\+Find\+Extrinsic\+Camera\+Params2} ( @Const Cv\+Mat object\+\_\+points, @Const Cv\+Mat image\+\_\+points, @Const Cv\+Mat camera\+\_\+matrix, @Const Cv\+Mat distortion\+\_\+coeffs, Cv\+Mat rotation\+\_\+vector, Cv\+Mat translation\+\_\+vector)
+\item 
+static native void {\bfseries cv\+Init\+Intrinsic\+Params2D} ( @Const Cv\+Mat object\+\_\+points, @Const Cv\+Mat image\+\_\+points, @Const Cv\+Mat npoints, @By\+Val Cv\+Size image\+\_\+size, Cv\+Mat camera\+\_\+matrix, double aspect\+\_\+ratio)
+\item 
+static native void {\bfseries cv\+Init\+Intrinsic\+Params2D} ( @Const Cv\+Mat object\+\_\+points, @Const Cv\+Mat image\+\_\+points, @Const Cv\+Mat npoints, @By\+Val Cv\+Size image\+\_\+size, Cv\+Mat camera\+\_\+matrix)
+\item 
+static native int {\bfseries cv\+Check\+Chessboard} (Ipl\+Image src, @By\+Val Cv\+Size size)
+\item 
+static native int {\bfseries cv\+Find\+Chessboard\+Corners} ( @Const Pointer image, @By\+Val Cv\+Size pattern\+\_\+size, Cv\+Point2\+D32f corners, Int\+Pointer corner\+\_\+count, int flags)
+\item 
+static native int {\bfseries cv\+Find\+Chessboard\+Corners} ( @Const Pointer image, @By\+Val Cv\+Size pattern\+\_\+size, Cv\+Point2\+D32f corners)
+\item 
+static native int {\bfseries cv\+Find\+Chessboard\+Corners} ( @Const Pointer image, @By\+Val Cv\+Size pattern\+\_\+size, @Cast(\char`\"{}Cv\+Point2\+D32f$\ast$\char`\"{}) Float\+Buffer corners, Int\+Buffer corner\+\_\+count, int flags)
+\item 
+static native int {\bfseries cv\+Find\+Chessboard\+Corners} ( @Const Pointer image, @By\+Val Cv\+Size pattern\+\_\+size, @Cast(\char`\"{}Cv\+Point2\+D32f$\ast$\char`\"{}) Float\+Buffer corners)
+\item 
+static native int {\bfseries cv\+Find\+Chessboard\+Corners} ( @Const Pointer image, @By\+Val Cv\+Size pattern\+\_\+size, @Cast(\char`\"{}Cv\+Point2\+D32f$\ast$\char`\"{}) float\mbox{[}$\,$\mbox{]} corners, int\mbox{[}$\,$\mbox{]} corner\+\_\+count, int flags)
+\item 
+static native int {\bfseries cv\+Find\+Chessboard\+Corners} ( @Const Pointer image, @By\+Val Cv\+Size pattern\+\_\+size, @Cast(\char`\"{}Cv\+Point2\+D32f$\ast$\char`\"{}) float\mbox{[}$\,$\mbox{]} corners)
+\item 
+static native void {\bfseries cv\+Draw\+Chessboard\+Corners} (Cv\+Arr image, @By\+Val Cv\+Size pattern\+\_\+size, Cv\+Point2\+D32f corners, int count, int pattern\+\_\+was\+\_\+found)
+\item 
+static native void {\bfseries cv\+Draw\+Chessboard\+Corners} (Cv\+Arr image, @By\+Val Cv\+Size pattern\+\_\+size, @Cast(\char`\"{}Cv\+Point2\+D32f$\ast$\char`\"{}) Float\+Buffer corners, int count, int pattern\+\_\+was\+\_\+found)
+\item 
+static native void {\bfseries cv\+Draw\+Chessboard\+Corners} (Cv\+Arr image, @By\+Val Cv\+Size pattern\+\_\+size, @Cast(\char`\"{}Cv\+Point2\+D32f$\ast$\char`\"{}) float\mbox{[}$\,$\mbox{]} corners, int count, int pattern\+\_\+was\+\_\+found)
+\item 
+static native double {\bfseries cv\+Calibrate\+Camera2} ( @Const Cv\+Mat object\+\_\+points, @Const Cv\+Mat image\+\_\+points, @Const Cv\+Mat point\+\_\+counts, @By\+Val Cv\+Size image\+\_\+size, Cv\+Mat camera\+\_\+matrix, Cv\+Mat distortion\+\_\+coeffs, Cv\+Mat rotation\+\_\+vectors, Cv\+Mat translation\+\_\+vectors, int flags, @By\+Val(null\+Value=\char`\"{}Cv\+Term\+Criteria(cv\+Term\+Criteria(\char`\"{}+\char`\"{}C\+V\+\_\+\+T\+E\+R\+M\+C\+R\+I\+T\+\_\+\+I\+T\+ER+C\+V\+\_\+\+T\+E\+R\+M\+C\+R\+I\+T\+\_\+\+E\+PS,30,D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON))\char`\"{}) Cv\+Term\+Criteria term\+\_\+crit)
+\item 
+static native double {\bfseries cv\+Calibrate\+Camera2} ( @Const Cv\+Mat object\+\_\+points, @Const Cv\+Mat image\+\_\+points, @Const Cv\+Mat point\+\_\+counts, @By\+Val Cv\+Size image\+\_\+size, Cv\+Mat camera\+\_\+matrix, Cv\+Mat distortion\+\_\+coeffs)
+\item 
+static native void {\bfseries cv\+Calibration\+Matrix\+Values} ( @Const Cv\+Mat camera\+\_\+matrix, @By\+Val Cv\+Size image\+\_\+size, double aperture\+\_\+width, double aperture\+\_\+height, Double\+Pointer fovx, Double\+Pointer fovy, Double\+Pointer focal\+\_\+length, Cv\+Point2\+D64f principal\+\_\+point, Double\+Pointer pixel\+\_\+aspect\+\_\+ratio)
+\item 
+static native void {\bfseries cv\+Calibration\+Matrix\+Values} ( @Const Cv\+Mat camera\+\_\+matrix, @By\+Val Cv\+Size image\+\_\+size)
+\item 
+static native void {\bfseries cv\+Calibration\+Matrix\+Values} ( @Const Cv\+Mat camera\+\_\+matrix, @By\+Val Cv\+Size image\+\_\+size, double aperture\+\_\+width, double aperture\+\_\+height, Double\+Buffer fovx, Double\+Buffer fovy, Double\+Buffer focal\+\_\+length, @Cast(\char`\"{}Cv\+Point2\+D64f$\ast$\char`\"{}) Double\+Buffer principal\+\_\+point, Double\+Buffer pixel\+\_\+aspect\+\_\+ratio)
+\item 
+static native void {\bfseries cv\+Calibration\+Matrix\+Values} ( @Const Cv\+Mat camera\+\_\+matrix, @By\+Val Cv\+Size image\+\_\+size, double aperture\+\_\+width, double aperture\+\_\+height, double\mbox{[}$\,$\mbox{]} fovx, double\mbox{[}$\,$\mbox{]} fovy, double\mbox{[}$\,$\mbox{]} focal\+\_\+length, @Cast(\char`\"{}Cv\+Point2\+D64f$\ast$\char`\"{}) double\mbox{[}$\,$\mbox{]} principal\+\_\+point, double\mbox{[}$\,$\mbox{]} pixel\+\_\+aspect\+\_\+ratio)
+\item 
+static native double {\bfseries cv\+Stereo\+Calibrate} ( @Const Cv\+Mat object\+\_\+points, @Const Cv\+Mat image\+\_\+points1, @Const Cv\+Mat image\+\_\+points2, @Const Cv\+Mat npoints, Cv\+Mat camera\+\_\+matrix1, Cv\+Mat dist\+\_\+coeffs1, Cv\+Mat camera\+\_\+matrix2, Cv\+Mat dist\+\_\+coeffs2, @By\+Val Cv\+Size image\+\_\+size, Cv\+Mat R, Cv\+Mat T, Cv\+Mat E, Cv\+Mat F, int flags, @By\+Val(null\+Value=\char`\"{}Cv\+Term\+Criteria(cv\+Term\+Criteria(\char`\"{}+\char`\"{}C\+V\+\_\+\+T\+E\+R\+M\+C\+R\+I\+T\+\_\+\+I\+T\+ER+C\+V\+\_\+\+T\+E\+R\+M\+C\+R\+I\+T\+\_\+\+E\+PS,30,1e-\/6))\char`\"{}) Cv\+Term\+Criteria term\+\_\+crit)
+\item 
+static native double {\bfseries cv\+Stereo\+Calibrate} ( @Const Cv\+Mat object\+\_\+points, @Const Cv\+Mat image\+\_\+points1, @Const Cv\+Mat image\+\_\+points2, @Const Cv\+Mat npoints, Cv\+Mat camera\+\_\+matrix1, Cv\+Mat dist\+\_\+coeffs1, Cv\+Mat camera\+\_\+matrix2, Cv\+Mat dist\+\_\+coeffs2, @By\+Val Cv\+Size image\+\_\+size, Cv\+Mat R, Cv\+Mat T)
+\item 
+static native void {\bfseries cv\+Stereo\+Rectify} ( @Const Cv\+Mat camera\+\_\+matrix1, @Const Cv\+Mat camera\+\_\+matrix2, @Const Cv\+Mat dist\+\_\+coeffs1, @Const Cv\+Mat dist\+\_\+coeffs2, @By\+Val Cv\+Size image\+\_\+size, @Const Cv\+Mat R, @Const Cv\+Mat T, Cv\+Mat R1, Cv\+Mat R2, Cv\+Mat P1, Cv\+Mat P2, Cv\+Mat Q, int flags, double alpha, @By\+Val(null\+Value=\char`\"{}Cv\+Size(cv\+Size(0,0))\char`\"{}) Cv\+Size new\+\_\+image\+\_\+size, Cv\+Rect valid\+\_\+pix\+\_\+\+R\+O\+I1, Cv\+Rect valid\+\_\+pix\+\_\+\+R\+O\+I2)
+\item 
+static native void {\bfseries cv\+Stereo\+Rectify} ( @Const Cv\+Mat camera\+\_\+matrix1, @Const Cv\+Mat camera\+\_\+matrix2, @Const Cv\+Mat dist\+\_\+coeffs1, @Const Cv\+Mat dist\+\_\+coeffs2, @By\+Val Cv\+Size image\+\_\+size, @Const Cv\+Mat R, @Const Cv\+Mat T, Cv\+Mat R1, Cv\+Mat R2, Cv\+Mat P1, Cv\+Mat P2)
+\item 
+static native int {\bfseries cv\+Stereo\+Rectify\+Uncalibrated} ( @Const Cv\+Mat points1, @Const Cv\+Mat points2, @Const Cv\+Mat F, @By\+Val Cv\+Size img\+\_\+size, Cv\+Mat H1, Cv\+Mat H2, double threshold)
+\item 
+static native int {\bfseries cv\+Stereo\+Rectify\+Uncalibrated} ( @Const Cv\+Mat points1, @Const Cv\+Mat points2, @Const Cv\+Mat F, @By\+Val Cv\+Size img\+\_\+size, Cv\+Mat H1, Cv\+Mat H2)
+\item 
+static native Cv\+Stereo\+B\+M\+State {\bfseries cv\+Create\+Stereo\+B\+M\+State} (int preset, int number\+Of\+Disparities)
+\item 
+static native Cv\+Stereo\+B\+M\+State {\bfseries cv\+Create\+Stereo\+B\+M\+State} ()
+\item 
+static native void {\bfseries cv\+Release\+Stereo\+B\+M\+State} ( @Cast(\char`\"{}Cv\+Stereo\+B\+M\+State$\ast$$\ast$\char`\"{}) Pointer\+Pointer state)
+\item 
+static native void {\bfseries cv\+Release\+Stereo\+B\+M\+State} ( @By\+Ptr\+Ptr Cv\+Stereo\+B\+M\+State state)
+\item 
+static native void {\bfseries cv\+Find\+Stereo\+Correspondence\+BM} ( @Const Cv\+Arr left, @Const Cv\+Arr right, Cv\+Arr disparity, Cv\+Stereo\+B\+M\+State state)
+\item 
+static native Cv\+Rect {\bfseries cv\+Get\+Valid\+Disparity\+R\+OI} ( @By\+Val Cv\+Rect roi1, @By\+Val Cv\+Rect roi2, int min\+Disparity, int number\+Of\+Disparities, int S\+A\+D\+Window\+Size)
+\item 
+static native void {\bfseries cv\+Validate\+Disparity} (Cv\+Arr disparity, @Const Cv\+Arr cost, int min\+Disparity, int number\+Of\+Disparities, int disp12\+Max\+Diff)
+\item 
+static native void {\bfseries cv\+Validate\+Disparity} (Cv\+Arr disparity, @Const Cv\+Arr cost, int min\+Disparity, int number\+Of\+Disparities)
+\item 
+static native void {\bfseries cv\+Reproject\+Image\+To3D} ( @Const Cv\+Arr disparity\+Image, Cv\+Arr \+\_\+3d\+Image, @Const Cv\+Mat Q, int handle\+Missing\+Values)
+\item 
+static native void {\bfseries cv\+Reproject\+Image\+To3D} ( @Const Cv\+Arr disparity\+Image, Cv\+Arr \+\_\+3d\+Image, @Const Cv\+Mat Q)
+\item 
+static native void \hyperlink{group__calib3d_ga20092873ec8f2850a2df8acb2648de68}{Rodrigues} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat jacobian)
+\begin{DoxyCompactList}\small\item\em Converts a rotation matrix to a rotation vector or vice versa. \end{DoxyCompactList}\item 
+static native void {\bfseries Rodrigues} ( @By\+Val Mat src, @By\+Val Mat dst)
+\item 
+static native void {\bfseries Rodrigues} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat jacobian)
+\item 
+static native void {\bfseries Rodrigues} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst)
+\item 
+static native Mat \hyperlink{group__calib3d_ga2e20e41b600c13c08d376e5df367f480}{find\+Homography} ( @By\+Val Mat src\+Points, @By\+Val Mat dst\+Points, int method, double ransac\+Reproj\+Threshold, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat mask, int max\+Iters, double confidence)
+\begin{DoxyCompactList}\small\item\em Finds a perspective transformation between two planes. \end{DoxyCompactList}\item 
+static native Mat {\bfseries find\+Homography} ( @By\+Val Mat src\+Points, @By\+Val Mat dst\+Points)
+\item 
+static native Mat {\bfseries find\+Homography} ( @By\+Val U\+Mat src\+Points, @By\+Val U\+Mat dst\+Points, int method, double ransac\+Reproj\+Threshold, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat mask, int max\+Iters, double confidence)
+\item 
+static native Mat {\bfseries find\+Homography} ( @By\+Val U\+Mat src\+Points, @By\+Val U\+Mat dst\+Points)
+\item 
+static native Mat \hyperlink{group__calib3d_ga7460fd1ec11b17261dc7b2208a1f2d9f}{find\+Homography} ( @By\+Val Mat src\+Points, @By\+Val Mat dst\+Points, @By\+Val Mat mask, int method, double ransac\+Reproj\+Threshold)
+\item 
+static native Mat {\bfseries find\+Homography} ( @By\+Val Mat src\+Points, @By\+Val Mat dst\+Points, @By\+Val Mat mask)
+\item 
+static native Mat {\bfseries find\+Homography} ( @By\+Val U\+Mat src\+Points, @By\+Val U\+Mat dst\+Points, @By\+Val U\+Mat mask, int method, double ransac\+Reproj\+Threshold)
+\item 
+static native Mat {\bfseries find\+Homography} ( @By\+Val U\+Mat src\+Points, @By\+Val U\+Mat dst\+Points, @By\+Val U\+Mat mask)
+\item 
+static native Point3d \hyperlink{group__calib3d_ga34838b4072f5a8e1eb0dc619c7ac8261}{R\+Q\+Decomp3x3} ( @By\+Val Mat src, @By\+Val Mat mtxR, @By\+Val Mat mtxQ, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat Qx, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat Qy, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat Qz)
+\begin{DoxyCompactList}\small\item\em Computes an RQ decomposition of 3x3 matrices. \end{DoxyCompactList}\item 
+static native Point3d {\bfseries R\+Q\+Decomp3x3} ( @By\+Val Mat src, @By\+Val Mat mtxR, @By\+Val Mat mtxQ)
+\item 
+static native Point3d {\bfseries R\+Q\+Decomp3x3} ( @By\+Val U\+Mat src, @By\+Val U\+Mat mtxR, @By\+Val U\+Mat mtxQ, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat Qx, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat Qy, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat Qz)
+\item 
+static native Point3d {\bfseries R\+Q\+Decomp3x3} ( @By\+Val U\+Mat src, @By\+Val U\+Mat mtxR, @By\+Val U\+Mat mtxQ)
+\item 
+static native void \hyperlink{group__calib3d_gadf0e43ed7b680f17d039735e4a9f64c5}{decompose\+Projection\+Matrix} ( @By\+Val Mat proj\+Matrix, @By\+Val Mat camera\+Matrix, @By\+Val Mat rot\+Matrix, @By\+Val Mat trans\+Vect, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat rot\+MatrixX, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat rot\+MatrixY, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat rot\+MatrixZ, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat euler\+Angles)
+\begin{DoxyCompactList}\small\item\em Decomposes a projection matrix into a rotation matrix and a camera matrix. \end{DoxyCompactList}\item 
+static native void {\bfseries decompose\+Projection\+Matrix} ( @By\+Val Mat proj\+Matrix, @By\+Val Mat camera\+Matrix, @By\+Val Mat rot\+Matrix, @By\+Val Mat trans\+Vect)
+\item 
+static native void {\bfseries decompose\+Projection\+Matrix} ( @By\+Val U\+Mat proj\+Matrix, @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat rot\+Matrix, @By\+Val U\+Mat trans\+Vect, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat rot\+MatrixX, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat rot\+MatrixY, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat rot\+MatrixZ, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat euler\+Angles)
+\item 
+static native void {\bfseries decompose\+Projection\+Matrix} ( @By\+Val U\+Mat proj\+Matrix, @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat rot\+Matrix, @By\+Val U\+Mat trans\+Vect)
+\item 
+static native void \hyperlink{group__calib3d_ga54d99b18b60bd50e50e0de105d68003b}{mat\+Mul\+Deriv} ( @By\+Val Mat A, @By\+Val Mat B, @By\+Val Mat d\+A\+BdA, @By\+Val Mat d\+A\+BdB)
+\begin{DoxyCompactList}\small\item\em Computes partial derivatives of the matrix product for each multiplied matrix. \end{DoxyCompactList}\item 
+static native void {\bfseries mat\+Mul\+Deriv} ( @By\+Val U\+Mat A, @By\+Val U\+Mat B, @By\+Val U\+Mat d\+A\+BdA, @By\+Val U\+Mat d\+A\+BdB)
+\item 
+static native void \hyperlink{group__calib3d_ga04fb0a4a5daa37377b0aa4b4ed2d6774}{compose\+RT} ( @By\+Val Mat rvec1, @By\+Val Mat tvec1, @By\+Val Mat rvec2, @By\+Val Mat tvec2, @By\+Val Mat rvec3, @By\+Val Mat tvec3, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat dr3dr1, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat dr3dt1, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat dr3dr2, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat dr3dt2, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat dt3dr1, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat dt3dt1, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat dt3dr2, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat dt3dt2)
+\begin{DoxyCompactList}\small\item\em Combines two rotation-\/and-\/shift transformations. \end{DoxyCompactList}\item 
+static native void {\bfseries compose\+RT} ( @By\+Val Mat rvec1, @By\+Val Mat tvec1, @By\+Val Mat rvec2, @By\+Val Mat tvec2, @By\+Val Mat rvec3, @By\+Val Mat tvec3)
+\item 
+static native void {\bfseries compose\+RT} ( @By\+Val U\+Mat rvec1, @By\+Val U\+Mat tvec1, @By\+Val U\+Mat rvec2, @By\+Val U\+Mat tvec2, @By\+Val U\+Mat rvec3, @By\+Val U\+Mat tvec3, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat dr3dr1, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat dr3dt1, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat dr3dr2, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat dr3dt2, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat dt3dr1, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat dt3dt1, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat dt3dr2, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat dt3dt2)
+\item 
+static native void {\bfseries compose\+RT} ( @By\+Val U\+Mat rvec1, @By\+Val U\+Mat tvec1, @By\+Val U\+Mat rvec2, @By\+Val U\+Mat tvec2, @By\+Val U\+Mat rvec3, @By\+Val U\+Mat tvec3)
+\item 
+static native void \hyperlink{group__calib3d_gaa19528257b52c058dffc58aba4f6d751}{project\+Points} ( @By\+Val Mat object\+Points, @By\+Val Mat rvec, @By\+Val Mat tvec, @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val Mat image\+Points, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat jacobian, double aspect\+Ratio)
+\begin{DoxyCompactList}\small\item\em Projects 3D points to an image plane. \end{DoxyCompactList}\item 
+static native void {\bfseries project\+Points} ( @By\+Val Mat object\+Points, @By\+Val Mat rvec, @By\+Val Mat tvec, @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val Mat image\+Points)
+\item 
+static native void {\bfseries project\+Points} ( @By\+Val U\+Mat object\+Points, @By\+Val U\+Mat rvec, @By\+Val U\+Mat tvec, @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val U\+Mat image\+Points, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat jacobian, double aspect\+Ratio)
+\item 
+static native void {\bfseries project\+Points} ( @By\+Val U\+Mat object\+Points, @By\+Val U\+Mat rvec, @By\+Val U\+Mat tvec, @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val U\+Mat image\+Points)
+\item 
+static native boolean \hyperlink{group__calib3d_ga4ed4dcff68153a9ec5eb087c0ee29913}{solve\+PnP} ( @By\+Val Mat object\+Points, @By\+Val Mat image\+Points, @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val Mat rvec, @By\+Val Mat tvec, @Cast(\char`\"{}bool\char`\"{}) boolean use\+Extrinsic\+Guess, int flags)
+\begin{DoxyCompactList}\small\item\em Finds an object pose from 3\+D-\/2D point correspondences. \end{DoxyCompactList}\item 
+static native boolean {\bfseries solve\+PnP} ( @By\+Val Mat object\+Points, @By\+Val Mat image\+Points, @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val Mat rvec, @By\+Val Mat tvec)
+\item 
+static native boolean {\bfseries solve\+PnP} ( @By\+Val U\+Mat object\+Points, @By\+Val U\+Mat image\+Points, @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val U\+Mat rvec, @By\+Val U\+Mat tvec, @Cast(\char`\"{}bool\char`\"{}) boolean use\+Extrinsic\+Guess, int flags)
+\item 
+static native boolean {\bfseries solve\+PnP} ( @By\+Val U\+Mat object\+Points, @By\+Val U\+Mat image\+Points, @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val U\+Mat rvec, @By\+Val U\+Mat tvec)
+\item 
+static native boolean \hyperlink{group__calib3d_ga87d56bc65d398f58897fa9bda35caef7}{solve\+Pn\+P\+Ransac} ( @By\+Val Mat object\+Points, @By\+Val Mat image\+Points, @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val Mat rvec, @By\+Val Mat tvec, @Cast(\char`\"{}bool\char`\"{}) boolean use\+Extrinsic\+Guess, int iterations\+Count, float reprojection\+Error, double confidence, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat inliers, int flags)
+\begin{DoxyCompactList}\small\item\em Finds an object pose from 3\+D-\/2D point correspondences using the R\+A\+N\+S\+AC scheme. \end{DoxyCompactList}\item 
+static native boolean {\bfseries solve\+Pn\+P\+Ransac} ( @By\+Val Mat object\+Points, @By\+Val Mat image\+Points, @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val Mat rvec, @By\+Val Mat tvec)
+\item 
+static native boolean {\bfseries solve\+Pn\+P\+Ransac} ( @By\+Val U\+Mat object\+Points, @By\+Val U\+Mat image\+Points, @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val U\+Mat rvec, @By\+Val U\+Mat tvec, @Cast(\char`\"{}bool\char`\"{}) boolean use\+Extrinsic\+Guess, int iterations\+Count, float reprojection\+Error, double confidence, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat inliers, int flags)
+\item 
+static native boolean {\bfseries solve\+Pn\+P\+Ransac} ( @By\+Val U\+Mat object\+Points, @By\+Val U\+Mat image\+Points, @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val U\+Mat rvec, @By\+Val U\+Mat tvec)
+\item 
+static native Mat \hyperlink{group__calib3d_ga783c80e734c8368c9db31e3ad820f7fa}{init\+Camera\+Matrix2D} ( @By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points, @By\+Val Size image\+Size, double aspect\+Ratio)
+\begin{DoxyCompactList}\small\item\em Finds an initial camera matrix from 3\+D-\/2D point correspondences. \end{DoxyCompactList}\item 
+static native Mat {\bfseries init\+Camera\+Matrix2D} ( @By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points, @By\+Val Size image\+Size)
+\item 
+static native Mat {\bfseries init\+Camera\+Matrix2D} ( @By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points, @By\+Val Size image\+Size, double aspect\+Ratio)
+\item 
+static native Mat {\bfseries init\+Camera\+Matrix2D} ( @By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points, @By\+Val Size image\+Size)
+\item 
+static native boolean \hyperlink{group__calib3d_ga8736b25349ec9178b46c38128bd9d95a}{find\+Chessboard\+Corners} ( @By\+Val Mat image, @By\+Val Size pattern\+Size, @By\+Val Mat corners, int flags)
+\begin{DoxyCompactList}\small\item\em Finds the positions of internal corners of the chessboard. \end{DoxyCompactList}\item 
+static native boolean {\bfseries find\+Chessboard\+Corners} ( @By\+Val Mat image, @By\+Val Size pattern\+Size, @By\+Val Mat corners)
+\item 
+static native boolean {\bfseries find\+Chessboard\+Corners} ( @By\+Val U\+Mat image, @By\+Val Size pattern\+Size, @By\+Val U\+Mat corners, int flags)
+\item 
+static native boolean {\bfseries find\+Chessboard\+Corners} ( @By\+Val U\+Mat image, @By\+Val Size pattern\+Size, @By\+Val U\+Mat corners)
+\item 
+static native boolean \hyperlink{group__calib3d_ga10b6a054de67db7ef3a290871688b660}{find4\+Quad\+Corner\+Subpix} ( @By\+Val Mat img, @By\+Val Mat corners, @By\+Val Size region\+\_\+size)
+\item 
+static native boolean {\bfseries find4\+Quad\+Corner\+Subpix} ( @By\+Val U\+Mat img, @By\+Val U\+Mat corners, @By\+Val Size region\+\_\+size)
+\item 
+static native void \hyperlink{group__calib3d_ga71d497eb4a9eead84d1e4522d54ed580}{draw\+Chessboard\+Corners} ( @By\+Val Mat image, @By\+Val Size pattern\+Size, @By\+Val Mat corners, @Cast(\char`\"{}bool\char`\"{}) boolean pattern\+Was\+Found)
+\begin{DoxyCompactList}\small\item\em Renders the detected chessboard corners. \end{DoxyCompactList}\item 
+static native void {\bfseries draw\+Chessboard\+Corners} ( @By\+Val U\+Mat image, @By\+Val Size pattern\+Size, @By\+Val U\+Mat corners, @Cast(\char`\"{}bool\char`\"{}) boolean pattern\+Was\+Found)
+\item 
+static native boolean \hyperlink{group__calib3d_ga150470ce16ca1879fd1809729801803b}{find\+Circles\+Grid} ( @By\+Val Mat image, @By\+Val Size pattern\+Size, @By\+Val Mat centers, int flags, @Cast(\char`\"{}cv\+::\+Feature\+Detector$\ast$\char`\"{}) @Ptr Feature2D blob\+Detector)
+\begin{DoxyCompactList}\small\item\em Finds centers in the grid of circles. \end{DoxyCompactList}\item 
+static native boolean {\bfseries find\+Circles\+Grid} ( @By\+Val Mat image, @By\+Val Size pattern\+Size, @By\+Val Mat centers)
+\item 
+static native boolean {\bfseries find\+Circles\+Grid} ( @By\+Val U\+Mat image, @By\+Val Size pattern\+Size, @By\+Val U\+Mat centers, int flags, @Cast(\char`\"{}cv\+::\+Feature\+Detector$\ast$\char`\"{}) @Ptr Feature2D blob\+Detector)
+\item 
+static native boolean {\bfseries find\+Circles\+Grid} ( @By\+Val U\+Mat image, @By\+Val Size pattern\+Size, @By\+Val U\+Mat centers)
+\item 
+static native double \hyperlink{group__calib3d_ga9829f846450d1022f08716b7c20412d6}{calibrate\+Camera\+Extended} ( @By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points, @By\+Val Size image\+Size, @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val Mat\+Vector rvecs, @By\+Val Mat\+Vector tvecs, @By\+Val Mat std\+Deviations\+Intrinsics, @By\+Val Mat std\+Deviations\+Extrinsics, @By\+Val Mat per\+View\+Errors, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(\char`\"{}+\char`\"{}cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 30, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\begin{DoxyCompactList}\small\item\em Finds the camera intrinsic and extrinsic parameters from several views of a calibration pattern. \end{DoxyCompactList}\item 
+static native double {\bfseries calibrate\+Camera\+Extended} ( @By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points, @By\+Val Size image\+Size, @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val Mat\+Vector rvecs, @By\+Val Mat\+Vector tvecs, @By\+Val Mat std\+Deviations\+Intrinsics, @By\+Val Mat std\+Deviations\+Extrinsics, @By\+Val Mat per\+View\+Errors)
+\item 
+static native double {\bfseries calibrate\+Camera\+Extended} ( @By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points, @By\+Val Size image\+Size, @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val U\+Mat\+Vector rvecs, @By\+Val U\+Mat\+Vector tvecs, @By\+Val Mat std\+Deviations\+Intrinsics, @By\+Val Mat std\+Deviations\+Extrinsics, @By\+Val Mat per\+View\+Errors, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(\char`\"{}+\char`\"{}cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 30, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\item 
+static native double {\bfseries calibrate\+Camera\+Extended} ( @By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points, @By\+Val Size image\+Size, @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val U\+Mat\+Vector rvecs, @By\+Val U\+Mat\+Vector tvecs, @By\+Val Mat std\+Deviations\+Intrinsics, @By\+Val Mat std\+Deviations\+Extrinsics, @By\+Val Mat per\+View\+Errors)
+\item 
+static native double {\bfseries calibrate\+Camera\+Extended} ( @By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points, @By\+Val Size image\+Size, @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val Mat\+Vector rvecs, @By\+Val Mat\+Vector tvecs, @By\+Val U\+Mat std\+Deviations\+Intrinsics, @By\+Val U\+Mat std\+Deviations\+Extrinsics, @By\+Val U\+Mat per\+View\+Errors, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(\char`\"{}+\char`\"{}cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 30, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\item 
+static native double {\bfseries calibrate\+Camera\+Extended} ( @By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points, @By\+Val Size image\+Size, @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val Mat\+Vector rvecs, @By\+Val Mat\+Vector tvecs, @By\+Val U\+Mat std\+Deviations\+Intrinsics, @By\+Val U\+Mat std\+Deviations\+Extrinsics, @By\+Val U\+Mat per\+View\+Errors)
+\item 
+static native double {\bfseries calibrate\+Camera\+Extended} ( @By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points, @By\+Val Size image\+Size, @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val U\+Mat\+Vector rvecs, @By\+Val U\+Mat\+Vector tvecs, @By\+Val U\+Mat std\+Deviations\+Intrinsics, @By\+Val U\+Mat std\+Deviations\+Extrinsics, @By\+Val U\+Mat per\+View\+Errors, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(\char`\"{}+\char`\"{}cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 30, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\item 
+static native double {\bfseries calibrate\+Camera\+Extended} ( @By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points, @By\+Val Size image\+Size, @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val U\+Mat\+Vector rvecs, @By\+Val U\+Mat\+Vector tvecs, @By\+Val U\+Mat std\+Deviations\+Intrinsics, @By\+Val U\+Mat std\+Deviations\+Extrinsics, @By\+Val U\+Mat per\+View\+Errors)
+\item 
+static native double {\bfseries calibrate\+Camera} ( @By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points, @By\+Val Size image\+Size, @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val Mat\+Vector rvecs, @By\+Val Mat\+Vector tvecs, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(\char`\"{}+\char`\"{}cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 30, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\item 
+static native double {\bfseries calibrate\+Camera} ( @By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points, @By\+Val Size image\+Size, @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val Mat\+Vector rvecs, @By\+Val Mat\+Vector tvecs)
+\item 
+static native double {\bfseries calibrate\+Camera} ( @By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points, @By\+Val Size image\+Size, @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val U\+Mat\+Vector rvecs, @By\+Val U\+Mat\+Vector tvecs, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(\char`\"{}+\char`\"{}cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 30, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\item 
+static native double {\bfseries calibrate\+Camera} ( @By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points, @By\+Val Size image\+Size, @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val U\+Mat\+Vector rvecs, @By\+Val U\+Mat\+Vector tvecs)
+\item 
+static native double {\bfseries calibrate\+Camera} ( @By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points, @By\+Val Size image\+Size, @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val Mat\+Vector rvecs, @By\+Val Mat\+Vector tvecs, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(\char`\"{}+\char`\"{}cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 30, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\item 
+static native double {\bfseries calibrate\+Camera} ( @By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points, @By\+Val Size image\+Size, @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val Mat\+Vector rvecs, @By\+Val Mat\+Vector tvecs)
+\item 
+static native double {\bfseries calibrate\+Camera} ( @By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points, @By\+Val Size image\+Size, @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val U\+Mat\+Vector rvecs, @By\+Val U\+Mat\+Vector tvecs, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(\char`\"{}+\char`\"{}cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 30, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\item 
+static native double {\bfseries calibrate\+Camera} ( @By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points, @By\+Val Size image\+Size, @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val U\+Mat\+Vector rvecs, @By\+Val U\+Mat\+Vector tvecs)
+\item 
+static native void \hyperlink{group__calib3d_ga35bea5b10b8dfd23238f72e9a2e2ac27}{calibration\+Matrix\+Values} ( @By\+Val Mat camera\+Matrix, @By\+Val Size image\+Size, double aperture\+Width, double aperture\+Height, @By\+Ref Double\+Pointer fovx, @By\+Ref Double\+Pointer fovy, @By\+Ref Double\+Pointer focal\+Length, @By\+Ref Point2d principal\+Point, @By\+Ref Double\+Pointer aspect\+Ratio)
+\begin{DoxyCompactList}\small\item\em Computes useful camera characteristics from the camera matrix. \end{DoxyCompactList}\item 
+static native void {\bfseries calibration\+Matrix\+Values} ( @By\+Val Mat camera\+Matrix, @By\+Val Size image\+Size, double aperture\+Width, double aperture\+Height, @By\+Ref Double\+Buffer fovx, @By\+Ref Double\+Buffer fovy, @By\+Ref Double\+Buffer focal\+Length, @By\+Ref Point2d principal\+Point, @By\+Ref Double\+Buffer aspect\+Ratio)
+\item 
+static native void {\bfseries calibration\+Matrix\+Values} ( @By\+Val U\+Mat camera\+Matrix, @By\+Val Size image\+Size, double aperture\+Width, double aperture\+Height, @By\+Ref double\mbox{[}$\,$\mbox{]} fovx, @By\+Ref double\mbox{[}$\,$\mbox{]} fovy, @By\+Ref double\mbox{[}$\,$\mbox{]} focal\+Length, @By\+Ref Point2d principal\+Point, @By\+Ref double\mbox{[}$\,$\mbox{]} aspect\+Ratio)
+\item 
+static native void {\bfseries calibration\+Matrix\+Values} ( @By\+Val U\+Mat camera\+Matrix, @By\+Val Size image\+Size, double aperture\+Width, double aperture\+Height, @By\+Ref Double\+Pointer fovx, @By\+Ref Double\+Pointer fovy, @By\+Ref Double\+Pointer focal\+Length, @By\+Ref Point2d principal\+Point, @By\+Ref Double\+Pointer aspect\+Ratio)
+\item 
+static native double \hyperlink{group__calib3d_gab585e0688b9d7592dfe294c5179bdcae}{stereo\+Calibrate} ( @By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points1, @By\+Val Mat\+Vector image\+Points2, @By\+Val Mat camera\+Matrix1, @By\+Val Mat dist\+Coeffs1, @By\+Val Mat camera\+Matrix2, @By\+Val Mat dist\+Coeffs2, @By\+Val Size image\+Size, @By\+Val Mat R, @By\+Val Mat T, @By\+Val Mat E, @By\+Val Mat F, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT+cv\+::\+Term\+Criteria\+::\+E\+PS, 30, 1e-\/6)\char`\"{}) Term\+Criteria criteria)
+\begin{DoxyCompactList}\small\item\em Calibrates the stereo camera. \end{DoxyCompactList}\item 
+static native double {\bfseries stereo\+Calibrate} ( @By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points1, @By\+Val Mat\+Vector image\+Points2, @By\+Val Mat camera\+Matrix1, @By\+Val Mat dist\+Coeffs1, @By\+Val Mat camera\+Matrix2, @By\+Val Mat dist\+Coeffs2, @By\+Val Size image\+Size, @By\+Val Mat R, @By\+Val Mat T, @By\+Val Mat E, @By\+Val Mat F)
+\item 
+static native double {\bfseries stereo\+Calibrate} ( @By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points1, @By\+Val U\+Mat\+Vector image\+Points2, @By\+Val Mat camera\+Matrix1, @By\+Val Mat dist\+Coeffs1, @By\+Val Mat camera\+Matrix2, @By\+Val Mat dist\+Coeffs2, @By\+Val Size image\+Size, @By\+Val Mat R, @By\+Val Mat T, @By\+Val Mat E, @By\+Val Mat F, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT+cv\+::\+Term\+Criteria\+::\+E\+PS, 30, 1e-\/6)\char`\"{}) Term\+Criteria criteria)
+\item 
+static native double {\bfseries stereo\+Calibrate} ( @By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points1, @By\+Val U\+Mat\+Vector image\+Points2, @By\+Val Mat camera\+Matrix1, @By\+Val Mat dist\+Coeffs1, @By\+Val Mat camera\+Matrix2, @By\+Val Mat dist\+Coeffs2, @By\+Val Size image\+Size, @By\+Val Mat R, @By\+Val Mat T, @By\+Val Mat E, @By\+Val Mat F)
+\item 
+static native double {\bfseries stereo\+Calibrate} ( @By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points1, @By\+Val Mat\+Vector image\+Points2, @By\+Val U\+Mat camera\+Matrix1, @By\+Val U\+Mat dist\+Coeffs1, @By\+Val U\+Mat camera\+Matrix2, @By\+Val U\+Mat dist\+Coeffs2, @By\+Val Size image\+Size, @By\+Val U\+Mat R, @By\+Val U\+Mat T, @By\+Val U\+Mat E, @By\+Val U\+Mat F, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT+cv\+::\+Term\+Criteria\+::\+E\+PS, 30, 1e-\/6)\char`\"{}) Term\+Criteria criteria)
+\item 
+static native double {\bfseries stereo\+Calibrate} ( @By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points1, @By\+Val Mat\+Vector image\+Points2, @By\+Val U\+Mat camera\+Matrix1, @By\+Val U\+Mat dist\+Coeffs1, @By\+Val U\+Mat camera\+Matrix2, @By\+Val U\+Mat dist\+Coeffs2, @By\+Val Size image\+Size, @By\+Val U\+Mat R, @By\+Val U\+Mat T, @By\+Val U\+Mat E, @By\+Val U\+Mat F)
+\item 
+static native double {\bfseries stereo\+Calibrate} ( @By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points1, @By\+Val U\+Mat\+Vector image\+Points2, @By\+Val U\+Mat camera\+Matrix1, @By\+Val U\+Mat dist\+Coeffs1, @By\+Val U\+Mat camera\+Matrix2, @By\+Val U\+Mat dist\+Coeffs2, @By\+Val Size image\+Size, @By\+Val U\+Mat R, @By\+Val U\+Mat T, @By\+Val U\+Mat E, @By\+Val U\+Mat F, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT+cv\+::\+Term\+Criteria\+::\+E\+PS, 30, 1e-\/6)\char`\"{}) Term\+Criteria criteria)
+\item 
+static native double {\bfseries stereo\+Calibrate} ( @By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points1, @By\+Val U\+Mat\+Vector image\+Points2, @By\+Val U\+Mat camera\+Matrix1, @By\+Val U\+Mat dist\+Coeffs1, @By\+Val U\+Mat camera\+Matrix2, @By\+Val U\+Mat dist\+Coeffs2, @By\+Val Size image\+Size, @By\+Val U\+Mat R, @By\+Val U\+Mat T, @By\+Val U\+Mat E, @By\+Val U\+Mat F)
+\item 
+static native void \hyperlink{group__calib3d_ga10101a04b035018f2589ecc315d38ce5}{stereo\+Rectify} ( @By\+Val Mat camera\+Matrix1, @By\+Val Mat dist\+Coeffs1, @By\+Val Mat camera\+Matrix2, @By\+Val Mat dist\+Coeffs2, @By\+Val Size image\+Size, @By\+Val Mat R, @By\+Val Mat T, @By\+Val Mat R1, @By\+Val Mat R2, @By\+Val Mat P1, @By\+Val Mat P2, @By\+Val Mat Q, int flags, double alpha, @By\+Val(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size new\+Image\+Size, Rect valid\+Pix\+R\+O\+I1, Rect valid\+Pix\+R\+O\+I2)
+\begin{DoxyCompactList}\small\item\em Computes rectification transforms for each head of a calibrated stereo camera. \end{DoxyCompactList}\item 
+static native void {\bfseries stereo\+Rectify} ( @By\+Val Mat camera\+Matrix1, @By\+Val Mat dist\+Coeffs1, @By\+Val Mat camera\+Matrix2, @By\+Val Mat dist\+Coeffs2, @By\+Val Size image\+Size, @By\+Val Mat R, @By\+Val Mat T, @By\+Val Mat R1, @By\+Val Mat R2, @By\+Val Mat P1, @By\+Val Mat P2, @By\+Val Mat Q)
+\item 
+static native void {\bfseries stereo\+Rectify} ( @By\+Val U\+Mat camera\+Matrix1, @By\+Val U\+Mat dist\+Coeffs1, @By\+Val U\+Mat camera\+Matrix2, @By\+Val U\+Mat dist\+Coeffs2, @By\+Val Size image\+Size, @By\+Val U\+Mat R, @By\+Val U\+Mat T, @By\+Val U\+Mat R1, @By\+Val U\+Mat R2, @By\+Val U\+Mat P1, @By\+Val U\+Mat P2, @By\+Val U\+Mat Q, int flags, double alpha, @By\+Val(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size new\+Image\+Size, Rect valid\+Pix\+R\+O\+I1, Rect valid\+Pix\+R\+O\+I2)
+\item 
+static native void {\bfseries stereo\+Rectify} ( @By\+Val U\+Mat camera\+Matrix1, @By\+Val U\+Mat dist\+Coeffs1, @By\+Val U\+Mat camera\+Matrix2, @By\+Val U\+Mat dist\+Coeffs2, @By\+Val Size image\+Size, @By\+Val U\+Mat R, @By\+Val U\+Mat T, @By\+Val U\+Mat R1, @By\+Val U\+Mat R2, @By\+Val U\+Mat P1, @By\+Val U\+Mat P2, @By\+Val U\+Mat Q)
+\item 
+static native boolean \hyperlink{group__calib3d_ga2a00c796082466a7d1000418118e02d2}{stereo\+Rectify\+Uncalibrated} ( @By\+Val Mat points1, @By\+Val Mat points2, @By\+Val Mat F, @By\+Val Size img\+Size, @By\+Val Mat H1, @By\+Val Mat H2, double threshold)
+\begin{DoxyCompactList}\small\item\em Computes a rectification transform for an uncalibrated stereo camera. \end{DoxyCompactList}\item 
+static native boolean {\bfseries stereo\+Rectify\+Uncalibrated} ( @By\+Val Mat points1, @By\+Val Mat points2, @By\+Val Mat F, @By\+Val Size img\+Size, @By\+Val Mat H1, @By\+Val Mat H2)
+\item 
+static native boolean {\bfseries stereo\+Rectify\+Uncalibrated} ( @By\+Val U\+Mat points1, @By\+Val U\+Mat points2, @By\+Val U\+Mat F, @By\+Val Size img\+Size, @By\+Val U\+Mat H1, @By\+Val U\+Mat H2, double threshold)
+\item 
+static native boolean {\bfseries stereo\+Rectify\+Uncalibrated} ( @By\+Val U\+Mat points1, @By\+Val U\+Mat points2, @By\+Val U\+Mat F, @By\+Val Size img\+Size, @By\+Val U\+Mat H1, @By\+Val U\+Mat H2)
+\item 
+static native float \hyperlink{group__calib3d_ga44e3e2ed99710a5b0679459a2988bbd9}{rectify3\+Collinear} ( @By\+Val Mat camera\+Matrix1, @By\+Val Mat dist\+Coeffs1, @By\+Val Mat camera\+Matrix2, @By\+Val Mat dist\+Coeffs2, @By\+Val Mat camera\+Matrix3, @By\+Val Mat dist\+Coeffs3, @By\+Val Mat\+Vector imgpt1, @By\+Val Mat\+Vector imgpt3, @By\+Val Size image\+Size, @By\+Val Mat R12, @By\+Val Mat T12, @By\+Val Mat R13, @By\+Val Mat T13, @By\+Val Mat R1, @By\+Val Mat R2, @By\+Val Mat R3, @By\+Val Mat P1, @By\+Val Mat P2, @By\+Val Mat P3, @By\+Val Mat Q, double alpha, @By\+Val Size new\+Img\+Size, Rect roi1, Rect roi2, int flags)
+\item 
+static native float {\bfseries rectify3\+Collinear} ( @By\+Val Mat camera\+Matrix1, @By\+Val Mat dist\+Coeffs1, @By\+Val Mat camera\+Matrix2, @By\+Val Mat dist\+Coeffs2, @By\+Val Mat camera\+Matrix3, @By\+Val Mat dist\+Coeffs3, @By\+Val U\+Mat\+Vector imgpt1, @By\+Val U\+Mat\+Vector imgpt3, @By\+Val Size image\+Size, @By\+Val Mat R12, @By\+Val Mat T12, @By\+Val Mat R13, @By\+Val Mat T13, @By\+Val Mat R1, @By\+Val Mat R2, @By\+Val Mat R3, @By\+Val Mat P1, @By\+Val Mat P2, @By\+Val Mat P3, @By\+Val Mat Q, double alpha, @By\+Val Size new\+Img\+Size, Rect roi1, Rect roi2, int flags)
+\item 
+static native float {\bfseries rectify3\+Collinear} ( @By\+Val U\+Mat camera\+Matrix1, @By\+Val U\+Mat dist\+Coeffs1, @By\+Val U\+Mat camera\+Matrix2, @By\+Val U\+Mat dist\+Coeffs2, @By\+Val U\+Mat camera\+Matrix3, @By\+Val U\+Mat dist\+Coeffs3, @By\+Val Mat\+Vector imgpt1, @By\+Val Mat\+Vector imgpt3, @By\+Val Size image\+Size, @By\+Val U\+Mat R12, @By\+Val U\+Mat T12, @By\+Val U\+Mat R13, @By\+Val U\+Mat T13, @By\+Val U\+Mat R1, @By\+Val U\+Mat R2, @By\+Val U\+Mat R3, @By\+Val U\+Mat P1, @By\+Val U\+Mat P2, @By\+Val U\+Mat P3, @By\+Val U\+Mat Q, double alpha, @By\+Val Size new\+Img\+Size, Rect roi1, Rect roi2, int flags)
+\item 
+static native float {\bfseries rectify3\+Collinear} ( @By\+Val U\+Mat camera\+Matrix1, @By\+Val U\+Mat dist\+Coeffs1, @By\+Val U\+Mat camera\+Matrix2, @By\+Val U\+Mat dist\+Coeffs2, @By\+Val U\+Mat camera\+Matrix3, @By\+Val U\+Mat dist\+Coeffs3, @By\+Val U\+Mat\+Vector imgpt1, @By\+Val U\+Mat\+Vector imgpt3, @By\+Val Size image\+Size, @By\+Val U\+Mat R12, @By\+Val U\+Mat T12, @By\+Val U\+Mat R13, @By\+Val U\+Mat T13, @By\+Val U\+Mat R1, @By\+Val U\+Mat R2, @By\+Val U\+Mat R3, @By\+Val U\+Mat P1, @By\+Val U\+Mat P2, @By\+Val U\+Mat P3, @By\+Val U\+Mat Q, double alpha, @By\+Val Size new\+Img\+Size, Rect roi1, Rect roi2, int flags)
+\item 
+static native Mat \hyperlink{group__calib3d_ga70615047cb056a5e3787ce151ddef307}{get\+Optimal\+New\+Camera\+Matrix} ( @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val Size image\+Size, double alpha, @By\+Val(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size new\+Img\+Size, Rect valid\+Pix\+R\+OI, @Cast(\char`\"{}bool\char`\"{}) boolean center\+Principal\+Point)
+\begin{DoxyCompactList}\small\item\em Returns the new camera matrix based on the free scaling parameter. \end{DoxyCompactList}\item 
+static native Mat {\bfseries get\+Optimal\+New\+Camera\+Matrix} ( @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val Size image\+Size, double alpha)
+\item 
+static native Mat {\bfseries get\+Optimal\+New\+Camera\+Matrix} ( @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val Size image\+Size, double alpha, @By\+Val(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size new\+Img\+Size, Rect valid\+Pix\+R\+OI, @Cast(\char`\"{}bool\char`\"{}) boolean center\+Principal\+Point)
+\item 
+static native Mat {\bfseries get\+Optimal\+New\+Camera\+Matrix} ( @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val Size image\+Size, double alpha)
+\item 
+static native void \hyperlink{group__calib3d_gaaf5de214950c5c904cd996ac5f73bff6}{convert\+Points\+To\+Homogeneous} ( @By\+Val Mat src, @By\+Val Mat dst)
+\begin{DoxyCompactList}\small\item\em Converts points from Euclidean to homogeneous space. \end{DoxyCompactList}\item 
+static native void {\bfseries convert\+Points\+To\+Homogeneous} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst)
+\item 
+static native void \hyperlink{group__calib3d_ga8d818140f4ee16a68518f61d0dbc2de9}{convert\+Points\+From\+Homogeneous} ( @By\+Val Mat src, @By\+Val Mat dst)
+\begin{DoxyCompactList}\small\item\em Converts points from homogeneous to Euclidean space. \end{DoxyCompactList}\item 
+static native void {\bfseries convert\+Points\+From\+Homogeneous} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst)
+\item 
+static native void \hyperlink{group__calib3d_gaaf02e05437bf63217e14cc47531a387b}{convert\+Points\+Homogeneous} ( @By\+Val Mat src, @By\+Val Mat dst)
+\begin{DoxyCompactList}\small\item\em Converts points to/from homogeneous coordinates. \end{DoxyCompactList}\item 
+static native void {\bfseries convert\+Points\+Homogeneous} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst)
+\item 
+static native Mat \hyperlink{group__calib3d_gaceb84b17990bba04533d8fe02ab1a1d2}{find\+Fundamental\+Mat} ( @By\+Val Mat points1, @By\+Val Mat points2, int method, double param1, double param2, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat mask)
+\begin{DoxyCompactList}\small\item\em Calculates a fundamental matrix from the corresponding points in two images. \end{DoxyCompactList}\item 
+static native Mat {\bfseries find\+Fundamental\+Mat} ( @By\+Val Mat points1, @By\+Val Mat points2)
+\item 
+static native Mat {\bfseries find\+Fundamental\+Mat} ( @By\+Val U\+Mat points1, @By\+Val U\+Mat points2, int method, double param1, double param2, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat mask)
+\item 
+static native Mat {\bfseries find\+Fundamental\+Mat} ( @By\+Val U\+Mat points1, @By\+Val U\+Mat points2)
+\item 
+static native Mat \hyperlink{group__calib3d_ga1a8446757231db93d44c99331ac4747d}{find\+Fundamental\+Mat} ( @By\+Val Mat points1, @By\+Val Mat points2, @By\+Val Mat mask, int method, double param1, double param2)
+\item 
+static native Mat {\bfseries find\+Fundamental\+Mat} ( @By\+Val Mat points1, @By\+Val Mat points2, @By\+Val Mat mask)
+\item 
+static native Mat {\bfseries find\+Fundamental\+Mat} ( @By\+Val U\+Mat points1, @By\+Val U\+Mat points2, @By\+Val U\+Mat mask, int method, double param1, double param2)
+\item 
+static native Mat {\bfseries find\+Fundamental\+Mat} ( @By\+Val U\+Mat points1, @By\+Val U\+Mat points2, @By\+Val U\+Mat mask)
+\item 
+static native Mat \hyperlink{group__calib3d_gad86954f592d1f99b0f8cdec7f4134c7a}{find\+Essential\+Mat} ( @By\+Val Mat points1, @By\+Val Mat points2, @By\+Val Mat camera\+Matrix, int method, double prob, double threshold, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat mask)
+\begin{DoxyCompactList}\small\item\em Calculates an essential matrix from the corresponding points in two images. \end{DoxyCompactList}\item 
+static native Mat {\bfseries find\+Essential\+Mat} ( @By\+Val Mat points1, @By\+Val Mat points2, @By\+Val Mat camera\+Matrix)
+\item 
+static native Mat {\bfseries find\+Essential\+Mat} ( @By\+Val U\+Mat points1, @By\+Val U\+Mat points2, @By\+Val U\+Mat camera\+Matrix, int method, double prob, double threshold, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat mask)
+\item 
+static native Mat {\bfseries find\+Essential\+Mat} ( @By\+Val U\+Mat points1, @By\+Val U\+Mat points2, @By\+Val U\+Mat camera\+Matrix)
+\item 
+static native Mat \hyperlink{group__calib3d_gad36d1e3d84d08813292f71bad120f252}{find\+Essential\+Mat} ( @By\+Val Mat points1, @By\+Val Mat points2, double focal, @By\+Val(null\+Value=\char`\"{}cv\+::\+Point2d(0, 0)\char`\"{}) Point2d pp, int method, double prob, double threshold, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat mask)
+\item 
+static native Mat {\bfseries find\+Essential\+Mat} ( @By\+Val Mat points1, @By\+Val Mat points2)
+\item 
+static native Mat {\bfseries find\+Essential\+Mat} ( @By\+Val U\+Mat points1, @By\+Val U\+Mat points2, double focal, @By\+Val(null\+Value=\char`\"{}cv\+::\+Point2d(0, 0)\char`\"{}) Point2d pp, int method, double prob, double threshold, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat mask)
+\item 
+static native Mat {\bfseries find\+Essential\+Mat} ( @By\+Val U\+Mat points1, @By\+Val U\+Mat points2)
+\item 
+static native void \hyperlink{group__calib3d_ga314b8ffe22b285bacf23b671e27d4495}{decompose\+Essential\+Mat} ( @By\+Val Mat E, @By\+Val Mat R1, @By\+Val Mat R2, @By\+Val Mat t)
+\begin{DoxyCompactList}\small\item\em Decompose an essential matrix to possible rotations and translation. \end{DoxyCompactList}\item 
+static native void {\bfseries decompose\+Essential\+Mat} ( @By\+Val U\+Mat E, @By\+Val U\+Mat R1, @By\+Val U\+Mat R2, @By\+Val U\+Mat t)
+\item 
+static native int \hyperlink{group__calib3d_gad7bafb76a3a077aa3ce1e3b98d475311}{recover\+Pose} ( @By\+Val Mat E, @By\+Val Mat points1, @By\+Val Mat points2, @By\+Val Mat camera\+Matrix, @By\+Val Mat R, @By\+Val Mat t, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat mask)
+\begin{DoxyCompactList}\small\item\em Recover relative camera rotation and translation from an estimated essential matrix and the corresponding points in two images, using cheirality check. Returns the number of inliers which pass the check. \end{DoxyCompactList}\item 
+static native int {\bfseries recover\+Pose} ( @By\+Val Mat E, @By\+Val Mat points1, @By\+Val Mat points2, @By\+Val Mat camera\+Matrix, @By\+Val Mat R, @By\+Val Mat t)
+\item 
+static native int {\bfseries recover\+Pose} ( @By\+Val U\+Mat E, @By\+Val U\+Mat points1, @By\+Val U\+Mat points2, @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat R, @By\+Val U\+Mat t, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat mask)
+\item 
+static native int {\bfseries recover\+Pose} ( @By\+Val U\+Mat E, @By\+Val U\+Mat points1, @By\+Val U\+Mat points2, @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat R, @By\+Val U\+Mat t)
+\item 
+static native int \hyperlink{group__calib3d_gaf6412b75e2ce96f4461d17a09c09c8b9}{recover\+Pose} ( @By\+Val Mat E, @By\+Val Mat points1, @By\+Val Mat points2, @By\+Val Mat R, @By\+Val Mat t, double focal, @By\+Val(null\+Value=\char`\"{}cv\+::\+Point2d(0, 0)\char`\"{}) Point2d pp, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat mask)
+\item 
+static native int {\bfseries recover\+Pose} ( @By\+Val Mat E, @By\+Val Mat points1, @By\+Val Mat points2, @By\+Val Mat R, @By\+Val Mat t)
+\item 
+static native int {\bfseries recover\+Pose} ( @By\+Val U\+Mat E, @By\+Val U\+Mat points1, @By\+Val U\+Mat points2, @By\+Val U\+Mat R, @By\+Val U\+Mat t, double focal, @By\+Val(null\+Value=\char`\"{}cv\+::\+Point2d(0, 0)\char`\"{}) Point2d pp, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat mask)
+\item 
+static native int {\bfseries recover\+Pose} ( @By\+Val U\+Mat E, @By\+Val U\+Mat points1, @By\+Val U\+Mat points2, @By\+Val U\+Mat R, @By\+Val U\+Mat t)
+\item 
+static native void \hyperlink{group__calib3d_ga7bf6bd2c5ee1b9d403fb85aa5dec095f}{compute\+Correspond\+Epilines} ( @By\+Val Mat points, int which\+Image, @By\+Val Mat F, @By\+Val Mat lines)
+\begin{DoxyCompactList}\small\item\em For points in an image of a stereo pair, computes the corresponding epilines in the other image. \end{DoxyCompactList}\item 
+static native void {\bfseries compute\+Correspond\+Epilines} ( @By\+Val U\+Mat points, int which\+Image, @By\+Val U\+Mat F, @By\+Val U\+Mat lines)
+\item 
+static native void \hyperlink{group__calib3d_ga12a47c5bb55266df7219c8f3e385f156}{triangulate\+Points} ( @By\+Val Mat proj\+Matr1, @By\+Val Mat proj\+Matr2, @By\+Val Mat proj\+Points1, @By\+Val Mat proj\+Points2, @By\+Val Mat points4D)
+\begin{DoxyCompactList}\small\item\em Reconstructs points by triangulation. \end{DoxyCompactList}\item 
+static native void {\bfseries triangulate\+Points} ( @By\+Val U\+Mat proj\+Matr1, @By\+Val U\+Mat proj\+Matr2, @By\+Val U\+Mat proj\+Points1, @By\+Val U\+Mat proj\+Points2, @By\+Val U\+Mat points4D)
+\item 
+static native void \hyperlink{group__calib3d_gad0d4f7daee2c8fda384311c1bce0965a}{correct\+Matches} ( @By\+Val Mat F, @By\+Val Mat points1, @By\+Val Mat points2, @By\+Val Mat new\+Points1, @By\+Val Mat new\+Points2)
+\begin{DoxyCompactList}\small\item\em Refines coordinates of corresponding points. \end{DoxyCompactList}\item 
+static native void {\bfseries correct\+Matches} ( @By\+Val U\+Mat F, @By\+Val U\+Mat points1, @By\+Val U\+Mat points2, @By\+Val U\+Mat new\+Points1, @By\+Val U\+Mat new\+Points2)
+\item 
+static native void \hyperlink{group__calib3d_ga18894b69acb224417c0f0a1afaded536}{filter\+Speckles} ( @By\+Val Mat img, double new\+Val, int max\+Speckle\+Size, double max\+Diff, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat buf)
+\begin{DoxyCompactList}\small\item\em Filters off small noise blobs (speckles) in the disparity map. \end{DoxyCompactList}\item 
+static native void {\bfseries filter\+Speckles} ( @By\+Val Mat img, double new\+Val, int max\+Speckle\+Size, double max\+Diff)
+\item 
+static native void {\bfseries filter\+Speckles} ( @By\+Val U\+Mat img, double new\+Val, int max\+Speckle\+Size, double max\+Diff, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat buf)
+\item 
+static native void {\bfseries filter\+Speckles} ( @By\+Val U\+Mat img, double new\+Val, int max\+Speckle\+Size, double max\+Diff)
+\item 
+static native Rect \hyperlink{group__calib3d_ga9ebc646662642a921e82a8eb83151c7b}{get\+Valid\+Disparity\+R\+OI} ( @By\+Val Rect roi1, @By\+Val Rect roi2, int min\+Disparity, int number\+Of\+Disparities, int S\+A\+D\+Window\+Size)
+\item 
+static native void \hyperlink{group__calib3d_ga15aa38f118664fcfaccd489f47e33f0d}{validate\+Disparity} ( @By\+Val Mat disparity, @By\+Val Mat cost, int min\+Disparity, int number\+Of\+Disparities, int disp12\+Max\+Disp)
+\item 
+static native void {\bfseries validate\+Disparity} ( @By\+Val Mat disparity, @By\+Val Mat cost, int min\+Disparity, int number\+Of\+Disparities)
+\item 
+static native void {\bfseries validate\+Disparity} ( @By\+Val U\+Mat disparity, @By\+Val U\+Mat cost, int min\+Disparity, int number\+Of\+Disparities, int disp12\+Max\+Disp)
+\item 
+static native void {\bfseries validate\+Disparity} ( @By\+Val U\+Mat disparity, @By\+Val U\+Mat cost, int min\+Disparity, int number\+Of\+Disparities)
+\item 
+static native void \hyperlink{group__calib3d_ga523a57d6b7e1229eed6a1c88b22d0408}{reproject\+Image\+To3D} ( @By\+Val Mat disparity, @By\+Val Mat \+\_\+3d\+Image, @By\+Val Mat Q, @Cast(\char`\"{}bool\char`\"{}) boolean handle\+Missing\+Values, int ddepth)
+\begin{DoxyCompactList}\small\item\em Reprojects a disparity image to 3D space. \end{DoxyCompactList}\item 
+static native void {\bfseries reproject\+Image\+To3D} ( @By\+Val Mat disparity, @By\+Val Mat \+\_\+3d\+Image, @By\+Val Mat Q)
+\item 
+static native void {\bfseries reproject\+Image\+To3D} ( @By\+Val U\+Mat disparity, @By\+Val U\+Mat \+\_\+3d\+Image, @By\+Val U\+Mat Q, @Cast(\char`\"{}bool\char`\"{}) boolean handle\+Missing\+Values, int ddepth)
+\item 
+static native void {\bfseries reproject\+Image\+To3D} ( @By\+Val U\+Mat disparity, @By\+Val U\+Mat \+\_\+3d\+Image, @By\+Val U\+Mat Q)
+\item 
+static native double \hyperlink{group__calib3d_ga708b24ef9e230b1b82f146fb3e7b2377}{sampson\+Distance} (@By\+Val Mat pt1, @By\+Val Mat pt2, @By\+Val Mat F)
+\begin{DoxyCompactList}\small\item\em Calculates the Sampson Distance between two points. \end{DoxyCompactList}\item 
+static native double {\bfseries sampson\+Distance} (@By\+Val U\+Mat pt1, @By\+Val U\+Mat pt2, @By\+Val U\+Mat F)
+\item 
+static native int \hyperlink{group__calib3d_ga07eb86fa8ee181d1695f57b6b93955cd}{estimate\+Affine3D} (@By\+Val Mat src, @By\+Val Mat dst, @By\+Val Mat out, @By\+Val Mat inliers, double ransac\+Threshold, double confidence)
+\begin{DoxyCompactList}\small\item\em Computes an optimal affine transformation between two 3D point sets. \end{DoxyCompactList}\item 
+static native int {\bfseries estimate\+Affine3D} (@By\+Val Mat src, @By\+Val Mat dst, @By\+Val Mat out, @By\+Val Mat inliers)
+\item 
+static native int {\bfseries estimate\+Affine3D} (@By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val U\+Mat out, @By\+Val U\+Mat inliers, double ransac\+Threshold, double confidence)
+\item 
+static native int {\bfseries estimate\+Affine3D} (@By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val U\+Mat out, @By\+Val U\+Mat inliers)
+\item 
+static native Mat \hyperlink{group__calib3d_ga3ac5c98614a2c26448c68e407388473f}{estimate\+Affine2D} (@By\+Val Mat from, @By\+Val Mat to, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat inliers, int method, double ransac\+Reproj\+Threshold, @Cast(\char`\"{}size\+\_\+t\char`\"{}) long max\+Iters, double confidence, @Cast(\char`\"{}size\+\_\+t\char`\"{}) long refine\+Iters)
+\begin{DoxyCompactList}\small\item\em Computes an optimal affine transformation between two 2D point sets. \end{DoxyCompactList}\item 
+static native Mat {\bfseries estimate\+Affine2D} (@By\+Val Mat from, @By\+Val Mat to)
+\item 
+static native Mat {\bfseries estimate\+Affine2D} (@By\+Val U\+Mat from, @By\+Val U\+Mat to, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat inliers, int method, double ransac\+Reproj\+Threshold, @Cast(\char`\"{}size\+\_\+t\char`\"{}) long max\+Iters, double confidence, @Cast(\char`\"{}size\+\_\+t\char`\"{}) long refine\+Iters)
+\item 
+static native Mat {\bfseries estimate\+Affine2D} (@By\+Val U\+Mat from, @By\+Val U\+Mat to)
+\item 
+static native Mat \hyperlink{group__calib3d_gab4e1d79cab0ae6448de411f9688836c8}{estimate\+Affine\+Partial2D} (@By\+Val Mat from, @By\+Val Mat to, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat inliers, int method, double ransac\+Reproj\+Threshold, @Cast(\char`\"{}size\+\_\+t\char`\"{}) long max\+Iters, double confidence, @Cast(\char`\"{}size\+\_\+t\char`\"{}) long refine\+Iters)
+\begin{DoxyCompactList}\small\item\em Computes an optimal limited affine transformation with 4 degrees of freedom between two 2D point sets. \end{DoxyCompactList}\item 
+static native Mat {\bfseries estimate\+Affine\+Partial2D} (@By\+Val Mat from, @By\+Val Mat to)
+\item 
+static native Mat {\bfseries estimate\+Affine\+Partial2D} (@By\+Val U\+Mat from, @By\+Val U\+Mat to, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat inliers, int method, double ransac\+Reproj\+Threshold, @Cast(\char`\"{}size\+\_\+t\char`\"{}) long max\+Iters, double confidence, @Cast(\char`\"{}size\+\_\+t\char`\"{}) long refine\+Iters)
+\item 
+static native Mat {\bfseries estimate\+Affine\+Partial2D} (@By\+Val U\+Mat from, @By\+Val U\+Mat to)
+\item 
+static native int \hyperlink{group__calib3d_gac6a35d2f8ad957af40b439f4b0a6aad6}{decompose\+Homography\+Mat} (@By\+Val Mat H, @By\+Val Mat K, @By\+Val Mat\+Vector rotations, @By\+Val Mat\+Vector translations, @By\+Val Mat\+Vector normals)
+\begin{DoxyCompactList}\small\item\em Decompose a homography matrix to rotation(s), translation(s) and plane normal(s). \end{DoxyCompactList}\item 
+static native int {\bfseries decompose\+Homography\+Mat} (@By\+Val Mat H, @By\+Val Mat K, @By\+Val U\+Mat\+Vector rotations, @By\+Val U\+Mat\+Vector translations, @By\+Val U\+Mat\+Vector normals)
+\item 
+static native int {\bfseries decompose\+Homography\+Mat} (@By\+Val U\+Mat H, @By\+Val U\+Mat K, @By\+Val Mat\+Vector rotations, @By\+Val Mat\+Vector translations, @By\+Val Mat\+Vector normals)
+\item 
+static native int {\bfseries decompose\+Homography\+Mat} (@By\+Val U\+Mat H, @By\+Val U\+Mat K, @By\+Val U\+Mat\+Vector rotations, @By\+Val U\+Mat\+Vector translations, @By\+Val U\+Mat\+Vector normals)
+\item 
+static native void \hyperlink{group__calib3d__fisheye_gaf2fa76c626de207fce922dd3c2a1defc}{project\+Points} (@By\+Val Mat object\+Points, @By\+Val Mat image\+Points, @Const @By\+Ref Mat affine, @By\+Val Mat K, @By\+Val Mat D, double alpha, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat jacobian)
+\begin{DoxyCompactList}\small\item\em Projects points using fisheye model. \end{DoxyCompactList}\item 
+static native void {\bfseries project\+Points} (@By\+Val Mat object\+Points, @By\+Val Mat image\+Points, @Const @By\+Ref Mat affine, @By\+Val Mat K, @By\+Val Mat D)
+\item 
+static native void {\bfseries project\+Points} (@By\+Val U\+Mat object\+Points, @By\+Val U\+Mat image\+Points, @Const @By\+Ref Mat affine, @By\+Val U\+Mat K, @By\+Val U\+Mat D, double alpha, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat jacobian)
+\item 
+static native void {\bfseries project\+Points} (@By\+Val U\+Mat object\+Points, @By\+Val U\+Mat image\+Points, @Const @By\+Ref Mat affine, @By\+Val U\+Mat K, @By\+Val U\+Mat D)
+\item 
+static native void \hyperlink{group__calib3d__fisheye_ga01c2fc60a861f2b9972e00c4837a315b}{project\+Points} (@By\+Val Mat object\+Points, @By\+Val Mat image\+Points, @By\+Val Mat rvec, @By\+Val Mat tvec, @By\+Val Mat K, @By\+Val Mat D, double alpha, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat jacobian)
+\item 
+static native void {\bfseries project\+Points} (@By\+Val U\+Mat object\+Points, @By\+Val U\+Mat image\+Points, @By\+Val U\+Mat rvec, @By\+Val U\+Mat tvec, @By\+Val U\+Mat K, @By\+Val U\+Mat D, double alpha, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat jacobian)
+\item 
+static native void \hyperlink{group__calib3d__fisheye_gacc047f2a04ea647d5dd504de5b1b6ba3}{distort\+Points} (@By\+Val Mat undistorted, @By\+Val Mat distorted, @By\+Val Mat K, @By\+Val Mat D, double alpha)
+\begin{DoxyCompactList}\small\item\em Distorts 2D points using fisheye model. \end{DoxyCompactList}\item 
+static native void {\bfseries distort\+Points} (@By\+Val Mat undistorted, @By\+Val Mat distorted, @By\+Val Mat K, @By\+Val Mat D)
+\item 
+static native void {\bfseries distort\+Points} (@By\+Val U\+Mat undistorted, @By\+Val U\+Mat distorted, @By\+Val U\+Mat K, @By\+Val U\+Mat D, double alpha)
+\item 
+static native void {\bfseries distort\+Points} (@By\+Val U\+Mat undistorted, @By\+Val U\+Mat distorted, @By\+Val U\+Mat K, @By\+Val U\+Mat D)
+\item 
+static native void \hyperlink{group__calib3d__fisheye_ga76244e0842b37e17c2b00ef9a015b99a}{undistort\+Points} (@By\+Val Mat distorted, @By\+Val Mat undistorted, @By\+Val Mat K, @By\+Val Mat D, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) Mat R, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) Mat P)
+\begin{DoxyCompactList}\small\item\em Undistorts 2D points using fisheye model. \end{DoxyCompactList}\item 
+static native void {\bfseries undistort\+Points} (@By\+Val Mat distorted, @By\+Val Mat undistorted, @By\+Val Mat K, @By\+Val Mat D)
+\item 
+static native void {\bfseries undistort\+Points} (@By\+Val U\+Mat distorted, @By\+Val U\+Mat undistorted, @By\+Val U\+Mat K, @By\+Val U\+Mat D, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat R, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat P)
+\item 
+static native void {\bfseries undistort\+Points} (@By\+Val U\+Mat distorted, @By\+Val U\+Mat undistorted, @By\+Val U\+Mat K, @By\+Val U\+Mat D)
+\item 
+static native void \hyperlink{group__calib3d__fisheye_ga507f430243a293690d2c405dec6a0e82}{init\+Undistort\+Rectify\+Map} (@By\+Val Mat K, @By\+Val Mat D, @By\+Val Mat R, @By\+Val Mat P, @Const @By\+Ref Size size, int m1type, @By\+Val Mat map1, @By\+Val Mat map2)
+\begin{DoxyCompactList}\small\item\em Computes undistortion and rectification maps for image transform by cv\+::remap(). If D is empty zero distortion is used, if R or P is empty identity matrixes are used. \end{DoxyCompactList}\item 
+static native void {\bfseries init\+Undistort\+Rectify\+Map} (@By\+Val U\+Mat K, @By\+Val U\+Mat D, @By\+Val U\+Mat R, @By\+Val U\+Mat P, @Const @By\+Ref Size size, int m1type, @By\+Val U\+Mat map1, @By\+Val U\+Mat map2)
+\item 
+static native void \hyperlink{group__calib3d__fisheye_gaf721f1f961fe6feedb9ff6a1fc1b169d}{undistort\+Image} (@By\+Val Mat distorted, @By\+Val Mat undistorted, @By\+Val Mat K, @By\+Val Mat D, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) Mat Knew, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size new\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Transforms an image to compensate for fisheye lens distortion. \end{DoxyCompactList}\item 
+static native void {\bfseries undistort\+Image} (@By\+Val Mat distorted, @By\+Val Mat undistorted, @By\+Val Mat K, @By\+Val Mat D)
+\item 
+static native void {\bfseries undistort\+Image} (@By\+Val U\+Mat distorted, @By\+Val U\+Mat undistorted, @By\+Val U\+Mat K, @By\+Val U\+Mat D, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat Knew, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size new\+\_\+size)
+\item 
+static native void {\bfseries undistort\+Image} (@By\+Val U\+Mat distorted, @By\+Val U\+Mat undistorted, @By\+Val U\+Mat K, @By\+Val U\+Mat D)
+\item 
+static native void \hyperlink{group__calib3d__fisheye_ga0ec51dc3cf450ad76b96b9b719237f2b}{estimate\+New\+Camera\+Matrix\+For\+Undistort\+Rectify} (@By\+Val Mat K, @By\+Val Mat D, @Const @By\+Ref Size image\+\_\+size, @By\+Val Mat R, @By\+Val Mat P, double balance, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size new\+\_\+size, double fov\+\_\+scale)
+\begin{DoxyCompactList}\small\item\em Estimates new camera matrix for undistortion or rectification. \end{DoxyCompactList}\item 
+static native void {\bfseries estimate\+New\+Camera\+Matrix\+For\+Undistort\+Rectify} (@By\+Val Mat K, @By\+Val Mat D, @Const @By\+Ref Size image\+\_\+size, @By\+Val Mat R, @By\+Val Mat P)
+\item 
+static native void {\bfseries estimate\+New\+Camera\+Matrix\+For\+Undistort\+Rectify} (@By\+Val U\+Mat K, @By\+Val U\+Mat D, @Const @By\+Ref Size image\+\_\+size, @By\+Val U\+Mat R, @By\+Val U\+Mat P, double balance, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size new\+\_\+size, double fov\+\_\+scale)
+\item 
+static native void {\bfseries estimate\+New\+Camera\+Matrix\+For\+Undistort\+Rectify} (@By\+Val U\+Mat K, @By\+Val U\+Mat D, @Const @By\+Ref Size image\+\_\+size, @By\+Val U\+Mat R, @By\+Val U\+Mat P)
+\item 
+static native double \hyperlink{group__calib3d__fisheye_ga4fd78a3672b06b47ba34e82e17824e9d}{calibrate} (@By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points, @Const @By\+Ref Size image\+\_\+size, @By\+Val Mat K, @By\+Val Mat D, @By\+Val Mat\+Vector rvecs, @By\+Val Mat\+Vector tvecs, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 100, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\begin{DoxyCompactList}\small\item\em Performs camera calibaration. \end{DoxyCompactList}\item 
+static native double {\bfseries calibrate} (@By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points, @Const @By\+Ref Size image\+\_\+size, @By\+Val Mat K, @By\+Val Mat D, @By\+Val Mat\+Vector rvecs, @By\+Val Mat\+Vector tvecs)
+\item 
+static native double {\bfseries calibrate} (@By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points, @Const @By\+Ref Size image\+\_\+size, @By\+Val Mat K, @By\+Val Mat D, @By\+Val U\+Mat\+Vector rvecs, @By\+Val U\+Mat\+Vector tvecs, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 100, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\item 
+static native double {\bfseries calibrate} (@By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points, @Const @By\+Ref Size image\+\_\+size, @By\+Val Mat K, @By\+Val Mat D, @By\+Val U\+Mat\+Vector rvecs, @By\+Val U\+Mat\+Vector tvecs)
+\item 
+static native double {\bfseries calibrate} (@By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points, @Const @By\+Ref Size image\+\_\+size, @By\+Val U\+Mat K, @By\+Val U\+Mat D, @By\+Val Mat\+Vector rvecs, @By\+Val Mat\+Vector tvecs, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 100, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\item 
+static native double {\bfseries calibrate} (@By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points, @Const @By\+Ref Size image\+\_\+size, @By\+Val U\+Mat K, @By\+Val U\+Mat D, @By\+Val Mat\+Vector rvecs, @By\+Val Mat\+Vector tvecs)
+\item 
+static native double {\bfseries calibrate} (@By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points, @Const @By\+Ref Size image\+\_\+size, @By\+Val U\+Mat K, @By\+Val U\+Mat D, @By\+Val U\+Mat\+Vector rvecs, @By\+Val U\+Mat\+Vector tvecs, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 100, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\item 
+static native double {\bfseries calibrate} (@By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points, @Const @By\+Ref Size image\+\_\+size, @By\+Val U\+Mat K, @By\+Val U\+Mat D, @By\+Val U\+Mat\+Vector rvecs, @By\+Val U\+Mat\+Vector tvecs)
+\item 
+static native void \hyperlink{group__calib3d__fisheye_ga8733df626f7839fe698cc024f4836938}{stereo\+Rectify} (@By\+Val Mat K1, @By\+Val Mat D1, @By\+Val Mat K2, @By\+Val Mat D2, @Const @By\+Ref Size image\+Size, @By\+Val Mat R, @By\+Val Mat tvec, @By\+Val Mat R1, @By\+Val Mat R2, @By\+Val Mat P1, @By\+Val Mat P2, @By\+Val Mat Q, int flags, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size new\+Image\+Size, double balance, double fov\+\_\+scale)
+\begin{DoxyCompactList}\small\item\em Stereo rectification for fisheye camera model. \end{DoxyCompactList}\item 
+static native void {\bfseries stereo\+Rectify} (@By\+Val Mat K1, @By\+Val Mat D1, @By\+Val Mat K2, @By\+Val Mat D2, @Const @By\+Ref Size image\+Size, @By\+Val Mat R, @By\+Val Mat tvec, @By\+Val Mat R1, @By\+Val Mat R2, @By\+Val Mat P1, @By\+Val Mat P2, @By\+Val Mat Q, int flags)
+\item 
+static native void {\bfseries stereo\+Rectify} (@By\+Val U\+Mat K1, @By\+Val U\+Mat D1, @By\+Val U\+Mat K2, @By\+Val U\+Mat D2, @Const @By\+Ref Size image\+Size, @By\+Val U\+Mat R, @By\+Val U\+Mat tvec, @By\+Val U\+Mat R1, @By\+Val U\+Mat R2, @By\+Val U\+Mat P1, @By\+Val U\+Mat P2, @By\+Val U\+Mat Q, int flags, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size new\+Image\+Size, double balance, double fov\+\_\+scale)
+\item 
+static native void {\bfseries stereo\+Rectify} (@By\+Val U\+Mat K1, @By\+Val U\+Mat D1, @By\+Val U\+Mat K2, @By\+Val U\+Mat D2, @Const @By\+Ref Size image\+Size, @By\+Val U\+Mat R, @By\+Val U\+Mat tvec, @By\+Val U\+Mat R1, @By\+Val U\+Mat R2, @By\+Val U\+Mat P1, @By\+Val U\+Mat P2, @By\+Val U\+Mat Q, int flags)
+\item 
+static native double \hyperlink{group__calib3d__fisheye_ga0134bbb31283b93ec8331c3b34923cd0}{stereo\+Calibrate} (@By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points1, @By\+Val Mat\+Vector image\+Points2, @By\+Val Mat K1, @By\+Val Mat D1, @By\+Val Mat K2, @By\+Val Mat D2, @By\+Val Size image\+Size, @By\+Val Mat R, @By\+Val Mat T, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 100, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\begin{DoxyCompactList}\small\item\em Performs stereo calibration. \end{DoxyCompactList}\item 
+static native double {\bfseries stereo\+Calibrate} (@By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points1, @By\+Val Mat\+Vector image\+Points2, @By\+Val Mat K1, @By\+Val Mat D1, @By\+Val Mat K2, @By\+Val Mat D2, @By\+Val Size image\+Size, @By\+Val Mat R, @By\+Val Mat T)
+\item 
+static native double {\bfseries stereo\+Calibrate} (@By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points1, @By\+Val U\+Mat\+Vector image\+Points2, @By\+Val Mat K1, @By\+Val Mat D1, @By\+Val Mat K2, @By\+Val Mat D2, @By\+Val Size image\+Size, @By\+Val Mat R, @By\+Val Mat T, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 100, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\item 
+static native double {\bfseries stereo\+Calibrate} (@By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points1, @By\+Val U\+Mat\+Vector image\+Points2, @By\+Val Mat K1, @By\+Val Mat D1, @By\+Val Mat K2, @By\+Val Mat D2, @By\+Val Size image\+Size, @By\+Val Mat R, @By\+Val Mat T)
+\item 
+static native double {\bfseries stereo\+Calibrate} (@By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points1, @By\+Val Mat\+Vector image\+Points2, @By\+Val U\+Mat K1, @By\+Val U\+Mat D1, @By\+Val U\+Mat K2, @By\+Val U\+Mat D2, @By\+Val Size image\+Size, @By\+Val U\+Mat R, @By\+Val U\+Mat T, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 100, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\item 
+static native double {\bfseries stereo\+Calibrate} (@By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points1, @By\+Val Mat\+Vector image\+Points2, @By\+Val U\+Mat K1, @By\+Val U\+Mat D1, @By\+Val U\+Mat K2, @By\+Val U\+Mat D2, @By\+Val Size image\+Size, @By\+Val U\+Mat R, @By\+Val U\+Mat T)
+\item 
+static native double {\bfseries stereo\+Calibrate} (@By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points1, @By\+Val U\+Mat\+Vector image\+Points2, @By\+Val U\+Mat K1, @By\+Val U\+Mat D1, @By\+Val U\+Mat K2, @By\+Val U\+Mat D2, @By\+Val Size image\+Size, @By\+Val U\+Mat R, @By\+Val U\+Mat T, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 100, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\item 
+static native double {\bfseries stereo\+Calibrate} (@By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points1, @By\+Val U\+Mat\+Vector image\+Points2, @By\+Val U\+Mat K1, @By\+Val U\+Mat D1, @By\+Val U\+Mat K2, @By\+Val U\+Mat D2, @By\+Val Size image\+Size, @By\+Val U\+Mat R, @By\+Val U\+Mat T)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final int {\bfseries C\+V\+\_\+\+F\+M\+\_\+7\+P\+O\+I\+NT} = 1
+\item 
+static final int {\bfseries C\+V\+\_\+\+F\+M\+\_\+8\+P\+O\+I\+NT} = 2
+\item 
+static final int {\bfseries C\+V\+\_\+\+L\+M\+E\+DS} = 4
+\item 
+static final int {\bfseries C\+V\+\_\+\+R\+A\+N\+S\+AC} = 8
+\item 
+static final int {\bfseries C\+V\+\_\+\+F\+M\+\_\+\+L\+M\+E\+D\+S\+\_\+\+O\+N\+LY} = C\+V\+\_\+\+L\+M\+E\+DS
+\item 
+static final int {\bfseries C\+V\+\_\+\+F\+M\+\_\+\+R\+A\+N\+S\+A\+C\+\_\+\+O\+N\+LY} = C\+V\+\_\+\+R\+A\+N\+S\+AC
+\item 
+static final int {\bfseries C\+V\+\_\+\+F\+M\+\_\+\+L\+M\+E\+DS} = C\+V\+\_\+\+L\+M\+E\+DS
+\item 
+static final int {\bfseries C\+V\+\_\+\+F\+M\+\_\+\+R\+A\+N\+S\+AC} = C\+V\+\_\+\+R\+A\+N\+S\+AC
+\item 
+static final int \hyperlink{group__calib3d__c_ga7bd331d354ffd666d56f3fdfc5937e91}{C\+V\+\_\+\+I\+T\+E\+R\+A\+T\+I\+VE} = 0
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+C\+B\+\_\+\+A\+D\+A\+P\+T\+I\+V\+E\+\_\+\+T\+H\+R\+E\+SH} = 1
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+C\+B\+\_\+\+N\+O\+R\+M\+A\+L\+I\+Z\+E\+\_\+\+I\+M\+A\+GE} = 2
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+C\+B\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+Q\+U\+A\+DS} = 4
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+C\+B\+\_\+\+F\+A\+S\+T\+\_\+\+C\+H\+E\+CK} = 8
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+U\+S\+E\+\_\+\+I\+N\+T\+R\+I\+N\+S\+I\+C\+\_\+\+G\+U\+E\+SS} = 1
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+F\+I\+X\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+R\+A\+T\+IO} = 2
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+F\+I\+X\+\_\+\+P\+R\+I\+N\+C\+I\+P\+A\+L\+\_\+\+P\+O\+I\+NT} = 4
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+Z\+E\+R\+O\+\_\+\+T\+A\+N\+G\+E\+N\+T\+\_\+\+D\+I\+ST} = 8
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+F\+I\+X\+\_\+\+F\+O\+C\+A\+L\+\_\+\+L\+E\+N\+G\+TH} = 16
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+F\+I\+X\+\_\+\+K1} = 32
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+F\+I\+X\+\_\+\+K2} = 64
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+F\+I\+X\+\_\+\+K3} = 128
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+F\+I\+X\+\_\+\+K4} = 2048
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+F\+I\+X\+\_\+\+K5} = 4096
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+F\+I\+X\+\_\+\+K6} = 8192
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+R\+A\+T\+I\+O\+N\+A\+L\+\_\+\+M\+O\+D\+EL} = 16384
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+T\+H\+I\+N\+\_\+\+P\+R\+I\+S\+M\+\_\+\+M\+O\+D\+EL} = 32768
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+F\+I\+X\+\_\+\+S1\+\_\+\+S2\+\_\+\+S3\+\_\+\+S4} = 65536
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+T\+I\+L\+T\+E\+D\+\_\+\+M\+O\+D\+EL} = 262144
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+F\+I\+X\+\_\+\+T\+A\+U\+X\+\_\+\+T\+A\+UY} = 524288
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+N\+I\+N\+T\+R\+I\+N\+S\+IC} = 18
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+F\+I\+X\+\_\+\+I\+N\+T\+R\+I\+N\+S\+IC} = 256
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+S\+A\+M\+E\+\_\+\+F\+O\+C\+A\+L\+\_\+\+L\+E\+N\+G\+TH} = 512
+\item 
+static final int {\bfseries C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+Z\+E\+R\+O\+\_\+\+D\+I\+S\+P\+A\+R\+I\+TY} = 1024
+\item 
+static final int {\bfseries C\+V\+\_\+\+S\+T\+E\+R\+E\+O\+\_\+\+B\+M\+\_\+\+N\+O\+R\+M\+A\+L\+I\+Z\+E\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE} = 0
+\item 
+static final int {\bfseries C\+V\+\_\+\+S\+T\+E\+R\+E\+O\+\_\+\+B\+M\+\_\+\+X\+S\+O\+B\+EL} = 1
+\item 
+static final int {\bfseries C\+V\+\_\+\+S\+T\+E\+R\+E\+O\+\_\+\+B\+M\+\_\+\+B\+A\+S\+IC} = 0
+\item 
+static final int {\bfseries C\+V\+\_\+\+S\+T\+E\+R\+E\+O\+\_\+\+B\+M\+\_\+\+F\+I\+S\+H\+\_\+\+E\+YE} = 1
+\item 
+static final int {\bfseries C\+V\+\_\+\+S\+T\+E\+R\+E\+O\+\_\+\+B\+M\+\_\+\+N\+A\+R\+R\+OW} = 2
+\item 
+static final int \hyperlink{group__calib3d_ga7e1c52453b9e9c9ab4bad14cda6c4bf0}{L\+M\+E\+DS} = 4
+\item 
+static final int \hyperlink{group__calib3d_ga6ffcad9be73e952b7d77514029955df4}{S\+O\+L\+V\+E\+P\+N\+P\+\_\+\+I\+T\+E\+R\+A\+T\+I\+VE} = 0
+\item 
+static final int \hyperlink{group__calib3d_gafb359ad540f439e22ec524accd18035a}{C\+A\+L\+I\+B\+\_\+\+C\+B\+\_\+\+A\+D\+A\+P\+T\+I\+V\+E\+\_\+\+T\+H\+R\+E\+SH} = 1
+\item 
+static final int \hyperlink{group__calib3d_gad2f624be59f3f688026e8da4a9fdd54f}{C\+A\+L\+I\+B\+\_\+\+C\+B\+\_\+\+S\+Y\+M\+M\+E\+T\+R\+I\+C\+\_\+\+G\+R\+ID} = 1
+\item 
+static final int \hyperlink{group__calib3d_gaf431715014a51d3ef90634667102d383}{C\+A\+L\+I\+B\+\_\+\+U\+S\+E\+\_\+\+I\+N\+T\+R\+I\+N\+S\+I\+C\+\_\+\+G\+U\+E\+SS} = 0x00001
+\item 
+static final int \hyperlink{group__calib3d_ga9409961aa623a3fc37210e6b332447fa}{F\+M\+\_\+7\+P\+O\+I\+NT} = 1
+\item 
+static final int \hyperlink{group__calib3d__fisheye_gac6c55e6235a136952116d157a197869c}{F\+I\+S\+H\+E\+Y\+E\+\_\+\+C\+A\+L\+I\+B\+\_\+\+U\+S\+E\+\_\+\+I\+N\+T\+R\+I\+N\+S\+I\+C\+\_\+\+G\+U\+E\+SS} = 1 $<$$<$ 0
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+opencv\+\_\+calib3d.\+java\end{DoxyCompactItemize}

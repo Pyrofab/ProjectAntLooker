@@ -1,0 +1,159 @@
+\hypertarget{group__ximgproc__segmentation}{}\section{Image segmentation}
+\label{group__ximgproc__segmentation}\index{Image segmentation@{Image segmentation}}
+
+
+Graph Based Segmentation Algorithm. The class implements the algorithm described in {\bfseries [P\+F\+F2004]} .  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+Graph\+Segmentation}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+Selective\+Search\+Segmentation\+Strategy}
+\begin{DoxyCompactList}\small\item\em Strategie for the selective search segmentation algorithm The class implements a generic stragery for the algorithm described in {\bfseries [uijlings2013selective]}. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+Selective\+Search\+Segmentation\+Strategy\+Color}
+\begin{DoxyCompactList}\small\item\em Color-\/based strategy for the selective search segmentation algorithm The class is implemented from the algorithm described in {\bfseries [uijlings2013selective]}. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+Selective\+Search\+Segmentation\+Strategy\+Size}
+\begin{DoxyCompactList}\small\item\em Size-\/based strategy for the selective search segmentation algorithm The class is implemented from the algorithm described in {\bfseries [uijlings2013selective]}. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+Selective\+Search\+Segmentation\+Strategy\+Texture}
+\begin{DoxyCompactList}\small\item\em Texture-\/based strategy for the selective search segmentation algorithm The class is implemented from the algorithm described in {\bfseries [uijlings2013selective]}. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+Selective\+Search\+Segmentation\+Strategy\+Fill}
+\begin{DoxyCompactList}\small\item\em Fill-\/based strategy for the selective search segmentation algorithm The class is implemented from the algorithm described in {\bfseries [uijlings2013selective]}. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+Selective\+Search\+Segmentation\+Strategy\+Multiple}
+\begin{DoxyCompactList}\small\item\em Regroup multiple strategies for the selective search segmentation algorithm. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+Selective\+Search\+Segmentation}
+\begin{DoxyCompactList}\small\item\em Selective search segmentation algorithm The class implements the algorithm described in {\bfseries [uijlings2013selective]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static native Graph\+Segmentation \hyperlink{group__ximgproc__segmentation_ga51469520253d4dc38fd411763692c452}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Graph\+Segmentation} (double sigma, float k, int min\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Creates a graph based segmentor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ximgproc__segmentation_gad21abb67ff1c88ecbae338efd15ae526}\label{group__ximgproc__segmentation_gad21abb67ff1c88ecbae338efd15ae526}} 
+static native Graph\+Segmentation {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Graph\+Segmentation} ()
+\item 
+\mbox{\Hypertarget{group__ximgproc__segmentation_ga9631bc8096ead6133e098623d8f1e664}\label{group__ximgproc__segmentation_ga9631bc8096ead6133e098623d8f1e664}} 
+static native Selective\+Search\+Segmentation\+Strategy\+Color \hyperlink{group__ximgproc__segmentation_ga9631bc8096ead6133e098623d8f1e664}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Selective\+Search\+Segmentation\+Strategy\+Color} ()
+\begin{DoxyCompactList}\small\item\em Create a new color-\/based strategy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ximgproc__segmentation_gabe5aa072443fd8b40ea54141bd3628b7}\label{group__ximgproc__segmentation_gabe5aa072443fd8b40ea54141bd3628b7}} 
+static native Selective\+Search\+Segmentation\+Strategy\+Size \hyperlink{group__ximgproc__segmentation_gabe5aa072443fd8b40ea54141bd3628b7}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Selective\+Search\+Segmentation\+Strategy\+Size} ()
+\begin{DoxyCompactList}\small\item\em Create a new size-\/based strategy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ximgproc__segmentation_ga921f1030601ebcdad67662f016ebb6bf}\label{group__ximgproc__segmentation_ga921f1030601ebcdad67662f016ebb6bf}} 
+static native Selective\+Search\+Segmentation\+Strategy\+Texture \hyperlink{group__ximgproc__segmentation_ga921f1030601ebcdad67662f016ebb6bf}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Selective\+Search\+Segmentation\+Strategy\+Texture} ()
+\begin{DoxyCompactList}\small\item\em Create a new size-\/based strategy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ximgproc__segmentation_ga6615570ea96beef3412287b4dddb312a}\label{group__ximgproc__segmentation_ga6615570ea96beef3412287b4dddb312a}} 
+static native Selective\+Search\+Segmentation\+Strategy\+Fill \hyperlink{group__ximgproc__segmentation_ga6615570ea96beef3412287b4dddb312a}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Selective\+Search\+Segmentation\+Strategy\+Fill} ()
+\begin{DoxyCompactList}\small\item\em Create a new fill-\/based strategy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ximgproc__segmentation_ga54fb05bc5e00a9a79578016f402c3a25}\label{group__ximgproc__segmentation_ga54fb05bc5e00a9a79578016f402c3a25}} 
+static native Selective\+Search\+Segmentation\+Strategy\+Multiple \hyperlink{group__ximgproc__segmentation_ga54fb05bc5e00a9a79578016f402c3a25}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Selective\+Search\+Segmentation\+Strategy\+Multiple} ()
+\begin{DoxyCompactList}\small\item\em Create a new multiple strategy. \end{DoxyCompactList}\item 
+static native Selective\+Search\+Segmentation\+Strategy\+Multiple \hyperlink{group__ximgproc__segmentation_ga6efb6138175a12479bd02b85f242afa1}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Selective\+Search\+Segmentation\+Strategy\+Multiple} (@Ptr Selective\+Search\+Segmentation\+Strategy s1)
+\begin{DoxyCompactList}\small\item\em Create a new multiple strategy and set one subtrategy. \end{DoxyCompactList}\item 
+static native Selective\+Search\+Segmentation\+Strategy\+Multiple \hyperlink{group__ximgproc__segmentation_gaf769336116a86e1107367e971033e25b}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Selective\+Search\+Segmentation\+Strategy\+Multiple} (@Ptr Selective\+Search\+Segmentation\+Strategy s1, @Ptr Selective\+Search\+Segmentation\+Strategy s2)
+\begin{DoxyCompactList}\small\item\em Create a new multiple strategy and set two subtrategies, with equal weights. \end{DoxyCompactList}\item 
+static native Selective\+Search\+Segmentation\+Strategy\+Multiple \hyperlink{group__ximgproc__segmentation_ga83a457ff4067681d6ea93cf51b584b9d}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Selective\+Search\+Segmentation\+Strategy\+Multiple} (@Ptr Selective\+Search\+Segmentation\+Strategy s1, @Ptr Selective\+Search\+Segmentation\+Strategy s2, @Ptr Selective\+Search\+Segmentation\+Strategy s3)
+\begin{DoxyCompactList}\small\item\em Create a new multiple strategy and set three subtrategies, with equal weights. \end{DoxyCompactList}\item 
+static native Selective\+Search\+Segmentation\+Strategy\+Multiple \hyperlink{group__ximgproc__segmentation_ga0c5302ec3882ad988a84158bc91186e1}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Selective\+Search\+Segmentation\+Strategy\+Multiple} (@Ptr Selective\+Search\+Segmentation\+Strategy s1, @Ptr Selective\+Search\+Segmentation\+Strategy s2, @Ptr Selective\+Search\+Segmentation\+Strategy s3, @Ptr Selective\+Search\+Segmentation\+Strategy s4)
+\begin{DoxyCompactList}\small\item\em Create a new multiple strategy and set four subtrategies, with equal weights. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ximgproc__segmentation_gadfa823f2a25d59aaf55b7e0ce50ca67a}\label{group__ximgproc__segmentation_gadfa823f2a25d59aaf55b7e0ce50ca67a}} 
+static native Selective\+Search\+Segmentation \hyperlink{group__ximgproc__segmentation_gadfa823f2a25d59aaf55b7e0ce50ca67a}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Selective\+Search\+Segmentation} ()
+\begin{DoxyCompactList}\small\item\em Create a new Selective\+Search\+Segmentation class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Graph Based Segmentation Algorithm. The class implements the algorithm described in {\bfseries [P\+F\+F2004]} . 
+
+/$\ast$$\ast$ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__ximgproc__segmentation_ga51469520253d4dc38fd411763692c452}\label{group__ximgproc__segmentation_ga51469520253d4dc38fd411763692c452}} 
+\index{Image segmentation@{Image segmentation}!create\+Graph\+Segmentation@{create\+Graph\+Segmentation}}
+\index{create\+Graph\+Segmentation@{create\+Graph\+Segmentation}!Image segmentation@{Image segmentation}}
+\subsubsection{\texorpdfstring{create\+Graph\+Segmentation()}{createGraphSegmentation()}}
+{\footnotesize\ttfamily static native Graph\+Segmentation org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Graph\+Segmentation (\begin{DoxyParamCaption}\item[{double}]{sigma,  }\item[{float}]{k,  }\item[{int}]{min\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a graph based segmentor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sigma} & The sigma parameter, used to smooth image \\
+\hline
+{\em k} & The k parameter of the algorythm \\
+\hline
+{\em min\+\_\+size} & The minimum size of segments \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__ximgproc__segmentation_ga6efb6138175a12479bd02b85f242afa1}\label{group__ximgproc__segmentation_ga6efb6138175a12479bd02b85f242afa1}} 
+\index{Image segmentation@{Image segmentation}!create\+Selective\+Search\+Segmentation\+Strategy\+Multiple@{create\+Selective\+Search\+Segmentation\+Strategy\+Multiple}}
+\index{create\+Selective\+Search\+Segmentation\+Strategy\+Multiple@{create\+Selective\+Search\+Segmentation\+Strategy\+Multiple}!Image segmentation@{Image segmentation}}
+\subsubsection{\texorpdfstring{create\+Selective\+Search\+Segmentation\+Strategy\+Multiple()}{createSelectiveSearchSegmentationStrategyMultiple()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily static native Selective\+Search\+Segmentation\+Strategy\+Multiple org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Selective\+Search\+Segmentation\+Strategy\+Multiple (\begin{DoxyParamCaption}\item[{@Ptr Selective\+Search\+Segmentation\+Strategy}]{s1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a new multiple strategy and set one subtrategy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s1} & The first strategy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__ximgproc__segmentation_gaf769336116a86e1107367e971033e25b}\label{group__ximgproc__segmentation_gaf769336116a86e1107367e971033e25b}} 
+\index{Image segmentation@{Image segmentation}!create\+Selective\+Search\+Segmentation\+Strategy\+Multiple@{create\+Selective\+Search\+Segmentation\+Strategy\+Multiple}}
+\index{create\+Selective\+Search\+Segmentation\+Strategy\+Multiple@{create\+Selective\+Search\+Segmentation\+Strategy\+Multiple}!Image segmentation@{Image segmentation}}
+\subsubsection{\texorpdfstring{create\+Selective\+Search\+Segmentation\+Strategy\+Multiple()}{createSelectiveSearchSegmentationStrategyMultiple()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily static native Selective\+Search\+Segmentation\+Strategy\+Multiple org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Selective\+Search\+Segmentation\+Strategy\+Multiple (\begin{DoxyParamCaption}\item[{@Ptr Selective\+Search\+Segmentation\+Strategy}]{s1,  }\item[{@Ptr Selective\+Search\+Segmentation\+Strategy}]{s2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a new multiple strategy and set two subtrategies, with equal weights. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s1} & The first strategy \\
+\hline
+{\em s2} & The second strategy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__ximgproc__segmentation_ga83a457ff4067681d6ea93cf51b584b9d}\label{group__ximgproc__segmentation_ga83a457ff4067681d6ea93cf51b584b9d}} 
+\index{Image segmentation@{Image segmentation}!create\+Selective\+Search\+Segmentation\+Strategy\+Multiple@{create\+Selective\+Search\+Segmentation\+Strategy\+Multiple}}
+\index{create\+Selective\+Search\+Segmentation\+Strategy\+Multiple@{create\+Selective\+Search\+Segmentation\+Strategy\+Multiple}!Image segmentation@{Image segmentation}}
+\subsubsection{\texorpdfstring{create\+Selective\+Search\+Segmentation\+Strategy\+Multiple()}{createSelectiveSearchSegmentationStrategyMultiple()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily static native Selective\+Search\+Segmentation\+Strategy\+Multiple org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Selective\+Search\+Segmentation\+Strategy\+Multiple (\begin{DoxyParamCaption}\item[{@Ptr Selective\+Search\+Segmentation\+Strategy}]{s1,  }\item[{@Ptr Selective\+Search\+Segmentation\+Strategy}]{s2,  }\item[{@Ptr Selective\+Search\+Segmentation\+Strategy}]{s3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a new multiple strategy and set three subtrategies, with equal weights. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s1} & The first strategy \\
+\hline
+{\em s2} & The second strategy \\
+\hline
+{\em s3} & The third strategy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__ximgproc__segmentation_ga0c5302ec3882ad988a84158bc91186e1}\label{group__ximgproc__segmentation_ga0c5302ec3882ad988a84158bc91186e1}} 
+\index{Image segmentation@{Image segmentation}!create\+Selective\+Search\+Segmentation\+Strategy\+Multiple@{create\+Selective\+Search\+Segmentation\+Strategy\+Multiple}}
+\index{create\+Selective\+Search\+Segmentation\+Strategy\+Multiple@{create\+Selective\+Search\+Segmentation\+Strategy\+Multiple}!Image segmentation@{Image segmentation}}
+\subsubsection{\texorpdfstring{create\+Selective\+Search\+Segmentation\+Strategy\+Multiple()}{createSelectiveSearchSegmentationStrategyMultiple()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily static native Selective\+Search\+Segmentation\+Strategy\+Multiple org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+create\+Selective\+Search\+Segmentation\+Strategy\+Multiple (\begin{DoxyParamCaption}\item[{@Ptr Selective\+Search\+Segmentation\+Strategy}]{s1,  }\item[{@Ptr Selective\+Search\+Segmentation\+Strategy}]{s2,  }\item[{@Ptr Selective\+Search\+Segmentation\+Strategy}]{s3,  }\item[{@Ptr Selective\+Search\+Segmentation\+Strategy}]{s4 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a new multiple strategy and set four subtrategies, with equal weights. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s1} & The first strategy \\
+\hline
+{\em s2} & The second strategy \\
+\hline
+{\em s3} & The third strategy \\
+\hline
+{\em s4} & The forth strategy \\
+\hline
+\end{DoxyParams}

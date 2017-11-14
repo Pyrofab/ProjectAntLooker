@@ -1,0 +1,207 @@
+\hypertarget{group__dnn}{}\section{Deep Neural Network module}
+\label{group__dnn}\index{Deep Neural Network module@{Deep Neural Network module}}
+
+
+Loads blob which was serialized as torch.\+Tensor object of Torch7 framework.  
+
+
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__dnn_layer_factory}{Utilities for New Layers Registration}
+\begin{DoxyCompactList}\small\item\em Layer factory allows to create instances of registered layers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+Dict\+Value}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+Dict}
+\begin{DoxyCompactList}\small\item\em This class implements name-\/value dictionary, values are instances of Dict\+Value. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+Blob\+Shape}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+Blob}
+\begin{DoxyCompactList}\small\item\em This class provides methods for continuous n-\/dimensional C\+PU and G\+PU array processing. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+Layer\+Params}
+\begin{DoxyCompactList}\small\item\em This class provides all data needed to initialize layer. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+Layer}
+\begin{DoxyCompactList}\small\item\em This interface class allows to build new Layers -\/ are building blocks of networks. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+Net}
+\begin{DoxyCompactList}\small\item\em This class allows to create and manipulate comprehensive artificial neural networks. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+Importer}
+\begin{DoxyCompactList}\small\item\em Small interface class for loading trained serialized models of different dnn-\/frameworks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__dnn_ga4e29f7e6a110c3f5aba11c6c28876dfb}\label{group__dnn_ga4e29f7e6a110c3f5aba11c6c28876dfb}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+init\+Module} ()
+\item 
+static native Importer \hyperlink{group__dnn_ga277fa41c30459c131b646bdb8951d82b}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+create\+Caffe\+Importer} (@Str Byte\+Pointer prototxt, @Str Byte\+Pointer caffe\+Model)
+\begin{DoxyCompactList}\small\item\em Creates the importer of \href{http://caffe.berkeleyvision.org}{\tt Caffe} framework network. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__dnn_gabf5c6728508e1462d422caae5e54717d}\label{group__dnn_gabf5c6728508e1462d422caae5e54717d}} 
+static native Importer {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+create\+Caffe\+Importer} (@Str Byte\+Pointer prototxt)
+\item 
+\mbox{\Hypertarget{group__dnn_gaf52f221cfc0cce4ad89641f976309f7b}\label{group__dnn_gaf52f221cfc0cce4ad89641f976309f7b}} 
+static native Importer {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+create\+Caffe\+Importer} (@Str String prototxt, @Str String caffe\+Model)
+\item 
+\mbox{\Hypertarget{group__dnn_ga1eec0645176b06612e40bcc46be29b00}\label{group__dnn_ga1eec0645176b06612e40bcc46be29b00}} 
+static native Importer {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+create\+Caffe\+Importer} (@Str String prototxt)
+\item 
+static native Net \hyperlink{group__dnn_ga228b1b00210018ec3f301f017a00949f}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+read\+Net\+From\+Caffe} (@Str Byte\+Pointer prototxt, @Str Byte\+Pointer caffe\+Model)
+\begin{DoxyCompactList}\small\item\em Reads a network model stored in Caffe model files. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__dnn_ga70b9f342a4480199f673419e67eadfbf}\label{group__dnn_ga70b9f342a4480199f673419e67eadfbf}} 
+static native Net {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+read\+Net\+From\+Caffe} (@Str Byte\+Pointer prototxt)
+\item 
+\mbox{\Hypertarget{group__dnn_ga27a10c9613593148cc9829d71b9750d4}\label{group__dnn_ga27a10c9613593148cc9829d71b9750d4}} 
+static native Net {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+read\+Net\+From\+Caffe} (@Str String prototxt, @Str String caffe\+Model)
+\item 
+\mbox{\Hypertarget{group__dnn_gad373a5c31881fed711e43dc98f47edf8}\label{group__dnn_gad373a5c31881fed711e43dc98f47edf8}} 
+static native Net {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+read\+Net\+From\+Caffe} (@Str String prototxt)
+\item 
+static native Importer \hyperlink{group__dnn_gafb21a0aa44b3feb934bcd5ad4fc708e3}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+create\+Tensorflow\+Importer} (@Str Byte\+Pointer model)
+\begin{DoxyCompactList}\small\item\em Creates the importer of \href{http://www.tensorflow.org}{\tt Tensor\+Flow} framework network. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__dnn_gaf66d96c7663a28da29f000e0f5ce779e}\label{group__dnn_gaf66d96c7663a28da29f000e0f5ce779e}} 
+static native Importer {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+create\+Tensorflow\+Importer} (@Str String model)
+\item 
+static native Importer \hyperlink{group__dnn_gae0f202e183aadc4ec86abda60b0e6adf}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+create\+Torch\+Importer} (@Str Byte\+Pointer filename, @Cast(\char`\"{}bool\char`\"{}) boolean is\+Binary)
+\begin{DoxyCompactList}\small\item\em Creates the importer of \href{http://torch.ch}{\tt Torch7} framework network. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__dnn_ga65445a91ded9caf02fedcfe28cd4b01f}\label{group__dnn_ga65445a91ded9caf02fedcfe28cd4b01f}} 
+static native Importer {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+create\+Torch\+Importer} (@Str Byte\+Pointer filename)
+\item 
+\mbox{\Hypertarget{group__dnn_ga30d594ccb5ccdbcb60408c0070961654}\label{group__dnn_ga30d594ccb5ccdbcb60408c0070961654}} 
+static native Importer {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+create\+Torch\+Importer} (@Str String filename, @Cast(\char`\"{}bool\char`\"{}) boolean is\+Binary)
+\item 
+\mbox{\Hypertarget{group__dnn_ga7c73f5cf884abee9684c119e0b96b594}\label{group__dnn_ga7c73f5cf884abee9684c119e0b96b594}} 
+static native Importer {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+create\+Torch\+Importer} (@Str String filename)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Loads blob which was serialized as torch.\+Tensor object of Torch7 framework. 
+
+Initialize dnn module and built-\/in layers.
+
+Lightweight class for storing and processing a shape of blob (or anything else).
+
+This struct stores the scalar value (or array) of one of the following type\+: double, cv\+::\+String or int64.
+
+This module contains\+:
+\begin{DoxyItemize}
+\item A\+PI for new layers creation, layers are building bricks of neural networks;
+\item set of built-\/in most-\/useful Layers;
+\item A\+PI to constuct and modify comprehensive neural networks from layers;
+\item functionality for loading serialized networks models from differnet frameworks. 
+\end{DoxyItemize}
+
+Functionality of this module is designed only for forward pass computations (i. e. network testing). A network training is in principle not supported.
+
+\begin{DoxyWarning}{Warning}
+This function has the same limitations as \hyperlink{group__dnn_gae0f202e183aadc4ec86abda60b0e6adf}{create\+Torch\+Importer()}.
+\end{DoxyWarning}
+
+
+/$\ast$$\ast$\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]Maybe int64 is useless because double type exactly stores at least 2$^\wedge$52 integers. \end{DoxyRefDesc}
+
+
+/$\ast$$\ast$
+
+/$\ast$$\ast$ This function automatically called on most of Open\+CV builds, but you need to call it manually on some specific configurations (i\+OS for example). 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__dnn_ga277fa41c30459c131b646bdb8951d82b}\label{group__dnn_ga277fa41c30459c131b646bdb8951d82b}} 
+\index{Deep Neural Network module@{Deep Neural Network module}!create\+Caffe\+Importer@{create\+Caffe\+Importer}}
+\index{create\+Caffe\+Importer@{create\+Caffe\+Importer}!Deep Neural Network module@{Deep Neural Network module}}
+\subsubsection{\texorpdfstring{create\+Caffe\+Importer()}{createCaffeImporter()}}
+{\footnotesize\ttfamily static native Importer org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+create\+Caffe\+Importer (\begin{DoxyParamCaption}\item[{@Str Byte\+Pointer}]{prototxt,  }\item[{@Str Byte\+Pointer}]{caffe\+Model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates the importer of \href{http://caffe.berkeleyvision.org}{\tt Caffe} framework network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prototxt} & path to the .prototxt file with text description of the network architecture. \\
+\hline
+{\em caffe\+Model} & path to the .caffemodel file with learned network. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the created importer, N\+U\+LL in failure cases. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__dnn_gafb21a0aa44b3feb934bcd5ad4fc708e3}\label{group__dnn_gafb21a0aa44b3feb934bcd5ad4fc708e3}} 
+\index{Deep Neural Network module@{Deep Neural Network module}!create\+Tensorflow\+Importer@{create\+Tensorflow\+Importer}}
+\index{create\+Tensorflow\+Importer@{create\+Tensorflow\+Importer}!Deep Neural Network module@{Deep Neural Network module}}
+\subsubsection{\texorpdfstring{create\+Tensorflow\+Importer()}{createTensorflowImporter()}}
+{\footnotesize\ttfamily static native Importer org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+create\+Tensorflow\+Importer (\begin{DoxyParamCaption}\item[{@Str Byte\+Pointer}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates the importer of \href{http://www.tensorflow.org}{\tt Tensor\+Flow} framework network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & path to the .pb file with binary protobuf description of the network architecture. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the created importer, N\+U\+LL in failure cases. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__dnn_gae0f202e183aadc4ec86abda60b0e6adf}\label{group__dnn_gae0f202e183aadc4ec86abda60b0e6adf}} 
+\index{Deep Neural Network module@{Deep Neural Network module}!create\+Torch\+Importer@{create\+Torch\+Importer}}
+\index{create\+Torch\+Importer@{create\+Torch\+Importer}!Deep Neural Network module@{Deep Neural Network module}}
+\subsubsection{\texorpdfstring{create\+Torch\+Importer()}{createTorchImporter()}}
+{\footnotesize\ttfamily static native Importer org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+create\+Torch\+Importer (\begin{DoxyParamCaption}\item[{@Str Byte\+Pointer}]{filename,  }\item[{@Cast(\char`\"{}bool\char`\"{}) boolean}]{is\+Binary }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates the importer of \href{http://torch.ch}{\tt Torch7} framework network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & path to the file, dumped from Torch by using torch.\+save() function. \\
+\hline
+{\em is\+Binary} & specifies whether the network was serialized in ascii mode or binary. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the created importer, N\+U\+LL in failure cases.
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Torch7 importer is experimental now, you need explicitly set C\+Make
+\begin{DoxyCode}
+opencv\_dnn\_BUILD\_TORCH\_IMPORTER 
+\end{DoxyCode}
+ flag to compile its.
+\end{DoxyWarning}
+\begin{DoxyNote}{Note}
+Ascii mode of Torch serializer is more preferable, because binary mode extensively use
+\begin{DoxyCode}
+\textcolor{keywordtype}{long} 
+\end{DoxyCode}
+ type of C language, which has various bit-\/length on different systems.
+\end{DoxyNote}
+The loading file must contain serialized \href{https://github.com/torch/nn/blob/master/doc/module.md}{\tt nn.\+Module} object with importing network. Try to eliminate a custom objects from serialazing data to avoid importing errors.
+
+List of supported layers (i.\+e. object instances derived from Torch nn.\+Module class)\+:
+\begin{DoxyItemize}
+\item nn.\+Sequential
+\item nn.\+Parallel
+\item nn.\+Concat
+\item nn.\+Linear
+\item nn.\+Spatial\+Convolution
+\item nn.\+Spatial\+Max\+Pooling, nn.\+Spatial\+Average\+Pooling
+\item nn.\+Re\+LU, nn.\+TanH, nn.\+Sigmoid
+\item nn.\+Reshape
+\end{DoxyItemize}
+
+Also some equivalents of these classes from cunn, cudnn, and fbcunn may be successfully imported. \mbox{\Hypertarget{group__dnn_ga228b1b00210018ec3f301f017a00949f}\label{group__dnn_ga228b1b00210018ec3f301f017a00949f}} 
+\index{Deep Neural Network module@{Deep Neural Network module}!read\+Net\+From\+Caffe@{read\+Net\+From\+Caffe}}
+\index{read\+Net\+From\+Caffe@{read\+Net\+From\+Caffe}!Deep Neural Network module@{Deep Neural Network module}}
+\subsubsection{\texorpdfstring{read\+Net\+From\+Caffe()}{readNetFromCaffe()}}
+{\footnotesize\ttfamily static native Net org.\+bytedeco.\+javacpp.\+opencv\+\_\+dnn.\+read\+Net\+From\+Caffe (\begin{DoxyParamCaption}\item[{@Str Byte\+Pointer}]{prototxt,  }\item[{@Str Byte\+Pointer}]{caffe\+Model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Reads a network model stored in Caffe model files. 
+
+This is shortcut consisting from create\+Caffe\+Importer and Net\+::populate\+Net calls. 

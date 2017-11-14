@@ -1,0 +1,281 @@
+\hypertarget{group__photo__hdr}{}\section{H\+DR imaging}
+\label{group__photo__hdr}\index{H\+D\+R imaging@{H\+D\+R imaging}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+Tonemap}
+\begin{DoxyCompactList}\small\item\em Base class for tonemapping algorithms -\/ tools that are used to map H\+DR image to 8-\/bit range. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+Tonemap\+Drago}
+\begin{DoxyCompactList}\small\item\em Adaptive logarithmic mapping is a fast global tonemapping algorithm that scales the image in logarithmic domain. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+Tonemap\+Durand}
+\begin{DoxyCompactList}\small\item\em This algorithm decomposes image into two layers\+: base layer and detail layer using bilateral filter and compresses contrast of the base layer thus preserving all the details. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+Tonemap\+Reinhard}
+\begin{DoxyCompactList}\small\item\em This is a global tonemapping operator that models human visual system. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+Tonemap\+Mantiuk}
+\begin{DoxyCompactList}\small\item\em This algorithm transforms image to contrast using gradients on all levels of gaussian pyramid, transforms contrast values to H\+VS response and scales the response. After this the image is reconstructed from new contrast values. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+Align\+Exposures}
+\begin{DoxyCompactList}\small\item\em The base class for algorithms that align images of the same scene with different exposures. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+Align\+M\+TB}
+\begin{DoxyCompactList}\small\item\em This algorithm converts images to median threshold bitmaps (1 for pixels brighter than median luminance and 0 otherwise) and than aligns the resulting bitmaps using bit operations. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+Calibrate\+C\+RF}
+\begin{DoxyCompactList}\small\item\em The base class for camera response calibration algorithms. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+Calibrate\+Debevec}
+\begin{DoxyCompactList}\small\item\em Inverse camera response function is extracted for each brightness value by minimizing an objective function as linear system. Objective function is constructed using pixel values on the same position in all images, extra term is added to make the result smoother. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+Calibrate\+Robertson}
+\begin{DoxyCompactList}\small\item\em Inverse camera response function is extracted for each brightness value by minimizing an objective function as linear system. This algorithm uses all image pixels. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+Merge\+Exposures}
+\begin{DoxyCompactList}\small\item\em The base class algorithms that can merge exposure sequence to a single image. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+Merge\+Debevec}
+\begin{DoxyCompactList}\small\item\em The resulting H\+DR image is calculated as weighted average of the exposures considering exposure values and camera response. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+Merge\+Mertens}
+\begin{DoxyCompactList}\small\item\em Pixels are weighted using contrast, saturation and well-\/exposedness measures, than images are combined using laplacian pyramids. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+Merge\+Robertson}
+\begin{DoxyCompactList}\small\item\em The resulting H\+DR image is calculated as weighted average of the exposures considering exposure values and camera response. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static native Tonemap \hyperlink{group__photo__hdr_gafe2ea9dc47d0ec1d3a5ec361ab19de32}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Tonemap} (float gamma)
+\begin{DoxyCompactList}\small\item\em Creates simple linear mapper with gamma correction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__photo__hdr_ga44865a523459a4a68bc338e73682f382}\label{group__photo__hdr_ga44865a523459a4a68bc338e73682f382}} 
+static native Tonemap {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Tonemap} ()
+\item 
+static native Tonemap\+Drago \hyperlink{group__photo__hdr_ga1850aec7f1cd1ea1bde49da2093275cd}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Tonemap\+Drago} (float gamma, float saturation, float bias)
+\begin{DoxyCompactList}\small\item\em Creates Tonemap\+Drago object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__photo__hdr_ga96cb07c9dca4e434c223a104ecd3f532}\label{group__photo__hdr_ga96cb07c9dca4e434c223a104ecd3f532}} 
+static native Tonemap\+Drago {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Tonemap\+Drago} ()
+\item 
+static native Tonemap\+Durand \hyperlink{group__photo__hdr_ga797e4fa1a099e588d6ec45b1c87a772a}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Tonemap\+Durand} (float gamma, float contrast, float saturation, float sigma\+\_\+space, float sigma\+\_\+color)
+\begin{DoxyCompactList}\small\item\em Creates Tonemap\+Durand object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__photo__hdr_ga4d57eb69aeb9cd88588e55340e9a0be4}\label{group__photo__hdr_ga4d57eb69aeb9cd88588e55340e9a0be4}} 
+static native Tonemap\+Durand {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Tonemap\+Durand} ()
+\item 
+static native Tonemap\+Reinhard \hyperlink{group__photo__hdr_gaa8a5689f2ff5c92529865de652f8cfba}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Tonemap\+Reinhard} (float gamma, float intensity, float light\+\_\+adapt, float color\+\_\+adapt)
+\begin{DoxyCompactList}\small\item\em Creates Tonemap\+Reinhard object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__photo__hdr_ga2edacee07ac714e48dd0cbe0fffd3ea0}\label{group__photo__hdr_ga2edacee07ac714e48dd0cbe0fffd3ea0}} 
+static native Tonemap\+Reinhard {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Tonemap\+Reinhard} ()
+\item 
+static native Tonemap\+Mantiuk \hyperlink{group__photo__hdr_ga26b6108696f057aeaf49b8d9a454da00}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Tonemap\+Mantiuk} (float gamma, float scale, float saturation)
+\begin{DoxyCompactList}\small\item\em Creates Tonemap\+Mantiuk object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__photo__hdr_ga8b6c37ae8aa9c20f35129b6a6e54f478}\label{group__photo__hdr_ga8b6c37ae8aa9c20f35129b6a6e54f478}} 
+static native Tonemap\+Mantiuk {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Tonemap\+Mantiuk} ()
+\item 
+static native Align\+M\+TB \hyperlink{group__photo__hdr_ga07eeedb34057b6d4d7c8679fda18175f}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Align\+M\+TB} (int max\+\_\+bits, int exclude\+\_\+range, @Cast(\char`\"{}bool\char`\"{}) boolean cut)
+\begin{DoxyCompactList}\small\item\em Creates Align\+M\+TB object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__photo__hdr_ga69c6d45c346c9bdc274c1ed58bc07743}\label{group__photo__hdr_ga69c6d45c346c9bdc274c1ed58bc07743}} 
+static native Align\+M\+TB {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Align\+M\+TB} ()
+\item 
+static native Calibrate\+Debevec \hyperlink{group__photo__hdr_gada8b25f072e80141d53f66754675dbec}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Calibrate\+Debevec} (int samples, float lambda, @Cast(\char`\"{}bool\char`\"{}) boolean random)
+\begin{DoxyCompactList}\small\item\em Creates Calibrate\+Debevec object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__photo__hdr_ga3b370075247e9bd2f724b316ad9970f3}\label{group__photo__hdr_ga3b370075247e9bd2f724b316ad9970f3}} 
+static native Calibrate\+Debevec {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Calibrate\+Debevec} ()
+\item 
+static native Calibrate\+Robertson \hyperlink{group__photo__hdr_ga1ac32f0f1042b3436bd7daf88bb48760}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Calibrate\+Robertson} (int max\+\_\+iter, float threshold)
+\begin{DoxyCompactList}\small\item\em Creates Calibrate\+Robertson object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__photo__hdr_ga3032d7fe6e15a35aa4722340e887ca17}\label{group__photo__hdr_ga3032d7fe6e15a35aa4722340e887ca17}} 
+static native Calibrate\+Robertson {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Calibrate\+Robertson} ()
+\item 
+\mbox{\Hypertarget{group__photo__hdr_ga90dac3606f6344e591968df25cd8ace6}\label{group__photo__hdr_ga90dac3606f6344e591968df25cd8ace6}} 
+static native Merge\+Debevec \hyperlink{group__photo__hdr_ga90dac3606f6344e591968df25cd8ace6}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Merge\+Debevec} ()
+\begin{DoxyCompactList}\small\item\em Creates Merge\+Debevec object. \end{DoxyCompactList}\item 
+static native Merge\+Mertens \hyperlink{group__photo__hdr_ga7f47cc9c6b5e72f9fbf7281271dfc426}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Merge\+Mertens} (float contrast\+\_\+weight, float saturation\+\_\+weight, float exposure\+\_\+weight)
+\begin{DoxyCompactList}\small\item\em Creates Merge\+Mertens object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__photo__hdr_ga30b2c33f0028b54182b84964d6258390}\label{group__photo__hdr_ga30b2c33f0028b54182b84964d6258390}} 
+static native Merge\+Mertens {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Merge\+Mertens} ()
+\item 
+\mbox{\Hypertarget{group__photo__hdr_ga658fdc1c45f60d70951e9364b7a974ae}\label{group__photo__hdr_ga658fdc1c45f60d70951e9364b7a974ae}} 
+static native Merge\+Robertson \hyperlink{group__photo__hdr_ga658fdc1c45f60d70951e9364b7a974ae}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Merge\+Robertson} ()
+\begin{DoxyCompactList}\small\item\em Creates Merge\+Robertson object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{group__photo__hdr_ga98c440e0fd8daec10e153e462ade0b28}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+L\+D\+R\+\_\+\+S\+I\+ZE} = 256
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This section describes high dynamic range imaging algorithms namely tonemapping, exposure alignment, camera calibration with multiple exposures and exposure fusion. 
+
+photo\+\_\+denoise 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__photo__hdr_ga07eeedb34057b6d4d7c8679fda18175f}\label{group__photo__hdr_ga07eeedb34057b6d4d7c8679fda18175f}} 
+\index{H\+D\+R imaging@{H\+D\+R imaging}!create\+Align\+M\+TB@{create\+Align\+M\+TB}}
+\index{create\+Align\+M\+TB@{create\+Align\+M\+TB}!H\+D\+R imaging@{H\+D\+R imaging}}
+\subsubsection{\texorpdfstring{create\+Align\+M\+T\+B()}{createAlignMTB()}}
+{\footnotesize\ttfamily static native Align\+M\+TB org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Align\+M\+TB (\begin{DoxyParamCaption}\item[{int}]{max\+\_\+bits,  }\item[{int}]{exclude\+\_\+range,  }\item[{@Cast(\char`\"{}bool\char`\"{}) boolean}]{cut }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates Align\+M\+TB object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+\_\+bits} & logarithm to the base 2 of maximal shift in each dimension. Values of 5 and 6 are usually good enough (31 and 63 pixels shift respectively). \\
+\hline
+{\em exclude\+\_\+range} & range for exclusion bitmap that is constructed to suppress noise around the median value. \\
+\hline
+{\em cut} & if true cuts images, otherwise fills the new regions with zeros. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__photo__hdr_gada8b25f072e80141d53f66754675dbec}\label{group__photo__hdr_gada8b25f072e80141d53f66754675dbec}} 
+\index{H\+D\+R imaging@{H\+D\+R imaging}!create\+Calibrate\+Debevec@{create\+Calibrate\+Debevec}}
+\index{create\+Calibrate\+Debevec@{create\+Calibrate\+Debevec}!H\+D\+R imaging@{H\+D\+R imaging}}
+\subsubsection{\texorpdfstring{create\+Calibrate\+Debevec()}{createCalibrateDebevec()}}
+{\footnotesize\ttfamily static native Calibrate\+Debevec org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Calibrate\+Debevec (\begin{DoxyParamCaption}\item[{int}]{samples,  }\item[{float}]{lambda,  }\item[{@Cast(\char`\"{}bool\char`\"{}) boolean}]{random }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates Calibrate\+Debevec object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em samples} & number of pixel locations to use \\
+\hline
+{\em lambda} & smoothness term weight. Greater values produce smoother results, but can alter the response. \\
+\hline
+{\em random} & if true sample pixel locations are chosen at random, otherwise the form a rectangular grid. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__photo__hdr_ga1ac32f0f1042b3436bd7daf88bb48760}\label{group__photo__hdr_ga1ac32f0f1042b3436bd7daf88bb48760}} 
+\index{H\+D\+R imaging@{H\+D\+R imaging}!create\+Calibrate\+Robertson@{create\+Calibrate\+Robertson}}
+\index{create\+Calibrate\+Robertson@{create\+Calibrate\+Robertson}!H\+D\+R imaging@{H\+D\+R imaging}}
+\subsubsection{\texorpdfstring{create\+Calibrate\+Robertson()}{createCalibrateRobertson()}}
+{\footnotesize\ttfamily static native Calibrate\+Robertson org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Calibrate\+Robertson (\begin{DoxyParamCaption}\item[{int}]{max\+\_\+iter,  }\item[{float}]{threshold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates Calibrate\+Robertson object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+\_\+iter} & maximal number of Gauss-\/\+Seidel solver iterations. \\
+\hline
+{\em threshold} & target difference between results of two successive steps of the minimization. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__photo__hdr_ga7f47cc9c6b5e72f9fbf7281271dfc426}\label{group__photo__hdr_ga7f47cc9c6b5e72f9fbf7281271dfc426}} 
+\index{H\+D\+R imaging@{H\+D\+R imaging}!create\+Merge\+Mertens@{create\+Merge\+Mertens}}
+\index{create\+Merge\+Mertens@{create\+Merge\+Mertens}!H\+D\+R imaging@{H\+D\+R imaging}}
+\subsubsection{\texorpdfstring{create\+Merge\+Mertens()}{createMergeMertens()}}
+{\footnotesize\ttfamily static native Merge\+Mertens org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Merge\+Mertens (\begin{DoxyParamCaption}\item[{float}]{contrast\+\_\+weight,  }\item[{float}]{saturation\+\_\+weight,  }\item[{float}]{exposure\+\_\+weight }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates Merge\+Mertens object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contrast\+\_\+weight} & contrast measure weight. See Merge\+Mertens. \\
+\hline
+{\em saturation\+\_\+weight} & saturation measure weight \\
+\hline
+{\em exposure\+\_\+weight} & well-\/exposedness measure weight \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__photo__hdr_gafe2ea9dc47d0ec1d3a5ec361ab19de32}\label{group__photo__hdr_gafe2ea9dc47d0ec1d3a5ec361ab19de32}} 
+\index{H\+D\+R imaging@{H\+D\+R imaging}!create\+Tonemap@{create\+Tonemap}}
+\index{create\+Tonemap@{create\+Tonemap}!H\+D\+R imaging@{H\+D\+R imaging}}
+\subsubsection{\texorpdfstring{create\+Tonemap()}{createTonemap()}}
+{\footnotesize\ttfamily static native Tonemap org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Tonemap (\begin{DoxyParamCaption}\item[{float}]{gamma }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates simple linear mapper with gamma correction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gamma} & positive value for gamma correction. Gamma value of 1.\+0 implies no correction, gamma equal to 2.\+2f is suitable for most displays. Generally gamma $>$ 1 brightens the image and gamma $<$ 1 darkens it. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__photo__hdr_ga1850aec7f1cd1ea1bde49da2093275cd}\label{group__photo__hdr_ga1850aec7f1cd1ea1bde49da2093275cd}} 
+\index{H\+D\+R imaging@{H\+D\+R imaging}!create\+Tonemap\+Drago@{create\+Tonemap\+Drago}}
+\index{create\+Tonemap\+Drago@{create\+Tonemap\+Drago}!H\+D\+R imaging@{H\+D\+R imaging}}
+\subsubsection{\texorpdfstring{create\+Tonemap\+Drago()}{createTonemapDrago()}}
+{\footnotesize\ttfamily static native Tonemap\+Drago org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Tonemap\+Drago (\begin{DoxyParamCaption}\item[{float}]{gamma,  }\item[{float}]{saturation,  }\item[{float}]{bias }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates Tonemap\+Drago object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gamma} & gamma value for gamma correction. See create\+Tonemap \\
+\hline
+{\em saturation} & positive saturation enhancement value. 1.\+0 preserves saturation, values greater than 1 increase saturation and values less than 1 decrease it. \\
+\hline
+{\em bias} & value for bias function in \mbox{[}0, 1\mbox{]} range. Values from 0.\+7 to 0.\+9 usually give best results, default value is 0.\+85. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__photo__hdr_ga797e4fa1a099e588d6ec45b1c87a772a}\label{group__photo__hdr_ga797e4fa1a099e588d6ec45b1c87a772a}} 
+\index{H\+D\+R imaging@{H\+D\+R imaging}!create\+Tonemap\+Durand@{create\+Tonemap\+Durand}}
+\index{create\+Tonemap\+Durand@{create\+Tonemap\+Durand}!H\+D\+R imaging@{H\+D\+R imaging}}
+\subsubsection{\texorpdfstring{create\+Tonemap\+Durand()}{createTonemapDurand()}}
+{\footnotesize\ttfamily static native Tonemap\+Durand org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Tonemap\+Durand (\begin{DoxyParamCaption}\item[{float}]{gamma,  }\item[{float}]{contrast,  }\item[{float}]{saturation,  }\item[{float}]{sigma\+\_\+space,  }\item[{float}]{sigma\+\_\+color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates Tonemap\+Durand object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gamma} & gamma value for gamma correction. See create\+Tonemap \\
+\hline
+{\em contrast} & resulting contrast on logarithmic scale, i. e. log(max / min), where max and min are maximum and minimum luminance values of the resulting image. \\
+\hline
+{\em saturation} & saturation enhancement value. See create\+Tonemap\+Drago \\
+\hline
+{\em sigma\+\_\+space} & bilateral filter sigma in color space \\
+\hline
+{\em sigma\+\_\+color} & bilateral filter sigma in coordinate space \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__photo__hdr_ga26b6108696f057aeaf49b8d9a454da00}\label{group__photo__hdr_ga26b6108696f057aeaf49b8d9a454da00}} 
+\index{H\+D\+R imaging@{H\+D\+R imaging}!create\+Tonemap\+Mantiuk@{create\+Tonemap\+Mantiuk}}
+\index{create\+Tonemap\+Mantiuk@{create\+Tonemap\+Mantiuk}!H\+D\+R imaging@{H\+D\+R imaging}}
+\subsubsection{\texorpdfstring{create\+Tonemap\+Mantiuk()}{createTonemapMantiuk()}}
+{\footnotesize\ttfamily static native Tonemap\+Mantiuk org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Tonemap\+Mantiuk (\begin{DoxyParamCaption}\item[{float}]{gamma,  }\item[{float}]{scale,  }\item[{float}]{saturation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates Tonemap\+Mantiuk object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gamma} & gamma value for gamma correction. See create\+Tonemap \\
+\hline
+{\em scale} & contrast scale factor. H\+VS response is multiplied by this parameter, thus compressing dynamic range. Values from 0.\+6 to 0.\+9 produce best results. \\
+\hline
+{\em saturation} & saturation enhancement value. See create\+Tonemap\+Drago \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__photo__hdr_gaa8a5689f2ff5c92529865de652f8cfba}\label{group__photo__hdr_gaa8a5689f2ff5c92529865de652f8cfba}} 
+\index{H\+D\+R imaging@{H\+D\+R imaging}!create\+Tonemap\+Reinhard@{create\+Tonemap\+Reinhard}}
+\index{create\+Tonemap\+Reinhard@{create\+Tonemap\+Reinhard}!H\+D\+R imaging@{H\+D\+R imaging}}
+\subsubsection{\texorpdfstring{create\+Tonemap\+Reinhard()}{createTonemapReinhard()}}
+{\footnotesize\ttfamily static native Tonemap\+Reinhard org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Tonemap\+Reinhard (\begin{DoxyParamCaption}\item[{float}]{gamma,  }\item[{float}]{intensity,  }\item[{float}]{light\+\_\+adapt,  }\item[{float}]{color\+\_\+adapt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates Tonemap\+Reinhard object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gamma} & gamma value for gamma correction. See create\+Tonemap \\
+\hline
+{\em intensity} & result intensity in \mbox{[}-\/8, 8\mbox{]} range. Greater intensity produces brighter results. \\
+\hline
+{\em light\+\_\+adapt} & light adaptation in \mbox{[}0, 1\mbox{]} range. If 1 adaptation is based only on pixel value, if 0 it\textquotesingle{}s global, otherwise it\textquotesingle{}s a weighted mean of this two cases. \\
+\hline
+{\em color\+\_\+adapt} & chromatic adaptation in \mbox{[}0, 1\mbox{]} range. If 1 channels are treated independently, if 0 adaptation level is the same for each channel. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__photo__hdr_ga98c440e0fd8daec10e153e462ade0b28}\label{group__photo__hdr_ga98c440e0fd8daec10e153e462ade0b28}} 
+\index{H\+D\+R imaging@{H\+D\+R imaging}!L\+D\+R\+\_\+\+S\+I\+ZE@{L\+D\+R\+\_\+\+S\+I\+ZE}}
+\index{L\+D\+R\+\_\+\+S\+I\+ZE@{L\+D\+R\+\_\+\+S\+I\+ZE}!H\+D\+R imaging@{H\+D\+R imaging}}
+\subsubsection{\texorpdfstring{L\+D\+R\+\_\+\+S\+I\+ZE}{LDR\_SIZE}}
+{\footnotesize\ttfamily final int org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+L\+D\+R\+\_\+\+S\+I\+ZE = 256\hspace{0.3cm}{\ttfamily [static]}}
+
+enum cv\+:\+: 

@@ -1,0 +1,77 @@
+\hypertarget{group__video__motion}{}\section{Motion Analysis}
+\label{group__video__motion}\index{Motion Analysis@{Motion Analysis}}
+
+
+Base class for background/foreground segmentation. \+:  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+video.\+Background\+Subtractor}
+\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+video.\+Background\+Subtractor\+M\+O\+G2}
+\begin{DoxyCompactList}\small\item\em Gaussian Mixture-\/based Background/\+Foreground Segmentation Algorithm. \end{DoxyCompactList}\item 
+class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+video.\+Background\+Subtractor\+K\+NN}
+\begin{DoxyCompactList}\small\item\em K-\/nearest neigbours -\/ based Background/\+Foreground Segmentation Algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static native Background\+Subtractor\+M\+O\+G2 \hyperlink{group__video__motion_ga0820edc51bf6a34fb6ec60e0bfa47770}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+video.\+create\+Background\+Subtractor\+M\+O\+G2} (int history, double var\+Threshold, @Cast(\char`\"{}bool\char`\"{}) boolean detect\+Shadows)
+\begin{DoxyCompactList}\small\item\em Creates M\+O\+G2 Background Subtractor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__video__motion_ga3a794e8bb9a9b6b8a80034a89e0f9f91}\label{group__video__motion_ga3a794e8bb9a9b6b8a80034a89e0f9f91}} 
+static native Background\+Subtractor\+M\+O\+G2 {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+video.\+create\+Background\+Subtractor\+M\+O\+G2} ()
+\item 
+static native Background\+Subtractor\+K\+NN \hyperlink{group__video__motion_ga1376788db4935dd8798d7e087e7697c9}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+video.\+create\+Background\+Subtractor\+K\+NN} (int history, double dist2\+Threshold, @Cast(\char`\"{}bool\char`\"{}) boolean detect\+Shadows)
+\begin{DoxyCompactList}\small\item\em Creates K\+NN Background Subtractor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__video__motion_ga93bb58271300dd9a4746f8a89fdd0eae}\label{group__video__motion_ga93bb58271300dd9a4746f8a89fdd0eae}} 
+static native Background\+Subtractor\+K\+NN {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+video.\+create\+Background\+Subtractor\+K\+NN} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for background/foreground segmentation. \+: 
+
+/$\ast$$\ast$
+
+The class is only used to define the common interface for the whole family of background/foreground segmentation algorithms. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__video__motion_ga1376788db4935dd8798d7e087e7697c9}\label{group__video__motion_ga1376788db4935dd8798d7e087e7697c9}} 
+\index{Motion Analysis@{Motion Analysis}!create\+Background\+Subtractor\+K\+NN@{create\+Background\+Subtractor\+K\+NN}}
+\index{create\+Background\+Subtractor\+K\+NN@{create\+Background\+Subtractor\+K\+NN}!Motion Analysis@{Motion Analysis}}
+\subsubsection{\texorpdfstring{create\+Background\+Subtractor\+K\+N\+N()}{createBackgroundSubtractorKNN()}}
+{\footnotesize\ttfamily static native Background\+Subtractor\+K\+NN org.\+bytedeco.\+javacpp.\+opencv\+\_\+video.\+create\+Background\+Subtractor\+K\+NN (\begin{DoxyParamCaption}\item[{int}]{history,  }\item[{double}]{dist2\+Threshold,  }\item[{@Cast(\char`\"{}bool\char`\"{}) boolean}]{detect\+Shadows }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates K\+NN Background Subtractor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em history} & Length of the history. \\
+\hline
+{\em dist2\+Threshold} & Threshold on the squared distance between the pixel and the sample to decide whether a pixel is close to that sample. This parameter does not affect the background update. \\
+\hline
+{\em detect\+Shadows} & If true, the algorithm will detect shadows and mark them. It decreases the speed a bit, so if you do not need this feature, set the parameter to false. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__video__motion_ga0820edc51bf6a34fb6ec60e0bfa47770}\label{group__video__motion_ga0820edc51bf6a34fb6ec60e0bfa47770}} 
+\index{Motion Analysis@{Motion Analysis}!create\+Background\+Subtractor\+M\+O\+G2@{create\+Background\+Subtractor\+M\+O\+G2}}
+\index{create\+Background\+Subtractor\+M\+O\+G2@{create\+Background\+Subtractor\+M\+O\+G2}!Motion Analysis@{Motion Analysis}}
+\subsubsection{\texorpdfstring{create\+Background\+Subtractor\+M\+O\+G2()}{createBackgroundSubtractorMOG2()}}
+{\footnotesize\ttfamily static native Background\+Subtractor\+M\+O\+G2 org.\+bytedeco.\+javacpp.\+opencv\+\_\+video.\+create\+Background\+Subtractor\+M\+O\+G2 (\begin{DoxyParamCaption}\item[{int}]{history,  }\item[{double}]{var\+Threshold,  }\item[{@Cast(\char`\"{}bool\char`\"{}) boolean}]{detect\+Shadows }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates M\+O\+G2 Background Subtractor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em history} & Length of the history. \\
+\hline
+{\em var\+Threshold} & Threshold on the squared Mahalanobis distance between the pixel and the model to decide whether a pixel is well described by the background model. This parameter does not affect the background update. \\
+\hline
+{\em detect\+Shadows} & If true, the algorithm will detect shadows and mark them. It decreases the speed a bit, so if you do not need this feature, set the parameter to false. \\
+\hline
+\end{DoxyParams}

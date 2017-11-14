@@ -1,0 +1,489 @@
+\hypertarget{group__calib3d__fisheye}{}\section{Fisheye camera model}
+\label{group__calib3d__fisheye}\index{Fisheye camera model@{Fisheye camera model}}
+
+
+The methods in this namespace use a so-\/called fisheye camera model.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static native void \hyperlink{group__calib3d__fisheye_gaf2fa76c626de207fce922dd3c2a1defc}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+project\+Points} (@By\+Val Mat object\+Points, @By\+Val Mat image\+Points, @Const @By\+Ref Mat affine, @By\+Val Mat K, @By\+Val Mat D, double alpha, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat jacobian)
+\begin{DoxyCompactList}\small\item\em Projects points using fisheye model. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_ga23a1520c1b703c9b3f1e381781429455}\label{group__calib3d__fisheye_ga23a1520c1b703c9b3f1e381781429455}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+project\+Points} (@By\+Val Mat object\+Points, @By\+Val Mat image\+Points, @Const @By\+Ref Mat affine, @By\+Val Mat K, @By\+Val Mat D)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_ga7fc6fb8c74bd9d74cf1f85c0ed19c814}\label{group__calib3d__fisheye_ga7fc6fb8c74bd9d74cf1f85c0ed19c814}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+project\+Points} (@By\+Val U\+Mat object\+Points, @By\+Val U\+Mat image\+Points, @Const @By\+Ref Mat affine, @By\+Val U\+Mat K, @By\+Val U\+Mat D, double alpha, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat jacobian)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_ga7829e2860577899584d09dd0bbd5f0cb}\label{group__calib3d__fisheye_ga7829e2860577899584d09dd0bbd5f0cb}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+project\+Points} (@By\+Val U\+Mat object\+Points, @By\+Val U\+Mat image\+Points, @Const @By\+Ref Mat affine, @By\+Val U\+Mat K, @By\+Val U\+Mat D)
+\item 
+static native void \hyperlink{group__calib3d__fisheye_ga01c2fc60a861f2b9972e00c4837a315b}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+project\+Points} (@By\+Val Mat object\+Points, @By\+Val Mat image\+Points, @By\+Val Mat rvec, @By\+Val Mat tvec, @By\+Val Mat K, @By\+Val Mat D, double alpha, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat jacobian)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_ga13b6302da2b2d24dc94b24389713184c}\label{group__calib3d__fisheye_ga13b6302da2b2d24dc94b24389713184c}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+project\+Points} (@By\+Val U\+Mat object\+Points, @By\+Val U\+Mat image\+Points, @By\+Val U\+Mat rvec, @By\+Val U\+Mat tvec, @By\+Val U\+Mat K, @By\+Val U\+Mat D, double alpha, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat jacobian)
+\item 
+static native void \hyperlink{group__calib3d__fisheye_gacc047f2a04ea647d5dd504de5b1b6ba3}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+distort\+Points} (@By\+Val Mat undistorted, @By\+Val Mat distorted, @By\+Val Mat K, @By\+Val Mat D, double alpha)
+\begin{DoxyCompactList}\small\item\em Distorts 2D points using fisheye model. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_gad7e705b87f415a7b398c49e6635eb16a}\label{group__calib3d__fisheye_gad7e705b87f415a7b398c49e6635eb16a}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+distort\+Points} (@By\+Val Mat undistorted, @By\+Val Mat distorted, @By\+Val Mat K, @By\+Val Mat D)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_ga845171fc7a5f1c5c22cfd5437ba0cd55}\label{group__calib3d__fisheye_ga845171fc7a5f1c5c22cfd5437ba0cd55}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+distort\+Points} (@By\+Val U\+Mat undistorted, @By\+Val U\+Mat distorted, @By\+Val U\+Mat K, @By\+Val U\+Mat D, double alpha)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_gafad17109cef0f995e133e857b7f2cf72}\label{group__calib3d__fisheye_gafad17109cef0f995e133e857b7f2cf72}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+distort\+Points} (@By\+Val U\+Mat undistorted, @By\+Val U\+Mat distorted, @By\+Val U\+Mat K, @By\+Val U\+Mat D)
+\item 
+static native void \hyperlink{group__calib3d__fisheye_ga76244e0842b37e17c2b00ef9a015b99a}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+undistort\+Points} (@By\+Val Mat distorted, @By\+Val Mat undistorted, @By\+Val Mat K, @By\+Val Mat D, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) Mat R, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) Mat P)
+\begin{DoxyCompactList}\small\item\em Undistorts 2D points using fisheye model. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_gaf0a3429dfe018112cdfdfab474c29417}\label{group__calib3d__fisheye_gaf0a3429dfe018112cdfdfab474c29417}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+undistort\+Points} (@By\+Val Mat distorted, @By\+Val Mat undistorted, @By\+Val Mat K, @By\+Val Mat D)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_gaa1a38134348569ab45bfd63d795163df}\label{group__calib3d__fisheye_gaa1a38134348569ab45bfd63d795163df}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+undistort\+Points} (@By\+Val U\+Mat distorted, @By\+Val U\+Mat undistorted, @By\+Val U\+Mat K, @By\+Val U\+Mat D, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat R, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat P)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_ga8a787c4be1efcd0d4baf49bce7a99ee9}\label{group__calib3d__fisheye_ga8a787c4be1efcd0d4baf49bce7a99ee9}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+undistort\+Points} (@By\+Val U\+Mat distorted, @By\+Val U\+Mat undistorted, @By\+Val U\+Mat K, @By\+Val U\+Mat D)
+\item 
+static native void \hyperlink{group__calib3d__fisheye_ga507f430243a293690d2c405dec6a0e82}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+init\+Undistort\+Rectify\+Map} (@By\+Val Mat K, @By\+Val Mat D, @By\+Val Mat R, @By\+Val Mat P, @Const @By\+Ref Size size, int m1type, @By\+Val Mat map1, @By\+Val Mat map2)
+\begin{DoxyCompactList}\small\item\em Computes undistortion and rectification maps for image transform by cv\+::remap(). If D is empty zero distortion is used, if R or P is empty identity matrixes are used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_ga2f280f2b2cd4e8250fb0d58fc48491b7}\label{group__calib3d__fisheye_ga2f280f2b2cd4e8250fb0d58fc48491b7}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+init\+Undistort\+Rectify\+Map} (@By\+Val U\+Mat K, @By\+Val U\+Mat D, @By\+Val U\+Mat R, @By\+Val U\+Mat P, @Const @By\+Ref Size size, int m1type, @By\+Val U\+Mat map1, @By\+Val U\+Mat map2)
+\item 
+static native void \hyperlink{group__calib3d__fisheye_gaf721f1f961fe6feedb9ff6a1fc1b169d}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+undistort\+Image} (@By\+Val Mat distorted, @By\+Val Mat undistorted, @By\+Val Mat K, @By\+Val Mat D, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) Mat Knew, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size new\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Transforms an image to compensate for fisheye lens distortion. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_ga76e03bba1fd19620bd1df63ab66a91ef}\label{group__calib3d__fisheye_ga76e03bba1fd19620bd1df63ab66a91ef}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+undistort\+Image} (@By\+Val Mat distorted, @By\+Val Mat undistorted, @By\+Val Mat K, @By\+Val Mat D)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_gaef1c1b4181ae62ec0c0b7861cb857d4f}\label{group__calib3d__fisheye_gaef1c1b4181ae62ec0c0b7861cb857d4f}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+undistort\+Image} (@By\+Val U\+Mat distorted, @By\+Val U\+Mat undistorted, @By\+Val U\+Mat K, @By\+Val U\+Mat D, @By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat Knew, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size new\+\_\+size)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_ga7846c1dcc6c5f8a7ef342de69c7855f2}\label{group__calib3d__fisheye_ga7846c1dcc6c5f8a7ef342de69c7855f2}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+undistort\+Image} (@By\+Val U\+Mat distorted, @By\+Val U\+Mat undistorted, @By\+Val U\+Mat K, @By\+Val U\+Mat D)
+\item 
+static native void \hyperlink{group__calib3d__fisheye_ga0ec51dc3cf450ad76b96b9b719237f2b}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+estimate\+New\+Camera\+Matrix\+For\+Undistort\+Rectify} (@By\+Val Mat K, @By\+Val Mat D, @Const @By\+Ref Size image\+\_\+size, @By\+Val Mat R, @By\+Val Mat P, double balance, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size new\+\_\+size, double fov\+\_\+scale)
+\begin{DoxyCompactList}\small\item\em Estimates new camera matrix for undistortion or rectification. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_gae32562832d18326d919dbe2cc1586925}\label{group__calib3d__fisheye_gae32562832d18326d919dbe2cc1586925}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+estimate\+New\+Camera\+Matrix\+For\+Undistort\+Rectify} (@By\+Val Mat K, @By\+Val Mat D, @Const @By\+Ref Size image\+\_\+size, @By\+Val Mat R, @By\+Val Mat P)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_ga129b1150235c50d5af49afd3f4a872bc}\label{group__calib3d__fisheye_ga129b1150235c50d5af49afd3f4a872bc}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+estimate\+New\+Camera\+Matrix\+For\+Undistort\+Rectify} (@By\+Val U\+Mat K, @By\+Val U\+Mat D, @Const @By\+Ref Size image\+\_\+size, @By\+Val U\+Mat R, @By\+Val U\+Mat P, double balance, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size new\+\_\+size, double fov\+\_\+scale)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_ga76470923a35ad53154db056fd3fcfbb8}\label{group__calib3d__fisheye_ga76470923a35ad53154db056fd3fcfbb8}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+estimate\+New\+Camera\+Matrix\+For\+Undistort\+Rectify} (@By\+Val U\+Mat K, @By\+Val U\+Mat D, @Const @By\+Ref Size image\+\_\+size, @By\+Val U\+Mat R, @By\+Val U\+Mat P)
+\item 
+static native double \hyperlink{group__calib3d__fisheye_ga4fd78a3672b06b47ba34e82e17824e9d}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+calibrate} (@By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points, @Const @By\+Ref Size image\+\_\+size, @By\+Val Mat K, @By\+Val Mat D, @By\+Val Mat\+Vector rvecs, @By\+Val Mat\+Vector tvecs, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 100, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\begin{DoxyCompactList}\small\item\em Performs camera calibaration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_ga6dd24ad92cc98650a657ff6875e456df}\label{group__calib3d__fisheye_ga6dd24ad92cc98650a657ff6875e456df}} 
+static native double {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+calibrate} (@By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points, @Const @By\+Ref Size image\+\_\+size, @By\+Val Mat K, @By\+Val Mat D, @By\+Val Mat\+Vector rvecs, @By\+Val Mat\+Vector tvecs)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_ga6347d2944f3553c991abe41224c42370}\label{group__calib3d__fisheye_ga6347d2944f3553c991abe41224c42370}} 
+static native double {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+calibrate} (@By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points, @Const @By\+Ref Size image\+\_\+size, @By\+Val Mat K, @By\+Val Mat D, @By\+Val U\+Mat\+Vector rvecs, @By\+Val U\+Mat\+Vector tvecs, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 100, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_gae2ede7ac50b49d473824777a6d1d068d}\label{group__calib3d__fisheye_gae2ede7ac50b49d473824777a6d1d068d}} 
+static native double {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+calibrate} (@By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points, @Const @By\+Ref Size image\+\_\+size, @By\+Val Mat K, @By\+Val Mat D, @By\+Val U\+Mat\+Vector rvecs, @By\+Val U\+Mat\+Vector tvecs)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_ga6b6a7b50da7d44d995abbb18cbed5e63}\label{group__calib3d__fisheye_ga6b6a7b50da7d44d995abbb18cbed5e63}} 
+static native double {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+calibrate} (@By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points, @Const @By\+Ref Size image\+\_\+size, @By\+Val U\+Mat K, @By\+Val U\+Mat D, @By\+Val Mat\+Vector rvecs, @By\+Val Mat\+Vector tvecs, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 100, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_ga8a7d83f4efa45ff68083ecfe4e9764f8}\label{group__calib3d__fisheye_ga8a7d83f4efa45ff68083ecfe4e9764f8}} 
+static native double {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+calibrate} (@By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points, @Const @By\+Ref Size image\+\_\+size, @By\+Val U\+Mat K, @By\+Val U\+Mat D, @By\+Val Mat\+Vector rvecs, @By\+Val Mat\+Vector tvecs)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_gad137baca230e9c1a21b8bb6dd47e0760}\label{group__calib3d__fisheye_gad137baca230e9c1a21b8bb6dd47e0760}} 
+static native double {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+calibrate} (@By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points, @Const @By\+Ref Size image\+\_\+size, @By\+Val U\+Mat K, @By\+Val U\+Mat D, @By\+Val U\+Mat\+Vector rvecs, @By\+Val U\+Mat\+Vector tvecs, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 100, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_ga6910e5cf0da987e5a107f27ac2570df1}\label{group__calib3d__fisheye_ga6910e5cf0da987e5a107f27ac2570df1}} 
+static native double {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+calibrate} (@By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points, @Const @By\+Ref Size image\+\_\+size, @By\+Val U\+Mat K, @By\+Val U\+Mat D, @By\+Val U\+Mat\+Vector rvecs, @By\+Val U\+Mat\+Vector tvecs)
+\item 
+static native void \hyperlink{group__calib3d__fisheye_ga8733df626f7839fe698cc024f4836938}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+stereo\+Rectify} (@By\+Val Mat K1, @By\+Val Mat D1, @By\+Val Mat K2, @By\+Val Mat D2, @Const @By\+Ref Size image\+Size, @By\+Val Mat R, @By\+Val Mat tvec, @By\+Val Mat R1, @By\+Val Mat R2, @By\+Val Mat P1, @By\+Val Mat P2, @By\+Val Mat Q, int flags, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size new\+Image\+Size, double balance, double fov\+\_\+scale)
+\begin{DoxyCompactList}\small\item\em Stereo rectification for fisheye camera model. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_ga8c949ece6153333cfd48ef4255adc366}\label{group__calib3d__fisheye_ga8c949ece6153333cfd48ef4255adc366}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+stereo\+Rectify} (@By\+Val Mat K1, @By\+Val Mat D1, @By\+Val Mat K2, @By\+Val Mat D2, @Const @By\+Ref Size image\+Size, @By\+Val Mat R, @By\+Val Mat tvec, @By\+Val Mat R1, @By\+Val Mat R2, @By\+Val Mat P1, @By\+Val Mat P2, @By\+Val Mat Q, int flags)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_gaef473d4ee9ac46923131367d5ca08ceb}\label{group__calib3d__fisheye_gaef473d4ee9ac46923131367d5ca08ceb}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+stereo\+Rectify} (@By\+Val U\+Mat K1, @By\+Val U\+Mat D1, @By\+Val U\+Mat K2, @By\+Val U\+Mat D2, @Const @By\+Ref Size image\+Size, @By\+Val U\+Mat R, @By\+Val U\+Mat tvec, @By\+Val U\+Mat R1, @By\+Val U\+Mat R2, @By\+Val U\+Mat P1, @By\+Val U\+Mat P2, @By\+Val U\+Mat Q, int flags, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size new\+Image\+Size, double balance, double fov\+\_\+scale)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_gad96122fa95c4d5cf5e635372416efba9}\label{group__calib3d__fisheye_gad96122fa95c4d5cf5e635372416efba9}} 
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+stereo\+Rectify} (@By\+Val U\+Mat K1, @By\+Val U\+Mat D1, @By\+Val U\+Mat K2, @By\+Val U\+Mat D2, @Const @By\+Ref Size image\+Size, @By\+Val U\+Mat R, @By\+Val U\+Mat tvec, @By\+Val U\+Mat R1, @By\+Val U\+Mat R2, @By\+Val U\+Mat P1, @By\+Val U\+Mat P2, @By\+Val U\+Mat Q, int flags)
+\item 
+static native double \hyperlink{group__calib3d__fisheye_ga0134bbb31283b93ec8331c3b34923cd0}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+stereo\+Calibrate} (@By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points1, @By\+Val Mat\+Vector image\+Points2, @By\+Val Mat K1, @By\+Val Mat D1, @By\+Val Mat K2, @By\+Val Mat D2, @By\+Val Size image\+Size, @By\+Val Mat R, @By\+Val Mat T, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 100, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\begin{DoxyCompactList}\small\item\em Performs stereo calibration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_gaa2b57d96851b9fdc58a749f171f60510}\label{group__calib3d__fisheye_gaa2b57d96851b9fdc58a749f171f60510}} 
+static native double {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+stereo\+Calibrate} (@By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points1, @By\+Val Mat\+Vector image\+Points2, @By\+Val Mat K1, @By\+Val Mat D1, @By\+Val Mat K2, @By\+Val Mat D2, @By\+Val Size image\+Size, @By\+Val Mat R, @By\+Val Mat T)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_gaf53ce6d812054fcc4c6846ab368a5c75}\label{group__calib3d__fisheye_gaf53ce6d812054fcc4c6846ab368a5c75}} 
+static native double {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+stereo\+Calibrate} (@By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points1, @By\+Val U\+Mat\+Vector image\+Points2, @By\+Val Mat K1, @By\+Val Mat D1, @By\+Val Mat K2, @By\+Val Mat D2, @By\+Val Size image\+Size, @By\+Val Mat R, @By\+Val Mat T, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 100, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_ga8df93ec379aec8070caa281b82548450}\label{group__calib3d__fisheye_ga8df93ec379aec8070caa281b82548450}} 
+static native double {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+stereo\+Calibrate} (@By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points1, @By\+Val U\+Mat\+Vector image\+Points2, @By\+Val Mat K1, @By\+Val Mat D1, @By\+Val Mat K2, @By\+Val Mat D2, @By\+Val Size image\+Size, @By\+Val Mat R, @By\+Val Mat T)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_ga71c2c97343095435ad42af9609e3b8ae}\label{group__calib3d__fisheye_ga71c2c97343095435ad42af9609e3b8ae}} 
+static native double {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+stereo\+Calibrate} (@By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points1, @By\+Val Mat\+Vector image\+Points2, @By\+Val U\+Mat K1, @By\+Val U\+Mat D1, @By\+Val U\+Mat K2, @By\+Val U\+Mat D2, @By\+Val Size image\+Size, @By\+Val U\+Mat R, @By\+Val U\+Mat T, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 100, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_gaafa97ec7987c001dc40d2c4486cb1238}\label{group__calib3d__fisheye_gaafa97ec7987c001dc40d2c4486cb1238}} 
+static native double {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+stereo\+Calibrate} (@By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points1, @By\+Val Mat\+Vector image\+Points2, @By\+Val U\+Mat K1, @By\+Val U\+Mat D1, @By\+Val U\+Mat K2, @By\+Val U\+Mat D2, @By\+Val Size image\+Size, @By\+Val U\+Mat R, @By\+Val U\+Mat T)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_ga6059aafb1c15b2dfbaa724a825882871}\label{group__calib3d__fisheye_ga6059aafb1c15b2dfbaa724a825882871}} 
+static native double {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+stereo\+Calibrate} (@By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points1, @By\+Val U\+Mat\+Vector image\+Points2, @By\+Val U\+Mat K1, @By\+Val U\+Mat D1, @By\+Val U\+Mat K2, @By\+Val U\+Mat D2, @By\+Val Size image\+Size, @By\+Val U\+Mat R, @By\+Val U\+Mat T, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 100, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria criteria)
+\item 
+\mbox{\Hypertarget{group__calib3d__fisheye_ga2184db43f585bd8e6017c7287ed31e2e}\label{group__calib3d__fisheye_ga2184db43f585bd8e6017c7287ed31e2e}} 
+static native double {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+stereo\+Calibrate} (@By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points1, @By\+Val U\+Mat\+Vector image\+Points2, @By\+Val U\+Mat K1, @By\+Val U\+Mat D1, @By\+Val U\+Mat K2, @By\+Val U\+Mat D2, @By\+Val Size image\+Size, @By\+Val U\+Mat R, @By\+Val U\+Mat T)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{group__calib3d__fisheye_gac6c55e6235a136952116d157a197869c}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+F\+I\+S\+H\+E\+Y\+E\+\_\+\+C\+A\+L\+I\+B\+\_\+\+U\+S\+E\+\_\+\+I\+N\+T\+R\+I\+N\+S\+I\+C\+\_\+\+G\+U\+E\+SS} = 1 $<$$<$ 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The methods in this namespace use a so-\/called fisheye camera model. 
+
+Definitions\+: Let P be a point in 3D of coordinates X in the world reference frame (stored in the matrix X) The coordinate vector of P in the camera reference frame is\+: 
+
+\[Xc = R X + T\] 
+
+where R is the rotation matrix corresponding to the rotation vector om\+: R = rodrigues(om); call x, y and z the 3 coordinates of Xc\+: 
+
+\[x = Xc_1 \\ y = Xc_2 \\ z = Xc_3\] 
+
+The pinhole projection coordinates of P is \mbox{[}a; b\mbox{]} where 
+
+\[a = x / z \ and \ b = y / z \\ r^2 = a^2 + b^2 \\ \theta = atan(r)\] 
+
+Fisheye distortion\+: 
+
+\[\theta_d = \theta (1 + k_1 \theta^2 + k_2 \theta^4 + k_3 \theta^6 + k_4 \theta^8)\] 
+
+The distorted point coordinates are \mbox{[}x\textquotesingle{}; y\textquotesingle{}\mbox{]} where 
+
+\[x' = (\theta_d / r) a \\ y' = (\theta_d / r) b \] 
+
+Finally, conversion into pixel coordinates\+: The final pixel coordinates vector \mbox{[}u; v\mbox{]} where\+: 
+
+\[u = f_x (x' + \alpha y') + c_x \\ v = f_y y' + c_y\] 
+
+calib3d 
+
+/$\ast$$\ast$ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__calib3d__fisheye_ga4fd78a3672b06b47ba34e82e17824e9d}\label{group__calib3d__fisheye_ga4fd78a3672b06b47ba34e82e17824e9d}} 
+\index{Fisheye camera model@{Fisheye camera model}!calibrate@{calibrate}}
+\index{calibrate@{calibrate}!Fisheye camera model@{Fisheye camera model}}
+\subsubsection{\texorpdfstring{calibrate()}{calibrate()}}
+{\footnotesize\ttfamily static native double org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+calibrate (\begin{DoxyParamCaption}\item[{@By\+Val Mat\+Vector}]{object\+Points,  }\item[{@By\+Val Mat\+Vector}]{image\+Points,  }\item[{@Const @By\+Ref Size}]{image\+\_\+size,  }\item[{@By\+Val Mat}]{K,  }\item[{@By\+Val Mat}]{D,  }\item[{@By\+Val Mat\+Vector}]{rvecs,  }\item[{@By\+Val Mat\+Vector}]{tvecs,  }\item[{int}]{flags,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 100, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria}]{criteria }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Performs camera calibaration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+Points} & vector of vectors of calibration pattern points in the calibration pattern coordinate space. \\
+\hline
+{\em image\+Points} & vector of vectors of the projections of calibration pattern points. image\+Points.\+size() and object\+Points.\+size() and image\+Points\mbox{[}i\mbox{]}.size() must be equal to object\+Points\mbox{[}i\mbox{]}.size() for each i. \\
+\hline
+{\em image\+\_\+size} & Size of the image used only to initialize the intrinsic camera matrix. \\
+\hline
+{\em K} & Output 3x3 floating-\/point camera matrix $A = \vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}$ . If fisheye\+::\+C\+A\+L\+I\+B\+\_\+\+U\+S\+E\+\_\+\+I\+N\+T\+R\+I\+N\+S\+I\+C\+\_\+\+G\+U\+E\+SS/ is specified, some or all of fx, fy, cx, cy must be initialized before calling the function. \\
+\hline
+{\em D} & Output vector of distortion coefficients $(k_1, k_2, k_3, k_4)$. \\
+\hline
+{\em rvecs} & Output vector of rotation vectors (see Rodrigues ) estimated for each pattern view. That is, each k-\/th rotation vector together with the corresponding k-\/th translation vector (see the next output parameter description) brings the calibration pattern from the model coordinate space (in which object points are specified) to the world coordinate space, that is, a real position of the calibration pattern in the k-\/th pattern view (k=0.. {\itshape M} -\/1). \\
+\hline
+{\em tvecs} & Output vector of translation vectors estimated for each pattern view. \\
+\hline
+{\em flags} & Different flags that may be zero or a combination of the following values\+:
+\begin{DoxyItemize}
+\item {\bfseries fisheye\+::\+C\+A\+L\+I\+B\+\_\+\+U\+S\+E\+\_\+\+I\+N\+T\+R\+I\+N\+S\+I\+C\+\_\+\+G\+U\+E\+SS} camera\+Matrix contains valid initial values of fx, fy, cx, cy that are optimized further. Otherwise, (cx, cy) is initially set to the image center ( image\+Size is used), and focal distances are computed in a least-\/squares fashion.
+\item {\bfseries fisheye\+::\+C\+A\+L\+I\+B\+\_\+\+R\+E\+C\+O\+M\+P\+U\+T\+E\+\_\+\+E\+X\+T\+R\+I\+N\+S\+IC} Extrinsic will be recomputed after each iteration of intrinsic optimization.
+\item {\bfseries fisheye\+::\+C\+A\+L\+I\+B\+\_\+\+C\+H\+E\+C\+K\+\_\+\+C\+O\+ND} The functions will check validity of condition number.
+\item {\bfseries fisheye\+::\+C\+A\+L\+I\+B\+\_\+\+F\+I\+X\+\_\+\+S\+K\+EW} Skew coefficient (alpha) is set to zero and stay zero.
+\item {\bfseries fisheye\+::\+C\+A\+L\+I\+B\+\_\+\+F\+I\+X\+\_\+\+K1..fisheye\+::\+C\+A\+L\+I\+B\+\_\+\+F\+I\+X\+\_\+\+K4} Selected distortion coefficients are set to zeros and stay zero.
+\item {\bfseries fisheye\+::\+C\+A\+L\+I\+B\+\_\+\+F\+I\+X\+\_\+\+P\+R\+I\+N\+C\+I\+P\+A\+L\+\_\+\+P\+O\+I\+NT} The principal point is not changed during the global optimization. It stays at the center or at a different location specified when C\+A\+L\+I\+B\+\_\+\+U\+S\+E\+\_\+\+I\+N\+T\+R\+I\+N\+S\+I\+C\+\_\+\+G\+U\+E\+SS is set too. 
+\end{DoxyItemize}\\
+\hline
+{\em criteria} & Termination criteria for the iterative optimization algorithm. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__calib3d__fisheye_gacc047f2a04ea647d5dd504de5b1b6ba3}\label{group__calib3d__fisheye_gacc047f2a04ea647d5dd504de5b1b6ba3}} 
+\index{Fisheye camera model@{Fisheye camera model}!distort\+Points@{distort\+Points}}
+\index{distort\+Points@{distort\+Points}!Fisheye camera model@{Fisheye camera model}}
+\subsubsection{\texorpdfstring{distort\+Points()}{distortPoints()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+distort\+Points (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{undistorted,  }\item[{@By\+Val Mat}]{distorted,  }\item[{@By\+Val Mat}]{K,  }\item[{@By\+Val Mat}]{D,  }\item[{double}]{alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Distorts 2D points using fisheye model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em undistorted} & Array of object points, 1x\+N/\+Nx1 2-\/channel (or vector$<$Point2f$>$ ), where N is the number of points in the view. \\
+\hline
+{\em K} & Camera matrix $K = \vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{_1}$. \\
+\hline
+{\em D} & Input vector of distortion coefficients $(k_1, k_2, k_3, k_4)$. \\
+\hline
+{\em alpha} & The skew coefficient. \\
+\hline
+{\em distorted} & Output array of image points, 1x\+N/\+Nx1 2-\/channel, or vector$<$Point2f$>$ . \\
+\hline
+\end{DoxyParams}
+Note that the function assumes the camera matrix of the undistorted points to be indentity. This means if you want to transform back points undistorted with \hyperlink{group__calib3d__fisheye_ga76244e0842b37e17c2b00ef9a015b99a}{undistort\+Points()} you have to multiply them with $P^{-1}$. \mbox{\Hypertarget{group__calib3d__fisheye_ga0ec51dc3cf450ad76b96b9b719237f2b}\label{group__calib3d__fisheye_ga0ec51dc3cf450ad76b96b9b719237f2b}} 
+\index{Fisheye camera model@{Fisheye camera model}!estimate\+New\+Camera\+Matrix\+For\+Undistort\+Rectify@{estimate\+New\+Camera\+Matrix\+For\+Undistort\+Rectify}}
+\index{estimate\+New\+Camera\+Matrix\+For\+Undistort\+Rectify@{estimate\+New\+Camera\+Matrix\+For\+Undistort\+Rectify}!Fisheye camera model@{Fisheye camera model}}
+\subsubsection{\texorpdfstring{estimate\+New\+Camera\+Matrix\+For\+Undistort\+Rectify()}{estimateNewCameraMatrixForUndistortRectify()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+estimate\+New\+Camera\+Matrix\+For\+Undistort\+Rectify (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{K,  }\item[{@By\+Val Mat}]{D,  }\item[{@Const @By\+Ref Size}]{image\+\_\+size,  }\item[{@By\+Val Mat}]{R,  }\item[{@By\+Val Mat}]{P,  }\item[{double}]{balance,  }\item[{@Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size}]{new\+\_\+size,  }\item[{double}]{fov\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Estimates new camera matrix for undistortion or rectification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em K} & Camera matrix $K = \vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{_1}$. \\
+\hline
+{\em image\+\_\+size} & \\
+\hline
+{\em D} & Input vector of distortion coefficients $(k_1, k_2, k_3, k_4)$. \\
+\hline
+{\em R} & Rectification transformation in the object space\+: 3x3 1-\/channel, or vector\+: 3x1/1x3 1-\/channel or 1x1 3-\/channel \\
+\hline
+{\em P} & New camera matrix (3x3) or new projection matrix (3x4) \\
+\hline
+{\em balance} & Sets the new focal length in range between the min focal length and the max focal length. Balance is in range of \mbox{[}0, 1\mbox{]}. \\
+\hline
+{\em new\+\_\+size} & \\
+\hline
+{\em fov\+\_\+scale} & Divisor for new focal length. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__calib3d__fisheye_ga507f430243a293690d2c405dec6a0e82}\label{group__calib3d__fisheye_ga507f430243a293690d2c405dec6a0e82}} 
+\index{Fisheye camera model@{Fisheye camera model}!init\+Undistort\+Rectify\+Map@{init\+Undistort\+Rectify\+Map}}
+\index{init\+Undistort\+Rectify\+Map@{init\+Undistort\+Rectify\+Map}!Fisheye camera model@{Fisheye camera model}}
+\subsubsection{\texorpdfstring{init\+Undistort\+Rectify\+Map()}{initUndistortRectifyMap()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+init\+Undistort\+Rectify\+Map (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{K,  }\item[{@By\+Val Mat}]{D,  }\item[{@By\+Val Mat}]{R,  }\item[{@By\+Val Mat}]{P,  }\item[{@Const @By\+Ref Size}]{size,  }\item[{int}]{m1type,  }\item[{@By\+Val Mat}]{map1,  }\item[{@By\+Val Mat}]{map2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Computes undistortion and rectification maps for image transform by cv\+::remap(). If D is empty zero distortion is used, if R or P is empty identity matrixes are used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em K} & Camera matrix $K = \vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{_1}$. \\
+\hline
+{\em D} & Input vector of distortion coefficients $(k_1, k_2, k_3, k_4)$. \\
+\hline
+{\em R} & Rectification transformation in the object space\+: 3x3 1-\/channel, or vector\+: 3x1/1x3 1-\/channel or 1x1 3-\/channel \\
+\hline
+{\em P} & New camera matrix (3x3) or new projection matrix (3x4) \\
+\hline
+{\em size} & Undistorted image size. \\
+\hline
+{\em m1type} & Type of the first output map that can be C\+V\+\_\+32\+F\+C1 or C\+V\+\_\+16\+S\+C2 . See convert\+Maps() for details. \\
+\hline
+{\em map1} & The first output map. \\
+\hline
+{\em map2} & The second output map. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__calib3d__fisheye_gaf2fa76c626de207fce922dd3c2a1defc}\label{group__calib3d__fisheye_gaf2fa76c626de207fce922dd3c2a1defc}} 
+\index{Fisheye camera model@{Fisheye camera model}!project\+Points@{project\+Points}}
+\index{project\+Points@{project\+Points}!Fisheye camera model@{Fisheye camera model}}
+\subsubsection{\texorpdfstring{project\+Points()}{projectPoints()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+project\+Points (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{object\+Points,  }\item[{@By\+Val Mat}]{image\+Points,  }\item[{@Const @By\+Ref Mat}]{affine,  }\item[{@By\+Val Mat}]{K,  }\item[{@By\+Val Mat}]{D,  }\item[{double}]{alpha,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat}]{jacobian }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Projects points using fisheye model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+Points} & Array of object points, 1x\+N/\+Nx1 3-\/channel (or vector$<$Point3f$>$ ), where N is the number of points in the view. \\
+\hline
+{\em image\+Points} & Output array of image points, 2x\+N/\+Nx2 1-\/channel or 1x\+N/\+Nx1 2-\/channel, or vector$<$Point2f$>$. \\
+\hline
+{\em affine} & \\
+\hline
+{\em K} & Camera matrix $K = \vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{_1}$. \\
+\hline
+{\em D} & Input vector of distortion coefficients $(k_1, k_2, k_3, k_4)$. \\
+\hline
+{\em alpha} & The skew coefficient. \\
+\hline
+{\em jacobian} & Optional output 2\+Nx15 jacobian matrix of derivatives of image points with respect to components of the focal lengths, coordinates of the principal point, distortion coefficients, rotation vector, translation vector, and the skew. In the old interface different components of the jacobian are returned via different output parameters. \\
+\hline
+\end{DoxyParams}
+The function computes projections of 3D points to the image plane given intrinsic and extrinsic camera parameters. Optionally, the function computes Jacobians -\/ matrices of partial derivatives of image points coordinates (as functions of all the input parameters) with respect to the particular parameters, intrinsic and/or extrinsic. \mbox{\Hypertarget{group__calib3d__fisheye_ga01c2fc60a861f2b9972e00c4837a315b}\label{group__calib3d__fisheye_ga01c2fc60a861f2b9972e00c4837a315b}} 
+\index{Fisheye camera model@{Fisheye camera model}!project\+Points@{project\+Points}}
+\index{project\+Points@{project\+Points}!Fisheye camera model@{Fisheye camera model}}
+\subsubsection{\texorpdfstring{project\+Points()}{projectPoints()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+project\+Points (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{object\+Points,  }\item[{@By\+Val Mat}]{image\+Points,  }\item[{@By\+Val Mat}]{rvec,  }\item[{@By\+Val Mat}]{tvec,  }\item[{@By\+Val Mat}]{K,  }\item[{@By\+Val Mat}]{D,  }\item[{double}]{alpha,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat}]{jacobian }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. \mbox{\Hypertarget{group__calib3d__fisheye_ga0134bbb31283b93ec8331c3b34923cd0}\label{group__calib3d__fisheye_ga0134bbb31283b93ec8331c3b34923cd0}} 
+\index{Fisheye camera model@{Fisheye camera model}!stereo\+Calibrate@{stereo\+Calibrate}}
+\index{stereo\+Calibrate@{stereo\+Calibrate}!Fisheye camera model@{Fisheye camera model}}
+\subsubsection{\texorpdfstring{stereo\+Calibrate()}{stereoCalibrate()}}
+{\footnotesize\ttfamily static native double org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+stereo\+Calibrate (\begin{DoxyParamCaption}\item[{@By\+Val Mat\+Vector}]{object\+Points,  }\item[{@By\+Val Mat\+Vector}]{image\+Points1,  }\item[{@By\+Val Mat\+Vector}]{image\+Points2,  }\item[{@By\+Val Mat}]{K1,  }\item[{@By\+Val Mat}]{D1,  }\item[{@By\+Val Mat}]{K2,  }\item[{@By\+Val Mat}]{D2,  }\item[{@By\+Val Size}]{image\+Size,  }\item[{@By\+Val Mat}]{R,  }\item[{@By\+Val Mat}]{T,  }\item[{int}]{flags,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT + cv\+::\+Term\+Criteria\+::\+E\+PS, 100, D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\char`\"{}) Term\+Criteria}]{criteria }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Performs stereo calibration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+Points} & Vector of vectors of the calibration pattern points. \\
+\hline
+{\em image\+Points1} & Vector of vectors of the projections of the calibration pattern points, observed by the first camera. \\
+\hline
+{\em image\+Points2} & Vector of vectors of the projections of the calibration pattern points, observed by the second camera. \\
+\hline
+{\em K1} & Input/output first camera matrix\+: $\vecthreethree{f_x^{(j)}}{0}{c_x^{(j)}}{0}{f_y^{(j)}}{c_y^{(j)}}{0}{0}{1}$ , $j = 0,\, 1$ . If any of fisheye\+::\+C\+A\+L\+I\+B\+\_\+\+U\+S\+E\+\_\+\+I\+N\+T\+R\+I\+N\+S\+I\+C\+\_\+\+G\+U\+E\+SS , fisheye\+::\+C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+F\+I\+X\+\_\+\+I\+N\+T\+R\+I\+N\+S\+IC are specified, some or all of the matrix components must be initialized. \\
+\hline
+{\em D1} & Input/output vector of distortion coefficients $(k_1, k_2, k_3, k_4)$ of 4 elements. \\
+\hline
+{\em K2} & Input/output second camera matrix. The parameter is similar to K1 . \\
+\hline
+{\em D2} & Input/output lens distortion coefficients for the second camera. The parameter is similar to D1 . \\
+\hline
+{\em image\+Size} & Size of the image used only to initialize intrinsic camera matrix. \\
+\hline
+{\em R} & Output rotation matrix between the 1st and the 2nd camera coordinate systems. \\
+\hline
+{\em T} & Output translation vector between the coordinate systems of the cameras. \\
+\hline
+{\em flags} & Different flags that may be zero or a combination of the following values\+:
+\begin{DoxyItemize}
+\item {\bfseries fisheye\+::\+C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+F\+I\+X\+\_\+\+I\+N\+T\+R\+I\+N\+S\+IC} Fix K1, K2? and D1, D2? so that only R, T matrices are estimated.
+\item {\bfseries fisheye\+::\+C\+A\+L\+I\+B\+\_\+\+U\+S\+E\+\_\+\+I\+N\+T\+R\+I\+N\+S\+I\+C\+\_\+\+G\+U\+E\+SS} K1, K2 contains valid initial values of fx, fy, cx, cy that are optimized further. Otherwise, (cx, cy) is initially set to the image center (image\+Size is used), and focal distances are computed in a least-\/squares fashion.
+\item {\bfseries fisheye\+::\+C\+A\+L\+I\+B\+\_\+\+R\+E\+C\+O\+M\+P\+U\+T\+E\+\_\+\+E\+X\+T\+R\+I\+N\+S\+IC} Extrinsic will be recomputed after each iteration of intrinsic optimization.
+\item {\bfseries fisheye\+::\+C\+A\+L\+I\+B\+\_\+\+C\+H\+E\+C\+K\+\_\+\+C\+O\+ND} The functions will check validity of condition number.
+\item {\bfseries fisheye\+::\+C\+A\+L\+I\+B\+\_\+\+F\+I\+X\+\_\+\+S\+K\+EW} Skew coefficient (alpha) is set to zero and stay zero.
+\item {\bfseries fisheye\+::\+C\+A\+L\+I\+B\+\_\+\+F\+I\+X\+\_\+\+K1..4} Selected distortion coefficients are set to zeros and stay zero. 
+\end{DoxyItemize}\\
+\hline
+{\em criteria} & Termination criteria for the iterative optimization algorithm. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__calib3d__fisheye_ga8733df626f7839fe698cc024f4836938}\label{group__calib3d__fisheye_ga8733df626f7839fe698cc024f4836938}} 
+\index{Fisheye camera model@{Fisheye camera model}!stereo\+Rectify@{stereo\+Rectify}}
+\index{stereo\+Rectify@{stereo\+Rectify}!Fisheye camera model@{Fisheye camera model}}
+\subsubsection{\texorpdfstring{stereo\+Rectify()}{stereoRectify()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+stereo\+Rectify (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{K1,  }\item[{@By\+Val Mat}]{D1,  }\item[{@By\+Val Mat}]{K2,  }\item[{@By\+Val Mat}]{D2,  }\item[{@Const @By\+Ref Size}]{image\+Size,  }\item[{@By\+Val Mat}]{R,  }\item[{@By\+Val Mat}]{tvec,  }\item[{@By\+Val Mat}]{R1,  }\item[{@By\+Val Mat}]{R2,  }\item[{@By\+Val Mat}]{P1,  }\item[{@By\+Val Mat}]{P2,  }\item[{@By\+Val Mat}]{Q,  }\item[{int}]{flags,  }\item[{@Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size}]{new\+Image\+Size,  }\item[{double}]{balance,  }\item[{double}]{fov\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Stereo rectification for fisheye camera model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em K1} & First camera matrix. \\
+\hline
+{\em D1} & First camera distortion parameters. \\
+\hline
+{\em K2} & Second camera matrix. \\
+\hline
+{\em D2} & Second camera distortion parameters. \\
+\hline
+{\em image\+Size} & Size of the image used for stereo calibration. \\
+\hline
+{\em R} & Rotation matrix between the coordinate systems of the first and the second cameras. \\
+\hline
+{\em tvec} & Translation vector between coordinate systems of the cameras. \\
+\hline
+{\em R1} & Output 3x3 rectification transform (rotation matrix) for the first camera. \\
+\hline
+{\em R2} & Output 3x3 rectification transform (rotation matrix) for the second camera. \\
+\hline
+{\em P1} & Output 3x4 projection matrix in the new (rectified) coordinate systems for the first camera. \\
+\hline
+{\em P2} & Output 3x4 projection matrix in the new (rectified) coordinate systems for the second camera. \\
+\hline
+{\em Q} & Output $4 \times 4$ disparity-\/to-\/depth mapping matrix (see reproject\+Image\+To3D ). \\
+\hline
+{\em flags} & Operation flags that may be zero or C\+V\+\_\+\+C\+A\+L\+I\+B\+\_\+\+Z\+E\+R\+O\+\_\+\+D\+I\+S\+P\+A\+R\+I\+TY . If the flag is set, the function makes the principal points of each camera have the same pixel coordinates in the rectified views. And if the flag is not set, the function may still shift the images in the horizontal or vertical direction (depending on the orientation of epipolar lines) to maximize the useful image area. \\
+\hline
+{\em new\+Image\+Size} & New image resolution after rectification. The same size should be passed to init\+Undistort\+Rectify\+Map (see the stereo\+\_\+calib.\+cpp sample in Open\+CV samples directory). When (0,0) is passed (default), it is set to the original image\+Size . Setting it to larger value can help you preserve details in the original image, especially when there is a big radial distortion. \\
+\hline
+{\em balance} & Sets the new focal length in range between the min focal length and the max focal length. Balance is in range of \mbox{[}0, 1\mbox{]}. \\
+\hline
+{\em fov\+\_\+scale} & Divisor for new focal length. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__calib3d__fisheye_gaf721f1f961fe6feedb9ff6a1fc1b169d}\label{group__calib3d__fisheye_gaf721f1f961fe6feedb9ff6a1fc1b169d}} 
+\index{Fisheye camera model@{Fisheye camera model}!undistort\+Image@{undistort\+Image}}
+\index{undistort\+Image@{undistort\+Image}!Fisheye camera model@{Fisheye camera model}}
+\subsubsection{\texorpdfstring{undistort\+Image()}{undistortImage()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+undistort\+Image (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{distorted,  }\item[{@By\+Val Mat}]{undistorted,  }\item[{@By\+Val Mat}]{K,  }\item[{@By\+Val Mat}]{D,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) Mat}]{Knew,  }\item[{@Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size}]{new\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Transforms an image to compensate for fisheye lens distortion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em distorted} & image with fisheye lens distortion. \\
+\hline
+{\em undistorted} & Output image with compensated fisheye lens distortion. \\
+\hline
+{\em K} & Camera matrix $K = \vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{_1}$. \\
+\hline
+{\em D} & Input vector of distortion coefficients $(k_1, k_2, k_3, k_4)$. \\
+\hline
+{\em Knew} & Camera matrix of the distorted image. By default, it is the identity matrix but you may additionally scale and shift the result by using a different matrix. \\
+\hline
+{\em new\+\_\+size} & \\
+\hline
+\end{DoxyParams}
+The function transforms an image to compensate radial and tangential lens distortion. 
+
+The function is simply a combination of fisheye\+::init\+Undistort\+Rectify\+Map (with unity R ) and remap (with bilinear interpolation). See the former function for details of the transformation being performed. 
+
+See below the results of undistort\+Image.
+\begin{DoxyItemize}
+\item a) result of undistort of perspective camera model (all possible coefficients (k\+\_\+1, k\+\_\+2, k\+\_\+3, k\+\_\+4, k\+\_\+5, k\+\_\+6) of distortion were optimized under calibration)
+\begin{DoxyItemize}
+\item b) result of fisheye\+::undistort\+Image of fisheye camera model (all possible coefficients (k\+\_\+1, k\+\_\+2, k\+\_\+3, k\+\_\+4) of fisheye distortion were optimized under calibration)
+\item c) original image was captured with fisheye lens 
+\end{DoxyItemize}
+
+Pictures a) and b) almost the same. But if we consider points of image located far from the center of image, we can notice that on image a) these points are distorted. 
+
+ 
+\end{DoxyItemize}\mbox{\Hypertarget{group__calib3d__fisheye_ga76244e0842b37e17c2b00ef9a015b99a}\label{group__calib3d__fisheye_ga76244e0842b37e17c2b00ef9a015b99a}} 
+\index{Fisheye camera model@{Fisheye camera model}!undistort\+Points@{undistort\+Points}}
+\index{undistort\+Points@{undistort\+Points}!Fisheye camera model@{Fisheye camera model}}
+\subsubsection{\texorpdfstring{undistort\+Points()}{undistortPoints()}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+undistort\+Points (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{distorted,  }\item[{@By\+Val Mat}]{undistorted,  }\item[{@By\+Val Mat}]{K,  }\item[{@By\+Val Mat}]{D,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) Mat}]{R,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Input\+Array(cv\+::no\+Array())\char`\"{}) Mat}]{P }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Undistorts 2D points using fisheye model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em distorted} & Array of object points, 1x\+N/\+Nx1 2-\/channel (or vector$<$Point2f$>$ ), where N is the number of points in the view. \\
+\hline
+{\em K} & Camera matrix $K = \vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{_1}$. \\
+\hline
+{\em D} & Input vector of distortion coefficients $(k_1, k_2, k_3, k_4)$. \\
+\hline
+{\em R} & Rectification transformation in the object space\+: 3x3 1-\/channel, or vector\+: 3x1/1x3 1-\/channel or 1x1 3-\/channel \\
+\hline
+{\em P} & New camera matrix (3x3) or new projection matrix (3x4) \\
+\hline
+{\em undistorted} & Output array of image points, 1x\+N/\+Nx1 2-\/channel, or vector$<$Point2f$>$ . \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__calib3d__fisheye_gac6c55e6235a136952116d157a197869c}\label{group__calib3d__fisheye_gac6c55e6235a136952116d157a197869c}} 
+\index{Fisheye camera model@{Fisheye camera model}!F\+I\+S\+H\+E\+Y\+E\+\_\+\+C\+A\+L\+I\+B\+\_\+\+U\+S\+E\+\_\+\+I\+N\+T\+R\+I\+N\+S\+I\+C\+\_\+\+G\+U\+E\+SS@{F\+I\+S\+H\+E\+Y\+E\+\_\+\+C\+A\+L\+I\+B\+\_\+\+U\+S\+E\+\_\+\+I\+N\+T\+R\+I\+N\+S\+I\+C\+\_\+\+G\+U\+E\+SS}}
+\index{F\+I\+S\+H\+E\+Y\+E\+\_\+\+C\+A\+L\+I\+B\+\_\+\+U\+S\+E\+\_\+\+I\+N\+T\+R\+I\+N\+S\+I\+C\+\_\+\+G\+U\+E\+SS@{F\+I\+S\+H\+E\+Y\+E\+\_\+\+C\+A\+L\+I\+B\+\_\+\+U\+S\+E\+\_\+\+I\+N\+T\+R\+I\+N\+S\+I\+C\+\_\+\+G\+U\+E\+SS}!Fisheye camera model@{Fisheye camera model}}
+\subsubsection{\texorpdfstring{F\+I\+S\+H\+E\+Y\+E\+\_\+\+C\+A\+L\+I\+B\+\_\+\+U\+S\+E\+\_\+\+I\+N\+T\+R\+I\+N\+S\+I\+C\+\_\+\+G\+U\+E\+SS}{FISHEYE\_CALIB\_USE\_INTRINSIC\_GUESS}}
+{\footnotesize\ttfamily final int org.\+bytedeco.\+javacpp.\+opencv\+\_\+calib3d.\+F\+I\+S\+H\+E\+Y\+E\+\_\+\+C\+A\+L\+I\+B\+\_\+\+U\+S\+E\+\_\+\+I\+N\+T\+R\+I\+N\+S\+I\+C\+\_\+\+G\+U\+E\+SS = 1 $<$$<$ 0\hspace{0.3cm}{\ttfamily [static]}}
+
+enum cv\+::fisheye\+:\+: 
