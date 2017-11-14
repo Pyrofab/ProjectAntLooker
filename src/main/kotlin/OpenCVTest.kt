@@ -3,33 +3,20 @@ import org.bytedeco.javacpp.opencv_imgcodecs
 import org.bytedeco.javacpp.opencv_imgproc
 
 fun main(args: Array<String>) {
-    val img = loadImage("square.png")
-    val imgMat = imgToMat(img)
-    val gray = grayImage(imgMat)
-    val thresh = threshold(gray, 127.0, 255.0, ThresholdTypes.BINARY_INVERTED)
-    val contours = findContours(thresh, ContourRetrievalMode.LIST, ContourApproxMethod.SIMPLE)
-    val processedContours = processContours(contours)
+    val processedContours = loadAndAnalyseImage("square.png")
     for(i in 0 until processedContours.size) {
         println("Shape #$i")
         processedContours[i].forEach { println(pointToString(it)) }
     }
-    /*for (i in 0 until contours.size()) {
-        val cnt = contours[i]
-        val point = cnt[0,0]
-        println("x=${point.x()} y=${point.y()}")
-        val approx = opencv_core.Mat()
-        opencv_imgproc.approxPolyDP(cnt, approx, 0.01 * opencv_imgproc.arcLength(cnt, true), true)
-        val size = approx.size()
-        println("${size.height()} ${size.width()} " +
-                when (approx.size().height()) {
-            5 -> "pentagon"
-            4 -> "square"
-            3 -> "triangle"
-            in 10..Int.MAX_VALUE -> "circle"
-            else -> "No fucking idea (${approx.size().height()})"
-        })
-    }*/
-//    println("Detected $circles circles, $squares squares and $arrows arrows")
+}
+
+fun loadAndAnalyseImage(fileLocation: String) : List<List<opencv_core.Point>> {
+    val img = loadImage(fileLocation)
+    val imgMat = imgToMat(img)
+    val gray = grayImage(imgMat)
+    val thresh = threshold(gray, 127.0, 255.0, ThresholdTypes.BINARY_INVERTED)
+    val contours = findContours(thresh, ContourRetrievalMode.LIST, ContourApproxMethod.SIMPLE)
+    return processContours(contours)
 }
 
 fun loadImage(location: String) = opencv_imgcodecs.cvLoadImage(location)!!
