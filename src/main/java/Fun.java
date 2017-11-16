@@ -1,5 +1,7 @@
 import org.bytedeco.javacpp.opencv_core;
 
+import java.util.List;
+
 import static org.bytedeco.javacpp.opencv_core.*;
 import static org.bytedeco.javacpp.opencv_highgui.cvShowImage;
 import static org.bytedeco.javacpp.opencv_highgui.cvWaitKey;
@@ -9,6 +11,13 @@ import static org.bytedeco.javacpp.opencv_imgproc.*;
 public class Fun {
 
     public static void main(String[] args){
+
+        List<List<Point>> formes = OpenCVTestKt.loadAndAnalyseImage("square.png");
+        for(List<Point> forme : formes) {
+            for(Point coin : forme)
+                System.out.println(OpenCVTestKt.pointToString(coin));
+        }
+
         String file = "petri_petit.png";
         IplImage image = cvLoadImage(file);
         IplImage image2 = cvLoadImage(file);
