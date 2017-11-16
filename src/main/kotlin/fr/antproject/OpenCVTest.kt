@@ -5,11 +5,10 @@ import org.bytedeco.javacpp.opencv_core
 import org.bytedeco.javacpp.opencv_highgui.cvShowImage
 import org.bytedeco.javacpp.opencv_highgui.cvWaitKey
 import org.bytedeco.javacpp.opencv_imgproc
-import java.io.FileNotFoundException
 
 fun main(args: Array<String>) {
-    val fileName = if(args.size > 1) args[0] else "petri_resize.png"
-    val img = loadImage(fileName) ?: throw FileNotFoundException("$fileName does not exist")
+    val fileName = if(args.size > 1) args[0] else "poly.jpg"
+    val img = loadImage(fileName)
     val imgMat = ImageMat(img)
     val processedContours = processContours(imgMat.grayImage().threshold().findContours())
     for(i in 0 until processedContours.size) {
@@ -23,8 +22,4 @@ fun main(args: Array<String>) {
     cvShowImage("img",img)
     cvWaitKey()
 }
-
-//fun loadAndAnalyseImage(fileLocation: String) : List<List<opencv_core.fr.antproject.utils.Point>> {
-//    return fr.antproject.utils.processContours((fr.antproject.utils.ImageMat(fr.antproject.utils.loadImage(fileLocation) ?: return listOf()).fr.antproject.utils.grayImage().fr.antproject.utils.threshold().fr.antproject.utils.findContours()))
-//}
 

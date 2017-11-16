@@ -3,8 +3,11 @@ package fr.antproject.utils
 import org.bytedeco.javacpp.opencv_core
 import org.bytedeco.javacpp.opencv_imgcodecs
 import org.bytedeco.javacpp.opencv_imgproc
+import java.io.FileNotFoundException
 
-fun loadImage(location: String): opencv_core.IplImage? = opencv_imgcodecs.cvLoadImage(location)
+fun loadImage(location: String): opencv_core.IplImage = opencv_imgcodecs.cvLoadImage(location)
+        ?: throw FileNotFoundException("$location: this file does not exist")
+
 /**
  * Converts an image into a black and white version
  * @param img a matrix representing the source image
@@ -71,17 +74,3 @@ fun findContours(thresholdImageMat: ImageMat, mode: ContourRetrievalMode = Conto
 fun ImageMat.findContours(mode: ContourRetrievalMode = ContourRetrievalMode.LIST, method: ContourApproxMethod = ContourApproxMethod.SIMPLE)
         = findContours(this, mode, method)
 
-fun processContours(contours: MatVector) : List<List<Point>> {
-    val ret = mutableListOf<List<Point>>()
-    for (shape in contours) {
-        val approx = opencv_core.Mat()
-        opencv_imgproc.approxPolyDP(shape, approx, 0.01 * opencv_imgproc.arcLength(shape, true), true)
-        for (row in 0 until approx.size().width()) {
-            var contoursList : List<Point> = listOf()
-            for (col in 0 until approx.size().height())
-                contoursList += Point(approx.ptr(row, col))
-            ret += contoursList
-        }
-    }
-    return ret
-}
