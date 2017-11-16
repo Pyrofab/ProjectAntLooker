@@ -14,9 +14,7 @@ fun main(args: Array<String>) {
     for(i in 0 until processedContours.size) {
         println("Shape #$i")
         processedContours[i].forEach { println(pointToString(it))
-
             opencv_imgproc.drawMarker(imgMat,opencv_core.Point(it.x(),it.y()), opencv_core.Scalar( 0.0,255.0,0.0,1.0),0,20,1,8)
-
         println("voici - > "+it.x()+" || "+it.y())
         }
     }

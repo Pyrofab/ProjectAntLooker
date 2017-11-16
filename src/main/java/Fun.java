@@ -12,11 +12,11 @@ public class Fun {
 
     public static void main(String[] args){
 
-        List<List<Point>> formes = OpenCVTestKt.loadAndAnalyseImage("square.png");
+        /**List<List<Point>> formes = OpenCVTestKt.loadAndAnalyseImage("square.png");
         for(List<Point> forme : formes) {
             for(Point coin : forme)
                 System.out.println(OpenCVTestKt.pointToString(coin));
-        }
+        }*/
 
         String file = "petri_petit.png";
         IplImage image = cvLoadImage(file);
