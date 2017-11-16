@@ -1,9 +1,11 @@
 import org.bytedeco.javacpp.opencv_core
+import org.bytedeco.javacpp.opencv_highgui.*
 import org.bytedeco.javacpp.opencv_imgcodecs
 import org.bytedeco.javacpp.opencv_imgproc
+import org.bytedeco.javacpp.opencv_imgproc.*
 
 fun main(args: Array<String>) {
-    val img = loadImage("square.png")
+    val img = loadImage("petri_1.jpg")
     val imgMat = imgToMat(img)
     val gray = grayImage(imgMat)
     val thresh = threshold(gray, 127.0, 255.0, ThresholdTypes.BINARY_INVERTED)
@@ -11,8 +13,24 @@ fun main(args: Array<String>) {
     val processedContours = processContours(contours)
     for(i in 0 until processedContours.size) {
         println("Shape #$i")
-        processedContours[i].forEach { println(pointToString(it)) }
+        processedContours[i].forEach { println(pointToString(it))
+
+            opencv_imgproc.drawMarker(imgMat,opencv_core.Point(it.x(),it.y()), opencv_core.Scalar( 0.0,255.0,0.0,1.0),0,20,1,8)
+
+        println("voici - > "+it.x()+" || "+it.y())
+        }
     }
+
+
+    //Changer la taille de l'image ->
+    /*val imgMat2 = imgToMat(img)
+    resize(imgMat2,imgMat2, opencv_core.Size(1400,700))
+    imshow("ImageResized",imgMat2)*/
+
+
+
+    cvShowImage("img",img)
+    cvWaitKey()
     /*for (i in 0 until contours.size()) {
         val cnt = contours[i]
         val point = cnt[0,0]
@@ -71,6 +89,8 @@ fun processContours(contours: MatVector) : List<List<opencv_core.Point>> {
 }
 
 fun pointToString(point: opencv_core.Point) = "opencv_core.Point[x=${point.x()},y=${point.y()}]"
+
+fun pointToPoint(point: opencv_core.Point) = opencv_core.Point(point.x(),point.y())
 
 operator fun opencv_core.Mat.get(row: Int, col: Int) = opencv_core.Point(this.ptr(row, col))
 
