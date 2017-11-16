@@ -9,10 +9,10 @@ Image editing tasks concern either global changes (color/intensity corrections, 
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{group__photo__clone_ga38e8a5ac80ca104670989b92ccd186d0}\label{group__photo__clone_ga38e8a5ac80ca104670989b92ccd186d0}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+seamless\+Clone} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Mat mask, @By\+Val Point p, @By\+Val Mat blend, int flags)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+seamless\+Clone} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Mat mask, @By\+Val fr.antproject.utils.Point p, @By\+Val Mat blend, int flags)
 \item 
 \mbox{\Hypertarget{group__photo__clone_gaab8f80a1d64b87472f8b1ef27a00f6c3}\label{group__photo__clone_gaab8f80a1d64b87472f8b1ef27a00f6c3}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+seamless\+Clone} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val U\+Mat mask, @By\+Val Point p, @By\+Val U\+Mat blend, int flags)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+seamless\+Clone} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val U\+Mat mask, @By\+Val fr.antproject.utils.Point p, @By\+Val U\+Mat blend, int flags)
 \item 
 static native void \hyperlink{group__photo__clone_ga3560d162cd540795fe14ae7e98a7a9a2}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+color\+Change} (@By\+Val Mat src, @By\+Val Mat mask, @By\+Val Mat dst, float red\+\_\+mul, float green\+\_\+mul, float blue\+\_\+mul)
 \begin{DoxyCompactList}\small\item\em Given an original color image, two differently colored versions of this image can be mixed seamlessly. \end{DoxyCompactList}\item 
@@ -36,13 +36,13 @@ static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+ill
 \mbox{\Hypertarget{group__photo__clone_ga3923642ffb0eae09d7d9926c8b91dbed}\label{group__photo__clone_ga3923642ffb0eae09d7d9926c8b91dbed}} 
 static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+illumination\+Change} (@By\+Val U\+Mat src, @By\+Val U\+Mat mask, @By\+Val U\+Mat dst)
 \item 
-static native void \hyperlink{group__photo__clone_ga8d42433222e7742e59e275e148c3d4a5}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+texture\+Flattening} (@By\+Val Mat src, @By\+Val Mat mask, @By\+Val Mat dst, float low\+\_\+threshold, float high\+\_\+threshold, int kernel\+\_\+size)
+static native void \hyperlink{group__photo__clone_ga8d42433222e7742e59e275e148c3d4a5}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+texture\+Flattening} (@By\+Val Mat src, @By\+Val Mat mask, @By\+Val Mat dst, float low\+\_\+fr.antproject.utils.threshold, float high\+\_\+fr.antproject.utils.threshold, int kernel\+\_\+size)
 \begin{DoxyCompactList}\small\item\em By retaining only the gradients at edge locations, before integrating with the Poisson solver, one washes out the texture of the selected region, giving its contents a flat aspect. Here Canny Edge Detector is used. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{group__photo__clone_gac122bd4168012e6d0c3fc44d3fa71811}\label{group__photo__clone_gac122bd4168012e6d0c3fc44d3fa71811}} 
 static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+texture\+Flattening} (@By\+Val Mat src, @By\+Val Mat mask, @By\+Val Mat dst)
 \item 
 \mbox{\Hypertarget{group__photo__clone_gacf724a2ceb10e438d8944e43f003bba6}\label{group__photo__clone_gacf724a2ceb10e438d8944e43f003bba6}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+texture\+Flattening} (@By\+Val U\+Mat src, @By\+Val U\+Mat mask, @By\+Val U\+Mat dst, float low\+\_\+threshold, float high\+\_\+threshold, int kernel\+\_\+size)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+texture\+Flattening} (@By\+Val U\+Mat src, @By\+Val U\+Mat mask, @By\+Val U\+Mat dst, float low\+\_\+fr.antproject.utils.threshold, float high\+\_\+fr.antproject.utils.threshold, int kernel\+\_\+size)
 \item 
 \mbox{\Hypertarget{group__photo__clone_ga2a2550084b65b902ccd13d98370b43b7}\label{group__photo__clone_ga2a2550084b65b902ccd13d98370b43b7}} 
 static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+texture\+Flattening} (@By\+Val U\+Mat src, @By\+Val U\+Mat mask, @By\+Val U\+Mat dst)
@@ -62,7 +62,7 @@ Image editing tasks concern either global changes (color/intensity corrections, 
 \hline
 {\em mask} & Input 8-\/bit 1 or 3-\/channel image. \\
 \hline
-{\em p} & Point in dst image where object is placed. \\
+{\em p} & fr.antproject.utils.Point in dst image where object is placed. \\
 \hline
 {\em blend} & Output image with the same size and type as dst. \\
 \hline
@@ -129,7 +129,7 @@ This is useful to highlight under-\/exposed foreground objects or to reduce spec
 \index{Seamless Cloning@{Seamless Cloning}!texture\+Flattening@{texture\+Flattening}}
 \index{texture\+Flattening@{texture\+Flattening}!Seamless Cloning@{Seamless Cloning}}
 \subsubsection{\texorpdfstring{texture\+Flattening()}{textureFlattening()}}
-{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+texture\+Flattening (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{mask,  }\item[{@By\+Val Mat}]{dst,  }\item[{float}]{low\+\_\+threshold,  }\item[{float}]{high\+\_\+threshold,  }\item[{int}]{kernel\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+texture\+Flattening (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{mask,  }\item[{@By\+Val Mat}]{dst,  }\item[{float}]{low\+\_\+fr.antproject.utils.threshold,  }\item[{float}]{high\+\_\+fr.antproject.utils.threshold,  }\item[{int}]{kernel\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -143,9 +143,9 @@ By retaining only the gradients at edge locations, before integrating with the P
 \hline
 {\em dst} & Output image with the same size and type as src. \\
 \hline
-{\em low\+\_\+threshold} & Range from 0 to 100. \\
+{\em low\+\_\+fr.antproject.utils.threshold} & Range from 0 to 100. \\
 \hline
-{\em high\+\_\+threshold} & Value $>$ 100. \\
+{\em high\+\_\+fr.antproject.utils.threshold} & Value $>$ 100. \\
 \hline
 {\em kernel\+\_\+size} & The size of the Sobel kernel to be used. \\
 \hline

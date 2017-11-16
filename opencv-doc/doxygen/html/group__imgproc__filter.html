@@ -82,7 +82,7 @@ Modules</h2></td></tr>
 <tr class="memdesc:group__imgproc__transform"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dilates an image by using a specific structuring element. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__imgproc__misc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__misc.html">Miscellaneous Image Transformations</a></td></tr>
-<tr class="memdesc:group__imgproc__misc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a fixed-level threshold to each array element. <br /></td></tr>
+<tr class="memdesc:group__imgproc__misc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a fixed-level fr.antproject.utils.threshold to each array element. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__imgproc__motion"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__motion.html">Motion Analysis and Object Tracking</a></td></tr>
 <tr class="memdesc:group__imgproc__motion"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an image to the accumulator. <br /></td></tr>
@@ -128,7 +128,7 @@ static native Mat&#160;</td><td class="memItemRight" valign="bottom"><b>org.byte
 <tr class="separator:gae7ca988b2551ca6bc75e4ec85bb116fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa77a7ec53d115ff76de4c8797d6d83f7"><td class="memItemLeft" align="right" valign="top">static native Scalar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#gaa77a7ec53d115ff76de4c8797d6d83f7">org.bytedeco.javacpp.opencv_imgproc.morphologyDefaultBorderValue</a> ()</td></tr>
 <tr class="separator:gaa77a7ec53d115ff76de4c8797d6d83f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga18af407581ba537b9095d14090cce31a"><td class="memItemLeft" align="right" valign="top">static native Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga18af407581ba537b9095d14090cce31a">org.bytedeco.javacpp.opencv_imgproc.getStructuringElement</a> (int shape, @ByVal Size ksize, @ByVal(nullValue=&quot;cv::Point(-1,-1)&quot;) Point anchor)</td></tr>
+<tr class="memitem:ga18af407581ba537b9095d14090cce31a"><td class="memItemLeft" align="right" valign="top">static native Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga18af407581ba537b9095d14090cce31a">org.bytedeco.javacpp.opencv_imgproc.getStructuringElement</a> (int shape, @ByVal Size ksize, @ByVal(nullValue=&quot;cv::fr.antproject.utils.Point(-1,-1)&quot;) fr.antproject.utils.Point anchor)</td></tr>
 <tr class="memdesc:ga18af407581ba537b9095d14090cce31a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a structuring element of the specified size and shape for morphological operations.  <a href="#ga18af407581ba537b9095d14090cce31a">More...</a><br /></td></tr>
 <tr class="separator:ga18af407581ba537b9095d14090cce31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0840116f63e9ca427336aed0a2d8ca55"><td class="memItemLeft" align="right" valign="top"><a id="ga0840116f63e9ca427336aed0a2d8ca55"></a>
@@ -164,62 +164,62 @@ static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.byt
 <tr class="memitem:ga4365573ba2b1f21196b689634f7bcfea"><td class="memItemLeft" align="right" valign="top"><a id="ga4365573ba2b1f21196b689634f7bcfea"></a>
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.bilateralFilter</b> ( @ByVal UMat src, @ByVal UMat dst, int d, double sigmaColor, double sigmaSpace)</td></tr>
 <tr class="separator:ga4365573ba2b1f21196b689634f7bcfea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga479aa13dd62a69ab5b1a1eac3324ab23"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga479aa13dd62a69ab5b1a1eac3324ab23">org.bytedeco.javacpp.opencv_imgproc.boxFilter</a> ( @ByVal Mat src, @ByVal Mat dst, int ddepth, @ByVal Size ksize, @ByVal(nullValue=&quot;cv::Point(-1,-1)&quot;) Point anchor, @Cast(&quot;bool&quot;) boolean normalize, int borderType)</td></tr>
+<tr class="memitem:ga479aa13dd62a69ab5b1a1eac3324ab23"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga479aa13dd62a69ab5b1a1eac3324ab23">org.bytedeco.javacpp.opencv_imgproc.boxFilter</a> ( @ByVal Mat src, @ByVal Mat dst, int ddepth, @ByVal Size ksize, @ByVal(nullValue=&quot;cv::fr.antproject.utils.Point(-1,-1)&quot;) fr.antproject.utils.Point anchor, @Cast(&quot;bool&quot;) boolean normalize, int borderType)</td></tr>
 <tr class="memdesc:ga479aa13dd62a69ab5b1a1eac3324ab23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blurs an image using the box filter.  <a href="#ga479aa13dd62a69ab5b1a1eac3324ab23">More...</a><br /></td></tr>
 <tr class="separator:ga479aa13dd62a69ab5b1a1eac3324ab23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabd35586e95d9c496428ff5883fb88c1a"><td class="memItemLeft" align="right" valign="top"><a id="gabd35586e95d9c496428ff5883fb88c1a"></a>
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.boxFilter</b> ( @ByVal Mat src, @ByVal Mat dst, int ddepth, @ByVal Size ksize)</td></tr>
 <tr class="separator:gabd35586e95d9c496428ff5883fb88c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9a5b129f9524b7ce80d094e58a5977a6"><td class="memItemLeft" align="right" valign="top"><a id="ga9a5b129f9524b7ce80d094e58a5977a6"></a>
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.boxFilter</b> ( @ByVal UMat src, @ByVal UMat dst, int ddepth, @ByVal Size ksize, @ByVal(nullValue=&quot;cv::Point(-1,-1)&quot;) Point anchor, @Cast(&quot;bool&quot;) boolean normalize, int borderType)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.boxFilter</b> ( @ByVal UMat src, @ByVal UMat dst, int ddepth, @ByVal Size ksize, @ByVal(nullValue=&quot;cv::fr.antproject.utils.Point(-1,-1)&quot;) fr.antproject.utils.Point anchor, @Cast(&quot;bool&quot;) boolean normalize, int borderType)</td></tr>
 <tr class="separator:ga9a5b129f9524b7ce80d094e58a5977a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9130f8858ef9c58528215e2b91a7b1fe"><td class="memItemLeft" align="right" valign="top"><a id="ga9130f8858ef9c58528215e2b91a7b1fe"></a>
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.boxFilter</b> ( @ByVal UMat src, @ByVal UMat dst, int ddepth, @ByVal Size ksize)</td></tr>
 <tr class="separator:ga9130f8858ef9c58528215e2b91a7b1fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac3bb5f90c81da13be223978755c103e2"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#gac3bb5f90c81da13be223978755c103e2">org.bytedeco.javacpp.opencv_imgproc.sqrBoxFilter</a> ( @ByVal Mat _src, @ByVal Mat _dst, int ddepth, @ByVal Size ksize, @ByVal(nullValue=&quot;cv::Point(-1, -1)&quot;) Point anchor, @Cast(&quot;bool&quot;) boolean normalize, int borderType)</td></tr>
+<tr class="memitem:gac3bb5f90c81da13be223978755c103e2"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#gac3bb5f90c81da13be223978755c103e2">org.bytedeco.javacpp.opencv_imgproc.sqrBoxFilter</a> ( @ByVal Mat _src, @ByVal Mat _dst, int ddepth, @ByVal Size ksize, @ByVal(nullValue=&quot;cv::fr.antproject.utils.Point(-1, -1)&quot;) fr.antproject.utils.Point anchor, @Cast(&quot;bool&quot;) boolean normalize, int borderType)</td></tr>
 <tr class="memdesc:gac3bb5f90c81da13be223978755c103e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the normalized sum of squares of the pixel values overlapping the filter.  <a href="#gac3bb5f90c81da13be223978755c103e2">More...</a><br /></td></tr>
 <tr class="separator:gac3bb5f90c81da13be223978755c103e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac69e2c5aa5aa8e1b1bf2ded1097813f1"><td class="memItemLeft" align="right" valign="top"><a id="gac69e2c5aa5aa8e1b1bf2ded1097813f1"></a>
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.sqrBoxFilter</b> ( @ByVal Mat _src, @ByVal Mat _dst, int ddepth, @ByVal Size ksize)</td></tr>
 <tr class="separator:gac69e2c5aa5aa8e1b1bf2ded1097813f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae438b3dd3418a0a16ebe6ccab65f8260"><td class="memItemLeft" align="right" valign="top"><a id="gae438b3dd3418a0a16ebe6ccab65f8260"></a>
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.sqrBoxFilter</b> ( @ByVal UMat _src, @ByVal UMat _dst, int ddepth, @ByVal Size ksize, @ByVal(nullValue=&quot;cv::Point(-1, -1)&quot;) Point anchor, @Cast(&quot;bool&quot;) boolean normalize, int borderType)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.sqrBoxFilter</b> ( @ByVal UMat _src, @ByVal UMat _dst, int ddepth, @ByVal Size ksize, @ByVal(nullValue=&quot;cv::fr.antproject.utils.Point(-1, -1)&quot;) fr.antproject.utils.Point anchor, @Cast(&quot;bool&quot;) boolean normalize, int borderType)</td></tr>
 <tr class="separator:gae438b3dd3418a0a16ebe6ccab65f8260"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae60998a04ea1d80b4998496348eb7dda"><td class="memItemLeft" align="right" valign="top"><a id="gae60998a04ea1d80b4998496348eb7dda"></a>
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.sqrBoxFilter</b> ( @ByVal UMat _src, @ByVal UMat _dst, int ddepth, @ByVal Size ksize)</td></tr>
 <tr class="separator:gae60998a04ea1d80b4998496348eb7dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2878e087c0294ad9e5f1996c07b303b4"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga2878e087c0294ad9e5f1996c07b303b4">org.bytedeco.javacpp.opencv_imgproc.blur</a> ( @ByVal Mat src, @ByVal Mat dst, @ByVal Size ksize, @ByVal(nullValue=&quot;cv::Point(-1,-1)&quot;) Point anchor, int borderType)</td></tr>
+<tr class="memitem:ga2878e087c0294ad9e5f1996c07b303b4"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga2878e087c0294ad9e5f1996c07b303b4">org.bytedeco.javacpp.opencv_imgproc.blur</a> ( @ByVal Mat src, @ByVal Mat dst, @ByVal Size ksize, @ByVal(nullValue=&quot;cv::fr.antproject.utils.Point(-1,-1)&quot;) fr.antproject.utils.Point anchor, int borderType)</td></tr>
 <tr class="memdesc:ga2878e087c0294ad9e5f1996c07b303b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blurs an image using the normalized box filter.  <a href="#ga2878e087c0294ad9e5f1996c07b303b4">More...</a><br /></td></tr>
 <tr class="separator:ga2878e087c0294ad9e5f1996c07b303b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4830c7c2c9e1f24506bac7bf41da80f0"><td class="memItemLeft" align="right" valign="top"><a id="ga4830c7c2c9e1f24506bac7bf41da80f0"></a>
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.blur</b> ( @ByVal Mat src, @ByVal Mat dst, @ByVal Size ksize)</td></tr>
 <tr class="separator:ga4830c7c2c9e1f24506bac7bf41da80f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf8d9d0c058877480d92f97c45f328347"><td class="memItemLeft" align="right" valign="top"><a id="gaf8d9d0c058877480d92f97c45f328347"></a>
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.blur</b> ( @ByVal UMat src, @ByVal UMat dst, @ByVal Size ksize, @ByVal(nullValue=&quot;cv::Point(-1,-1)&quot;) Point anchor, int borderType)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.blur</b> ( @ByVal UMat src, @ByVal UMat dst, @ByVal Size ksize, @ByVal(nullValue=&quot;cv::fr.antproject.utils.Point(-1,-1)&quot;) fr.antproject.utils.Point anchor, int borderType)</td></tr>
 <tr class="separator:gaf8d9d0c058877480d92f97c45f328347"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8c4367bdc80978100e7b53b8db658752"><td class="memItemLeft" align="right" valign="top"><a id="ga8c4367bdc80978100e7b53b8db658752"></a>
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.blur</b> ( @ByVal UMat src, @ByVal UMat dst, @ByVal Size ksize)</td></tr>
 <tr class="separator:ga8c4367bdc80978100e7b53b8db658752"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac272007b4c23c22cf0fd246522a2a34b"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#gac272007b4c23c22cf0fd246522a2a34b">org.bytedeco.javacpp.opencv_imgproc.filter2D</a> ( @ByVal Mat src, @ByVal Mat dst, int ddepth, @ByVal Mat kernel, @ByVal(nullValue=&quot;cv::Point(-1,-1)&quot;) Point anchor, double delta, int borderType)</td></tr>
+<tr class="memitem:gac272007b4c23c22cf0fd246522a2a34b"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#gac272007b4c23c22cf0fd246522a2a34b">org.bytedeco.javacpp.opencv_imgproc.filter2D</a> ( @ByVal Mat src, @ByVal Mat dst, int ddepth, @ByVal Mat kernel, @ByVal(nullValue=&quot;cv::fr.antproject.utils.Point(-1,-1)&quot;) fr.antproject.utils.Point anchor, double delta, int borderType)</td></tr>
 <tr class="memdesc:gac272007b4c23c22cf0fd246522a2a34b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolves an image with the kernel.  <a href="#gac272007b4c23c22cf0fd246522a2a34b">More...</a><br /></td></tr>
 <tr class="separator:gac272007b4c23c22cf0fd246522a2a34b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga32707e41b29e2f45a57863769aed9dda"><td class="memItemLeft" align="right" valign="top"><a id="ga32707e41b29e2f45a57863769aed9dda"></a>
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.filter2D</b> ( @ByVal Mat src, @ByVal Mat dst, int ddepth, @ByVal Mat kernel)</td></tr>
 <tr class="separator:ga32707e41b29e2f45a57863769aed9dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaae4b6c9ace5e9419ee9a3f1f883bda50"><td class="memItemLeft" align="right" valign="top"><a id="gaae4b6c9ace5e9419ee9a3f1f883bda50"></a>
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.filter2D</b> ( @ByVal UMat src, @ByVal UMat dst, int ddepth, @ByVal UMat kernel, @ByVal(nullValue=&quot;cv::Point(-1,-1)&quot;) Point anchor, double delta, int borderType)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.filter2D</b> ( @ByVal UMat src, @ByVal UMat dst, int ddepth, @ByVal UMat kernel, @ByVal(nullValue=&quot;cv::fr.antproject.utils.Point(-1,-1)&quot;) fr.antproject.utils.Point anchor, double delta, int borderType)</td></tr>
 <tr class="separator:gaae4b6c9ace5e9419ee9a3f1f883bda50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab00b34dd987b71bf76d7106f14642f4e"><td class="memItemLeft" align="right" valign="top"><a id="gab00b34dd987b71bf76d7106f14642f4e"></a>
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.filter2D</b> ( @ByVal UMat src, @ByVal UMat dst, int ddepth, @ByVal UMat kernel)</td></tr>
 <tr class="separator:gab00b34dd987b71bf76d7106f14642f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga716654f3d25206913e265bf388fd83d0"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga716654f3d25206913e265bf388fd83d0">org.bytedeco.javacpp.opencv_imgproc.sepFilter2D</a> ( @ByVal Mat src, @ByVal Mat dst, int ddepth, @ByVal Mat kernelX, @ByVal Mat kernelY, @ByVal(nullValue=&quot;cv::Point(-1,-1)&quot;) Point anchor, double delta, int borderType)</td></tr>
+<tr class="memitem:ga716654f3d25206913e265bf388fd83d0"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga716654f3d25206913e265bf388fd83d0">org.bytedeco.javacpp.opencv_imgproc.sepFilter2D</a> ( @ByVal Mat src, @ByVal Mat dst, int ddepth, @ByVal Mat kernelX, @ByVal Mat kernelY, @ByVal(nullValue=&quot;cv::fr.antproject.utils.Point(-1,-1)&quot;) fr.antproject.utils.Point anchor, double delta, int borderType)</td></tr>
 <tr class="memdesc:ga716654f3d25206913e265bf388fd83d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a separable linear filter to an image.  <a href="#ga716654f3d25206913e265bf388fd83d0">More...</a><br /></td></tr>
 <tr class="separator:ga716654f3d25206913e265bf388fd83d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf2d8d962ce153aab98ee6c5d0637c731"><td class="memItemLeft" align="right" valign="top"><a id="gaf2d8d962ce153aab98ee6c5d0637c731"></a>
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.sepFilter2D</b> ( @ByVal Mat src, @ByVal Mat dst, int ddepth, @ByVal Mat kernelX, @ByVal Mat kernelY)</td></tr>
 <tr class="separator:gaf2d8d962ce153aab98ee6c5d0637c731"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2035b246fa133c96e4469b8566b7674b"><td class="memItemLeft" align="right" valign="top"><a id="ga2035b246fa133c96e4469b8566b7674b"></a>
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.sepFilter2D</b> ( @ByVal UMat src, @ByVal UMat dst, int ddepth, @ByVal UMat kernelX, @ByVal UMat kernelY, @ByVal(nullValue=&quot;cv::Point(-1,-1)&quot;) Point anchor, double delta, int borderType)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.sepFilter2D</b> ( @ByVal UMat src, @ByVal UMat dst, int ddepth, @ByVal UMat kernelX, @ByVal UMat kernelY, @ByVal(nullValue=&quot;cv::fr.antproject.utils.Point(-1,-1)&quot;) fr.antproject.utils.Point anchor, double delta, int borderType)</td></tr>
 <tr class="separator:ga2035b246fa133c96e4469b8566b7674b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0581b57344a84bf92ed8304a31c0d5ae"><td class="memItemLeft" align="right" valign="top"><a id="ga0581b57344a84bf92ed8304a31c0d5ae"></a>
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.sepFilter2D</b> ( @ByVal UMat src, @ByVal UMat dst, int ddepth, @ByVal UMat kernelX, @ByVal UMat kernelY)</td></tr>
@@ -272,14 +272,14 @@ static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.byt
 <tr class="memitem:gaef7e4f2a12bc667667e94f5706fc7576"><td class="memItemLeft" align="right" valign="top"><a id="gaef7e4f2a12bc667667e94f5706fc7576"></a>
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.Laplacian</b> ( @ByVal UMat src, @ByVal UMat dst, int ddepth)</td></tr>
 <tr class="separator:gaef7e4f2a12bc667667e94f5706fc7576"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8c0cbcc8dd271aada560698924d19cb2"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga8c0cbcc8dd271aada560698924d19cb2">org.bytedeco.javacpp.opencv_imgproc.erode</a> ( @ByVal Mat src, @ByVal Mat dst, @ByVal Mat kernel, @ByVal(nullValue=&quot;cv::Point(-1,-1)&quot;) Point anchor, int iterations, int borderType, @Const @ByRef(nullValue=&quot;cv::Scalar(cv::morphologyDefaultBorderValue())&quot;) Scalar borderValue)</td></tr>
+<tr class="memitem:ga8c0cbcc8dd271aada560698924d19cb2"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga8c0cbcc8dd271aada560698924d19cb2">org.bytedeco.javacpp.opencv_imgproc.erode</a> ( @ByVal Mat src, @ByVal Mat dst, @ByVal Mat kernel, @ByVal(nullValue=&quot;cv::fr.antproject.utils.Point(-1,-1)&quot;) fr.antproject.utils.Point anchor, int iterations, int borderType, @Const @ByRef(nullValue=&quot;cv::Scalar(cv::morphologyDefaultBorderValue())&quot;) Scalar borderValue)</td></tr>
 <tr class="memdesc:ga8c0cbcc8dd271aada560698924d19cb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erodes an image by using a specific structuring element.  <a href="#ga8c0cbcc8dd271aada560698924d19cb2">More...</a><br /></td></tr>
 <tr class="separator:ga8c0cbcc8dd271aada560698924d19cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga650836745d55fe30014d0893f9bc7571"><td class="memItemLeft" align="right" valign="top"><a id="ga650836745d55fe30014d0893f9bc7571"></a>
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.erode</b> ( @ByVal Mat src, @ByVal Mat dst, @ByVal Mat kernel)</td></tr>
 <tr class="separator:ga650836745d55fe30014d0893f9bc7571"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga49298d4b54f3535b97b7b03ed29c978a"><td class="memItemLeft" align="right" valign="top"><a id="ga49298d4b54f3535b97b7b03ed29c978a"></a>
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.erode</b> ( @ByVal UMat src, @ByVal UMat dst, @ByVal UMat kernel, @ByVal(nullValue=&quot;cv::Point(-1,-1)&quot;) Point anchor, int iterations, int borderType, @Const @ByRef(nullValue=&quot;cv::Scalar(cv::morphologyDefaultBorderValue())&quot;) Scalar borderValue)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.erode</b> ( @ByVal UMat src, @ByVal UMat dst, @ByVal UMat kernel, @ByVal(nullValue=&quot;cv::fr.antproject.utils.Point(-1,-1)&quot;) fr.antproject.utils.Point anchor, int iterations, int borderType, @Const @ByRef(nullValue=&quot;cv::Scalar(cv::morphologyDefaultBorderValue())&quot;) Scalar borderValue)</td></tr>
 <tr class="separator:ga49298d4b54f3535b97b7b03ed29c978a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa69046fef163679ef621d83d2b3d3862"><td class="memItemLeft" align="right" valign="top"><a id="gaa69046fef163679ef621d83d2b3d3862"></a>
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.erode</b> ( @ByVal UMat src, @ByVal UMat dst, @ByVal UMat kernel)</td></tr>
@@ -308,11 +308,11 @@ static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.byt
 <tr class="memitem:ga2ef5bddb838547a49fedab3518de3da3"><td class="memItemLeft" align="right" valign="top"><a id="ga2ef5bddb838547a49fedab3518de3da3"></a>
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.pyrUp</b> ( @ByVal UMat src, @ByVal UMat dst)</td></tr>
 <tr class="separator:ga2ef5bddb838547a49fedab3518de3da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga418b215211fecb0c256c9db02d80dd0e"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga418b215211fecb0c256c9db02d80dd0e">org.bytedeco.javacpp.opencv_imgproc.buildPyramid</a> ( @ByVal Mat src, @ByVal MatVector dst, int maxlevel, int borderType)</td></tr>
+<tr class="memitem:ga418b215211fecb0c256c9db02d80dd0e"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__imgproc__filter.html#ga418b215211fecb0c256c9db02d80dd0e">org.bytedeco.javacpp.opencv_imgproc.buildPyramid</a> ( @ByVal Mat src, @ByVal fr.antproject.utils.MatVector dst, int maxlevel, int borderType)</td></tr>
 <tr class="memdesc:ga418b215211fecb0c256c9db02d80dd0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the Gaussian pyramid for an image.  <a href="#ga418b215211fecb0c256c9db02d80dd0e">More...</a><br /></td></tr>
 <tr class="separator:ga418b215211fecb0c256c9db02d80dd0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga17e294004abf5bf35e6ba1e8932d4068"><td class="memItemLeft" align="right" valign="top"><a id="ga17e294004abf5bf35e6ba1e8932d4068"></a>
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.buildPyramid</b> ( @ByVal Mat src, @ByVal MatVector dst, int maxlevel)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.buildPyramid</b> ( @ByVal Mat src, @ByVal fr.antproject.utils.MatVector dst, int maxlevel)</td></tr>
 <tr class="separator:ga17e294004abf5bf35e6ba1e8932d4068"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga06bef881b57f22d92ba76260f6726637"><td class="memItemLeft" align="right" valign="top"><a id="ga06bef881b57f22d92ba76260f6726637"></a>
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.buildPyramid</b> ( @ByVal Mat src, @ByVal UMatVector dst, int maxlevel, int borderType)</td></tr>
@@ -321,10 +321,10 @@ static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.byt
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.buildPyramid</b> ( @ByVal Mat src, @ByVal UMatVector dst, int maxlevel)</td></tr>
 <tr class="separator:ga5bcefcff889f50651f9009cc9c277fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga23df81c790fcf208aaf8100c12e982e4"><td class="memItemLeft" align="right" valign="top"><a id="ga23df81c790fcf208aaf8100c12e982e4"></a>
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.buildPyramid</b> ( @ByVal UMat src, @ByVal MatVector dst, int maxlevel, int borderType)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.buildPyramid</b> ( @ByVal UMat src, @ByVal fr.antproject.utils.MatVector dst, int maxlevel, int borderType)</td></tr>
 <tr class="separator:ga23df81c790fcf208aaf8100c12e982e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0d03e58e45765e1a2c32da446782d85f"><td class="memItemLeft" align="right" valign="top"><a id="ga0d03e58e45765e1a2c32da446782d85f"></a>
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.buildPyramid</b> ( @ByVal UMat src, @ByVal MatVector dst, int maxlevel)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.buildPyramid</b> ( @ByVal UMat src, @ByVal fr.antproject.utils.MatVector dst, int maxlevel)</td></tr>
 <tr class="separator:ga0d03e58e45765e1a2c32da446782d85f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaec3a86fcf530d0110b9dcde9e37c73e3"><td class="memItemLeft" align="right" valign="top"><a id="gaec3a86fcf530d0110b9dcde9e37c73e3"></a>
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_imgproc.buildPyramid</b> ( @ByVal UMat src, @ByVal UMatVector dst, int maxlevel, int borderType)</td></tr>
@@ -631,7 +631,7 @@ border" extrapolation method), and so on. OpenCV enables you to specify the extr
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">@ByVal(nullValue=&quot;cv::Point(-1,-1)&quot;) Point&#160;</td>
+          <td class="paramtype">@ByVal(nullValue=&quot;cv::fr.antproject.utils.Point(-1,-1)&quot;) fr.antproject.utils.Point&#160;</td>
           <td class="paramname"><em>anchor</em>, </td>
         </tr>
         <tr>
@@ -664,7 +664,7 @@ border" extrapolation method), and so on. OpenCV enables you to specify the extr
     <tr><td class="paramname">src</td><td>input image; it can have any number of channels, which are processed independently, but the depth should be CV_8U, CV_16U, CV_16S, CV_32F or CV_64F. </td></tr>
     <tr><td class="paramname">dst</td><td>output image of the same size and type as src. </td></tr>
     <tr><td class="paramname">ksize</td><td>blurring kernel size. </td></tr>
-    <tr><td class="paramname">anchor</td><td>anchor point; default value Point(-1,-1) means that the anchor is at the kernel center. </td></tr>
+    <tr><td class="paramname">anchor</td><td>anchor point; default value fr.antproject.utils.Point(-1,-1) means that the anchor is at the kernel center. </td></tr>
     <tr><td class="paramname">borderType</td><td>border mode used to extrapolate pixels outside of the image, see cv::BorderTypes </td></tr>
   </table>
   </dd>
@@ -709,7 +709,7 @@ border" extrapolation method), and so on. OpenCV enables you to specify the extr
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">@ByVal(nullValue=&quot;cv::Point(-1,-1)&quot;) Point&#160;</td>
+          <td class="paramtype">@ByVal(nullValue=&quot;cv::fr.antproject.utils.Point(-1,-1)&quot;) fr.antproject.utils.Point&#160;</td>
           <td class="paramname"><em>anchor</em>, </td>
         </tr>
         <tr>
@@ -753,7 +753,7 @@ border" extrapolation method), and so on. OpenCV enables you to specify the extr
     <tr><td class="paramname">dst</td><td>output image of the same size and type as src. </td></tr>
     <tr><td class="paramname">ddepth</td><td>the output image depth (-1 to use src.depth()). </td></tr>
     <tr><td class="paramname">ksize</td><td>blurring kernel size. </td></tr>
-    <tr><td class="paramname">anchor</td><td>anchor point; default value Point(-1,-1) means that the anchor is at the kernel center. </td></tr>
+    <tr><td class="paramname">anchor</td><td>anchor point; default value fr.antproject.utils.Point(-1,-1) means that the anchor is at the kernel center. </td></tr>
     <tr><td class="paramname">normalize</td><td>flag, specifying whether the kernel is normalized by its area or not. </td></tr>
     <tr><td class="paramname">borderType</td><td>border mode used to extrapolate pixels outside of the image, see cv::BorderTypes </td></tr>
   </table>
@@ -781,7 +781,7 @@ border" extrapolation method), and so on. OpenCV enables you to specify the extr
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">@ByVal MatVector&#160;</td>
+          <td class="paramtype">@ByVal fr.antproject.utils.MatVector&#160;</td>
           <td class="paramname"><em>dst</em>, </td>
         </tr>
         <tr>
@@ -905,7 +905,7 @@ border" extrapolation method), and so on. OpenCV enables you to specify the extr
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">@ByVal(nullValue=&quot;cv::Point(-1,-1)&quot;) Point&#160;</td>
+          <td class="paramtype">@ByVal(nullValue=&quot;cv::fr.antproject.utils.Point(-1,-1)&quot;) fr.antproject.utils.Point&#160;</td>
           <td class="paramname"><em>anchor</em>, </td>
         </tr>
         <tr>
@@ -997,7 +997,7 @@ border" extrapolation method), and so on. OpenCV enables you to specify the extr
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">@ByVal(nullValue=&quot;cv::Point(-1,-1)&quot;) Point&#160;</td>
+          <td class="paramtype">@ByVal(nullValue=&quot;cv::fr.antproject.utils.Point(-1,-1)&quot;) fr.antproject.utils.Point&#160;</td>
           <td class="paramname"><em>anchor</em>, </td>
         </tr>
         <tr>
@@ -1310,7 +1310,7 @@ border" extrapolation method), and so on. OpenCV enables you to specify the extr
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">@ByVal(nullValue=&quot;cv::Point(-1,-1)&quot;) Point&#160;</td>
+          <td class="paramtype">@ByVal(nullValue=&quot;cv::fr.antproject.utils.Point(-1,-1)&quot;) fr.antproject.utils.Point&#160;</td>
           <td class="paramname"><em>anchor</em>&#160;</td>
         </tr>
         <tr>
@@ -1711,7 +1711,7 @@ border" extrapolation method), and so on. OpenCV enables you to specify the extr
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">@ByVal(nullValue=&quot;cv::Point(-1,-1)&quot;) Point&#160;</td>
+          <td class="paramtype">@ByVal(nullValue=&quot;cv::fr.antproject.utils.Point(-1,-1)&quot;) fr.antproject.utils.Point&#160;</td>
           <td class="paramname"><em>anchor</em>, </td>
         </tr>
         <tr>
@@ -1975,7 +1975,7 @@ border" extrapolation method), and so on. OpenCV enables you to specify the extr
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">@ByVal(nullValue=&quot;cv::Point(-1, -1)&quot;) Point&#160;</td>
+          <td class="paramtype">@ByVal(nullValue=&quot;cv::fr.antproject.utils.Point(-1, -1)&quot;) fr.antproject.utils.Point&#160;</td>
           <td class="paramname"><em>anchor</em>, </td>
         </tr>
         <tr>
@@ -2012,7 +2012,7 @@ border" extrapolation method), and so on. OpenCV enables you to specify the extr
     <tr><td class="paramname">_dst</td><td>output image of the same size and type as _src </td></tr>
     <tr><td class="paramname">ddepth</td><td>the output image depth (-1 to use src.depth()) </td></tr>
     <tr><td class="paramname">ksize</td><td>kernel size </td></tr>
-    <tr><td class="paramname">anchor</td><td>kernel anchor point. The default value of Point(-1, -1) denotes that the anchor is at the kernel center. </td></tr>
+    <tr><td class="paramname">anchor</td><td>kernel anchor point. The default value of fr.antproject.utils.Point(-1, -1) denotes that the anchor is at the kernel center. </td></tr>
     <tr><td class="paramname">normalize</td><td>flag, specifying whether the kernel is to be normalized by it's area or not. </td></tr>
     <tr><td class="paramname">borderType</td><td>border mode used to extrapolate pixels outside of the image, see cv::BorderTypes </td></tr>
   </table>

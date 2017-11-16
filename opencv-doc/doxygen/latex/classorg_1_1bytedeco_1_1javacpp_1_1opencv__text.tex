@@ -34,7 +34,7 @@ class {\bfseries Std\+String\+Vector}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static native E\+R\+Filter \hyperlink{group__text__detect_ga0c01c194688152f569f28f7845cbfbaf}{create\+E\+R\+Filter\+N\+M1} (@Ptr E\+R\+Filter.\+Callback cb, int threshold\+Delta, float min\+Area, float max\+Area, float min\+Probability, @Cast(\char`\"{}bool\char`\"{}) boolean non\+Max\+Suppression, float min\+Probability\+Diff)
+static native E\+R\+Filter \hyperlink{group__text__detect_ga0c01c194688152f569f28f7845cbfbaf}{create\+E\+R\+Filter\+N\+M1} (@Ptr E\+R\+Filter.\+Callback cb, int fr.antproject.utils.threshold\+Delta, float min\+Area, float max\+Area, float min\+Probability, @Cast(\char`\"{}bool\char`\"{}) boolean non\+Max\+Suppression, float min\+Probability\+Diff)
 \begin{DoxyCompactList}\small\item\em Create an Extremal Region Filter for the 1st stage classifier of N\&M algorithm \mbox{[}Neumann12\mbox{]}. \end{DoxyCompactList}\item 
 static native E\+R\+Filter {\bfseries create\+E\+R\+Filter\+N\+M1} (@Ptr E\+R\+Filter.\+Callback cb)
 \item 
@@ -66,41 +66,41 @@ static native void {\bfseries compute\+N\+M\+Channels} (@By\+Val U\+Mat \+\_\+sr
 \item 
 static native void {\bfseries compute\+N\+M\+Channels} (@By\+Val U\+Mat \+\_\+src, @By\+Val U\+Mat\+Vector \+\_\+channels)
 \item 
-static native void \hyperlink{group__text__detect_ga3198c558c08dac61bce863d430bf2da6}{er\+Grouping} (@By\+Val Mat img, @By\+Val Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Std\+String Byte\+Pointer filename, float min\+Probablity)
+static native void \hyperlink{group__text__detect_ga3198c558c08dac61bce863d430bf2da6}{er\+Grouping} (@By\+Val Mat img, @By\+Val Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref fr.antproject.utils.Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Std\+String Byte\+Pointer filename, float min\+Probablity)
 \begin{DoxyCompactList}\small\item\em Find groups of Extremal Regions that are organized as text blocks. \end{DoxyCompactList}\item 
-static native void {\bfseries er\+Grouping} (@By\+Val Mat img, @By\+Val Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects)
+static native void {\bfseries er\+Grouping} (@By\+Val Mat img, @By\+Val Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref fr.antproject.utils.Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects)
 \item 
-static native void {\bfseries er\+Grouping} (@By\+Val Mat img, @By\+Val U\+Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Std\+String String filename, float min\+Probablity)
+static native void {\bfseries er\+Grouping} (@By\+Val Mat img, @By\+Val U\+Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref fr.antproject.utils.Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Std\+String String filename, float min\+Probablity)
 \item 
-static native void {\bfseries er\+Grouping} (@By\+Val Mat img, @By\+Val U\+Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects)
+static native void {\bfseries er\+Grouping} (@By\+Val Mat img, @By\+Val U\+Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref fr.antproject.utils.Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects)
 \item 
-static native void {\bfseries er\+Grouping} (@By\+Val U\+Mat img, @By\+Val Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Std\+String Byte\+Pointer filename, float min\+Probablity)
+static native void {\bfseries er\+Grouping} (@By\+Val U\+Mat img, @By\+Val Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref fr.antproject.utils.Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Std\+String Byte\+Pointer filename, float min\+Probablity)
 \item 
-static native void {\bfseries er\+Grouping} (@By\+Val U\+Mat img, @By\+Val Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects)
+static native void {\bfseries er\+Grouping} (@By\+Val U\+Mat img, @By\+Val Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref fr.antproject.utils.Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects)
 \item 
-static native void {\bfseries er\+Grouping} (@By\+Val U\+Mat img, @By\+Val U\+Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Std\+String String filename, float min\+Probablity)
+static native void {\bfseries er\+Grouping} (@By\+Val U\+Mat img, @By\+Val U\+Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref fr.antproject.utils.Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Std\+String String filename, float min\+Probablity)
 \item 
-static native void {\bfseries er\+Grouping} (@By\+Val U\+Mat img, @By\+Val U\+Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects)
+static native void {\bfseries er\+Grouping} (@By\+Val U\+Mat img, @By\+Val U\+Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref fr.antproject.utils.Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects)
 \item 
-static native void {\bfseries er\+Grouping} (@By\+Val Mat image, @By\+Val Mat channel, @By\+Val Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Str Byte\+Pointer filename, float min\+Probablity)
+static native void {\bfseries er\+Grouping} (@By\+Val Mat image, @By\+Val Mat channel, @By\+Val fr.antproject.utils.Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Str Byte\+Pointer filename, float min\+Probablity)
 \item 
-static native void {\bfseries er\+Grouping} (@By\+Val Mat image, @By\+Val Mat channel, @By\+Val Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects)
+static native void {\bfseries er\+Grouping} (@By\+Val Mat image, @By\+Val Mat channel, @By\+Val fr.antproject.utils.Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects)
 \item 
-static native void {\bfseries er\+Grouping} (@By\+Val Mat image, @By\+Val Mat channel, @By\+Val Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Str String filename, float min\+Probablity)
+static native void {\bfseries er\+Grouping} (@By\+Val Mat image, @By\+Val Mat channel, @By\+Val fr.antproject.utils.Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Str String filename, float min\+Probablity)
 \item 
-static native void {\bfseries er\+Grouping} (@By\+Val U\+Mat image, @By\+Val U\+Mat channel, @By\+Val Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Str Byte\+Pointer filename, float min\+Probablity)
+static native void {\bfseries er\+Grouping} (@By\+Val U\+Mat image, @By\+Val U\+Mat channel, @By\+Val fr.antproject.utils.Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Str Byte\+Pointer filename, float min\+Probablity)
 \item 
-static native void {\bfseries er\+Grouping} (@By\+Val U\+Mat image, @By\+Val U\+Mat channel, @By\+Val Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects)
+static native void {\bfseries er\+Grouping} (@By\+Val U\+Mat image, @By\+Val U\+Mat channel, @By\+Val fr.antproject.utils.Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects)
 \item 
-static native void {\bfseries er\+Grouping} (@By\+Val U\+Mat image, @By\+Val U\+Mat channel, @By\+Val Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Str String filename, float min\+Probablity)
+static native void {\bfseries er\+Grouping} (@By\+Val U\+Mat image, @By\+Val U\+Mat channel, @By\+Val fr.antproject.utils.Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Str String filename, float min\+Probablity)
 \item 
-static native void \hyperlink{group__text__detect_gad4c72b60ca712eeab78c52b946f649a2}{M\+S\+E\+Rs\+To\+E\+R\+Stats} (@By\+Val Mat image, @By\+Ref Point\+Vector\+Vector contours, @By\+Ref E\+R\+Stat\+Vector\+Vector regions)
-\begin{DoxyCompactList}\small\item\em Converts M\+S\+ER contours (vector$<$Point$>$) to E\+R\+Stat regions. \end{DoxyCompactList}\item 
-static native void {\bfseries M\+S\+E\+Rs\+To\+E\+R\+Stats} (@By\+Val U\+Mat image, @By\+Ref Point\+Vector\+Vector contours, @By\+Ref E\+R\+Stat\+Vector\+Vector regions)
+static native void \hyperlink{group__text__detect_gad4c72b60ca712eeab78c52b946f649a2}{M\+S\+E\+Rs\+To\+E\+R\+Stats} (@By\+Val Mat image, @By\+Ref fr.antproject.utils.Point\+Vector\+Vector contours, @By\+Ref E\+R\+Stat\+Vector\+Vector regions)
+\begin{DoxyCompactList}\small\item\em Converts M\+S\+ER contours (vector$<$fr.antproject.utils.Point$>$) to E\+R\+Stat regions. \end{DoxyCompactList}\item
+static native void {\bfseries M\+S\+E\+Rs\+To\+E\+R\+Stats} (@By\+Val U\+Mat image, @By\+Ref fr.antproject.utils.Point\+Vector\+Vector contours, @By\+Ref E\+R\+Stat\+Vector\+Vector regions)
 \item 
-static native void {\bfseries detect\+Regions} (@By\+Val Mat image, @Ptr E\+R\+Filter er\+\_\+filter1, @Ptr E\+R\+Filter er\+\_\+filter2, @By\+Ref Point\+Vector\+Vector regions)
+static native void {\bfseries detect\+Regions} (@By\+Val Mat image, @Ptr E\+R\+Filter er\+\_\+filter1, @Ptr E\+R\+Filter er\+\_\+filter2, @By\+Ref fr.antproject.utils.Point\+Vector\+Vector regions)
 \item 
-static native void {\bfseries detect\+Regions} (@By\+Val U\+Mat image, @Ptr E\+R\+Filter er\+\_\+filter1, @Ptr E\+R\+Filter er\+\_\+filter2, @By\+Ref Point\+Vector\+Vector regions)
+static native void {\bfseries detect\+Regions} (@By\+Val U\+Mat image, @Ptr E\+R\+Filter er\+\_\+filter1, @Ptr E\+R\+Filter er\+\_\+filter2, @By\+Ref fr.antproject.utils.Point\+Vector\+Vector regions)
 \item 
 static native O\+C\+R\+H\+M\+M\+Decoder.\+Classifier\+Callback \hyperlink{group__text__recognize_gabe00747d37f40a190b2970f14cdc4d60}{load\+O\+C\+R\+H\+M\+M\+Classifier\+NM} (@Str Byte\+Pointer filename)
 \begin{DoxyCompactList}\small\item\em Allow to implicitly load the default character classifier when creating an O\+C\+R\+H\+M\+M\+Decoder object. \end{DoxyCompactList}\item 

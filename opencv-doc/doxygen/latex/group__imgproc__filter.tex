@@ -11,7 +11,7 @@ Returns Gaussian filter coefficients.
 \hyperlink{group__imgproc__transform}{Geometric Image Transformations}
 \begin{DoxyCompactList}\small\item\em Dilates an image by using a specific structuring element. \end{DoxyCompactList}\item 
 \hyperlink{group__imgproc__misc}{Miscellaneous Image Transformations}
-\begin{DoxyCompactList}\small\item\em Applies a fixed-\/level threshold to each array element. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Applies a fixed-\/level fr.antproject.utils.threshold to each array element. \end{DoxyCompactList}\item
 \hyperlink{group__imgproc__motion}{Motion Analysis and Object Tracking}
 \begin{DoxyCompactList}\small\item\em Adds an image to the accumulator. \end{DoxyCompactList}\item 
 \hyperlink{group__imgproc__hist}{Histograms}
@@ -51,7 +51,7 @@ static native Mat {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+ge
 \item 
 static native Scalar \hyperlink{group__imgproc__filter_gaa77a7ec53d115ff76de4c8797d6d83f7}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+morphology\+Default\+Border\+Value} ()
 \item 
-static native Mat \hyperlink{group__imgproc__filter_ga18af407581ba537b9095d14090cce31a}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Structuring\+Element} (int shape, @By\+Val Size ksize, @By\+Val(null\+Value=\char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point anchor)
+static native Mat \hyperlink{group__imgproc__filter_ga18af407581ba537b9095d14090cce31a}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Structuring\+Element} (int shape, @By\+Val Size ksize, @By\+Val(null\+Value=\char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1,-\/1)\char`\"{}) fr.antproject.utils.Point anchor)
 \begin{DoxyCompactList}\small\item\em Returns a structuring element of the specified size and shape for morphological operations. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{group__imgproc__filter_ga0840116f63e9ca427336aed0a2d8ca55}\label{group__imgproc__filter_ga0840116f63e9ca427336aed0a2d8ca55}} 
 static native Mat {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Structuring\+Element} (int shape, @By\+Val Size ksize)
@@ -83,57 +83,57 @@ static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+b
 \mbox{\Hypertarget{group__imgproc__filter_ga4365573ba2b1f21196b689634f7bcfea}\label{group__imgproc__filter_ga4365573ba2b1f21196b689634f7bcfea}} 
 static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+bilateral\+Filter} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, int d, double sigma\+Color, double sigma\+Space)
 \item 
-static native void \hyperlink{group__imgproc__filter_ga479aa13dd62a69ab5b1a1eac3324ab23}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+box\+Filter} ( @By\+Val Mat src, @By\+Val Mat dst, int ddepth, @By\+Val Size ksize, @By\+Val(null\+Value=\char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point anchor, @Cast(\char`\"{}bool\char`\"{}) boolean normalize, int border\+Type)
+static native void \hyperlink{group__imgproc__filter_ga479aa13dd62a69ab5b1a1eac3324ab23}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+box\+Filter} ( @By\+Val Mat src, @By\+Val Mat dst, int ddepth, @By\+Val Size ksize, @By\+Val(null\+Value=\char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1,-\/1)\char`\"{}) fr.antproject.utils.Point anchor, @Cast(\char`\"{}bool\char`\"{}) boolean normalize, int border\+Type)
 \begin{DoxyCompactList}\small\item\em Blurs an image using the box filter. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{group__imgproc__filter_gabd35586e95d9c496428ff5883fb88c1a}\label{group__imgproc__filter_gabd35586e95d9c496428ff5883fb88c1a}} 
 static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+box\+Filter} ( @By\+Val Mat src, @By\+Val Mat dst, int ddepth, @By\+Val Size ksize)
 \item 
 \mbox{\Hypertarget{group__imgproc__filter_ga9a5b129f9524b7ce80d094e58a5977a6}\label{group__imgproc__filter_ga9a5b129f9524b7ce80d094e58a5977a6}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+box\+Filter} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, int ddepth, @By\+Val Size ksize, @By\+Val(null\+Value=\char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point anchor, @Cast(\char`\"{}bool\char`\"{}) boolean normalize, int border\+Type)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+box\+Filter} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, int ddepth, @By\+Val Size ksize, @By\+Val(null\+Value=\char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1,-\/1)\char`\"{}) fr.antproject.utils.Point anchor, @Cast(\char`\"{}bool\char`\"{}) boolean normalize, int border\+Type)
 \item 
 \mbox{\Hypertarget{group__imgproc__filter_ga9130f8858ef9c58528215e2b91a7b1fe}\label{group__imgproc__filter_ga9130f8858ef9c58528215e2b91a7b1fe}} 
 static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+box\+Filter} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, int ddepth, @By\+Val Size ksize)
 \item 
-static native void \hyperlink{group__imgproc__filter_gac3bb5f90c81da13be223978755c103e2}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+sqr\+Box\+Filter} ( @By\+Val Mat \+\_\+src, @By\+Val Mat \+\_\+dst, int ddepth, @By\+Val Size ksize, @By\+Val(null\+Value=\char`\"{}cv\+::\+Point(-\/1, -\/1)\char`\"{}) Point anchor, @Cast(\char`\"{}bool\char`\"{}) boolean normalize, int border\+Type)
+static native void \hyperlink{group__imgproc__filter_gac3bb5f90c81da13be223978755c103e2}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+sqr\+Box\+Filter} ( @By\+Val Mat \+\_\+src, @By\+Val Mat \+\_\+dst, int ddepth, @By\+Val Size ksize, @By\+Val(null\+Value=\char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1, -\/1)\char`\"{}) fr.antproject.utils.Point anchor, @Cast(\char`\"{}bool\char`\"{}) boolean normalize, int border\+Type)
 \begin{DoxyCompactList}\small\item\em Calculates the normalized sum of squares of the pixel values overlapping the filter. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{group__imgproc__filter_gac69e2c5aa5aa8e1b1bf2ded1097813f1}\label{group__imgproc__filter_gac69e2c5aa5aa8e1b1bf2ded1097813f1}} 
 static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+sqr\+Box\+Filter} ( @By\+Val Mat \+\_\+src, @By\+Val Mat \+\_\+dst, int ddepth, @By\+Val Size ksize)
 \item 
 \mbox{\Hypertarget{group__imgproc__filter_gae438b3dd3418a0a16ebe6ccab65f8260}\label{group__imgproc__filter_gae438b3dd3418a0a16ebe6ccab65f8260}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+sqr\+Box\+Filter} ( @By\+Val U\+Mat \+\_\+src, @By\+Val U\+Mat \+\_\+dst, int ddepth, @By\+Val Size ksize, @By\+Val(null\+Value=\char`\"{}cv\+::\+Point(-\/1, -\/1)\char`\"{}) Point anchor, @Cast(\char`\"{}bool\char`\"{}) boolean normalize, int border\+Type)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+sqr\+Box\+Filter} ( @By\+Val U\+Mat \+\_\+src, @By\+Val U\+Mat \+\_\+dst, int ddepth, @By\+Val Size ksize, @By\+Val(null\+Value=\char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1, -\/1)\char`\"{}) fr.antproject.utils.Point anchor, @Cast(\char`\"{}bool\char`\"{}) boolean normalize, int border\+Type)
 \item 
 \mbox{\Hypertarget{group__imgproc__filter_gae60998a04ea1d80b4998496348eb7dda}\label{group__imgproc__filter_gae60998a04ea1d80b4998496348eb7dda}} 
 static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+sqr\+Box\+Filter} ( @By\+Val U\+Mat \+\_\+src, @By\+Val U\+Mat \+\_\+dst, int ddepth, @By\+Val Size ksize)
 \item 
-static native void \hyperlink{group__imgproc__filter_ga2878e087c0294ad9e5f1996c07b303b4}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+blur} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Size ksize, @By\+Val(null\+Value=\char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point anchor, int border\+Type)
+static native void \hyperlink{group__imgproc__filter_ga2878e087c0294ad9e5f1996c07b303b4}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+blur} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Size ksize, @By\+Val(null\+Value=\char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1,-\/1)\char`\"{}) fr.antproject.utils.Point anchor, int border\+Type)
 \begin{DoxyCompactList}\small\item\em Blurs an image using the normalized box filter. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{group__imgproc__filter_ga4830c7c2c9e1f24506bac7bf41da80f0}\label{group__imgproc__filter_ga4830c7c2c9e1f24506bac7bf41da80f0}} 
 static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+blur} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Size ksize)
 \item 
 \mbox{\Hypertarget{group__imgproc__filter_gaf8d9d0c058877480d92f97c45f328347}\label{group__imgproc__filter_gaf8d9d0c058877480d92f97c45f328347}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+blur} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val Size ksize, @By\+Val(null\+Value=\char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point anchor, int border\+Type)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+blur} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val Size ksize, @By\+Val(null\+Value=\char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1,-\/1)\char`\"{}) fr.antproject.utils.Point anchor, int border\+Type)
 \item 
 \mbox{\Hypertarget{group__imgproc__filter_ga8c4367bdc80978100e7b53b8db658752}\label{group__imgproc__filter_ga8c4367bdc80978100e7b53b8db658752}} 
 static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+blur} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val Size ksize)
 \item 
-static native void \hyperlink{group__imgproc__filter_gac272007b4c23c22cf0fd246522a2a34b}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+filter2D} ( @By\+Val Mat src, @By\+Val Mat dst, int ddepth, @By\+Val Mat kernel, @By\+Val(null\+Value=\char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point anchor, double delta, int border\+Type)
+static native void \hyperlink{group__imgproc__filter_gac272007b4c23c22cf0fd246522a2a34b}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+filter2D} ( @By\+Val Mat src, @By\+Val Mat dst, int ddepth, @By\+Val Mat kernel, @By\+Val(null\+Value=\char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1,-\/1)\char`\"{}) fr.antproject.utils.Point anchor, double delta, int border\+Type)
 \begin{DoxyCompactList}\small\item\em Convolves an image with the kernel. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{group__imgproc__filter_ga32707e41b29e2f45a57863769aed9dda}\label{group__imgproc__filter_ga32707e41b29e2f45a57863769aed9dda}} 
 static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+filter2D} ( @By\+Val Mat src, @By\+Val Mat dst, int ddepth, @By\+Val Mat kernel)
 \item 
 \mbox{\Hypertarget{group__imgproc__filter_gaae4b6c9ace5e9419ee9a3f1f883bda50}\label{group__imgproc__filter_gaae4b6c9ace5e9419ee9a3f1f883bda50}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+filter2D} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, int ddepth, @By\+Val U\+Mat kernel, @By\+Val(null\+Value=\char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point anchor, double delta, int border\+Type)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+filter2D} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, int ddepth, @By\+Val U\+Mat kernel, @By\+Val(null\+Value=\char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1,-\/1)\char`\"{}) fr.antproject.utils.Point anchor, double delta, int border\+Type)
 \item 
 \mbox{\Hypertarget{group__imgproc__filter_gab00b34dd987b71bf76d7106f14642f4e}\label{group__imgproc__filter_gab00b34dd987b71bf76d7106f14642f4e}} 
 static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+filter2D} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, int ddepth, @By\+Val U\+Mat kernel)
 \item 
-static native void \hyperlink{group__imgproc__filter_ga716654f3d25206913e265bf388fd83d0}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+sep\+Filter2D} ( @By\+Val Mat src, @By\+Val Mat dst, int ddepth, @By\+Val Mat kernelX, @By\+Val Mat kernelY, @By\+Val(null\+Value=\char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point anchor, double delta, int border\+Type)
+static native void \hyperlink{group__imgproc__filter_ga716654f3d25206913e265bf388fd83d0}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+sep\+Filter2D} ( @By\+Val Mat src, @By\+Val Mat dst, int ddepth, @By\+Val Mat kernelX, @By\+Val Mat kernelY, @By\+Val(null\+Value=\char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1,-\/1)\char`\"{}) fr.antproject.utils.Point anchor, double delta, int border\+Type)
 \begin{DoxyCompactList}\small\item\em Applies a separable linear filter to an image. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{group__imgproc__filter_gaf2d8d962ce153aab98ee6c5d0637c731}\label{group__imgproc__filter_gaf2d8d962ce153aab98ee6c5d0637c731}} 
 static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+sep\+Filter2D} ( @By\+Val Mat src, @By\+Val Mat dst, int ddepth, @By\+Val Mat kernelX, @By\+Val Mat kernelY)
 \item 
 \mbox{\Hypertarget{group__imgproc__filter_ga2035b246fa133c96e4469b8566b7674b}\label{group__imgproc__filter_ga2035b246fa133c96e4469b8566b7674b}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+sep\+Filter2D} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, int ddepth, @By\+Val U\+Mat kernelX, @By\+Val U\+Mat kernelY, @By\+Val(null\+Value=\char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point anchor, double delta, int border\+Type)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+sep\+Filter2D} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, int ddepth, @By\+Val U\+Mat kernelX, @By\+Val U\+Mat kernelY, @By\+Val(null\+Value=\char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1,-\/1)\char`\"{}) fr.antproject.utils.Point anchor, double delta, int border\+Type)
 \item 
 \mbox{\Hypertarget{group__imgproc__filter_ga0581b57344a84bf92ed8304a31c0d5ae}\label{group__imgproc__filter_ga0581b57344a84bf92ed8304a31c0d5ae}} 
 static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+sep\+Filter2D} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, int ddepth, @By\+Val U\+Mat kernelX, @By\+Val U\+Mat kernelY)
@@ -182,13 +182,13 @@ static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+L
 \mbox{\Hypertarget{group__imgproc__filter_gaef7e4f2a12bc667667e94f5706fc7576}\label{group__imgproc__filter_gaef7e4f2a12bc667667e94f5706fc7576}} 
 static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+Laplacian} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, int ddepth)
 \item 
-static native void \hyperlink{group__imgproc__filter_ga8c0cbcc8dd271aada560698924d19cb2}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+erode} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Mat kernel, @By\+Val(null\+Value=\char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point anchor, int iterations, int border\+Type, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Scalar(cv\+::morphology\+Default\+Border\+Value())\char`\"{}) Scalar border\+Value)
+static native void \hyperlink{group__imgproc__filter_ga8c0cbcc8dd271aada560698924d19cb2}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+erode} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Mat kernel, @By\+Val(null\+Value=\char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1,-\/1)\char`\"{}) fr.antproject.utils.Point anchor, int iterations, int border\+Type, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Scalar(cv\+::morphology\+Default\+Border\+Value())\char`\"{}) Scalar border\+Value)
 \begin{DoxyCompactList}\small\item\em Erodes an image by using a specific structuring element. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{group__imgproc__filter_ga650836745d55fe30014d0893f9bc7571}\label{group__imgproc__filter_ga650836745d55fe30014d0893f9bc7571}} 
 static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+erode} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Mat kernel)
 \item 
 \mbox{\Hypertarget{group__imgproc__filter_ga49298d4b54f3535b97b7b03ed29c978a}\label{group__imgproc__filter_ga49298d4b54f3535b97b7b03ed29c978a}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+erode} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val U\+Mat kernel, @By\+Val(null\+Value=\char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point anchor, int iterations, int border\+Type, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Scalar(cv\+::morphology\+Default\+Border\+Value())\char`\"{}) Scalar border\+Value)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+erode} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val U\+Mat kernel, @By\+Val(null\+Value=\char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1,-\/1)\char`\"{}) fr.antproject.utils.Point anchor, int iterations, int border\+Type, @Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Scalar(cv\+::morphology\+Default\+Border\+Value())\char`\"{}) Scalar border\+Value)
 \item 
 \mbox{\Hypertarget{group__imgproc__filter_gaa69046fef163679ef621d83d2b3d3862}\label{group__imgproc__filter_gaa69046fef163679ef621d83d2b3d3862}} 
 static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+erode} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val U\+Mat kernel)
@@ -469,7 +469,7 @@ Performs linear blending of two images \mbox{\Hypertarget{group__imgproc__filter
 \index{Image Filtering@{Image Filtering}!blur@{blur}}
 \index{blur@{blur}!Image Filtering@{Image Filtering}}
 \subsubsection{\texorpdfstring{blur()}{blur()}}
-{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+blur (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{@By\+Val Size}]{ksize,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point}]{anchor,  }\item[{int}]{border\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+blur (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{@By\+Val Size}]{ksize,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1,-\/1)\char`\"{}) fr.antproject.utils.Point}]{anchor,  }\item[{int}]{border\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -498,7 +498,7 @@ anchor, \textcolor{keyword}{true}, borderType)
 \hline
 {\em ksize} & blurring kernel size. \\
 \hline
-{\em anchor} & anchor point; default value Point(-\/1,-\/1) means that the anchor is at the kernel center. \\
+{\em anchor} & anchor point; default value fr.antproject.utils.Point(-\/1,-\/1) means that the anchor is at the kernel center. \\
 \hline
 {\em border\+Type} & border mode used to extrapolate pixels outside of the image, see cv\+::\+Border\+Types \\
 \hline
@@ -510,7 +510,7 @@ anchor, \textcolor{keyword}{true}, borderType)
 \index{Image Filtering@{Image Filtering}!box\+Filter@{box\+Filter}}
 \index{box\+Filter@{box\+Filter}!Image Filtering@{Image Filtering}}
 \subsubsection{\texorpdfstring{box\+Filter()}{boxFilter()}}
-{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+box\+Filter (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{int}]{ddepth,  }\item[{@By\+Val Size}]{ksize,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point}]{anchor,  }\item[{@Cast(\char`\"{}bool\char`\"{}) boolean}]{normalize,  }\item[{int}]{border\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+box\+Filter (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{int}]{ddepth,  }\item[{@By\+Val Size}]{ksize,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1,-\/1)\char`\"{}) fr.antproject.utils.Point}]{anchor,  }\item[{@Cast(\char`\"{}bool\char`\"{}) boolean}]{normalize,  }\item[{int}]{border\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -536,7 +536,7 @@ Unnormalized box filter is useful for computing various integral characteristics
 \hline
 {\em ksize} & blurring kernel size. \\
 \hline
-{\em anchor} & anchor point; default value Point(-\/1,-\/1) means that the anchor is at the kernel center. \\
+{\em anchor} & anchor point; default value fr.antproject.utils.Point(-\/1,-\/1) means that the anchor is at the kernel center. \\
 \hline
 {\em normalize} & flag, specifying whether the kernel is normalized by its area or not. \\
 \hline
@@ -589,7 +589,7 @@ Guil, N., González-\/\+Linares, J.\+M. and Zapata, E.\+L. (1999). Bidimensional
 \index{Image Filtering@{Image Filtering}!erode@{erode}}
 \index{erode@{erode}!Image Filtering@{Image Filtering}}
 \subsubsection{\texorpdfstring{erode()}{erode()}}
-{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+erode (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{@By\+Val Mat}]{kernel,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point}]{anchor,  }\item[{int}]{iterations,  }\item[{int}]{border\+Type,  }\item[{@Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Scalar(cv\+::morphology\+Default\+Border\+Value())\char`\"{}) Scalar}]{border\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+erode (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{@By\+Val Mat}]{kernel,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1,-\/1)\char`\"{}) fr.antproject.utils.Point}]{anchor,  }\item[{int}]{iterations,  }\item[{int}]{border\+Type,  }\item[{@Const @By\+Ref(null\+Value=\char`\"{}cv\+::\+Scalar(cv\+::morphology\+Default\+Border\+Value())\char`\"{}) Scalar}]{border\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -633,7 +633,7 @@ dilate, morphology\+Ex, \hyperlink{group__imgproc__filter_ga18af407581ba537b9095
 \index{Image Filtering@{Image Filtering}!filter2D@{filter2D}}
 \index{filter2D@{filter2D}!Image Filtering@{Image Filtering}}
 \subsubsection{\texorpdfstring{filter2\+D()}{filter2D()}}
-{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+filter2D (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{int}]{ddepth,  }\item[{@By\+Val Mat}]{kernel,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point}]{anchor,  }\item[{double}]{delta,  }\item[{int}]{border\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+filter2D (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{int}]{ddepth,  }\item[{@By\+Val Mat}]{kernel,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1,-\/1)\char`\"{}) fr.antproject.utils.Point}]{anchor,  }\item[{double}]{delta,  }\item[{int}]{border\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -774,7 +774,7 @@ For more details about gabor filter equations and parameters, see\+: \href{http:
 \index{Image Filtering@{Image Filtering}!get\+Structuring\+Element@{get\+Structuring\+Element}}
 \index{get\+Structuring\+Element@{get\+Structuring\+Element}!Image Filtering@{Image Filtering}}
 \subsubsection{\texorpdfstring{get\+Structuring\+Element()}{getStructuringElement()}}
-{\footnotesize\ttfamily static native Mat org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Structuring\+Element (\begin{DoxyParamCaption}\item[{int}]{shape,  }\item[{@By\+Val Size}]{ksize,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point}]{anchor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static native Mat org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Structuring\+Element (\begin{DoxyParamCaption}\item[{int}]{shape,  }\item[{@By\+Val Size}]{ksize,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1,-\/1)\char`\"{}) fr.antproject.utils.Point}]{anchor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -945,7 +945,7 @@ cart\+To\+Polar
 \index{Image Filtering@{Image Filtering}!sep\+Filter2D@{sep\+Filter2D}}
 \index{sep\+Filter2D@{sep\+Filter2D}!Image Filtering@{Image Filtering}}
 \subsubsection{\texorpdfstring{sep\+Filter2\+D()}{sepFilter2D()}}
-{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+sep\+Filter2D (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{int}]{ddepth,  }\item[{@By\+Val Mat}]{kernelX,  }\item[{@By\+Val Mat}]{kernelY,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point}]{anchor,  }\item[{double}]{delta,  }\item[{int}]{border\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+sep\+Filter2D (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{int}]{ddepth,  }\item[{@By\+Val Mat}]{kernelX,  }\item[{@By\+Val Mat}]{kernelY,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1,-\/1)\char`\"{}) fr.antproject.utils.Point}]{anchor,  }\item[{double}]{delta,  }\item[{int}]{border\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -1078,7 +1078,7 @@ Equivalent to calling\+:
 \index{Image Filtering@{Image Filtering}!sqr\+Box\+Filter@{sqr\+Box\+Filter}}
 \index{sqr\+Box\+Filter@{sqr\+Box\+Filter}!Image Filtering@{Image Filtering}}
 \subsubsection{\texorpdfstring{sqr\+Box\+Filter()}{sqrBoxFilter()}}
-{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+sqr\+Box\+Filter (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{\+\_\+src,  }\item[{@By\+Val Mat}]{\+\_\+dst,  }\item[{int}]{ddepth,  }\item[{@By\+Val Size}]{ksize,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Point(-\/1, -\/1)\char`\"{}) Point}]{anchor,  }\item[{@Cast(\char`\"{}bool\char`\"{}) boolean}]{normalize,  }\item[{int}]{border\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+sqr\+Box\+Filter (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{\+\_\+src,  }\item[{@By\+Val Mat}]{\+\_\+dst,  }\item[{int}]{ddepth,  }\item[{@By\+Val Size}]{ksize,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1, -\/1)\char`\"{}) fr.antproject.utils.Point}]{anchor,  }\item[{@Cast(\char`\"{}bool\char`\"{}) boolean}]{normalize,  }\item[{int}]{border\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -1098,7 +1098,7 @@ The unnormalized square box filter can be useful in computing local image statis
 \hline
 {\em ksize} & kernel size \\
 \hline
-{\em anchor} & kernel anchor point. The default value of Point(-\/1, -\/1) denotes that the anchor is at the kernel center. \\
+{\em anchor} & kernel anchor point. The default value of fr.antproject.utils.Point(-\/1, -\/1) denotes that the anchor is at the kernel center. \\
 \hline
 {\em normalize} & flag, specifying whether the kernel is to be normalized by it\textquotesingle{}s area or not. \\
 \hline

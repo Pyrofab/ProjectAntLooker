@@ -123,22 +123,22 @@ static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.byt
 <li><b>THRESH_BINARY_INV</b> <p class="formulaDsp">
 \[dst(x,y) = \fork{0}{if \(src(x,y) &gt; T(x,y)\)}{\texttt{maxValue}}{otherwise}\]
 </p>
- where \(T(x,y)\) is a threshold calculated individually for each pixel. </li>
+ where \(T(x,y)\) is a fr.antproject.utils.threshold calculated individually for each pixel. </li>
 </ul>
-<p>The threshold value \(T(x, y)\) is the mean minus \( delta \) times standard deviation of \(\texttt{blockSize} \times\texttt{blockSize}\) neighborhood of \((x, y)\). </p>
+<p>The fr.antproject.utils.threshold value \(T(x, y)\) is the mean minus \( delta \) times standard deviation of \(\texttt{blockSize} \times\texttt{blockSize}\) neighborhood of \((x, y)\). </p>
 <p>The function can't process the image in-place. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_src</td><td>Source 8-bit single-channel image. </td></tr>
     <tr><td class="paramname">_dst</td><td>Destination image of the same size and the same type as src. </td></tr>
     <tr><td class="paramname">maxValue</td><td>Non-zero value assigned to the pixels for which the condition is satisfied, used with the THRESH_BINARY and THRESH_BINARY_INV thresholding types. </td></tr>
-    <tr><td class="paramname">type</td><td>Thresholding type, see cv::ThresholdTypes. </td></tr>
-    <tr><td class="paramname">blockSize</td><td>Size of a pixel neighborhood that is used to calculate a threshold value for the pixel: 3, 5, 7, and so on. </td></tr>
+    <tr><td class="paramname">type</td><td>Thresholding type, see cv::fr.antproject.utils.ThresholdTypes. </td></tr>
+    <tr><td class="paramname">blockSize</td><td>Size of a pixel neighborhood that is used to calculate a fr.antproject.utils.threshold value for the pixel: 3, 5, 7, and so on. </td></tr>
     <tr><td class="paramname">delta</td><td>Constant multiplied with the standard deviation and subtracted from the mean. Normally, it is taken to be a real number between 0 and 1. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd>threshold, adaptiveThreshold </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>fr.antproject.utils.threshold, adaptiveThreshold </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="gaf281201400d757cb4921c49dcf729896"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaf281201400d757cb4921c49dcf729896">&#9670;&nbsp;</a></span>thinning()</h2>

@@ -48,17 +48,17 @@ static native Cv\+Font {\bfseries cv\+Font\+Qt} (String name\+Font, int point\+S
 \item 
 static native Cv\+Font {\bfseries cv\+Font\+Qt} (String name\+Font)
 \item 
-static native void {\bfseries cv\+Add\+Text} (@Const Cv\+Arr img, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer text, @By\+Val Cv\+Point org, Cv\+Font arg2)
+static native void {\bfseries cv\+Add\+Text} (@Const Cv\+Arr img, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer text, @By\+Val Cv\+fr.antproject.utils.Point org, Cv\+Font arg2)
 \item 
-static native void {\bfseries cv\+Add\+Text} (@Const Cv\+Arr img, String text, @By\+Val @Cast(\char`\"{}Cv\+Point$\ast$\char`\"{}) Int\+Buffer org, Cv\+Font arg2)
+static native void {\bfseries cv\+Add\+Text} (@Const Cv\+Arr img, String text, @By\+Val @Cast(\char`\"{}Cv\+fr.antproject.utils.Point$\ast$\char`\"{}) Int\+Buffer org, Cv\+Font arg2)
 \item 
-static native void {\bfseries cv\+Add\+Text} (@Const Cv\+Arr img, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer text, @By\+Val @Cast(\char`\"{}Cv\+Point$\ast$\char`\"{}) int\mbox{[}$\,$\mbox{]} org, Cv\+Font arg2)
+static native void {\bfseries cv\+Add\+Text} (@Const Cv\+Arr img, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer text, @By\+Val @Cast(\char`\"{}Cv\+fr.antproject.utils.Point$\ast$\char`\"{}) int\mbox{[}$\,$\mbox{]} org, Cv\+Font arg2)
 \item 
-static native void {\bfseries cv\+Add\+Text} (@Const Cv\+Arr img, String text, @By\+Val Cv\+Point org, Cv\+Font arg2)
+static native void {\bfseries cv\+Add\+Text} (@Const Cv\+Arr img, String text, @By\+Val Cv\+fr.antproject.utils.Point org, Cv\+Font arg2)
 \item 
-static native void {\bfseries cv\+Add\+Text} (@Const Cv\+Arr img, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer text, @By\+Val @Cast(\char`\"{}Cv\+Point$\ast$\char`\"{}) Int\+Buffer org, Cv\+Font arg2)
+static native void {\bfseries cv\+Add\+Text} (@Const Cv\+Arr img, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer text, @By\+Val @Cast(\char`\"{}Cv\+fr.antproject.utils.Point$\ast$\char`\"{}) Int\+Buffer org, Cv\+Font arg2)
 \item 
-static native void {\bfseries cv\+Add\+Text} (@Const Cv\+Arr img, String text, @By\+Val @Cast(\char`\"{}Cv\+Point$\ast$\char`\"{}) int\mbox{[}$\,$\mbox{]} org, Cv\+Font arg2)
+static native void {\bfseries cv\+Add\+Text} (@Const Cv\+Arr img, String text, @By\+Val @Cast(\char`\"{}Cv\+fr.antproject.utils.Point$\ast$\char`\"{}) int\mbox{[}$\,$\mbox{]} org, Cv\+Font arg2)
 \item 
 static native void {\bfseries cv\+Display\+Overlay} (@Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer name, @Cast(\char`\"{}const char$\ast$\char`\"{}) Byte\+Pointer text, int delayms)
 \item 
@@ -424,17 +424,17 @@ static native Qt\+Font {\bfseries font\+Qt} (@Str String name\+Font, int point\+
 \item 
 static native Qt\+Font {\bfseries font\+Qt} (@Str String name\+Font)
 \item 
-static native void \hyperlink{group__highgui__qt_gaccc5f5d89abe18bc7adfd650dccb265f}{add\+Text} ( @Const @By\+Ref Mat img, @Str Byte\+Pointer text, @By\+Val Point org, @Const @By\+Ref Qt\+Font font)
+static native void \hyperlink{group__highgui__qt_gaccc5f5d89abe18bc7adfd650dccb265f}{add\+Text} ( @Const @By\+Ref Mat img, @Str Byte\+Pointer text, @By\+Val fr.antproject.utils.Point org, @Const @By\+Ref Qt\+Font font)
 \begin{DoxyCompactList}\small\item\em Draws a text on the image. \end{DoxyCompactList}\item 
-static native void {\bfseries add\+Text} ( @Const @By\+Ref Mat img, @Str String text, @By\+Val Point org, @Const @By\+Ref Qt\+Font font)
+static native void {\bfseries add\+Text} ( @Const @By\+Ref Mat img, @Str String text, @By\+Val fr.antproject.utils.Point org, @Const @By\+Ref Qt\+Font font)
 \item 
-static native void \hyperlink{group__highgui__qt_ga7595781df35faa10eff729ed3e41b5fd}{add\+Text} (@Const @By\+Ref Mat img, @Str Byte\+Pointer text, @By\+Val Point org, @Str Byte\+Pointer name\+Font, int point\+Size, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar\+::all(0)\char`\"{}) Scalar color, int weight, int style, int spacing)
+static native void \hyperlink{group__highgui__qt_ga7595781df35faa10eff729ed3e41b5fd}{add\+Text} (@Const @By\+Ref Mat img, @Str Byte\+Pointer text, @By\+Val fr.antproject.utils.Point org, @Str Byte\+Pointer name\+Font, int point\+Size, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar\+::all(0)\char`\"{}) Scalar color, int weight, int style, int spacing)
 \begin{DoxyCompactList}\small\item\em Draws a text on the image. \end{DoxyCompactList}\item 
-static native void {\bfseries add\+Text} (@Const @By\+Ref Mat img, @Str Byte\+Pointer text, @By\+Val Point org, @Str Byte\+Pointer name\+Font)
+static native void {\bfseries add\+Text} (@Const @By\+Ref Mat img, @Str Byte\+Pointer text, @By\+Val fr.antproject.utils.Point org, @Str Byte\+Pointer name\+Font)
 \item 
-static native void {\bfseries add\+Text} (@Const @By\+Ref Mat img, @Str String text, @By\+Val Point org, @Str String name\+Font, int point\+Size, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar\+::all(0)\char`\"{}) Scalar color, int weight, int style, int spacing)
+static native void {\bfseries add\+Text} (@Const @By\+Ref Mat img, @Str String text, @By\+Val fr.antproject.utils.Point org, @Str String name\+Font, int point\+Size, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar\+::all(0)\char`\"{}) Scalar color, int weight, int style, int spacing)
 \item 
-static native void {\bfseries add\+Text} (@Const @By\+Ref Mat img, @Str String text, @By\+Val Point org, @Str String name\+Font)
+static native void {\bfseries add\+Text} (@Const @By\+Ref Mat img, @Str String text, @By\+Val fr.antproject.utils.Point org, @Str String name\+Font)
 \item 
 static native void \hyperlink{group__highgui__qt_ga70784449604551e57ffd968370f887a8}{display\+Overlay} (@Str Byte\+Pointer winname, @Str Byte\+Pointer text, int delayms)
 \begin{DoxyCompactList}\small\item\em Displays a text on a window image as an overlay for a specified duration. \end{DoxyCompactList}\item 

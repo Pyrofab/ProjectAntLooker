@@ -12,13 +12,13 @@ Inheritance diagram for org.\+bytedeco.\+javacpp.\+opencv\+\_\+stitching\+:\begi
 class {\bfseries Affine\+Based\+Estimator}
 \begin{DoxyCompactList}\small\item\em Affine transformation based estimator. \end{DoxyCompactList}\item 
 class {\bfseries Affine\+Best\+Of2\+Nearest\+Matcher}
-\begin{DoxyCompactList}\small\item\em Features matcher similar to cv\+::detail\+::\+Best\+Of2\+Nearest\+Matcher which finds two best matches for each feature and leaves the best one only if the ratio between descriptor distances is greater than the threshold match\+\_\+conf. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Features matcher similar to cv\+::detail\+::\+Best\+Of2\+Nearest\+Matcher which finds two best matches for each feature and leaves the best one only if the ratio between descriptor distances is greater than the fr.antproject.utils.threshold match\+\_\+conf. \end{DoxyCompactList}\item
 class {\bfseries Affine\+Warper}
 \begin{DoxyCompactList}\small\item\em Affine warper that uses rotations and translations. \end{DoxyCompactList}\item 
 class {\bfseries A\+K\+A\+Z\+E\+Features\+Finder}
 \begin{DoxyCompactList}\small\item\em A\+K\+A\+ZE features finder. \+: \end{DoxyCompactList}\item 
 class {\bfseries Best\+Of2\+Nearest\+Matcher}
-\begin{DoxyCompactList}\small\item\em Features matcher which finds two best matches for each feature and leaves the best one only if the ratio between descriptor distances is greater than the threshold match\+\_\+conf. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Features matcher which finds two best matches for each feature and leaves the best one only if the ratio between descriptor distances is greater than the fr.antproject.utils.threshold match\+\_\+conf. \end{DoxyCompactList}\item
 class {\bfseries Best\+Of2\+Nearest\+Range\+Matcher}
 \item 
 class {\bfseries Blender}
@@ -184,15 +184,15 @@ class {\bfseries Warper\+Creator}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static native boolean {\bfseries overlap\+Roi} (@By\+Val Point tl1, @By\+Val Point tl2, @By\+Val Size sz1, @By\+Val Size sz2, @By\+Ref Rect roi)
+static native boolean {\bfseries overlap\+Roi} (@By\+Val fr.antproject.utils.Point tl1, @By\+Val fr.antproject.utils.Point tl2, @By\+Val Size sz1, @By\+Val Size sz2, @By\+Ref Rect roi)
 \item 
-static native Rect {\bfseries result\+Roi} (@Const @By\+Ref Point\+Vector corners, @Const @By\+Ref U\+Mat\+Vector images)
+static native Rect {\bfseries result\+Roi} (@Const @By\+Ref fr.antproject.utils.Point\+Vector corners, @Const @By\+Ref U\+Mat\+Vector images)
 \item 
-static native Rect {\bfseries result\+Roi} (@Const @By\+Ref Point\+Vector corners, @Const @By\+Ref Size\+Vector sizes)
+static native Rect {\bfseries result\+Roi} (@Const @By\+Ref fr.antproject.utils.Point\+Vector corners, @Const @By\+Ref Size\+Vector sizes)
 \item 
-static native Rect {\bfseries result\+Roi\+Intersection} (@Const @By\+Ref Point\+Vector corners, @Const @By\+Ref Size\+Vector sizes)
+static native Rect {\bfseries result\+Roi\+Intersection} (@Const @By\+Ref fr.antproject.utils.Point\+Vector corners, @Const @By\+Ref Size\+Vector sizes)
 \item 
-static native Point {\bfseries result\+Tl} (@Const @By\+Ref Point\+Vector corners)
+static native fr.antproject.utils.Point {\bfseries result\+Tl} (@Const @By\+Ref fr.antproject.utils.Point\+Vector corners)
 \item 
 static native void {\bfseries select\+Random\+Subset} (int count, int size, @Std\+Vector Int\+Pointer subset)
 \item 
@@ -204,9 +204,9 @@ static native Int\+Pointer {\bfseries stitching\+Log\+Level} ()
 \item 
 static native void \hyperlink{group__stitching__rotation_ga3bba1a4cfe47a38f2ef140a3bc6c0f0a}{wave\+Correct} (@By\+Ref Mat\+Vector rmats, @Cast(\char`\"{}cv\+::detail\+::\+Wave\+Correct\+Kind\char`\"{}) int kind)
 \begin{DoxyCompactList}\small\item\em Tries to make panorama more horizontal (or vertical). \end{DoxyCompactList}\item 
-static native Byte\+Pointer {\bfseries matches\+Graph\+As\+String} (@By\+Ref String\+Vector pathes, @Std\+Vector Matches\+Info pairwise\+\_\+matches, float conf\+\_\+threshold)
+static native Byte\+Pointer {\bfseries matches\+Graph\+As\+String} (@By\+Ref String\+Vector pathes, @Std\+Vector Matches\+Info pairwise\+\_\+matches, float conf\+\_\+fr.antproject.utils.threshold)
 \item 
-static native Int\+Pointer {\bfseries leave\+Biggest\+Component} ( @Std\+Vector Image\+Features features, @Std\+Vector Matches\+Info pairwise\+\_\+matches, float conf\+\_\+threshold)
+static native Int\+Pointer {\bfseries leave\+Biggest\+Component} ( @Std\+Vector Image\+Features features, @Std\+Vector Matches\+Info pairwise\+\_\+matches, float conf\+\_\+fr.antproject.utils.threshold)
 \item 
 static native void {\bfseries find\+Max\+Spanning\+Tree} (int num\+\_\+images, @Std\+Vector Matches\+Info pairwise\+\_\+matches, @By\+Ref Graph span\+\_\+tree, @Std\+Vector Int\+Pointer centers)
 \item 

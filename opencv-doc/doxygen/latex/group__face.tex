@@ -21,17 +21,17 @@ class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+face.\+L\+B\+P\+H\+Face\
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-static native Basic\+Face\+Recognizer \hyperlink{group__face_ga6f3a56396530d46af3fba9ad04fc80cf}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+face.\+create\+Eigen\+Face\+Recognizer} (int num\+\_\+components, double threshold)
+static native Basic\+Face\+Recognizer \hyperlink{group__face_ga6f3a56396530d46af3fba9ad04fc80cf}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+face.\+create\+Eigen\+Face\+Recognizer} (int num\+\_\+components, double fr.antproject.utils.threshold)
 \item 
 \mbox{\Hypertarget{group__face_gac70e2c94b7d6f05d26f762bed96b2da7}\label{group__face_gac70e2c94b7d6f05d26f762bed96b2da7}} 
 static native Basic\+Face\+Recognizer {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+face.\+create\+Eigen\+Face\+Recognizer} ()
 \item 
-static native Basic\+Face\+Recognizer \hyperlink{group__face_ga80a98f353dd2ef661444e0d79bbe9daf}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+face.\+create\+Fisher\+Face\+Recognizer} (int num\+\_\+components, double threshold)
+static native Basic\+Face\+Recognizer \hyperlink{group__face_ga80a98f353dd2ef661444e0d79bbe9daf}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+face.\+create\+Fisher\+Face\+Recognizer} (int num\+\_\+components, double fr.antproject.utils.threshold)
 \item 
 \mbox{\Hypertarget{group__face_ga241cb766e32721cf0ba5c6fde7006808}\label{group__face_ga241cb766e32721cf0ba5c6fde7006808}} 
 static native Basic\+Face\+Recognizer {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+face.\+create\+Fisher\+Face\+Recognizer} ()
 \item 
-static native L\+B\+P\+H\+Face\+Recognizer \hyperlink{group__face_ga970c161034e055fb56615aadba87ac4e}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+face.\+create\+L\+B\+P\+H\+Face\+Recognizer} (int radius, int neighbors, int grid\+\_\+x, int grid\+\_\+y, double threshold)
+static native L\+B\+P\+H\+Face\+Recognizer \hyperlink{group__face_ga970c161034e055fb56615aadba87ac4e}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+face.\+create\+L\+B\+P\+H\+Face\+Recognizer} (int radius, int neighbors, int grid\+\_\+x, int grid\+\_\+y, double fr.antproject.utils.threshold)
 \item 
 \mbox{\Hypertarget{group__face_ga6d5f6361f7aeeb413b5e582ac60ae6e5}\label{group__face_ga6d5f6361f7aeeb413b5e582ac60ae6e5}} 
 static native L\+B\+P\+H\+Face\+Recognizer {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+face.\+create\+L\+B\+P\+H\+Face\+Recognizer} ()
@@ -81,44 +81,44 @@ Moreover every Face\+Recognizer supports the\+:
 \begin{DoxyNote}{Note}
 When using the Face\+Recognizer interface in combination with Python, please stick to Python 2. Some underlying scripts like create\+\_\+csv will not work in other versions, like Python 3. Setting the Thresholds +++++++++++++++++++++++ 
 \end{DoxyNote}
-Sometimes you run into the situation, when you want to apply a threshold on the prediction. A common scenario in face recognition is to tell, whether a face belongs to the training dataset or if it is unknown. You might wonder, why there\textquotesingle{}s no public A\+PI in Face\+Recognizer to set the threshold for the prediction, but rest assured\+: It\textquotesingle{}s supported. It just means there\textquotesingle{}s no generic way in an abstract class to provide an interface for setting/getting the thresholds of {\itshape every possible} Face\+Recognizer algorithm. The appropriate place to set the thresholds is in the constructor of the specific Face\+Recognizer and since every Face\+Recognizer is a Algorithm (see above), you can get/set the thresholds at runtime! 
+Sometimes you run into the situation, when you want to apply a fr.antproject.utils.threshold on the prediction. A common scenario in face recognition is to tell, whether a face belongs to the training dataset or if it is unknown. You might wonder, why there\textquotesingle{}s no public A\+PI in Face\+Recognizer to set the fr.antproject.utils.threshold for the prediction, but rest assured\+: It\textquotesingle{}s supported. It just means there\textquotesingle{}s no generic way in an abstract class to provide an interface for setting/getting the thresholds of {\itshape every possible} Face\+Recognizer algorithm. The appropriate place to set the thresholds is in the constructor of the specific Face\+Recognizer and since every Face\+Recognizer is a Algorithm (see above), you can get/set the thresholds at runtime!
 
-Here is an example of setting a threshold for the Eigenfaces method, when creating the model\+: 
+Here is an example of setting a fr.antproject.utils.threshold for the Eigenfaces method, when creating the model\+:
 
 
 \begin{DoxyPre}
 \begin{DoxyCode}
-\textcolor{comment}{// Let's say we want to keep 10 Eigenfaces and have a threshold value of 10.0}
+\textcolor{comment}{// Let's say we want to keep 10 Eigenfaces and have a fr.antproject.utils.threshold value of 10.0}
 \textcolor{keywordtype}{int} num\_components = 10;
-\textcolor{keywordtype}{double} threshold = 10.0;
-\textcolor{comment}{// Then if you want to have a cv::FaceRecognizer with a confidence threshold,}
+\textcolor{keywordtype}{double} fr.antproject.utils.threshold = 10.0;
+\textcolor{comment}{// Then if you want to have a cv::FaceRecognizer with a confidence fr.antproject.utils.threshold,}
 \textcolor{comment}{// create the concrete implementation with the appropiate parameters:}
-Ptr<FaceRecognizer> model = \hyperlink{group__face_ga6f3a56396530d46af3fba9ad04fc80cf}{createEigenFaceRecognizer}(num\_components, threshold);
+Ptr<FaceRecognizer> model = \hyperlink{group__face_ga6f3a56396530d46af3fba9ad04fc80cf}{createEigenFaceRecognizer}(num\_components, fr.antproject.utils.threshold);
 \end{DoxyCode}
  \end{DoxyPre}
  
 
-Sometimes it\textquotesingle{}s impossible to train the model, just to experiment with threshold values. Thanks to Algorithm it\textquotesingle{}s possible to set internal model thresholds during runtime. Let\textquotesingle{}s see how we would set/get the prediction for the Eigenface model, we\textquotesingle{}ve created above\+: 
+Sometimes it\textquotesingle{}s impossible to train the model, just to experiment with fr.antproject.utils.threshold values. Thanks to Algorithm it\textquotesingle{}s possible to set internal model thresholds during runtime. Let\textquotesingle{}s see how we would set/get the prediction for the Eigenface model, we\textquotesingle{}ve created above\+:
 
 
 \begin{DoxyPre}
 \begin{DoxyCode}
-\textcolor{comment}{// The following line reads the threshold from the Eigenfaces model:}
-\textcolor{keywordtype}{double} current\_threshold = model->getDouble(\textcolor{stringliteral}{"threshold"});
-\textcolor{comment}{// And this line sets the threshold to 0.0:}
-model->set(\textcolor{stringliteral}{"threshold"}, 0.0);
+\textcolor{comment}{// The following line reads the fr.antproject.utils.threshold from the Eigenfaces model:}
+\textcolor{keywordtype}{double} current\_threshold = model->getDouble(\textcolor{stringliteral}{"fr.antproject.utils.threshold"});
+\textcolor{comment}{// And this line sets the fr.antproject.utils.threshold to 0.0:}
+model->set(\textcolor{stringliteral}{"fr.antproject.utils.threshold"}, 0.0);
 \end{DoxyCode}
  \end{DoxyPre}
  
 
-If you\textquotesingle{}ve set the threshold to 0.\+0 as we did above, then\+: 
+If you\textquotesingle{}ve set the fr.antproject.utils.threshold to 0.\+0 as we did above, then\+:
 
 
 \begin{DoxyPre}
 \begin{DoxyCode}
 \textcolor{comment}{//}
 Mat img = imread(\textcolor{stringliteral}{"person1/3.jpg"}, CV\_LOAD\_IMAGE\_GRAYSCALE);
-\textcolor{comment}{// Get a prediction from the model. Note: We've set a threshold of 0.0 above,}
+\textcolor{comment}{// Get a prediction from the model. Note: We've set a fr.antproject.utils.threshold of 0.0 above,}
 \textcolor{comment}{// since the distance is almost always larger than 0.0, you'll get -1 as}
 \textcolor{comment}{// label, which indicates, this face is unknown}
 \textcolor{keywordtype}{int} predicted\_label = model->predict(img);
@@ -149,13 +149,13 @@ String name = model->name();
 \index{Face Recognition@{Face Recognition}!create\+Eigen\+Face\+Recognizer@{create\+Eigen\+Face\+Recognizer}}
 \index{create\+Eigen\+Face\+Recognizer@{create\+Eigen\+Face\+Recognizer}!Face Recognition@{Face Recognition}}
 \subsubsection{\texorpdfstring{create\+Eigen\+Face\+Recognizer()}{createEigenFaceRecognizer()}}
-{\footnotesize\ttfamily static native Basic\+Face\+Recognizer org.\+bytedeco.\+javacpp.\+opencv\+\_\+face.\+create\+Eigen\+Face\+Recognizer (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+components,  }\item[{double}]{threshold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static native Basic\+Face\+Recognizer org.\+bytedeco.\+javacpp.\+opencv\+\_\+face.\+create\+Eigen\+Face\+Recognizer (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+components,  }\item[{double}]{fr.antproject.utils.threshold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 \begin{DoxyParams}{Parameters}
 {\em num\+\_\+components} & The number of components (read\+: Eigenfaces) kept for this Principal Component Analysis. As a hint\+: There\textquotesingle{}s no rule how many components (read\+: Eigenfaces) should be kept for good reconstruction capabilities. It is based on your input data, so experiment with the number. Keeping 80 components should almost always be sufficient. \\
 \hline
-{\em threshold} & The threshold applied in the prediction. \\
+{\em fr.antproject.utils.threshold} & The fr.antproject.utils.threshold applied in the prediction. \\
 \hline
 \end{DoxyParams}
 \paragraph*{Notes\+:}
@@ -172,23 +172,23 @@ String name = model->name();
 
 \begin{DoxyItemize}
 \item num\+\_\+components see create\+Eigen\+Face\+Recognizer.
-\item threshold see create\+Eigen\+Face\+Recognizer.
+\item fr.antproject.utils.threshold see create\+Eigen\+Face\+Recognizer.
 \item eigenvalues The eigenvalues for this Principal Component Analysis (ordered descending).
 \item eigenvectors The eigenvectors for this Principal Component Analysis (ordered by their eigenvalue).
 \item mean The sample mean calculated from the training data.
 \item projections The projections of the training data.
-\item labels The threshold applied in the prediction. If the distance to the nearest neighbor is larger than the threshold, this method returns -\/1. 
+\item labels The fr.antproject.utils.threshold applied in the prediction. If the distance to the nearest neighbor is larger than the fr.antproject.utils.threshold, this method returns -\/1.
 \end{DoxyItemize}\mbox{\Hypertarget{group__face_ga80a98f353dd2ef661444e0d79bbe9daf}\label{group__face_ga80a98f353dd2ef661444e0d79bbe9daf}} 
 \index{Face Recognition@{Face Recognition}!create\+Fisher\+Face\+Recognizer@{create\+Fisher\+Face\+Recognizer}}
 \index{create\+Fisher\+Face\+Recognizer@{create\+Fisher\+Face\+Recognizer}!Face Recognition@{Face Recognition}}
 \subsubsection{\texorpdfstring{create\+Fisher\+Face\+Recognizer()}{createFisherFaceRecognizer()}}
-{\footnotesize\ttfamily static native Basic\+Face\+Recognizer org.\+bytedeco.\+javacpp.\+opencv\+\_\+face.\+create\+Fisher\+Face\+Recognizer (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+components,  }\item[{double}]{threshold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static native Basic\+Face\+Recognizer org.\+bytedeco.\+javacpp.\+opencv\+\_\+face.\+create\+Fisher\+Face\+Recognizer (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+components,  }\item[{double}]{fr.antproject.utils.threshold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 \begin{DoxyParams}{Parameters}
 {\em num\+\_\+components} & The number of components (read\+: Fisherfaces) kept for this Linear Discriminant Analysis with the Fisherfaces criterion. It\textquotesingle{}s useful to keep all components, that means the number of your classes c (read\+: subjects, persons you want to recognize). If you leave this at the default (0) or set it to a value less-\/equal 0 or greater (c-\/1), it will be set to the correct number (c-\/1) automatically. \\
 \hline
-{\em threshold} & The threshold applied in the prediction. If the distance to the nearest neighbor is larger than the threshold, this method returns -\/1. \\
+{\em fr.antproject.utils.threshold} & The fr.antproject.utils.threshold applied in the prediction. If the distance to the nearest neighbor is larger than the fr.antproject.utils.threshold, this method returns -\/1. \\
 \hline
 \end{DoxyParams}
 \paragraph*{Notes\+:}
@@ -205,7 +205,7 @@ String name = model->name();
 
 \begin{DoxyItemize}
 \item num\+\_\+components see create\+Fisher\+Face\+Recognizer.
-\item threshold see create\+Fisher\+Face\+Recognizer.
+\item fr.antproject.utils.threshold see create\+Fisher\+Face\+Recognizer.
 \item eigenvalues The eigenvalues for this Linear Discriminant Analysis (ordered descending).
 \item eigenvectors The eigenvectors for this Linear Discriminant Analysis (ordered by their eigenvalue).
 \item mean The sample mean calculated from the training data.
@@ -215,7 +215,7 @@ String name = model->name();
 \index{Face Recognition@{Face Recognition}!create\+L\+B\+P\+H\+Face\+Recognizer@{create\+L\+B\+P\+H\+Face\+Recognizer}}
 \index{create\+L\+B\+P\+H\+Face\+Recognizer@{create\+L\+B\+P\+H\+Face\+Recognizer}!Face Recognition@{Face Recognition}}
 \subsubsection{\texorpdfstring{create\+L\+B\+P\+H\+Face\+Recognizer()}{createLBPHFaceRecognizer()}}
-{\footnotesize\ttfamily static native L\+B\+P\+H\+Face\+Recognizer org.\+bytedeco.\+javacpp.\+opencv\+\_\+face.\+create\+L\+B\+P\+H\+Face\+Recognizer (\begin{DoxyParamCaption}\item[{int}]{radius,  }\item[{int}]{neighbors,  }\item[{int}]{grid\+\_\+x,  }\item[{int}]{grid\+\_\+y,  }\item[{double}]{threshold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static native L\+B\+P\+H\+Face\+Recognizer org.\+bytedeco.\+javacpp.\+opencv\+\_\+face.\+create\+L\+B\+P\+H\+Face\+Recognizer (\begin{DoxyParamCaption}\item[{int}]{radius,  }\item[{int}]{neighbors,  }\item[{int}]{grid\+\_\+x,  }\item[{int}]{grid\+\_\+y,  }\item[{double}]{fr.antproject.utils.threshold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 \begin{DoxyParams}{Parameters}
@@ -231,7 +231,7 @@ String name = model->name();
 \hline
 {\em grid\+\_\+y} & The number of cells in the vertical direction, 8 is a common value used in publications. The more cells, the finer the grid, the higher the dimensionality of the resulting feature vector. \\
 \hline
-{\em threshold} & The threshold applied in the prediction. If the distance to the nearest neighbor is larger than the threshold, this method returns -\/1. \\
+{\em fr.antproject.utils.threshold} & The fr.antproject.utils.threshold applied in the prediction. If the distance to the nearest neighbor is larger than the fr.antproject.utils.threshold, this method returns -\/1. \\
 \hline
 \end{DoxyParams}
 \paragraph*{Notes\+:}
@@ -250,7 +250,7 @@ String name = model->name();
 \item neighbors see create\+L\+B\+P\+H\+Face\+Recognizer.
 \item grid\+\_\+x see create\+L\+B\+P\+H\+Face\+Recognizer.
 \item grid\+\_\+y see create\+L\+B\+P\+H\+Face\+Recognizer.
-\item threshold see create\+L\+B\+P\+H\+Face\+Recognizer.
+\item fr.antproject.utils.threshold see create\+L\+B\+P\+H\+Face\+Recognizer.
 \item histograms Local Binary Patterns Histograms calculated from the given training data (empty if none was given).
 \item labels Labels corresponding to the calculated Local Binary Patterns Histograms. 
 \end{DoxyItemize}

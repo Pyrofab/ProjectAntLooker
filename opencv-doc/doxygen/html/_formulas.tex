@@ -293,7 +293,7 @@ $T_y$
 $cy_1=cy_2$
 \pagebreak
 
-$|\texttt{points2[i]}^T*\texttt{F}*\texttt{points1[i]}|>\texttt{threshold}$
+$|\texttt{points2[i]}^T*\texttt{F}*\texttt{points1[i]}|>\texttt{fr.antproject.utils.threshold}$
 \pagebreak
 
 $N = 7$
@@ -515,7 +515,7 @@ $(f_x(x,y), f_y(x,y))$
 \[\texttt{Scalar} (blue \_ component, green \_ component, red \_ component[, alpha \_ component])\]
 \pagebreak
 
-$\texttt{Point}(x,y)\rightarrow\texttt{Point2f}(x*2^{-shift},y*2^{-shift})$
+$\texttt{fr.antproject.utils.Point}(x,y)\rightarrow\texttt{Point2f}(x*2^{-shift},y*2^{-shift})$
 \pagebreak
 
 \[\texttt{dst} = \mathrm{open} ( \texttt{src} , \texttt{element} )= \mathrm{dilate} ( \mathrm{erode} ( \texttt{src} , \texttt{element} ))\]
@@ -551,7 +551,7 @@ $dst(x,y) = src( \rho , \phi )$
 \[\texttt{dst} (x,y) = \fork{0}{if \(\texttt{src}(x,y) > \texttt{thresh}\)}{\texttt{maxval}}{otherwise}\]
 \pagebreak
 
-\[\texttt{dst} (x,y) = \fork{\texttt{threshold}}{if \(\texttt{src}(x,y) > \texttt{thresh}\)}{\texttt{src}(x,y)}{otherwise}\]
+\[\texttt{dst} (x,y) = \fork{\texttt{fr.antproject.utils.threshold}}{if \(\texttt{src}(x,y) > \texttt{thresh}\)}{\texttt{src}(x,y)}{otherwise}\]
 \pagebreak
 
 \[\texttt{dst} (x,y) = \fork{\texttt{src}(x,y)}{if \(\texttt{src}(x,y) > \texttt{thresh}\)}{0}{otherwise}\]
@@ -794,7 +794,7 @@ $(0,0)$
 $0 \sim \textrm{vertical line}, \pi/2 \sim \textrm{horizontal line}$
 \pagebreak
 
-$>\texttt{threshold}$
+$>\texttt{fr.antproject.utils.threshold}$
 \pagebreak
 
 $(x_1, y_1, x_2, y_2)$

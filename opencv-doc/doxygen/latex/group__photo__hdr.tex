@@ -16,7 +16,7 @@ class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+Tonemap\+Mantiuk
 class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+Align\+Exposures}
 \begin{DoxyCompactList}\small\item\em The base class for algorithms that align images of the same scene with different exposures. \end{DoxyCompactList}\item 
 class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+Align\+M\+TB}
-\begin{DoxyCompactList}\small\item\em This algorithm converts images to median threshold bitmaps (1 for pixels brighter than median luminance and 0 otherwise) and than aligns the resulting bitmaps using bit operations. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This algorithm converts images to median fr.antproject.utils.threshold bitmaps (1 for pixels brighter than median luminance and 0 otherwise) and than aligns the resulting bitmaps using bit operations. \end{DoxyCompactList}\item
 class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+Calibrate\+C\+RF}
 \begin{DoxyCompactList}\small\item\em The base class for camera response calibration algorithms. \end{DoxyCompactList}\item 
 class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+Calibrate\+Debevec}
@@ -69,7 +69,7 @@ static native Calibrate\+Debevec \hyperlink{group__photo__hdr_gada8b25f072e80141
 \mbox{\Hypertarget{group__photo__hdr_ga3b370075247e9bd2f724b316ad9970f3}\label{group__photo__hdr_ga3b370075247e9bd2f724b316ad9970f3}} 
 static native Calibrate\+Debevec {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Calibrate\+Debevec} ()
 \item 
-static native Calibrate\+Robertson \hyperlink{group__photo__hdr_ga1ac32f0f1042b3436bd7daf88bb48760}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Calibrate\+Robertson} (int max\+\_\+iter, float threshold)
+static native Calibrate\+Robertson \hyperlink{group__photo__hdr_ga1ac32f0f1042b3436bd7daf88bb48760}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Calibrate\+Robertson} (int max\+\_\+iter, float fr.antproject.utils.threshold)
 \begin{DoxyCompactList}\small\item\em Creates Calibrate\+Robertson object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{group__photo__hdr_ga3032d7fe6e15a35aa4722340e887ca17}\label{group__photo__hdr_ga3032d7fe6e15a35aa4722340e887ca17}} 
 static native Calibrate\+Robertson {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Calibrate\+Robertson} ()
@@ -140,7 +140,7 @@ Creates Calibrate\+Debevec object.
 \index{H\+D\+R imaging@{H\+D\+R imaging}!create\+Calibrate\+Robertson@{create\+Calibrate\+Robertson}}
 \index{create\+Calibrate\+Robertson@{create\+Calibrate\+Robertson}!H\+D\+R imaging@{H\+D\+R imaging}}
 \subsubsection{\texorpdfstring{create\+Calibrate\+Robertson()}{createCalibrateRobertson()}}
-{\footnotesize\ttfamily static native Calibrate\+Robertson org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Calibrate\+Robertson (\begin{DoxyParamCaption}\item[{int}]{max\+\_\+iter,  }\item[{float}]{threshold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static native Calibrate\+Robertson org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo.\+create\+Calibrate\+Robertson (\begin{DoxyParamCaption}\item[{int}]{max\+\_\+iter,  }\item[{float}]{fr.antproject.utils.threshold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -150,7 +150,7 @@ Creates Calibrate\+Robertson object.
 \begin{DoxyParams}{Parameters}
 {\em max\+\_\+iter} & maximal number of Gauss-\/\+Seidel solver iterations. \\
 \hline
-{\em threshold} & target difference between results of two successive steps of the minimization. \\
+{\em fr.antproject.utils.threshold} & target difference between results of two successive steps of the minimization. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{group__photo__hdr_ga7f47cc9c6b5e72f9fbf7281271dfc426}\label{group__photo__hdr_ga7f47cc9c6b5e72f9fbf7281271dfc426}} 

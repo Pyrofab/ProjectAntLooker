@@ -140,7 +140,7 @@ static native void {\bfseries cv\+Stereo\+Rectify} ( @Const Cv\+Mat camera\+\_\+
 \item 
 static native void {\bfseries cv\+Stereo\+Rectify} ( @Const Cv\+Mat camera\+\_\+matrix1, @Const Cv\+Mat camera\+\_\+matrix2, @Const Cv\+Mat dist\+\_\+coeffs1, @Const Cv\+Mat dist\+\_\+coeffs2, @By\+Val Cv\+Size image\+\_\+size, @Const Cv\+Mat R, @Const Cv\+Mat T, Cv\+Mat R1, Cv\+Mat R2, Cv\+Mat P1, Cv\+Mat P2)
 \item 
-static native int {\bfseries cv\+Stereo\+Rectify\+Uncalibrated} ( @Const Cv\+Mat points1, @Const Cv\+Mat points2, @Const Cv\+Mat F, @By\+Val Cv\+Size img\+\_\+size, Cv\+Mat H1, Cv\+Mat H2, double threshold)
+static native int {\bfseries cv\+Stereo\+Rectify\+Uncalibrated} ( @Const Cv\+Mat points1, @Const Cv\+Mat points2, @Const Cv\+Mat F, @By\+Val Cv\+Size img\+\_\+size, Cv\+Mat H1, Cv\+Mat H2, double fr.antproject.utils.threshold)
 \item 
 static native int {\bfseries cv\+Stereo\+Rectify\+Uncalibrated} ( @Const Cv\+Mat points1, @Const Cv\+Mat points2, @Const Cv\+Mat F, @By\+Val Cv\+Size img\+\_\+size, Cv\+Mat H1, Cv\+Mat H2)
 \item 
@@ -304,13 +304,13 @@ static native double {\bfseries calibrate\+Camera} ( @By\+Val U\+Mat\+Vector obj
 \item 
 static native double {\bfseries calibrate\+Camera} ( @By\+Val U\+Mat\+Vector object\+Points, @By\+Val U\+Mat\+Vector image\+Points, @By\+Val Size image\+Size, @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val U\+Mat\+Vector rvecs, @By\+Val U\+Mat\+Vector tvecs)
 \item 
-static native void \hyperlink{group__calib3d_ga35bea5b10b8dfd23238f72e9a2e2ac27}{calibration\+Matrix\+Values} ( @By\+Val Mat camera\+Matrix, @By\+Val Size image\+Size, double aperture\+Width, double aperture\+Height, @By\+Ref Double\+Pointer fovx, @By\+Ref Double\+Pointer fovy, @By\+Ref Double\+Pointer focal\+Length, @By\+Ref Point2d principal\+Point, @By\+Ref Double\+Pointer aspect\+Ratio)
+static native void \hyperlink{group__calib3d_ga35bea5b10b8dfd23238f72e9a2e2ac27}{calibration\+Matrix\+Values} ( @By\+Val Mat camera\+Matrix, @By\+Val Size image\+Size, double aperture\+Width, double aperture\+Height, @By\+Ref Double\+Pointer fovx, @By\+Ref Double\+Pointer fovy, @By\+Ref Double\+Pointer focal\+Length, @By\+Ref Point2d principal\+fr.antproject.utils.Point, @By\+Ref Double\+Pointer aspect\+Ratio)
 \begin{DoxyCompactList}\small\item\em Computes useful camera characteristics from the camera matrix. \end{DoxyCompactList}\item 
-static native void {\bfseries calibration\+Matrix\+Values} ( @By\+Val Mat camera\+Matrix, @By\+Val Size image\+Size, double aperture\+Width, double aperture\+Height, @By\+Ref Double\+Buffer fovx, @By\+Ref Double\+Buffer fovy, @By\+Ref Double\+Buffer focal\+Length, @By\+Ref Point2d principal\+Point, @By\+Ref Double\+Buffer aspect\+Ratio)
+static native void {\bfseries calibration\+Matrix\+Values} ( @By\+Val Mat camera\+Matrix, @By\+Val Size image\+Size, double aperture\+Width, double aperture\+Height, @By\+Ref Double\+Buffer fovx, @By\+Ref Double\+Buffer fovy, @By\+Ref Double\+Buffer focal\+Length, @By\+Ref Point2d principal\+fr.antproject.utils.Point, @By\+Ref Double\+Buffer aspect\+Ratio)
 \item 
-static native void {\bfseries calibration\+Matrix\+Values} ( @By\+Val U\+Mat camera\+Matrix, @By\+Val Size image\+Size, double aperture\+Width, double aperture\+Height, @By\+Ref double\mbox{[}$\,$\mbox{]} fovx, @By\+Ref double\mbox{[}$\,$\mbox{]} fovy, @By\+Ref double\mbox{[}$\,$\mbox{]} focal\+Length, @By\+Ref Point2d principal\+Point, @By\+Ref double\mbox{[}$\,$\mbox{]} aspect\+Ratio)
+static native void {\bfseries calibration\+Matrix\+Values} ( @By\+Val U\+Mat camera\+Matrix, @By\+Val Size image\+Size, double aperture\+Width, double aperture\+Height, @By\+Ref double\mbox{[}$\,$\mbox{]} fovx, @By\+Ref double\mbox{[}$\,$\mbox{]} fovy, @By\+Ref double\mbox{[}$\,$\mbox{]} focal\+Length, @By\+Ref Point2d principal\+fr.antproject.utils.Point, @By\+Ref double\mbox{[}$\,$\mbox{]} aspect\+Ratio)
 \item 
-static native void {\bfseries calibration\+Matrix\+Values} ( @By\+Val U\+Mat camera\+Matrix, @By\+Val Size image\+Size, double aperture\+Width, double aperture\+Height, @By\+Ref Double\+Pointer fovx, @By\+Ref Double\+Pointer fovy, @By\+Ref Double\+Pointer focal\+Length, @By\+Ref Point2d principal\+Point, @By\+Ref Double\+Pointer aspect\+Ratio)
+static native void {\bfseries calibration\+Matrix\+Values} ( @By\+Val U\+Mat camera\+Matrix, @By\+Val Size image\+Size, double aperture\+Width, double aperture\+Height, @By\+Ref Double\+Pointer fovx, @By\+Ref Double\+Pointer fovy, @By\+Ref Double\+Pointer focal\+Length, @By\+Ref Point2d principal\+fr.antproject.utils.Point, @By\+Ref Double\+Pointer aspect\+Ratio)
 \item 
 static native double \hyperlink{group__calib3d_gab585e0688b9d7592dfe294c5179bdcae}{stereo\+Calibrate} ( @By\+Val Mat\+Vector object\+Points, @By\+Val Mat\+Vector image\+Points1, @By\+Val Mat\+Vector image\+Points2, @By\+Val Mat camera\+Matrix1, @By\+Val Mat dist\+Coeffs1, @By\+Val Mat camera\+Matrix2, @By\+Val Mat dist\+Coeffs2, @By\+Val Size image\+Size, @By\+Val Mat R, @By\+Val Mat T, @By\+Val Mat E, @By\+Val Mat F, int flags, @By\+Val(null\+Value=\char`\"{}cv\+::\+Term\+Criteria(cv\+::\+Term\+Criteria\+::\+C\+O\+U\+NT+cv\+::\+Term\+Criteria\+::\+E\+PS, 30, 1e-\/6)\char`\"{}) Term\+Criteria criteria)
 \begin{DoxyCompactList}\small\item\em Calibrates the stereo camera. \end{DoxyCompactList}\item 
@@ -336,11 +336,11 @@ static native void {\bfseries stereo\+Rectify} ( @By\+Val U\+Mat camera\+Matrix1
 \item 
 static native void {\bfseries stereo\+Rectify} ( @By\+Val U\+Mat camera\+Matrix1, @By\+Val U\+Mat dist\+Coeffs1, @By\+Val U\+Mat camera\+Matrix2, @By\+Val U\+Mat dist\+Coeffs2, @By\+Val Size image\+Size, @By\+Val U\+Mat R, @By\+Val U\+Mat T, @By\+Val U\+Mat R1, @By\+Val U\+Mat R2, @By\+Val U\+Mat P1, @By\+Val U\+Mat P2, @By\+Val U\+Mat Q)
 \item 
-static native boolean \hyperlink{group__calib3d_ga2a00c796082466a7d1000418118e02d2}{stereo\+Rectify\+Uncalibrated} ( @By\+Val Mat points1, @By\+Val Mat points2, @By\+Val Mat F, @By\+Val Size img\+Size, @By\+Val Mat H1, @By\+Val Mat H2, double threshold)
+static native boolean \hyperlink{group__calib3d_ga2a00c796082466a7d1000418118e02d2}{stereo\+Rectify\+Uncalibrated} ( @By\+Val Mat points1, @By\+Val Mat points2, @By\+Val Mat F, @By\+Val Size img\+Size, @By\+Val Mat H1, @By\+Val Mat H2, double fr.antproject.utils.threshold)
 \begin{DoxyCompactList}\small\item\em Computes a rectification transform for an uncalibrated stereo camera. \end{DoxyCompactList}\item 
 static native boolean {\bfseries stereo\+Rectify\+Uncalibrated} ( @By\+Val Mat points1, @By\+Val Mat points2, @By\+Val Mat F, @By\+Val Size img\+Size, @By\+Val Mat H1, @By\+Val Mat H2)
 \item 
-static native boolean {\bfseries stereo\+Rectify\+Uncalibrated} ( @By\+Val U\+Mat points1, @By\+Val U\+Mat points2, @By\+Val U\+Mat F, @By\+Val Size img\+Size, @By\+Val U\+Mat H1, @By\+Val U\+Mat H2, double threshold)
+static native boolean {\bfseries stereo\+Rectify\+Uncalibrated} ( @By\+Val U\+Mat points1, @By\+Val U\+Mat points2, @By\+Val U\+Mat F, @By\+Val Size img\+Size, @By\+Val U\+Mat H1, @By\+Val U\+Mat H2, double fr.antproject.utils.threshold)
 \item 
 static native boolean {\bfseries stereo\+Rectify\+Uncalibrated} ( @By\+Val U\+Mat points1, @By\+Val U\+Mat points2, @By\+Val U\+Mat F, @By\+Val Size img\+Size, @By\+Val U\+Mat H1, @By\+Val U\+Mat H2)
 \item 
@@ -352,11 +352,11 @@ static native float {\bfseries rectify3\+Collinear} ( @By\+Val U\+Mat camera\+Ma
 \item 
 static native float {\bfseries rectify3\+Collinear} ( @By\+Val U\+Mat camera\+Matrix1, @By\+Val U\+Mat dist\+Coeffs1, @By\+Val U\+Mat camera\+Matrix2, @By\+Val U\+Mat dist\+Coeffs2, @By\+Val U\+Mat camera\+Matrix3, @By\+Val U\+Mat dist\+Coeffs3, @By\+Val U\+Mat\+Vector imgpt1, @By\+Val U\+Mat\+Vector imgpt3, @By\+Val Size image\+Size, @By\+Val U\+Mat R12, @By\+Val U\+Mat T12, @By\+Val U\+Mat R13, @By\+Val U\+Mat T13, @By\+Val U\+Mat R1, @By\+Val U\+Mat R2, @By\+Val U\+Mat R3, @By\+Val U\+Mat P1, @By\+Val U\+Mat P2, @By\+Val U\+Mat P3, @By\+Val U\+Mat Q, double alpha, @By\+Val Size new\+Img\+Size, Rect roi1, Rect roi2, int flags)
 \item 
-static native Mat \hyperlink{group__calib3d_ga70615047cb056a5e3787ce151ddef307}{get\+Optimal\+New\+Camera\+Matrix} ( @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val Size image\+Size, double alpha, @By\+Val(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size new\+Img\+Size, Rect valid\+Pix\+R\+OI, @Cast(\char`\"{}bool\char`\"{}) boolean center\+Principal\+Point)
+static native Mat \hyperlink{group__calib3d_ga70615047cb056a5e3787ce151ddef307}{get\+Optimal\+New\+Camera\+Matrix} ( @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val Size image\+Size, double alpha, @By\+Val(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size new\+Img\+Size, Rect valid\+Pix\+R\+OI, @Cast(\char`\"{}bool\char`\"{}) boolean center\+Principal\+fr.antproject.utils.Point)
 \begin{DoxyCompactList}\small\item\em Returns the new camera matrix based on the free scaling parameter. \end{DoxyCompactList}\item 
 static native Mat {\bfseries get\+Optimal\+New\+Camera\+Matrix} ( @By\+Val Mat camera\+Matrix, @By\+Val Mat dist\+Coeffs, @By\+Val Size image\+Size, double alpha)
 \item 
-static native Mat {\bfseries get\+Optimal\+New\+Camera\+Matrix} ( @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val Size image\+Size, double alpha, @By\+Val(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size new\+Img\+Size, Rect valid\+Pix\+R\+OI, @Cast(\char`\"{}bool\char`\"{}) boolean center\+Principal\+Point)
+static native Mat {\bfseries get\+Optimal\+New\+Camera\+Matrix} ( @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val Size image\+Size, double alpha, @By\+Val(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size new\+Img\+Size, Rect valid\+Pix\+R\+OI, @Cast(\char`\"{}bool\char`\"{}) boolean center\+Principal\+fr.antproject.utils.Point)
 \item 
 static native Mat {\bfseries get\+Optimal\+New\+Camera\+Matrix} ( @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val Size image\+Size, double alpha)
 \item 
@@ -388,19 +388,19 @@ static native Mat {\bfseries find\+Fundamental\+Mat} ( @By\+Val U\+Mat points1, 
 \item 
 static native Mat {\bfseries find\+Fundamental\+Mat} ( @By\+Val U\+Mat points1, @By\+Val U\+Mat points2, @By\+Val U\+Mat mask)
 \item 
-static native Mat \hyperlink{group__calib3d_gad86954f592d1f99b0f8cdec7f4134c7a}{find\+Essential\+Mat} ( @By\+Val Mat points1, @By\+Val Mat points2, @By\+Val Mat camera\+Matrix, int method, double prob, double threshold, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat mask)
+static native Mat \hyperlink{group__calib3d_gad86954f592d1f99b0f8cdec7f4134c7a}{find\+Essential\+Mat} ( @By\+Val Mat points1, @By\+Val Mat points2, @By\+Val Mat camera\+Matrix, int method, double prob, double fr.antproject.utils.threshold, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat mask)
 \begin{DoxyCompactList}\small\item\em Calculates an essential matrix from the corresponding points in two images. \end{DoxyCompactList}\item 
 static native Mat {\bfseries find\+Essential\+Mat} ( @By\+Val Mat points1, @By\+Val Mat points2, @By\+Val Mat camera\+Matrix)
 \item 
-static native Mat {\bfseries find\+Essential\+Mat} ( @By\+Val U\+Mat points1, @By\+Val U\+Mat points2, @By\+Val U\+Mat camera\+Matrix, int method, double prob, double threshold, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat mask)
+static native Mat {\bfseries find\+Essential\+Mat} ( @By\+Val U\+Mat points1, @By\+Val U\+Mat points2, @By\+Val U\+Mat camera\+Matrix, int method, double prob, double fr.antproject.utils.threshold, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat mask)
 \item 
 static native Mat {\bfseries find\+Essential\+Mat} ( @By\+Val U\+Mat points1, @By\+Val U\+Mat points2, @By\+Val U\+Mat camera\+Matrix)
 \item 
-static native Mat \hyperlink{group__calib3d_gad36d1e3d84d08813292f71bad120f252}{find\+Essential\+Mat} ( @By\+Val Mat points1, @By\+Val Mat points2, double focal, @By\+Val(null\+Value=\char`\"{}cv\+::\+Point2d(0, 0)\char`\"{}) Point2d pp, int method, double prob, double threshold, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat mask)
+static native Mat \hyperlink{group__calib3d_gad36d1e3d84d08813292f71bad120f252}{find\+Essential\+Mat} ( @By\+Val Mat points1, @By\+Val Mat points2, double focal, @By\+Val(null\+Value=\char`\"{}cv\+::\+Point2d(0, 0)\char`\"{}) Point2d pp, int method, double prob, double fr.antproject.utils.threshold, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) Mat mask)
 \item 
 static native Mat {\bfseries find\+Essential\+Mat} ( @By\+Val Mat points1, @By\+Val Mat points2)
 \item 
-static native Mat {\bfseries find\+Essential\+Mat} ( @By\+Val U\+Mat points1, @By\+Val U\+Mat points2, double focal, @By\+Val(null\+Value=\char`\"{}cv\+::\+Point2d(0, 0)\char`\"{}) Point2d pp, int method, double prob, double threshold, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat mask)
+static native Mat {\bfseries find\+Essential\+Mat} ( @By\+Val U\+Mat points1, @By\+Val U\+Mat points2, double focal, @By\+Val(null\+Value=\char`\"{}cv\+::\+Point2d(0, 0)\char`\"{}) Point2d pp, int method, double prob, double fr.antproject.utils.threshold, @By\+Val(null\+Value=\char`\"{}cv\+::\+Output\+Array(cv\+::no\+Array())\char`\"{}) U\+Mat mask)
 \item 
 static native Mat {\bfseries find\+Essential\+Mat} ( @By\+Val U\+Mat points1, @By\+Val U\+Mat points2)
 \item 

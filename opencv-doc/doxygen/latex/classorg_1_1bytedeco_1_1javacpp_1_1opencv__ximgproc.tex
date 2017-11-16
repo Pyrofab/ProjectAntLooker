@@ -173,7 +173,7 @@ static native double \hyperlink{group__ximgproc__filters_ga0f224e6315d538e257cba
 static native double {\bfseries compute\+M\+SE} (@By\+Val U\+Mat GT, @By\+Val U\+Mat src, @By\+Val Rect R\+OI)
 \item 
 static native double \hyperlink{group__ximgproc__filters_ga04b04ac57f6b8c53deacbb1d41d05766}{compute\+Bad\+Pixel\+Percent} (@By\+Val Mat GT, @By\+Val Mat src, @By\+Val Rect R\+OI, int thresh)
-\begin{DoxyCompactList}\small\item\em Function for computing the percent of \char`\"{}bad\char`\"{} pixels in the disparity map (pixels where error is higher than a specified threshold) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Function for computing the percent of \char`\"{}bad\char`\"{} pixels in the disparity map (pixels where error is higher than a specified fr.antproject.utils.threshold) \end{DoxyCompactList}\item
 static native double {\bfseries compute\+Bad\+Pixel\+Percent} (@By\+Val Mat GT, @By\+Val Mat src, @By\+Val Rect R\+OI)
 \item 
 static native double {\bfseries compute\+Bad\+Pixel\+Percent} (@By\+Val U\+Mat GT, @By\+Val U\+Mat src, @By\+Val Rect R\+OI, int thresh)
@@ -239,16 +239,16 @@ static native void {\bfseries Fast\+Hough\+Transform} ( @By\+Val U\+Mat src, @By
 \mbox{\Hypertarget{classorg_1_1bytedeco_1_1javacpp_1_1opencv__ximgproc_afeffe7892b68efac640829342cd5fabf}\label{classorg_1_1bytedeco_1_1javacpp_1_1opencv__ximgproc_afeffe7892b68efac640829342cd5fabf}} 
 static native void {\bfseries Fast\+Hough\+Transform} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, int dst\+Mat\+Depth)
 \item 
-static native Scalar4i \hyperlink{classorg_1_1bytedeco_1_1javacpp_1_1opencv__ximgproc_a15b22eb13c2bff5ab308c1cc895e5f24}{Hough\+Point2\+Line} (@Const @By\+Ref Point hough\+Point, @By\+Val Mat src\+Img\+Info, int angle\+Range, int make\+Skew, int rules)
+static native Scalar4i \hyperlink{classorg_1_1bytedeco_1_1javacpp_1_1opencv__ximgproc_a15b22eb13c2bff5ab308c1cc895e5f24}{Hough\+Point2\+Line} (@Const @By\+Ref fr.antproject.utils.Point hough\+fr.antproject.utils.Point, @By\+Val Mat src\+Img\+Info, int angle\+Range, int make\+Skew, int rules)
 \begin{DoxyCompactList}\small\item\em Calculates coordinates of line segment corresponded by point in Hough space. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classorg_1_1bytedeco_1_1javacpp_1_1opencv__ximgproc_ad3b76262d53d6b53b310004575be9e84}\label{classorg_1_1bytedeco_1_1javacpp_1_1opencv__ximgproc_ad3b76262d53d6b53b310004575be9e84}} 
-static native Scalar4i {\bfseries Hough\+Point2\+Line} (@Const @By\+Ref Point hough\+Point, @By\+Val Mat src\+Img\+Info)
+static native Scalar4i {\bfseries Hough\+Point2\+Line} (@Const @By\+Ref fr.antproject.utils.Point hough\+fr.antproject.utils.Point, @By\+Val Mat src\+Img\+Info)
 \item 
 \mbox{\Hypertarget{classorg_1_1bytedeco_1_1javacpp_1_1opencv__ximgproc_a5bc9b23054460b330913e82837f943fa}\label{classorg_1_1bytedeco_1_1javacpp_1_1opencv__ximgproc_a5bc9b23054460b330913e82837f943fa}} 
-static native Scalar4i {\bfseries Hough\+Point2\+Line} (@Const @By\+Ref Point hough\+Point, @By\+Val U\+Mat src\+Img\+Info, int angle\+Range, int make\+Skew, int rules)
+static native Scalar4i {\bfseries Hough\+Point2\+Line} (@Const @By\+Ref fr.antproject.utils.Point hough\+fr.antproject.utils.Point, @By\+Val U\+Mat src\+Img\+Info, int angle\+Range, int make\+Skew, int rules)
 \item 
 \mbox{\Hypertarget{classorg_1_1bytedeco_1_1javacpp_1_1opencv__ximgproc_ac089080292d003ff7dea8360e4b987e5}\label{classorg_1_1bytedeco_1_1javacpp_1_1opencv__ximgproc_ac089080292d003ff7dea8360e4b987e5}} 
-static native Scalar4i {\bfseries Hough\+Point2\+Line} (@Const @By\+Ref Point hough\+Point, @By\+Val U\+Mat src\+Img\+Info)
+static native Scalar4i {\bfseries Hough\+Point2\+Line} (@Const @By\+Ref fr.antproject.utils.Point hough\+fr.antproject.utils.Point, @By\+Val U\+Mat src\+Img\+Info)
 \item 
 static native void \hyperlink{classorg_1_1bytedeco_1_1javacpp_1_1opencv__ximgproc_a821e53d932bd411235484d70e890de32}{covariance\+Estimation} (@By\+Val Mat src, @By\+Val Mat dst, int window\+Rows, int window\+Cols)
 \begin{DoxyCompactList}\small\item\em Computes the estimated covariance matrix of an image using the sliding window forumlation. \end{DoxyCompactList}\item 
@@ -341,7 +341,7 @@ The function calculates the fast Hough transform for full, half or quarter range
 \index{org\+::bytedeco\+::javacpp\+::opencv\+\_\+ximgproc@{org\+::bytedeco\+::javacpp\+::opencv\+\_\+ximgproc}!Hough\+Point2\+Line@{Hough\+Point2\+Line}}
 \index{Hough\+Point2\+Line@{Hough\+Point2\+Line}!org\+::bytedeco\+::javacpp\+::opencv\+\_\+ximgproc@{org\+::bytedeco\+::javacpp\+::opencv\+\_\+ximgproc}}
 \subsubsection{\texorpdfstring{Hough\+Point2\+Line()}{HoughPoint2Line()}}
-{\footnotesize\ttfamily static native Scalar4i org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+Hough\+Point2\+Line (\begin{DoxyParamCaption}\item[{@Const @By\+Ref Point}]{hough\+Point,  }\item[{@By\+Val Mat}]{src\+Img\+Info,  }\item[{int}]{angle\+Range,  }\item[{int}]{make\+Skew,  }\item[{int}]{rules }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static native Scalar4i org.\+bytedeco.\+javacpp.\+opencv\+\_\+ximgproc.\+Hough\+Point2\+Line (\begin{DoxyParamCaption}\item[{@Const @By\+Ref fr.antproject.utils.Point}]{hough\+fr.antproject.utils.Point,  }\item[{@By\+Val Mat}]{src\+Img\+Info,  }\item[{int}]{angle\+Range,  }\item[{int}]{make\+Skew,  }\item[{int}]{rules }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -349,7 +349,7 @@ Calculates coordinates of line segment corresponded by point in Hough space.
 
 
 \begin{DoxyParams}{Parameters}
-{\em hough\+Point} & Point in Hough space. \\
+{\em hough\+fr.antproject.utils.Point} & fr.antproject.utils.Point in Hough space. \\
 \hline
 {\em src\+Img\+Info} & The source (input) image of Hough transform. \\
 \hline

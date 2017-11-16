@@ -245,7 +245,7 @@ Calculate an optical flow using \char`\"{}\+Simple\+Flow\char`\"{} algorithm.
 \hline
 {\em sigma\+\_\+color\+\_\+fix} & color sigma for postprocess cross bilateral filter \\
 \hline
-{\em occ\+\_\+thr} & threshold for detecting occlusions \\
+{\em occ\+\_\+thr} & fr.antproject.utils.threshold for detecting occlusions \\
 \hline
 {\em upscale\+\_\+averaging\+\_\+radius} & window size for bilateral upscale operation \\
 \hline
@@ -253,7 +253,7 @@ Calculate an optical flow using \char`\"{}\+Simple\+Flow\char`\"{} algorithm.
 \hline
 {\em upscale\+\_\+sigma\+\_\+color} & color sigma for bilateral upscale operation \\
 \hline
-{\em speed\+\_\+up\+\_\+thr} & threshold to detect point with irregular flow -\/ where flow should be recalculated after upscale \\
+{\em speed\+\_\+up\+\_\+thr} & fr.antproject.utils.threshold to detect point with irregular flow -\/ where flow should be recalculated after upscale \\
 \hline
 \end{DoxyParams}
 See {\bfseries [Tao2012]} . And site of project -\/ \href{http://graphics.berkeley.edu/papers/Tao-SAN-2012-05/}{\tt http\+://graphics.\+berkeley.\+edu/papers/\+Tao-\/\+S\+A\+N-\/2012-\/05/}. 
@@ -313,7 +313,7 @@ The class implements the Deep\+Flow optical flow algorithm described in {\bfseri
 \item member float sigma Gaussian smoothing parameter
 \item member int min\+Size Minimal dimension of an image in the pyramid (next, smaller images in the pyramid are generated until one of the dimensions reaches this size)
 \item member float downscale\+Factor Scaling factor in the image pyramid (must be $<$ 1)
-\item member int fixed\+Point\+Iterations How many iterations on each level of the pyramid
+\item member int fixed\+fr.antproject.utils.Point\+Iterations How many iterations on each level of the pyramid
 \item member int sor\+Iterations Iterations of Succesive Over-\/\+Relaxation (solver)
 \item member float omega Relaxation factor in S\+OR 
 \end{DoxyItemize}\mbox{\Hypertarget{group__optflow_gac107283f5dba4f320df3d9894aad537b}\label{group__optflow_gac107283f5dba4f320df3d9894aad537b}} 
@@ -384,7 +384,7 @@ Splits a motion history image into a few parts corresponding to separate indepen
 \hline
 {\em timestamp} & Current time in milliseconds or other units. \\
 \hline
-{\em seg\+Thresh} & Segmentation threshold that is recommended to be equal to the interval between motion history \char`\"{}steps\char`\"{} or greater. \\
+{\em seg\+Thresh} & Segmentation fr.antproject.utils.threshold that is recommended to be equal to the interval between motion history \char`\"{}steps\char`\"{} or greater. \\
 \hline
 \end{DoxyParams}
 The function finds all of the motion segments and marks them in segmask with individual values (1,2,...). It also computes a vector with R\+O\+Is of motion connected components. After that the motion direction for every component can be calculated with calc\+Global\+Orientation using the extracted mask of the particular component. \mbox{\Hypertarget{group__optflow_ga41bea8c25211f346782adfb40129e96e}\label{group__optflow_ga41bea8c25211f346782adfb40129e96e}} 

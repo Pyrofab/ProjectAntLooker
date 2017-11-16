@@ -15,7 +15,7 @@ class {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+E\+R\+Filter}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-static native E\+R\+Filter \hyperlink{group__text__detect_ga0c01c194688152f569f28f7845cbfbaf}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+create\+E\+R\+Filter\+N\+M1} (@Ptr E\+R\+Filter.\+Callback cb, int threshold\+Delta, float min\+Area, float max\+Area, float min\+Probability, @Cast(\char`\"{}bool\char`\"{}) boolean non\+Max\+Suppression, float min\+Probability\+Diff)
+static native E\+R\+Filter \hyperlink{group__text__detect_ga0c01c194688152f569f28f7845cbfbaf}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+create\+E\+R\+Filter\+N\+M1} (@Ptr E\+R\+Filter.\+Callback cb, int fr.antproject.utils.threshold\+Delta, float min\+Area, float max\+Area, float min\+Probability, @Cast(\char`\"{}bool\char`\"{}) boolean non\+Max\+Suppression, float min\+Probability\+Diff)
 \begin{DoxyCompactList}\small\item\em Create an Extremal Region Filter for the 1st stage classifier of N\&M algorithm \mbox{[}Neumann12\mbox{]}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{group__text__detect_gae88ae776bf76b390b5ca35a3a4d6b1c6}\label{group__text__detect_gae88ae776bf76b390b5ca35a3a4d6b1c6}} 
 static native E\+R\+Filter {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+create\+E\+R\+Filter\+N\+M1} (@Ptr E\+R\+Filter.\+Callback cb)
@@ -58,57 +58,57 @@ static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+comp
 \mbox{\Hypertarget{group__text__detect_ga5ec53e533b6045b6247ffd37ff2db041}\label{group__text__detect_ga5ec53e533b6045b6247ffd37ff2db041}} 
 static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+compute\+N\+M\+Channels} (@By\+Val U\+Mat \+\_\+src, @By\+Val U\+Mat\+Vector \+\_\+channels)
 \item 
-static native void \hyperlink{group__text__detect_ga3198c558c08dac61bce863d430bf2da6}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val Mat img, @By\+Val Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Std\+String Byte\+Pointer filename, float min\+Probablity)
+static native void \hyperlink{group__text__detect_ga3198c558c08dac61bce863d430bf2da6}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val Mat img, @By\+Val Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref fr.antproject.utils.Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Std\+String Byte\+Pointer filename, float min\+Probablity)
 \begin{DoxyCompactList}\small\item\em Find groups of Extremal Regions that are organized as text blocks. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{group__text__detect_gabac27e6b96790d31ba270d3ed311cc60}\label{group__text__detect_gabac27e6b96790d31ba270d3ed311cc60}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val Mat img, @By\+Val Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val Mat img, @By\+Val Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref fr.antproject.utils.Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects)
 \item 
 \mbox{\Hypertarget{group__text__detect_ga612a196636f1f850aa2b0ab6ba3e042f}\label{group__text__detect_ga612a196636f1f850aa2b0ab6ba3e042f}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val Mat img, @By\+Val U\+Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Std\+String String filename, float min\+Probablity)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val Mat img, @By\+Val U\+Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref fr.antproject.utils.Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Std\+String String filename, float min\+Probablity)
 \item 
 \mbox{\Hypertarget{group__text__detect_ga5a88d259858f8d9addad5d39344c0ed4}\label{group__text__detect_ga5a88d259858f8d9addad5d39344c0ed4}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val Mat img, @By\+Val U\+Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val Mat img, @By\+Val U\+Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref fr.antproject.utils.Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects)
 \item 
 \mbox{\Hypertarget{group__text__detect_ga06e9e2e730381e2b62700dcd5b9157fe}\label{group__text__detect_ga06e9e2e730381e2b62700dcd5b9157fe}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val U\+Mat img, @By\+Val Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Std\+String Byte\+Pointer filename, float min\+Probablity)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val U\+Mat img, @By\+Val Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref fr.antproject.utils.Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Std\+String Byte\+Pointer filename, float min\+Probablity)
 \item 
 \mbox{\Hypertarget{group__text__detect_ga373c44d54fdc93c2e50bdde71c156941}\label{group__text__detect_ga373c44d54fdc93c2e50bdde71c156941}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val U\+Mat img, @By\+Val Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val U\+Mat img, @By\+Val Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref fr.antproject.utils.Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects)
 \item 
 \mbox{\Hypertarget{group__text__detect_ga3fe1fa2a3b9ca5cbcdbedfc4d45b36e1}\label{group__text__detect_ga3fe1fa2a3b9ca5cbcdbedfc4d45b36e1}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val U\+Mat img, @By\+Val U\+Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Std\+String String filename, float min\+Probablity)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val U\+Mat img, @By\+Val U\+Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref fr.antproject.utils.Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Std\+String String filename, float min\+Probablity)
 \item 
 \mbox{\Hypertarget{group__text__detect_gac3862eabb431f6c418ea60e545f72d26}\label{group__text__detect_gac3862eabb431f6c418ea60e545f72d26}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val U\+Mat img, @By\+Val U\+Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val U\+Mat img, @By\+Val U\+Mat\+Vector channels, @By\+Ref E\+R\+Stat\+Vector\+Vector regions, @Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref fr.antproject.utils.Point\+Vector\+Vector groups, @By\+Ref Rect\+Vector groups\+\_\+rects)
 \item 
 \mbox{\Hypertarget{group__text__detect_ga29f4819ec009c7bab5d33ee0bec2a5a2}\label{group__text__detect_ga29f4819ec009c7bab5d33ee0bec2a5a2}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val Mat image, @By\+Val Mat channel, @By\+Val Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Str Byte\+Pointer filename, float min\+Probablity)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val Mat image, @By\+Val Mat channel, @By\+Val fr.antproject.utils.Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Str Byte\+Pointer filename, float min\+Probablity)
 \item 
 \mbox{\Hypertarget{group__text__detect_ga58dfd2cdb6c7a320f220241dae4fd911}\label{group__text__detect_ga58dfd2cdb6c7a320f220241dae4fd911}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val Mat image, @By\+Val Mat channel, @By\+Val Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val Mat image, @By\+Val Mat channel, @By\+Val fr.antproject.utils.Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects)
 \item 
 \mbox{\Hypertarget{group__text__detect_ga9528c90eaa8174e510342c434ba89c9f}\label{group__text__detect_ga9528c90eaa8174e510342c434ba89c9f}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val Mat image, @By\+Val Mat channel, @By\+Val Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Str String filename, float min\+Probablity)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val Mat image, @By\+Val Mat channel, @By\+Val fr.antproject.utils.Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Str String filename, float min\+Probablity)
 \item 
 \mbox{\Hypertarget{group__text__detect_ga3faf6ef025ecaa50ac9bf27c7c5203f0}\label{group__text__detect_ga3faf6ef025ecaa50ac9bf27c7c5203f0}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val U\+Mat image, @By\+Val U\+Mat channel, @By\+Val Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Str Byte\+Pointer filename, float min\+Probablity)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val U\+Mat image, @By\+Val U\+Mat channel, @By\+Val fr.antproject.utils.Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Str Byte\+Pointer filename, float min\+Probablity)
 \item 
 \mbox{\Hypertarget{group__text__detect_gadd32fb6abbac7d03709a07687f3df982}\label{group__text__detect_gadd32fb6abbac7d03709a07687f3df982}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val U\+Mat image, @By\+Val U\+Mat channel, @By\+Val Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val U\+Mat image, @By\+Val U\+Mat channel, @By\+Val fr.antproject.utils.Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects)
 \item 
 \mbox{\Hypertarget{group__text__detect_ga5e8cf9156f672403885fcc631f91870c}\label{group__text__detect_ga5e8cf9156f672403885fcc631f91870c}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val U\+Mat image, @By\+Val U\+Mat channel, @By\+Val Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Str String filename, float min\+Probablity)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping} (@By\+Val U\+Mat image, @By\+Val U\+Mat channel, @By\+Val fr.antproject.utils.Point\+Vector\+Vector regions, @By\+Ref Rect\+Vector groups\+\_\+rects, int method, @Str String filename, float min\+Probablity)
 \item 
-static native void \hyperlink{group__text__detect_gad4c72b60ca712eeab78c52b946f649a2}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+M\+S\+E\+Rs\+To\+E\+R\+Stats} (@By\+Val Mat image, @By\+Ref Point\+Vector\+Vector contours, @By\+Ref E\+R\+Stat\+Vector\+Vector regions)
-\begin{DoxyCompactList}\small\item\em Converts M\+S\+ER contours (vector$<$Point$>$) to E\+R\+Stat regions. \end{DoxyCompactList}\item 
+static native void \hyperlink{group__text__detect_gad4c72b60ca712eeab78c52b946f649a2}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+M\+S\+E\+Rs\+To\+E\+R\+Stats} (@By\+Val Mat image, @By\+Ref fr.antproject.utils.Point\+Vector\+Vector contours, @By\+Ref E\+R\+Stat\+Vector\+Vector regions)
+\begin{DoxyCompactList}\small\item\em Converts M\+S\+ER contours (vector$<$fr.antproject.utils.Point$>$) to E\+R\+Stat regions. \end{DoxyCompactList}\item
 \mbox{\Hypertarget{group__text__detect_ga1188e2750096a4f93afad0c0cf931762}\label{group__text__detect_ga1188e2750096a4f93afad0c0cf931762}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+M\+S\+E\+Rs\+To\+E\+R\+Stats} (@By\+Val U\+Mat image, @By\+Ref Point\+Vector\+Vector contours, @By\+Ref E\+R\+Stat\+Vector\+Vector regions)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+M\+S\+E\+Rs\+To\+E\+R\+Stats} (@By\+Val U\+Mat image, @By\+Ref fr.antproject.utils.Point\+Vector\+Vector contours, @By\+Ref E\+R\+Stat\+Vector\+Vector regions)
 \item 
 \mbox{\Hypertarget{group__text__detect_ga82e531b1f0fa6fd05234127fd1b43005}\label{group__text__detect_ga82e531b1f0fa6fd05234127fd1b43005}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+detect\+Regions} (@By\+Val Mat image, @Ptr E\+R\+Filter er\+\_\+filter1, @Ptr E\+R\+Filter er\+\_\+filter2, @By\+Ref Point\+Vector\+Vector regions)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+detect\+Regions} (@By\+Val Mat image, @Ptr E\+R\+Filter er\+\_\+filter1, @Ptr E\+R\+Filter er\+\_\+filter2, @By\+Ref fr.antproject.utils.Point\+Vector\+Vector regions)
 \item 
 \mbox{\Hypertarget{group__text__detect_ga87f7f3a3bb00c8f7d14a61b3873d8dbc}\label{group__text__detect_ga87f7f3a3bb00c8f7d14a61b3873d8dbc}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+detect\+Regions} (@By\+Val U\+Mat image, @Ptr E\+R\+Filter er\+\_\+filter1, @Ptr E\+R\+Filter er\+\_\+filter2, @By\+Ref Point\+Vector\+Vector regions)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+detect\+Regions} (@By\+Val U\+Mat image, @Ptr E\+R\+Filter er\+\_\+filter1, @Ptr E\+R\+Filter er\+\_\+filter2, @By\+Ref fr.antproject.utils.Point\+Vector\+Vector regions)
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -170,7 +170,7 @@ In N\&M algorithm, the combination of intensity (I), hue (H), saturation (S), an
 \index{Scene Text Detection@{Scene Text Detection}!create\+E\+R\+Filter\+N\+M1@{create\+E\+R\+Filter\+N\+M1}}
 \index{create\+E\+R\+Filter\+N\+M1@{create\+E\+R\+Filter\+N\+M1}!Scene Text Detection@{Scene Text Detection}}
 \subsubsection{\texorpdfstring{create\+E\+R\+Filter\+N\+M1()}{createERFilterNM1()}}
-{\footnotesize\ttfamily static native E\+R\+Filter org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+create\+E\+R\+Filter\+N\+M1 (\begin{DoxyParamCaption}\item[{@Ptr E\+R\+Filter.\+Callback}]{cb,  }\item[{int}]{threshold\+Delta,  }\item[{float}]{min\+Area,  }\item[{float}]{max\+Area,  }\item[{float}]{min\+Probability,  }\item[{@Cast(\char`\"{}bool\char`\"{}) boolean}]{non\+Max\+Suppression,  }\item[{float}]{min\+Probability\+Diff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static native E\+R\+Filter org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+create\+E\+R\+Filter\+N\+M1 (\begin{DoxyParamCaption}\item[{@Ptr E\+R\+Filter.\+Callback}]{cb,  }\item[{int}]{fr.antproject.utils.threshold\+Delta,  }\item[{float}]{min\+Area,  }\item[{float}]{max\+Area,  }\item[{float}]{min\+Probability,  }\item[{@Cast(\char`\"{}bool\char`\"{}) boolean}]{non\+Max\+Suppression,  }\item[{float}]{min\+Probability\+Diff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -178,13 +178,13 @@ Create an Extremal Region Filter for the 1st stage classifier of N\&M algorithm 
 
 Create an Extremal Region Filter for the 1st stage classifier of N\&M algorithm Neumann L., Matas J.\+: Real-\/\+Time Scene Text Localization and Recognition, C\+V\+PR 2012 
 
-The component tree of the image is extracted by a threshold increased step by step from 0 to 255, incrementally computable descriptors (aspect\+\_\+ratio, compactness, number of holes, and number of horizontal crossings) are computed for each ER and used as features for a classifier which estimates the class-\/conditional probability P(er$\vert$character). The value of P(er$\vert$character) is tracked using the inclusion relation of ER across all thresholds and only the E\+Rs which correspond to local maximum of the probability P(er$\vert$character) are selected (if the local maximum of the probability is above a global limit pmin and the difference between local maximum and local minimum is greater than min\+Probability\+Diff). 
+The component tree of the image is extracted by a fr.antproject.utils.threshold increased step by step from 0 to 255, incrementally computable descriptors (aspect\+\_\+ratio, compactness, number of holes, and number of horizontal crossings) are computed for each ER and used as features for a classifier which estimates the class-\/conditional probability P(er$\vert$character). The value of P(er$\vert$character) is tracked using the inclusion relation of ER across all thresholds and only the E\+Rs which correspond to local maximum of the probability P(er$\vert$character) are selected (if the local maximum of the probability is above a global limit pmin and the difference between local maximum and local minimum is greater than min\+Probability\+Diff).
 
 
 \begin{DoxyParams}{Parameters}
 {\em cb} & – Callback with the classifier. Default classifier can be implicitly load with function \hyperlink{group__text__detect_gaa43a04b9408663608d30f5bcdaadac16}{load\+Classifier\+N\+M1()}, e.\+g. from file in samples/cpp/trained\+\_\+classifier\+N\+M1.\+xml \\
 \hline
-{\em threshold\+Delta} & – Threshold step in subsequent thresholds when extracting the component tree \\
+{\em fr.antproject.utils.threshold\+Delta} & – Threshold step in subsequent thresholds when extracting the component tree \\
 \hline
 {\em min\+Area} & – The minimum area (\% of image size) allowed for retreived E\+R’s \\
 \hline
@@ -198,7 +198,7 @@ The component tree of the image is extracted by a threshold increased step by st
 \hline
 {\em cb} & \+: Callback with the classifier. Default classifier can be implicitly load with function load\+Classifier\+N\+M1, e.\+g. from file in samples/cpp/trained\+\_\+classifier\+N\+M1.\+xml \\
 \hline
-{\em threshold\+Delta} & \+: Threshold step in subsequent thresholds when extracting the component tree \\
+{\em fr.antproject.utils.threshold\+Delta} & \+: Threshold step in subsequent thresholds when extracting the component tree \\
 \hline
 {\em min\+Area} & \+: The minimum area (\% of image size) allowed for retreived ER\textquotesingle{}s \\
 \hline
@@ -211,7 +211,7 @@ The component tree of the image is extracted by a threshold increased step by st
 {\em min\+Probability} & \+: The minimum probability difference between local maxima and local minima E\+Rs \\
 \hline
 \end{DoxyParams}
-The component tree of the image is extracted by a threshold increased step by step from 0 to 255, incrementally computable descriptors (aspect\+\_\+ratio, compactness, number of holes, and number of horizontal crossings) are computed for each ER and used as features for a classifier which estimates the class-\/conditional probability P(er$\vert$character). The value of P(er$\vert$character) is tracked using the inclusion relation of ER across all thresholds and only the E\+Rs which correspond to local maximum of the probability P(er$\vert$character) are selected (if the local maximum of the probability is above a global limit pmin and the difference between local maximum and local minimum is greater than min\+Probability\+Diff). \mbox{\Hypertarget{group__text__detect_ga941eba7519bae9c44d6cbd21d21ad26e}\label{group__text__detect_ga941eba7519bae9c44d6cbd21d21ad26e}} 
+The component tree of the image is extracted by a fr.antproject.utils.threshold increased step by step from 0 to 255, incrementally computable descriptors (aspect\+\_\+ratio, compactness, number of holes, and number of horizontal crossings) are computed for each ER and used as features for a classifier which estimates the class-\/conditional probability P(er$\vert$character). The value of P(er$\vert$character) is tracked using the inclusion relation of ER across all thresholds and only the E\+Rs which correspond to local maximum of the probability P(er$\vert$character) are selected (if the local maximum of the probability is above a global limit pmin and the difference between local maximum and local minimum is greater than min\+Probability\+Diff). \mbox{\Hypertarget{group__text__detect_ga941eba7519bae9c44d6cbd21d21ad26e}\label{group__text__detect_ga941eba7519bae9c44d6cbd21d21ad26e}}
 \index{Scene Text Detection@{Scene Text Detection}!create\+E\+R\+Filter\+N\+M2@{create\+E\+R\+Filter\+N\+M2}}
 \index{create\+E\+R\+Filter\+N\+M2@{create\+E\+R\+Filter\+N\+M2}!Scene Text Detection@{Scene Text Detection}}
 \subsubsection{\texorpdfstring{create\+E\+R\+Filter\+N\+M2()}{createERFilterNM2()}}
@@ -232,7 +232,7 @@ In the second stage, the E\+Rs that passed the first stage are classified into c
 \index{Scene Text Detection@{Scene Text Detection}!er\+Grouping@{er\+Grouping}}
 \index{er\+Grouping@{er\+Grouping}!Scene Text Detection@{Scene Text Detection}}
 \subsubsection{\texorpdfstring{er\+Grouping()}{erGrouping()}}
-{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{img,  }\item[{@By\+Val Mat\+Vector}]{channels,  }\item[{@By\+Ref E\+R\+Stat\+Vector\+Vector}]{regions,  }\item[{@Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref Point\+Vector\+Vector}]{groups,  }\item[{@By\+Ref Rect\+Vector}]{groups\+\_\+rects,  }\item[{int}]{method,  }\item[{@Std\+String Byte\+Pointer}]{filename,  }\item[{float}]{min\+Probablity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+er\+Grouping (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{img,  }\item[{@By\+Val Mat\+Vector}]{channels,  }\item[{@By\+Ref E\+R\+Stat\+Vector\+Vector}]{regions,  }\item[{@Cast(\char`\"{}std\+::vector$<$std\+::vector$<$cv\+::\+Vec2i$>$ $>$$\ast$\char`\"{}) @By\+Ref fr.antproject.utils.Point\+Vector\+Vector}]{groups,  }\item[{@By\+Ref Rect\+Vector}]{groups\+\_\+rects,  }\item[{int}]{method,  }\item[{@Std\+String Byte\+Pointer}]{filename,  }\item[{float}]{min\+Probablity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -291,22 +291,22 @@ returns a pointer to E\+R\+Filter\+::\+Callback. \mbox{\Hypertarget{group__text_
 \index{Scene Text Detection@{Scene Text Detection}!M\+S\+E\+Rs\+To\+E\+R\+Stats@{M\+S\+E\+Rs\+To\+E\+R\+Stats}}
 \index{M\+S\+E\+Rs\+To\+E\+R\+Stats@{M\+S\+E\+Rs\+To\+E\+R\+Stats}!Scene Text Detection@{Scene Text Detection}}
 \subsubsection{\texorpdfstring{M\+S\+E\+Rs\+To\+E\+R\+Stats()}{MSERsToERStats()}}
-{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+M\+S\+E\+Rs\+To\+E\+R\+Stats (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{image,  }\item[{@By\+Ref Point\+Vector\+Vector}]{contours,  }\item[{@By\+Ref E\+R\+Stat\+Vector\+Vector}]{regions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+M\+S\+E\+Rs\+To\+E\+R\+Stats (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{image,  }\item[{@By\+Ref fr.antproject.utils.Point\+Vector\+Vector}]{contours,  }\item[{@By\+Ref E\+R\+Stat\+Vector\+Vector}]{regions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Converts M\+S\+ER contours (vector$<$Point$>$) to E\+R\+Stat regions. 
+Converts M\+S\+ER contours (vector$<$fr.antproject.utils.Point$>$) to E\+R\+Stat regions.
 
 
 \begin{DoxyParams}{Parameters}
 {\em image} & Source image C\+V\+\_\+8\+U\+C1 from which the M\+S\+E\+Rs where extracted. \\
 \hline
-{\em contours} & Intput vector with all the contours (vector$<$Point$>$). \\
+{\em contours} & Intput vector with all the contours (vector$<$fr.antproject.utils.Point$>$). \\
 \hline
 {\em regions} & Output where the E\+R\+Stat regions are stored. \\
 \hline
 \end{DoxyParams}
-It takes as input the contours provided by the Open\+CV M\+S\+ER feature detector and returns as output two vectors of E\+R\+Stats. This is because M\+S\+E\+R() output contains both M\+S\+E\+R+ and M\+S\+E\+R-\/ regions in a single vector$<$Point$>$, the function separates them in two different vectors (this is as if the E\+R\+Stats where extracted from two different channels). 
+It takes as input the contours provided by the Open\+CV M\+S\+ER feature detector and returns as output two vectors of E\+R\+Stats. This is because M\+S\+E\+R() output contains both M\+S\+E\+R+ and M\+S\+E\+R-\/ regions in a single vector$<$fr.antproject.utils.Point$>$, the function separates them in two different vectors (this is as if the E\+R\+Stats where extracted from two different channels).
 
 An example of M\+S\+E\+Rs\+To\+E\+R\+Stats in use can be found in the text detection webcam\+\_\+demo\+: \href{https://github.com/opencv/opencv_contrib/blob/master/modules/text/samples/webcam_demo.cpp}{\tt https\+://github.\+com/opencv/opencv\+\_\+contrib/blob/master/modules/text/samples/webcam\+\_\+demo.\+cpp} 
 
@@ -323,4 +323,4 @@ compute\+N\+M\+Channels operation modes enum cv\+::text\+:\+: \mbox{\Hypertarget
 \subsubsection{\texorpdfstring{E\+R\+G\+R\+O\+U\+P\+I\+N\+G\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+H\+O\+R\+IZ}{ERGROUPING\_ORIENTATION\_HORIZ}}
 {\footnotesize\ttfamily final int org.\+bytedeco.\+javacpp.\+opencv\+\_\+text.\+E\+R\+G\+R\+O\+U\+P\+I\+N\+G\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+H\+O\+R\+IZ = 0\hspace{0.3cm}{\ttfamily [static]}}
 
-text\+::er\+Grouping operation modes enum cv\+::text\+::er\+Grouping\+\_\+\+Modes Exhaustive Search algorithm proposed in \mbox{[}Neumann11\mbox{]} for grouping horizontally aligned text. The algorithm models a verification function for all the possible ER sequences. The verification fuction for ER pairs consists in a set of threshold-\/based pairwise rules which compare measurements of two regions (height ratio, centroid angle, and region distance). The verification function for ER triplets creates a word text line estimate using Least Median-\/\+Squares fitting for a given triplet and then verifies that the estimate is valid (based on thresholds created during training). Verification functions for sequences larger than 3 are approximated by verifying that the text line parameters of all (sub)sequences of length 3 are consistent. 
+text\+::er\+Grouping operation modes enum cv\+::text\+::er\+Grouping\+\_\+\+Modes Exhaustive Search algorithm proposed in \mbox{[}Neumann11\mbox{]} for grouping horizontally aligned text. The algorithm models a verification function for all the possible ER sequences. The verification fuction for ER pairs consists in a set of fr.antproject.utils.threshold-\/based pairwise rules which compare measurements of two regions (height ratio, centroid angle, and region distance). The verification function for ER triplets creates a word text line estimate using Least Median-\/\+Squares fitting for a given triplet and then verifies that the estimate is valid (based on thresholds created during training). Verification functions for sequences larger than 3 are approximated by verifying that the text line parameters of all (sub)sequences of length 3 are consistent.

@@ -325,7 +325,7 @@ static native int&#160;</td><td class="memItemRight" valign="bottom"><b>readGT</
 static native double&#160;</td><td class="memItemRight" valign="bottom"><b>computeMSE</b> (@ByVal UMat GT, @ByVal UMat src, @ByVal Rect ROI)</td></tr>
 <tr class="separator:gaa5a111b6f736e796e2dcd39708103a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga04b04ac57f6b8c53deacbb1d41d05766"><td class="memItemLeft" align="right" valign="top">static native double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ximgproc__filters.html#ga04b04ac57f6b8c53deacbb1d41d05766">computeBadPixelPercent</a> (@ByVal Mat GT, @ByVal Mat src, @ByVal Rect ROI, int thresh)</td></tr>
-<tr class="memdesc:ga04b04ac57f6b8c53deacbb1d41d05766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for computing the percent of "bad" pixels in the disparity map (pixels where error is higher than a specified threshold)  <a href="group__ximgproc__filters.html#ga04b04ac57f6b8c53deacbb1d41d05766">More...</a><br /></td></tr>
+<tr class="memdesc:ga04b04ac57f6b8c53deacbb1d41d05766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for computing the percent of "bad" pixels in the disparity map (pixels where error is higher than a specified fr.antproject.utils.threshold)  <a href="group__ximgproc__filters.html#ga04b04ac57f6b8c53deacbb1d41d05766">More...</a><br /></td></tr>
 <tr class="separator:ga04b04ac57f6b8c53deacbb1d41d05766"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3b1ead374777b604f8179da429d2a3d9"><td class="memItemLeft" align="right" valign="top">
 static native double&#160;</td><td class="memItemRight" valign="bottom"><b>computeBadPixelPercent</b> (@ByVal Mat GT, @ByVal Mat src, @ByVal Rect ROI)</td></tr>
@@ -426,17 +426,17 @@ static native void&#160;</td><td class="memItemRight" valign="bottom"><b>FastHou
 <tr class="memitem:afeffe7892b68efac640829342cd5fabf"><td class="memItemLeft" align="right" valign="top"><a id="afeffe7892b68efac640829342cd5fabf"></a>
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>FastHoughTransform</b> ( @ByVal UMat src, @ByVal UMat dst, int dstMatDepth)</td></tr>
 <tr class="separator:afeffe7892b68efac640829342cd5fabf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15b22eb13c2bff5ab308c1cc895e5f24"><td class="memItemLeft" align="right" valign="top">static native Scalar4i&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1bytedeco_1_1javacpp_1_1opencv__ximgproc.html#a15b22eb13c2bff5ab308c1cc895e5f24">HoughPoint2Line</a> (@Const @ByRef Point houghPoint, @ByVal Mat srcImgInfo, int angleRange, int makeSkew, int rules)</td></tr>
+<tr class="memitem:a15b22eb13c2bff5ab308c1cc895e5f24"><td class="memItemLeft" align="right" valign="top">static native Scalar4i&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1bytedeco_1_1javacpp_1_1opencv__ximgproc.html#a15b22eb13c2bff5ab308c1cc895e5f24">HoughPoint2Line</a> (@Const @ByRef fr.antproject.utils.Point houghPoint, @ByVal Mat srcImgInfo, int angleRange, int makeSkew, int rules)</td></tr>
 <tr class="memdesc:a15b22eb13c2bff5ab308c1cc895e5f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates coordinates of line segment corresponded by point in Hough space.  <a href="#a15b22eb13c2bff5ab308c1cc895e5f24">More...</a><br /></td></tr>
 <tr class="separator:a15b22eb13c2bff5ab308c1cc895e5f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3b76262d53d6b53b310004575be9e84"><td class="memItemLeft" align="right" valign="top"><a id="ad3b76262d53d6b53b310004575be9e84"></a>
-static native Scalar4i&#160;</td><td class="memItemRight" valign="bottom"><b>HoughPoint2Line</b> (@Const @ByRef Point houghPoint, @ByVal Mat srcImgInfo)</td></tr>
+static native Scalar4i&#160;</td><td class="memItemRight" valign="bottom"><b>HoughPoint2Line</b> (@Const @ByRef fr.antproject.utils.Point houghPoint, @ByVal Mat srcImgInfo)</td></tr>
 <tr class="separator:ad3b76262d53d6b53b310004575be9e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bc9b23054460b330913e82837f943fa"><td class="memItemLeft" align="right" valign="top"><a id="a5bc9b23054460b330913e82837f943fa"></a>
-static native Scalar4i&#160;</td><td class="memItemRight" valign="bottom"><b>HoughPoint2Line</b> (@Const @ByRef Point houghPoint, @ByVal UMat srcImgInfo, int angleRange, int makeSkew, int rules)</td></tr>
+static native Scalar4i&#160;</td><td class="memItemRight" valign="bottom"><b>HoughPoint2Line</b> (@Const @ByRef fr.antproject.utils.Point houghPoint, @ByVal UMat srcImgInfo, int angleRange, int makeSkew, int rules)</td></tr>
 <tr class="separator:a5bc9b23054460b330913e82837f943fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac089080292d003ff7dea8360e4b987e5"><td class="memItemLeft" align="right" valign="top"><a id="ac089080292d003ff7dea8360e4b987e5"></a>
-static native Scalar4i&#160;</td><td class="memItemRight" valign="bottom"><b>HoughPoint2Line</b> (@Const @ByRef Point houghPoint, @ByVal UMat srcImgInfo)</td></tr>
+static native Scalar4i&#160;</td><td class="memItemRight" valign="bottom"><b>HoughPoint2Line</b> (@Const @ByRef fr.antproject.utils.Point houghPoint, @ByVal UMat srcImgInfo)</td></tr>
 <tr class="separator:ac089080292d003ff7dea8360e4b987e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a821e53d932bd411235484d70e890de32"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1bytedeco_1_1javacpp_1_1opencv__ximgproc.html#a821e53d932bd411235484d70e890de32">covarianceEstimation</a> (@ByVal Mat src, @ByVal Mat dst, int windowRows, int windowCols)</td></tr>
 <tr class="memdesc:a821e53d932bd411235484d70e890de32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the estimated covariance matrix of an image using the sliding window forumlation.  <a href="#a821e53d932bd411235484d70e890de32">More...</a><br /></td></tr>
@@ -637,7 +637,7 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">static native Scalar4i org.bytedeco.javacpp.opencv_ximgproc.HoughPoint2Line </td>
           <td>(</td>
-          <td class="paramtype">@Const @ByRef Point&#160;</td>
+          <td class="paramtype">@Const @ByRef fr.antproject.utils.Point&#160;</td>
           <td class="paramname"><em>houghPoint</em>, </td>
         </tr>
         <tr>
@@ -680,7 +680,7 @@ Static Public Attributes</h2></td></tr>
 <p>Calculates coordinates of line segment corresponded by point in Hough space. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">houghPoint</td><td>Point in Hough space. </td></tr>
+    <tr><td class="paramname">houghPoint</td><td>fr.antproject.utils.Point in Hough space. </td></tr>
     <tr><td class="paramname">srcImgInfo</td><td>The source (input) image of Hough transform. </td></tr>
     <tr><td class="paramname">angleRange</td><td>The part of Hough space where point is situated, see cv::AngleRangeOption </td></tr>
     <tr><td class="paramname">makeSkew</td><td>Specifies to do or not to do image skewing, see cv::HoughDeskewOption </td></tr>

@@ -91,17 +91,17 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga6f3a56396530d46af3fba9ad04fc80cf"><td class="memItemLeft" align="right" valign="top">static native BasicFaceRecognizer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__face.html#ga6f3a56396530d46af3fba9ad04fc80cf">org.bytedeco.javacpp.opencv_face.createEigenFaceRecognizer</a> (int num_components, double threshold)</td></tr>
+<tr class="memitem:ga6f3a56396530d46af3fba9ad04fc80cf"><td class="memItemLeft" align="right" valign="top">static native BasicFaceRecognizer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__face.html#ga6f3a56396530d46af3fba9ad04fc80cf">org.bytedeco.javacpp.opencv_face.createEigenFaceRecognizer</a> (int num_components, double fr.antproject.utils.threshold)</td></tr>
 <tr class="separator:ga6f3a56396530d46af3fba9ad04fc80cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac70e2c94b7d6f05d26f762bed96b2da7"><td class="memItemLeft" align="right" valign="top"><a id="gac70e2c94b7d6f05d26f762bed96b2da7"></a>
 static native BasicFaceRecognizer&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_face.createEigenFaceRecognizer</b> ()</td></tr>
 <tr class="separator:gac70e2c94b7d6f05d26f762bed96b2da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga80a98f353dd2ef661444e0d79bbe9daf"><td class="memItemLeft" align="right" valign="top">static native BasicFaceRecognizer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__face.html#ga80a98f353dd2ef661444e0d79bbe9daf">org.bytedeco.javacpp.opencv_face.createFisherFaceRecognizer</a> (int num_components, double threshold)</td></tr>
+<tr class="memitem:ga80a98f353dd2ef661444e0d79bbe9daf"><td class="memItemLeft" align="right" valign="top">static native BasicFaceRecognizer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__face.html#ga80a98f353dd2ef661444e0d79bbe9daf">org.bytedeco.javacpp.opencv_face.createFisherFaceRecognizer</a> (int num_components, double fr.antproject.utils.threshold)</td></tr>
 <tr class="separator:ga80a98f353dd2ef661444e0d79bbe9daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga241cb766e32721cf0ba5c6fde7006808"><td class="memItemLeft" align="right" valign="top"><a id="ga241cb766e32721cf0ba5c6fde7006808"></a>
 static native BasicFaceRecognizer&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_face.createFisherFaceRecognizer</b> ()</td></tr>
 <tr class="separator:ga241cb766e32721cf0ba5c6fde7006808"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga970c161034e055fb56615aadba87ac4e"><td class="memItemLeft" align="right" valign="top">static native LBPHFaceRecognizer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__face.html#ga970c161034e055fb56615aadba87ac4e">org.bytedeco.javacpp.opencv_face.createLBPHFaceRecognizer</a> (int radius, int neighbors, int grid_x, int grid_y, double threshold)</td></tr>
+<tr class="memitem:ga970c161034e055fb56615aadba87ac4e"><td class="memItemLeft" align="right" valign="top">static native LBPHFaceRecognizer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__face.html#ga970c161034e055fb56615aadba87ac4e">org.bytedeco.javacpp.opencv_face.createLBPHFaceRecognizer</a> (int radius, int neighbors, int grid_x, int grid_y, double fr.antproject.utils.threshold)</td></tr>
 <tr class="separator:ga970c161034e055fb56615aadba87ac4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6d5f6361f7aeeb413b5e582ac60ae6e5"><td class="memItemLeft" align="right" valign="top"><a id="ga6d5f6361f7aeeb413b5e582ac60ae6e5"></a>
 static native LBPHFaceRecognizer&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_face.createLBPHFaceRecognizer</b> ()</td></tr>
@@ -133,11 +133,11 @@ static native LBPHFaceRecognizer&#160;</td><td class="memItemRight" valign="bott
 <li><b>Setting/Getting labels info</b>, that is stored as a string. String labels info is useful for keeping names of the recognized people. </li>
 </ul>
 <dl class="section note"><dt>Note</dt><dd>When using the FaceRecognizer interface in combination with Python, please stick to Python 2. Some underlying scripts like create_csv will not work in other versions, like Python 3. Setting the Thresholds +++++++++++++++++++++++ </dd></dl>
-<p>Sometimes you run into the situation, when you want to apply a threshold on the prediction. A common scenario in face recognition is to tell, whether a face belongs to the training dataset or if it is unknown. You might wonder, why there's no public API in FaceRecognizer to set the threshold for the prediction, but rest assured: It's supported. It just means there's no generic way in an abstract class to provide an interface for setting/getting the thresholds of <em>every possible</em> FaceRecognizer algorithm. The appropriate place to set the thresholds is in the constructor of the specific FaceRecognizer and since every FaceRecognizer is a Algorithm (see above), you can get/set the thresholds at runtime! </p>
-<p>Here is an example of setting a threshold for the Eigenfaces method, when creating the model: </p>
-<pre><div class="fragment"><div class="line"><span class="comment">// Let&#39;s say we want to keep 10 Eigenfaces and have a threshold value of 10.0</span></div><div class="line"><span class="keywordtype">int</span> num_components = 10;</div><div class="line"><span class="keywordtype">double</span> threshold = 10.0;</div><div class="line"><span class="comment">// Then if you want to have a cv::FaceRecognizer with a confidence threshold,</span></div><div class="line"><span class="comment">// create the concrete implementation with the appropiate parameters:</span></div><div class="line">Ptr&lt;FaceRecognizer&gt; model = <a class="code" href="group__face.html#ga6f3a56396530d46af3fba9ad04fc80cf">createEigenFaceRecognizer</a>(num_components, threshold);</div></div><!-- fragment --> </pre> <p>Sometimes it's impossible to train the model, just to experiment with threshold values. Thanks to Algorithm it's possible to set internal model thresholds during runtime. Let's see how we would set/get the prediction for the Eigenface model, we've created above: </p>
-<pre><div class="fragment"><div class="line"><span class="comment">// The following line reads the threshold from the Eigenfaces model:</span></div><div class="line"><span class="keywordtype">double</span> current_threshold = model-&gt;getDouble(<span class="stringliteral">&quot;threshold&quot;</span>);</div><div class="line"><span class="comment">// And this line sets the threshold to 0.0:</span></div><div class="line">model-&gt;set(<span class="stringliteral">&quot;threshold&quot;</span>, 0.0);</div></div><!-- fragment --> </pre> <p>If you've set the threshold to 0.0 as we did above, then: </p>
-<pre><div class="fragment"><div class="line"><span class="comment">//</span></div><div class="line">Mat img = imread(<span class="stringliteral">&quot;person1/3.jpg&quot;</span>, CV_LOAD_IMAGE_GRAYSCALE);</div><div class="line"><span class="comment">// Get a prediction from the model. Note: We&#39;ve set a threshold of 0.0 above,</span></div><div class="line"><span class="comment">// since the distance is almost always larger than 0.0, you&#39;ll get -1 as</span></div><div class="line"><span class="comment">// label, which indicates, this face is unknown</span></div><div class="line"><span class="keywordtype">int</span> predicted_label = model-&gt;predict(img);</div><div class="line"><span class="comment">// ...</span></div></div><!-- fragment --> </pre> <p>is going to yield -1 as predicted label, which states this face is unknown. </p>
+<p>Sometimes you run into the situation, when you want to apply a fr.antproject.utils.threshold on the prediction. A common scenario in face recognition is to tell, whether a face belongs to the training dataset or if it is unknown. You might wonder, why there's no public API in FaceRecognizer to set the fr.antproject.utils.threshold for the prediction, but rest assured: It's supported. It just means there's no generic way in an abstract class to provide an interface for setting/getting the thresholds of <em>every possible</em> FaceRecognizer algorithm. The appropriate place to set the thresholds is in the constructor of the specific FaceRecognizer and since every FaceRecognizer is a Algorithm (see above), you can get/set the thresholds at runtime! </p>
+<p>Here is an example of setting a fr.antproject.utils.threshold for the Eigenfaces method, when creating the model: </p>
+<pre><div class="fragment"><div class="line"><span class="comment">// Let&#39;s say we want to keep 10 Eigenfaces and have a fr.antproject.utils.threshold value of 10.0</span></div><div class="line"><span class="keywordtype">int</span> num_components = 10;</div><div class="line"><span class="keywordtype">double</span> fr.antproject.utils.threshold = 10.0;</div><div class="line"><span class="comment">// Then if you want to have a cv::FaceRecognizer with a confidence fr.antproject.utils.threshold,</span></div><div class="line"><span class="comment">// create the concrete implementation with the appropiate parameters:</span></div><div class="line">Ptr&lt;FaceRecognizer&gt; model = <a class="code" href="group__face.html#ga6f3a56396530d46af3fba9ad04fc80cf">createEigenFaceRecognizer</a>(num_components, fr.antproject.utils.threshold);</div></div><!-- fragment --> </pre> <p>Sometimes it's impossible to train the model, just to experiment with fr.antproject.utils.threshold values. Thanks to Algorithm it's possible to set internal model thresholds during runtime. Let's see how we would set/get the prediction for the Eigenface model, we've created above: </p>
+<pre><div class="fragment"><div class="line"><span class="comment">// The following line reads the fr.antproject.utils.threshold from the Eigenfaces model:</span></div><div class="line"><span class="keywordtype">double</span> current_threshold = model-&gt;getDouble(<span class="stringliteral">&quot;fr.antproject.utils.threshold&quot;</span>);</div><div class="line"><span class="comment">// And this line sets the fr.antproject.utils.threshold to 0.0:</span></div><div class="line">model-&gt;set(<span class="stringliteral">&quot;fr.antproject.utils.threshold&quot;</span>, 0.0);</div></div><!-- fragment --> </pre> <p>If you've set the fr.antproject.utils.threshold to 0.0 as we did above, then: </p>
+<pre><div class="fragment"><div class="line"><span class="comment">//</span></div><div class="line">Mat img = imread(<span class="stringliteral">&quot;person1/3.jpg&quot;</span>, CV_LOAD_IMAGE_GRAYSCALE);</div><div class="line"><span class="comment">// Get a prediction from the model. Note: We&#39;ve set a fr.antproject.utils.threshold of 0.0 above,</span></div><div class="line"><span class="comment">// since the distance is almost always larger than 0.0, you&#39;ll get -1 as</span></div><div class="line"><span class="comment">// label, which indicates, this face is unknown</span></div><div class="line"><span class="keywordtype">int</span> predicted_label = model-&gt;predict(img);</div><div class="line"><span class="comment">// ...</span></div></div><!-- fragment --> </pre> <p>is going to yield -1 as predicted label, which states this face is unknown. </p>
 <h3>Getting the name of a FaceRecognizer</h3>
 <p>Since every FaceRecognizer is a Algorithm, you can use Algorithm::name to get the name of a FaceRecognizer: </p>
 <pre><div class="fragment"><div class="line"><span class="comment">// Create a FaceRecognizer:</span></div><div class="line">Ptr&lt;FaceRecognizer&gt; model = <a class="code" href="group__face.html#ga6f3a56396530d46af3fba9ad04fc80cf">createEigenFaceRecognizer</a>();</div><div class="line"><span class="comment">// And here&#39;s how to get its name:</span></div><div class="line">String name = model-&gt;name();</div></div><!-- fragment --> </pre> <h2 class="groupheader">Function Documentation</h2>
@@ -160,7 +160,7 @@ static native LBPHFaceRecognizer&#160;</td><td class="memItemRight" valign="bott
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>threshold</em>&#160;</td>
+          <td class="paramname"><em>fr.antproject.utils.threshold</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -177,7 +177,7 @@ static native LBPHFaceRecognizer&#160;</td><td class="memItemRight" valign="bott
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">num_components</td><td>The number of components (read: Eigenfaces) kept for this Principal Component Analysis. As a hint: There's no rule how many components (read: Eigenfaces) should be kept for good reconstruction capabilities. It is based on your input data, so experiment with the number. Keeping 80 components should almost always be sufficient. </td></tr>
-    <tr><td class="paramname">threshold</td><td>The threshold applied in the prediction. </td></tr>
+    <tr><td class="paramname">fr.antproject.utils.threshold</td><td>The fr.antproject.utils.threshold applied in the prediction. </td></tr>
   </table>
   </dd>
 </dl>
@@ -190,12 +190,12 @@ static native LBPHFaceRecognizer&#160;</td><td class="memItemRight" valign="bott
 <h3>Model internal data:</h3>
 <ul>
 <li>num_components see createEigenFaceRecognizer.</li>
-<li>threshold see createEigenFaceRecognizer.</li>
+<li>fr.antproject.utils.threshold see createEigenFaceRecognizer.</li>
 <li>eigenvalues The eigenvalues for this Principal Component Analysis (ordered descending).</li>
 <li>eigenvectors The eigenvectors for this Principal Component Analysis (ordered by their eigenvalue).</li>
 <li>mean The sample mean calculated from the training data.</li>
 <li>projections The projections of the training data.</li>
-<li>labels The threshold applied in the prediction. If the distance to the nearest neighbor is larger than the threshold, this method returns -1. </li>
+<li>labels The fr.antproject.utils.threshold applied in the prediction. If the distance to the nearest neighbor is larger than the fr.antproject.utils.threshold, this method returns -1. </li>
 </ul>
 
 </div>
@@ -219,7 +219,7 @@ static native LBPHFaceRecognizer&#160;</td><td class="memItemRight" valign="bott
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>threshold</em>&#160;</td>
+          <td class="paramname"><em>fr.antproject.utils.threshold</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -236,7 +236,7 @@ static native LBPHFaceRecognizer&#160;</td><td class="memItemRight" valign="bott
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">num_components</td><td>The number of components (read: Fisherfaces) kept for this Linear Discriminant Analysis with the Fisherfaces criterion. It's useful to keep all components, that means the number of your classes c (read: subjects, persons you want to recognize). If you leave this at the default (0) or set it to a value less-equal 0 or greater (c-1), it will be set to the correct number (c-1) automatically. </td></tr>
-    <tr><td class="paramname">threshold</td><td>The threshold applied in the prediction. If the distance to the nearest neighbor is larger than the threshold, this method returns -1. </td></tr>
+    <tr><td class="paramname">fr.antproject.utils.threshold</td><td>The fr.antproject.utils.threshold applied in the prediction. If the distance to the nearest neighbor is larger than the fr.antproject.utils.threshold, this method returns -1. </td></tr>
   </table>
   </dd>
 </dl>
@@ -249,7 +249,7 @@ static native LBPHFaceRecognizer&#160;</td><td class="memItemRight" valign="bott
 <h3>Model internal data:</h3>
 <ul>
 <li>num_components see createFisherFaceRecognizer.</li>
-<li>threshold see createFisherFaceRecognizer.</li>
+<li>fr.antproject.utils.threshold see createFisherFaceRecognizer.</li>
 <li>eigenvalues The eigenvalues for this Linear Discriminant Analysis (ordered descending).</li>
 <li>eigenvectors The eigenvectors for this Linear Discriminant Analysis (ordered by their eigenvalue).</li>
 <li>mean The sample mean calculated from the training data.</li>
@@ -296,7 +296,7 @@ static native LBPHFaceRecognizer&#160;</td><td class="memItemRight" valign="bott
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>threshold</em>&#160;</td>
+          <td class="paramname"><em>fr.antproject.utils.threshold</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -316,7 +316,7 @@ static native LBPHFaceRecognizer&#160;</td><td class="memItemRight" valign="bott
     <tr><td class="paramname">neighbors</td><td>The number of sample points to build a Circular Local Binary Pattern from. An appropriate value is to use<div class="fragment"><div class="line">8 </div></div><!-- fragment --> sample points. Keep in mind: the more sample points you include, the higher the computational cost. </td></tr>
     <tr><td class="paramname">grid_x</td><td>The number of cells in the horizontal direction, 8 is a common value used in publications. The more cells, the finer the grid, the higher the dimensionality of the resulting feature vector. </td></tr>
     <tr><td class="paramname">grid_y</td><td>The number of cells in the vertical direction, 8 is a common value used in publications. The more cells, the finer the grid, the higher the dimensionality of the resulting feature vector. </td></tr>
-    <tr><td class="paramname">threshold</td><td>The threshold applied in the prediction. If the distance to the nearest neighbor is larger than the threshold, this method returns -1. </td></tr>
+    <tr><td class="paramname">fr.antproject.utils.threshold</td><td>The fr.antproject.utils.threshold applied in the prediction. If the distance to the nearest neighbor is larger than the fr.antproject.utils.threshold, this method returns -1. </td></tr>
   </table>
   </dd>
 </dl>
@@ -331,7 +331,7 @@ static native LBPHFaceRecognizer&#160;</td><td class="memItemRight" valign="bott
 <li>neighbors see createLBPHFaceRecognizer.</li>
 <li>grid_x see createLBPHFaceRecognizer.</li>
 <li>grid_y see createLBPHFaceRecognizer.</li>
-<li>threshold see createLBPHFaceRecognizer.</li>
+<li>fr.antproject.utils.threshold see createLBPHFaceRecognizer.</li>
 <li>histograms Local Binary Patterns Histograms calculated from the given training data (empty if none was given).</li>
 <li>labels Labels corresponding to the calculated Local Binary Patterns Histograms. </li>
 </ul>

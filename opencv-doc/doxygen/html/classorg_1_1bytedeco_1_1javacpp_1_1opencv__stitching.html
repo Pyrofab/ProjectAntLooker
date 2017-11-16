@@ -92,7 +92,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affine transformation based estimator. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>AffineBestOf2NearestMatcher</b></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Features matcher similar to cv::detail::BestOf2NearestMatcher which finds two best matches for each feature and leaves the best one only if the ratio between descriptor distances is greater than the threshold match_conf. <br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Features matcher similar to cv::detail::BestOf2NearestMatcher which finds two best matches for each feature and leaves the best one only if the ratio between descriptor distances is greater than the fr.antproject.utils.threshold match_conf. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>AffineWarper</b></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affine warper that uses rotations and translations. <br /></td></tr>
@@ -101,7 +101,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">AKAZE features finder. : <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>BestOf2NearestMatcher</b></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Features matcher which finds two best matches for each feature and leaves the best one only if the ratio between descriptor distances is greater than the threshold match_conf. <br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Features matcher which finds two best matches for each feature and leaves the best one only if the ratio between descriptor distances is greater than the fr.antproject.utils.threshold match_conf. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>BestOf2NearestRangeMatcher</b></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -299,7 +299,7 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:gacf4ed576f958ddf1bc53f06ef4d33df6"><td class="memItemLeft" align="right" valign="top">
-static native boolean&#160;</td><td class="memItemRight" valign="bottom"><b>overlapRoi</b> (@ByVal Point tl1, @ByVal Point tl2, @ByVal Size sz1, @ByVal Size sz2, @ByRef Rect roi)</td></tr>
+static native boolean&#160;</td><td class="memItemRight" valign="bottom"><b>overlapRoi</b> (@ByVal fr.antproject.utils.Point tl1, @ByVal fr.antproject.utils.Point tl2, @ByVal Size sz1, @ByVal Size sz2, @ByRef Rect roi)</td></tr>
 <tr class="separator:gacf4ed576f958ddf1bc53f06ef4d33df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga859ea44005cd9edc8317630a7334e1b6"><td class="memItemLeft" align="right" valign="top">
 static native Rect&#160;</td><td class="memItemRight" valign="bottom"><b>resultRoi</b> (@Const @ByRef PointVector corners, @Const @ByRef UMatVector images)</td></tr>
@@ -311,7 +311,7 @@ static native Rect&#160;</td><td class="memItemRight" valign="bottom"><b>resultR
 static native Rect&#160;</td><td class="memItemRight" valign="bottom"><b>resultRoiIntersection</b> (@Const @ByRef PointVector corners, @Const @ByRef SizeVector sizes)</td></tr>
 <tr class="separator:gaa882d01ddd9b9cfa030cf3436340973f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa820d4f157eabdece019843e7334f493"><td class="memItemLeft" align="right" valign="top">
-static native Point&#160;</td><td class="memItemRight" valign="bottom"><b>resultTl</b> (@Const @ByRef PointVector corners)</td></tr>
+static native fr.antproject.utils.Point&#160;</td><td class="memItemRight" valign="bottom"><b>resultTl</b> (@Const @ByRef PointVector corners)</td></tr>
 <tr class="separator:gaa820d4f157eabdece019843e7334f493"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8e152fb5af89a56c5ffc2eb169f19162"><td class="memItemLeft" align="right" valign="top">
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>selectRandomSubset</b> (int count, int size, @StdVector IntPointer subset)</td></tr>
@@ -325,7 +325,7 @@ static native void&#160;</td><td class="memItemRight" valign="bottom"><b>selectR
 <tr class="memitem:ga986597ffca49e8fe31dfbf9ead6da54a"><td class="memItemLeft" align="right" valign="top">
 static native IntPointer&#160;</td><td class="memItemRight" valign="bottom"><b>stitchingLogLevel</b> ()</td></tr>
 <tr class="separator:ga986597ffca49e8fe31dfbf9ead6da54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3bba1a4cfe47a38f2ef140a3bc6c0f0a"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching__rotation.html#ga3bba1a4cfe47a38f2ef140a3bc6c0f0a">waveCorrect</a> (@ByRef MatVector rmats, @Cast(&quot;cv::detail::WaveCorrectKind&quot;) int kind)</td></tr>
+<tr class="memitem:ga3bba1a4cfe47a38f2ef140a3bc6c0f0a"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stitching__rotation.html#ga3bba1a4cfe47a38f2ef140a3bc6c0f0a">waveCorrect</a> (@ByRef fr.antproject.utils.MatVector rmats, @Cast(&quot;cv::detail::WaveCorrectKind&quot;) int kind)</td></tr>
 <tr class="memdesc:ga3bba1a4cfe47a38f2ef140a3bc6c0f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tries to make panorama more horizontal (or vertical).  <a href="group__stitching__rotation.html#ga3bba1a4cfe47a38f2ef140a3bc6c0f0a">More...</a><br /></td></tr>
 <tr class="separator:ga3bba1a4cfe47a38f2ef140a3bc6c0f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf59145e19f75e6b8edfd6d5ff201b105"><td class="memItemLeft" align="right" valign="top">
@@ -401,7 +401,7 @@ static native void&#160;</td><td class="memItemRight" valign="bottom"><b>estimat
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>estimateFocal</b> (@StdVector ImageFeatures features, @StdVector MatchesInfo pairwise_matches, @StdVector double[] focals)</td></tr>
 <tr class="separator:ga6f03c7a0be4f4a0cc0a2b3eb76325f7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga51d253056e9a6c948122d3810f170d08"><td class="memItemLeft" align="right" valign="top">
-static native boolean&#160;</td><td class="memItemRight" valign="bottom"><b>calibrateRotatingCamera</b> (@Const @ByRef MatVector Hs, @ByRef Mat K)</td></tr>
+static native boolean&#160;</td><td class="memItemRight" valign="bottom"><b>calibrateRotatingCamera</b> (@Const @ByRef fr.antproject.utils.MatVector Hs, @ByRef Mat K)</td></tr>
 <tr class="separator:ga51d253056e9a6c948122d3810f170d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaef4d75a2140cded1c24c78e5fe93363e"><td class="memItemLeft" align="right" valign="top">
 static native Stitcher&#160;</td><td class="memItemRight" valign="bottom"><b>createStitcher</b> (@Cast(&quot;bool&quot;) boolean try_use_gpu)</td></tr>

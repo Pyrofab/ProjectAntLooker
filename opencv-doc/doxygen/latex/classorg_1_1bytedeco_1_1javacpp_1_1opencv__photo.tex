@@ -12,7 +12,7 @@ Inheritance diagram for org.\+bytedeco.\+javacpp.\+opencv\+\_\+photo\+:\begin{fi
 class {\bfseries Align\+Exposures}
 \begin{DoxyCompactList}\small\item\em The base class for algorithms that align images of the same scene with different exposures. \end{DoxyCompactList}\item 
 class {\bfseries Align\+M\+TB}
-\begin{DoxyCompactList}\small\item\em This algorithm converts images to median threshold bitmaps (1 for pixels brighter than median luminance and 0 otherwise) and than aligns the resulting bitmaps using bit operations. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This algorithm converts images to median fr.antproject.utils.threshold bitmaps (1 for pixels brighter than median luminance and 0 otherwise) and than aligns the resulting bitmaps using bit operations. \end{DoxyCompactList}\item
 class {\bfseries Calibrate\+C\+RF}
 \begin{DoxyCompactList}\small\item\em The base class for camera response calibration algorithms. \end{DoxyCompactList}\item 
 class {\bfseries Calibrate\+Debevec}
@@ -190,7 +190,7 @@ static native Calibrate\+Debevec \hyperlink{group__photo__hdr_gada8b25f072e80141
 \begin{DoxyCompactList}\small\item\em Creates Calibrate\+Debevec object. \end{DoxyCompactList}\item 
 static native Calibrate\+Debevec {\bfseries create\+Calibrate\+Debevec} ()
 \item 
-static native Calibrate\+Robertson \hyperlink{group__photo__hdr_ga1ac32f0f1042b3436bd7daf88bb48760}{create\+Calibrate\+Robertson} (int max\+\_\+iter, float threshold)
+static native Calibrate\+Robertson \hyperlink{group__photo__hdr_ga1ac32f0f1042b3436bd7daf88bb48760}{create\+Calibrate\+Robertson} (int max\+\_\+iter, float fr.antproject.utils.threshold)
 \begin{DoxyCompactList}\small\item\em Creates Calibrate\+Robertson object. \end{DoxyCompactList}\item 
 static native Calibrate\+Robertson {\bfseries create\+Calibrate\+Robertson} ()
 \item 
@@ -206,9 +206,9 @@ static native void \hyperlink{group__photo_ga51c7b45dade866b4280660a0a0842dbc}{d
 \begin{DoxyCompactList}\small\item\em Transforms a color image to a grayscale image. It is a basic tool in digital printing, stylized black-\/and-\/white photograph rendering, and in many single channel image processing applications {\bfseries [C\+L12]} . \end{DoxyCompactList}\item 
 static native void {\bfseries decolor} ( @By\+Val U\+Mat src, @By\+Val U\+Mat grayscale, @By\+Val U\+Mat color\+\_\+boost)
 \item 
-static native void {\bfseries seamless\+Clone} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Mat mask, @By\+Val Point p, @By\+Val Mat blend, int flags)
+static native void {\bfseries seamless\+Clone} ( @By\+Val Mat src, @By\+Val Mat dst, @By\+Val Mat mask, @By\+Val fr.antproject.utils.Point p, @By\+Val Mat blend, int flags)
 \item 
-static native void {\bfseries seamless\+Clone} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val U\+Mat mask, @By\+Val Point p, @By\+Val U\+Mat blend, int flags)
+static native void {\bfseries seamless\+Clone} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, @By\+Val U\+Mat mask, @By\+Val fr.antproject.utils.Point p, @By\+Val U\+Mat blend, int flags)
 \item 
 static native void \hyperlink{group__photo__clone_ga3560d162cd540795fe14ae7e98a7a9a2}{color\+Change} (@By\+Val Mat src, @By\+Val Mat mask, @By\+Val Mat dst, float red\+\_\+mul, float green\+\_\+mul, float blue\+\_\+mul)
 \begin{DoxyCompactList}\small\item\em Given an original color image, two differently colored versions of this image can be mixed seamlessly. \end{DoxyCompactList}\item 
@@ -226,11 +226,11 @@ static native void {\bfseries illumination\+Change} (@By\+Val U\+Mat src, @By\+V
 \item 
 static native void {\bfseries illumination\+Change} (@By\+Val U\+Mat src, @By\+Val U\+Mat mask, @By\+Val U\+Mat dst)
 \item 
-static native void \hyperlink{group__photo__clone_ga8d42433222e7742e59e275e148c3d4a5}{texture\+Flattening} (@By\+Val Mat src, @By\+Val Mat mask, @By\+Val Mat dst, float low\+\_\+threshold, float high\+\_\+threshold, int kernel\+\_\+size)
+static native void \hyperlink{group__photo__clone_ga8d42433222e7742e59e275e148c3d4a5}{texture\+Flattening} (@By\+Val Mat src, @By\+Val Mat mask, @By\+Val Mat dst, float low\+\_\+fr.antproject.utils.threshold, float high\+\_\+fr.antproject.utils.threshold, int kernel\+\_\+size)
 \begin{DoxyCompactList}\small\item\em By retaining only the gradients at edge locations, before integrating with the Poisson solver, one washes out the texture of the selected region, giving its contents a flat aspect. Here Canny Edge Detector is used. \end{DoxyCompactList}\item 
 static native void {\bfseries texture\+Flattening} (@By\+Val Mat src, @By\+Val Mat mask, @By\+Val Mat dst)
 \item 
-static native void {\bfseries texture\+Flattening} (@By\+Val U\+Mat src, @By\+Val U\+Mat mask, @By\+Val U\+Mat dst, float low\+\_\+threshold, float high\+\_\+threshold, int kernel\+\_\+size)
+static native void {\bfseries texture\+Flattening} (@By\+Val U\+Mat src, @By\+Val U\+Mat mask, @By\+Val U\+Mat dst, float low\+\_\+fr.antproject.utils.threshold, float high\+\_\+fr.antproject.utils.threshold, int kernel\+\_\+size)
 \item 
 static native void {\bfseries texture\+Flattening} (@By\+Val U\+Mat src, @By\+Val U\+Mat mask, @By\+Val U\+Mat dst)
 \item 

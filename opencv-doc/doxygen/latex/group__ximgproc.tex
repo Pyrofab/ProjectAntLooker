@@ -48,10 +48,10 @@ Applies Niblack thresholding to input image.
 The function transforms a grayscale image to a binary image according to the formulae\+:
 \begin{DoxyItemize}
 \item {\bfseries T\+H\+R\+E\+S\+H\+\_\+\+B\+I\+N\+A\+RY} \[dst(x,y) = \fork{\texttt{maxValue}}{if \(src(x,y) > T(x,y)\)}{0}{otherwise}\]
-\item {\bfseries T\+H\+R\+E\+S\+H\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+I\+NV} \[dst(x,y) = \fork{0}{if \(src(x,y) > T(x,y)\)}{\texttt{maxValue}}{otherwise}\] where $T(x,y)$ is a threshold calculated individually for each pixel. 
+\item {\bfseries T\+H\+R\+E\+S\+H\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+I\+NV} \[dst(x,y) = \fork{0}{if \(src(x,y) > T(x,y)\)}{\texttt{maxValue}}{otherwise}\] where $T(x,y)$ is a fr.antproject.utils.threshold calculated individually for each pixel.
 \end{DoxyItemize}
 
-The threshold value $T(x, y)$ is the mean minus $ delta $ times standard deviation of $\texttt{blockSize} \times\texttt{blockSize}$ neighborhood of $(x, y)$. 
+The fr.antproject.utils.threshold value $T(x, y)$ is the mean minus $ delta $ times standard deviation of $\texttt{blockSize} \times\texttt{blockSize}$ neighborhood of $(x, y)$.
 
 The function can\textquotesingle{}t process the image in-\/place. 
 
@@ -65,13 +65,13 @@ The function can\textquotesingle{}t process the image in-\/place.
 \hline
 {\em type} & Thresholding type, see cv\+::\+Threshold\+Types. \\
 \hline
-{\em block\+Size} & Size of a pixel neighborhood that is used to calculate a threshold value for the pixel\+: 3, 5, 7, and so on. \\
+{\em block\+Size} & Size of a pixel neighborhood that is used to calculate a fr.antproject.utils.threshold value for the pixel\+: 3, 5, 7, and so on. \\
 \hline
 {\em delta} & Constant multiplied with the standard deviation and subtracted from the mean. Normally, it is taken to be a real number between 0 and 1. \\
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{See also}
-threshold, adaptive\+Threshold 
+fr.antproject.utils.threshold, adaptive\+Threshold
 \end{DoxySeeAlso}
 
 

@@ -12,9 +12,9 @@ public class Fun {
 
     public static void main(String[] args){
 
-        /**List<List<Point>> formes = OpenCVTestKt.loadAndAnalyseImage("square.png");
-        for(List<Point> forme : formes) {
-            for(Point coin : forme)
+        /**List<List<fr.antproject.utils.Point>> formes = OpenCVTestKt.loadAndAnalyseImage("square.png");
+        for(List<fr.antproject.utils.Point> forme : formes) {
+            for(fr.antproject.utils.Point coin : forme)
                 System.out.println(OpenCVTestKt.pointToString(coin));
         }*/
 

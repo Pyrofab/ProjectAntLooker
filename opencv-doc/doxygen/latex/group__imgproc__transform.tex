@@ -135,13 +135,13 @@ static native float {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+
 \mbox{\Hypertarget{group__imgproc__transform_gabd59413d81a2a999b9437f22d27a24fc}\label{group__imgproc__transform_gabd59413d81a2a999b9437f22d27a24fc}} 
 static native float {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+init\+Wide\+Angle\+Proj\+Map} ( @By\+Val U\+Mat camera\+Matrix, @By\+Val U\+Mat dist\+Coeffs, @By\+Val Size image\+Size, int dest\+Image\+Width, int m1type, @By\+Val U\+Mat map1, @By\+Val U\+Mat map2)
 \item 
-static native Mat \hyperlink{group__imgproc__transform_gadf9fb3deefd512a073b449832fe60679}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Default\+New\+Camera\+Matrix} ( @By\+Val Mat camera\+Matrix, @By\+Val(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size imgsize, @Cast(\char`\"{}bool\char`\"{}) boolean center\+Principal\+Point)
+static native Mat \hyperlink{group__imgproc__transform_gadf9fb3deefd512a073b449832fe60679}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Default\+New\+Camera\+Matrix} ( @By\+Val Mat camera\+Matrix, @By\+Val(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size imgsize, @Cast(\char`\"{}bool\char`\"{}) boolean center\+Principal\+fr.antproject.utils.Point)
 \begin{DoxyCompactList}\small\item\em Returns the default new camera matrix. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{group__imgproc__transform_gaedb64877b79e75f7e81d5f11a07e17ac}\label{group__imgproc__transform_gaedb64877b79e75f7e81d5f11a07e17ac}} 
 static native Mat {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Default\+New\+Camera\+Matrix} ( @By\+Val Mat camera\+Matrix)
 \item 
 \mbox{\Hypertarget{group__imgproc__transform_ga92946780977d683b3185be16382896c0}\label{group__imgproc__transform_ga92946780977d683b3185be16382896c0}} 
-static native Mat {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Default\+New\+Camera\+Matrix} ( @By\+Val U\+Mat camera\+Matrix, @By\+Val(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size imgsize, @Cast(\char`\"{}bool\char`\"{}) boolean center\+Principal\+Point)
+static native Mat {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Default\+New\+Camera\+Matrix} ( @By\+Val U\+Mat camera\+Matrix, @By\+Val(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size imgsize, @Cast(\char`\"{}bool\char`\"{}) boolean center\+Principal\+fr.antproject.utils.Point)
 \item 
 \mbox{\Hypertarget{group__imgproc__transform_ga8c2618a6f671b8cd211b32d88cc19426}\label{group__imgproc__transform_ga8c2618a6f671b8cd211b32d88cc19426}} 
 static native Mat {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Default\+New\+Camera\+Matrix} ( @By\+Val U\+Mat camera\+Matrix)
@@ -215,7 +215,7 @@ The function supports the in-\/place mode. Dilation can be applied several ( ite
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{See also}
-\hyperlink{group__imgproc__filter_ga8c0cbcc8dd271aada560698924d19cb2}{erode}, morphology\+Ex, \hyperlink{group__imgproc__filter_ga18af407581ba537b9095d14090cce31a}{get\+Structuring\+Element} / (\char`\"{}cv\char`\"{}) public static native void dilate(  Mat src,  Mat dst,  Mat kernel, (null\+Value = \char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point anchor, int iterations/$\ast$=1$\ast$/, int border\+Type/$\ast$=cv\+::\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+N\+S\+T\+A\+NT$\ast$/,  (null\+Value = \char`\"{}cv\+::\+Scalar(cv\+::morphology\+Default\+Border\+Value())\char`\"{}) Scalar border\+Value ); (\char`\"{}cv\char`\"{}) public static native void dilate(  Mat src,  Mat dst,  Mat kernel ); (\char`\"{}cv\char`\"{}) public static native void dilate(  U\+Mat src,  U\+Mat dst,  U\+Mat kernel, (null\+Value = \char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point anchor, int iterations/$\ast$=1$\ast$/, int border\+Type/$\ast$=cv\+::\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+N\+S\+T\+A\+NT$\ast$/,  (null\+Value = \char`\"{}cv\+::\+Scalar(cv\+::morphology\+Default\+Border\+Value())\char`\"{}) Scalar border\+Value ); (\char`\"{}cv\char`\"{}) public static native void dilate(  U\+Mat src,  U\+Mat dst,  U\+Mat kernel );
+\hyperlink{group__imgproc__filter_ga8c0cbcc8dd271aada560698924d19cb2}{erode}, morphology\+Ex, \hyperlink{group__imgproc__filter_ga18af407581ba537b9095d14090cce31a}{get\+Structuring\+Element} / (\char`\"{}cv\char`\"{}) public static native void dilate(  Mat src,  Mat dst,  Mat kernel, (null\+Value = \char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1,-\/1)\char`\"{}) fr.antproject.utils.Point anchor, int iterations/$\ast$=1$\ast$/, int border\+Type/$\ast$=cv\+::\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+N\+S\+T\+A\+NT$\ast$/,  (null\+Value = \char`\"{}cv\+::\+Scalar(cv\+::morphology\+Default\+Border\+Value())\char`\"{}) Scalar border\+Value ); (\char`\"{}cv\char`\"{}) public static native void dilate(  Mat src,  Mat dst,  Mat kernel ); (\char`\"{}cv\char`\"{}) public static native void dilate(  U\+Mat src,  U\+Mat dst,  U\+Mat kernel, (null\+Value = \char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1,-\/1)\char`\"{}) fr.antproject.utils.Point anchor, int iterations/$\ast$=1$\ast$/, int border\+Type/$\ast$=cv\+::\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+N\+S\+T\+A\+NT$\ast$/,  (null\+Value = \char`\"{}cv\+::\+Scalar(cv\+::morphology\+Default\+Border\+Value())\char`\"{}) Scalar border\+Value ); (\char`\"{}cv\char`\"{}) public static native void dilate(  U\+Mat src,  U\+Mat dst,  U\+Mat kernel );
 \end{DoxySeeAlso}
 /$\ast$$\ast$\+Performs advanced morphological transformations. 
 
@@ -243,7 +243,7 @@ Any of the operations can be done in-\/place. In case of multi-\/channel images,
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{See also}
-dilate, \hyperlink{group__imgproc__filter_ga8c0cbcc8dd271aada560698924d19cb2}{erode}, \hyperlink{group__imgproc__filter_ga18af407581ba537b9095d14090cce31a}{get\+Structuring\+Element} $\ast$/ (\char`\"{}cv\char`\"{}) public static native void morphology\+Ex(  Mat src,  Mat dst, int op,  Mat kernel, (null\+Value = \char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point anchor, int iterations/$\ast$=1$\ast$/, int border\+Type/$\ast$=cv\+::\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+N\+S\+T\+A\+NT$\ast$/,  (null\+Value = \char`\"{}cv\+::\+Scalar(cv\+::morphology\+Default\+Border\+Value())\char`\"{}) Scalar border\+Value ); (\char`\"{}cv\char`\"{}) public static native void morphology\+Ex(  Mat src,  Mat dst, int op,  Mat kernel ); (\char`\"{}cv\char`\"{}) public static native void morphology\+Ex(  U\+Mat src,  U\+Mat dst, int op,  U\+Mat kernel, (null\+Value = \char`\"{}cv\+::\+Point(-\/1,-\/1)\char`\"{}) Point anchor, int iterations/$\ast$=1$\ast$/, int border\+Type/$\ast$=cv\+::\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+N\+S\+T\+A\+NT$\ast$/,  (null\+Value = \char`\"{}cv\+::\+Scalar(cv\+::morphology\+Default\+Border\+Value())\char`\"{}) Scalar border\+Value ); (\char`\"{}cv\char`\"{}) public static native void morphology\+Ex(  U\+Mat src,  U\+Mat dst, int op,  U\+Mat kernel );
+dilate, \hyperlink{group__imgproc__filter_ga8c0cbcc8dd271aada560698924d19cb2}{erode}, \hyperlink{group__imgproc__filter_ga18af407581ba537b9095d14090cce31a}{get\+Structuring\+Element} $\ast$/ (\char`\"{}cv\char`\"{}) public static native void morphology\+Ex(  Mat src,  Mat dst, int op,  Mat kernel, (null\+Value = \char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1,-\/1)\char`\"{}) fr.antproject.utils.Point anchor, int iterations/$\ast$=1$\ast$/, int border\+Type/$\ast$=cv\+::\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+N\+S\+T\+A\+NT$\ast$/,  (null\+Value = \char`\"{}cv\+::\+Scalar(cv\+::morphology\+Default\+Border\+Value())\char`\"{}) Scalar border\+Value ); (\char`\"{}cv\char`\"{}) public static native void morphology\+Ex(  Mat src,  Mat dst, int op,  Mat kernel ); (\char`\"{}cv\char`\"{}) public static native void morphology\+Ex(  U\+Mat src,  U\+Mat dst, int op,  U\+Mat kernel, (null\+Value = \char`\"{}cv\+::\+fr.antproject.utils.Point(-\/1,-\/1)\char`\"{}) fr.antproject.utils.Point anchor, int iterations/$\ast$=1$\ast$/, int border\+Type/$\ast$=cv\+::\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+N\+S\+T\+A\+NT$\ast$/,  (null\+Value = \char`\"{}cv\+::\+Scalar(cv\+::morphology\+Default\+Border\+Value())\char`\"{}) Scalar border\+Value ); (\char`\"{}cv\char`\"{}) public static native void morphology\+Ex(  U\+Mat src,  U\+Mat dst, int op,  U\+Mat kernel );
 \end{DoxySeeAlso}
 /$\ast$$\ast$ \textbackslash{}  imgproc\+\_\+filter 
 
@@ -406,13 +406,13 @@ where
 \index{Geometric Image Transformations@{Geometric Image Transformations}!get\+Default\+New\+Camera\+Matrix@{get\+Default\+New\+Camera\+Matrix}}
 \index{get\+Default\+New\+Camera\+Matrix@{get\+Default\+New\+Camera\+Matrix}!Geometric Image Transformations@{Geometric Image Transformations}}
 \subsubsection{\texorpdfstring{get\+Default\+New\+Camera\+Matrix()}{getDefaultNewCameraMatrix()}}
-{\footnotesize\ttfamily static native Mat org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Default\+New\+Camera\+Matrix (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{camera\+Matrix,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size}]{imgsize,  }\item[{@Cast(\char`\"{}bool\char`\"{}) boolean}]{center\+Principal\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static native Mat org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+get\+Default\+New\+Camera\+Matrix (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{camera\+Matrix,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Size()\char`\"{}) Size}]{imgsize,  }\item[{@Cast(\char`\"{}bool\char`\"{}) boolean}]{center\+Principal\+fr.antproject.utils.Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Returns the default new camera matrix. 
 
-The function returns the camera matrix that is either an exact copy of the input camera\+Matrix (when center\+Prinicipal\+Point=false ), or the modified one (when center\+Principal\+Point=true). 
+The function returns the camera matrix that is either an exact copy of the input camera\+Matrix (when center\+Prinicipal\+fr.antproject.utils.Point=false ), or the modified one (when center\+Principal\+fr.antproject.utils.Point=true).
 
 In the latter case, the new camera matrix will be\+: 
 
@@ -428,7 +428,7 @@ By default, the undistortion functions in Open\+CV (see init\+Undistort\+Rectify
 \hline
 {\em imgsize} & Camera view image size in pixels. \\
 \hline
-{\em center\+Principal\+Point} & Location of the principal point in the new camera matrix. The parameter indicates whether this location should be at the image center or not. \\
+{\em center\+Principal\+fr.antproject.utils.Point} & Location of the principal point in the new camera matrix. The parameter indicates whether this location should be at the image center or not. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{group__imgproc__transform_ga9c65e08c8634d7f7d24ab403dac41b26}\label{group__imgproc__transform_ga9c65e08c8634d7f7d24ab403dac41b26}} 

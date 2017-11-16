@@ -94,7 +94,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The base class for algorithms that align images of the same scene with different exposures. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_photo.AlignMTB</b></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This algorithm converts images to median threshold bitmaps (1 for pixels brighter than median luminance and 0 otherwise) and than aligns the resulting bitmaps using bit operations. <br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This algorithm converts images to median fr.antproject.utils.threshold bitmaps (1 for pixels brighter than median luminance and 0 otherwise) and than aligns the resulting bitmaps using bit operations. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_photo.CalibrateCRF</b></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The base class for camera response calibration algorithms. <br /></td></tr>
@@ -162,7 +162,7 @@ static native AlignMTB&#160;</td><td class="memItemRight" valign="bottom"><b>org
 <tr class="memitem:ga3b370075247e9bd2f724b316ad9970f3"><td class="memItemLeft" align="right" valign="top"><a id="ga3b370075247e9bd2f724b316ad9970f3"></a>
 static native CalibrateDebevec&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_photo.createCalibrateDebevec</b> ()</td></tr>
 <tr class="separator:ga3b370075247e9bd2f724b316ad9970f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1ac32f0f1042b3436bd7daf88bb48760"><td class="memItemLeft" align="right" valign="top">static native CalibrateRobertson&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__hdr.html#ga1ac32f0f1042b3436bd7daf88bb48760">org.bytedeco.javacpp.opencv_photo.createCalibrateRobertson</a> (int max_iter, float threshold)</td></tr>
+<tr class="memitem:ga1ac32f0f1042b3436bd7daf88bb48760"><td class="memItemLeft" align="right" valign="top">static native CalibrateRobertson&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__hdr.html#ga1ac32f0f1042b3436bd7daf88bb48760">org.bytedeco.javacpp.opencv_photo.createCalibrateRobertson</a> (int max_iter, float fr.antproject.utils.threshold)</td></tr>
 <tr class="memdesc:ga1ac32f0f1042b3436bd7daf88bb48760"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates CalibrateRobertson object.  <a href="#ga1ac32f0f1042b3436bd7daf88bb48760">More...</a><br /></td></tr>
 <tr class="separator:ga1ac32f0f1042b3436bd7daf88bb48760"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3032d7fe6e15a35aa4722340e887ca17"><td class="memItemLeft" align="right" valign="top"><a id="ga3032d7fe6e15a35aa4722340e887ca17"></a>
@@ -315,7 +315,7 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>threshold</em>&#160;</td>
+          <td class="paramname"><em>fr.antproject.utils.threshold</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -334,7 +334,7 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">max_iter</td><td>maximal number of Gauss-Seidel solver iterations. </td></tr>
-    <tr><td class="paramname">threshold</td><td>target difference between results of two successive steps of the minimization. </td></tr>
+    <tr><td class="paramname">fr.antproject.utils.threshold</td><td>target difference between results of two successive steps of the minimization. </td></tr>
   </table>
   </dd>
 </dl>

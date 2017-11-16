@@ -2,7 +2,7 @@
 \label{group__imgproc__misc}\index{Miscellaneous Image Transformations@{Miscellaneous Image Transformations}}
 
 
-Applies a fixed-\/level threshold to each array element.  
+Applies a fixed-\/level fr.antproject.utils.threshold to each array element.
 
 
 \subsection*{Functions}
@@ -43,15 +43,15 @@ static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+i
 static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+integral3} ( @By\+Val U\+Mat src, @By\+Val U\+Mat sum, @By\+Val U\+Mat sqsum, @By\+Val U\+Mat tilted)
 \item 
 \mbox{\Hypertarget{group__imgproc__misc_gad4a3818694ba0a8e1897cd241eaf47fe}\label{group__imgproc__misc_gad4a3818694ba0a8e1897cd241eaf47fe}} 
-static native double {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+threshold} ( @By\+Val Mat src, @By\+Val Mat dst, double thresh, double maxval, int type)
+static native double {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+fr.antproject.utils.threshold} ( @By\+Val Mat src, @By\+Val Mat dst, double thresh, double maxval, int type)
 \item 
 \mbox{\Hypertarget{group__imgproc__misc_gacc27bb1c53e540ff57759a7b2170f675}\label{group__imgproc__misc_gacc27bb1c53e540ff57759a7b2170f675}} 
-static native double {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+threshold} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, double thresh, double maxval, int type)
+static native double {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+fr.antproject.utils.threshold} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, double thresh, double maxval, int type)
 \item 
-static native void \hyperlink{group__imgproc__misc_ga7901ddcd72f108577c88250a35b9ccbd}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+adaptive\+Threshold} ( @By\+Val Mat src, @By\+Val Mat dst, double max\+Value, int adaptive\+Method, int threshold\+Type, int block\+Size, double C)
-\begin{DoxyCompactList}\small\item\em Applies an adaptive threshold to an array. \end{DoxyCompactList}\item 
+static native void \hyperlink{group__imgproc__misc_ga7901ddcd72f108577c88250a35b9ccbd}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+adaptive\+Threshold} ( @By\+Val Mat src, @By\+Val Mat dst, double max\+Value, int adaptive\+Method, int fr.antproject.utils.threshold\+Type, int block\+Size, double C)
+\begin{DoxyCompactList}\small\item\em Applies an adaptive fr.antproject.utils.threshold to an array. \end{DoxyCompactList}\item
 \mbox{\Hypertarget{group__imgproc__misc_ga88adb061c727bbf5e4dc076ce4808794}\label{group__imgproc__misc_ga88adb061c727bbf5e4dc076ce4808794}} 
-static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+adaptive\+Threshold} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, double max\+Value, int adaptive\+Method, int threshold\+Type, int block\+Size, double C)
+static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+adaptive\+Threshold} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, double max\+Value, int adaptive\+Method, int fr.antproject.utils.threshold\+Type, int block\+Size, double C)
 \item 
 static native void \hyperlink{group__imgproc__misc_ga997b28508969435b04cb1bcb8ebc0841}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+watershed} ( @By\+Val Mat image, @By\+Val Mat markers)
 \begin{DoxyCompactList}\small\item\em Performs a marker-\/based image segmentation using the watershed algorithm. \end{DoxyCompactList}\item 
@@ -88,27 +88,27 @@ static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+d
 \mbox{\Hypertarget{group__imgproc__misc_ga7033711a6d14a8d8e102fe9e79a7d4da}\label{group__imgproc__misc_ga7033711a6d14a8d8e102fe9e79a7d4da}} 
 static native void {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+distance\+Transform} ( @By\+Val U\+Mat src, @By\+Val U\+Mat dst, int distance\+Type, int mask\+Size)
 \item 
-static native int \hyperlink{group__imgproc__misc_gacd62f4ba0b1bf1f4664bfd1a3dd1bd08}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+flood\+Fill} ( @By\+Val Mat image, @By\+Val Point seed\+Point, @By\+Val Scalar new\+Val, Rect rect, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar lo\+Diff, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar up\+Diff, int flags)
+static native int \hyperlink{group__imgproc__misc_gacd62f4ba0b1bf1f4664bfd1a3dd1bd08}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+flood\+Fill} ( @By\+Val Mat image, @By\+Val fr.antproject.utils.Point seed\+fr.antproject.utils.Point, @By\+Val Scalar new\+Val, Rect rect, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar lo\+Diff, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar up\+Diff, int flags)
 \item 
 \mbox{\Hypertarget{group__imgproc__misc_ga77f9a45a75b473ba1e5969b6a3cf2a9f}\label{group__imgproc__misc_ga77f9a45a75b473ba1e5969b6a3cf2a9f}} 
-static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+flood\+Fill} ( @By\+Val Mat image, @By\+Val Point seed\+Point, @By\+Val Scalar new\+Val)
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+flood\+Fill} ( @By\+Val Mat image, @By\+Val fr.antproject.utils.Point seed\+fr.antproject.utils.Point, @By\+Val Scalar new\+Val)
 \item 
 \mbox{\Hypertarget{group__imgproc__misc_gad2faadef83d138979a03da751e0eea87}\label{group__imgproc__misc_gad2faadef83d138979a03da751e0eea87}} 
-static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+flood\+Fill} ( @By\+Val U\+Mat image, @By\+Val Point seed\+Point, @By\+Val Scalar new\+Val, Rect rect, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar lo\+Diff, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar up\+Diff, int flags)
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+flood\+Fill} ( @By\+Val U\+Mat image, @By\+Val fr.antproject.utils.Point seed\+fr.antproject.utils.Point, @By\+Val Scalar new\+Val, Rect rect, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar lo\+Diff, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar up\+Diff, int flags)
 \item 
 \mbox{\Hypertarget{group__imgproc__misc_gab28f9dea8929d8066aeb22f5fc51a06a}\label{group__imgproc__misc_gab28f9dea8929d8066aeb22f5fc51a06a}} 
-static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+flood\+Fill} ( @By\+Val U\+Mat image, @By\+Val Point seed\+Point, @By\+Val Scalar new\+Val)
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+flood\+Fill} ( @By\+Val U\+Mat image, @By\+Val fr.antproject.utils.Point seed\+fr.antproject.utils.Point, @By\+Val Scalar new\+Val)
 \item 
-static native int \hyperlink{group__imgproc__misc_gae1a712c481241605487f34e3b969f49c}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+flood\+Fill} ( @By\+Val Mat image, @By\+Val Mat mask, @By\+Val Point seed\+Point, @By\+Val Scalar new\+Val, Rect rect, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar lo\+Diff, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar up\+Diff, int flags)
+static native int \hyperlink{group__imgproc__misc_gae1a712c481241605487f34e3b969f49c}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+flood\+Fill} ( @By\+Val Mat image, @By\+Val Mat mask, @By\+Val fr.antproject.utils.Point seed\+fr.antproject.utils.Point, @By\+Val Scalar new\+Val, Rect rect, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar lo\+Diff, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar up\+Diff, int flags)
 \begin{DoxyCompactList}\small\item\em Fills a connected component with the given color. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{group__imgproc__misc_ga6bf5568d753264734416bfaac546dfc1}\label{group__imgproc__misc_ga6bf5568d753264734416bfaac546dfc1}} 
-static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+flood\+Fill} ( @By\+Val Mat image, @By\+Val Mat mask, @By\+Val Point seed\+Point, @By\+Val Scalar new\+Val)
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+flood\+Fill} ( @By\+Val Mat image, @By\+Val Mat mask, @By\+Val fr.antproject.utils.Point seed\+fr.antproject.utils.Point, @By\+Val Scalar new\+Val)
 \item 
 \mbox{\Hypertarget{group__imgproc__misc_gae7e1b6b5e7d7b4f49431d284f3bbba28}\label{group__imgproc__misc_gae7e1b6b5e7d7b4f49431d284f3bbba28}} 
-static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+flood\+Fill} ( @By\+Val U\+Mat image, @By\+Val U\+Mat mask, @By\+Val Point seed\+Point, @By\+Val Scalar new\+Val, Rect rect, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar lo\+Diff, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar up\+Diff, int flags)
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+flood\+Fill} ( @By\+Val U\+Mat image, @By\+Val U\+Mat mask, @By\+Val fr.antproject.utils.Point seed\+fr.antproject.utils.Point, @By\+Val Scalar new\+Val, Rect rect, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar lo\+Diff, @By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar up\+Diff, int flags)
 \item 
 \mbox{\Hypertarget{group__imgproc__misc_ga8b349da3adc83b3f06185c02aa4e767f}\label{group__imgproc__misc_ga8b349da3adc83b3f06185c02aa4e767f}} 
-static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+flood\+Fill} ( @By\+Val U\+Mat image, @By\+Val U\+Mat mask, @By\+Val Point seed\+Point, @By\+Val Scalar new\+Val)
+static native int {\bfseries org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+flood\+Fill} ( @By\+Val U\+Mat image, @By\+Val U\+Mat mask, @By\+Val fr.antproject.utils.Point seed\+fr.antproject.utils.Point, @By\+Val Scalar new\+Val)
 \item 
 static native void \hyperlink{group__imgproc__misc_gaab99985581c43cce9df680e6586cb9ef}{org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+cvt\+Color} ( @By\+Val Mat src, @By\+Val Mat dst, int code, int dst\+Cn)
 \begin{DoxyCompactList}\small\item\em Converts an image from one color space to another. \end{DoxyCompactList}\item 
@@ -147,7 +147,7 @@ static final int \hyperlink{group__imgproc__misc_ga42b2263bdd1223c126d6102a1afc9
 
 
 \subsection{Detailed Description}
-Applies a fixed-\/level threshold to each array element. 
+Applies a fixed-\/level fr.antproject.utils.threshold to each array element.
 
 imgproc\+\_\+transform 
 
@@ -164,7 +164,7 @@ imgproc\+\_\+motion
 
 The function applies fixed-\/level thresholding to a single-\/channel array. The function is typically used to get a bi-\/level (binary) image out of a grayscale image ( cv\+::compare could be also used for this purpose) or for removing a noise, that is, filtering out pixels with too small or too large values. There are several types of thresholding supported by the function. They are determined by type parameter. 
 
-Also, the special values cv\+::\+T\+H\+R\+E\+S\+H\+\_\+\+O\+T\+SU or cv\+::\+T\+H\+R\+E\+S\+H\+\_\+\+T\+R\+I\+A\+N\+G\+LE may be combined with one of the above values. In these cases, the function determines the optimal threshold value using the Otsu\textquotesingle{}s or Triangle algorithm and uses it instead of the specified thresh . The function returns the computed threshold value. Currently, the Otsu\textquotesingle{}s and Triangle methods are implemented only for 8-\/bit images. 
+Also, the special values cv\+::\+T\+H\+R\+E\+S\+H\+\_\+\+O\+T\+SU or cv\+::\+T\+H\+R\+E\+S\+H\+\_\+\+T\+R\+I\+A\+N\+G\+LE may be combined with one of the above values. In these cases, the function determines the optimal fr.antproject.utils.threshold value using the Otsu\textquotesingle{}s or Triangle algorithm and uses it instead of the specified thresh . The function returns the computed fr.antproject.utils.threshold value. Currently, the Otsu\textquotesingle{}s and Triangle methods are implemented only for 8-\/bit images.
 
 
 \begin{DoxyParams}{Parameters}
@@ -172,7 +172,7 @@ Also, the special values cv\+::\+T\+H\+R\+E\+S\+H\+\_\+\+O\+T\+SU or cv\+::\+T\+
 \hline
 {\em dst} & output array of the same size and type as src. \\
 \hline
-{\em thresh} & threshold value. \\
+{\em thresh} & fr.antproject.utils.threshold value. \\
 \hline
 {\em maxval} & maximum value to use with the T\+H\+R\+E\+S\+H\+\_\+\+B\+I\+N\+A\+RY and T\+H\+R\+E\+S\+H\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+I\+NV thresholding types. \\
 \hline
@@ -191,16 +191,16 @@ Also, the special values cv\+::\+T\+H\+R\+E\+S\+H\+\_\+\+O\+T\+SU or cv\+::\+T\+
 \index{Miscellaneous Image Transformations@{Miscellaneous Image Transformations}!adaptive\+Threshold@{adaptive\+Threshold}}
 \index{adaptive\+Threshold@{adaptive\+Threshold}!Miscellaneous Image Transformations@{Miscellaneous Image Transformations}}
 \subsubsection{\texorpdfstring{adaptive\+Threshold()}{adaptiveThreshold()}}
-{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+adaptive\+Threshold (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{double}]{max\+Value,  }\item[{int}]{adaptive\+Method,  }\item[{int}]{threshold\+Type,  }\item[{int}]{block\+Size,  }\item[{double}]{C }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static native void org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+adaptive\+Threshold (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{src,  }\item[{@By\+Val Mat}]{dst,  }\item[{double}]{max\+Value,  }\item[{int}]{adaptive\+Method,  }\item[{int}]{fr.antproject.utils.threshold\+Type,  }\item[{int}]{block\+Size,  }\item[{double}]{C }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Applies an adaptive threshold to an array. 
+Applies an adaptive fr.antproject.utils.threshold to an array.
 
 The function transforms a grayscale image to a binary image according to the formulae\+:
 \begin{DoxyItemize}
 \item {\bfseries T\+H\+R\+E\+S\+H\+\_\+\+B\+I\+N\+A\+RY} \[dst(x,y) = \fork{\texttt{maxValue}}{if \(src(x,y) > T(x,y)\)}{0}{otherwise}\]
-\item {\bfseries T\+H\+R\+E\+S\+H\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+I\+NV} \[dst(x,y) = \fork{0}{if \(src(x,y) > T(x,y)\)}{\texttt{maxValue}}{otherwise}\] where $T(x,y)$ is a threshold calculated individually for each pixel (see adaptive\+Method parameter). 
+\item {\bfseries T\+H\+R\+E\+S\+H\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+I\+NV} \[dst(x,y) = \fork{0}{if \(src(x,y) > T(x,y)\)}{\texttt{maxValue}}{otherwise}\] where $T(x,y)$ is a fr.antproject.utils.threshold calculated individually for each pixel (see adaptive\+Method parameter).
 \end{DoxyItemize}
 
 The function can process the image in-\/place. 
@@ -215,15 +215,15 @@ The function can process the image in-\/place.
 \hline
 {\em adaptive\+Method} & Adaptive thresholding algorithm to use, see cv\+::\+Adaptive\+Threshold\+Types \\
 \hline
-{\em threshold\+Type} & Thresholding type that must be either T\+H\+R\+E\+S\+H\+\_\+\+B\+I\+N\+A\+RY or T\+H\+R\+E\+S\+H\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+I\+NV, see cv\+::\+Threshold\+Types. \\
+{\em fr.antproject.utils.threshold\+Type} & Thresholding type that must be either T\+H\+R\+E\+S\+H\+\_\+\+B\+I\+N\+A\+RY or T\+H\+R\+E\+S\+H\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+I\+NV, see cv\+::\+Threshold\+Types. \\
 \hline
-{\em block\+Size} & Size of a pixel neighborhood that is used to calculate a threshold value for the pixel\+: 3, 5, 7, and so on. \\
+{\em block\+Size} & Size of a pixel neighborhood that is used to calculate a fr.antproject.utils.threshold value for the pixel\+: 3, 5, 7, and so on. \\
 \hline
 {\em C} & Constant subtracted from the mean or weighted mean (see the details below). Normally, it is positive but may be zero or negative as well. \\
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{See also}
-threshold, \hyperlink{group__imgproc__filter_ga2878e087c0294ad9e5f1996c07b303b4}{blur}, \hyperlink{group__imgproc__filter_gaf8f0c37e9b9c420a8edfc2753c8fe966}{Gaussian\+Blur} 
+fr.antproject.utils.threshold, \hyperlink{group__imgproc__filter_ga2878e087c0294ad9e5f1996c07b303b4}{blur}, \hyperlink{group__imgproc__filter_gaf8f0c37e9b9c420a8edfc2753c8fe966}{Gaussian\+Blur}
 \end{DoxySeeAlso}
 \mbox{\Hypertarget{group__imgproc__misc_gaab99985581c43cce9df680e6586cb9ef}\label{group__imgproc__misc_gaab99985581c43cce9df680e6586cb9ef}} 
 \index{Miscellaneous Image Transformations@{Miscellaneous Image Transformations}!cvt\+Color@{cvt\+Color}}
@@ -386,7 +386,7 @@ In this mode, the complexity is still linear. That is, the function provides a v
 \index{Miscellaneous Image Transformations@{Miscellaneous Image Transformations}!flood\+Fill@{flood\+Fill}}
 \index{flood\+Fill@{flood\+Fill}!Miscellaneous Image Transformations@{Miscellaneous Image Transformations}}
 \subsubsection{\texorpdfstring{flood\+Fill()}{floodFill()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily static native int org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+flood\+Fill (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{image,  }\item[{@By\+Val Point}]{seed\+Point,  }\item[{@By\+Val Scalar}]{new\+Val,  }\item[{Rect}]{rect,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar}]{lo\+Diff,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar}]{up\+Diff,  }\item[{int}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static native int org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+flood\+Fill (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{image,  }\item[{@By\+Val fr.antproject.utils.Point}]{seed\+fr.antproject.utils.Point,  }\item[{@By\+Val Scalar}]{new\+Val,  }\item[{Rect}]{rect,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar}]{lo\+Diff,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar}]{up\+Diff,  }\item[{int}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
 
@@ -398,7 +398,7 @@ mask
 \index{Miscellaneous Image Transformations@{Miscellaneous Image Transformations}!flood\+Fill@{flood\+Fill}}
 \index{flood\+Fill@{flood\+Fill}!Miscellaneous Image Transformations@{Miscellaneous Image Transformations}}
 \subsubsection{\texorpdfstring{flood\+Fill()}{floodFill()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily static native int org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+flood\+Fill (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{image,  }\item[{@By\+Val Mat}]{mask,  }\item[{@By\+Val Point}]{seed\+Point,  }\item[{@By\+Val Scalar}]{new\+Val,  }\item[{Rect}]{rect,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar}]{lo\+Diff,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar}]{up\+Diff,  }\item[{int}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static native int org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+flood\+Fill (\begin{DoxyParamCaption}\item[{@By\+Val Mat}]{image,  }\item[{@By\+Val Mat}]{mask,  }\item[{@By\+Val fr.antproject.utils.Point}]{seed\+fr.antproject.utils.Point,  }\item[{@By\+Val Scalar}]{new\+Val,  }\item[{Rect}]{rect,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar}]{lo\+Diff,  }\item[{@By\+Val(null\+Value=\char`\"{}cv\+::\+Scalar()\char`\"{}) Scalar}]{up\+Diff,  }\item[{int}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -440,7 +440,7 @@ Use these functions to either mark a connected component with the specified colo
 \hline
 {\em mask} & Operation mask that should be a single-\/channel 8-\/bit image, 2 pixels wider and 2 pixels taller than image. Since this is both an input and output parameter, you must take responsibility of initializing it. Flood-\/filling cannot go across non-\/zero pixels in the input mask. For example, an edge detector output can be used as a mask to stop filling at edges. On output, pixels in the mask corresponding to filled pixels in the image are set to 1 or to the a value specified in flags as described below. It is therefore possible to use the same mask in multiple calls to the function to make sure the filled areas do not overlap. \\
 \hline
-{\em seed\+Point} & Starting point. \\
+{\em seed\+fr.antproject.utils.Point} & Starting point. \\
 \hline
 {\em new\+Val} & New value of the repainted domain pixels. \\
 \hline
@@ -573,7 +573,7 @@ Any two neighbor connected components are not necessarily separated by a watersh
 \subsubsection{\texorpdfstring{A\+D\+A\+P\+T\+I\+V\+E\+\_\+\+T\+H\+R\+E\+S\+H\+\_\+\+M\+E\+A\+N\+\_\+C}{ADAPTIVE\_THRESH\_MEAN\_C}}
 {\footnotesize\ttfamily final int org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+A\+D\+A\+P\+T\+I\+V\+E\+\_\+\+T\+H\+R\+E\+S\+H\+\_\+\+M\+E\+A\+N\+\_\+C = 0\hspace{0.3cm}{\ttfamily [static]}}
 
-adaptive threshold algorithm see cv\+::adaptive\+Threshold enum cv\+::\+Adaptive\+Threshold\+Types the threshold value $T(x,y)$ is a mean of the $\texttt{blockSize} \times \texttt{blockSize}$ neighborhood of $(x, y)$ minus C \mbox{\Hypertarget{group__imgproc__misc_ga42b2263bdd1223c126d6102a1afc9cf4}\label{group__imgproc__misc_ga42b2263bdd1223c126d6102a1afc9cf4}} 
+adaptive fr.antproject.utils.threshold algorithm see cv\+::adaptive\+Threshold enum cv\+::\+Adaptive\+Threshold\+Types the fr.antproject.utils.threshold value $T(x,y)$ is a mean of the $\texttt{blockSize} \times \texttt{blockSize}$ neighborhood of $(x, y)$ minus C \mbox{\Hypertarget{group__imgproc__misc_ga42b2263bdd1223c126d6102a1afc9cf4}\label{group__imgproc__misc_ga42b2263bdd1223c126d6102a1afc9cf4}}
 \index{Miscellaneous Image Transformations@{Miscellaneous Image Transformations}!C\+O\+L\+O\+R\+\_\+\+B\+G\+R2\+B\+G\+RA@{C\+O\+L\+O\+R\+\_\+\+B\+G\+R2\+B\+G\+RA}}
 \index{C\+O\+L\+O\+R\+\_\+\+B\+G\+R2\+B\+G\+RA@{C\+O\+L\+O\+R\+\_\+\+B\+G\+R2\+B\+G\+RA}!Miscellaneous Image Transformations@{Miscellaneous Image Transformations}}
 \subsubsection{\texorpdfstring{C\+O\+L\+O\+R\+\_\+\+B\+G\+R2\+B\+G\+RA}{COLOR\_BGR2BGRA}}
@@ -630,4 +630,4 @@ cv\+::undistort mode enum cv\+::\+Undistort\+Types \mbox{\Hypertarget{group__img
 \subsubsection{\texorpdfstring{T\+H\+R\+E\+S\+H\+\_\+\+B\+I\+N\+A\+RY}{THRESH\_BINARY}}
 {\footnotesize\ttfamily final int org.\+bytedeco.\+javacpp.\+opencv\+\_\+imgproc.\+T\+H\+R\+E\+S\+H\+\_\+\+B\+I\+N\+A\+RY = 0\hspace{0.3cm}{\ttfamily [static]}}
 
-type of the threshold operation  enum cv\+::\+Threshold\+Types \[\texttt{dst} (x,y) = \fork{\texttt{maxval}}{if \(\texttt{src}(x,y) > \texttt{thresh}\)}{0}{otherwise}\] 
+type of the fr.antproject.utils.threshold operation  enum cv\+::\+Threshold\+Types \[\texttt{dst} (x,y) = \fork{\texttt{maxval}}{if \(\texttt{src}(x,y) > \texttt{thresh}\)}{0}{otherwise}\]

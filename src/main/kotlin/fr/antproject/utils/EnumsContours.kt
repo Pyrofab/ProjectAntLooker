@@ -1,3 +1,5 @@
+package fr.antproject.utils
+
 enum class ContourRetrievalMode(val value: Int) {
     EXTERNAL(0),
     LIST(1),

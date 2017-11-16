@@ -77,10 +77,10 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga38e8a5ac80ca104670989b92ccd186d0"><td class="memItemLeft" align="right" valign="top"><a id="ga38e8a5ac80ca104670989b92ccd186d0"></a>
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_photo.seamlessClone</b> ( @ByVal Mat src, @ByVal Mat dst, @ByVal Mat mask, @ByVal Point p, @ByVal Mat blend, int flags)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_photo.seamlessClone</b> ( @ByVal Mat src, @ByVal Mat dst, @ByVal Mat mask, @ByVal fr.antproject.utils.Point p, @ByVal Mat blend, int flags)</td></tr>
 <tr class="separator:ga38e8a5ac80ca104670989b92ccd186d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaab8f80a1d64b87472f8b1ef27a00f6c3"><td class="memItemLeft" align="right" valign="top"><a id="gaab8f80a1d64b87472f8b1ef27a00f6c3"></a>
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_photo.seamlessClone</b> ( @ByVal UMat src, @ByVal UMat dst, @ByVal UMat mask, @ByVal Point p, @ByVal UMat blend, int flags)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.bytedeco.javacpp.opencv_photo.seamlessClone</b> ( @ByVal UMat src, @ByVal UMat dst, @ByVal UMat mask, @ByVal fr.antproject.utils.Point p, @ByVal UMat blend, int flags)</td></tr>
 <tr class="separator:gaab8f80a1d64b87472f8b1ef27a00f6c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3560d162cd540795fe14ae7e98a7a9a2"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__clone.html#ga3560d162cd540795fe14ae7e98a7a9a2">org.bytedeco.javacpp.opencv_photo.colorChange</a> (@ByVal Mat src, @ByVal Mat mask, @ByVal Mat dst, float red_mul, float green_mul, float blue_mul)</td></tr>
 <tr class="memdesc:ga3560d162cd540795fe14ae7e98a7a9a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given an original color image, two differently colored versions of this image can be mixed seamlessly.  <a href="#ga3560d162cd540795fe14ae7e98a7a9a2">More...</a><br /></td></tr>
@@ -127,7 +127,7 @@ static native void&#160;</td><td class="memItemRight" valign="bottom"><b>org.byt
     <tr><td class="paramname">src</td><td>Input 8-bit 3-channel image. </td></tr>
     <tr><td class="paramname">dst</td><td>Input 8-bit 3-channel image. </td></tr>
     <tr><td class="paramname">mask</td><td>Input 8-bit 1 or 3-channel image. </td></tr>
-    <tr><td class="paramname">p</td><td>Point in dst image where object is placed. </td></tr>
+    <tr><td class="paramname">p</td><td>fr.antproject.utils.Point in dst image where object is placed. </td></tr>
     <tr><td class="paramname">blend</td><td>Output image with the same size and type as dst. </td></tr>
     <tr><td class="paramname">flags</td><td>Cloning method that could be one of the following:<ul>
 <li><b>NORMAL_CLONE</b> The power of the method is fully expressed when inserting objects with complex outlines into a new background</li>

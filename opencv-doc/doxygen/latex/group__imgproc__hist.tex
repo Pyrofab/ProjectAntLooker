@@ -373,8 +373,8 @@ The function cv\+::calc\+Hist calculates the histogram of one or more arrays. Th
         \{
             \textcolor{keywordtype}{float} binVal = hist.at<\textcolor{keywordtype}{float}>(h, s);
             \textcolor{keywordtype}{int} intensity = cvRound(binVal*255/maxVal);
-            \hyperlink{group__imgproc__draw_ga011e780e69d07eab5e5e6ac46d4d8dde}{rectangle}( histImg, Point(h*scale, s*scale),
-                        Point( (h+1)*scale - 1, (s+1)*scale - 1),
+            \hyperlink{group__imgproc__draw_ga011e780e69d07eab5e5e6ac46d4d8dde}{rectangle}( histImg, fr.antproject.utils.Point(h*scale, s*scale),
+                        fr.antproject.utils.Point( (h+1)*scale - 1, (s+1)*scale - 1),
                         Scalar::all(intensity),
                         CV\_FILLED );
         \}

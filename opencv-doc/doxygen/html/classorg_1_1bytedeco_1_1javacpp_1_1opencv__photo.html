@@ -92,7 +92,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The base class for algorithms that align images of the same scene with different exposures. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>AlignMTB</b></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This algorithm converts images to median threshold bitmaps (1 for pixels brighter than median luminance and 0 otherwise) and than aligns the resulting bitmaps using bit operations. <br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This algorithm converts images to median fr.antproject.utils.threshold bitmaps (1 for pixels brighter than median luminance and 0 otherwise) and than aligns the resulting bitmaps using bit operations. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>CalibrateCRF</b></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The base class for camera response calibration algorithms. <br /></td></tr>
@@ -190,11 +190,11 @@ static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlM
 <tr class="memitem:gaf1fcd4e85a8b99c9925e4f393aa6c10f"><td class="memItemLeft" align="right" valign="top">
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingColored</b> ( @ByVal UMat src, @ByVal UMat dst)</td></tr>
 <tr class="separator:gaf1fcd4e85a8b99c9925e4f393aa6c10f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac776302e2aaffca0e057b8715f7faa1d"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__denoise.html#gac776302e2aaffca0e057b8715f7faa1d">fastNlMeansDenoisingMulti</a> ( @ByVal MatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, float h, int templateWindowSize, int searchWindowSize)</td></tr>
+<tr class="memitem:gac776302e2aaffca0e057b8715f7faa1d"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__denoise.html#gac776302e2aaffca0e057b8715f7faa1d">fastNlMeansDenoisingMulti</a> ( @ByVal fr.antproject.utils.MatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, float h, int templateWindowSize, int searchWindowSize)</td></tr>
 <tr class="memdesc:gac776302e2aaffca0e057b8715f7faa1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modification of fastNlMeansDenoising function for images sequence where consequtive images have been captured in small period of time. For example video. This version of the function is for grayscale images or for manual manipulation with colorspaces. For more details see <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.131.6394">http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.131.6394</a>  <a href="group__photo__denoise.html#gac776302e2aaffca0e057b8715f7faa1d">More...</a><br /></td></tr>
 <tr class="separator:gac776302e2aaffca0e057b8715f7faa1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa0f7e73b107e0840510677999c76cb9f"><td class="memItemLeft" align="right" valign="top">
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal MatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal fr.antproject.utils.MatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize)</td></tr>
 <tr class="separator:gaa0f7e73b107e0840510677999c76cb9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9510649e1f2743a0b8396413803e7e00"><td class="memItemLeft" align="right" valign="top">
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal UMatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, float h, int templateWindowSize, int searchWindowSize)</td></tr>
@@ -203,10 +203,10 @@ static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlM
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal UMatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize)</td></tr>
 <tr class="separator:ga55237c48a5e475bbd54f48935209d3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadf284f4ebdc10c89953ae4273ea04b4a"><td class="memItemLeft" align="right" valign="top">
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal MatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, float h, int templateWindowSize, int searchWindowSize)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal fr.antproject.utils.MatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, float h, int templateWindowSize, int searchWindowSize)</td></tr>
 <tr class="separator:gadf284f4ebdc10c89953ae4273ea04b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5e5edc198348e04fede60be5624e2a3d"><td class="memItemLeft" align="right" valign="top">
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal MatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal fr.antproject.utils.MatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize)</td></tr>
 <tr class="separator:ga5e5edc198348e04fede60be5624e2a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5725faedd7c4e333a07db461b7d2645e"><td class="memItemLeft" align="right" valign="top">
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal UMatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, float h, int templateWindowSize, int searchWindowSize)</td></tr>
@@ -214,11 +214,11 @@ static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlM
 <tr class="memitem:ga9e54ba693763e9e123c818b5e3af49d9"><td class="memItemLeft" align="right" valign="top">
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal UMatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize)</td></tr>
 <tr class="separator:ga9e54ba693763e9e123c818b5e3af49d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga754f5006e8d8b4b484b29d01a8a993da"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__denoise.html#ga754f5006e8d8b4b484b29d01a8a993da">fastNlMeansDenoisingMulti</a> ( @ByVal MatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatPointer h, int templateWindowSize, int searchWindowSize, int normType)</td></tr>
+<tr class="memitem:ga754f5006e8d8b4b484b29d01a8a993da"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__denoise.html#ga754f5006e8d8b4b484b29d01a8a993da">fastNlMeansDenoisingMulti</a> ( @ByVal fr.antproject.utils.MatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatPointer h, int templateWindowSize, int searchWindowSize, int normType)</td></tr>
 <tr class="memdesc:ga754f5006e8d8b4b484b29d01a8a993da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modification of fastNlMeansDenoising function for images sequence where consequtive images have been captured in small period of time. For example video. This version of the function is for grayscale images or for manual manipulation with colorspaces. For more details see <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.131.6394">http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.131.6394</a>  <a href="group__photo__denoise.html#ga754f5006e8d8b4b484b29d01a8a993da">More...</a><br /></td></tr>
 <tr class="separator:ga754f5006e8d8b4b484b29d01a8a993da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga78f71a09ac4eae305bab2fd569d68eb7"><td class="memItemLeft" align="right" valign="top">
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal MatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatPointer h)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal fr.antproject.utils.MatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatPointer h)</td></tr>
 <tr class="separator:ga78f71a09ac4eae305bab2fd569d68eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga81923f13becc49d6108357949295e5d0"><td class="memItemLeft" align="right" valign="top">
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal UMatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatBuffer h, int templateWindowSize, int searchWindowSize, int normType)</td></tr>
@@ -227,10 +227,10 @@ static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlM
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal UMatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatBuffer h)</td></tr>
 <tr class="separator:gabbd7ea6713a25cd253339c53d49a7fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaae076da8a4d95ca099dd43303d7f4235"><td class="memItemLeft" align="right" valign="top">
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal MatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector float[] h, int templateWindowSize, int searchWindowSize, int normType)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal fr.antproject.utils.MatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector float[] h, int templateWindowSize, int searchWindowSize, int normType)</td></tr>
 <tr class="separator:gaae076da8a4d95ca099dd43303d7f4235"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga53d7221c560d23fd9e02920522f4a96c"><td class="memItemLeft" align="right" valign="top">
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal MatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector float[] h)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal fr.antproject.utils.MatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector float[] h)</td></tr>
 <tr class="separator:ga53d7221c560d23fd9e02920522f4a96c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac432e76401d411753ef6458347c37c79"><td class="memItemLeft" align="right" valign="top">
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal UMatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatPointer h, int templateWindowSize, int searchWindowSize, int normType)</td></tr>
@@ -239,10 +239,10 @@ static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlM
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal UMatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatPointer h)</td></tr>
 <tr class="separator:ga8299b1fb4d00d33cafc2af9995b249b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1ea833dac9b92ec192b96965cf5ebe26"><td class="memItemLeft" align="right" valign="top">
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal MatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatBuffer h, int templateWindowSize, int searchWindowSize, int normType)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal fr.antproject.utils.MatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatBuffer h, int templateWindowSize, int searchWindowSize, int normType)</td></tr>
 <tr class="separator:ga1ea833dac9b92ec192b96965cf5ebe26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaeb59de00d3350999662c9ac188d0b159"><td class="memItemLeft" align="right" valign="top">
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal MatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatBuffer h)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal fr.antproject.utils.MatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatBuffer h)</td></tr>
 <tr class="separator:gaeb59de00d3350999662c9ac188d0b159"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gada7d04c233ea1634d9d9d2b9cc42ae2f"><td class="memItemLeft" align="right" valign="top">
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal UMatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector float[] h, int templateWindowSize, int searchWindowSize, int normType)</td></tr>
@@ -251,10 +251,10 @@ static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlM
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal UMatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector float[] h)</td></tr>
 <tr class="separator:ga1c3ea41895a76af865b5775858540bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3b0037911771a51506f88a50b5c50424"><td class="memItemLeft" align="right" valign="top">
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal MatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatPointer h, int templateWindowSize, int searchWindowSize, int normType)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal fr.antproject.utils.MatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatPointer h, int templateWindowSize, int searchWindowSize, int normType)</td></tr>
 <tr class="separator:ga3b0037911771a51506f88a50b5c50424"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga94759e70026f47711045ab7f8d22978e"><td class="memItemLeft" align="right" valign="top">
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal MatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatPointer h)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal fr.antproject.utils.MatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatPointer h)</td></tr>
 <tr class="separator:ga94759e70026f47711045ab7f8d22978e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac03b4e557de380eccf1f6a23436d8154"><td class="memItemLeft" align="right" valign="top">
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal UMatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatBuffer h, int templateWindowSize, int searchWindowSize, int normType)</td></tr>
@@ -263,10 +263,10 @@ static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlM
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal UMatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatBuffer h)</td></tr>
 <tr class="separator:ga49b37d9587d0f6964fc23e71b349bc34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga29658724b489fd90f43a9918c06cd442"><td class="memItemLeft" align="right" valign="top">
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal MatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector float[] h, int templateWindowSize, int searchWindowSize, int normType)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal fr.antproject.utils.MatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector float[] h, int templateWindowSize, int searchWindowSize, int normType)</td></tr>
 <tr class="separator:ga29658724b489fd90f43a9918c06cd442"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6403e7b0af533cf0ea82826d33877cb2"><td class="memItemLeft" align="right" valign="top">
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal MatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector float[] h)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal fr.antproject.utils.MatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector float[] h)</td></tr>
 <tr class="separator:ga6403e7b0af533cf0ea82826d33877cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga82df6920e1bd487e9a47c396aa5dd25e"><td class="memItemLeft" align="right" valign="top">
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal UMatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatPointer h, int templateWindowSize, int searchWindowSize, int normType)</td></tr>
@@ -275,10 +275,10 @@ static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlM
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal UMatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatPointer h)</td></tr>
 <tr class="separator:ga06ad37e3fde65af399ca1ae76282403e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gade9285c9fb0b695589185bddd091fc88"><td class="memItemLeft" align="right" valign="top">
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal MatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatBuffer h, int templateWindowSize, int searchWindowSize, int normType)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal fr.antproject.utils.MatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatBuffer h, int templateWindowSize, int searchWindowSize, int normType)</td></tr>
 <tr class="separator:gade9285c9fb0b695589185bddd091fc88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga57df66e4f40de8a8d16324a48812dc5b"><td class="memItemLeft" align="right" valign="top">
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal MatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatBuffer h)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal fr.antproject.utils.MatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector FloatBuffer h)</td></tr>
 <tr class="separator:ga57df66e4f40de8a8d16324a48812dc5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8c1f5873e900c7cb05bab2bc1c24648d"><td class="memItemLeft" align="right" valign="top">
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal UMatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector float[] h, int templateWindowSize, int searchWindowSize, int normType)</td></tr>
@@ -286,11 +286,11 @@ static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlM
 <tr class="memitem:ga6d702df22b56851aeb32c74eaa306449"><td class="memItemLeft" align="right" valign="top">
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingMulti</b> ( @ByVal UMatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, @StdVector float[] h)</td></tr>
 <tr class="separator:ga6d702df22b56851aeb32c74eaa306449"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga689c12cd97213b5dd69ed55e0971f4b5"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__denoise.html#ga689c12cd97213b5dd69ed55e0971f4b5">fastNlMeansDenoisingColoredMulti</a> ( @ByVal MatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, float h, float hColor, int templateWindowSize, int searchWindowSize)</td></tr>
+<tr class="memitem:ga689c12cd97213b5dd69ed55e0971f4b5"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__denoise.html#ga689c12cd97213b5dd69ed55e0971f4b5">fastNlMeansDenoisingColoredMulti</a> ( @ByVal fr.antproject.utils.MatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, float h, float hColor, int templateWindowSize, int searchWindowSize)</td></tr>
 <tr class="memdesc:ga689c12cd97213b5dd69ed55e0971f4b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modification of fastNlMeansDenoisingMulti function for colored images sequences.  <a href="group__photo__denoise.html#ga689c12cd97213b5dd69ed55e0971f4b5">More...</a><br /></td></tr>
 <tr class="separator:ga689c12cd97213b5dd69ed55e0971f4b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5acfa4fb6a6b6f887e680a4dbf6a4132"><td class="memItemLeft" align="right" valign="top">
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingColoredMulti</b> ( @ByVal MatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingColoredMulti</b> ( @ByVal fr.antproject.utils.MatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize)</td></tr>
 <tr class="separator:ga5acfa4fb6a6b6f887e680a4dbf6a4132"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga91c25a31ae3a33ac604d2395c57aa41a"><td class="memItemLeft" align="right" valign="top">
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingColoredMulti</b> ( @ByVal UMatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize, float h, float hColor, int templateWindowSize, int searchWindowSize)</td></tr>
@@ -299,10 +299,10 @@ static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlM
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingColoredMulti</b> ( @ByVal UMatVector srcImgs, @ByVal Mat dst, int imgToDenoiseIndex, int temporalWindowSize)</td></tr>
 <tr class="separator:ga91fb09c2f2ba0bb4342f185149b13c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaea864c7aa3fd7158eca8b968f330edd8"><td class="memItemLeft" align="right" valign="top">
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingColoredMulti</b> ( @ByVal MatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, float h, float hColor, int templateWindowSize, int searchWindowSize)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingColoredMulti</b> ( @ByVal fr.antproject.utils.MatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, float h, float hColor, int templateWindowSize, int searchWindowSize)</td></tr>
 <tr class="separator:gaea864c7aa3fd7158eca8b968f330edd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga028fc4f37fa2fb9ce5035ee1b02359c9"><td class="memItemLeft" align="right" valign="top">
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingColoredMulti</b> ( @ByVal MatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingColoredMulti</b> ( @ByVal fr.antproject.utils.MatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize)</td></tr>
 <tr class="separator:ga028fc4f37fa2fb9ce5035ee1b02359c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1e8f4b7d46c481fc3d925d3c09c8eae7"><td class="memItemLeft" align="right" valign="top">
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingColoredMulti</b> ( @ByVal UMatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize, float h, float hColor, int templateWindowSize, int searchWindowSize)</td></tr>
@@ -310,11 +310,11 @@ static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlM
 <tr class="memitem:gab8ee08db77b996fec32424bc2baac5b2"><td class="memItemLeft" align="right" valign="top">
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>fastNlMeansDenoisingColoredMulti</b> ( @ByVal UMatVector srcImgs, @ByVal UMat dst, int imgToDenoiseIndex, int temporalWindowSize)</td></tr>
 <tr class="separator:gab8ee08db77b996fec32424bc2baac5b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga69dacfb1b3386b1b2a2d270314c1b548"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__denoise.html#ga69dacfb1b3386b1b2a2d270314c1b548">denoise_TVL1</a> (@Const @ByRef MatVector observations, @ByRef Mat result, double lambda, int niters)</td></tr>
+<tr class="memitem:ga69dacfb1b3386b1b2a2d270314c1b548"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__denoise.html#ga69dacfb1b3386b1b2a2d270314c1b548">denoise_TVL1</a> (@Const @ByRef fr.antproject.utils.MatVector observations, @ByRef Mat result, double lambda, int niters)</td></tr>
 <tr class="memdesc:ga69dacfb1b3386b1b2a2d270314c1b548"><td class="mdescLeft">&#160;</td><td class="mdescRight">Primal-dual algorithm is an algorithm for solving special types of variational problems (that is, finding a function to minimize some functional). As the image denoising, in particular, may be seen as the variational problem, primal-dual algorithm then can be used to perform denoising and this is exactly what is implemented.  <a href="group__photo__denoise.html#ga69dacfb1b3386b1b2a2d270314c1b548">More...</a><br /></td></tr>
 <tr class="separator:ga69dacfb1b3386b1b2a2d270314c1b548"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0d1ce8149027c7aefece96cd1e4d3041"><td class="memItemLeft" align="right" valign="top">
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>denoise_TVL1</b> (@Const @ByRef MatVector observations, @ByRef Mat result)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>denoise_TVL1</b> (@Const @ByRef fr.antproject.utils.MatVector observations, @ByRef Mat result)</td></tr>
 <tr class="separator:ga0d1ce8149027c7aefece96cd1e4d3041"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafe2ea9dc47d0ec1d3a5ec361ab19de32"><td class="memItemLeft" align="right" valign="top">static native Tonemap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__hdr.html#gafe2ea9dc47d0ec1d3a5ec361ab19de32">createTonemap</a> (float gamma)</td></tr>
 <tr class="memdesc:gafe2ea9dc47d0ec1d3a5ec361ab19de32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates simple linear mapper with gamma correction.  <a href="group__photo__hdr.html#gafe2ea9dc47d0ec1d3a5ec361ab19de32">More...</a><br /></td></tr>
@@ -358,7 +358,7 @@ static native AlignMTB&#160;</td><td class="memItemRight" valign="bottom"><b>cre
 <tr class="memitem:ga3b370075247e9bd2f724b316ad9970f3"><td class="memItemLeft" align="right" valign="top">
 static native CalibrateDebevec&#160;</td><td class="memItemRight" valign="bottom"><b>createCalibrateDebevec</b> ()</td></tr>
 <tr class="separator:ga3b370075247e9bd2f724b316ad9970f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1ac32f0f1042b3436bd7daf88bb48760"><td class="memItemLeft" align="right" valign="top">static native CalibrateRobertson&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__hdr.html#ga1ac32f0f1042b3436bd7daf88bb48760">createCalibrateRobertson</a> (int max_iter, float threshold)</td></tr>
+<tr class="memitem:ga1ac32f0f1042b3436bd7daf88bb48760"><td class="memItemLeft" align="right" valign="top">static native CalibrateRobertson&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__hdr.html#ga1ac32f0f1042b3436bd7daf88bb48760">createCalibrateRobertson</a> (int max_iter, float fr.antproject.utils.threshold)</td></tr>
 <tr class="memdesc:ga1ac32f0f1042b3436bd7daf88bb48760"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates CalibrateRobertson object.  <a href="group__photo__hdr.html#ga1ac32f0f1042b3436bd7daf88bb48760">More...</a><br /></td></tr>
 <tr class="separator:ga1ac32f0f1042b3436bd7daf88bb48760"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3032d7fe6e15a35aa4722340e887ca17"><td class="memItemLeft" align="right" valign="top">
@@ -385,10 +385,10 @@ static native MergeRobertson&#160;</td><td class="memItemRight" valign="bottom">
 static native void&#160;</td><td class="memItemRight" valign="bottom"><b>decolor</b> ( @ByVal UMat src, @ByVal UMat grayscale, @ByVal UMat color_boost)</td></tr>
 <tr class="separator:ga736e24715f8889ca19d423760267140b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga38e8a5ac80ca104670989b92ccd186d0"><td class="memItemLeft" align="right" valign="top">
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>seamlessClone</b> ( @ByVal Mat src, @ByVal Mat dst, @ByVal Mat mask, @ByVal Point p, @ByVal Mat blend, int flags)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>seamlessClone</b> ( @ByVal Mat src, @ByVal Mat dst, @ByVal Mat mask, @ByVal fr.antproject.utils.Point p, @ByVal Mat blend, int flags)</td></tr>
 <tr class="separator:ga38e8a5ac80ca104670989b92ccd186d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaab8f80a1d64b87472f8b1ef27a00f6c3"><td class="memItemLeft" align="right" valign="top">
-static native void&#160;</td><td class="memItemRight" valign="bottom"><b>seamlessClone</b> ( @ByVal UMat src, @ByVal UMat dst, @ByVal UMat mask, @ByVal Point p, @ByVal UMat blend, int flags)</td></tr>
+static native void&#160;</td><td class="memItemRight" valign="bottom"><b>seamlessClone</b> ( @ByVal UMat src, @ByVal UMat dst, @ByVal UMat mask, @ByVal fr.antproject.utils.Point p, @ByVal UMat blend, int flags)</td></tr>
 <tr class="separator:gaab8f80a1d64b87472f8b1ef27a00f6c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3560d162cd540795fe14ae7e98a7a9a2"><td class="memItemLeft" align="right" valign="top">static native void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__photo__clone.html#ga3560d162cd540795fe14ae7e98a7a9a2">colorChange</a> (@ByVal Mat src, @ByVal Mat mask, @ByVal Mat dst, float red_mul, float green_mul, float blue_mul)</td></tr>
 <tr class="memdesc:ga3560d162cd540795fe14ae7e98a7a9a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given an original color image, two differently colored versions of this image can be mixed seamlessly.  <a href="group__photo__clone.html#ga3560d162cd540795fe14ae7e98a7a9a2">More...</a><br /></td></tr>
