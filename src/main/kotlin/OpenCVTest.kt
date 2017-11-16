@@ -5,8 +5,11 @@ import org.bytedeco.javacpp.opencv_imgproc
 import org.bytedeco.javacpp.opencv_imgproc.*
 
 fun main(args: Array<String>) {
-    val img = loadImage("petri_1.jpg")
+
+    val img = loadImage("petri_resize.jpg")
+
     val imgMat = imgToMat(img)
+
     val gray = grayImage(imgMat)
     val thresh = threshold(gray, 127.0, 255.0, ThresholdTypes.BINARY_INVERTED)
     val contours = findContours(thresh, ContourRetrievalMode.LIST, ContourApproxMethod.SIMPLE)
