@@ -4,6 +4,7 @@ import org.bytedeco.javacpp.Pointer
 import org.bytedeco.javacpp.opencv_core
 
 class Point(ptr: Pointer) : opencv_core.Point(ptr) {
+    constructor(x: Int, y: Int): this(opencv_core.Point(x, y))
     override fun toString(): String = "${javaClass.name}[x=${this.x()},y=${this.y()}]"
 }
 
@@ -19,12 +20,29 @@ class MatVector : opencv_core.MatVector(), Iterable<opencv_core.Mat> {
     override fun toString(): String = "${javaClass.name}[size=${this.size()}]"
 }
 
+/**
+ * A wrapper for [opencv_core.Mat], specifically for representing images
+ *
+ * Stores the various transformations that have been applied to the represented image
+ * @constructor Creates an image matrix by casting the given pointer. Also sets transformations flags
+ */
 class ImageMat(ptr : Pointer?, imgTransformFlags: Int = 0) : opencv_core.Mat(ptr) {
+    /**
+     * Creates an image matrix from the given image object.
+     * @param img the image that this matrix will represent
+     */
     constructor(img : opencv_core.IplImage) : this(opencv_core.Mat(img))
+
+    /**
+     * Creates an empty image matrix with the given transformation flags
+     */
     constructor(imgTransformFlags: Int = 0) : this(opencv_core.Mat(), imgTransformFlags)
     var imgTransformFlags = imgTransformFlags
         private set
 
+    /**
+     * @return true if this matrix has received the given transformation
+     */
     fun hasTransform(transformOP: EnumImgTransforms) = (imgTransformFlags and transformOP.flag > 0)
 
     /**
@@ -54,6 +72,9 @@ class ImageMat(ptr : Pointer?, imgTransformFlags: Int = 0) : opencv_core.Mat(ptr
     }
 }
 
+/**
+ * Represents the various transformations that can be applied to an image matrix
+ */
 enum class EnumImgTransforms(val flag: Int) {
     NO_TRANSFORMATION(0),
     GRAY(0b1),

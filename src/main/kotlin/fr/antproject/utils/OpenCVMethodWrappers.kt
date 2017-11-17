@@ -5,13 +5,20 @@ import org.bytedeco.javacpp.opencv_imgcodecs
 import org.bytedeco.javacpp.opencv_imgproc
 import java.io.FileNotFoundException
 
+/**
+ * Loads an image from the provided location
+ * @param location the location of the file relative to the current directory
+ * @return [an object][opencv_core.IplImage] describing this image
+ *
+ * @throws FileNotFoundException
+ */
 fun loadImage(location: String): opencv_core.IplImage = opencv_imgcodecs.cvLoadImage(location)
         ?: throw FileNotFoundException("$location: this file does not exist")
 
 /**
  * Converts an image into a black and white version
- * @param img a matrix representing the source image
- * @param ret a matrix in which the result will be stored
+ * @param img [a matrix][ImageMat] representing the source image
+ * @param ret [ matrix][ImageMat] in which the result will be stored
  * @return ret, for operation chaining
  */
 fun grayImage(img : ImageMat, ret: ImageMat = ImageMat(img.imgTransformFlags)) : ImageMat {
@@ -21,14 +28,15 @@ fun grayImage(img : ImageMat, ret: ImageMat = ImageMat(img.imgTransformFlags)) :
 }
 
 /**
- * An extension version of the above function
- * Applies the transformation directly to the instance
+ * An extension version of [grayImage]. Applies the transformation directly to the instance
+ * @receiver [ImageMat]
+ * @see grayImage
  */
 fun ImageMat.grayImage(copy: Boolean = true) = grayImage(this, if (copy) ImageMat(this.imgTransformFlags) else this)
 
 /**
  * Applies a threshold to an image, making all data binary depending on passed parameters
- * @param grayImage a matrix representing the source image (gray it first for better results)
+ * @param grayImage [a matrix][ImageMat] representing the source image (gray it first for better results)
  * @param threshold the threshold value used by the algorithm
  * @param maxValue a maximum value used by some algorithms to replace values above the threshold
  * @param algorithm a threshold algorithm to use
@@ -42,15 +50,16 @@ fun threshold(grayImage: ImageMat, threshold: Double = 127.0, maxValue: Double =
               algorithm: ThresholdTypes = ThresholdTypes.BINARY_INVERTED, optional: ThresholdTypesOptional? = null,
               ret: ImageMat = ImageMat(grayImage.imgTransformFlags)): ImageMat {
     if (!grayImage.hasTransform(EnumImgTransforms.GRAY))
-        throw IllegalArgumentException("The source image must use 8 color channels. Use fr.antproject.utils.ImageMat#grayImage first.")
+        throw IllegalArgumentException("The source image must use 8 color channels. Use ImageMat#grayImage first.")
     opencv_imgproc.threshold(grayImage, ret, threshold, maxValue, algorithm.value or (optional?.value ?: 0))
     ret.addTransform(EnumImgTransforms.THRESHOLD)
     return ret
 }
 
 /**
- * An extension version of the above function <br/>
- * Applies the transformation directly to the instance
+ * An extension version of [threshold]. Applies the transformation directly to the instance
+ * @receiver [ImageMat]
+ * @see threshold
  */
 fun ImageMat.threshold(threshold: Double = 127.0, maxValue: Double = 255.0, algorithm: ThresholdTypes = ThresholdTypes.BINARY_INVERTED,
                        optional: ThresholdTypesOptional? = null, copy: Boolean = true)
@@ -58,6 +67,12 @@ fun ImageMat.threshold(threshold: Double = 127.0, maxValue: Double = 255.0, algo
 
 /**
  * Extracts contour information from an image
+ * @param thresholdImageMat a matrix describing an image, preferably modified through a threshold operation
+ * @param mode the retrieval mode for contours
+ * @param method the method used for contour approximation
+ * @param ret a matrix vector used to store the resulting data
+ *
+ * @return ret, for operation chaining
  */
 fun findContours(thresholdImageMat: ImageMat, mode: ContourRetrievalMode = ContourRetrievalMode.LIST,
                  method: ContourApproxMethod = ContourApproxMethod.SIMPLE, ret: MatVector = MatVector()): MatVector {
@@ -68,8 +83,9 @@ fun findContours(thresholdImageMat: ImageMat, mode: ContourRetrievalMode = Conto
 }
 
 /**
- * An extension version of the above function
- * Applies the transformation directly to the instance
+ * An extension version of [findContours]. Applies the transformation directly to the instance
+ * @receiver [ImageMat]
+ * @see findContours(grayImage, threshold, maxValue,algorithm, optional,ret)
  */
 fun ImageMat.findContours(mode: ContourRetrievalMode = ContourRetrievalMode.LIST, method: ContourApproxMethod = ContourApproxMethod.SIMPLE)
         = findContours(this, mode, method)

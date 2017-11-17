@@ -21,10 +21,10 @@ enum class ThresholdTypes(val value: Int) {
 }
 
 enum class ThresholdTypesOptional(val value: Int) {
-    /** use Otsu algorithm to choose the optimal fr.antproject.utils.threshold value;
+    /** use Otsu algorithm to choose the optimal threshold value;
     combine the flag with one of the above CV_THRESH_* values */
     OTSU(opencv_imgproc.CV_THRESH_OTSU),
-    /** use Triangle algorithm to choose the optimal fr.antproject.utils.threshold value;
+    /** use Triangle algorithm to choose the optimal threshold value;
     combine the flag with one of the above CV_THRESH_* values, but not
     with CV_THRESH_OTSU */
     TRIANGLE(opencv_imgproc.CV_THRESH_TRIANGLE)
