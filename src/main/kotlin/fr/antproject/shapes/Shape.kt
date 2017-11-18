@@ -15,18 +15,18 @@ class Circle(val center: Point, val radius: Int): Shape() {
 
 }
 
-open class Polygon(private val sommets: List<Point>): Shape(), Iterable<Point> {
-    override fun iterator(): Iterator<Point> = sommets.iterator()
+open class Polygon(private val vertices: List<Point>): Shape(), Iterable<Point> {
+    override fun iterator(): Iterator<Point> = vertices.iterator()
 
-    operator fun plus(sommet: Point): Polygon = Polygon(sommets + sommet)
+    operator fun plus(vertex: Point): Polygon = Polygon(vertices + vertex)
 
-    private fun nbPoints() = sommets.size
+    private fun nbPoints() = vertices.size
 
     override fun isInside(other: Shape): Boolean {
         TODO("not implemented")
     }
 
-    override fun toString(): String = "Polygon(nbPoints=${nbPoints()}, sommets=$sommets)"
+    override fun toString(): String = "Polygon(nbPoints=${nbPoints()}, vertices=$vertices)"
 }
 
 class Rectangle(val x: Int, val y: Int, val width: Int, val height: Int):
