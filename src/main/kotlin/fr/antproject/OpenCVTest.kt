@@ -13,12 +13,13 @@ fun main(args: Array<String>) {
 }
 
 fun test(fileName: String) {
+    Logger.info("Loading image at location $fileName")
     val src = ImageMat(loadImage(fileName))
     val dest = ImageMat(loadImage(fileName))
     val processedContours = processContours(src.grayImage().threshold().findContours()) + detectCircles(src.grayImage())
     for(i in 0 until processedContours.size) {
         val shape = processedContours[i]
-        println("Shape #$i: $shape")
+        Logger.debug("Shape #$i: $shape")
         if(shape is Polygon) {
             shape.forEach {
                 opencv_imgproc.drawMarker(dest, it,

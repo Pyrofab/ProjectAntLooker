@@ -77,7 +77,7 @@ fun ImageMat.threshold(threshold: Double = 127.0, maxValue: Double = 255.0, algo
 fun findContours(thresholdImageMat: ImageMat, mode: ContourRetrievalMode = ContourRetrievalMode.LIST,
                  method: ContourApproxMethod = ContourApproxMethod.SIMPLE, ret: MatVector = MatVector()): MatVector {
     if(!thresholdImageMat.hasTransform(EnumImgTransforms.THRESHOLD))
-        println("No threshold applied to the source image, good luck using that")
+        Logger.warn("No threshold applied to the source image, good luck using that")
     opencv_imgproc.findContours(thresholdImageMat, ret, mode.value, method.value)
     return ret
 }

@@ -65,7 +65,7 @@ class ImageMat(ptr : Pointer?, imgTransformFlags: Int = 0) : opencv_core.Mat(ptr
             try {
                 "${javaClass.name}[transforms=${getTransforms()},width=${arrayWidth()},height=${arrayHeight()},depth=${arrayDepth()},channels=${arrayChannels()}]"
             } catch (e: Exception) {
-                println(e.message)
+                Logger.error("Exception while printing information for an image matrix: ${e.message}")
                 super.toString()
             }
         }

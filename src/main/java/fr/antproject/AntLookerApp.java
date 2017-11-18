@@ -1,5 +1,6 @@
 package fr.antproject;
 
+import fr.antproject.utils.Logger;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.stage.FileChooser;
@@ -25,7 +26,8 @@ public class AntLookerApp extends Application {
         File file = fileChooser.showOpenDialog(primaryStage);
         if(file != null)
             OpenCVTestKt.test(file.getPath());
-        System.out.println("No file selected");
+        else
+            Logger.INSTANCE.info("No file selected", null);
         Platform.exit();
     }
 }
