@@ -5,7 +5,7 @@ import org.bytedeco.javacpp.opencv_core
 
 class Point(ptr: Pointer) : opencv_core.Point(ptr) {
     constructor(x: Int, y: Int): this(opencv_core.Point(x, y))
-    override fun toString(): String = "${javaClass.name}[x=${this.x()},y=${this.y()}]"
+    override fun toString() = "${javaClass.simpleName}[x=${this.x()},y=${this.y()}]"
 }
 
 class MatVector : opencv_core.MatVector(), Iterable<opencv_core.Mat> {

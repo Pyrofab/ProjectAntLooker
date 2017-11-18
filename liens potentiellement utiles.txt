@@ -3,3 +3,4 @@ https://octave.sourceforge.io/packages.php
 http://opencv-java-tutorials.readthedocs.io/en/latest/08-object-detection.html
 https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/hough_circle/hough_circle.html#hough-circle
 https://stackoverflow.com/questions/11424002/how-to-detect-simple-geometric-shapes-using-opencv?noredirect=1&lq=1
+https://stackoverflow.com/questions/28131557/how-to-detect-if-a-user-has-drawn-a-circle-on-a-touch-device-using-canvas-and-ja
