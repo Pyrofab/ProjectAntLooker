@@ -16,7 +16,7 @@ fun test(fileName: String) {
     Logger.info("Loading image at location $fileName")
     val src = ImageMat(loadImage(fileName))
     val dest = ImageMat(loadImage(fileName))
-    val processedContours = processContours(src.grayImage().threshold().findContours()) + detectCircles(src.grayImage())
+    val processedContours = processContours(src.grayImage().threshold().findContours())
     for(i in 0 until processedContours.size) {
         val shape = processedContours[i]
         Logger.debug("Shape #$i: $shape")

@@ -6,6 +6,32 @@ import org.bytedeco.javacpp.opencv_core
 class Point(ptr: Pointer) : opencv_core.Point(ptr) {
     constructor(x: Int, y: Int): this(opencv_core.Point(x, y))
     override fun toString() = "${javaClass.simpleName}[x=${this.x()},y=${this.y()}]"
+
+    operator fun plus(other: Point) = Point(x() + other.x(), y() + other.y())
+    operator fun minus(other: Point) = Point(x() - other.x(), y() - other.y())
+    operator fun times(mul: Int) = Point(x() * mul, y() * mul)
+    operator fun div(denominator: Int) = Point(x() / denominator, y() / denominator)
+    infix fun distTo(other: Point) = Math.sqrt(Math.pow((x() - other.x()).toDouble(), 2.0) + Math.pow((y() - other.y()).toDouble(), 2.0))
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+        if (!super.equals(other)) return false
+
+        other as Point
+
+        if (x() != other.x()) return false
+        if (y() != other.y()) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        var result = super.hashCode()
+        result = 31 * result + x()
+        result = 31 * result + y()
+        return result
+    }
 }
 
 class MatVector : opencv_core.MatVector(), Iterable<opencv_core.Mat> {
