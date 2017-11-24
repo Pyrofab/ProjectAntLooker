@@ -5,6 +5,8 @@ import fr.antproject.utils.Point
 open class Polygon(private val vertices: List<Point>): Shape(), Iterable<Point> {
     override fun iterator(): Iterator<Point> = vertices.iterator()
 
+    operator fun get(i: Int): Point = vertices[i]
+
     operator fun plus(vertex: Point): Polygon = Polygon(vertices + vertex)
 
     fun nbPoints() = vertices.size

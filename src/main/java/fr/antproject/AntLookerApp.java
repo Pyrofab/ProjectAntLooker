@@ -9,11 +9,16 @@ import javafx.stage.Stage;
 import java.io.File;
 
 public class AntLookerApp extends Application {
+    private static volatile String selectedFile;
+
     public static void main(String[] args) {
         if(args.length > 0)
             OpenCVTestKt.test(args[0]);
-        else
+        else {
             launch(args);
+            if(selectedFile != null)
+                OpenCVTestKt.test(selectedFile);
+        }
     }
 
     @Override
@@ -25,7 +30,7 @@ public class AntLookerApp extends Application {
         fileChooser.setInitialDirectory(initialD.exists() ? initialD : new File("."));
         File file = fileChooser.showOpenDialog(primaryStage);
         if(file != null)
-            OpenCVTestKt.test(file.getPath());
+            selectedFile = file.getPath();
         else
             Logger.INSTANCE.info("No file selected", null);
         Platform.exit();

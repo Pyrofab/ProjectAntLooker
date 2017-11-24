@@ -1,14 +1,13 @@
 package fr.antproject.utils
 
-import fr.antproject.shapes.Circle
-import fr.antproject.shapes.Polygon
-import fr.antproject.shapes.Shape
+import fr.antproject.shapes.*
 import org.bytedeco.javacpp.FloatPointer
 import org.bytedeco.javacpp.opencv_core
 import org.bytedeco.javacpp.opencv_highgui
 import org.bytedeco.javacpp.opencv_imgproc
 
-fun processContours(contours: MatVector) : List<Shape> = filterDuplicates(extractPolys(contours)).map { getCircleFromPoly(it) ?: it }
+fun processContours(contours: MatVector) : List<Shape> =
+        filterDuplicates(extractPolys(contours)).map { getCircleFromPoly(it) ?: it }
 
 fun extractPolys(contours: MatVector) : List<Polygon> {
     val ret = mutableListOf<Polygon>()
@@ -23,6 +22,20 @@ fun extractPolys(contours: MatVector) : List<Polygon> {
         }
     }
     return ret
+}
+
+/**
+ * TODO make this detect and take rotation into account
+ * @param shape a polygon to analyse
+ * @return the approximated rectangle or null if the shape isn't a valid rectangle
+ */
+fun getRectangleFromPoly(shape: Polygon): Polygon? {
+    if(!shape.isRectangle()) return null
+    val x = (shape[0].x() + shape[1].x()) / 2
+    val y = (shape[0].y() + shape[3].y()) / 2
+    val width = ((shape[0] distTo shape[3]) + (shape[1] distTo shape[2])).toInt() / 2
+    val height = ((shape[0] distTo shape[1]) + (shape[3] distTo shape[2])).toInt() / 2
+    return Rectangle(x, y, width, height)
 }
 
 /**The minimum amount of points a polygon must have to be considered a circle*/
@@ -52,19 +65,30 @@ fun getCircleFromPoly(shape: Polygon): Circle? {
     return if((inRange / shape.nbPoints()) > MIN_IN_RANGE) Circle(average, averageDistance.toInt()) else null
 }
 
-const val MAX_FUSE_DISTANCE = 3.0
+
+
+const val MAX_FUSE_DISTANCE = 15.0
 
 fun filterDuplicates(polys: List<Polygon>): List<Polygon> {
     val temp = polys.toMutableList()
     var i = -1
     while(++i < temp.size) {        // can't use an iterator as the underlying list changes over time
         val polygon = temp[i]
-        if (polys.any { it !== polygon && it.all { point -> polygon.none { point1 -> point distTo point1 < MAX_FUSE_DISTANCE } } })
-        temp -= polygon
+        // For each polygon in the list, we check if it is different from the current polygon and that for each of its points,
+        // there exists a point in the current polygon which distance to the first in less than the maximum fuse distance
+        if (polys.any { it !== polygon && it.all { point -> polygon.any { point1 -> point distTo point1 < MAX_FUSE_DISTANCE } } }) {
+            Logger.debug("Duplicate detected for $polygon")
+            temp -= polygon
+        }
     }
     return temp
 }
 
+/**
+ * Detects perfect circles from a source image
+ * @param gray a matrix representing a gray image
+ * @return a list of circles detected in the image
+ */
 fun detectCircles(gray: ImageMat): List<Circle> {
     if(!gray.hasTransform(EnumImgTransforms.GRAY))
         throw IllegalArgumentException("The source image must use 8 color channels. Use ImageMat#grayImage first.")
