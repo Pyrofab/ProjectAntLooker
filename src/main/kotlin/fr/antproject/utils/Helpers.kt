@@ -7,7 +7,7 @@ import org.bytedeco.javacpp.opencv_highgui
 import org.bytedeco.javacpp.opencv_imgproc
 
 fun processContours(contours: MatVector) : List<Shape> =
-        filterDuplicates(extractPolys(contours)).map { getCircleFromPoly(it) ?: it }
+        filterDuplicates(extractPolys(contours)).map { getCircleFromPoly(it) ?:getArrowFromPoly(it) ?: it }
 
 fun extractPolys(contours: MatVector) : List<Polygon> {
     val ret = mutableListOf<Polygon>()
@@ -65,9 +65,16 @@ fun getCircleFromPoly(shape: Polygon): Circle? {
     return if((inRange / shape.nbPoints()) > MIN_IN_RANGE) Circle(average, averageDistance.toInt()) else null
 }
 
+/**
+ * TODO("not implemented")
+ * @param shape a polygon to analyse
+ * @return the approximated arrow or null if the shape isn't a valid arrow
+ */
+fun getArrowFromPoly(shape: Polygon): Arrow? {
+    return null
+}
 
-
-const val MAX_FUSE_DISTANCE = 15.0
+const val MAX_FUSE_DISTANCE = 13.5
 
 fun filterDuplicates(polys: List<Polygon>): List<Polygon> {
     val temp = polys.toMutableList()

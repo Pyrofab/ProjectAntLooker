@@ -3,6 +3,7 @@ package fr.antproject
 import fr.antproject.shapes.Circle
 import fr.antproject.shapes.Polygon
 import fr.antproject.shapes.Rectangle
+import fr.antproject.shapes.Arrow
 import fr.antproject.utils.*
 import org.bytedeco.javacpp.opencv_core
 import org.bytedeco.javacpp.opencv_highgui.cvWaitKey
@@ -15,7 +16,7 @@ fun test(fileName: String) {
     Logger.info("Loading image at location $fileName")
     val src = ImageMat(loadImage(fileName))
     val dest = ImageMat(loadImage(fileName))
-    val processedContours = processContours(src.grayImage().threshold().findContours())
+    val processedContours = processContours(src.grayImage().threshold(optional=ThresholdTypesOptional.OTSU).findContours())
     for(i in 0 until processedContours.size) {
         val shape = processedContours[i]
         Logger.debug("Shape #$i: $shape")
@@ -29,6 +30,8 @@ fun test(fileName: String) {
         } else if(shape is Circle) {
             opencv_imgproc.circle(dest, shape.center, 3, Color.GREEN.toScalar(), -1, 8, 0)
             opencv_imgproc.circle(dest, shape.center, shape.radius, Color.RED.toScalar(), 3, 8, 0)
+        } else if(shape is Arrow) {
+            opencv_imgproc.arrowedLine(dest, shape.startPoint, shape.lastPoint, Color.BLUE.toScalar())
         }
     }
     imshow("img",dest)
