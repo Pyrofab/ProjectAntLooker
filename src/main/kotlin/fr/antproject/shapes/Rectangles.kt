@@ -5,7 +5,7 @@ package fr.antproject.shapes
 import fr.antproject.utils.Point
 import org.bytedeco.javacpp.opencv_core
 
-class DrawnRectangle private constructor(drawnShape: Polygon, val approx: Rectangle): Polygon(drawnShape) {
+class DrawnRectangle private constructor(drawnShape: Polygon, private val approx: Rectangle): Polygon(drawnShape) {
 
     companion object RectangleConverter {
         /**
@@ -30,7 +30,7 @@ class DrawnRectangle private constructor(drawnShape: Polygon, val approx: Rectan
 }
 
 class Rectangle(private val x: Int, private val y: Int, private val width: Int, private val height: Int):
-        Polygon(listOf(Point(x + width, y), Point(x + width, y + height), Point(x, y + height))) {
+        Polygon(Point(x + width, y), Point(x + width, y + height), Point(x, y + height)) {
 
     fun toOpencvRect(): opencv_core.Rect = opencv_core.Rect(x, y, width, height)
 

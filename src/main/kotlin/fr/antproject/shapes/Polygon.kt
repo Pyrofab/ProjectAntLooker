@@ -5,8 +5,9 @@ import fr.antproject.utils.doIntersect
 import fr.antproject.utils.onSegment
 import fr.antproject.utils.orientation
 
-open class Polygon(protected val vertices: List<Point>): Shape(), Iterable<Point> {
-    constructor(from: Polygon) : this(from.vertices)
+open class Polygon (protected val vertices: List<Point>): Shape(), Iterable<Point> {
+    constructor (from: Polygon) : this(from.vertices)
+    constructor (vararg vertices: Point) : this(vertices.asList())
 
     companion object {
         // Define Infinite (Using INT_MAX caused overflow problems)

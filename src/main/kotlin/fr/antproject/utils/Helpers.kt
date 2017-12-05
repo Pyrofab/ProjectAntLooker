@@ -7,7 +7,7 @@ import org.bytedeco.javacpp.opencv_highgui
 import org.bytedeco.javacpp.opencv_imgproc
 
 fun processContours(contours: MatVector) : List<Shape> =
-        filterDuplicates(extractPolys(contours)).map { DrawnCircle.getCircleFromPoly(it) ?: DrawnRectangle.getRectangleFromPoly(it) ?: it }
+        filterDuplicates(extractPolys(contours)).map { DrawnCircle.getCircleFromPoly(it) ?: DrawnRectangle.getRectangleFromPoly(it) ?: getArrowFromPoly(it) ?: it }
 
 fun extractPolys(contours: MatVector) : List<Polygon> {
     val ret = mutableListOf<Polygon>()
@@ -15,7 +15,7 @@ fun extractPolys(contours: MatVector) : List<Polygon> {
         val approx = opencv_core.Mat()
         opencv_imgproc.approxPolyDP(shape, approx, 0.01 * opencv_imgproc.arcLength(shape, true), true)
         for (row in 0 until approx.size().width()) {
-            var polygon = Polygon(listOf())
+            var polygon = Polygon()
             for (col in 0 until approx.size().height())
                 polygon += Point(approx.ptr(row, col))
             ret += polygon
@@ -27,11 +27,20 @@ fun extractPolys(contours: MatVector) : List<Polygon> {
 fun detectArrow(shapes: List<Shape>) {
     shapes.forEach {
         if(it is Polygon) {
-            if(!it.isRectangle()) {
+            if(it !is DrawnRectangle) {
 
             }
         }
     }
+}
+
+/**
+ * TODO("not implemented")
+ * @param shape a polygon to analyse
+ * @return the approximated arrow or null if the shape isn't a valid arrow
+ */
+fun getArrowFromPoly(shape: Polygon): Arrow? {
+    return null
 }
 
 const val MAX_FUSE_DISTANCE = 13.5
