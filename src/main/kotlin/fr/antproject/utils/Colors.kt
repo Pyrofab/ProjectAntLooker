@@ -2,7 +2,7 @@ package fr.antproject.utils
 
 import org.bytedeco.javacpp.opencv_core
 
-class Color private constructor(val rgba: Int) {
+class Color private constructor(private val rgba: Int) {
     companion object {
         val WHITE = Color(255, 255, 255)
         val RED = Color(255, 0, 0)

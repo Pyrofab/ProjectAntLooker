@@ -7,7 +7,7 @@ import org.bytedeco.javacpp.opencv_highgui
 import org.bytedeco.javacpp.opencv_imgproc
 
 fun processContours(contours: MatVector) : List<Shape> =
-        filterDuplicates(extractPolys(contours)).map { getCircleFromPoly(it) ?: it }
+        filterDuplicates(extractPolys(contours)).map { DrawnCircle.getCircleFromPoly(it) ?: DrawnRectangle.getRectangleFromPoly(it) ?: it }
 
 fun extractPolys(contours: MatVector) : List<Polygon> {
     val ret = mutableListOf<Polygon>()
@@ -24,50 +24,17 @@ fun extractPolys(contours: MatVector) : List<Polygon> {
     return ret
 }
 
-/**
- * TODO make this detect and take rotation into account
- * @param shape a polygon to analyse
- * @return the approximated rectangle or null if the shape isn't a valid rectangle
- */
-fun getRectangleFromPoly(shape: Polygon): Polygon? {
-    if(!shape.isRectangle()) return null
-    val x = (shape[0].x() + shape[1].x()) / 2
-    val y = (shape[0].y() + shape[3].y()) / 2
-    val width = ((shape[0] distTo shape[3]) + (shape[1] distTo shape[2])).toInt() / 2
-    val height = ((shape[0] distTo shape[1]) + (shape[3] distTo shape[2])).toInt() / 2
-    return Rectangle(x, y, width, height)
+fun detectArrow(shapes: List<Shape>) {
+    shapes.forEach {
+        if(it is Polygon) {
+            if(!it.isRectangle()) {
+
+            }
+        }
+    }
 }
 
-/**The minimum amount of points a polygon must have to be considered a circle*/
-const val MIN_POINTS = 6
-/**The relative minimum distance a point may be to the center to be considered on the circle*/
-const val MIN_DISTANCE = 0.8
-/**The relative maximum distance a point may be to the center to be considered on the circle*/
-const val MAX_DISTANCE = 1.2
-/**The minimum fraction of points in range to be considered a circle*/
-const val MIN_IN_RANGE = 0.8
-
-/**
- * @param shape a polygon to analyse
- * @return the approximated circle or null if the shape isn't a valid circle
- */
-fun getCircleFromPoly(shape: Polygon): Circle? {
-    if(shape.nbPoints() < MIN_POINTS) return null
-    val average = shape.reduce { p, p1 -> p + p1 } / shape.nbPoints()
-    val distances = shape.map { it distTo average }
-    val averageDistance = distances.reduce { p0, p1 -> p0 + p1 } / distances.size
-
-    val min = averageDistance * MIN_DISTANCE
-    val max = averageDistance * MAX_DISTANCE
-
-    val inRange = distances.filter { it > min && it < max }.size
-
-    return if((inRange / shape.nbPoints()) > MIN_IN_RANGE) Circle(average, averageDistance.toInt()) else null
-}
-
-
-
-const val MAX_FUSE_DISTANCE = 15.0
+const val MAX_FUSE_DISTANCE = 13.5
 
 fun filterDuplicates(polys: List<Polygon>): List<Polygon> {
     val temp = polys.toMutableList()

@@ -32,7 +32,7 @@ public class AntLookerApp extends Application {
         if(file != null)
             selectedFile = file.getPath();
         else
-            Logger.INSTANCE.info("No file selected", null);
+            Logger.info("No file selected", null);
         Platform.exit();
     }
 }
