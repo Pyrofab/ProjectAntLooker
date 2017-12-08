@@ -1,5 +1,8 @@
-package fr.antproject.utils
+@file:JvmName("OpenCVMethodWrappers")
 
+package fr.antproject.utils.wrappers
+
+import fr.antproject.utils.Logger
 import org.bytedeco.javacpp.opencv_core
 import org.bytedeco.javacpp.opencv_imgcodecs
 import org.bytedeco.javacpp.opencv_imgproc

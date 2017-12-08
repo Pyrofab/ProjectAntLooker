@@ -1,6 +1,6 @@
-package fr.antproject.shapes
+package fr.antproject.model.shapes
 
-import fr.antproject.utils.Point
+import fr.antproject.utils.wrappers.Point
 import fr.antproject.utils.doIntersect
 import fr.antproject.utils.onSegment
 import fr.antproject.utils.orientation
@@ -11,7 +11,7 @@ import fr.antproject.utils.orientation
  * @property vertices a list of vertices composing this shape's border,
  * with two consecutive points being the endpoints of a line that is a side of this polygon
  */
-open class Polygon (protected val vertices: List<Point>): Shape(), Iterable<Point> {
+open class Polygon (protected val vertices: List<Point>): Shape, Iterable<Point> by vertices {
     constructor (from: Polygon) : this(from.vertices)
     constructor (vararg vertices: Point) : this(vertices.asList())
 
@@ -21,7 +21,6 @@ open class Polygon (protected val vertices: List<Point>): Shape(), Iterable<Poin
     }
 
     override fun isInside(other: Shape): Boolean = vertices.all { other contains it }
-    override fun iterator(): Iterator<Point> = vertices.iterator()
 
     operator fun get(i: Int): Point = vertices[i]
 
@@ -53,7 +52,7 @@ open class Polygon (protected val vertices: List<Point>): Shape(), Iterable<Poin
         return count % 2 == 1
     }
 
-    override fun toString(): String = "Polygon(nbPoints=${nbPoints()}, vertices=$vertices)"
+    override fun toString(): String = "${javaClass.simpleName}(nbPoints=${nbPoints()}, vertices=$vertices)"
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true

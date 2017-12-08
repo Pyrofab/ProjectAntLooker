@@ -1,6 +1,10 @@
 package fr.antproject.utils
 
+/**
+ * A utility class to control logging in the application
+ */
 object Logger {
+    /**If set to false, debug messages won't be printed*/
     var debugMode: Boolean = true
 
     @JvmStatic

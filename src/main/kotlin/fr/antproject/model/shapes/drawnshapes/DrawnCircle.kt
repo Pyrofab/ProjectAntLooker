@@ -1,17 +1,16 @@
-@file: JvmName("Circles")
+package fr.antproject.model.shapes.drawnshapes
 
-package fr.antproject.shapes
-
-import fr.antproject.utils.*
+import fr.antproject.model.shapes.Circle
+import fr.antproject.model.shapes.Polygon
 
 /**
  * Class describing a drawn shape matching a circle
  *
  * @property approx the perfect circle closest to this shape
  */
-class DrawnCircle private constructor(drawnShape: Polygon, val approx: Circle): Polygon(drawnShape) {
+class DrawnCircle private constructor(drawnShape: Polygon, override val approx: Circle): DrawnShape(drawnShape, approx) {
 
-    companion object CircleConverter {
+    companion object CircleConverter : ShapeConverter {
         /**The minimum amount of points a polygon must have to be considered a circle*/
         const val MIN_POINTS = 6
         /**The relative minimum distance a point may be to the center to be considered on the circle*/
@@ -25,7 +24,7 @@ class DrawnCircle private constructor(drawnShape: Polygon, val approx: Circle): 
          * @param shape a polygon to analyse
          * @return the approximated circle or null if the shape isn't a valid circle
          */
-        fun getCircleFromPoly(shape: Polygon): DrawnCircle? {
+        override fun getFromPoly(shape: Polygon): DrawnCircle? {
             if(shape is DrawnCircle) return shape
 
             if(shape.nbPoints() < MIN_POINTS) return null
@@ -41,23 +40,4 @@ class DrawnCircle private constructor(drawnShape: Polygon, val approx: Circle): 
             return if((inRange / shape.nbPoints()) > MIN_IN_RANGE) DrawnCircle(shape, Circle(average, averageDistance.toInt())) else null
         }
     }
-
-    override fun toString(): String = "DrawnCircle(vertices=$vertices, approx=$approx)"
-}
-
-/**
- * Class describing a perfect circle
- *
- * @property center the center of this circle
- * @property radius the radius of this circle
- */
-class Circle(val center: Point, val radius: Int): Shape() {
-
-    override fun isInside(other: Shape): Boolean {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun contains(point: Point): Boolean = center distTo point < radius
-
-    override fun toString(): String = "Circle(center=$center, radius=$radius)"
 }

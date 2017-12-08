@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 import java.io.File;
 
 /**
- * Main class of the AntLooker application
+ * Main class of the AntLooker application.<br/>
  *
  * Starts a javafx application to choose an image file and passes the result to the recognition system
  */

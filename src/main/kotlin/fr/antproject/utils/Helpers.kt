@@ -1,15 +1,39 @@
+@file:JvmName("ProcessingHelpers")
+
 package fr.antproject.utils
 
-import fr.antproject.shapes.*
+import fr.antproject.model.Diagram
+import fr.antproject.model.shapes.*
+import fr.antproject.model.shapes.drawnshapes.DrawnArrow
+import fr.antproject.model.shapes.drawnshapes.DrawnCircle
+import fr.antproject.model.shapes.drawnshapes.DrawnRectangle
+import fr.antproject.utils.wrappers.EnumImgTransforms
+import fr.antproject.utils.wrappers.ImageMat
+import fr.antproject.utils.wrappers.MatVector
+import fr.antproject.utils.wrappers.Point
 import org.bytedeco.javacpp.FloatPointer
 import org.bytedeco.javacpp.opencv_core
 import org.bytedeco.javacpp.opencv_highgui
 import org.bytedeco.javacpp.opencv_imgproc
 
-fun processContours(contours: MatVector) : List<Shape> =
-        filterDuplicates(extractPolys(contours)).map { DrawnCircle.getCircleFromPoly(it) ?: DrawnRectangle.getRectangleFromPoly(it) ?: Arrow.getArrowFromPoly(it) ?: it }
+/**
+ * Attempts to convert a vector of extracted contours into a list of appropriate shapes
+ *
+ * @param contours a vector of contours extracted from an image matrix
+ */
+fun processContours(contours: MatVector) : Diagram =
+        Diagram(filterDuplicates(extractPolys(contours)).map {
+            DrawnCircle.getFromPoly(it)
+                ?: DrawnRectangle.getFromPoly(it)
+                ?: DrawnArrow.getFromPoly(it)
+                ?: it })
 
-fun extractPolys(contours: MatVector) : List<Polygon> {
+/**
+ * Attempts to convert contours extracted from an image into proper polygons
+ *
+ * @param contours a vector of contours extracted from an image matrix
+ */
+fun extractPolys(contours: MatVector) : Collection<Polygon> {
     val ret = mutableListOf<Polygon>()
     for (shape in contours) {
         val approx = opencv_core.Mat()
@@ -24,20 +48,17 @@ fun extractPolys(contours: MatVector) : List<Polygon> {
     return ret
 }
 
-fun detectArrow(shapes: List<Shape>) {
-    shapes.forEach {
-        if(it is Polygon) {
-            if(it !is DrawnRectangle) {
-
-            }
-        }
-    }
-}
-
-
 const val MAX_FUSE_DISTANCE = 13.5
 
-fun filterDuplicates(polys: List<Polygon>): List<Polygon> {
+/**
+ * Attempts to remove any shape that has been detected twice
+ *
+ * For each polygon extracted from the source image, checks if there's another polygon that has vertices
+ * closer than the [MAX_FUSE_DISTANCE].
+ *
+ * @param polys a list of unrefined polygons extracted from an image
+ */
+fun filterDuplicates(polys: Collection<Polygon>): Collection<Polygon> {
     val temp = polys.toMutableList()
     var i = -1
     while(++i < temp.size) {        // can't use an iterator as the underlying list changes over time

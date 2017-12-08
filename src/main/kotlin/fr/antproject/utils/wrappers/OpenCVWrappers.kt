@@ -1,5 +1,6 @@
-package fr.antproject.utils
+package fr.antproject.utils.wrappers
 
+import fr.antproject.utils.Logger
 import org.bytedeco.javacpp.Pointer
 import org.bytedeco.javacpp.opencv_core
 

@@ -36,8 +36,31 @@ dependencies {
 }
 
 dokka {
+    outputFormat = 'html'
+    //noinspection GroovyAssignabilityCheck
+    outputDirectory = "$buildDir/dokka"
+
+    kotlinTasks {
+        defaultKotlinTasks()
+    }
+
+    jdkVersion = 8
+
+    impliedPlatforms = ["JVM"]
+
+    noStdlibLink = false
+}
+
+task dokkaJavadoc(type: org.jetbrains.dokka.gradle.DokkaTask) {
     outputFormat = 'javadoc'
+    //noinspection GroovyAssignabilityCheck
     outputDirectory = "$buildDir/javadoc"
+}
+
+task dokkaMarkdown(type: org.jetbrains.dokka.gradle.DokkaTask) {
+    outputFormat = 'markdown'
+    //noinspection GroovyAssignabilityCheck
+    outputDirectory = "$buildDir/mddoc"
 }
 
 compileKotlin {
