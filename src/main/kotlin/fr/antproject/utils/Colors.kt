@@ -9,6 +9,7 @@ class Color private constructor(private val rgba: Int) {
         val GREEN = Color(0, 255, 0)
         val BLUE = Color(0, 0, 255)
         val BLACK = Color(0, 0, 0)
+        val ORANGE = Color(255, 123, 0)
     }
 
     constructor(r: Int, g: Int, b: Int, a:Int = 0xFF) : this

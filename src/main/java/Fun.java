@@ -55,7 +55,7 @@ public class Fun {
 
         blur(matriceTest,matriceTest, new Size(3,3));
         cvtColor(matriceTest,matriceTest,CV_BGR2GRAY);
-        Canny(matriceTest,matriceTest,100,600);
+        Canny(matriceTest,matriceTest,50,255);
 
         System.out.println(mask1.toString());
         System.out.println(mask2.toString());

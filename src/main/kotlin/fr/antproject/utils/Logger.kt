@@ -1,7 +1,7 @@
 package fr.antproject.utils
 
 object Logger {
-    var debugMode: Boolean = false
+    var debugMode: Boolean = true
 
     @JvmStatic
     fun info(message: Any, exception: Throwable? = null) {

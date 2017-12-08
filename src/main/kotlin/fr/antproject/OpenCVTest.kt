@@ -35,7 +35,7 @@ fun test(fileName: String) {
                 opencv_imgproc.circle(dest, shape.center, 3, Color.GREEN.toScalar(), -1, 8, 0)
                 opencv_imgproc.circle(dest, shape.center, shape.radius, Color.RED.toScalar(), 3, 8, 0)
             }
-            is Arrow -> opencv_imgproc.arrowedLine(dest, shape.startPoint, shape.lastPoint, Color.BLUE.toScalar())
+            is Arrow -> opencv_imgproc.arrowedLine(dest, shape.startPoint, shape.lastPoint, Color.ORANGE.toScalar())
         }
     }
     imshow("img",dest)

@@ -7,7 +7,7 @@ import org.bytedeco.javacpp.opencv_highgui
 import org.bytedeco.javacpp.opencv_imgproc
 
 fun processContours(contours: MatVector) : List<Shape> =
-        filterDuplicates(extractPolys(contours)).map { DrawnCircle.getCircleFromPoly(it) ?: DrawnRectangle.getRectangleFromPoly(it) ?: getArrowFromPoly(it) ?: it }
+        filterDuplicates(extractPolys(contours)).map { DrawnCircle.getCircleFromPoly(it) ?: DrawnRectangle.getRectangleFromPoly(it) ?: Arrow.getArrowFromPoly(it) ?: it }
 
 fun extractPolys(contours: MatVector) : List<Polygon> {
     val ret = mutableListOf<Polygon>()
@@ -34,14 +34,6 @@ fun detectArrow(shapes: List<Shape>) {
     }
 }
 
-/**
- * TODO("not implemented")
- * @param shape a polygon to analyse
- * @return the approximated arrow or null if the shape isn't a valid arrow
- */
-fun getArrowFromPoly(shape: Polygon): Arrow? {
-    return null
-}
 
 const val MAX_FUSE_DISTANCE = 13.5
 
