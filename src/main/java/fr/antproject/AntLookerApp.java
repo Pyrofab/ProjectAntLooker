@@ -8,6 +8,11 @@ import javafx.stage.Stage;
 
 import java.io.File;
 
+/**
+ * Main class of the AntLooker application
+ *
+ * Starts a javafx application to choose an image file and passes the result to the recognition system
+ */
 public class AntLookerApp extends Application {
     private static volatile String selectedFile;
 
@@ -21,8 +26,11 @@ public class AntLookerApp extends Application {
         }
     }
 
+    /**
+     * Displays the file chooser. Ends the javafx thread right after a choice is made.
+     */
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Select an image to analyse");
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg"));

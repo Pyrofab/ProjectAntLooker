@@ -3,11 +3,16 @@ package fr.antproject.utils
 import org.bytedeco.javacpp.opencv_core
 
 class Color private constructor(private val rgba: Int) {
-    companion object {
+    companion object DefaultColors {
+        @JvmStatic
         val WHITE = Color(255, 255, 255)
+        @JvmStatic
         val RED = Color(255, 0, 0)
+        @JvmStatic
         val GREEN = Color(0, 255, 0)
+        @JvmStatic
         val BLUE = Color(0, 0, 255)
+        @JvmStatic
         val BLACK = Color(0, 0, 0)
         val ORANGE = Color(255, 123, 0)
     }

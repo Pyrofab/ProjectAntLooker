@@ -4,6 +4,11 @@ package fr.antproject.shapes
 
 import fr.antproject.utils.*
 
+/**
+ * Class describing a drawn shape matching a circle
+ *
+ * @property approx the perfect circle closest to this shape
+ */
 class DrawnCircle private constructor(drawnShape: Polygon, val approx: Circle): Polygon(drawnShape) {
 
     companion object CircleConverter {
@@ -21,6 +26,8 @@ class DrawnCircle private constructor(drawnShape: Polygon, val approx: Circle): 
          * @return the approximated circle or null if the shape isn't a valid circle
          */
         fun getCircleFromPoly(shape: Polygon): DrawnCircle? {
+            if(shape is DrawnCircle) return shape
+
             if(shape.nbPoints() < MIN_POINTS) return null
             val average = shape.reduce { p, p1 -> p + p1 } / shape.nbPoints()
             val distances = shape.map { it distTo average }
@@ -38,6 +45,12 @@ class DrawnCircle private constructor(drawnShape: Polygon, val approx: Circle): 
     override fun toString(): String = "DrawnCircle(vertices=$vertices, approx=$approx)"
 }
 
+/**
+ * Class describing a perfect circle
+ *
+ * @property center the center of this circle
+ * @property radius the radius of this circle
+ */
 class Circle(val center: Point, val radius: Int): Shape() {
 
     override fun isInside(other: Shape): Boolean {

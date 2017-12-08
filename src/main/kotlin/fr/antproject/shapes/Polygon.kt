@@ -5,12 +5,18 @@ import fr.antproject.utils.doIntersect
 import fr.antproject.utils.onSegment
 import fr.antproject.utils.orientation
 
+/**
+ * Class describing a closed shape made up of an arbitrary number of line segments
+ *
+ * @property vertices a list of vertices composing this shape's border,
+ * with two consecutive points being the endpoints of a line that is a side of this polygon
+ */
 open class Polygon (protected val vertices: List<Point>): Shape(), Iterable<Point> {
     constructor (from: Polygon) : this(from.vertices)
     constructor (vararg vertices: Point) : this(vertices.asList())
 
     companion object {
-        // Define Infinite (Using INT_MAX caused overflow problems)
+        /**Define Infinite (Using INT_MAX caused overflow problems)*/
         const val INF = 10000
     }
 
