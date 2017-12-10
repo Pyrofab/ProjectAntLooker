@@ -2,7 +2,7 @@
 
 package fr.antproject.utils.wrappers
 
-import fr.antproject.utils.Logger
+import fr.antproject.application.Logger
 import org.bytedeco.javacpp.opencv_core
 import org.bytedeco.javacpp.opencv_imgcodecs
 import org.bytedeco.javacpp.opencv_imgproc
@@ -21,13 +21,13 @@ fun loadImage(location: String): opencv_core.IplImage = opencv_imgcodecs.cvLoadI
 /**
  * Converts an image into a black and white version
  * @param img [a matrix][ImageMat] representing the source image
- * @param ret [ matrix][ImageMat] in which the result will be stored
- * @return ret, for operation chaining
+ * @param out [ matrix][ImageMat] in which the result will be stored
+ * @return out, for operation chaining
  */
-fun grayImage(img : ImageMat, ret: ImageMat = ImageMat(img.imgTransformFlags)) : ImageMat {
-    opencv_imgproc.cvtColor(img, ret, opencv_imgproc.COLOR_BGR2GRAY)
-    ret.addTransform(EnumImgTransforms.GRAY)
-    return ret
+fun grayImage(img : ImageMat, out: ImageMat = ImageMat(img.imgTransformFlags)) : ImageMat {
+    opencv_imgproc.cvtColor(img, out, opencv_imgproc.COLOR_BGR2GRAY)
+    out.addTransform(EnumImgTransforms.GRAY)
+    return out
 }
 
 /**
@@ -44,19 +44,19 @@ fun ImageMat.grayImage(copy: Boolean = true) = grayImage(this, if (copy) ImageMa
  * @param maxValue a maximum value used by some algorithms to replace values above the threshold
  * @param algorithm a threshold algorithm to use
  * @param optional an additional algorithm to get an optimal threshold value
- * @param ret a matrix in which the result will be stored
- * @return ret, for operation chaining
+ * @param out a matrix in which the result will be stored
+ * @return out, for operation chaining
  *
  * @throws IllegalArgumentException if the provided image wasn't grayed first
  */
 fun threshold(grayImage: ImageMat, threshold: Double = 127.0, maxValue: Double = 255.0,
               algorithm: ThresholdTypes = ThresholdTypes.BINARY_INVERTED, optional: ThresholdTypesOptional? = null,
-              ret: ImageMat = ImageMat(grayImage.imgTransformFlags)): ImageMat {
+              out: ImageMat = ImageMat(grayImage.imgTransformFlags)): ImageMat {
     if (!grayImage.hasTransform(EnumImgTransforms.GRAY))
         throw IllegalArgumentException("The source image must use 8 color channels. Use ImageMat#grayImage first.")
-    opencv_imgproc.threshold(grayImage, ret, threshold, maxValue, algorithm.value or (optional?.value ?: 0))
-    ret.addTransform(EnumImgTransforms.THRESHOLD)
-    return ret
+    opencv_imgproc.threshold(grayImage, out, threshold, maxValue, algorithm.value or (optional?.value ?: 0))
+    out.addTransform(EnumImgTransforms.THRESHOLD)
+    return out
 }
 
 /**

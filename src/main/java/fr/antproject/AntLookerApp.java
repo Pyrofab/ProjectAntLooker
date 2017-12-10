@@ -1,6 +1,8 @@
 package fr.antproject;
 
-import fr.antproject.utils.Logger;
+import fr.antproject.application.ImageProcessor;
+import fr.antproject.application.Logger;
+import fr.antproject.application.Profiler;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.stage.FileChooser;
@@ -17,6 +19,7 @@ public class AntLookerApp extends Application {
     private static volatile String selectedFile;
 
     public static void main(String[] args) {
+        Profiler.INSTANCE.startSection("root");
         if(args.length > 0)
             OpenCVTestKt.test(args[0]);
         else {
@@ -24,6 +27,8 @@ public class AntLookerApp extends Application {
             if(selectedFile != null)
                 OpenCVTestKt.test(selectedFile);
         }
+        Profiler.INSTANCE.endSection();
+        Profiler.INSTANCE.getProfilingData("root").forEach(r -> Logger.log(550, "[Profiling] " + r, null));
     }
 
     /**
@@ -36,7 +41,9 @@ public class AntLookerApp extends Application {
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg"));
         File initialD = new File("./data");     // gas gas gas
         fileChooser.setInitialDirectory(initialD.exists() ? initialD : new File("."));
+        Profiler.INSTANCE.startSection("user_input");
         File file = fileChooser.showOpenDialog(primaryStage);
+        Profiler.INSTANCE.endSection();
         if(file != null)
             selectedFile = file.getPath();
         else

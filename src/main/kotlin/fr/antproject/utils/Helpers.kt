@@ -2,7 +2,7 @@
 
 package fr.antproject.utils
 
-import fr.antproject.model.Diagram
+import fr.antproject.application.Logger
 import fr.antproject.model.shapes.*
 import fr.antproject.model.shapes.drawnshapes.DrawnArrow
 import fr.antproject.model.shapes.drawnshapes.DrawnCircle
@@ -21,8 +21,8 @@ import org.bytedeco.javacpp.opencv_imgproc
  *
  * @param contours a vector of contours extracted from an image matrix
  */
-fun processContours(contours: MatVector) : Diagram =
-        Diagram(filterDuplicates(extractPolys(contours)).map {
+fun processContours(contours: MatVector) : Collection<Shape> =
+        (filterDuplicates(extractPolys(contours)).map {
             DrawnCircle.getFromPoly(it)
                 ?: DrawnRectangle.getFromPoly(it)
                 ?: DrawnArrow.getFromPoly(it)

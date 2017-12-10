@@ -1,7 +1,12 @@
 package fr.antproject.model.shapes.drawnshapes
 
+import fr.antproject.application.Logger
 import fr.antproject.model.shapes.Polygon
 import fr.antproject.model.shapes.StraightArrow
+import fr.antproject.utils.areAligned
+import fr.antproject.utils.orientation
+import fr.antproject.utils.wrappers.Point
+import sun.security.provider.certpath.Vertex
 
 /**
  * Class describing a drawn shape matching an arrow
@@ -13,16 +18,24 @@ class DrawnArrow private constructor(drawnShape: Polygon, override val approx: S
         /**
          * @param shape a polygon to analyse
          * @return the approximated arrow or null if the shape isn't a valid arrow
-         * TODO avoid making an arrow out of every possible shape
          */
         override fun getFromPoly(shape: Polygon): DrawnArrow? {
             if(shape.nbPoints() < 2) return null
             val average = shape.reduce { p, p1 -> p + p1 } / shape.nbPoints()
 
             val furthest = shape.maxBy { it distTo average } ?: return null
+            if(!isEndOfLine(furthest, shape)) return null
             val head = shape.maxBy { it distTo furthest } ?: return null
 
             return DrawnArrow(shape, StraightArrow(furthest, head))
+        }
+
+        private fun isEndOfLine(vertex: Point, shape: Polygon): Boolean {
+            val index = shape.indexOf(vertex)
+            val prev = shape[(if(index == 0) shape.nbPoints() else index) - 1]
+            val next = shape[(if (index == shape.nbPoints() - 1) 0 else index + 1)]
+
+            return areAligned(vertex, prev, next, 0.1) && (prev distTo vertex) > (prev distTo next)
         }
     }
 }

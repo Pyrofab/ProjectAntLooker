@@ -1,12 +1,10 @@
-package fr.antproject.model
+package fr.antproject.model.diagram
 
-import fr.antproject.model.shapes.Shape
 import fr.antproject.model.shapes.drawnshapes.DrawnArrow
 import fr.antproject.model.shapes.drawnshapes.DrawnShape
 import fr.antproject.utils.wrappers.Point
 
-class Diagram(private val components: List<Shape>) : Collection<Shape> by components {
-    private val drawnShapes = components.filter { it is DrawnShape }.map { it as DrawnShape }
+class DiagramBase(private val components: List<DrawnShape>) : Collection<DrawnShape> by components {
 
     /**
      * TODO make something a lot more accurate
@@ -14,7 +12,7 @@ class Diagram(private val components: List<Shape>) : Collection<Shape> by compon
     fun getClosestShape(p: Point): DrawnShape? {
         var closestShape: DrawnShape? = null
         var distance = 0.0
-        for (shape in drawnShapes.filter { it !is DrawnArrow }) {
+        for (shape in components.filter { it !is DrawnArrow }) {
             for (vertex in shape) {
                 val dist = vertex distTo p
                 if(closestShape == null || dist < distance) {
@@ -24,5 +22,12 @@ class Diagram(private val components: List<Shape>) : Collection<Shape> by compon
             }
         }
         return closestShape
+    }
+
+    fun toDiagram(): Diagram {
+
+        for (transition in this.filter { it is DrawnArrow }.map { it as DrawnArrow })
+            ;
+        return PetriNet.convertDiagram(this)
     }
 }
