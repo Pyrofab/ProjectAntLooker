@@ -8,10 +8,6 @@ class DrawnRectangle private constructor(drawnShape: Polygon, override val appro
 
     companion object RectangleConverter : ShapeConverter {
 
-        init {
-            ShapeRegistry.register(DrawnRectangle::class.java, this)
-        }
-
         /**
          * TODO make this detect and take rotation into account
          * @param shape a polygon to analyse

@@ -17,13 +17,6 @@ object ImageProcessor {
 
     private val config = Configuration()
     var diagramTransformer = PetriTransformer()
-        set(value) {
-            shapeConverters = value.validShapes.map { ShapeRegistry[it] ?: throw IllegalStateException() }
-        }
-    private var shapeConverters = listOf(
-            DrawnArrow.ArrowConverter,
-            DrawnCircle.CircleConverter,
-            DrawnRectangle.RectangleConverter)
 
     fun process(fileName: String): Diagram {
         Profiler.startSection("processing")
@@ -54,7 +47,8 @@ object ImageProcessor {
         Profiler.startSection("processContours")
         var extracted = extractPolys(contours)
         extracted = filterDuplicates(extracted)
-
+        val shapeConverters = this.diagramTransformer.validShapes
+                .map { ShapeRegistry[it] ?: throw IllegalStateException("$it: this shape has no registered converter") }
         for (converter in shapeConverters) {
             extracted = extracted.map { converter.getFromPoly(it) ?: it }
         }

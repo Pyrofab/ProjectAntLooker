@@ -13,10 +13,6 @@ class DrawnArrow private constructor(drawnShape: Polygon, override val approx: S
 
     companion object ArrowConverter : ShapeConverter {
 
-        init {
-            ShapeRegistry.register(DrawnArrow::class.java, this)
-        }
-
         /**
          * @param shape a polygon to analyse
          * @return the approximated arrow or null if the shape isn't a valid arrow

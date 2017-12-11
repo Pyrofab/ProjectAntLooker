@@ -21,10 +21,6 @@ class DrawnCircle private constructor(drawnShape: Polygon, override val approx: 
         /**The minimum fraction of points in range to be considered a circle*/
         const val MIN_IN_RANGE = 0.8
 
-        init {
-            ShapeRegistry.register(DrawnCircle::class.java, this)
-        }
-
         /**
          * @param shape a polygon to analyse
          * @return the approximated circle or null if the shape isn't a valid circle

@@ -24,10 +24,4 @@ class DiagramBase(private val components: List<DrawnShape>) : Collection<DrawnSh
         return closestShape
     }
 
-    fun toDiagram(): Diagram {
-
-        for (transition in this.filter { it is DrawnArrow }.map { it as DrawnArrow })
-        ;
-        return PetriNet.convertDiagram(this)
-    }
 }

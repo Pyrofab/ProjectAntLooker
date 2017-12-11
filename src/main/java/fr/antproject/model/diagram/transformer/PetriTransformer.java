@@ -37,8 +37,7 @@ public class PetriTransformer implements DiagramTransformer<PetriNet> {
                 .collect(Collectors.toMap(Pair::getFirst, Pair::getSecond));
         base.stream()
                 .filter(shape -> shape instanceof DrawnArrow)
-                .map(shape -> (DrawnArrow)shape)
-                .forEach(arrow -> updateArcs(arrow, base, nodes));
+                .forEach(arrow -> updateArcs((DrawnArrow)arrow, base, nodes));
 
         return new PetriNet(nodes.values());
     }
@@ -47,9 +46,9 @@ public class PetriTransformer implements DiagramTransformer<PetriNet> {
         DrawnShape startPoint = base.getClosestShape(arrow.getApprox().getStartPoint());
         DrawnShape endPoint = base.getClosestShape(arrow.getApprox().getLastPoint());
         if(startPoint instanceof DrawnRectangle && endPoint instanceof DrawnCircle) {
-            ((Place)nodes.get(startPoint)).addTransition((Transition)nodes.get(endPoint));
-        } else if (startPoint instanceof DrawnCircle && endPoint instanceof DrawnRectangle) {
             ((Transition)nodes.get(startPoint)).addTransition((Place)nodes.get(endPoint));
+        } else if (startPoint instanceof DrawnCircle && endPoint instanceof DrawnRectangle) {
+            ((Place)nodes.get(startPoint)).addTransition((Transition)nodes.get(endPoint));
         } else Logger.info("Not a valid transition :" + startPoint + " to " + endPoint);
     }
 }
