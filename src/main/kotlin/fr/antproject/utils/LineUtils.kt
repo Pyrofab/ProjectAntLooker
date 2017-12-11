@@ -21,9 +21,9 @@ fun areAligned(p: Point, q: Point, r: Point, delta: Double = 0.0): Boolean {
  */
 fun Point.onSegment(p: Point, q: Point): Boolean = (
         this.x() <= Math.max(p.x(), q.x()) &&
-        this.x() >= Math.min(p.x(), q.x()) &&
-        this.y() <= Math.max(p.y(), q.y()) &&
-        this.y() >= Math.min(p.y(), q.y()))
+                this.x() >= Math.min(p.x(), q.x()) &&
+                this.y() <= Math.max(p.y(), q.y()) &&
+                this.y() >= Math.min(p.y(), q.y()))
 
 fun orientation(p: Point, q: Point, r: Point): Int {
     val v = (q.y() - p.y()) * (r.x() - q.x()) - (q.x() - p.x()) * (r.y() - q.y())

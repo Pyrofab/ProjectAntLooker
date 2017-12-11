@@ -19,12 +19,13 @@ public final class Color extends opencv_core.Scalar {
 
     /**
      * Overload for the main constructor defaulting alpha to 255
+     *
      * @param r the red value of this color, between 0 and 255
      * @param g the green value of this color, between 0 and 255
      * @param b the blue value of this color, between 0 and 255
      */
     public Color(int r, int g, int b) {
-        this(r,g,b,0xFF);
+        this(r, g, b, 0xFF);
     }
 
     /**
@@ -36,26 +37,26 @@ public final class Color extends opencv_core.Scalar {
      * @param a the alpha value of this color, between 0 and 255. A lesser value means more transparency.
      */
     public Color(int r, int g, int b, int a) {
-        super(b,g,r,a);
-        for(int param : Arrays.asList(r,g,b,a))
-            if(param < 0 || param > 0xFF)
+        super(b, g, r, a);
+        for (int param : Arrays.asList(r, g, b, a))
+            if (param < 0 || param > 0xFF)
                 throw new IllegalArgumentException("One of the provided value (" + param + ") is not a valid color component");
     }
 
     public int getAlpha() {
-        return (int)this.get(3);
+        return (int) this.get(3);
     }
 
     public int getRed() {
-        return (int)this.get(2);
+        return (int) this.get(2);
     }
 
     public int getGreen() {
-        return (int)this.get(1);
+        return (int) this.get(1);
     }
 
     public int getBlue() {
-        return (int)this.get();
+        return (int) this.get();
     }
 
     @Override

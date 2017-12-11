@@ -1,5 +1,6 @@
 package fr.antproject.application
 
+import fr.antproject.model.diagram.Diagram
 import fr.antproject.model.diagram.DiagramBase
 import fr.antproject.model.diagram.transformer.PetriTranformer
 import fr.antproject.model.shapes.Polygon
@@ -17,30 +18,31 @@ object ImageProcessor {
     private val config = Configuration()
     var diagramTransformer = PetriTranformer()
         set(value) {
-            shapeConverters = value.validShapes.map { ShapeRegistry[it] ?: throw IllegalStateException()}
+            shapeConverters = value.validShapes.map { ShapeRegistry[it] ?: throw IllegalStateException() }
         }
     private var shapeConverters = listOf(
             DrawnArrow.ArrowConverter,
             DrawnCircle.CircleConverter,
             DrawnRectangle.RectangleConverter)
 
-    fun process(fileName: String): Collection<DrawnShape> {
-        Profiler.startSection("image_processing")
-        Profiler.startSection("loadImage")
+    fun process(fileName: String): Diagram {
+        Profiler.startSection("processing")
+        Profiler.startSection("image")
         val srcImg = loadImage(fileName)
         val temp = ImageMat(srcImg)
-        Profiler.endStartSection("grayImage")
         grayImage(img = temp, out = temp)
-        Profiler.endStartSection("threshold")
         threshold(grayImage = temp, threshold = config.threshold, maxValue = config.maxValue,
                 algorithm = config.algorithm, optional = config.optional, out = temp)
-        Profiler.endStartSection("findContours")
         val contours = findContours(thresholdImageMat = temp, mode = config.mode, method = config.method)
-        Profiler.endStartSection("processContours")
         val ret = processContours(contours)
+
+        Profiler.endStartSection("diagram")
+        val diagramBase = DiagramBase(ret)
+        val diagram = this.diagramTransformer.transformDiagram(diagramBase)
         Profiler.endSection()
         Profiler.endSection()
-        return DiagramBase(ret)
+
+        return diagram
     }
 
     /**
@@ -48,15 +50,17 @@ object ImageProcessor {
      *
      * @param contours a vector of contours extracted from an image matrix
      */
-    private fun processContours(contours: MatVector) : List<DrawnShape> {
+    private fun processContours(contours: MatVector): List<DrawnShape> {
+        Profiler.startSection("processContours")
         var extracted = extractPolys(contours)
         extracted = filterDuplicates(extracted)
 
         for (converter in shapeConverters) {
             extracted = extracted.map { converter.getFromPoly(it) ?: it }
         }
-
-        return extracted.filter { it is DrawnShape }.map { it as DrawnShape }
+        val ret = extracted.filter { it is DrawnShape }.map { it as DrawnShape }
+        Profiler.endSection()
+        return ret
     }
 
     /**
@@ -70,7 +74,7 @@ object ImageProcessor {
     private fun filterDuplicates(polys: Collection<Polygon>): Collection<Polygon> {
         val temp = polys.toMutableList()
         var i = -1
-        while(++i < temp.size) {        // can't use an iterator as the underlying list changes over time
+        while (++i < temp.size) {        // can't use an iterator as the underlying list changes over time
             val polygon = temp[i]
             // For each polygon in the list, we check if it is different from the current polygon and that for each of its points,
             // there exists a point in the current polygon which distance to the first in less than the maximum fuse distance

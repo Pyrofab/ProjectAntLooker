@@ -12,7 +12,7 @@ import java.io.File;
 
 /**
  * Main class of the AntLooker application.<br/>
- *
+ * <p>
  * Starts a javafx application to choose an image file and passes the result to the recognition system
  */
 public class AntLookerApp extends Application {
@@ -20,15 +20,15 @@ public class AntLookerApp extends Application {
 
     public static void main(String[] args) {
         Profiler.INSTANCE.startSection("root");
-        if(args.length > 0)
+        if (args.length > 0)
             OpenCVTestKt.test(args[0]);
         else {
             launch(args);
-            if(selectedFile != null)
-                OpenCVTestKt.test(selectedFile);
+            if (selectedFile != null)
+                ImageProcessor.INSTANCE.process(selectedFile);
         }
         Profiler.INSTANCE.endSection();
-        Profiler.INSTANCE.getProfilingData("root").forEach(r -> Logger.log(550, "[Profiling] " + r, null));
+        Profiler.INSTANCE.getProfilingData("root/processing").forEach(r -> Logger.log(550, "[Profiling] " + r, null));
     }
 
     /**
@@ -44,7 +44,7 @@ public class AntLookerApp extends Application {
         Profiler.INSTANCE.startSection("user_input");
         File file = fileChooser.showOpenDialog(primaryStage);
         Profiler.INSTANCE.endSection();
-        if(file != null)
+        if (file != null)
             selectedFile = file.getPath();
         else
             Logger.info("No file selected", null);

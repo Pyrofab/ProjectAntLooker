@@ -3,6 +3,7 @@
 package fr.antproject.utils.wrappers
 
 import fr.antproject.application.Logger
+import fr.antproject.application.Profiler
 import org.bytedeco.javacpp.opencv_core
 import org.bytedeco.javacpp.opencv_imgcodecs
 import org.bytedeco.javacpp.opencv_imgproc
@@ -15,8 +16,13 @@ import java.io.FileNotFoundException
  *
  * @throws FileNotFoundException
  */
-fun loadImage(location: String): opencv_core.IplImage = opencv_imgcodecs.cvLoadImage(location)
-        ?: throw FileNotFoundException("$location: this file does not exist")
+fun loadImage(location: String): opencv_core.IplImage {
+    Profiler.startSection("loadImage")
+    val ret = opencv_imgcodecs.cvLoadImage(location)
+            ?: throw FileNotFoundException("$location: this file does not exist")
+    Profiler.endSection()
+    return ret
+}
 
 /**
  * Converts an image into a black and white version
@@ -24,9 +30,11 @@ fun loadImage(location: String): opencv_core.IplImage = opencv_imgcodecs.cvLoadI
  * @param out [ matrix][ImageMat] in which the result will be stored
  * @return out, for operation chaining
  */
-fun grayImage(img : ImageMat, out: ImageMat = ImageMat(img.imgTransformFlags)) : ImageMat {
+fun grayImage(img: ImageMat, out: ImageMat = ImageMat(img.imgTransformFlags)): ImageMat {
+    Profiler.startSection("grayImage")
     opencv_imgproc.cvtColor(img, out, opencv_imgproc.COLOR_BGR2GRAY)
     out.addTransform(EnumImgTransforms.GRAY)
+    Profiler.endSection()
     return out
 }
 
@@ -54,8 +62,10 @@ fun threshold(grayImage: ImageMat, threshold: Double = 127.0, maxValue: Double =
               out: ImageMat = ImageMat(grayImage.imgTransformFlags)): ImageMat {
     if (!grayImage.hasTransform(EnumImgTransforms.GRAY))
         throw IllegalArgumentException("The source image must use 8 color channels. Use ImageMat#grayImage first.")
+    Profiler.startSection("threshold")
     opencv_imgproc.threshold(grayImage, out, threshold, maxValue, algorithm.value or (optional?.value ?: 0))
     out.addTransform(EnumImgTransforms.THRESHOLD)
+    Profiler.endSection()
     return out
 }
 
@@ -79,9 +89,11 @@ fun ImageMat.threshold(threshold: Double = 127.0, maxValue: Double = 255.0, algo
  */
 fun findContours(thresholdImageMat: ImageMat, mode: ContourRetrievalMode = ContourRetrievalMode.LIST,
                  method: ContourApproxMethod = ContourApproxMethod.SIMPLE, ret: MatVector = MatVector()): MatVector {
-    if(!thresholdImageMat.hasTransform(EnumImgTransforms.THRESHOLD))
+    if (!thresholdImageMat.hasTransform(EnumImgTransforms.THRESHOLD))
         Logger.warn("No threshold applied to the source image, good luck using that")
+    Profiler.startSection("findContours")
     opencv_imgproc.findContours(thresholdImageMat, ret, mode.value, method.value)
+    Profiler.endSection()
     return ret
 }
 

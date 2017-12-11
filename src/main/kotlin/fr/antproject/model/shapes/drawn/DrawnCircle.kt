@@ -9,7 +9,7 @@ import fr.antproject.model.shapes.ShapeRegistry
  *
  * @property approx the perfect circle closest to this shape
  */
-class DrawnCircle private constructor(drawnShape: Polygon, override val approx: Circle): DrawnShape(drawnShape, approx) {
+class DrawnCircle private constructor(drawnShape: Polygon, override val approx: Circle) : DrawnShape(drawnShape, approx) {
 
     companion object CircleConverter : ShapeConverter {
         /**The minimum amount of points a polygon must have to be considered a circle*/
@@ -30,9 +30,9 @@ class DrawnCircle private constructor(drawnShape: Polygon, override val approx: 
          * @return the approximated circle or null if the shape isn't a valid circle
          */
         override fun getFromPoly(shape: Polygon): DrawnCircle? {
-            if(shape is DrawnCircle) return shape
+            if (shape is DrawnCircle) return shape
 
-            if(shape.nbPoints() < MIN_POINTS) return null
+            if (shape.nbPoints() < MIN_POINTS) return null
             val average = shape.reduce { p, p1 -> p + p1 } / shape.nbPoints()
             val distances = shape.map { it distTo average }
             val averageDistance = distances.reduce { p0, p1 -> p0 + p1 } / distances.size
@@ -42,7 +42,7 @@ class DrawnCircle private constructor(drawnShape: Polygon, override val approx: 
 
             val inRange = distances.filter { it > min && it < max }.size
 
-            return if((inRange / shape.nbPoints()) > MIN_IN_RANGE) DrawnCircle(shape, Circle(average, averageDistance.toInt())) else null
+            return if ((inRange / shape.nbPoints()) > MIN_IN_RANGE) DrawnCircle(shape, Circle(average, averageDistance.toInt())) else null
         }
     }
 }

@@ -2,11 +2,13 @@ package fr.antproject
 
 import fr.antproject.application.ImageProcessor
 import fr.antproject.application.Logger
-import fr.antproject.model.shapes.*
+import fr.antproject.model.shapes.Circle
+import fr.antproject.model.shapes.Polygon
 import fr.antproject.model.shapes.drawn.DrawnArrow
 import fr.antproject.model.shapes.drawn.DrawnCircle
 import fr.antproject.model.shapes.drawn.DrawnRectangle
-import fr.antproject.utils.*
+import fr.antproject.utils.Color
+import fr.antproject.utils.processContours
 import fr.antproject.utils.wrappers.*
 import org.bytedeco.javacpp.opencv_highgui.cvWaitKey
 import org.bytedeco.javacpp.opencv_highgui.imshow
@@ -25,7 +27,7 @@ fun test(fileName: String) {
     Logger.info("Loading image at location $fileName")
     val src = ImageMat(loadImage(fileName))
     val dest = ImageMat(loadImage(fileName))
-    val processedContours = processContours(src.grayImage().threshold(optional= ThresholdTypesOptional.OTSU).findContours())
+    val processedContours = processContours(src.grayImage().threshold(optional = ThresholdTypesOptional.OTSU).findContours())
 //    val processedContours = ImageProcessor.process(fileName)
     processedContours.forEachIndexed { i, shape ->
         Logger.debug("Shape #$i: $shape")
@@ -33,7 +35,7 @@ fun test(fileName: String) {
             is Polygon -> when (shape) {
                 is DrawnRectangle -> shape.forEach {
                     opencv_imgproc.drawMarker(dest, it,
-                            Color.BLUE,0,20,1,8)
+                            Color.BLUE, 0, 20, 1, 8)
                 }
                 is DrawnCircle -> {
                     opencv_imgproc.circle(dest, shape.approx.center, 3, Color.GREEN, -1, 8, 0)
@@ -47,10 +49,12 @@ fun test(fileName: String) {
                     val average = shape.reduce { p, p1 -> p + p1 } / shape.nbPoints()
                     val furthest = shape.maxBy { it distTo average }
                     val index = shape.indexOf(furthest)
-                    val prev = shape[(if(index == 0) shape.nbPoints() else index) - 1]
+                    val prev = shape[(if (index == 0) shape.nbPoints() else index) - 1]
                     val next = shape[(if (index == shape.nbPoints() - 1) 0 else index + 1)]
-                    shape.forEach { opencv_imgproc.drawMarker(dest, it,
-                            if(it == furthest) Color.RED else if (it == prev || it == next) Color.BLUE else Color.GREEN,0,20,1,8) }
+                    shape.forEach {
+                        opencv_imgproc.drawMarker(dest, it,
+                                if (it == furthest) Color.RED else if (it == prev || it == next) Color.BLUE else Color.GREEN, 0, 20, 1, 8)
+                    }
                 }
             }
             is Circle -> {
@@ -59,6 +63,6 @@ fun test(fileName: String) {
             }
         }
     }
-    imshow("img",dest)
+    imshow("img", dest)
     cvWaitKey()
 }

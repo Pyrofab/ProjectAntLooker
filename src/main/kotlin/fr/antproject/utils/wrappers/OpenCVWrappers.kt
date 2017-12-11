@@ -5,7 +5,8 @@ import org.bytedeco.javacpp.Pointer
 import org.bytedeco.javacpp.opencv_core
 
 class Point(ptr: Pointer) : opencv_core.Point(ptr) {
-    constructor(x: Int, y: Int): this(opencv_core.Point(x, y))
+    constructor(x: Int, y: Int) : this(opencv_core.Point(x, y))
+
     override fun toString() = "${javaClass.simpleName}[x=${this.x()},y=${this.y()}]"
 
     operator fun plus(other: Point) = Point(x() + other.x(), y() + other.y())
@@ -37,7 +38,7 @@ class Point(ptr: Pointer) : opencv_core.Point(ptr) {
 
 class MatVector : opencv_core.MatVector(), Iterable<opencv_core.Mat> {
     override fun iterator(): Iterator<opencv_core.Mat> {
-        return object: Iterator<opencv_core.Mat> {
+        return object : Iterator<opencv_core.Mat> {
             var index = 0L
             override fun hasNext() = index < size()
             override fun next() = get(index++)
@@ -53,17 +54,18 @@ class MatVector : opencv_core.MatVector(), Iterable<opencv_core.Mat> {
  * Stores the various transformations that have been applied to the represented image
  * @constructor Creates an image matrix by casting the given pointer. Also sets transformations flags
  */
-class ImageMat(ptr : Pointer?, imgTransformFlags: Int = 0) : opencv_core.Mat(ptr) {
+class ImageMat(ptr: Pointer?, imgTransformFlags: Int = 0) : opencv_core.Mat(ptr) {
     /**
      * Creates an image matrix from the given image object.
      * @param img the image that this matrix will represent
      */
-    constructor(img : opencv_core.IplImage) : this(opencv_core.Mat(img))
+    constructor(img: opencv_core.IplImage) : this(opencv_core.Mat(img))
 
     /**
      * Creates an empty image matrix with the given transformation flags
      */
     constructor(imgTransformFlags: Int = 0) : this(opencv_core.Mat(), imgTransformFlags)
+
     var imgTransformFlags = imgTransformFlags
         private set
 

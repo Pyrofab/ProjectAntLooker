@@ -3,7 +3,7 @@ package fr.antproject.model.diagram
 import fr.antproject.model.diagram.components.DiagramComponent
 import fr.antproject.model.diagram.components.DiagramNode
 
-class PetriNet (val nodes: List<DiagramNode>) : Diagram, Collection<DiagramComponent> by nodes {
+class PetriNet(val nodes: List<DiagramNode>) : Diagram, Collection<DiagramComponent> by nodes {
 
     companion object PetriConverter {
 

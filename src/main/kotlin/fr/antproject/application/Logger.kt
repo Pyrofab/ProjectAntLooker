@@ -11,7 +11,7 @@ object Logger {
     const val DEBUG = 500
 
     /** Only messages with a log level lower than this will be printed */
-    var debugLevel: Int = INFO
+    var debugLevel: Int = 600
 
     @JvmStatic
     fun log(debugLevel: Int, message: Any, exception: Throwable? = null) {

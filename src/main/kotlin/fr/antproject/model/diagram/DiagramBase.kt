@@ -15,7 +15,7 @@ class DiagramBase(private val components: List<DrawnShape>) : Collection<DrawnSh
         for (shape in components.filter { it !is DrawnArrow }) {
             for (vertex in shape) {
                 val dist = vertex distTo p
-                if(closestShape == null || dist < distance) {
+                if (closestShape == null || dist < distance) {
                     closestShape = shape
                     distance = dist
                 }
@@ -27,7 +27,7 @@ class DiagramBase(private val components: List<DrawnShape>) : Collection<DrawnSh
     fun toDiagram(): Diagram {
 
         for (transition in this.filter { it is DrawnArrow }.map { it as DrawnArrow })
-            ;
+        ;
         return PetriNet.convertDiagram(this)
     }
 }

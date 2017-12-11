@@ -10,7 +10,7 @@ import fr.antproject.utils.wrappers.Point
  * @property center the center of this circle
  * @property radius the radius of this circle
  */
-class Circle(val center: Point, val radius: Int): Shape {
+class Circle(val center: Point, val radius: Int) : Shape {
 
     override fun isInside(other: Shape): Boolean {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
