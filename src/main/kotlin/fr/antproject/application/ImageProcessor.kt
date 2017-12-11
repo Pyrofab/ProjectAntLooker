@@ -2,7 +2,7 @@ package fr.antproject.application
 
 import fr.antproject.model.diagram.Diagram
 import fr.antproject.model.diagram.DiagramBase
-import fr.antproject.model.diagram.transformer.PetriTranformer
+import fr.antproject.model.diagram.transformer.PetriTransformer
 import fr.antproject.model.shapes.Polygon
 import fr.antproject.model.shapes.ShapeRegistry
 import fr.antproject.model.shapes.drawn.DrawnArrow
@@ -16,7 +16,7 @@ import fr.antproject.utils.wrappers.*
 object ImageProcessor {
 
     private val config = Configuration()
-    var diagramTransformer = PetriTranformer()
+    var diagramTransformer = PetriTransformer()
         set(value) {
             shapeConverters = value.validShapes.map { ShapeRegistry[it] ?: throw IllegalStateException() }
         }

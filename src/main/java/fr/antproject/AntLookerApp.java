@@ -25,7 +25,7 @@ public class AntLookerApp extends Application {
         else {
             launch(args);
             if (selectedFile != null)
-                ImageProcessor.INSTANCE.process(selectedFile);
+                OpenCVTestKt.test(selectedFile);
         }
         Profiler.INSTANCE.endSection();
         Profiler.INSTANCE.getProfilingData("root/processing").forEach(r -> Logger.log(550, "[Profiling] " + r, null));
