@@ -1,7 +1,8 @@
-package fr.antproject.model.shapes.drawnshapes
+package fr.antproject.model.shapes.drawn
 
 import fr.antproject.model.shapes.Circle
 import fr.antproject.model.shapes.Polygon
+import fr.antproject.model.shapes.ShapeRegistry
 
 /**
  * Class describing a drawn shape matching a circle
@@ -19,6 +20,10 @@ class DrawnCircle private constructor(drawnShape: Polygon, override val approx: 
         const val MAX_DISTANCE = 1.2
         /**The minimum fraction of points in range to be considered a circle*/
         const val MIN_IN_RANGE = 0.8
+
+        init {
+            ShapeRegistry.register(DrawnCircle::class.java, this)
+        }
 
         /**
          * @param shape a polygon to analyse

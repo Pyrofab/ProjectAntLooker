@@ -4,9 +4,9 @@ package fr.antproject.utils
 
 import fr.antproject.application.Logger
 import fr.antproject.model.shapes.*
-import fr.antproject.model.shapes.drawnshapes.DrawnArrow
-import fr.antproject.model.shapes.drawnshapes.DrawnCircle
-import fr.antproject.model.shapes.drawnshapes.DrawnRectangle
+import fr.antproject.model.shapes.drawn.DrawnArrow
+import fr.antproject.model.shapes.drawn.DrawnCircle
+import fr.antproject.model.shapes.drawn.DrawnRectangle
 import fr.antproject.utils.wrappers.EnumImgTransforms
 import fr.antproject.utils.wrappers.ImageMat
 import fr.antproject.utils.wrappers.MatVector

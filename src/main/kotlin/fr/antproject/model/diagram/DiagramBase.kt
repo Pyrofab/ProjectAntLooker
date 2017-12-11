@@ -1,7 +1,7 @@
 package fr.antproject.model.diagram
 
-import fr.antproject.model.shapes.drawnshapes.DrawnArrow
-import fr.antproject.model.shapes.drawnshapes.DrawnShape
+import fr.antproject.model.shapes.drawn.DrawnArrow
+import fr.antproject.model.shapes.drawn.DrawnShape
 import fr.antproject.utils.wrappers.Point
 
 class DiagramBase(private val components: List<DrawnShape>) : Collection<DrawnShape> by components {

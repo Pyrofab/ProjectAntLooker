@@ -1,10 +1,11 @@
 package fr.antproject
 
+import fr.antproject.application.ImageProcessor
 import fr.antproject.application.Logger
 import fr.antproject.model.shapes.*
-import fr.antproject.model.shapes.drawnshapes.DrawnArrow
-import fr.antproject.model.shapes.drawnshapes.DrawnCircle
-import fr.antproject.model.shapes.drawnshapes.DrawnRectangle
+import fr.antproject.model.shapes.drawn.DrawnArrow
+import fr.antproject.model.shapes.drawn.DrawnCircle
+import fr.antproject.model.shapes.drawn.DrawnRectangle
 import fr.antproject.utils.*
 import fr.antproject.utils.wrappers.*
 import org.bytedeco.javacpp.opencv_highgui.cvWaitKey
@@ -25,6 +26,7 @@ fun test(fileName: String) {
     val src = ImageMat(loadImage(fileName))
     val dest = ImageMat(loadImage(fileName))
     val processedContours = processContours(src.grayImage().threshold(optional= ThresholdTypesOptional.OTSU).findContours())
+//    val processedContours = ImageProcessor.process(fileName)
     processedContours.forEachIndexed { i, shape ->
         Logger.debug("Shape #$i: $shape")
         when (shape) {

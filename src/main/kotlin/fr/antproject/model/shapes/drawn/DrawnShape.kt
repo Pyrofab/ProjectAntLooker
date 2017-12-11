@@ -1,4 +1,4 @@
-package fr.antproject.model.shapes.drawnshapes
+package fr.antproject.model.shapes.drawn
 
 import fr.antproject.model.shapes.Polygon
 import fr.antproject.model.shapes.Shape

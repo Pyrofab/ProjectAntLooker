@@ -1,18 +1,25 @@
 package fr.antproject.application
 
 import fr.antproject.model.diagram.DiagramBase
+import fr.antproject.model.diagram.transformer.PetriTranformer
 import fr.antproject.model.shapes.Polygon
-import fr.antproject.model.shapes.drawnshapes.DrawnArrow
-import fr.antproject.model.shapes.drawnshapes.DrawnCircle
-import fr.antproject.model.shapes.drawnshapes.DrawnRectangle
-import fr.antproject.model.shapes.drawnshapes.DrawnShape
+import fr.antproject.model.shapes.ShapeRegistry
+import fr.antproject.model.shapes.drawn.DrawnArrow
+import fr.antproject.model.shapes.drawn.DrawnCircle
+import fr.antproject.model.shapes.drawn.DrawnRectangle
+import fr.antproject.model.shapes.drawn.DrawnShape
 import fr.antproject.utils.MAX_FUSE_DISTANCE
 import fr.antproject.utils.extractPolys
 import fr.antproject.utils.wrappers.*
 
 object ImageProcessor {
+
     private val config = Configuration()
-    private val shapeConverters = listOf(
+    var diagramTransformer = PetriTranformer()
+        set(value) {
+            shapeConverters = value.validShapes.map { ShapeRegistry[it] ?: throw IllegalStateException()}
+        }
+    private var shapeConverters = listOf(
             DrawnArrow.ArrowConverter,
             DrawnCircle.CircleConverter,
             DrawnRectangle.RectangleConverter)

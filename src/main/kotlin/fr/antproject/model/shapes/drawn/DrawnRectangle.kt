@@ -1,11 +1,17 @@
-package fr.antproject.model.shapes.drawnshapes
+package fr.antproject.model.shapes.drawn
 
 import fr.antproject.model.shapes.Polygon
 import fr.antproject.model.shapes.Rectangle
+import fr.antproject.model.shapes.ShapeRegistry
 
 class DrawnRectangle private constructor(drawnShape: Polygon, override val approx: Rectangle): DrawnShape(drawnShape, approx) {
 
     companion object RectangleConverter : ShapeConverter {
+
+        init {
+            ShapeRegistry.register(DrawnRectangle::class.java, this)
+        }
+
         /**
          * TODO make this detect and take rotation into account
          * @param shape a polygon to analyse

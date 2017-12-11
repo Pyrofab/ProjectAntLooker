@@ -1,12 +1,11 @@
-package fr.antproject.model.shapes.drawnshapes
+package fr.antproject.model.shapes.drawn
 
-import fr.antproject.application.Logger
 import fr.antproject.model.shapes.Polygon
+import fr.antproject.model.shapes.ShapeRegistry
 import fr.antproject.model.shapes.StraightArrow
 import fr.antproject.utils.areAligned
-import fr.antproject.utils.orientation
 import fr.antproject.utils.wrappers.Point
-import sun.security.provider.certpath.Vertex
+import kotlin.jvm.javaClass
 
 /**
  * Class describing a drawn shape matching an arrow
@@ -14,6 +13,10 @@ import sun.security.provider.certpath.Vertex
 class DrawnArrow private constructor(drawnShape: Polygon, override val approx: StraightArrow): DrawnShape(drawnShape, approx) {
 
     companion object ArrowConverter : ShapeConverter {
+
+        init {
+            ShapeRegistry.register(DrawnArrow::class.java, this)
+        }
 
         /**
          * @param shape a polygon to analyse
