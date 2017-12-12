@@ -3,9 +3,8 @@ package fr.antproject.model.diagram.transformer;
 import fr.antproject.application.Logger;
 import fr.antproject.model.diagram.DiagramBase;
 import fr.antproject.model.diagram.PetriNet;
-import fr.antproject.model.diagram.components.DiagramNode;
-import fr.antproject.model.diagram.components.Place;
-import fr.antproject.model.diagram.components.Transition;
+import fr.antproject.model.diagram.components.*;
+import fr.antproject.model.shapes.Shape;
 import fr.antproject.model.shapes.drawn.DrawnArrow;
 import fr.antproject.model.shapes.drawn.DrawnCircle;
 import fr.antproject.model.shapes.drawn.DrawnRectangle;
@@ -28,27 +27,40 @@ public class PetriTransformer implements DiagramTransformer<PetriNet> {
     @NotNull
     @Override
     public PetriNet transformDiagram(DiagramBase base) {
-        Map<DrawnShape, DiagramNode> nodes = base.stream()
+        Map<DrawnShape, DiagramComponent> nodes = base.stream()
                 .filter(shape -> !(shape instanceof DrawnArrow))
                 .map(shape -> new Pair<>(shape,
                         (shape instanceof DrawnCircle)
-                        ? new Place()
-                        : new Transition()))
+                                ? componentFromCircle(base, (DrawnCircle) shape)
+                                : new Transition()))
                 .collect(Collectors.toMap(Pair::getFirst, Pair::getSecond));
+        nodes.forEach((shape, component) -> {
+            if (component instanceof Token) {
+                Token token = (Token) component;
+                token.setContainer((Place) nodes.get(base.getShapeContaining(shape)));
+                token.getContainer().addToken(token);
+            }
+        });
         base.stream()
                 .filter(shape -> shape instanceof DrawnArrow)
-                .forEach(arrow -> updateArcs((DrawnArrow)arrow, base, nodes));
+                .forEach(arrow -> updateArcs((DrawnArrow) arrow, base, nodes));
 
         return new PetriNet(nodes.values());
     }
 
-    private void updateArcs(DrawnArrow arrow, DiagramBase base, Map<DrawnShape, DiagramNode> nodes) {
-        DrawnShape startPoint = base.getClosestShape(arrow.getApprox().getStartPoint());
-        DrawnShape endPoint = base.getClosestShape(arrow.getApprox().getLastPoint());
-        if(startPoint instanceof DrawnRectangle && endPoint instanceof DrawnCircle) {
-            ((Transition)nodes.get(startPoint)).addTransition((Place)nodes.get(endPoint));
+    private DiagramComponent componentFromCircle(DiagramBase base, DrawnCircle circle) {
+        return (base.getShapesContaining(circle).isEmpty()) ? new Place() : new Token(null);
+    }
+
+    private void updateArcs(DrawnArrow arrow, DiagramBase base, Map<DrawnShape, DiagramComponent> nodes) {
+        DrawnShape startPoint = base.getClosestShape(arrow.getApprox().getStartPoint(),
+                DiagramBase::notArrow, shape -> base.getShapesContaining(shape).isEmpty());
+        DrawnShape endPoint = base.getClosestShape(arrow.getApprox().getLastPoint(),
+                DiagramBase::notArrow, shape -> base.getShapesContaining(shape).isEmpty());
+        if (startPoint instanceof DrawnRectangle && endPoint instanceof DrawnCircle) {
+            ((Transition) nodes.get(startPoint)).addTransition((Place) nodes.get(endPoint));
         } else if (startPoint instanceof DrawnCircle && endPoint instanceof DrawnRectangle) {
-            ((Place)nodes.get(startPoint)).addTransition((Transition)nodes.get(endPoint));
+            ((Place) nodes.get(startPoint)).addTransition((Transition) nodes.get(endPoint));
         } else Logger.info("Not a valid transition :" + startPoint + " to " + endPoint);
     }
 }

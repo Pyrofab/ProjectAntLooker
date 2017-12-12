@@ -2,7 +2,6 @@ package fr.antproject.model.shapes.drawn
 
 import fr.antproject.model.shapes.Circle
 import fr.antproject.model.shapes.Polygon
-import fr.antproject.model.shapes.ShapeRegistry
 
 /**
  * Class describing a drawn shape matching a circle
@@ -13,13 +12,13 @@ class DrawnCircle private constructor(drawnShape: Polygon, override val approx: 
 
     companion object CircleConverter : ShapeConverter {
         /**The minimum amount of points a polygon must have to be considered a circle*/
-        const val MIN_POINTS = 6
+        private const val MIN_POINTS = 6
         /**The relative minimum distance a point may be to the center to be considered on the circle*/
-        const val MIN_DISTANCE = 0.8
+        private const val MIN_DISTANCE = 0.8
         /**The relative maximum distance a point may be to the center to be considered on the circle*/
-        const val MAX_DISTANCE = 1.2
+        private const val MAX_DISTANCE = 1.2
         /**The minimum fraction of points in range to be considered a circle*/
-        const val MIN_IN_RANGE = 0.8
+        private const val MIN_IN_RANGE = 0.8
 
         /**
          * @param shape a polygon to analyse

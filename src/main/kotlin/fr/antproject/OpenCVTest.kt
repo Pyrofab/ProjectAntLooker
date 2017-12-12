@@ -1,7 +1,7 @@
 package fr.antproject
 
-import fr.antproject.application.ImageProcessor
 import fr.antproject.application.Logger
+import fr.antproject.application.Profiler
 import fr.antproject.model.shapes.Circle
 import fr.antproject.model.shapes.Polygon
 import fr.antproject.model.shapes.drawn.DrawnArrow
@@ -63,6 +63,8 @@ fun test(fileName: String) {
             }
         }
     }
+    Profiler.startSection("user_input")
     imshow("img", dest)
     cvWaitKey()
+    Profiler.endSection()
 }

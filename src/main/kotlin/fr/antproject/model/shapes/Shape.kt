@@ -17,5 +17,7 @@ interface Shape {
      * @return true if the entirety of this shape is inside the other according to their respective definition
      */
     infix fun isInside(other: Shape): Boolean
+
+    fun getArea() = 0.0
 }
 

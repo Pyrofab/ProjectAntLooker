@@ -7,9 +7,9 @@ import java.util.*
 
 object Profiler {
 
-    const val SEPARATOR = "/"
+    private const val SEPARATOR = "/"
 
-    val profilingStack = LinkedList<Entry>()
+    private val profilingStack = LinkedList<Entry>()
     private val profilingData = mutableMapOf<String, Duration>()
     private var enabled = true
 
@@ -47,7 +47,7 @@ object Profiler {
 
     class Entry(val name: String, val start: Instant = Instant.now())
 
-    class Result(val name: String, val duration: Duration, val percentage: Double) {
+    class Result(private val name: String, val duration: Duration, private val percentage: Double) {
         companion object {
             val FORMAT = DecimalFormat("%#0.000")
         }

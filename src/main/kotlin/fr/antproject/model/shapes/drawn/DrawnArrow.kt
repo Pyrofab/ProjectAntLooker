@@ -1,7 +1,6 @@
 package fr.antproject.model.shapes.drawn
 
 import fr.antproject.model.shapes.Polygon
-import fr.antproject.model.shapes.ShapeRegistry
 import fr.antproject.model.shapes.StraightArrow
 import fr.antproject.utils.areAligned
 import fr.antproject.utils.wrappers.Point

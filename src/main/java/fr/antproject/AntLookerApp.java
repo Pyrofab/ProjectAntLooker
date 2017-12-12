@@ -24,8 +24,10 @@ public class AntLookerApp extends Application {
             OpenCVTestKt.test(args[0]);
         else {
             launch(args);
-            if (selectedFile != null)
+            if (selectedFile != null) {
                 ImageProcessor.INSTANCE.process(selectedFile).forEach(System.out::println);
+                OpenCVTestKt.test(selectedFile);
+            }
         }
         Profiler.INSTANCE.endSection();
         Profiler.INSTANCE.getProfilingData("root/processing").forEach(r -> Logger.log(550, "[Profiling] " + r, null));

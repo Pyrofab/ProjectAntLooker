@@ -3,6 +3,7 @@
 package fr.antproject.model.shapes
 
 import fr.antproject.utils.wrappers.Point
+import kotlin.math.PI
 
 /**
  * Class describing a perfect circle
@@ -13,10 +14,14 @@ import fr.antproject.utils.wrappers.Point
 class Circle(val center: Point, val radius: Int) : Shape {
 
     override fun isInside(other: Shape): Boolean {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        if (other is Circle) return (other.center distTo this.center) < other.radius - this.radius
+        return !(other isInside this) && other contains center
     }
 
     override fun contains(point: Point): Boolean = center distTo point < radius
 
     override fun toString(): String = "Circle(center=$center, radius=$radius)"
+
+    override fun getArea() = PI*radius*radius
+
 }

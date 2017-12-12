@@ -4,10 +4,7 @@ import fr.antproject.model.diagram.Diagram
 import fr.antproject.model.diagram.DiagramBase
 import fr.antproject.model.diagram.transformer.PetriTransformer
 import fr.antproject.model.shapes.Polygon
-import fr.antproject.model.shapes.ShapeRegistry
-import fr.antproject.model.shapes.drawn.DrawnArrow
-import fr.antproject.model.shapes.drawn.DrawnCircle
-import fr.antproject.model.shapes.drawn.DrawnRectangle
+import fr.antproject.model.shapes.drawn.ShapeRegistry
 import fr.antproject.model.shapes.drawn.DrawnShape
 import fr.antproject.utils.MAX_FUSE_DISTANCE
 import fr.antproject.utils.extractPolys
@@ -30,7 +27,8 @@ object ImageProcessor {
         val ret = processContours(contours)
 
         Profiler.endStartSection("diagram")
-        val diagramBase = DiagramBase(ret)
+        val averageArea = ret.sumByDouble { it.getArea() } / ret.size
+        val diagramBase = DiagramBase(ret.filter { it.getArea() > config.minAcceptedArea * averageArea })
         val diagram = this.diagramTransformer.transformDiagram(diagramBase)
         Profiler.endSection()
         Profiler.endSection()
@@ -92,5 +90,8 @@ object ImageProcessor {
         val method: ContourApproxMethod = ContourApproxMethod.SIMPLE
 
         val maxFuseDistance: Double = MAX_FUSE_DISTANCE
+
+        /**The fraction of the average under which detected shapes are considered errors*/
+        val minAcceptedArea = 0.2
     }
 }

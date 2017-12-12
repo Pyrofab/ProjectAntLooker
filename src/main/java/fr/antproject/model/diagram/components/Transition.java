@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Transition extends DiagramNode {
-    private List<Place> arcs = new ArrayList<>();
+    private final List<Place> arcs = new ArrayList<>();
 
     public void addTransition(Place place) {
         this.arcs.add(place);

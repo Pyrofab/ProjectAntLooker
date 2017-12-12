@@ -35,11 +35,11 @@ open class Polygon(protected val vertices: List<Point>) : Shape, Iterable<Point>
         var count = 0
         var i = 0
         do {
-            val next = (i + 1 % nbPoints())
+            val next = ((i + 1) % nbPoints())
             // Check if the line segment from 'p' to 'extreme' intersects
             // with the line segment from 'polygon[i]' to 'polygon[next]'
             if (doIntersect(this[i] to this[next], point to extreme)) {
-                // If the point 'p' is colinear with line segment 'i-next',
+                // If the point 'p' is collinear with line segment 'i-next',
                 // then check if it lies on segment. If it lies, return true,
                 // otherwise false
                 if (orientation(this[i], point, this[next]) == 0)
@@ -66,4 +66,14 @@ open class Polygon(protected val vertices: List<Point>) : Shape, Iterable<Point>
     }
 
     override fun hashCode(): Int = vertices.hashCode()
+
+    override fun getArea(): Double {
+        var sum1 = 0.0
+        var sum2 = 0.0
+        for (i in 0 until nbPoints()) {
+            sum1 += this[i].x() * this[(i+1) % nbPoints()].y()
+            sum2 += this[i].y() * this[(i+1) % nbPoints()].x()
+        }
+        return (sum1 + sum2) / 2
+    }
 }

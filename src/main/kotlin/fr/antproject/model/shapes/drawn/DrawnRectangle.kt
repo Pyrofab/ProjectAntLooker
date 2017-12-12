@@ -2,7 +2,6 @@ package fr.antproject.model.shapes.drawn
 
 import fr.antproject.model.shapes.Polygon
 import fr.antproject.model.shapes.Rectangle
-import fr.antproject.model.shapes.ShapeRegistry
 
 class DrawnRectangle private constructor(drawnShape: Polygon, override val approx: Rectangle) : DrawnShape(drawnShape, approx) {
 
