@@ -15,6 +15,9 @@ open class Polygon(protected val vertices: List<Point>) : Shape, Iterable<Point>
     constructor (from: Polygon) : this(from.vertices)
     constructor (vararg vertices: Point) : this(vertices.asList())
 
+    val size
+        get() = vertices.size
+
     companion object {
         /**Define Infinite (Using INT_MAX caused overflow problems)*/
         const val INF = 10000
@@ -52,6 +55,16 @@ open class Polygon(protected val vertices: List<Point>) : Shape, Iterable<Point>
         return count % 2 == 1
     }
 
+    override fun getArea(): Double {
+        var sum1 = 0.0
+        var sum2 = 0.0
+        for (i in 0 until nbPoints()) {
+            sum1 += this[i].x() * this[(i+1) % nbPoints()].y()
+            sum2 += this[i].y() * this[(i+1) % nbPoints()].x()
+        }
+        return (sum1 + sum2) / 2
+    }
+
     override fun toString(): String = "${javaClass.simpleName}(nbPoints=${nbPoints()}, vertices=$vertices)"
 
     override fun equals(other: Any?): Boolean {
@@ -67,13 +80,4 @@ open class Polygon(protected val vertices: List<Point>) : Shape, Iterable<Point>
 
     override fun hashCode(): Int = vertices.hashCode()
 
-    override fun getArea(): Double {
-        var sum1 = 0.0
-        var sum2 = 0.0
-        for (i in 0 until nbPoints()) {
-            sum1 += this[i].x() * this[(i+1) % nbPoints()].y()
-            sum2 += this[i].y() * this[(i+1) % nbPoints()].x()
-        }
-        return (sum1 + sum2) / 2
-    }
 }

@@ -3,7 +3,6 @@
 
 .metadata
 bin/
-tmp/
 *.tmp
 *.bak
 *.swp
@@ -121,3 +120,4 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+/build/

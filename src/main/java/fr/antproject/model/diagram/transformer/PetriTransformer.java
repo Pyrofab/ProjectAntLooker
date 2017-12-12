@@ -17,6 +17,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+/**
+ * Class used to transform a base diagram into a {@link PetriNet}
+ */
 public class PetriTransformer implements DiagramTransformer<PetriNet> {
 
     @Override
@@ -58,9 +61,15 @@ public class PetriTransformer implements DiagramTransformer<PetriNet> {
         DrawnShape endPoint = base.getClosestShape(arrow.getApprox().getLastPoint(),
                 DiagramBase::notArrow, shape -> base.getShapesContaining(shape).isEmpty());
         if (startPoint instanceof DrawnRectangle && endPoint instanceof DrawnCircle) {
-            ((Transition) nodes.get(startPoint)).addTransition((Place) nodes.get(endPoint));
+            Transition source = (Transition) nodes.get(startPoint);
+            Arc<Transition, Place> arc = new Arc<>(source, (Place) nodes.get(endPoint));
+            source.addTransition(arc);
+            nodes.put(arrow, arc);
         } else if (startPoint instanceof DrawnCircle && endPoint instanceof DrawnRectangle) {
-            ((Place) nodes.get(startPoint)).addTransition((Transition) nodes.get(endPoint));
+            Place source = (Place) nodes.get(startPoint);
+            Arc<Place, Transition> arc = new Arc<>(source, (Transition)nodes.get(endPoint));
+            source.addTransition(arc);
+            nodes.put(arrow, arc);
         } else Logger.info("Not a valid transition :" + startPoint + " to " + endPoint);
     }
 }
