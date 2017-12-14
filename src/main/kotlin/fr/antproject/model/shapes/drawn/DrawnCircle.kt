@@ -10,7 +10,7 @@ import fr.antproject.model.shapes.Polygon
  */
 class DrawnCircle private constructor(drawnShape: Polygon, override val approx: Circle) : DrawnShape(drawnShape, approx) {
 
-    companion object CircleConverter : ShapeConverter {
+    companion object CircleConverter : IShapeConverter {
         /**The minimum amount of points a polygon must have to be considered a circle*/
         private const val MIN_POINTS = 6
         /**The relative minimum distance a point may be to the center to be considered on the circle*/

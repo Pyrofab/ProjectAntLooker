@@ -1,6 +1,6 @@
 package fr.antproject.model.diagram.components;
 
-public class Token implements DiagramComponent{
+public class Token implements IDiagramComponent {
     private Place container;
 
     public Token(Place container) {

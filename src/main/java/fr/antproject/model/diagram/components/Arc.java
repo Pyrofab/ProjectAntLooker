@@ -1,6 +1,6 @@
 package fr.antproject.model.diagram.components;
 
-public class Arc<U extends DiagramNode, V extends DiagramNode> implements DiagramComponent {
+public class Arc<U extends DiagramNode, V extends DiagramNode> implements IDiagramComponent {
     private U source;
     private V target;
 

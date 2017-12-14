@@ -1,6 +1,6 @@
 package fr.antproject.application
 
-import fr.antproject.model.diagram.Diagram
+import fr.antproject.model.diagram.IDiagram
 import fr.antproject.model.diagram.DiagramBase
 import fr.antproject.model.diagram.transformer.PetriTransformer
 import fr.antproject.model.shapes.Polygon
@@ -15,7 +15,7 @@ object ImageProcessor {
     private val config = Configuration()
     var diagramTransformer = PetriTransformer()
 
-    fun process(fileName: String): Diagram {
+    fun process(fileName: String): IDiagram {
         Profiler.startSection("processing")
         Profiler.startSection("image")
         val srcImg = loadImage(fileName)

@@ -14,7 +14,7 @@ abstract class DrawnShape protected constructor(drawnShape: Polygon, open val ap
      * Interface used to obtain valid drawn shapes from an extracted polygon
      * @see [fr.antproject.utils.processContours]
      */
-    interface ShapeConverter {
+    interface IShapeConverter {
         /**
          * @param shape the basic shape
          * @return a shape representing the input shape or null if it does not correspond to this shape's definition

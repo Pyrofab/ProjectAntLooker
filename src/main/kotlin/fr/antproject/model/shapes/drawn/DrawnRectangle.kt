@@ -5,7 +5,7 @@ import fr.antproject.model.shapes.Rectangle
 
 class DrawnRectangle private constructor(drawnShape: Polygon, override val approx: Rectangle) : DrawnShape(drawnShape, approx) {
 
-    companion object RectangleConverter : ShapeConverter {
+    companion object RectangleConverter : IShapeConverter {
 
         /**
          * TODO make this detect and take rotation into account

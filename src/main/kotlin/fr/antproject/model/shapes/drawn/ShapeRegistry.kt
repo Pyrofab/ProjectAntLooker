@@ -1,9 +1,9 @@
 package fr.antproject.model.shapes.drawn
 
-object ShapeRegistry : MutableMap<Class<out DrawnShape>, DrawnShape.ShapeConverter> by mutableMapOf() {
-    private fun register(shape: Class<out DrawnShape>, converter: DrawnShape.ShapeConverter) = put(shape, converter)
+object ShapeRegistry : MutableMap<Class<out DrawnShape>, DrawnShape.IShapeConverter> by mutableMapOf() {
+    private fun register(shape: Class<out DrawnShape>, converter: DrawnShape.IShapeConverter) = put(shape, converter)
 
-    private fun registerAll(vararg pairs: Pair<Class<out DrawnShape>, DrawnShape.ShapeConverter>) = pairs.forEach { register(it.first, it.second) }
+    private fun registerAll(vararg pairs: Pair<Class<out DrawnShape>, DrawnShape.IShapeConverter>) = pairs.forEach { register(it.first, it.second) }
 
     init {
         registerAll(

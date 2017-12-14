@@ -10,7 +10,7 @@ import fr.antproject.utils.wrappers.Point
  */
 class DrawnArrow private constructor(drawnShape: Polygon, override val approx: StraightArrow) : DrawnShape(drawnShape, approx) {
 
-    companion object ArrowConverter : ShapeConverter {
+    companion object ArrowConverter : IShapeConverter {
 
         /**
          * @param shape a polygon to analyse

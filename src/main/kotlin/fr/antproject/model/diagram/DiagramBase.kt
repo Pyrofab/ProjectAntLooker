@@ -15,7 +15,7 @@ class DiagramBase(private val components: List<DrawnShape>) : Collection<DrawnSh
     private val cache = WeakHashMap<DrawnShape, List<DrawnShape>>()
 
     /**
-     * TODO make something a lot more accurate
+     * TODO make something more accurate (currently doesn't take edges into account)
      */
     @SafeVarargs
     fun getClosestShape(p: Point, vararg filters: (DrawnShape) -> Boolean): DrawnShape? {
