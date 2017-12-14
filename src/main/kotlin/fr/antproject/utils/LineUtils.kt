@@ -4,7 +4,6 @@ package fr.antproject.utils
 
 import fr.antproject.utils.wrappers.Point
 import java.lang.Math.acos
-import kotlin.math.acos
 
 fun areAligned(p: Point, q: Point, r: Point, delta: Double = 0.0): Boolean {
     val pq = p distTo q

@@ -4,7 +4,6 @@ package fr.antproject.model.shapes
 
 import fr.antproject.utils.wrappers.Point
 import java.lang.Math.PI
-import kotlin.math.PI
 
 /**
  * Class describing a perfect circle

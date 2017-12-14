@@ -30,7 +30,7 @@ public class AntLookerApp extends Application {
             }
         }
         Profiler.INSTANCE.endSection();
-        Profiler.INSTANCE.getProfilingData("root/processing").forEach(r -> Logger.log(550, "[Profiling] " + r, null));
+        Profiler.INSTANCE.getProfilingData("root/processing").forEach(r -> Logger.log(Logger.PROFILING, "[Profiling] " + r, null));
     }
 
     /**

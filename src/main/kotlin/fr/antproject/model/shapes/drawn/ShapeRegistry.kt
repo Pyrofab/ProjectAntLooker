@@ -9,6 +9,7 @@ object ShapeRegistry : MutableMap<Class<out DrawnShape>, DrawnShape.IShapeConver
         registerAll(
                 DrawnArrow::class.java to DrawnArrow,
                 DrawnCircle::class.java to DrawnCircle,
-                DrawnRectangle::class.java to DrawnRectangle)
+                DrawnRectangle::class.java to DrawnRectangle
+        )
     }
 }
