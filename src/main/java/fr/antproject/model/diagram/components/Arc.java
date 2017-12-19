@@ -5,6 +5,9 @@ import org.jetbrains.annotations.NotNull;
 public class Arc<U extends DiagramNode, V extends DiagramNode> implements IDiagramComponent {
     private U source;
     private V target;
+
+
+
     public int id;
 
     public Arc(U source, V target,int id) {
@@ -21,11 +24,17 @@ public class Arc<U extends DiagramNode, V extends DiagramNode> implements IDiagr
                 '}';
     }
 
+
+
     @NotNull
     @Override
     public String export() {
-        return "<arc id=\""+id+"\" source=\""+source+"\" target=\""+target+"\" />";
+        return "<arc id=\""+id+"\" source=\""+source.getId()+"\" target=\""+target.getId()+"\" />";
     }
 
 
+    @Override
+    public int getId() {
+        return id;
+    }
 }

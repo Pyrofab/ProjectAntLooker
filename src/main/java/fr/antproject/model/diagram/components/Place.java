@@ -35,6 +35,10 @@ public class Place extends DiagramNode {
                 '}';
     }
 
+    public int getId() {
+        return id;
+    }
+
     @NotNull
     @Override
     public String export() {

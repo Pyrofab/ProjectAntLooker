@@ -29,6 +29,11 @@ public class Transition extends DiagramNode {
                 "arcs=" + arcs.size() +
                 '}';
     }
+
+    public int getId() {
+        return id;
+    }
+
     @NotNull
 
     @Override

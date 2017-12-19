@@ -30,4 +30,9 @@ public class Token implements IDiagramComponent {
     public String export() {
         return "";
     }
+
+    @Override
+    public int getId() {
+        return 0;
+    }
 }
