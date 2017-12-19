@@ -25,7 +25,7 @@ public class AntLookerApp extends Application {
         else {
             launch(args);
             if (selectedFile != null) {
-                ImageProcessor.INSTANCE.process(selectedFile).forEach(System.out::println);
+                ImageProcessor.INSTANCE.process(selectedFile).export("diagram.pnml");
                 OpenCVTestKt.test(selectedFile);
             }
         }

@@ -31,7 +31,6 @@ public class PetriTransformer implements IDiagramTransformer<PetriNet> {
     @NotNull
     @Override
     public PetriNet transformDiagram(DiagramBase base) {
-        id++;
         Profiler.INSTANCE.startSection("generate_nodes");
         Map<DrawnShape, IDiagramComponent> nodes = base.stream()
                 .filter(shape -> !(shape instanceof DrawnArrow))
@@ -39,7 +38,7 @@ public class PetriTransformer implements IDiagramTransformer<PetriNet> {
                 .map(shape -> new Pair<>(shape,
                         (shape instanceof DrawnCircle)
                                 ? componentFromCircle(base, (DrawnCircle) shape)
-                                : new Transition(id)))
+                                : new Transition(id++)))
                 .collect(Collectors.toMap(Pair::getFirst, Pair::getSecond));
         id++;
         Profiler.INSTANCE.endStartSection("link_tokens");
@@ -57,11 +56,11 @@ public class PetriTransformer implements IDiagramTransformer<PetriNet> {
                 .forEach(arrow -> updateArcs((DrawnArrow) arrow, base, nodes));
         Profiler.INSTANCE.endSection();
 
-        return new PetriNet(nodes.values());
+        return new PetriNet(nodes.values(), "n1");
     }
 
     private IDiagramComponent componentFromCircle(DiagramBase base, DrawnCircle circle) {
-        return (base.getShapesContaining(circle).isEmpty()) ? new Place(id) : new Token(null);
+        return (base.getShapesContaining(circle).isEmpty()) ? new Place(id++) : new Token(null);
 
     }
 
@@ -72,14 +71,12 @@ public class PetriTransformer implements IDiagramTransformer<PetriNet> {
                 DiagramBase::notArrow, shape -> base.getShapesContaining(shape).isEmpty());
         if (startPoint instanceof DrawnRectangle && endPoint instanceof DrawnCircle) {
             Transition source = (Transition) nodes.get(startPoint);
-            Arc<Transition, Place> arc = new Arc<>(source, (Place) nodes.get(endPoint), id);
-            id++;
+            Arc<Transition, Place> arc = new Arc<>(source, (Place) nodes.get(endPoint), id++);
             source.addTransition(arc);
             nodes.put(arrow, arc);
         } else if (startPoint instanceof DrawnCircle && endPoint instanceof DrawnRectangle) {
             Place source = (Place) nodes.get(startPoint);
-            Arc<Place, Transition> arc = new Arc<>(source, (Transition)nodes.get(endPoint),id);
-            id++;
+            Arc<Place, Transition> arc = new Arc<>(source, (Transition)nodes.get(endPoint),id++);
             source.addTransition(arc);
             nodes.put(arrow, arc);
         } else Logger.info("Not a valid transition: " + startPoint + " to " + endPoint, null);
