@@ -24,13 +24,7 @@ public class AntLookerApp extends Application {
             OpenCVTestKt.test(args[0]);
         else {
             launch(args);
-            if (selectedFile != null) {
-                ImageProcessor.INSTANCE.process(selectedFile).export("diagram.pnml");
-                OpenCVTestKt.test(selectedFile);
-            }
         }
-        Profiler.INSTANCE.endSection();
-        Profiler.INSTANCE.getProfilingData("root/processing").forEach(r -> Logger.log(Logger.PROFILING, "[Profiling] " + r, null));
     }
 
     /**
@@ -46,10 +40,15 @@ public class AntLookerApp extends Application {
         Profiler.INSTANCE.startSection("user_input");
         File file = fileChooser.showOpenDialog(primaryStage);
         Profiler.INSTANCE.endSection();
-        if (file != null)
-            selectedFile = file.getPath();
-        else
+        if (file == null) {
             Logger.info("No file selected", null);
+        } else {
+            selectedFile = file.getPath();
+            ImageProcessor.INSTANCE.process(selectedFile).export("diagram.pnml");
+            OpenCVTestKt.test(selectedFile);
+            Profiler.INSTANCE.endSection();
+            Profiler.INSTANCE.getProfilingData("root/processing").forEach(r -> Logger.log(Logger.PROFILING, "[Profiling] " + r, null));
+        }
         Platform.exit();
     }
 }
