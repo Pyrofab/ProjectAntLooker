@@ -1,5 +1,6 @@
 package fr.antproject
 
+import fr.antproject.application.ImageProcessor
 import fr.antproject.application.Logger
 import fr.antproject.application.Profiler
 import fr.antproject.model.shapes.Circle
@@ -27,7 +28,9 @@ fun test(fileName: String) {
     Logger.info("Loading image at location $fileName")
     val src = ImageMat(loadImage(fileName))
     val dest = ImageMat(loadImage(fileName))
-    val processedContours = processContours(src.grayImage().threshold(optional = ThresholdTypesOptional.OTSU).findContours())
+    val processedContours = processContours(src.grayImage()
+            .threshold(threshold = ImageProcessor.config.threshold,optional = ImageProcessor.config.optional)
+            .findContours(ImageProcessor.config.mode, ImageProcessor.config.method))
 //    val processedContours = ImageProcessor.process(fileName)
     processedContours.forEachIndexed { i, shape ->
         Logger.debug("Shape #$i: $shape")

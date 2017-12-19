@@ -9,10 +9,11 @@ import fr.antproject.model.shapes.drawn.DrawnShape
 import fr.antproject.utils.MAX_FUSE_DISTANCE
 import fr.antproject.utils.extractPolys
 import fr.antproject.utils.wrappers.*
+import org.bytedeco.javacpp.opencv_highgui
 
 object ImageProcessor {
 
-    private val config = Configuration()
+    val config = Configuration()
     var diagramTransformer = PetriTransformer()
 
     fun process(fileName: String): IDiagram {
@@ -23,6 +24,9 @@ object ImageProcessor {
         grayImage(img = temp, out = temp)
         threshold(grayImage = temp, threshold = config.threshold, maxValue = config.maxValue,
                 algorithm = config.algorithm, optional = config.optional, out = temp)
+        opencv_highgui.imshow("img", temp)
+        opencv_highgui.cvWaitKey()
+
         val contours = findContours(thresholdImageMat = temp, mode = config.mode, method = config.method)
         val ret = processContours(contours)
 
@@ -78,16 +82,16 @@ object ImageProcessor {
         return temp
     }
 
-    private class Configuration {
+    class Configuration {
         // threshold
-        val threshold: Double = 127.0
+        val threshold: Double = 120.0
         val maxValue: Double = 255.0
         val algorithm: ThresholdTypes = ThresholdTypes.BINARY_INVERTED
-        val optional: ThresholdTypesOptional? = ThresholdTypesOptional.OTSU
+        val optional: ThresholdTypesOptional? = null
 
         // find contours
         val mode: ContourRetrievalMode = ContourRetrievalMode.LIST
-        val method: ContourApproxMethod = ContourApproxMethod.SIMPLE
+        val method: ContourApproxMethod = ContourApproxMethod.TC89_KCOS
 
         val maxFuseDistance: Double = MAX_FUSE_DISTANCE
 

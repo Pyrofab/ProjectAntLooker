@@ -34,6 +34,7 @@ public class PetriTransformer implements IDiagramTransformer<PetriNet> {
         Profiler.INSTANCE.startSection("generate_nodes");
         Map<DrawnShape, IDiagramComponent> nodes = base.stream()
                 .filter(shape -> !(shape instanceof DrawnArrow))
+                .distinct()
                 .map(shape -> new Pair<>(shape,
                         (shape instanceof DrawnCircle)
                                 ? componentFromCircle(base, (DrawnCircle) shape)
