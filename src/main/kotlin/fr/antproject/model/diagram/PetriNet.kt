@@ -1,8 +1,8 @@
 package fr.antproject.model.diagram
 
 import fr.antproject.model.diagram.components.IDiagramComponent
+import fr.antproject.model.diagram.components.IExportableComponent
 import java.io.PrintStream
-import java.nio.file.Files
 
 /**
  * Class describing a petri net, a directed bipartite graph in which the nodes represent transitions and places.
@@ -18,9 +18,12 @@ class PetriNet(private val nodes: Collection<IDiagramComponent>, private val nam
     override fun export(path: String) {
         val writer = PrintStream(path)
         writer.println(HEADER)
-        writer.println("<net id=\"$name\"type=\"P/T\">")
-        this.sortedBy(IDiagramComponent::id).map(IDiagramComponent::export).forEach(writer::println)
-        writer.println("</net>")
+        writer.println("\t<net id=\"$name\" type=\"P/T\">")
+        this.filterIsInstance(IExportableComponent::class.java)
+                .sortedBy(IDiagramComponent::getId)
+                .map(IExportableComponent::export)
+                .forEach { writer.println("\t\t$it") }
+        writer.println("\t</net>")
         writer.println("</pnml>")
     }
 

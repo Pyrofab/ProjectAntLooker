@@ -1,5 +1,5 @@
 package fr.antproject.model.diagram.components;
 
-public abstract class DiagramNode implements IDiagramComponent {
+public abstract class DiagramNode implements IExportableComponent {
 
 }

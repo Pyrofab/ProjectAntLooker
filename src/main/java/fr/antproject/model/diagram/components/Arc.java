@@ -2,15 +2,18 @@ package fr.antproject.model.diagram.components;
 
 import org.jetbrains.annotations.NotNull;
 
-public class Arc<U extends DiagramNode, V extends DiagramNode> implements IDiagramComponent {
-    private U source;
-    private V target;
+/**
+ * Class describing a petri net arc
+ * @param <S> The diagram node from which this arc takes source
+ * @param <T> The diagram node in which this arc ends
+ */
+public class Arc<S extends DiagramNode, T extends DiagramNode> implements IExportableComponent {
+    private S source;
+    private T target;
 
+    private final int id;
 
-
-    public int id;
-
-    public Arc(U source, V target,int id) {
+    public Arc(S source, T target, int id) {
         this.source = source;
         this.target = target;
         this.id = id;
@@ -29,9 +32,8 @@ public class Arc<U extends DiagramNode, V extends DiagramNode> implements IDiagr
     @NotNull
     @Override
     public String export() {
-        return "<arc id=\""+id+"\" source=\""+source.getId()+"\" target=\""+target.getId()+"\" />";
+        return "<arc id=\""+ getPrefixedId()+"\" source=\""+source.getPrefixedId()+"\" target=\""+target.getPrefixedId()+"\" />";
     }
-
 
     @Override
     public int getId() {

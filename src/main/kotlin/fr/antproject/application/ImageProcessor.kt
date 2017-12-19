@@ -1,12 +1,12 @@
 package fr.antproject.application
 
 import fr.antproject.display
-import fr.antproject.model.diagram.IDiagram
 import fr.antproject.model.diagram.DiagramBase
+import fr.antproject.model.diagram.IDiagram
 import fr.antproject.model.diagram.transformer.PetriTransformer
 import fr.antproject.model.shapes.Polygon
-import fr.antproject.model.shapes.drawn.ShapeRegistry
 import fr.antproject.model.shapes.drawn.DrawnShape
+import fr.antproject.model.shapes.drawn.ShapeRegistry
 import fr.antproject.utils.MAX_FUSE_DISTANCE
 import fr.antproject.utils.extractPolys
 import fr.antproject.utils.wrappers.*
@@ -34,7 +34,7 @@ object ImageProcessor {
         display(ret, temp)
 
         Profiler.endStartSection("diagram")
-        val averageArea = ret.sumByDouble { it.getArea() } / ret.size
+        val averageArea = ret.sumByDouble(DrawnShape::getArea) / ret.size
         val diagramBase = DiagramBase(ret.filter { it.getArea() > config.minAcceptedArea * averageArea })
         display(diagramBase, ImageMat(srcImg))
         val diagram = this.diagramTransformer.transformDiagram(diagramBase)

@@ -1,12 +1,11 @@
 package fr.antproject.model.diagram.components;
 
-import org.jetbrains.annotations.NotNull;
-
 public class Token implements IDiagramComponent {
     private Place container;
+    private int id;
 
-    public Token(Place container) {
-        this.container = container;
+    public Token(int id) {
+        this.id = id;
     }
 
     public Place getContainer() {
@@ -24,15 +23,9 @@ public class Token implements IDiagramComponent {
                 '}';
     }
 
-
-    @NotNull
-    @Override
-    public String export() {
-        return "";
-    }
-
     @Override
     public int getId() {
-        return 0;
+        return id;
     }
+
 }
