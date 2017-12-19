@@ -32,6 +32,7 @@ object ImageProcessor {
         val ret = processContours(contours)
 
         display(ret, temp)
+
         Profiler.endStartSection("diagram")
         val averageArea = ret.sumByDouble { it.getArea() } / ret.size
         val diagramBase = DiagramBase(ret.filter { it.getArea() > config.minAcceptedArea * averageArea })
@@ -87,7 +88,7 @@ object ImageProcessor {
 
     class Configuration {
         // threshold
-        val threshold: Double = 120.0
+        val threshold: Double = 140.0
         val maxValue: Double = 255.0
         val algorithm: ThresholdTypes = ThresholdTypes.BINARY_INVERTED
         val optional: ThresholdTypesOptional? = null
