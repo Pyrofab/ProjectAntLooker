@@ -1,11 +1,20 @@
 package fr.antproject.model.diagram.components;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Transition extends DiagramNode {
+
+
     private final List<Arc<Transition, Place>> arcs = new ArrayList<>();
 
+    public Transition(int id) {
+        this.id = id;
+    }
+
+    public int id;
     public void addTransition(Arc<Transition, Place> place) {
         this.arcs.add(place);
     }
@@ -20,4 +29,12 @@ public class Transition extends DiagramNode {
                 "arcs=" + arcs.size() +
                 '}';
     }
+    @NotNull
+
+    @Override
+    public String export() {
+        return "<transition id=\""+id+"\"/>";
+    }
+
+
 }

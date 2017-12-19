@@ -20,7 +20,8 @@ class PetriNet(private val nodes: Collection<IDiagramComponent>, private val nam
         writer.println(HEADER)
         writer.println("<net id=\"$name\"type=\"P/T\">")
         this.map(IDiagramComponent::export).forEach(writer::println)
-
+        writer.println("</net>")
+        writer.println("</pnml>")
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 

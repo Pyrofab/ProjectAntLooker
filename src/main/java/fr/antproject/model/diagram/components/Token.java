@@ -1,5 +1,7 @@
 package fr.antproject.model.diagram.components;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Token implements IDiagramComponent {
     private Place container;
 
@@ -20,5 +22,12 @@ public class Token implements IDiagramComponent {
         return "Token{" +
                 "container=" + container +
                 '}';
+    }
+
+
+    @NotNull
+    @Override
+    public String export() {
+        return "";
     }
 }
