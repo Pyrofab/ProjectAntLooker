@@ -32,7 +32,6 @@ object ImageProcessor {
         val ret = processContours(contours)
 
         display(ret, temp)
-
         Profiler.endStartSection("diagram")
         val averageArea = ret.sumByDouble { it.getArea() } / ret.size
         val diagramBase = DiagramBase(ret.filter { it.getArea() > config.minAcceptedArea * averageArea })
