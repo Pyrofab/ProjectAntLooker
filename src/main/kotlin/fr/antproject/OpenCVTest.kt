@@ -5,12 +5,14 @@ import fr.antproject.application.Logger
 import fr.antproject.application.Profiler
 import fr.antproject.model.shapes.Circle
 import fr.antproject.model.shapes.Polygon
+import fr.antproject.model.shapes.Shape
 import fr.antproject.model.shapes.drawn.DrawnArrow
 import fr.antproject.model.shapes.drawn.DrawnCircle
 import fr.antproject.model.shapes.drawn.DrawnRectangle
 import fr.antproject.utils.Color
 import fr.antproject.utils.processContours
 import fr.antproject.utils.wrappers.*
+import org.bytedeco.javacpp.opencv_core
 import org.bytedeco.javacpp.opencv_highgui.cvWaitKey
 import org.bytedeco.javacpp.opencv_highgui.imshow
 import org.bytedeco.javacpp.opencv_imgproc
@@ -31,7 +33,11 @@ fun test(fileName: String) {
     val processedContours = processContours(src.grayImage()
             .threshold(threshold = ImageProcessor.config.threshold,optional = ImageProcessor.config.optional)
             .findContours(ImageProcessor.config.mode, ImageProcessor.config.method))
+    display(processedContours, dest)
 //    val processedContours = ImageProcessor.process(fileName)
+}
+
+fun display(processedContours: Collection<Shape>, dest: opencv_core.Mat) {
     processedContours.forEachIndexed { i, shape ->
         Logger.debug("Shape #$i: $shape")
         when (shape) {

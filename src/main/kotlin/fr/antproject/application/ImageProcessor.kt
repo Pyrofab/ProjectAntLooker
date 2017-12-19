@@ -1,5 +1,6 @@
 package fr.antproject.application
 
+import fr.antproject.display
 import fr.antproject.model.diagram.IDiagram
 import fr.antproject.model.diagram.DiagramBase
 import fr.antproject.model.diagram.transformer.PetriTransformer
@@ -30,9 +31,12 @@ object ImageProcessor {
         val contours = findContours(thresholdImageMat = temp, mode = config.mode, method = config.method)
         val ret = processContours(contours)
 
+        display(ret, temp)
+
         Profiler.endStartSection("diagram")
         val averageArea = ret.sumByDouble { it.getArea() } / ret.size
         val diagramBase = DiagramBase(ret.filter { it.getArea() > config.minAcceptedArea * averageArea })
+        display(diagramBase, ImageMat(srcImg))
         val diagram = this.diagramTransformer.transformDiagram(diagramBase)
         Profiler.endSection()
         Profiler.endSection()
