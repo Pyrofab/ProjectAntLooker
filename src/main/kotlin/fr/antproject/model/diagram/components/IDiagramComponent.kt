@@ -1,3 +1,5 @@
 package fr.antproject.model.diagram.components
 
-interface IDiagramComponent
+interface IDiagramComponent {
+    fun export(): String
+}

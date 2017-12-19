@@ -9,6 +9,10 @@ import fr.antproject.model.diagram.components.IDiagramComponent
  */
 class PetriNet(private val nodes: Collection<IDiagramComponent>) : IDiagram, Collection<IDiagramComponent> by nodes {
 
+    override fun export(path: String) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
     override fun toString(): String {
         return "PetriNet(nodes=$nodes)"
     }
