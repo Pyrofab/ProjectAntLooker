@@ -37,8 +37,8 @@ class Point(ptr: Pointer) : opencv_core.Point(ptr) {
 }
 
 class MatVector : opencv_core.MatVector(), Iterable<opencv_core.Mat> {
-    override fun iterator(): Iterator<opencv_core.Mat> {
-        return object : Iterator<opencv_core.Mat> {
+    override fun iterator(): kotlin.collections.Iterator<opencv_core.Mat> {
+        return object : kotlin.collections.Iterator<opencv_core.Mat> {
             var index = 0L
             override fun hasNext() = index < size()
             override fun next() = get(index++)
