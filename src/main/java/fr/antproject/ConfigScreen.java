@@ -4,6 +4,7 @@ import fr.antproject.application.ImageProcessor;
 import fr.antproject.application.Logger;
 import fr.antproject.application.Profiler;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Slider;
 import javafx.stage.FileChooser;
 
 import java.io.File;
@@ -26,4 +27,6 @@ public class ConfigScreen {
             OpenCVTestKt.test(selectedFile);
         }
     }
+
+    public Slider threshold;
 }
