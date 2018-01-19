@@ -17,8 +17,8 @@ object Logger {
     private val printers = mutableMapOf<PrintStream, PrintStreamProperties>()
 
     init {
-        addOutputStream(System.out, INFO, WARN)               // uncomment that and comment the line below to remove debug logs
-//        addOutputStream(System.out, DEBUG, WARN)    // everything is printed to the standard output
+//        addOutputStream(System.out, INFO, WARN)               // uncomment that and comment the line below to remove debug logs
+        addOutputStream(System.out, DEBUG, WARN)    // everything is printed to the standard output
         addOutputStream(System.err, WARN, Integer.MAX_VALUE)    // except important stuff that get printed to the standard error output
         addOutputStream(PrintStream("profiling.txt"), PROFILING, PROFILING+1)
     }
