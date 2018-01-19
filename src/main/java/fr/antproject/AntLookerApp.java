@@ -24,6 +24,7 @@ public class AntLookerApp extends Application {
     public static AntLookerApp INSTANCE;
 
     private Stage primaryStage;
+    private FXMLLoader loader;
 
     public static void main(String[] args) {
         Profiler.INSTANCE.startSection("root");
@@ -45,7 +46,8 @@ public class AntLookerApp extends Application {
         INSTANCE = this;
         this.primaryStage = primaryStage;
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("configscreen.fxml"));
+            loader = new FXMLLoader(getClass().getResource("configscreen.fxml"));
+            Parent root = loader.load();
             primaryStage.setTitle("AntLook configuration screen");
             primaryStage.setScene(new Scene(root, 300, 275));
             primaryStage.show();
@@ -57,5 +59,9 @@ public class AntLookerApp extends Application {
 
     public Stage getPrimaryStage() {
         return primaryStage;
+    }
+
+    public FXMLLoader getLoader() {
+        return loader;
     }
 }

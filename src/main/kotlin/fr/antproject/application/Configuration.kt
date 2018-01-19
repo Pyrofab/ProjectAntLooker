@@ -1,5 +1,7 @@
 package fr.antproject.application
 
+import fr.antproject.AntLookerApp
+import fr.antproject.ConfigScreen
 import fr.antproject.utils.MAX_FUSE_DISTANCE
 import fr.antproject.utils.wrappers.ContourApproxMethod
 import fr.antproject.utils.wrappers.ContourRetrievalMode
@@ -7,18 +9,22 @@ import fr.antproject.utils.wrappers.ThresholdTypes
 import fr.antproject.utils.wrappers.ThresholdTypesOptional
 
 class Configuration {
+    private val configScreen: ConfigScreen
+        get() = AntLookerApp.INSTANCE.loader.getController()
+
     // threshold
-    var threshold: Double = 140.0
-    var maxValue: Double = 255.0
-    var algorithm: ThresholdTypes = ThresholdTypes.BINARY_INVERTED
-    var optional: ThresholdTypesOptional? = null
+    val threshold: Double// = 140.0
+        get() = configScreen.threshold.value
+    val maxValue: Double = 255.0
+    val algorithm: ThresholdTypes = ThresholdTypes.BINARY_INVERTED
+    val optional: ThresholdTypesOptional? = null
 
     // find contours
-    var mode: ContourRetrievalMode = ContourRetrievalMode.LIST
-    var method: ContourApproxMethod = ContourApproxMethod.TC89_KCOS
+    val mode: ContourRetrievalMode = ContourRetrievalMode.LIST
+    val method: ContourApproxMethod = ContourApproxMethod.TC89_KCOS
 
-    var maxFuseDistance: Double = MAX_FUSE_DISTANCE
+    val maxFuseDistance: Double = MAX_FUSE_DISTANCE
 
     /**The fraction of the average under which detected shapes are considered errors*/
-    var minAcceptedArea = 0.2
+    val minAcceptedArea = 0.2
 }
