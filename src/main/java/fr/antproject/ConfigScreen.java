@@ -10,7 +10,7 @@ import javafx.stage.FileChooser;
 import java.io.File;
 
 public class ConfigScreen {
-    public void openImage(ActionEvent actionEvent) {
+    public void openImage() {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Select an image to analyse");
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg"));
@@ -28,5 +28,13 @@ public class ConfigScreen {
         }
     }
 
+    public void reset(){
+        threshold.setValue(140);
+        maxValue.setValue(255);
+        maxFuseDistance.setValue(13.5);
+    }
+
     public Slider threshold;
+    public Slider maxValue;
+    public Slider maxFuseDistance;
 }

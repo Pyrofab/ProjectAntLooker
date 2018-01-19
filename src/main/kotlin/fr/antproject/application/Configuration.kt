@@ -15,7 +15,8 @@ class Configuration {
     // threshold
     val threshold: Double// = 140.0
         get() = configScreen.threshold.value
-    val maxValue: Double = 255.0
+    val maxValue: Double// = 255.0
+        get() = configScreen.maxValue.value
     val algorithm: ThresholdTypes = ThresholdTypes.BINARY_INVERTED
     val optional: ThresholdTypesOptional? = null
 
@@ -23,7 +24,8 @@ class Configuration {
     val mode: ContourRetrievalMode = ContourRetrievalMode.LIST
     val method: ContourApproxMethod = ContourApproxMethod.TC89_KCOS
 
-    val maxFuseDistance: Double = MAX_FUSE_DISTANCE
+    val maxFuseDistance: Double// = MAX_FUSE_DISTANCE
+        get() = configScreen.maxFuseDistance.value
 
     /**The fraction of the average under which detected shapes are considered errors*/
     val minAcceptedArea = 0.2

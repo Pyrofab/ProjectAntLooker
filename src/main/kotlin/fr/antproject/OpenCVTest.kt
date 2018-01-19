@@ -15,7 +15,17 @@ import fr.antproject.utils.wrappers.*
 import org.bytedeco.javacpp.opencv_core
 import org.bytedeco.javacpp.opencv_highgui.cvWaitKey
 import org.bytedeco.javacpp.opencv_highgui.imshow
+import org.bytedeco.javacpp.opencv_imgcodecs.imencode
 import org.bytedeco.javacpp.opencv_imgproc
+import java.awt.Image
+import java.awt.image.DataBufferByte
+import java.awt.image.BufferedImage
+import javax.swing.Spring.height
+import javax.swing.Spring.width
+import javax.imageio.ImageIO
+import java.io.ByteArrayInputStream
+import java.nio.ByteBuffer
+
 
 /**
  * Delegates main method to the javafx application main
@@ -74,6 +84,8 @@ fun display(processedContours: Collection<Shape>, dest: opencv_core.Mat) {
     }
     Profiler.startSection("user_input")
     imshow("img", dest)
+
+
     cvWaitKey()
     Profiler.endSection()
 }
