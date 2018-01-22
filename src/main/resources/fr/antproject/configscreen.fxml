@@ -93,7 +93,7 @@
                </center>
             </BorderPane>
       </GridPane>
-      <Pane prefHeight="200.0" prefWidth="200.0">
+      <Pane prefHeight="200.0" prefWidth="200.0" fx:id="imgPane">
             <ImageView fx:id="imageView" fitHeight="400.0" fitWidth="378.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" />
             <ProgressIndicator fx:id="progressIndicator" layoutX="163.0" layoutY="173.0" visible="false" />
       </Pane>

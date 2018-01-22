@@ -1,6 +1,5 @@
 package fr.antproject;
 
-import fr.antproject.application.ImageProcessor;
 import fr.antproject.application.Logger;
 import fr.antproject.application.Profiler;
 import fr.antproject.utils.wrappers.ContourApproxMethod;
@@ -12,9 +11,11 @@ import javafx.collections.ObservableList;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.Slider;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
+
 import java.io.File;
-import java.util.concurrent.Executors;
 
 public class ConfigScreen {
     private File chosenOne;
@@ -49,6 +50,7 @@ public class ConfigScreen {
         contourRetrievalMode.setValue(ContourRetrievalMode.LIST);
         contourApproxMethod.setItems(FXCollections.observableArrayList(ContourApproxMethod.values()));
         contourApproxMethod.setValue(ContourApproxMethod.TC89_KCOS);
+        imageView.fitWidthProperty().bind(imgPane.widthProperty());
     }
 
     public void refresh(){
@@ -76,6 +78,7 @@ public class ConfigScreen {
     public ChoiceBox<ContourRetrievalMode> contourRetrievalMode;
     public ChoiceBox<ContourApproxMethod> contourApproxMethod;
     public Slider minAcceptedArea;
-    public javafx.scene.image.ImageView imageView;
+    public Pane imgPane;
+    public ImageView imageView;
     public ProgressIndicator progressIndicator;
 }
