@@ -42,6 +42,6 @@ class TaskConfigReload(private val selectedFile: String, private val saveFile: S
     override fun failed() = clean()
 
     private fun clean() {
-        configScreen.imageView.isVisible = false
+        configScreen.progressIndicator.isVisible = false
     }
 }

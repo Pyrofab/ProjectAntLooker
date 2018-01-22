@@ -10,6 +10,7 @@ import fr.antproject.utils.wrappers.ThresholdTypesOptional;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.Slider;
 import javafx.stage.FileChooser;
 import java.io.File;
@@ -30,6 +31,7 @@ public class ConfigScreen {
         if (chosenOne == null) {
             Logger.info("No file selected", null);
         } else {
+            progressIndicator.setVisible(true);
             String selectedFile = chosenOne.getPath();
             ConfigReload.scheduleReload(selectedFile, "diagram.pnml");
 //            OpenCVTestKt.test(selectedFile);
@@ -50,8 +52,10 @@ public class ConfigScreen {
     }
 
     public void refresh(){
-        if (chosenOne != null)
+        if (chosenOne != null) {
+            progressIndicator.setVisible(true);
             ConfigReload.scheduleReload(chosenOne.getPath(), null);
+        }
     }
 
     public void reset(){
@@ -73,4 +77,5 @@ public class ConfigScreen {
     public ChoiceBox<ContourApproxMethod> contourApproxMethod;
     public Slider minAcceptedArea;
     public javafx.scene.image.ImageView imageView;
+    public ProgressIndicator progressIndicator;
 }
