@@ -49,7 +49,7 @@ public class AntLookerApp extends Application {
             loader = new FXMLLoader(getClass().getResource("configscreen.fxml"));
             Parent root = loader.load();
             primaryStage.setTitle("AntLook configuration screen");
-            primaryStage.setScene(new Scene(root, 800, 500));
+            primaryStage.setScene(new Scene(root));
             primaryStage.show();
         } catch (Exception e) {
             Logger.log(Level.SEVERE, "The fxml root file could not be loaded.", e);

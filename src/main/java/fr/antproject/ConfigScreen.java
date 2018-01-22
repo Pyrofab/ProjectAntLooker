@@ -3,7 +3,14 @@ package fr.antproject;
 import fr.antproject.application.ImageProcessor;
 import fr.antproject.application.Logger;
 import fr.antproject.application.Profiler;
+import fr.antproject.utils.wrappers.ContourApproxMethod;
+import fr.antproject.utils.wrappers.ContourRetrievalMode;
+import fr.antproject.utils.wrappers.ThresholdTypes;
+import fr.antproject.utils.wrappers.ThresholdTypesOptional;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Slider;
 import javafx.stage.FileChooser;
 
@@ -28,13 +35,34 @@ public class ConfigScreen {
         }
     }
 
+    public void initialize(){
+        thresholdTypes.setItems(FXCollections.observableArrayList(ThresholdTypes.values()));
+        thresholdTypes.setValue(ThresholdTypes.BINARY_INVERTED);
+        ObservableList<ThresholdTypesOptional> list = FXCollections.observableArrayList(ThresholdTypesOptional.values());
+        list.add(null);
+        thresholdTypesOptional.setItems(list);
+        thresholdTypesOptional.setValue(null);
+        contourRetrievalMode.setItems(FXCollections.observableArrayList(ContourRetrievalMode.values()));
+        contourRetrievalMode.setValue(ContourRetrievalMode.LIST);
+        contourApproxMethod.setItems(FXCollections.observableArrayList(ContourApproxMethod.values()));
+        contourApproxMethod.setValue(ContourApproxMethod.TC89_KCOS);
+    }
+
     public void reset(){
         threshold.setValue(140);
-        maxValue.setValue(255);
         maxFuseDistance.setValue(13.5);
+        thresholdTypes.setValue(ThresholdTypes.BINARY_INVERTED);
+        thresholdTypesOptional.setValue(null);
+        contourRetrievalMode.setValue(ContourRetrievalMode.LIST);
+        contourApproxMethod.setValue(ContourApproxMethod.TC89_KCOS);
+        minAcceptedArea.setValue(0.2);
     }
 
     public Slider threshold;
-    public Slider maxValue;
     public Slider maxFuseDistance;
+    public ChoiceBox<ThresholdTypes> thresholdTypes;
+    public ChoiceBox<ThresholdTypesOptional> thresholdTypesOptional;
+    public ChoiceBox<ContourRetrievalMode> contourRetrievalMode;
+    public ChoiceBox<ContourApproxMethod> contourApproxMethod;
+    public Slider minAcceptedArea;
 }
