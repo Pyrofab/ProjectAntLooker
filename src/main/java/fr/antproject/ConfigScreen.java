@@ -9,13 +9,9 @@ import fr.antproject.utils.wrappers.ThresholdTypes;
 import fr.antproject.utils.wrappers.ThresholdTypesOptional;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Slider;
-import javafx.scene.media.MediaView;
 import javafx.stage.FileChooser;
-
-import javax.swing.text.html.ImageView;
 import java.io.File;
 
 public class ConfigScreen {
