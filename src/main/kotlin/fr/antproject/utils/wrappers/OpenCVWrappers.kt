@@ -51,18 +51,18 @@ class MatVector : opencv_core.MatVector(), Iterable<opencv_core.Mat> {
 /**
  * A wrapper for [opencv_core.Mat], specifically for representing images
  *
- * Stores the various transformations that have been applied to the represented image
- * @constructor Creates an image matrix by casting the given pointer. Also sets transformations flags
+ * Stores the various transformations that have been applied to the represented displayedImage
+ * @constructor Creates an displayedImage matrix by casting the given pointer. Also sets transformations flags
  */
 class ImageMat(ptr: Pointer?, imgTransformFlags: Int = 0) : opencv_core.Mat(ptr) {
     /**
-     * Creates an image matrix from the given image object.
-     * @param img the image that this matrix will represent
+     * Creates an displayedImage matrix from the given displayedImage object.
+     * @param img the displayedImage that this matrix will represent
      */
     constructor(img: opencv_core.IplImage) : this(opencv_core.Mat(img))
 
     /**
-     * Creates an empty image matrix with the given transformation flags
+     * Creates an empty displayedImage matrix with the given transformation flags
      */
     constructor(imgTransformFlags: Int = 0) : this(opencv_core.Mat(), imgTransformFlags)
 
@@ -75,7 +75,7 @@ class ImageMat(ptr: Pointer?, imgTransformFlags: Int = 0) : opencv_core.Mat(ptr)
     fun hasTransform(transformOP: EnumImgTransforms) = (imgTransformFlags and transformOP.flag > 0)
 
     /**
-     * Adds an image transformation to this matrix
+     * Adds an displayedImage transformation to this matrix
      * @param transformOP A transformation that has been applied to this matrix
      */
     fun addTransform(transformOP: EnumImgTransforms) {
@@ -83,7 +83,7 @@ class ImageMat(ptr: Pointer?, imgTransformFlags: Int = 0) : opencv_core.Mat(ptr)
     }
 
     /**
-     * @return a list containing all image transformations that have been applied to this matrix
+     * @return a list containing all displayedImage transformations that have been applied to this matrix
      */
     private fun getTransforms() = EnumImgTransforms.values().filter { hasTransform(it) }
 
@@ -94,7 +94,7 @@ class ImageMat(ptr: Pointer?, imgTransformFlags: Int = 0) : opencv_core.Mat(ptr)
             try {
                 "${javaClass.name}[transforms=${getTransforms()},width=${arrayWidth()},height=${arrayHeight()},depth=${arrayDepth()},channels=${arrayChannels()}]"
             } catch (e: Exception) {
-                Logger.error("Exception while printing information for an image matrix: ${e.message}")
+                Logger.error("Exception while printing information for an displayedImage matrix: ${e.message}")
                 super.toString()
             }
         }
@@ -102,7 +102,7 @@ class ImageMat(ptr: Pointer?, imgTransformFlags: Int = 0) : opencv_core.Mat(ptr)
 }
 
 /**
- * Represents the various transformations that can be applied to an image matrix
+ * Represents the various transformations that can be applied to an displayedImage matrix
  */
 enum class EnumImgTransforms(val flag: Int) {
     NO_TRANSFORMATION(0),

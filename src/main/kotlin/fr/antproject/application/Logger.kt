@@ -96,7 +96,7 @@ object Logger {
      * Convenience method to print a message with the log level "Debug"
      */
     @JvmStatic
-    fun debug(message: Any) {
+    fun debug(message: Any?) {
         log(DEBUG, "[Debug] $message")
     }
 

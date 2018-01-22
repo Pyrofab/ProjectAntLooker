@@ -21,7 +21,7 @@ import org.bytedeco.javacpp.opencv_imgproc
 /**
  * Attempts to convert a vector of extracted contours into a list of appropriate shapes
  *
- * @param contours a vector of contours extracted from an image matrix
+ * @param contours a vector of contours extracted from an displayedImage matrix
  */
 fun processContours(contours: MatVector): Collection<Shape> =
         (filterDuplicates(extractPolys(contours)).map {
@@ -32,9 +32,9 @@ fun processContours(contours: MatVector): Collection<Shape> =
         })
 
 /**
- * Attempts to convert contours extracted from an image into proper polygons
+ * Attempts to convert contours extracted from an displayedImage into proper polygons
  *
- * @param contours a vector of contours extracted from an image matrix
+ * @param contours a vector of contours extracted from an displayedImage matrix
  */
 fun extractPolys(contours: MatVector): Collection<Polygon> {
     val ret = mutableListOf<Polygon>()
@@ -56,10 +56,10 @@ const val MAX_FUSE_DISTANCE = 13.5
 /**
  * Attempts to remove any shape that has been detected twice
  *
- * For each polygon extracted from the source image, checks if there's another polygon that has vertices
+ * For each polygon extracted from the source displayedImage, checks if there's another polygon that has vertices
  * closer than the [MAX_FUSE_DISTANCE].
  *
- * @param polys a list of unrefined polygons extracted from an image
+ * @param polys a list of unrefined polygons extracted from an displayedImage
  */
 fun filterDuplicates(polys: Collection<Polygon>): Collection<Polygon> {
     val temp = polys.toMutableList()
@@ -77,13 +77,13 @@ fun filterDuplicates(polys: Collection<Polygon>): Collection<Polygon> {
 }
 
 /**
- * Detects perfect circles from a source image
- * @param gray a matrix representing a gray image
- * @return a list of circles detected in the image
+ * Detects perfect circles from a source displayedImage
+ * @param gray a matrix representing a gray displayedImage
+ * @return a list of circles detected in the displayedImage
  */
 fun detectCircles(gray: ImageMat): List<Circle> {
     if (!gray.hasTransform(EnumImgTransforms.GRAY))
-        throw IllegalArgumentException("The source image must use 8 color channels. Use ImageMat#grayImage first.")
+        throw IllegalArgumentException("The source displayedImage must use 8 color channels. Use ImageMat#grayImage first.")
     opencv_imgproc.GaussianBlur(gray, gray, opencv_core.Size(9, 9), 2.0, 2.0, opencv_imgproc.CV_GAUSSIAN)
     opencv_highgui.imshow("img", gray)
     opencv_highgui.cvWaitKey()

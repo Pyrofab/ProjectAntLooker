@@ -13,13 +13,14 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Slider;
 import javafx.stage.FileChooser;
 import java.io.File;
+import java.util.concurrent.Executors;
 
 public class ConfigScreen {
     private File chosenOne;
 
     public void openImage() {
         FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Select an image to analyse");
+        fileChooser.setTitle("Select an displayedImage to analyse");
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg"));
         File initialD = new File("./data");     // gas gas gas
         fileChooser.setInitialDirectory(initialD.exists() ? initialD : new File("."));
@@ -30,8 +31,8 @@ public class ConfigScreen {
             Logger.info("No file selected", null);
         } else {
             String selectedFile = chosenOne.getPath();
-            ImageProcessor.INSTANCE.process(selectedFile).export("diagram.pnml");
-            OpenCVTestKt.test(selectedFile);
+            ConfigReload.scheduleReload(selectedFile, "diagram.pnml");
+//            OpenCVTestKt.test(selectedFile);
         }
     }
 
@@ -49,12 +50,8 @@ public class ConfigScreen {
     }
 
     public void refresh(){
-        if (chosenOne == null) {
-            Logger.info("No file selected", null);
-        } else {
-            String selectedFile = chosenOne.getPath();
-            ImageProcessor.INSTANCE.process(selectedFile).export("diagram.pnml");
-        }
+        if (chosenOne != null)
+            ConfigReload.scheduleReload(chosenOne.getPath(), null);
     }
 
     public void reset(){

@@ -3,7 +3,6 @@ package fr.antproject
 import fr.antproject.application.ImageProcessor
 import fr.antproject.application.Logger
 import fr.antproject.application.Profiler
-import fr.antproject.application.configScreen
 import fr.antproject.model.shapes.Circle
 import fr.antproject.model.shapes.Polygon
 import fr.antproject.model.shapes.Shape
@@ -14,17 +13,11 @@ import fr.antproject.utils.Color
 import fr.antproject.utils.processContours
 import fr.antproject.utils.wrappers.*
 import javafx.embed.swing.SwingFXUtils
-import javafx.scene.image.Image
 import org.bytedeco.javacpp.opencv_core
-import org.bytedeco.javacpp.opencv_highgui.cvWaitKey
-import org.bytedeco.javacpp.opencv_highgui.imshow
 import org.bytedeco.javacpp.opencv_imgproc
-import java.io.ByteArrayInputStream
-import javax.imageio.ImageIO
-import org.bytedeco.javacpp.opencv_core.IplImage
 import org.bytedeco.javacv.OpenCVFrameConverter
 import org.bytedeco.javacv.Java2DFrameConverter
-import java.awt.image.BufferedImage
+import java.util.logging.Level
 
 
 /**
@@ -33,11 +26,11 @@ import java.awt.image.BufferedImage
 fun main(args: Array<String>) = AntLookerApp.main(args)
 
 /**
- * Loads the image file at the given path and attempts to detect shapes in it
- * @param fileName the path to the image file
+ * Loads the displayedImage file at the given path and attempts to detect shapes in it
+ * @param fileName the path to the displayedImage file
  */
 fun test(fileName: String) {
-    Logger.info("Loading image at location $fileName")
+    Logger.info("Loading displayedImage at location $fileName")
     val src = ImageMat(loadImage(fileName))
     val dest = ImageMat(loadImage(fileName))
     val processedContours = processContours(src.grayImage()
@@ -49,7 +42,7 @@ fun test(fileName: String) {
 
 fun display(processedContours: Collection<Shape>, dest: opencv_core.Mat) {
     processedContours.forEachIndexed { i, shape ->
-        Logger.debug("Shape #$i: $shape")
+        Logger.log(Level.FINER, "Shape #$i: $shape")
         when (shape) {
             is Polygon -> when (shape) {
                 is DrawnRectangle -> shape.forEach {
@@ -65,14 +58,8 @@ fun display(processedContours: Collection<Shape>, dest: opencv_core.Mat) {
 //                    Logger.debug("Closest shape: ${processedContours.getClosestShape(shape.approx.lastPoint)}")
                 }
                 else -> {
-                    val average = shape.reduce { p, p1 -> p + p1 } / shape.nbPoints()
-                    val furthest = shape.maxBy { it distTo average }
-                    val index = shape.indexOf(furthest)
-                    val prev = shape[(if (index == 0) shape.nbPoints() else index) - 1]
-                    val next = shape[(if (index == shape.nbPoints() - 1) 0 else index + 1)]
                     shape.forEach {
-                        opencv_imgproc.drawMarker(dest, it,
-                                if (it == furthest) Color.RED else if (it == prev || it == next) Color.BLUE else Color.GREEN, 0, 20, 1, 8)
+                        opencv_imgproc.drawMarker(dest, it, Color.GREEN, 0, 20, 1, 8)
                     }
                 }
             }
@@ -94,8 +81,7 @@ fun display(processedContours: Collection<Shape>, dest: opencv_core.Mat) {
     val grabberConverter = OpenCVFrameConverter.ToIplImage()
     val paintConverter = Java2DFrameConverter()
     val ptdr = grabberConverter.convert(result)
-    val image = SwingFXUtils.toFXImage(paintConverter.getBufferedImage(ptdr, 1.0),null)
-    configScreen.imageView.image = image
+    TaskConfigReload.displayedImage = SwingFXUtils.toFXImage(paintConverter.getBufferedImage(ptdr, 1.0),null)
 
     //cvWaitKey()
     Profiler.endSection()

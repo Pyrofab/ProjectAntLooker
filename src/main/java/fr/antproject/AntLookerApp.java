@@ -17,7 +17,7 @@ import java.util.logging.Level;
 /**
  * Main class of the AntLooker application.<br/>
  * <p>
- * Starts a javafx application to choose an image file and passes the result to the recognition system
+ * Starts a javafx application to choose an displayedImage file and passes the result to the recognition system
  */
 public class AntLookerApp extends Application {
 
