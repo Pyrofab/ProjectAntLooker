@@ -34,6 +34,14 @@ class TaskConfigReload(private val selectedFile: String, private val saveFile: S
             this.get().export(saveFile)
         }
         configScreen.imageView.image = displayedImage
+        clean()
         Logger.debug("Refreshed the view")
+    }
+
+    override fun cancelled() = clean()
+    override fun failed() = clean()
+
+    private fun clean() {
+        configScreen.imageView.isVisible = false
     }
 }
