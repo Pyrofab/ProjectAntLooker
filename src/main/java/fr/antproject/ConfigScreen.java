@@ -51,6 +51,7 @@ public class ConfigScreen {
         contourApproxMethod.setItems(FXCollections.observableArrayList(ContourApproxMethod.values()));
         contourApproxMethod.setValue(ContourApproxMethod.TC89_KCOS);
         imageView.fitWidthProperty().bind(imgPane.widthProperty());
+        imageView.fitHeightProperty().bind(imgPane.heightProperty());
     }
 
     public void refresh(){
