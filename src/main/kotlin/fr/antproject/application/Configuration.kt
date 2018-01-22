@@ -9,9 +9,10 @@ import fr.antproject.utils.wrappers.ThresholdTypes
 import fr.antproject.utils.wrappers.ThresholdTypesOptional
 import java.lang.reflect.Array.get
 
+val configScreen: ConfigScreen
+    get() = AntLookerApp.INSTANCE.loader.getController()
+
 class Configuration {
-    private val configScreen: ConfigScreen
-        get() = AntLookerApp.INSTANCE.loader.getController()
 
     // threshold
     val threshold: Double// = 140.0

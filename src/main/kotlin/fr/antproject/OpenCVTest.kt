@@ -3,6 +3,7 @@ package fr.antproject
 import fr.antproject.application.ImageProcessor
 import fr.antproject.application.Logger
 import fr.antproject.application.Profiler
+import fr.antproject.application.configScreen
 import fr.antproject.model.shapes.Circle
 import fr.antproject.model.shapes.Polygon
 import fr.antproject.model.shapes.Shape
@@ -12,19 +13,18 @@ import fr.antproject.model.shapes.drawn.DrawnRectangle
 import fr.antproject.utils.Color
 import fr.antproject.utils.processContours
 import fr.antproject.utils.wrappers.*
+import javafx.embed.swing.SwingFXUtils
+import javafx.scene.image.Image
 import org.bytedeco.javacpp.opencv_core
 import org.bytedeco.javacpp.opencv_highgui.cvWaitKey
 import org.bytedeco.javacpp.opencv_highgui.imshow
-import org.bytedeco.javacpp.opencv_imgcodecs.imencode
 import org.bytedeco.javacpp.opencv_imgproc
-import java.awt.Image
-import java.awt.image.DataBufferByte
-import java.awt.image.BufferedImage
-import javax.swing.Spring.height
-import javax.swing.Spring.width
-import javax.imageio.ImageIO
 import java.io.ByteArrayInputStream
-import java.nio.ByteBuffer
+import javax.imageio.ImageIO
+import org.bytedeco.javacpp.opencv_core.IplImage
+import org.bytedeco.javacv.OpenCVFrameConverter
+import org.bytedeco.javacv.Java2DFrameConverter
+import java.awt.image.BufferedImage
 
 
 /**
@@ -83,9 +83,20 @@ fun display(processedContours: Collection<Shape>, dest: opencv_core.Mat) {
         }
     }
     Profiler.startSection("user_input")
-    imshow("img", dest)
+    //imshow("img", dest)
 
+    val iplConverter = OpenCVFrameConverter.ToIplImage()
+    val matConverter = OpenCVFrameConverter.ToMat()
+    val frame = matConverter.convert(dest)
+    val img = iplConverter.convert(frame)
+    val result = img.clone()
+    img.release()
+    val grabberConverter = OpenCVFrameConverter.ToIplImage()
+    val paintConverter = Java2DFrameConverter()
+    val ptdr = grabberConverter.convert(result)
+    val image = SwingFXUtils.toFXImage(paintConverter.getBufferedImage(ptdr, 1.0),null)
+    configScreen.imageView.image = image
 
-    cvWaitKey()
+    //cvWaitKey()
     Profiler.endSection()
 }

@@ -32,7 +32,7 @@
          <children>
             <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                <center>
-                  <Slider fx:id="threshold" majorTickUnit="140.0" max="255.0" minorTickCount="5" showTickLabels="true" showTickMarks="true" value="140.0" BorderPane.alignment="CENTER" />
+                  <Slider fx:id="threshold" majorTickUnit="140.0" max="255.0" minorTickCount="5" onKeyReleased="#refresh" onMouseReleased="#refresh" showTickLabels="true" showTickMarks="true" value="140.0" BorderPane.alignment="CENTER" />
                </center>
                <top>
                   <Label text="Threshold" BorderPane.alignment="CENTER" />
@@ -40,7 +40,7 @@
             </BorderPane>
             <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                <center>
-                  <Slider fx:id="maxFuseDistance" max="50.0" minorTickCount="5" showTickLabels="true" showTickMarks="true" value="13.5" BorderPane.alignment="CENTER" />
+                  <Slider fx:id="maxFuseDistance" max="50.0" minorTickCount="5" onKeyReleased="#refresh" onMouseReleased="#refresh" showTickLabels="true" showTickMarks="true" value="13.5" BorderPane.alignment="CENTER" />
                </center>
                <top>
                   <Label text="MaxFuseDistance" BorderPane.alignment="CENTER" />
@@ -48,21 +48,21 @@
             </BorderPane>
             <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
                <center>
-                  <ChoiceBox fx:id="thresholdTypesOptional" prefWidth="150.0" BorderPane.alignment="CENTER" />
+                  <ChoiceBox fx:id="thresholdTypesOptional" onAction="#refresh" prefWidth="150.0" BorderPane.alignment="CENTER" />
                </center>
                <top>
                   <Label text="ThresholdTypeOptional" BorderPane.alignment="CENTER" />
                </top></BorderPane>
             <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
                <center>
-                  <ChoiceBox fx:id="contourRetrievalMode" prefWidth="150.0" BorderPane.alignment="CENTER" />
+                  <ChoiceBox fx:id="contourRetrievalMode" onAction="#refresh" prefWidth="150.0" BorderPane.alignment="CENTER" />
                </center>
                <top>
                   <Label text="ContourRetrievalMode" BorderPane.alignment="CENTER" />
                </top></BorderPane>
             <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
                <center>
-                  <ChoiceBox fx:id="contourApproxMethod" prefWidth="150.0" BorderPane.alignment="CENTER" />
+                  <ChoiceBox fx:id="contourApproxMethod" onAction="#refresh" prefWidth="150.0" BorderPane.alignment="CENTER" />
                </center>
                <top>
                   <Label text="ContourApproxMethod" BorderPane.alignment="CENTER" />
@@ -79,7 +79,7 @@
             </BorderPane>
             <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
                <center>
-                  <ChoiceBox fx:id="thresholdTypes" prefWidth="150.0" BorderPane.alignment="CENTER" />
+                  <ChoiceBox fx:id="thresholdTypes" onAction="#refresh" prefWidth="150.0" BorderPane.alignment="CENTER" />
                </center>
                <top>
                   <Label text="ThresholdType" BorderPane.alignment="CENTER" />
@@ -90,14 +90,14 @@
                   <Label text="MinAcceptedArea" BorderPane.alignment="CENTER" />
                </top>
                <center>
-                  <Slider fx:id="minAcceptedArea" blockIncrement="0.1" majorTickUnit="0.5" max="1.0" showTickLabels="true" showTickMarks="true" value="0.2" BorderPane.alignment="CENTER" />
+                  <Slider fx:id="minAcceptedArea" blockIncrement="0.1" majorTickUnit="0.5" max="1.0" onKeyReleased="#refresh" onMouseReleased="#refresh" showTickLabels="true" showTickMarks="true" value="0.2" BorderPane.alignment="CENTER" />
                </center>
             </BorderPane>
          </children>
       </GridPane>
       <Pane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="126.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imageView" fitHeight="400.0" fitWidth="378.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
   </items>

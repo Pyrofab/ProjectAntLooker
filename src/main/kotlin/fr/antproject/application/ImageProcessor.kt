@@ -25,8 +25,10 @@ object ImageProcessor {
         grayImage(img = temp, out = temp)
         threshold(grayImage = temp, threshold = config.threshold, maxValue = config.maxValue,
                 algorithm = config.algorithm, optional = config.optional, out = temp)
+        /*
         opencv_highgui.imshow("img", temp)
         opencv_highgui.cvWaitKey()
+        */
 
         val contours = findContours(thresholdImageMat = temp, mode = config.mode, method = config.method)
         val ret = processContours(contours)

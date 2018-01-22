@@ -12,11 +12,15 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Slider;
+import javafx.scene.media.MediaView;
 import javafx.stage.FileChooser;
 
+import javax.swing.text.html.ImageView;
 import java.io.File;
 
 public class ConfigScreen {
+    private File chosenOne;
+
     public void openImage() {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Select an image to analyse");
@@ -24,12 +28,12 @@ public class ConfigScreen {
         File initialD = new File("./data");     // gas gas gas
         fileChooser.setInitialDirectory(initialD.exists() ? initialD : new File("."));
         Profiler.INSTANCE.startSection("user_input");
-        File file = fileChooser.showOpenDialog(AntLookerApp.INSTANCE.getPrimaryStage());
+        chosenOne = fileChooser.showOpenDialog(AntLookerApp.INSTANCE.getPrimaryStage());
         Profiler.INSTANCE.endSection();
-        if (file == null) {
+        if (chosenOne == null) {
             Logger.info("No file selected", null);
         } else {
-            String selectedFile = file.getPath();
+            String selectedFile = chosenOne.getPath();
             ImageProcessor.INSTANCE.process(selectedFile).export("diagram.pnml");
             OpenCVTestKt.test(selectedFile);
         }
@@ -48,6 +52,15 @@ public class ConfigScreen {
         contourApproxMethod.setValue(ContourApproxMethod.TC89_KCOS);
     }
 
+    public void refresh(){
+        if (chosenOne == null) {
+            Logger.info("No file selected", null);
+        } else {
+            String selectedFile = chosenOne.getPath();
+            ImageProcessor.INSTANCE.process(selectedFile).export("diagram.pnml");
+        }
+    }
+
     public void reset(){
         threshold.setValue(140);
         maxFuseDistance.setValue(13.5);
@@ -56,6 +69,7 @@ public class ConfigScreen {
         contourRetrievalMode.setValue(ContourRetrievalMode.LIST);
         contourApproxMethod.setValue(ContourApproxMethod.TC89_KCOS);
         minAcceptedArea.setValue(0.2);
+        refresh();
     }
 
     public Slider threshold;
@@ -65,4 +79,5 @@ public class ConfigScreen {
     public ChoiceBox<ContourRetrievalMode> contourRetrievalMode;
     public ChoiceBox<ContourApproxMethod> contourApproxMethod;
     public Slider minAcceptedArea;
+    public javafx.scene.image.ImageView imageView;
 }
