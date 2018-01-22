@@ -16,8 +16,9 @@ private val RELOAD_THREAD = Executors.newSingleThreadExecutor()
 
 fun scheduleReload(inputFile: String, saveFile: String?) {
     Logger.debug("${Thread.currentThread().stackTrace[2]}: ${running?.isDone}")
-    if (running?.isDone != false)
+    if (running?.isDone != false) {
         running = RELOAD_THREAD.submit(TaskConfigReload(inputFile, saveFile))
+    }
     else Logger.debug("attempted to refresh but a refresh is already in progress")
 }
 
@@ -25,6 +26,10 @@ class TaskConfigReload(private val selectedFile: String, private val saveFile: S
 
     companion object {
         internal var displayedImage: Image? = null
+
+        init {
+            AntLookerApp.INSTANCE.addCloseRequestHandler { RELOAD_THREAD.shutdownNow() }
+        }
     }
 
     override fun call(): IDiagram = ImageProcessor.process(selectedFile)

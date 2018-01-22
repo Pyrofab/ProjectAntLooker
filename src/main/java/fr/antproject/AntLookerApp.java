@@ -5,13 +5,19 @@ import fr.antproject.application.Logger;
 import fr.antproject.application.Profiler;
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 import java.util.logging.Level;
 
 /**
@@ -25,6 +31,8 @@ public class AntLookerApp extends Application {
 
     private Stage primaryStage;
     private FXMLLoader loader;
+
+    private Set<EventHandler<WindowEvent>> closeHandlers = new HashSet<>();
 
     public static void main(String[] args) {
         Profiler.INSTANCE.startSection("root");
@@ -50,6 +58,7 @@ public class AntLookerApp extends Application {
             Parent root = loader.load();
             primaryStage.setTitle("AntLook configuration screen");
             primaryStage.setScene(new Scene(root));
+            primaryStage.setOnCloseRequest(event -> closeHandlers.forEach(handler -> handler.handle(event)));
             primaryStage.show();
         } catch (Exception e) {
             Logger.log(Level.SEVERE, "The fxml root file could not be loaded.", e);
@@ -63,5 +72,9 @@ public class AntLookerApp extends Application {
 
     public FXMLLoader getLoader() {
         return loader;
+    }
+
+    public void addCloseRequestHandler(EventHandler<WindowEvent> closeRequestHandler) {
+        this.closeHandlers.add(closeRequestHandler);
     }
 }
