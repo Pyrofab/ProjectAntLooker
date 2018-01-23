@@ -77,9 +77,12 @@ public class ConfigScreen {
         fileChooser.setTitle("Select a file to save the diagram");
         File initialD = new File("./data");     // gas gas gas
         fileChooser.setInitialDirectory(initialD.exists() ? initialD : new File("."));
-        Profiler.INSTANCE.startSection("user_output");
-        ConfigReload.scheduleReload(chosenOne.getPath(), fileChooser.showSaveDialog(AntLookerApp.INSTANCE.getPrimaryStage()).getPath());
-        Profiler.INSTANCE.endSection();
+        File chosenTwo = fileChooser.showSaveDialog(AntLookerApp.INSTANCE.getPrimaryStage());
+        if (chosenOne == null || chosenTwo == null) {
+            Logger.info("No file selected", null);
+        } else {
+            ConfigReload.scheduleReload(chosenOne.getPath(), chosenTwo.getPath());
+        }
     }
 
     public Slider threshold;
