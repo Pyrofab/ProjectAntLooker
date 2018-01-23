@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AntProject.iml" filepath="$PROJECT_DIR$/.idea/modules/AntProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AntProject_lib.iml" filepath="$PROJECT_DIR$/.idea/modules/AntProject_lib.iml" group="AntProject" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AntProject_main.iml" filepath="$PROJECT_DIR$/.idea/modules/AntProject_main.iml" group="AntProject" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AntProject_test.iml" filepath="$PROJECT_DIR$/.idea/modules/AntProject_test.iml" group="AntProject" />
     </modules>

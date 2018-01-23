@@ -20,6 +20,21 @@ import java.io.File;
 public class ConfigScreen {
     private File chosenOne;
 
+    public void initialize(){
+        thresholdTypes.setItems(FXCollections.observableArrayList(ThresholdTypes.values()));
+        thresholdTypes.setValue(ThresholdTypes.BINARY_INVERTED);
+        ObservableList<ThresholdTypesOptional> list = FXCollections.observableArrayList(ThresholdTypesOptional.values());
+        list.add(null);
+        thresholdTypesOptional.setItems(list);
+        thresholdTypesOptional.setValue(null);
+        contourRetrievalMode.setItems(FXCollections.observableArrayList(ContourRetrievalMode.values()));
+        contourRetrievalMode.setValue(ContourRetrievalMode.LIST);
+        contourApproxMethod.setItems(FXCollections.observableArrayList(ContourApproxMethod.values()));
+        contourApproxMethod.setValue(ContourApproxMethod.TC89_KCOS);
+        imageView.fitWidthProperty().bind(imgPane.widthProperty());
+        imageView.fitHeightProperty().bind(imgPane.heightProperty());
+    }
+
     public void openImage() {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Select an displayedImage to analyse");
@@ -37,21 +52,6 @@ public class ConfigScreen {
             ConfigReload.scheduleReload(selectedFile, null);
 //            OpenCVTestKt.test(selectedFile);
         }
-    }
-
-    public void initialize(){
-        thresholdTypes.setItems(FXCollections.observableArrayList(ThresholdTypes.values()));
-        thresholdTypes.setValue(ThresholdTypes.BINARY_INVERTED);
-        ObservableList<ThresholdTypesOptional> list = FXCollections.observableArrayList(ThresholdTypesOptional.values());
-        list.add(null);
-        thresholdTypesOptional.setItems(list);
-        thresholdTypesOptional.setValue(null);
-        contourRetrievalMode.setItems(FXCollections.observableArrayList(ContourRetrievalMode.values()));
-        contourRetrievalMode.setValue(ContourRetrievalMode.LIST);
-        contourApproxMethod.setItems(FXCollections.observableArrayList(ContourApproxMethod.values()));
-        contourApproxMethod.setValue(ContourApproxMethod.TC89_KCOS);
-        imageView.fitWidthProperty().bind(imgPane.widthProperty());
-        imageView.fitHeightProperty().bind(imgPane.heightProperty());
     }
 
     public void refresh(){

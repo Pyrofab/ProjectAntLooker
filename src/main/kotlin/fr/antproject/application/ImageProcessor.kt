@@ -11,16 +11,25 @@ import fr.antproject.model.shapes.drawn.ShapeRegistry
 import fr.antproject.utils.MAX_FUSE_DISTANCE
 import fr.antproject.utils.extractPolys
 import fr.antproject.utils.wrappers.*
-import org.bytedeco.javacpp.opencv_highgui
+import java.util.*
 
 object ImageProcessor {
 
     val config = Configuration()
     var diagramTransformer : IDiagramTransformer<*> = PetriTransformer()
 
+    @get:Synchronized
+    @set:Synchronized
+    private var diagramBase: DiagramBase? = null
+
     fun process(fileName: String): IDiagram {
+        processImage(fileName)
+        return generateDiagram()
+    }
+
+    fun processImage(fileName: String) {
         Profiler.startSection("processing")
-        Profiler.startSection("displayedImage")
+        Profiler.startSection("image")
         val srcImg = loadImage(fileName)
         val temp = ImageMat(srcImg)
         grayImage(img = temp, out = temp)
@@ -36,14 +45,22 @@ object ImageProcessor {
 
         display(ret, temp)
 
-        Profiler.endStartSection("diagram")
+        Profiler.endStartSection("diagram_base")
+
         val averageArea = ret.sumByDouble(DrawnShape::getArea) / ret.size
         val diagramBase = DiagramBase(ret.filter { it.getArea() > config.minAcceptedArea * averageArea })
         display(diagramBase, ImageMat(srcImg))
-        val diagram = this.diagramTransformer.transformDiagram(diagramBase)
-        Profiler.endSection()
-        Profiler.endSection()
+        this.diagramBase = diagramBase
 
+        Profiler.endSection()
+        Profiler.endSection()
+    }
+
+    fun generateDiagram(): IDiagram {
+        Profiler.startSection("diagram")
+        val diagram = this.diagramTransformer.transformDiagram(
+                Objects.requireNonNull(diagramBase, "No image has been previously processed"))
+        Profiler.endSection()
         return diagram
     }
 

@@ -3,6 +3,7 @@ package fr.antproject;
 import fr.antproject.application.ImageProcessor;
 import fr.antproject.application.Logger;
 import fr.antproject.application.Profiler;
+import fr.antproject.lib.TestLibraryGud;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -22,6 +23,7 @@ public class AntLookerApp extends Application {
 
     public static AntLookerApp INSTANCE;
 
+    public static TestLibraryGud test;
     private Stage primaryStage;
     private FXMLLoader loader;
 
@@ -30,9 +32,9 @@ public class AntLookerApp extends Application {
     public static void main(String[] args) {
         Profiler.INSTANCE.startSection("root");
         // if we get arguments passed in the command line, attempt to process the diagram directly with default settings
-        if (args.length > 1)
+        if (args.length > 1) {
             ImageProcessor.INSTANCE.process(args[0]).export(args[1]);
-        else {
+        } else {
             launch(args);
         }
         Profiler.INSTANCE.endSection();
@@ -67,7 +69,7 @@ public class AntLookerApp extends Application {
         return loader;
     }
 
-    public void addCloseRequestHandler(Runnable closeRequestHandler) {
-        this.closeHandlers.add(closeRequestHandler);
+    public void addExitListener(Runnable closeListener) {
+        this.closeHandlers.add(closeListener);
     }
 }
