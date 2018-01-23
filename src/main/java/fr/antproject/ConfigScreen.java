@@ -34,7 +34,7 @@ public class ConfigScreen {
         } else {
             progressIndicator.setVisible(true);
             String selectedFile = chosenOne.getPath();
-            ConfigReload.scheduleReload(selectedFile, "diagram.pnml");
+            ConfigReload.scheduleReload(selectedFile, null);
 //            OpenCVTestKt.test(selectedFile);
         }
     }
@@ -70,6 +70,16 @@ public class ConfigScreen {
         contourApproxMethod.setValue(ContourApproxMethod.TC89_KCOS);
         minAcceptedArea.setValue(0.2);
         refresh();
+    }
+
+    public void export(){
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Select a file to save the diagram");
+        File initialD = new File("./data");     // gas gas gas
+        fileChooser.setInitialDirectory(initialD.exists() ? initialD : new File("."));
+        Profiler.INSTANCE.startSection("user_output");
+        ConfigReload.scheduleReload(chosenOne.getPath(), fileChooser.showSaveDialog(AntLookerApp.INSTANCE.getPrimaryStage()).getPath());
+        Profiler.INSTANCE.endSection();
     }
 
     public Slider threshold;
