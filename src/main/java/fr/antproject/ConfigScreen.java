@@ -72,7 +72,7 @@ public class ConfigScreen {
         refresh();
     }
 
-    public void export(){
+    public void saveFile(){
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Select a file to save the diagram");
         File initialD = new File("./data");     // gas gas gas
@@ -83,6 +83,10 @@ public class ConfigScreen {
         } else {
             ConfigReload.scheduleReload(chosenOne.getPath(), chosenTwo.getPath());
         }
+    }
+
+    public void sendByMail(){
+
     }
 
     public Slider threshold;
