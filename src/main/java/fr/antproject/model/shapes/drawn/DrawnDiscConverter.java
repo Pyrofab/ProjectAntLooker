@@ -9,7 +9,12 @@ import java.util.Collection;
 public class DrawnDiscConverter implements DrawnShape.IShapeConverter {
     @Nullable
     @Override
-    public DrawnShape getFromPoly(@NotNull Polygon shape) {
-        return null;
+    public DrawnShape getFromPoly(@NotNull Polygon shape){
+
+        if(shape instanceof DrawnDisc){
+            return null;
+        }else {
+            return null;
+        }
     }
 }

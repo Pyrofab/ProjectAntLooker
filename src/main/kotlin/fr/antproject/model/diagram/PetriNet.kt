@@ -9,7 +9,7 @@ import java.io.PrintStream
  *
  * Petri nets are made of places, transitions and tokens
  */
-class PetriNet(private val nodes: Collection<IDiagramComponent>, private val name: String = "n1") : IDiagram, Collection<IDiagramComponent> by nodes {
+class PetriNet(private val nodes: MutableCollection<out IDiagramComponent>, private val name : String) : IDiagram, Collection<IDiagramComponent> by nodes {
 
     companion object {
         const val HEADER = "<pnml xmlns=\"http://www.pnml.org/\">"

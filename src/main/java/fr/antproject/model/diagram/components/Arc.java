@@ -27,8 +27,6 @@ public class Arc<S extends DiagramNode, T extends DiagramNode> implements IExpor
                 '}';
     }
 
-
-
     @NotNull
     @Override
     public String export() {

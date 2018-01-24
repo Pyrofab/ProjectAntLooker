@@ -10,13 +10,16 @@ import fr.antproject.model.shapes.drawn.DrawnArrow
 import fr.antproject.model.shapes.drawn.DrawnCircle
 import fr.antproject.model.shapes.drawn.DrawnRectangle
 import fr.antproject.utils.Color
+import fr.antproject.utils.Color.BLUE
 import fr.antproject.utils.processContours
-import fr.antproject.utils.wrappers.*
+import fr.antproject.utils.wrappers.findContours
 import javafx.embed.swing.SwingFXUtils
-import org.bytedeco.javacpp.opencv_core
+import marvin.image.MarvinImage
 import org.bytedeco.javacpp.opencv_imgproc
 import org.bytedeco.javacv.OpenCVFrameConverter
 import org.bytedeco.javacv.Java2DFrameConverter
+import java.awt.BasicStroke
+import java.awt.geom.Ellipse2D
 import java.util.logging.Level
 
 
@@ -31,58 +34,51 @@ fun main(args: Array<String>) = AntLookerApp.main(args)
  */
 fun test(fileName: String) {
     Logger.info("Loading displayedImage at location $fileName")
-    val src = ImageMat(loadImage(fileName))
-    val dest = ImageMat(loadImage(fileName))
-    val processedContours = processContours(src.grayImage()
-            .threshold(threshold = ImageProcessor.config.threshold,optional = ImageProcessor.config.optional)
-            .findContours(ImageProcessor.config.mode, ImageProcessor.config.method))
-    display(processedContours, dest)
-//    val processedContours = ImageProcessor.process(fileName)
+    val src = marvin.io.MarvinImageIO.loadImage(fileName)
+    findContours(src);
 }
 
-fun display(processedContours: Collection<Shape>, dest: opencv_core.Mat) {
+fun display(processedContours: Collection<Shape>, dest: MarvinImage) {
     processedContours.forEachIndexed { i, shape ->
         Logger.log(Level.FINER, "Shape #$i: $shape")
         when (shape) {
             is Polygon -> when (shape) {
                 is DrawnRectangle -> shape.forEach {
-                    opencv_imgproc.drawMarker(dest, it,
-                            Color.BLUE, 0, 20, 1, 8)
+                    dest.drawLine(it.x() - 1, it.y() - 1, it.x() + 1, it.y() + 1, java.awt.Color.BLUE)
                 }
                 is DrawnCircle -> {
-                    opencv_imgproc.circle(dest, shape.approx.center, 3, Color.GREEN, -1, 8, 0)
-                    opencv_imgproc.circle(dest, shape.approx.center, shape.approx.radius, Color.RED, 3, 8, 0)
+                    val out = dest.getBufferedImage()
+                    val g = out.createGraphics()
+                    g.setColor(java.awt.Color.RED)
+                    val basic = BasicStroke(3f)
+                    g.setStroke(basic)
+                    val ellipse = Ellipse2D.Double(shape.approx.center.x().toDouble(), shape.approx.center.y().toDouble(), shape.approx.radius.toDouble(), shape.approx.radius.toDouble())
+                    g.draw(ellipse)
                 }
                 is DrawnArrow -> {
-                    opencv_imgproc.arrowedLine(dest, shape.approx.startPoint, shape.approx.lastPoint, Color.ORANGE)
+                    dest.drawLine(shape.approx.startPoint.x() - 1, shape.approx.startPoint.y() - 1, shape.approx.lastPoint.x() + 1, shape.approx.lastPoint.y() + 1, java.awt.Color.ORANGE)
 //                    Logger.debug("Closest shape: ${processedContours.getClosestShape(shape.approx.lastPoint)}")
                 }
                 else -> {
-                    shape.forEach {
-                        opencv_imgproc.drawMarker(dest, it, Color.GREEN, 0, 20, 1, 8)
-                    }
+                    shape
+                            .forEach {
+                                dest.drawLine(it.x() - 1, it.y() - 1, it.x() + 1, it.y() + 1, java.awt.Color.GREEN)
+                            }
                 }
             }
-            is Circle -> {
-                opencv_imgproc.circle(dest, shape.center, 3, Color.GREEN, -1, 8, 0)
-                opencv_imgproc.circle(dest, shape.center, shape.radius, Color.RED, 3, 8, 0)
-            }
+
         }
+
+
+        Profiler.startSection("user_input")
+        //imshow("img", dest)
+
+       //TODO
+
+        //TaskConfigReload.displayedImage = SwingFXUtils.toFXImage(paintConverter.getBufferedImage(ptdr, 1.0), null)
+
+        //cvWaitKey()
+        Profiler.endSection()
     }
-    Profiler.startSection("user_input")
-    //imshow("img", dest)
-
-    val iplConverter = OpenCVFrameConverter.ToIplImage()
-    val matConverter = OpenCVFrameConverter.ToMat()
-    val frame = matConverter.convert(dest)
-    val img = iplConverter.convert(frame)
-    val result = img.clone()
-    img.release()
-    val grabberConverter = OpenCVFrameConverter.ToIplImage()
-    val paintConverter = Java2DFrameConverter()
-    val ptdr = grabberConverter.convert(result)
-    TaskConfigReload.displayedImage = SwingFXUtils.toFXImage(paintConverter.getBufferedImage(ptdr, 1.0),null)
-
-    //cvWaitKey()
-    Profiler.endSection()
 }
+

@@ -2,11 +2,12 @@
 
 package fr.antproject.utils.wrappers
 
-import fr.antproject.application.Logger
 import fr.antproject.application.Profiler
+import fr.antproject.model.shapes.Polygon
+import marvin.MarvinPluginCollection
+import marvin.MarvinPluginCollection.floodfillSegmentationBlob
+import marvin.image.MarvinImage
 import org.bytedeco.javacpp.opencv_core
-import org.bytedeco.javacpp.opencv_imgcodecs
-import org.bytedeco.javacpp.opencv_imgproc
 import java.io.FileNotFoundException
 
 /**
@@ -16,9 +17,9 @@ import java.io.FileNotFoundException
  *
  * @throws FileNotFoundException
  */
-fun loadImage(location: String): opencv_core.IplImage {
+fun loadImage(location: String): MarvinImage {
     Profiler.startSection("loadImage")
-    val ret = opencv_imgcodecs.cvLoadImage(location)
+    val ret = marvin.io.MarvinImageIO.loadImage(location)
             ?: throw FileNotFoundException("$location: this file does not exist")
     Profiler.endSection()
     return ret
@@ -30,53 +31,11 @@ fun loadImage(location: String): opencv_core.IplImage {
  * @param out [ matrix][ImageMat] in which the result will be stored
  * @return out, for operation chaining
  */
-fun grayImage(img: ImageMat, out: ImageMat = ImageMat(img.imgTransformFlags)): ImageMat {
+fun grayImage(img : MarvinImage, out : MarvinImage): MarvinImage {
     Profiler.startSection("grayImage")
-    opencv_imgproc.cvtColor(img, out, opencv_imgproc.COLOR_BGR2GRAY)
-    out.addTransform(EnumImgTransforms.GRAY)
-    Profiler.endSection()
+    MarvinPluginCollection.grayScale(img, out);
     return out
 }
-
-/**
- * An extension version of [grayImage]. Applies the transformation directly to the instance
- * @receiver [ImageMat]
- * @see grayImage
- */
-fun ImageMat.grayImage(copy: Boolean = true) = grayImage(this, if (copy) ImageMat(this.imgTransformFlags) else this)
-
-/**
- * Applies a threshold to an displayedImage, making all data binary depending on passed parameters
- * @param grayImage [a matrix][ImageMat] representing the source displayedImage (gray it first for better results)
- * @param threshold the threshold value used by the algorithm
- * @param maxValue a maximum value used by some algorithms to replace values above the threshold
- * @param algorithm a threshold algorithm to use
- * @param optional an additional algorithm to get an optimal threshold value
- * @param out a matrix in which the result will be stored
- * @return out, for operation chaining
- *
- * @throws IllegalArgumentException if the provided displayedImage wasn't grayed first
- */
-fun threshold(grayImage: ImageMat, threshold: Double = 127.0, maxValue: Double = 255.0,
-              algorithm: ThresholdTypes = ThresholdTypes.BINARY_INVERTED, optional: ThresholdTypesOptional? = null,
-              out: ImageMat = ImageMat(grayImage.imgTransformFlags)): ImageMat {
-    if (!grayImage.hasTransform(EnumImgTransforms.GRAY))
-        throw IllegalArgumentException("The source displayedImage must use 8 color channels. Use ImageMat#grayImage first.")
-    Profiler.startSection("threshold")
-    opencv_imgproc.threshold(grayImage, out, threshold, maxValue, algorithm.value or (optional?.value ?: 0))
-    out.addTransform(EnumImgTransforms.THRESHOLD)
-    Profiler.endSection()
-    return out
-}
-
-/**
- * An extension version of [threshold]. Applies the transformation directly to the instance
- * @receiver [ImageMat]
- * @see threshold
- */
-fun ImageMat.threshold(threshold: Double = 127.0, maxValue: Double = 255.0, algorithm: ThresholdTypes = ThresholdTypes.BINARY_INVERTED,
-                       optional: ThresholdTypesOptional? = null, copy: Boolean = true)
-        = threshold(this, threshold, maxValue, algorithm, optional, if (copy) ImageMat(this.imgTransformFlags) else this)
 
 /**
  * Extracts contour information from an displayedImage
@@ -87,21 +46,25 @@ fun ImageMat.threshold(threshold: Double = 127.0, maxValue: Double = 255.0, algo
  *
  * @return ret, for operation chaining
  */
-fun findContours(thresholdImageMat: ImageMat, mode: ContourRetrievalMode = ContourRetrievalMode.LIST,
-                 method: ContourApproxMethod = ContourApproxMethod.SIMPLE, ret: MatVector = MatVector()): MatVector {
-    if (!thresholdImageMat.hasTransform(EnumImgTransforms.THRESHOLD))
-        Logger.warn("No threshold applied to the source displayedImage, good luck using that")
-    Profiler.startSection("findContours")
-    opencv_imgproc.findContours(thresholdImageMat, ret, mode.value, method.value)
-    Profiler.endSection()
+fun findContours(img: MarvinImage): List<fr.antproject.model.shapes.Polygon>{
+    val segments = floodfillSegmentationBlob(img);
+    val ret = mutableListOf<Polygon>()
+    for (segment in segments){
+        val blob = segment.getBlob();
+        val contour = blob.toContour();
+        ret += Polygon(contour.points.map { Point(it.x, it.y) })
+    }
+
     return ret
-}
+    }
+
 
 /**
  * An extension version of [findContours]. Applies the transformation directly to the instance
  * @receiver [ImageMat]
  * @see findContours(grayImage, threshold, maxValue,algorithm, optional,ret)
- */
+
 fun ImageMat.findContours(mode: ContourRetrievalMode = ContourRetrievalMode.LIST, method: ContourApproxMethod = ContourApproxMethod.SIMPLE)
         = findContours(this, mode, method)
 
+*/
