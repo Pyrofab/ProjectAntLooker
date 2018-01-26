@@ -34,7 +34,7 @@ open class Polygon(protected val vertices: List<Point>) : Shape, Iterable<Point>
     override fun contains(point: Point): Boolean {
         if (vertices.contains(point)) return true
 
-        val extreme = Point(INF, point.y())
+        val extreme = Point(INF, point.y)
         var count = 0
         var i = 0
         do {
@@ -59,8 +59,8 @@ open class Polygon(protected val vertices: List<Point>) : Shape, Iterable<Point>
         var sum1 = 0.0
         var sum2 = 0.0
         for (i in 0 until nbPoints()) {
-            sum1 += this[i].x() * this[(i+1) % nbPoints()].y()
-            sum2 += this[i].y() * this[(i+1) % nbPoints()].x()
+            sum1 += this[i].x * this[(i+1) % nbPoints()].y
+            sum2 += this[i].y * this[(i+1) % nbPoints()].x
         }
         return (sum1 + sum2) / 2
     }

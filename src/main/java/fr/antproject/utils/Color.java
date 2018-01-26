@@ -1,6 +1,6 @@
 package fr.antproject.utils;
 
-import org.bytedeco.javacpp.opencv_core;
+import org.opencv.core.Scalar;
 
 import java.util.Arrays;
 
@@ -8,7 +8,7 @@ import java.util.Arrays;
  * Class used to encapsulate colors as an array of integer values between 0 and 0xFF
  */
 @SuppressWarnings("WeakerAccess")
-public final class Color extends opencv_core.Scalar {
+public final class Color extends Scalar {
 
     public static final Color WHITE = new Color(255, 255, 255);
     public static final Color RED = new Color(255, 0, 0);
@@ -44,19 +44,19 @@ public final class Color extends opencv_core.Scalar {
     }
 
     public int getAlpha() {
-        return (int) this.get(3);
+        return (int) this.getAlpha();
     }
 
     public int getRed() {
-        return (int) this.get(2);
+        return (int) this.getRed();
     }
 
     public int getGreen() {
-        return (int) this.get(1);
+        return (int) this.getGreen();
     }
 
     public int getBlue() {
-        return (int) this.get();
+        return (int) this.getBlue();
     }
 
     @Override

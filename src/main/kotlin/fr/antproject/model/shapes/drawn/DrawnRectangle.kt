@@ -15,11 +15,11 @@ class DrawnRectangle private constructor(drawnShape: Polygon, override val appro
         override fun getFromPoly(shape: Polygon): DrawnRectangle? {
             if (shape is DrawnRectangle) return shape
             if (!shape.isRectangle()) return null
-            val x = (shape[0].x() + shape[1].x()) / 2
-            val y = (shape[0].y() + shape[3].y()) / 2
+            val x = (shape[0].x + shape[1].x) / 2
+            val y = (shape[0].y + shape[3].y) / 2
             val width = ((shape[0] distTo shape[3]) + (shape[1] distTo shape[2])).toInt() / 2
             val height = ((shape[0] distTo shape[1]) + (shape[3] distTo shape[2])).toInt() / 2
-            return DrawnRectangle(shape, Rectangle(x, y, width, height))
+            return DrawnRectangle(shape, Rectangle(x.toInt(), y.toInt(), width, height))
         }
 
         private fun Polygon.isRectangle(): Boolean {

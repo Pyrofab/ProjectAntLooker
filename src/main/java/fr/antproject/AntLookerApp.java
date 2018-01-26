@@ -3,7 +3,6 @@ package fr.antproject;
 import fr.antproject.application.ImageProcessor;
 import fr.antproject.application.Logger;
 import fr.antproject.application.Profiler;
-import fr.antproject.lib.TestLibraryGud;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -23,7 +22,6 @@ public class AntLookerApp extends Application {
 
     public static AntLookerApp INSTANCE;
 
-    public static TestLibraryGud test;
     private Stage primaryStage;
     private FXMLLoader loader;
 

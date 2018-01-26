@@ -11,6 +11,8 @@ import fr.antproject.model.shapes.drawn.ShapeRegistry
 import fr.antproject.utils.MAX_FUSE_DISTANCE
 import fr.antproject.utils.extractPolys
 import fr.antproject.utils.wrappers.*
+import org.opencv.core.Mat
+import org.opencv.core.MatOfPoint
 import java.util.*
 
 object ImageProcessor {
@@ -31,7 +33,8 @@ object ImageProcessor {
         Profiler.startSection("processing")
         Profiler.startSection("image")
         val srcImg = loadImage(fileName)
-        val temp = ImageMat(srcImg)
+        val temp = Mat()
+        srcImg.copyTo(temp)
         grayImage(img = temp, out = temp)
         threshold(grayImage = temp, threshold = config.threshold, maxValue = config.maxValue,
                 algorithm = config.algorithm, optional = config.optional, out = temp)
@@ -49,7 +52,7 @@ object ImageProcessor {
 
         val averageArea = ret.sumByDouble(DrawnShape::getArea) / ret.size
         val diagramBase = DiagramBase(ret.filter { it.getArea() > config.minAcceptedArea * averageArea })
-        display(diagramBase, ImageMat(srcImg))
+        display(diagramBase, srcImg)
         this.diagramBase = diagramBase
 
         Profiler.endSection()
@@ -69,7 +72,7 @@ object ImageProcessor {
      *
      * @param contours a vector of contours extracted from an displayedImage matrix
      */
-    private fun processContours(contours: MatVector): List<DrawnShape> {
+    private fun processContours(contours: List<MatOfPoint>): List<DrawnShape> {
         Profiler.startSection("processContours")
         var extracted = extractPolys(contours)
         extracted = filterDuplicates(extracted)

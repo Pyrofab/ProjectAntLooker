@@ -1,7 +1,5 @@
 package fr.antproject.utils.wrappers
 
-import org.bytedeco.javacpp.opencv_imgproc
-
 /**
  * Defines the various contour retrieval modes available for use in the [findContours] method
  * @see [opencv_imgproc.CV_RETR_EXTERNAL]
