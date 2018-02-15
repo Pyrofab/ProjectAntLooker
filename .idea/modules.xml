@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AntProject.iml" filepath="$PROJECT_DIR$/AntProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/antlookercore/antlookercore.iml" filepath="$PROJECT_DIR$/antlookercore/antlookercore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/openCVLibrary340/openCVLibrary340.iml" filepath="$PROJECT_DIR$/openCVLibrary340/openCVLibrary340.iml" />
     </modules>
   </component>
 </project>

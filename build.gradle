@@ -1,127 +1,28 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
 buildscript {
-    ext.kotlin_version = '1.2.20'
+    ext.kotlin_version = '1.2.21'
 
     repositories {
         google()
         jcenter()
-        mavenCentral()
     }
-
     dependencies {
-        classpath "org.jetbrains.dokka:dokka-gradle-plugin:0.9.15"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
     }
 }
 
-group 'TeamAntlook'
-version '1.0-SNAPSHOT'
-
-apply plugin: 'com.android.application'
-apply plugin: 'org.jetbrains.dokka'
-
-
-sourceCompatibility = 1.8
-
-sourceSets {
-    lib {
-        java {
-            srcDirs 'OpenCV-android-sdk/sdk/java/src'
-        }
-    }
-    main.compileClasspath += configurations.libCompile
-    main.runtimeClasspath += configurations.libRuntime
-}
-
-repositories {
-    mavenCentral()
-//    maven { url "https://raw.github.com/JavaOpenCVBook/code/maven2/" }
-    maven { url 'http://maven2.javacv.googlecode.com/git/' }
-    maven { url "http://repo.maven.apache.org/maven2" }
-    google()
-}
-
-dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile sourceSets.lib.output
-    runtime configurations.libRuntime
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    libCompile 'com.android.support:appcompat-v7:27.0.2'
-    libCompile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.android.support:appcompat-v7:27.0.2'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-}
-
-
-sourceSets.all { set ->
-    def jarTask = task("${set.name}Jar", type: Jar) {
-        baseName = baseName + "-$set.name"
-        from set.output
-    }
-
-    artifacts {
-        archives jarTask
+allprojects {
+    repositories {
+        google()
+        jcenter()
     }
 }
 
-android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.2"
-    defaultConfig {
-        applicationId "anteam.antlook"
-        minSdkVersion 15
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-    sourceSets {
-        main.java.srcDirs += 'OpenCV-android-sdk/sdk/java/src'
-        main.java.srcDirs += 'src/main/kotlin'
-    }
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }
-
-dokka {
-    outputFormat = 'html'
-    //noinspection GroovyAssignabilityCheck
-    outputDirectory = "$buildDir/dokka"
-
-    kotlinTasks {
-        defaultKotlinTasks()
-    }
-
-    jdkVersion = 8
-
-    impliedPlatforms = ["JVM"]
-
-    noStdlibLink = false
-}
-
-task dokkaJavadoc(type: org.jetbrains.dokka.gradle.DokkaTask) {
-    outputFormat = 'javadoc'
-    //noinspection GroovyAssignabilityCheck
-    outputDirectory = "$buildDir/javadoc"
-}
-
-task dokkaMarkdown(type: org.jetbrains.dokka.gradle.DokkaTask) {
-    outputFormat = 'markdown'
-    //noinspection GroovyAssignabilityCheck
-    outputDirectory = "$buildDir/mddoc"
-}
-
-//compileKotlin {
-//    kotlinOptions.jvmTarget = "1.8"
-//}
-//compileTestKotlin {
-//    kotlinOptions.jvmTarget = "1.8"
-//}
