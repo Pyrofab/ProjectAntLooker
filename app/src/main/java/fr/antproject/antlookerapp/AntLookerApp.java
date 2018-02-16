@@ -9,6 +9,7 @@ public class AntLookerApp extends AppCompatActivity {
 
     static {
         System.loadLibrary("opencv_java3");
+
     }
 
     @Override
