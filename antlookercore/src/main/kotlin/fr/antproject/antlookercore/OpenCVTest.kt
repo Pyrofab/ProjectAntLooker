@@ -18,6 +18,14 @@ import fr.antproject.antlookercore.utils.wrappers.threshold
 import org.opencv.core.Mat
 import org.opencv.imgproc.Imgproc
 import java.util.logging.Level
+import org.opencv.core.CvException
+import android.graphics.Bitmap
+import android.util.Log
+import org.opencv.android.Utils
+import org.opencv.core.Scalar
+import org.opencv.core.CvType
+
+
 
 
 /**
@@ -73,10 +81,22 @@ fun display(processedContours: Collection<Shape>, dest: Mat) {
     //imshow("img", dest)
 
     // FIXME switch to BitMap instead of BufferedImage
+    /*
     val bufferedImage = BufferedImage(dest.width(), dest.height(), BufferedImage.TYPE_BYTE_GRAY)
     val data = (bufferedImage.getRaster().getDataBuffer() as DataBufferByte).data
     dest.get(0,0, data)
     TaskConfigReload.displayedImage = SwingFXUtils.toFXImage(bufferedImage,null)
+    */
+    var bmp: Bitmap? = null
+    val tmp = Mat(dest.height(), dest.width(), CvType.CV_8U, Scalar(4.0))
+    try {
+        //Imgproc.cvtColor(seedsImage, tmp, Imgproc.COLOR_RGB2BGRA);
+        Imgproc.cvtColor(dest, tmp, Imgproc.COLOR_GRAY2RGBA, 4)
+        bmp = Bitmap.createBitmap(tmp.cols(), tmp.rows(), Bitmap.Config.ARGB_8888)
+        Utils.matToBitmap(tmp, bmp)
+    } catch (e: CvException) {
+        Logger.error("Exception converting mat to bitmap",e);
+    }
 
     //cvWaitKey()
     Profiler.endSection()

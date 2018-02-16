@@ -1,11 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Fabien\\Desktop\\Scolaire\\AntProject\\openCVLibrary340\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
-            "map": []
-        },
-        {
-            "outputFile": "C:\\Users\\Fabien\\AndroidStudioProjects\\AntLookerApp\\openCVLibrary340\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\cleme\\AndroidStudioProjects\\ProjectAntLooker\\openCVLibrary340\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
             "map": []
         }
     ]
