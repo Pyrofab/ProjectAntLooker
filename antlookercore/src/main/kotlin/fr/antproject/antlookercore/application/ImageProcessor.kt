@@ -20,7 +20,7 @@ import java.util.*
 
 object ImageProcessor {
 
-    val config: IConfiguration = Configuration()
+    var config: IConfiguration = DefaultConfiguration()
     var diagramTransformer : IDiagramTransformer<*> = PetriTransformer()
 
     @get:Synchronized
