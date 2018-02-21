@@ -48,7 +48,7 @@ class TaskConfigReload(private val selectedFile: String, private val saveFile: S
             ImageProcessor.generateDiagram().export(saveFile)
         }
         //FIXME use the proper field from the android graphical interface
-        configScreen.imageView.image = displayedImage
+//        configScreen.imageView.image = displayedImage
         clean()
         Logger.debug("Refreshed the image view")
     }
@@ -59,6 +59,6 @@ class TaskConfigReload(private val selectedFile: String, private val saveFile: S
 
     private fun clean() {
         //FIXME see above
-        configScreen.progressIndicator.isVisible = false
+//        configScreen.progressIndicator.isVisible = false
     }
 }
