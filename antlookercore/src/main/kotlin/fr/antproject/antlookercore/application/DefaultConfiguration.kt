@@ -1,19 +1,13 @@
 package fr.antproject.antlookercore.application
 
-import fr.antproject.antlookercore.AntLookerApp
-import fr.antproject.antlookercore.ConfigScreen
 import fr.antproject.antlookercore.utils.MAX_FUSE_DISTANCE
 import fr.antproject.antlookercore.utils.wrappers.ContourApproxMethod
 import fr.antproject.antlookercore.utils.wrappers.ContourRetrievalMode
 import fr.antproject.antlookercore.utils.wrappers.ThresholdTypes
 import fr.antproject.antlookercore.utils.wrappers.ThresholdTypesOptional
 
-val configScreen: ConfigScreen
-    get() = AntLookerApp.INSTANCE.loader.getController()
-
 /**
- * An implementation of IConfiguration bridging with the graphical interface to provide access to properties
- * TODO make another implementation using android stuff instead
+ * Default implementation of a configuration, giving default values for all types
  */
 class DefaultConfiguration : IConfiguration{
 

@@ -1,11 +1,11 @@
 @file:JvmName("ConfigReload")
 
-package fr.antproject.antlookercore
+package fr.antproject.antlookerapp.configuration
 
 import android.media.Image
+import fr.antproject.antlookercore.AntLookerApp
 import fr.antproject.antlookercore.application.ImageProcessor
 import fr.antproject.antlookercore.application.Logger
-import fr.antproject.antlookercore.application.configScreen
 import java.util.concurrent.Executors
 import java.util.concurrent.Future
 
@@ -47,6 +47,7 @@ class TaskConfigReload(private val selectedFile: String, private val saveFile: S
         if (saveFile != null) {
             ImageProcessor.generateDiagram().export(saveFile)
         }
+        //FIXME use the proper field from the android graphical interface
         configScreen.imageView.image = displayedImage
         clean()
         Logger.debug("Refreshed the image view")
@@ -57,6 +58,7 @@ class TaskConfigReload(private val selectedFile: String, private val saveFile: S
     fun failed() = clean()
 
     private fun clean() {
+        //FIXME see above
         configScreen.progressIndicator.isVisible = false
     }
 }

@@ -1,4 +1,4 @@
-package fr.antproject.antlookerapp;
+package fr.antproject.antlookerapp.configuration;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
