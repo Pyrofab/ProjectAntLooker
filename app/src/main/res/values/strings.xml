@@ -73,4 +73,38 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
+
+    <string-array name="pref_threshold_types">
+        <item>BINARY_INVERTED</item>
+        <item>BINARY</item>
+        <item>TRUNCATED</item>
+        <item>TO_ZERO</item>
+        <item>TO_ZERO_INVERTED</item>
+        <item>MASK</item>
+    </string-array>
+    
+    <string-array name="pref_threshold_types_optional">
+        <item>NONE</item>
+        <item>OTSU</item>
+        <item>TRIANGLE</item>
+    </string-array>
+    
+    <string-array name="pref_contour_retrieval_mode">
+        <item>LIST</item>
+        <item>EXTERNAL</item>
+        <item>CCOMP</item>
+        <item>TREE</item>
+        <item>FLOOD_FILL</item>
+    </string-array>
+
+    <string-array name="pref_contour_approx_method">
+        <item>TC89_KCOS</item>
+        <item>TC89_L1</item>
+        <item>SIMPLE</item>
+        <item>NONE</item>
+    </string-array>
+    
+    <string name="pref_title_reset">Reset</string>
+    
+    <string name="pref_title_export">Export</string>
 </resources>

@@ -32,6 +32,7 @@ dependencies {
     implementation project(':openCVLibrary340')
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation project(':antlookercore')
+    implementation 'com.android.support:design:26.1.0'
 }
 repositories {
     mavenCentral()

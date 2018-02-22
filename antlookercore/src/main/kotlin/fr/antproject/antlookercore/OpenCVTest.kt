@@ -80,7 +80,7 @@ fun display(processedContours: Collection<Shape>, dest: Mat) {
     Profiler.startSection("user_input")
     //imshow("img", dest)
 
-    // FIXME switch to BitMap instead of BufferedImage
+    // FIXME (switch to BitMap instead of BufferedImage) done, now find how to display the bitmap
     /*
     val bufferedImage = BufferedImage(dest.width(), dest.height(), BufferedImage.TYPE_BYTE_GRAY)
     val data = (bufferedImage.getRaster().getDataBuffer() as DataBufferByte).data

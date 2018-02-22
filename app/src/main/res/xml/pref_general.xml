@@ -30,4 +30,11 @@
         android:positiveButtonText="@null"
         android:title="@string/pref_title_add_friends_to_messages" />
 
+    <SeekBarPreference
+        android:key="keyName"
+        android:title="Property"
+        android:summary="Summary."
+        android:max="5"
+        android:defaultValue="0" />
+
 </PreferenceScreen>
