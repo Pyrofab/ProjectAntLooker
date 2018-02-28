@@ -105,6 +105,4 @@
     </string-array>
     
     <string name="pref_title_reset">Reset</string>
-    
-    <string name="pref_title_export">Export</string>
 </resources>

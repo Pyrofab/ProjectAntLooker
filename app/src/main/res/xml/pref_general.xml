@@ -17,13 +17,6 @@
         android:title="Max fuse distance"
         android:max="50"
         android:defaultValue="25" />
-    <!-- Must me divided by 10, because seekbar can only be used for integer -->
-    <ListPreference
-        android:defaultValue="1"
-        android:entries="@array/pref_threshold_types_optional"
-        android:entryValues="@array/pref_threshold_types_optional"
-        android:key="pref_threshold_types_optional"
-        android:title="Threshold type optional" />
     <ListPreference
         android:defaultValue="1"
         android:entries="@array/pref_threshold_types"
@@ -32,16 +25,23 @@
         android:title="Threshold type" />
     <ListPreference
         android:defaultValue="1"
-        android:entries="@array/pref_contour_retrieval_mode"
-        android:entryValues="@array/pref_contour_retrieval_mode"
-        android:key="list_preference_1"
-        android:title="Contour retrieval mode" />
+        android:entries="@array/pref_threshold_types_optional"
+        android:entryValues="@array/pref_threshold_types_optional"
+        android:key="pref_threshold_types_optional"
+        android:title="Threshold type optional" />
     <ListPreference
         android:defaultValue="1"
         android:entries="@array/pref_contour_approx_method"
         android:entryValues="@array/pref_contour_approx_method"
-        android:key="list_preference_2"
+        android:key="pref_contour_approx_method"
         android:title="Contour approx method" />
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/pref_contour_retrieval_mode"
+        android:entryValues="@array/pref_contour_retrieval_mode"
+        android:key="pref_contour_retrieval_mode"
+        android:title="Contour retrieval mode" />
+    <!-- Must me divided by 10, because seekbar can only be used for integer -->
     <SeekBarPreference
         android:key="pref_min_accepted_area"
         android:title="Min accepted area"

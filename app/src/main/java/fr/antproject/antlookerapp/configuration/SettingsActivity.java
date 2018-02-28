@@ -40,6 +40,15 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
      * A preference value change listener that updates the preference's summary
      * to reflect its new value.
      */
+
+    public static final String KEY_PREF_THRESHOLD = "pref_threshold";
+    public static final String KEY_PREF_MAX_FUSE_DISTANCE = "pref_threshold";
+    public static final String KEY_PREF_MIN_ACCEPTED_AREA = "pref_min_accepted_area";
+    public static final String KEY_PREF_THRESHOLD_TYPES = "pref_threshold_types";
+    public static final String KEY_PREF_THRESHOLD_TYPES_OPTIONAL = "pref_threshold_types_optional";
+    public static final String KEY_PREF_CONTOUR_APPROX_METHOD = "pref_contour_approx_method";
+    public static final String KEY_PREF_CONTOUR_RETRIEVAL_MODE = "pref_contour_retrieval_mode";
+
     private static Preference.OnPreferenceChangeListener sBindPreferenceSummaryToValueListener = new Preference.OnPreferenceChangeListener() {
         @Override
         public boolean onPreferenceChange(Preference preference, Object value) {
