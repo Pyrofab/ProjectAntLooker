@@ -25,6 +25,7 @@ public class Configuration implements IConfiguration {
     public Configuration(Context context){
         this.context = context;
     }
+
     @Override
     public double getThreshold() {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
@@ -39,25 +40,29 @@ public class Configuration implements IConfiguration {
     @NotNull
     @Override
     public ThresholdTypes getAlgorithm() {
-        return null;
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
+        return ThresholdTypes.valueOf(sharedPref.getString(SettingsActivity.KEY_PREF_THRESHOLD_TYPES, ""));
     }
 
     @Nullable
     @Override
     public ThresholdTypesOptional getOptional() {
-        return null;
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
+        return ThresholdTypesOptional.valueOf(sharedPref.getString(SettingsActivity.KEY_PREF_THRESHOLD_TYPES_OPTIONAL, ""));
     }
 
     @NotNull
     @Override
     public ContourRetrievalMode getMode() {
-        return null;
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
+        return ContourRetrievalMode.valueOf(sharedPref.getString(SettingsActivity.KEY_PREF_CONTOUR_RETRIEVAL_MODE, ""));
     }
 
     @NotNull
     @Override
     public ContourApproxMethod getMethod() {
-        return null;
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
+        return ContourApproxMethod.valueOf(sharedPref.getString(SettingsActivity.KEY_PREF_CONTOUR_APPROX_METHOD, ""));
     }
 
     @Override
