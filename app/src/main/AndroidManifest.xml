@@ -23,7 +23,10 @@
         </activity>
         <activity
             android:name=".configuration.SettingsActivity"
-            android:label="@string/title_activity_settings"></activity>
+            android:label="@string/title_activity_settings">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AntLookerApp"/>
+        </activity>
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="fr.antproject.antlookerapp.fileprovider"
@@ -32,6 +35,7 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths"></meta-data>
+
         </provider>
     </application>
 
