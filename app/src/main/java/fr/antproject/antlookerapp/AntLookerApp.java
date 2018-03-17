@@ -2,11 +2,11 @@ package fr.antproject.antlookerapp;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,18 +16,24 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+
 
 import fr.antproject.antlookerapp.configuration.SettingsActivity;
+import fr.antproject.antlookercore.application.ImageProcessor;
+import fr.antproject.antlookercore.model.diagram.IDiagram;
 
 public class AntLookerApp extends AppCompatActivity {
     public static final int REQUEST_IMAGE_CAPTURE = 1;
     public static final int PICK_IMAGE = 2;
     public ImageView imageView;
     public String mCurrentPhotoPath;
+
+    //TO DO : L'image s'enleve quand il ya rotation de l'ecran
+
     static {
         System.loadLibrary("opencv_java3");
 
@@ -63,6 +69,14 @@ public class AntLookerApp extends AppCompatActivity {
             }
         });
 
+        Button processButton = findViewById(R.id.buttonProcess);
+        processButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                  doProcess();
+            }
+        });
+
 
 
 
@@ -82,43 +96,68 @@ public class AntLookerApp extends AppCompatActivity {
         startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE);
     }
 
-    private void dispatchTakePictureIntent() {
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        // Ensure that there's a camera activity to handle the intent
-        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            // Create the File where the photo should go
-            File photoFile = null;
-            try {
-                photoFile = createImageFile();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-            // Continue only if the File was successfully created
-            if (photoFile != null) {
-                Uri photoURI = FileProvider.getUriForFile(this,
-                        "fr.antproject.antlookerapp.files.Pictures",
-                        photoFile);
-                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
-                startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
-            }
+
+    private void doProcess(){
+
+        Toast.makeText(getApplicationContext(), "Processing", Toast.LENGTH_SHORT).show();
+        final String filename = "imageToProcess.jpeg";
+//        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+//        String filename = "JPG_" + timeStamp + "_";
+        File file;
+        try {
+            file = File.createTempFile(filename, null, getApplicationContext().getCacheDir());
+            Bitmap bitmap = ((BitmapDrawable) imageView.getDrawable()).getBitmap();
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+            byte[] imageInByte = baos.toByteArray();
+
+            FileOutputStream f = new FileOutputStream(file);
+            f.write(imageInByte);
+            f.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+        TextView t = (TextView) findViewById(R.id.textView);
+
+
+        File[] fs = getApplicationContext().getCacheDir().listFiles();
+        if(fs.length > 0 ){
+            //TO DO : Le traitement de l'image
+//            IDiagram process = ImageProcessor.INSTANCE.process(fs[0].getAbsolutePath());
+//            t.setText(process.toString());
+        }
+
+//        ImageProcessor.INSTANCE.process();
+
     }
 
-    private File createImageFile() throws IOException {
-        // Create an image file name
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String imageFileName = "PNG_" + timeStamp + "_";
-        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-        File image = File.createTempFile(
-                imageFileName,  /* prefix */
-                ".png",         /* suffix */
-                storageDir      /* directory */
-        );
-
-        // Save a file: path for use with ACTION_VIEW intents
-        mCurrentPhotoPath = image.getAbsolutePath();
-        return image;
+//    private void dispatchTakePictureIntent() {
+//        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//        // Ensure that there's a camera activity to handle the intent
+//        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+//            // Create the File where the photo should go
+//            File photoFile = null;
+//            try {
+//                photoFile = createImageFile();
+//            } catch (IOException ex) {
+//                ex.printStackTrace();
+//            }
+//            // Continue only if the File was successfully created
+//            if (photoFile != null) {
+//                Uri photoURI = FileProvider.getUriForFile(this,
+//                        "fr.antproject.antlookerapp.files.Pictures",
+//                        photoFile);
+//                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
+//                startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+//            }
+//        }
+//    }
+private void dispatchTakePictureIntent() {
+    Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+    if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+        startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
     }
+}
 
     protected void onActivityResult(int requestCode, int resultCode,
                                     Intent data) {
@@ -129,8 +168,8 @@ public class AntLookerApp extends AppCompatActivity {
                     Log.d("[LOG]Take picture",data.toString());
                     TextView t = (TextView) findViewById(R.id.textView);
                     t.setText(data.toString());
-                    Toast toast = Toast.makeText(getApplicationContext(), "Chargement de l'image importé", Toast.LENGTH_SHORT);
-                    toast.show();
+                    Toast.makeText(getApplicationContext(), "Chargement de l'image importé", Toast.LENGTH_SHORT).show();
+
                     imageView.setImageBitmap((Bitmap) data.getExtras().get("data"));
                 }
 
@@ -141,8 +180,7 @@ public class AntLookerApp extends AppCompatActivity {
                     Log.d("[LOG]Pick image from Gallery",data.toString());
                     TextView t = (TextView) findViewById(R.id.textView);
                     t.setText(data.toString());
-                    Toast toast = Toast.makeText(getApplicationContext(), "Chargement de l'image importé", Toast.LENGTH_SHORT);
-                    toast.show();
+                    Toast.makeText(getApplicationContext(), "Chargement de l'image importé", Toast.LENGTH_SHORT).show();
                     Uri selectedimg = data.getData();
                     try {
                         imageView.setImageBitmap(MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedimg));
