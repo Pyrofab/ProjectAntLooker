@@ -1,8 +1,6 @@
 package fr.antproject.antlookercore.application
 
 import java.text.DecimalFormat
-import java.time.Duration
-import java.time.Instant
 import java.util.*
 
 /**
@@ -15,7 +13,7 @@ object Profiler {
     /**The current stack of application sections*/
     private val profilingStack = LinkedList<Entry>()
     /**Stores information about the total time used by each section of the application*/
-    private val profilingData = Collections.synchronizedMap(mutableMapOf<String, Duration>())
+    private val profilingData = Collections.synchronizedMap(mutableMapOf<String, Long>())
     /**If set to false, this profiler won't collect any data.*/
     private var enabled = true
 
@@ -40,10 +38,9 @@ object Profiler {
             synchronized(LOCK) {
                 try {
                     val sectionData = profilingStack.pop()
-                    // TODO use something else than duration for earlier compatibility
-                    val timeSpent = Duration.between(sectionData.start, Instant.now())
+                    val timeSpent = System.currentTimeMillis() - sectionData.start
                     val prefix = if (profilingStack.isEmpty()) "" else profilingStack.map(Entry::name).reduce { s1, s2 -> "$s2$SEPARATOR$s1" } + SEPARATOR
-                    profilingData.merge("$prefix${sectionData.name}", timeSpent, Duration::plus)
+                    profilingData.merge("$prefix${sectionData.name}", timeSpent, Long::plus)
                 } catch (e: NoSuchElementException) {
                     Logger.warn("Attempted to end a section but none was started", e)
                 }
@@ -66,9 +63,9 @@ object Profiler {
         if (!enabled) return emptyList()
 
         synchronized(LOCK) {
-            val total = profilingData[sectionName]?.toNanos() ?: return emptyList()
+            val total = profilingData[sectionName] ?: return emptyList()
             return profilingData.filter { it.key.startsWith(sectionName) }
-                    .map { Result(it.key, it.value, it.value.toNanos().toDouble() / total) }
+                    .map { Result(it.key, it.value, it.value.toDouble() / total) }
                     .sortedByDescending { it.duration }
         }
     }
@@ -76,12 +73,12 @@ object Profiler {
     /**
      * A data class used to store information about current recorded sections
      */
-    class Entry(val name: String, val start: Instant = Instant.now())
+    class Entry(val name: String, val start: Long = System.currentTimeMillis())
 
     /**
      * A data class used to store the computed information from our records
      */
-    class Result(private val name: String, val duration: Duration, private val percentage: Double) {
+    class Result(private val name: String, val duration: Long, private val percentage: Double) {
         companion object {
             val FORMAT = DecimalFormat("%#0.000")
         }

@@ -22,6 +22,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 
+import fr.antproject.antlookerapp.configuration.Configuration;
 import fr.antproject.antlookerapp.configuration.SettingsActivity;
 import fr.antproject.antlookercore.application.ImageProcessor;
 import fr.antproject.antlookercore.model.diagram.IDiagram;
@@ -44,6 +45,9 @@ public class AntLookerApp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_ant_looker_app);
+
+        ImageProcessor.INSTANCE.setConfig(new Configuration(this));
+
         imageView = findViewById(R.id.imageView);
         Button takePicture = findViewById(R.id.takePicture);
         takePicture.setOnClickListener(new View.OnClickListener() {
