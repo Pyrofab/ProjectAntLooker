@@ -47,6 +47,7 @@ object ImageProcessor {
         */
 
         val contours = findContours(thresholdImageMat = temp, mode = config.mode, method = config.method)
+        System.out.println("Temp -> "+temp.toString());
         val ret = processContours(contours)
 
         display(ret, temp)

@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Environment;
+import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +16,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -29,9 +32,11 @@ import fr.antproject.antlookercore.model.diagram.IDiagram;
 
 public class AntLookerApp extends AppCompatActivity {
     public static final int REQUEST_IMAGE_CAPTURE = 1;
+    public boolean isImageReady = false;
     public static final int PICK_IMAGE = 2;
     public ImageView imageView;
     public String mCurrentPhotoPath;
+
 
     //TO DO : L'image s'enleve quand il ya rotation de l'ecran
 
@@ -43,9 +48,9 @@ public class AntLookerApp extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_ant_looker_app);
 
+        cleanCache();
         ImageProcessor.INSTANCE.setConfig(new Configuration(this));
 
         imageView = findViewById(R.id.imageView);
@@ -77,7 +82,8 @@ public class AntLookerApp extends AppCompatActivity {
         processButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                  doProcess();
+                TextView t = findViewById(R.id.textView);
+                doProcess();
             }
         });
 
@@ -102,37 +108,50 @@ public class AntLookerApp extends AppCompatActivity {
 
 
     private void doProcess(){
-
-        Toast.makeText(getApplicationContext(), "Processing", Toast.LENGTH_SHORT).show();
-        final String filename = "imageToProcess.jpeg";
+        if(isImageReady) {
+            Toast.makeText(getApplicationContext(), "Processing", Toast.LENGTH_SHORT).show();
+            final String filename = "imageToProcess.jpeg";
 //        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
 //        String filename = "JPG_" + timeStamp + "_";
-        File file;
-        try {
-            file = File.createTempFile(filename, null, getApplicationContext().getCacheDir());
-            Bitmap bitmap = ((BitmapDrawable) imageView.getDrawable()).getBitmap();
-            ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-            byte[] imageInByte = baos.toByteArray();
+            File file;
+            try {
+                file = File.createTempFile(filename, ".tmp", getApplicationContext().getCacheDir());
+                Bitmap bitmap = ((BitmapDrawable) imageView.getDrawable()).getBitmap();
+                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+                byte[] imageInByte = baos.toByteArray();
 
-            FileOutputStream f = new FileOutputStream(file);
-            f.write(imageInByte);
-            f.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+                FileOutputStream f = new FileOutputStream(file);
+                f.write(imageInByte);
+                f.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (ClassCastException e) {
+                e.printStackTrace();
+            }
+            TextView t = (TextView) findViewById(R.id.textView);
+
+
+            File[] fs = getApplicationContext().getCacheDir().listFiles();
+            IDiagram process = null;
+            if (fs.length > 0) {
+                //TO DO : Le traitement de l'image
+                Toast.makeText(getApplicationContext(), fs[0].getName(), Toast.LENGTH_SHORT).show();
+                String aff = "";
+                for (File f : getApplication().getCacheDir().listFiles())
+                    aff += " | " + f.getName();
+                t.setText(aff);
+                //process = ImageProcessor.INSTANCE.process(fs[0].getAbsolutePath());
+
+            }
+            if (process != null) {
+
+                t.setText("Done : " + process.toString());
+            }
+
+        }else{
+            Toast.makeText(getApplicationContext(),"Please Take or Import a picture",Toast.LENGTH_SHORT).show();
         }
-        TextView t = (TextView) findViewById(R.id.textView);
-
-
-        File[] fs = getApplicationContext().getCacheDir().listFiles();
-        if(fs.length > 0 ){
-            //TO DO : Le traitement de l'image
-//            IDiagram process = ImageProcessor.INSTANCE.process(fs[0].getAbsolutePath());
-//            t.setText(process.toString());
-        }
-
-//        ImageProcessor.INSTANCE.process();
-
     }
 
 //    private void dispatchTakePictureIntent() {
@@ -163,6 +182,12 @@ private void dispatchTakePictureIntent() {
     }
 }
 
+private void cleanCache(){
+        for (File f : getApplicationContext().getCacheDir().listFiles()){
+            f.delete();
+        }
+}
+
     protected void onActivityResult(int requestCode, int resultCode,
                                     Intent data) {
         Log.d("File dir = ",Environment.DIRECTORY_PICTURES);
@@ -175,6 +200,7 @@ private void dispatchTakePictureIntent() {
                     Toast.makeText(getApplicationContext(), "Chargement de l'image importé", Toast.LENGTH_SHORT).show();
 
                     imageView.setImageBitmap((Bitmap) data.getExtras().get("data"));
+                    isImageReady = true;
                 }
 
             }
@@ -188,6 +214,7 @@ private void dispatchTakePictureIntent() {
                     Uri selectedimg = data.getData();
                     try {
                         imageView.setImageBitmap(MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedimg));
+                        isImageReady = true;
                     } catch (IOException e) {
                         e.printStackTrace();
                     }

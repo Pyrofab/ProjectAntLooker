@@ -82,13 +82,13 @@
         <item>TO_ZERO_INVERTED</item>
         <item>MASK</item>
     </string-array>
-    
+
     <string-array name="pref_threshold_types_optional">
         <item>NONE</item>
         <item>OTSU</item>
         <item>TRIANGLE</item>
     </string-array>
-    
+
     <string-array name="pref_contour_retrieval_mode">
         <item>LIST</item>
         <item>EXTERNAL</item>
@@ -103,6 +103,6 @@
         <item>SIMPLE</item>
         <item>NONE</item>
     </string-array>
-    
+
     <string name="pref_title_reset">Reset</string>
 </resources>

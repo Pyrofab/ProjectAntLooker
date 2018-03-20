@@ -79,13 +79,13 @@ object Profiler {
      * A data class used to store the computed information from our records
      */
     class Result(private val name: String, val duration: Long, private val percentage: Double) {
-        companion object {
-            val FORMAT = DecimalFormat("%#0.000")
-        }
+            companion object {
+                val FORMAT = DecimalFormat("%#0.000")
+            }
 
-        override fun toString(): String {
-            return "$name: duration=$duration, percentage=${FORMAT.format(percentage)}"
-        }
+            override fun toString(): String {
+                return "$name: duration=$duration, percentage=${FORMAT.format(percentage)}"
+            }
     }
 
 }
