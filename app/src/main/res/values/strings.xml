@@ -104,5 +104,8 @@
         <item>NONE</item>
     </string-array>
 
-    <string name="pref_title_reset">Reset</string>
+    <integer name="pref_threshold">255</integer>
+    <integer name="pref_max_fuse_distance">50</integer>
+    <integer name="pref_max_accepted_area">10</integer>
+
 </resources>

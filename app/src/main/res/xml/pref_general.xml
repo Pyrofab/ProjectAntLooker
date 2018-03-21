@@ -7,45 +7,64 @@
          dismiss it. -->
     <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
 
-    <SeekBarPreference
+    <!--<gs.preference.PercentSeekBarPreference
         android:key="pref_threshold"
         android:title="Threshold"
-        android:max="255"
-        android:defaultValue="140" />
-    <SeekBarPreference
+        android:defaultValue="255" />
+    <gs.preference.PercentSeekBarPreference
         android:key="pref_max_fuse_distance"
         android:title="Max fuse distance"
-        android:max="50"
-        android:defaultValue="25" />
+        android:defaultValue="25" />-->
+    <EditTextPreference
+        android:defaultValue="140"
+        android:key="pref_threshold"
+        android:numeric="integer"
+        android:selectAllOnFocus="true"
+        android:title="Threshold"
+        android:maxLength="3" />
+    <EditTextPreference
+        android:defaultValue="13"
+        android:key="pref_max_fuse_distance"
+        android:numeric="integer"
+        android:selectAllOnFocus="true"
+        android:title="Max fuse distance"
+        android:maxLength="2" />
     <ListPreference
-        android:defaultValue="1"
+        android:defaultValue="BINARY_INVERTED"
         android:entries="@array/pref_threshold_types"
         android:entryValues="@array/pref_threshold_types"
         android:key="pref_threshold_types"
         android:title="Threshold type" />
     <ListPreference
-        android:defaultValue="1"
+        android:defaultValue="NONE"
         android:entries="@array/pref_threshold_types_optional"
         android:entryValues="@array/pref_threshold_types_optional"
         android:key="pref_threshold_types_optional"
         android:title="Threshold type optional" />
     <ListPreference
-        android:defaultValue="1"
+        android:defaultValue="LIST"
         android:entries="@array/pref_contour_approx_method"
         android:entryValues="@array/pref_contour_approx_method"
         android:key="pref_contour_approx_method"
         android:title="Contour approx method" />
     <ListPreference
-        android:defaultValue="1"
+        android:defaultValue="TC89_KCOS"
         android:entries="@array/pref_contour_retrieval_mode"
         android:entryValues="@array/pref_contour_retrieval_mode"
         android:key="pref_contour_retrieval_mode"
         android:title="Contour retrieval mode" />
     <!-- Must me divided by 10, because seekbar can only be used for integer -->
-    <SeekBarPreference
+    <!--<gs.preference.PercentSeekBarPreference
         android:key="pref_min_accepted_area"
         android:title="Min accepted area"
         android:max="10"
-        android:defaultValue="2" />
+        android:defaultValue="2" />-->
+    <EditTextPreference
+        android:defaultValue="2"
+        android:key="pref_max_accepted_area"
+        android:numeric="integer"
+        android:selectAllOnFocus="true"
+        android:title="Min accepted area"
+        android:maxLength="2" />
 
 </PreferenceScreen>

@@ -15,7 +15,6 @@ import fr.antproject.antlookercore.utils.wrappers.ThresholdTypesOptional;
 
 /**
  * An implementation of IConfiguration bridging with the graphical interface to provide access to properties
- * TODO Implement using android stuff
  * Created by Fabien on 16/02/2018.
  */
 public class Configuration implements IConfiguration {
@@ -29,7 +28,12 @@ public class Configuration implements IConfiguration {
     @Override
     public double getThreshold() {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-        return sharedPref.getInt(SettingsActivity.KEY_PREF_THRESHOLD, 0);
+        int val = Integer.parseInt(sharedPref.getString(SettingsActivity.KEY_PREF_THRESHOLD, "0"));
+        if(val > 255) {
+            return 255;
+        }else{
+            return val;
+        }
     }
 
     @Override
@@ -41,40 +45,50 @@ public class Configuration implements IConfiguration {
     @Override
     public ThresholdTypes getAlgorithm() {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-        return ThresholdTypes.valueOf(sharedPref.getString(SettingsActivity.KEY_PREF_THRESHOLD_TYPES, ""));
+        return ThresholdTypes.valueOf(sharedPref.getString(SettingsActivity.KEY_PREF_THRESHOLD_TYPES, "BINARY_INVERTED"));
     }
 
     @Nullable
     @Override
     public ThresholdTypesOptional getOptional() {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-        return ThresholdTypesOptional.valueOf(sharedPref.getString(SettingsActivity.KEY_PREF_THRESHOLD_TYPES_OPTIONAL, ""));
+        return ThresholdTypesOptional.valueOf(sharedPref.getString(SettingsActivity.KEY_PREF_THRESHOLD_TYPES_OPTIONAL, "NONE"));
     }
 
     @NotNull
     @Override
     public ContourRetrievalMode getMode() {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-        return ContourRetrievalMode.valueOf(sharedPref.getString(SettingsActivity.KEY_PREF_CONTOUR_RETRIEVAL_MODE, ""));
+        return ContourRetrievalMode.valueOf(sharedPref.getString(SettingsActivity.KEY_PREF_CONTOUR_RETRIEVAL_MODE, "LIST"));
     }
 
     @NotNull
     @Override
     public ContourApproxMethod getMethod() {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-        return ContourApproxMethod.valueOf(sharedPref.getString(SettingsActivity.KEY_PREF_CONTOUR_APPROX_METHOD, ""));
+        return ContourApproxMethod.valueOf(sharedPref.getString(SettingsActivity.KEY_PREF_CONTOUR_APPROX_METHOD, "TC89_KCOS"));
     }
 
     @Override
     public double getMaxFuseDistance() {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-        return sharedPref.getInt(SettingsActivity.KEY_PREF_MAX_FUSE_DISTANCE, 0);
+        double val = Integer.parseInt(sharedPref.getString(SettingsActivity.KEY_PREF_MAX_FUSE_DISTANCE, "0"));
+        if(val > 50) {
+            return 50;
+        }else{
+            return val;
+        }
     }
 
     //Must me divided by 10, see pref_general.xml
     @Override
     public double getMinAcceptedArea() {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-        return sharedPref.getInt(SettingsActivity.KEY_PREF_MIN_ACCEPTED_AREA, 0)/10;
+        double val = Integer.parseInt(sharedPref.getString(SettingsActivity.KEY_PREF_MIN_ACCEPTED_AREA, "0"));
+        if(val > 10) {
+            return 1;
+        }else{
+            return val/10;
+        }
     }
 }

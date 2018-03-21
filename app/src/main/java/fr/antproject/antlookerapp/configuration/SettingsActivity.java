@@ -9,19 +9,21 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.EditTextPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
-import android.support.v7.app.ActionBar;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.preference.RingtonePreference;
+import android.support.v7.app.ActionBar;
 import android.text.TextUtils;
 import android.view.MenuItem;
 
 import java.util.List;
 
 import fr.antproject.antlookerapp.R;
+import fr.antproject.antlookerapp.util.ActivityUtil;
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On
@@ -42,7 +44,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
      */
 
     public static final String KEY_PREF_THRESHOLD = "pref_threshold";
-    public static final String KEY_PREF_MAX_FUSE_DISTANCE = "pref_threshold";
+    public static final String KEY_PREF_MAX_FUSE_DISTANCE = "pref_max_fuse_distance";
     public static final String KEY_PREF_MIN_ACCEPTED_AREA = "pref_min_accepted_area";
     public static final String KEY_PREF_THRESHOLD_TYPES = "pref_threshold_types";
     public static final String KEY_PREF_THRESHOLD_TYPES_OPTIONAL = "pref_threshold_types_optional";
@@ -87,7 +89,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                         preference.setSummary(name);
                     }
                 }
-
             } else {
                 // For all other preferences, set the summary to the value's
                 // simple string representation.
