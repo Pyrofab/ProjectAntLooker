@@ -28,7 +28,7 @@ public class Configuration implements IConfiguration {
     @Override
     public double getThreshold() {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-        int val = Integer.parseInt(sharedPref.getString(SettingsActivity.KEY_PREF_THRESHOLD, "0"));
+        int val = sharedPref.getInt(SettingsActivity.KEY_PREF_THRESHOLD, 0);
         if(val > 255) {
             return 255;
         }else{
@@ -72,7 +72,7 @@ public class Configuration implements IConfiguration {
     @Override
     public double getMaxFuseDistance() {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-        double val = Integer.parseInt(sharedPref.getString(SettingsActivity.KEY_PREF_MAX_FUSE_DISTANCE, "0"));
+        double val = sharedPref.getInt(SettingsActivity.KEY_PREF_MAX_FUSE_DISTANCE, 0);
         if(val > 50) {
             return 50;
         }else{
@@ -84,7 +84,7 @@ public class Configuration implements IConfiguration {
     @Override
     public double getMinAcceptedArea() {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-        double val = Integer.parseInt(sharedPref.getString(SettingsActivity.KEY_PREF_MIN_ACCEPTED_AREA, "0"));
+        double val = sharedPref.getInt(SettingsActivity.KEY_PREF_MIN_ACCEPTED_AREA, 0);
         if(val > 10) {
             return 1;
         }else{

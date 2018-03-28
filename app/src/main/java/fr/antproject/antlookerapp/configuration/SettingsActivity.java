@@ -89,6 +89,11 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                         preference.setSummary(name);
                     }
                 }
+            /*} else if (preference instanceof EditTextPreference) {
+                int val = ActivityUtil.getResourceIdFromName(preference.getKey(),R.string.class);
+                if (Integer.parseInt(((EditTextPreference) preference).getText()) > val){
+                    ((EditTextPreference) preference).setText(String.valueOf(val));
+                }*/
             } else {
                 // For all other preferences, set the summary to the value's
                 // simple string representation.
