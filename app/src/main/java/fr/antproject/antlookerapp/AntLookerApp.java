@@ -31,6 +31,7 @@ public class AntLookerApp extends AppCompatActivity {
     public static final int REQUEST_IMAGE_CAPTURE = 1;
     public boolean isImageReady = false;
     public static final int PICK_IMAGE = 2;
+    public static final int SHARE_IMAGE = 3;
     public ImageView imageView;
     public String mCurrentPhotoPath;
 
@@ -139,6 +140,7 @@ public class AntLookerApp extends AppCompatActivity {
                 for (File f : getApplication().getCacheDir().listFiles())
                     aff += " | " + f.getName();
                 t.setText(aff);
+
                 //process = ImageProcessor.INSTANCE.process(fs[0].getAbsolutePath());
 
             }
@@ -146,6 +148,14 @@ public class AntLookerApp extends AppCompatActivity {
 
                 t.setText("Done : " + process.toString());
             }
+
+            //Quand l'image a été scanné on l'affiche dans une autre activité
+
+            Intent intent = new Intent(getBaseContext(), ShareActivity.class);
+            //Put value in intent
+            startActivityForResult(intent,SHARE_IMAGE);
+
+
 
         }else{
             Toast.makeText(getApplicationContext(),"Please Take or Import a picture",Toast.LENGTH_SHORT).show();
