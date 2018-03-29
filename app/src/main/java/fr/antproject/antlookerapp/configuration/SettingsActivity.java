@@ -18,7 +18,11 @@ import android.preference.PreferenceManager;
 import android.preference.RingtonePreference;
 import android.support.v7.app.ActionBar;
 import android.text.TextUtils;
+import android.util.AttributeSet;
+import android.util.Xml;
 import android.view.MenuItem;
+
+import org.xmlpull.v1.XmlPullParser;
 
 import java.util.List;
 

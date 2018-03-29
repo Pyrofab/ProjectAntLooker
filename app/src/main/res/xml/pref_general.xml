@@ -7,28 +7,22 @@
          dismiss it. -->
     <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
 
-    <!--<gs.preference.PercentSeekBarPreference
-        android:key="pref_threshold"
-        android:title="Threshold"
-        android:defaultValue="255" />
-    <gs.preference.PercentSeekBarPreference
-        android:key="pref_max_fuse_distance"
-        android:title="Max fuse distance"
-        android:defaultValue="25" />-->
     <EditTextPreference
         android:defaultValue="140"
         android:key="pref_threshold"
+        android:maxLength="3"
         android:numeric="integer"
         android:selectAllOnFocus="true"
-        android:title="Threshold"
-        android:maxLength="3" />
+        android:summary="0 to 250"
+        android:title="Threshold" />
     <EditTextPreference
         android:defaultValue="13"
         android:key="pref_max_fuse_distance"
+        android:maxLength="2"
         android:numeric="integer"
         android:selectAllOnFocus="true"
-        android:title="Max fuse distance"
-        android:maxLength="2" />
+        android:summary="0 to 50"
+        android:title="Max fuse distance" />
     <ListPreference
         android:defaultValue="BINARY_INVERTED"
         android:entries="@array/pref_threshold_types"
@@ -54,17 +48,13 @@
         android:key="pref_contour_retrieval_mode"
         android:title="Contour retrieval mode" />
     <!-- Must me divided by 10, because seekbar can only be used for integer -->
-    <!--<gs.preference.PercentSeekBarPreference
-        android:key="pref_min_accepted_area"
-        android:title="Min accepted area"
-        android:max="10"
-        android:defaultValue="2" />-->
     <EditTextPreference
         android:defaultValue="2"
         android:key="pref_max_accepted_area"
+        android:maxLength="2"
         android:numeric="integer"
         android:selectAllOnFocus="true"
-        android:title="Min accepted area"
-        android:maxLength="2" />
+        android:summary="0 to 10"
+        android:title="Min accepted area" />
 
 </PreferenceScreen>
