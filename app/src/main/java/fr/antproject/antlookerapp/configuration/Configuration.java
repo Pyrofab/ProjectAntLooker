@@ -52,7 +52,12 @@ public class Configuration implements IConfiguration {
     @Override
     public ThresholdTypesOptional getOptional() {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-        return ThresholdTypesOptional.valueOf(sharedPref.getString(SettingsActivity.KEY_PREF_THRESHOLD_TYPES_OPTIONAL, "NONE"));
+        String type = sharedPref.getString(SettingsActivity.KEY_PREF_THRESHOLD_TYPES_OPTIONAL, "NONE");
+        if (type == "NONE"){
+            return null;
+        } else {
+            return ThresholdTypesOptional.valueOf(type);
+        }
     }
 
     @NotNull
