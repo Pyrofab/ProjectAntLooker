@@ -141,12 +141,13 @@ public class AntLookerApp extends AppCompatActivity {
                     aff += " | " + f.getName();
                 t.setText(aff);
 
-                //process = ImageProcessor.INSTANCE.process(fs[0].getAbsolutePath());
+                process = ImageProcessor.INSTANCE.process(fs[0].getAbsolutePath());
 
             }
             if (process != null) {
 
                 t.setText("Done : " + process.toString());
+                Toast.makeText(getApplicationContext(),process.toString(),Toast.LENGTH_LONG).show();
             }
 
             //Quand l'image a été scanné on l'affiche dans une autre activité
