@@ -3,6 +3,7 @@ package fr.antproject.antlookerapp;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -36,11 +37,10 @@ public class AntLookerApp extends AppCompatActivity {
     public String mCurrentPhotoPath;
 
 
-    //TO DO : L'image s'enleve quand il ya rotation de l'ecran
+    //TODO : L'image s'enleve quand il ya rotation de l'ecran
 
     static {
         System.loadLibrary("opencv_java3");
-
     }
 
     @Override
@@ -87,12 +87,10 @@ public class AntLookerApp extends AppCompatActivity {
         });
 
 
-
-
     }
 
-    private void launchSettingsActivity(){
-        Intent intent = new Intent(this,SettingsActivity.class);
+    private void launchSettingsActivity() {
+        Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
 
     }
@@ -106,8 +104,8 @@ public class AntLookerApp extends AppCompatActivity {
     }
 
 
-    private void doProcess(){
-        if(isImageReady) {
+    private void doProcess() {
+        if (isImageReady) {
             Toast.makeText(getApplicationContext(), "Processing", Toast.LENGTH_SHORT).show();
             final String filename = "imageToProcess.jpeg";
 //        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
@@ -115,7 +113,12 @@ public class AntLookerApp extends AppCompatActivity {
             File file;
             try {
                 file = File.createTempFile(filename, ".tmp", getApplicationContext().getCacheDir());
-                Bitmap bitmap = ((BitmapDrawable) imageView.getDrawable()).getBitmap();
+                Drawable drawable = imageView.getDrawable();
+                if (!(drawable instanceof BitmapDrawable)) {
+                    Log.e("AntLookerApp", "The imageview drawable is not a BitmapDrawable !");
+                    return;
+                }
+                Bitmap bitmap = ((BitmapDrawable) drawable).getBitmap();
                 ByteArrayOutputStream baos = new ByteArrayOutputStream();
                 bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
                 byte[] imageInByte = baos.toByteArray();
@@ -125,14 +128,12 @@ public class AntLookerApp extends AppCompatActivity {
                 f.close();
             } catch (IOException e) {
                 e.printStackTrace();
-            } catch (ClassCastException e) {
-                e.printStackTrace();
             }
-            TextView t = (TextView) findViewById(R.id.textView);
+            TextView t = findViewById(R.id.textView);
 
 
             File[] fs = getApplicationContext().getCacheDir().listFiles();
-            IDiagram process = null;
+            IDiagram result = null;
             if (fs.length > 0) {
                 //TO DO : Le traitement de l'image
                 Toast.makeText(getApplicationContext(), fs[0].getName(), Toast.LENGTH_SHORT).show();
@@ -141,48 +142,46 @@ public class AntLookerApp extends AppCompatActivity {
                     aff += " | " + f.getName();
                 t.setText(aff);
 
-                process = ImageProcessor.INSTANCE.process(fs[0].getAbsolutePath());
+                result = ImageProcessor.INSTANCE.process(fs[0].getAbsolutePath());
 
             }
-            if (process != null) {
-
-                t.setText("Done : " + process.toString());
-                Toast.makeText(getApplicationContext(),process.toString(),Toast.LENGTH_LONG).show();
+            if (result != null) {
+                t.setText(String.format("Done : %s", result));
+                Toast.makeText(getApplicationContext(), result.toString(), Toast.LENGTH_LONG).show();
             }
 
             //Quand l'image a été scanné on l'affiche dans une autre activité
 
             Intent intent = new Intent(getBaseContext(), ShareActivity.class);
             //Put value in intent
-            startActivityForResult(intent,SHARE_IMAGE);
+            startActivityForResult(intent, SHARE_IMAGE);
 
 
-
-        }else{
-            Toast.makeText(getApplicationContext(),"Please Take or Import a picture",Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(getApplicationContext(), "Please Take or Import a picture", Toast.LENGTH_SHORT).show();
         }
     }
 
-private void dispatchTakePictureIntent() {
-    Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-    if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-        startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+    private void dispatchTakePictureIntent() {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+        }
     }
-}
 
-private void cleanCache(){
-        for (File f : getApplicationContext().getCacheDir().listFiles()){
+    private void cleanCache() {
+        for (File f : getApplicationContext().getCacheDir().listFiles()) {
             f.delete();
         }
-}
+    }
 
     protected void onActivityResult(int requestCode, int resultCode,
                                     Intent data) {
-        Log.d("File dir = ",Environment.DIRECTORY_PICTURES);
+        Log.d("File dir = ", Environment.DIRECTORY_PICTURES);
         if (requestCode == REQUEST_IMAGE_CAPTURE) {
             if (resultCode == RESULT_OK) {
-                if( data != null){
-                    Log.d("[LOG]Take picture",data.toString());
+                if (data != null) {
+                    Log.d("[LOG]Take picture", data.toString());
                     TextView t = (TextView) findViewById(R.id.textView);
                     t.setText(data.toString());
                     Toast.makeText(getApplicationContext(), "Chargement de l'image importé", Toast.LENGTH_SHORT).show();
@@ -192,10 +191,10 @@ private void cleanCache(){
                 }
 
             }
-        } else if(requestCode == PICK_IMAGE){
+        } else if (requestCode == PICK_IMAGE) {
             if (resultCode == RESULT_OK) {
-                if( data != null){
-                    Log.d("[LOG]Pick image from Gallery",data.toString());
+                if (data != null) {
+                    Log.d("[LOG]Pick image from Gallery", data.toString());
                     TextView t = (TextView) findViewById(R.id.textView);
                     t.setText(data.toString());
                     Toast.makeText(getApplicationContext(), "Chargement de l'image importé", Toast.LENGTH_SHORT).show();
