@@ -50,7 +50,7 @@ public class AntLookerApp extends AppCompatActivity {
         setTheme(R.style.AppTheme);
 
         cleanCache();
-        ImageProcessor.INSTANCE.setConfig(new Configuration(this));
+        //ImageProcessor.INSTANCE.setConfig(new Configuration(this));
 
         imageView = findViewById(R.id.imageView);
         Button takePicture = findViewById(R.id.takePicture);
@@ -141,7 +141,8 @@ public class AntLookerApp extends AppCompatActivity {
                 for (File f : getApplication().getCacheDir().listFiles())
                     aff += " | " + f.getName();
                 t.setText(aff);
-
+                Toast.makeText(getApplicationContext(),fs[0].getAbsolutePath(),Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),fs[0].getTotalSpace()+"",Toast.LENGTH_LONG).show();
                 result = ImageProcessor.INSTANCE.process(fs[0].getAbsolutePath());
 
             }

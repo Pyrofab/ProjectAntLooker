@@ -1,5 +1,6 @@
 package fr.antproject.antlookercore.application
 
+import android.util.Log
 import fr.antproject.antlookercore.display
 import fr.antproject.antlookercore.model.diagram.DiagramBase
 import fr.antproject.antlookercore.model.diagram.IDiagram
@@ -36,6 +37,7 @@ object ImageProcessor {
         Profiler.startSection("processing")
         Profiler.startSection("image")
         val srcImg = loadImage(fileName)
+        Log.d("[DEBUG>>>>>]",srcImg.size().toString());
         val temp = Mat()
         srcImg.copyTo(temp)
         grayImage(img = temp, out = temp)
@@ -46,6 +48,7 @@ object ImageProcessor {
         opencv_highgui.cvWaitKey()
         */
 
+        Log.d("DEBUG>>>>>>>>>>>>>>>>",temp.toString()+" || "+ config.toString());
         val contours = findContours(thresholdImageMat = temp, mode = config.mode, method = config.method)
         System.out.println("Temp -> "+temp.toString());
         val ret = processContours(contours)

@@ -28,7 +28,7 @@ public class Configuration implements IConfiguration {
     @Override
     public double getThreshold() {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-        int val = Integer.parseInt(sharedPref.getString(SettingsActivity.KEY_PREF_THRESHOLD, "0"));
+        int val = 140;
         if(val > 255) {
             return 255;
         }else{

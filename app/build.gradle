@@ -12,6 +12,23 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }
+
+    sourceSets.main.jni.srcDirs = []
+
+    task ndkBuild(type: Exec, description: 'Compile JNI source via NDK') {
+
+        commandLine "C:/Users/Kamel/AppData/Local/Android/Sdk/ndk-bundle/ndk-build.cmd",
+                'NDK_PROJECT_PATH=openCVLibrary340/build/intermediates/jniLibs',
+                'NDK_LIBS_OUT=app/src/main/jniLibs',
+                'APP_BUILD_SCRIPT=C:\\Users\\Kamel\\AndroidStudioProjects\\ProjectAntLooker\\app\\src\\main\\jniLibs\\Application.mk',
+                'NDK_APPLICATION_MK=C:\\Users\\Kamel\\AndroidStudioProjects\\ProjectAntLooker\\app\\src\\main\\jniLibs\\Application.mk'
+    }
+
+    tasks.withType(JavaCompile) {
+        compileTask -> compileTask.dependsOn ndkBuild
+    }
+
+
     buildTypes {
         release {
             minifyEnabled false
