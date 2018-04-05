@@ -17,8 +17,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.mime.HttpMultipartMode;
+import org.apache.http.entity.mime.MultipartEntityBuilder;
+import org.apache.http.entity.mime.content.FileBody;
+import org.apache.http.impl.client.DefaultHttpClient;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -30,6 +40,7 @@ import fr.antproject.antlookercore.model.diagram.IDiagram;
 
 public class AntLookerApp extends AppCompatActivity {
     public static final int REQUEST_IMAGE_CAPTURE = 1;
+    public static final String SERVER_URL = "http://90.49.195.135:5000/antlooker";
     public boolean isImageReady = false;
     public static final int PICK_IMAGE = 2;
     public static final int SHARE_IMAGE = 3;
@@ -81,8 +92,19 @@ public class AntLookerApp extends AppCompatActivity {
         processButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TextView t = findViewById(R.id.textView);
-                doProcess();
+                if(isImageReady){
+                    TextView t = findViewById(R.id.textView);
+                    new Thread(new Runnable() {
+                        public void run() {
+                            ImageView i = findViewById(R.id.imageView);
+                            sendImage(i);
+                        }
+                    }).start();
+                }else{
+                    Toast.makeText(AntLookerApp.this, "Please choose an image to send", Toast.LENGTH_SHORT).show();
+                }
+
+
             }
         });
 
@@ -103,6 +125,59 @@ public class AntLookerApp extends AppCompatActivity {
         startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE);
     }
 
+    private void sendImage(ImageView i){
+        Log.d("DEBUG >>>>>","CREATE IMAGE TO SEND");
+        Bitmap bitmap = ((BitmapDrawable)i.getDrawable()).getBitmap();
+
+        HttpClient httpclient = new DefaultHttpClient();
+        HttpPost httppost = new HttpPost(SERVER_URL);
+
+        MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+
+
+        builder.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
+
+
+        File f = new File(getApplicationContext().getCacheDir(), "image");
+        try {
+            f.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 0 /*ignored for PNG*/, bos);
+        byte[] bitmapdata = bos.toByteArray();
+
+        FileOutputStream fos = null;
+        try {
+            fos = new FileOutputStream(f);
+            fos.write(bitmapdata);
+            fos.flush();
+            fos.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        FileBody fileBody = new FileBody(f); //image should be a String
+        builder.addPart("my_image", fileBody);
+
+        HttpEntity entity = builder.build();
+        httppost.setEntity(entity);
+
+        Log.d("DEBUG >>>>>","SENDING IMAGE");
+        try {
+            HttpResponse response = httpclient.execute(httppost);
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
+        Log.d("DEBUG >>>>>","SENDING DONE");
+
+    }
 
     private void doProcess() {
         if (isImageReady) {
