@@ -163,7 +163,7 @@ public class AntLookerApp extends AppCompatActivity {
 
 
         FileBody fileBody = new FileBody(f); //image should be a String
-        builder.addPart("my_image", fileBody);
+        builder.addPart("image", fileBody);
 
         HttpEntity entity = builder.build();
         httppost.setEntity(entity);
